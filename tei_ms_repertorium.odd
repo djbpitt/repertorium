@@ -46,8 +46,8 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
-            <change who="#atb #djb" when="2017-10-20">Minor general edits. Added documentation
-            for Repertorium customizations.</change>
+            <change who="#atb #djb" when="2017-10-20">Minor general edits. Added documentation for
+                Repertorium customizations.</change>
             <change who="#djb" when="2017-10-18">Minor general edits. Updated version number from
                 3.0 to 3.1. Major changes are: <list>
                     <item>Exclude <gi>xenoData</gi>, the presence of which raises mysterious
@@ -226,7 +226,8 @@
 </additions></egXML>
                         </exemplum>
                         <exemplum>
-                            <p>The Repertorium adds attributes for type and dating, as in the following example from AA308NBKM.xml:</p>
+                            <p>The Repertorium adds attributes for type and dating, as in the
+                                following example from AA308NBKM.xml:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><additions type="inscriptions">
     <locus>f. 131r</locus>
     <quote xml:lang="cu">вь лѣто зѯи҃ сиие лето бисть соуша велика не роди
@@ -363,7 +364,12 @@
 
                     <elementSpec ident="crypto" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Repertorium model: description of cryptographical system(s)</desc>
+                        <desc>Repertorium model: description of cryptographical system(s). The
+                            element for the description of a cryptographic system in the Repertorium
+                            model is called <gi>crypto</gi> and should be used in cases where
+                            encrypted letters or passages of text occur. The additional attribute
+                                <att>type</att> might identify the method, e.g., simple substitution
+                            cipher.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -371,6 +377,15 @@
                         <content>
                             <rng:ref name="macro.paraContent"/>
                         </content>
+                        <exemplum>
+                            <p>The <att>type</att> attribute specifies that the method is a simple
+                                substitution cipher. The content of the element provides the
+                                mapping.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><crypto
+                                    type="simpleSubstitution">а = ѳ, в = и, г = з, д = ѕ, к = п, л =
+                                    о, м = ѯ, р = ц, с = ѡ, т = ѱ, у = х. The other letters are used
+                                    in their regular meanings, without substitution.</crypto></egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="grammar" module="msdescription"
