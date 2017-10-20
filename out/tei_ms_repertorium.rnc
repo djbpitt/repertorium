@@ -10,7 +10,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2017-10-20T06:52:18Z. .
+# Schema generated from ODD source 2017-10-20T07:23:46Z. .
 # TEI Edition: Version 3.2.0. Last updated on
 #	10th July 2017, revision 0fcf651
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -7571,13 +7571,13 @@ crypto =
   element re:grammar { macro.specialPara, att.global.attributes, empty }
 gregoryRule =
   
-  ## Repertorium: Description of Gregory rule in the codices
+  ## Repertorium: Description of Gregory rule in the codices. The Gregory rule is a description of the layout of the parchment in the codex. There are two common abbreviations: HS for the hair (dark) side, and FS for the flesh (light) side of the parchment. Therefore, the content of this element is a sequence of HS and FS abbreviations. The sign | separates pages, – separates folios, and = signifies the middle of the quire.
   element re:gregoryRule {
     macro.phraseSeq, att.global.attributes, att.typed.attributes, empty
   }
 ink =
   
-  ## Description of ink(s)
+  ## Description of ink(s). Information about the ink is presented usually as a simple phrase like brown dark ink for the basic text and red ink for the headings and small initials. In principle these descriptions could be further developed to supply information about ink composition, brightness, loss of color, etc.
   element re:ink {
     macro.phraseSeq,
     att.global.attributes,
@@ -7688,7 +7688,7 @@ sampleText =
   }
 scribe =
   
-  ## Repertorium model: descrtiption of palaeography, orthography and language of particular scribe 
+  ## Repertorium model: description of the paleography, orthography, and language of a scribe. scribeLang contains a modification of the TEI scriptDesc element and the Repertorium-specific scribeLang element.
   element re:scribe {
     (locus | locusGrp)?,
     model.nameLike.agent?,
