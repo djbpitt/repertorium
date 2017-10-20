@@ -1150,6 +1150,11 @@
 
                     <elementSpec ident="pagination" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <desc>The Repertorium adds a <gi>pagination</gi> element so that pagination
+                            and foliation can be described separately. The <gi>pagination</gi>
+                            element, like the <gi>foliation</gi> element, may include information
+                            about when the pagination was made, whether it is original, and how the
+                            folios are marked or numbered.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.scoping"/>
@@ -1157,6 +1162,12 @@
                         <content>
                             <rng:ref name="macro.specialPara"/>
                         </content>
+                        <exemplum>
+                            <p>The following example is from the electronic description of MS
+                                Pogodin 1204 by Antoaneta Granberg.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><foliation>original,
+                                    from <date>1805</date></foliation></egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="physDesc" mode="change" module="msdescription">
