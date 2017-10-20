@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en" n="repertorium">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Repertorium MS model based on TEI P5 (Version 3.2.0. Last updated on 10th
+                    July 2017, revision 0fcf651)</title>
+                <author xml:id="atb">Andrej Bojadžiev</author>
+                <author xml:id="djb">David J. Birnbaum</author>
+            </titleStmt>
+            <editionStmt>
+                <!-- Previous edition: 3.0 Last updated 23.04.2013 -->
+                <edition>3.1 Last updated 2017-10-18</edition>
+            </editionStmt>
+            <publicationStmt>
+                <authority>David J. Birnbaum (<email>djbpitt@gmail.com</email>) on behalf of the
+                    Repertorium Project (<ptr target="http://repertorium.obdurodon.org"
+                    />)</authority>
+                <date when="2017-10-18">2017-10-18</date>
+                <availability status="free">
+                    <p>
+                        <hi>Copyright © 2012-2017 TEI Consortium and Repertorium Project</hi>
+                    </p>
+                    <p>This template file is freely available and you are hereby authorised to copy,
+                        modify, and redistribute it in any way without further reference or
+                        permissions.</p>
+                    <p>When making such modifications, you are strongly recommended to change the
+                        present text to include an accurate statement of the licencing conditions
+                        applicable to your modified text.</p>
+                </availability>
+            </publicationStmt>
+
+            <notesStmt>
+                <note type="ns">http://www.ilit.bas.bg/repertorium/ns/3.0</note>
+            </notesStmt>
+
+            <sourceDesc>
+                <p>Version 3.0 was written from scratch by Andrej Bojadžiev,
+                        <email>aboy@uni-sofia.bg</email>. The current version 3.1 was revised
+                    2017-10-18 by David J. Birnbaum (<email>djbpitt@gmail.com</email>).</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change who="#djb" when="2017-10-18">Minor general edits. Updated version number from
+                3.0 to 3.1. Major changes are: <list>
+                    <item>Exclude <gi>xenoData</gi>, the presence of which raises mysterious
+                        attribute type errors, apparently because of the introduction of a new
+                        namespace into the schema.</item>
+                    <item>For unclear reasons, inclusion of <att>prefix</att> attribute when
+                        declaring new elements in Repertorium namespace prevents their inclusion.
+                        For that reason, the <att>prefix</att> attribute has been removed.</item>
+                    <item>New Repertorium elements moved into Repertorium namespace, where they
+                        should have been initially.</item>
+                    <item><gi>keywords</gi> must have <att>scheme</att> attribute with value of
+                            <val>Repertorium</val></item>
+                    <item>Added <att>script</att> attribute to <gi>re:scribeLang</gi> and
+                            <gi>re:scriptDesc</gi></item>
+                    <item>Previous bibliographic pointer references were expressed as <gi>ref</gi>
+                        elements with <att>type</att> values of <val>bibl</val> but without
+                            <gi>bibl</gi> wrappers. That is not permitted by P5, and the new ODD
+                        enforces the TEI requirement that such <gi>ref</gi> elements be wrapped in
+                            <gi>bibl</gi> tags.</item>
+                    <item>Allow <gi>bibl</gi> as child of <gi>scribe</gi>.</item>
+                    <item>Previous versions of the Repertorium schema permitted a <att>type</att>
+                        attribute on the <gi>teiHeader</gi> with a value of <val>text</val>. This is
+                        not permitted by P5, and the new ODD enforces that TEI requirement.</item>
+                </list></change>
+            <change who="#atb" when="2013-04-23"> Changed the content of the element scribeDesc.
+                Changed palaeoCharact to scriptDesc and palaeoNote to scriptNote to be compatible
+                with TEI 5 version 2.3.0. Changed the content of collation element to allow a better
+                choice between unstructured and stuctured description. Remove attribute style from
+                msContents and msItemStruct. Now it is a global TEI attribute.</change>
+            <change who="#atb" when="2012-02-07"> Changed the introduction to this file, header
+                information, added div elements. </change>
+            <change who="#atb" when="2012-02-04"> Changed the content of elements decoDesc and
+                decoNote </change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head>Repertorium manuscript description model based on TEI</head>
+                <p>This TEI customization describes a schema that includes several of the TEI (P5)
+                    modules and is especially designed to be used for manuscript description. This
+                    customization changes declarations for many of the TEI elements that are
+                    intended for manuscript description. In doing this a special emphasis is put on
+                    the tradition for description of Slavic manuscripts. However, this model could
+                    be used in the description of other European medieval manuscript traditions. The
+                    TEI modules in use are: <list>
+                        <item>analysis - optional</item>
+                        <item>certainty - optional</item>
+                        <item>core - required</item>
+                        <item>figures - optional</item>
+                        <item>header - required</item>
+                        <item>msdescription - optional</item>
+                        <item>namesdates - optional</item>
+                        <item>tei - required</item>
+                        <item>textstructure - required</item>
+                        <item>transcr - optional</item>
+                    </list></p>
+                <p>From the preceding modules we exclude the following TEI elements: <list>
+                        <item><gi>alt</gi></item>
+                        <item><gi>altGrp</gi></item>
+                        <item><gi>appInfo</gi></item>
+                        <item><gi>application</gi></item>
+                        <item><gi>argument</gi></item>
+                        <item><gi>biblFull</gi></item>
+                        <item><gi>byline</gi></item>
+                        <item><gi>climate</gi></item>
+                        <item><gi>closer</gi></item>
+                        <item><gi>dateline</gi></item>
+                        <item><gi>div1</gi></item>
+                        <item><gi>div2</gi></item>
+                        <item><gi>div3</gi></item>
+                        <item><gi>div4</gi></item>
+                        <item><gi>div5</gi></item>
+                        <item><gi>div6</gi></item>
+                        <item><gi>div7</gi></item>
+                        <item><gi>handDesc</gi></item>
+                        <item><gi>join</gi></item>
+                        <item><gi>joinGrp</gi></item>
+                        <item><gi>link</gi></item>
+                        <item><gi>linkGrp</gi></item>
+                        <item><gi>msItem</gi></item>
+                        <item><gi>opener</gi></item>
+                        <item><gi>postBox</gi></item>
+                        <item><gi>postCode</gi></item>
+                        <item><gi>postscript</gi></item>
+                        <item><gi>salute</gi></item>
+                        <item><gi>signed</gi></item>
+                        <item><gi>teiCorpus</gi></item>
+                        <item><gi>terrain</gi></item>
+                        <item><gi>typeDesc</gi></item>
+                        <item><gi>typeNote</gi></item>
+                        <item><gi>xenoData</gi></item>
+                    </list>
+                </p>
+                <p>The following TEI elements are modified: <list>
+                        <item><gi>additions</gi></item>
+                        <item><gi>altIdentifier</gi></item>
+                        <item><gi>binding</gi></item>
+                        <item><gi>collation</gi></item>
+                        <item><gi>colophon</gi></item>
+                        <item><gi>history</gi></item>
+                        <item><gi>keywords</gi></item>
+                        <item><gi>layout</gi></item>
+                        <item><gi>msContents</gi></item>
+                        <item><gi>msDesc</gi></item>
+                        <item><gi>msIdentifier</gi></item>
+                        <item><gi>msItemStruct</gi></item>
+                        <item><gi>msPart</gi></item>
+                        <item><gi>musicNotation</gi></item>
+                        <item><gi>physDesc</gi></item>
+                        <item><gi>scriptDesc</gi></item>
+                        <item><gi>scriptNote</gi></item>
+                        <item><gi>supportDesc</gi></item>
+                        <item><gi>watermark</gi></item>
+                    </list></p>
+                <p>The following new elements are declared in the Repertorium namespace: <list>
+                        <item><gi>bindingNote</gi></item>
+                        <item><gi>countermark</gi></item>
+                        <item><gi>crypto</gi></item>
+                        <item><gi>grammar</gi></item>
+                        <item><gi>gregoryRule</gi></item>
+                        <item><gi>ink</gi></item>
+                        <item><gi>lexis</gi></item>
+                        <item><gi>motif</gi></item>
+                        <item><gi>orthNote</gi></item>
+                        <item><gi>orthography</gi></item>
+                        <item><gi>pagination</gi></item>
+                        <item><gi>pricking</gi></item>
+                        <item><gi>quire</gi></item>
+                        <item><gi>ruling</gi></item>
+                        <item><gi>sampleText</gi></item>
+                        <item><gi>scribe</gi></item>
+                        <item><gi>scribeDesc</gi></item>
+                        <item><gi>scribeLang</gi></item>
+                    </list></p>
+            </div>
+
+            <div>
+                <head>Schema, modules, class and element specifications</head>
+
+                <schemaSpec ident="tei_ms_repertorium" start="TEI msDesc">
+                    <!-- required modules -->
+                    <moduleRef key="header" except="appInfo application biblFull xenoData"/>
+                    <moduleRef key="linking" except="alt altGrp join joinGrp link linkGrp"/>
+                    <moduleRef key="core" except="postBox postCode teiCorpus"/>
+                    <moduleRef key="tei"/>
+                    <moduleRef key="textstructure"
+                        except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7 opener postscript salute signed"/>
+                    <!-- optional modules -->
+                    <moduleRef key="analysis"/>
+                    <moduleRef key="certainty"/>
+                    <moduleRef key="figures"/>
+                    <moduleRef key="msdescription" except="handDesc msItem typeNote typeDesc"/>
+                    <moduleRef key="namesdates" except="climate terrain"/>
+                    <moduleRef key="transcr"/>
+
+                    <classSpec ident="model.physDescPart" type="model" mode="delete"
+                        module="msdescription"/>
+
+                    <elementSpec ident="additions" module="msdescription" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.typed" mode="add"/>
+                            <memberOf key="att.datable" mode="add"/>
+                        </classes>
+                        <exemplum>
+                            <p>This is the original TEI example.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><additions>
+ <p>There are several marginalia in this manuscript. Some consist of
+   single characters and others are figurative. On 8v is to be found a drawing of
+   a mans head wearing a hat. At times sentences occurs: On 5v:
+ <q xml:lang="is">Her er skrif andres isslendin</q>,
+   on 19r: <q xml:lang="is">þeim go</q>,
+   on 21r: <q xml:lang="is">amen med aund ok munn halla rei knar hofud summu all huad
+     batar þad mælgi ok mal</q>,
+   On 21v: some runic letters and the sentence <q xml:lang="la">aue maria gracia plena dominus</q>.</p>
+</additions></egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>The Repertorium adds attributes for type and dating, as in the following example from AA308NBKM.xml:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><additions type="inscriptions">
+    <locus>f. 131r</locus>
+    <quote xml:lang="cu">вь лѣто зѯи҃ сиие лето бисть соуша велика не роди
+        се<unclear>...</unclear>. бисть неволꙗ и зла. велика ѡ҃т҃
+        тоурци</quote>
+</additions></egXML>
+                        </exemplum>
+                    </elementSpec>
+
+                    <elementSpec ident="altIdentifier" module="msdescription" mode="change">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:ref name="msName"/>
+                            </rng:zeroOrMore>
+                            <rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="model.placeNamePart_sequenceOptional"/>
+                                </rng:zeroOrMore>
+                                <rng:optional>
+                                    <rng:ref name="institution"/>
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="repository"/>
+                                </rng:optional>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="collection"/>
+                                </rng:zeroOrMore>
+                                <rng:optional>
+                                    <rng:ref name="idno"/>
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="note"/>
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="altIdentifier"/>
+                                </rng:optional>
+                            </rng:zeroOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="binding" module="msdescription" mode="change">
+                        <content>
+                            <rng:oneOrMore>
+                                <rng:choice>
+                                    <rng:ref name="model.pLike"/>
+                                    <rng:ref name="bindingNote"/>
+                                    <rng:ref name="condition"/>
+                                    <rng:ref name="decoNote"/>
+
+                                </rng:choice>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="bindingNote" module="msdescription"
+                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <desc>The element allows structured description of binding characteristics
+                            in addition to decoration and condition. These features are not limited
+                            to the binding parts, and may include: cover, plates, headbands, edges,
+                            clasps, and sewing techniques.</desc>
+                        <classes mode="change">
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.typed"/>
+                            <memberOf key="att.damaged"/>
+                        </classes>
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text/>
+                                    <rng:ref name="model.phrase"/>
+                                    <rng:ref name="decoNote"/>
+                                    <rng:ref name="condition"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="collation" module="msdescription" mode="change">
+                        <content>
+                            <rng:choice>
+                                <rng:oneOrMore>
+                                    <rng:ref name="model.pLike"/>
+                                </rng:oneOrMore>
+                                <rng:group>
+                                    <rng:optional>
+                                        <rng:ref name="summary"/>
+                                    </rng:optional>
+                                    <rng:zeroOrMore>
+                                        <rng:ref name="quire"/>
+                                    </rng:zeroOrMore>
+                                    <rng:optional>
+                                        <rng:ref name="signatures"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="catchwords"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="gregoryRule"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="ruling"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="pricking"/>
+                                    </rng:optional>
+                                </rng:group>
+                            </rng:choice>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="colophon" mode="change">
+                        <content>
+                            <rng:optional>
+                                <rng:ref name="model.pLike.front"/>
+                            </rng:optional>
+                            <rng:oneOrMore>
+                                <rng:ref name="model.pLike"/>
+                            </rng:oneOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="countermark" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
+                        <desc>Called also counter watermark</desc>
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text/>
+                                    <rng:ref name="model.phrase"/>
+                                    <rng:ref name="motif"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="crypto" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
+                        <desc>Repertorium model: description of cryptographical system(s)</desc>
+                        <classes mode="change">
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.typed"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="macro.paraContent"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="grammar" module="msdescription"
+                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <classes mode="replace">
+                            <memberOf key="att.global"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="macro.specialPara"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="gregoryRule" module="msdescription"
+                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <desc>Repertorium: Description of Gregory rule in the codices</desc>
+                        <classes mode="change">
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.typed"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="history" module="msdescription" mode="change">
+                        <content>
+                            <rng:choice>
+                                <rng:oneOrMore>
+                                    <rng:ref name="model.pLike"/>
+                                </rng:oneOrMore>
+                                <rng:group>
+                                    <rng:optional>
+                                        <rng:ref name="summary"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="origin"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="accMat"/>
+                                    </rng:optional>
+                                    <rng:zeroOrMore>
+                                        <rng:ref name="provenance"/>
+                                    </rng:zeroOrMore>
+                                    <rng:optional>
+                                        <rng:ref name="acquisition"/>
+                                    </rng:optional>
+                                </rng:group>
+                            </rng:choice>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="ink" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
+                        <desc>Description of ink(s)</desc>
+                        <classes mode="change">
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.measurement"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="keywords" mode="change">
+                        <attList>
+                            <attDef ident="scheme" mode="change">
+                                <desc>The <gi>keywords</gi> element must have a <att>scheme</att>
+                                    attribute with a value of <val>Repertorium</val>,</desc>
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="Repertorium">
+                                        <gloss>Keywords must be specified within the Repertorium
+                                            scheme.</gloss>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="layout" module="msdescription" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.measurement" mode="add"/>
+                        </classes>
+                    </elementSpec>
+
+                    <elementSpec ident="lexis" module="msdescription"
+                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <classes mode="replace">
+                            <memberOf key="att.global"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="macro.specialPara"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="motif" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
+                        <classes mode="change">
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.typed"/>
+                        </classes>
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text/>
+                                    <rng:ref name="model.phrase"/>
+                                    <rng:ref name="motif"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="msContents" module="msdescription" mode="change">
+                        <content>
+                            <rng:choice>
+                                <rng:oneOrMore>
+                                    <rng:ref name="model.pLike"/>
+                                </rng:oneOrMore>
+                                <rng:group>
+                                    <rng:group>
+                                        <rng:optional>
+                                            <rng:ref name="summary"/>
+                                        </rng:optional>
+                                        <rng:optional>
+                                            <rng:ref name="titlePage"/>
+                                        </rng:optional>
+                                        <rng:optional>
+                                            <rng:ref name="title"/>
+                                        </rng:optional>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="author"/>
+                                        </rng:zeroOrMore>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="respStmt"/>
+                                        </rng:zeroOrMore>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="model.noteLike"/>
+                                        </rng:zeroOrMore>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="filiation"/>
+                                        </rng:zeroOrMore>
+                                        <rng:optional>
+                                            <rng:ref name="textLang"/>
+                                        </rng:optional>
+                                        <rng:optional>
+                                            <rng:ref name="decoNote"/>
+                                        </rng:optional>
+                                        <rng:optional>
+                                            <rng:ref name="sampleText"/>
+                                        </rng:optional>
+                                        <rng:optional>
+                                            <rng:ref name="div"/>
+                                        </rng:optional>
+                                    </rng:group>
+                                    <rng:zeroOrMore>
+                                        <rng:ref name="msItemStruct"/>
+                                    </rng:zeroOrMore>
+                                </rng:group>
+                            </rng:choice>
+                        </content>
+                        <attList>
+                            <attDef ident="type">
+                                <desc>describes the type of the text</desc>
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="original">
+                                        <desc>the text is original</desc>
+                                    </valItem>
+                                    <valItem ident="compilation">
+                                        <desc>the text is compiled from variuos sources</desc>
+                                    </valItem>
+                                    <valItem ident="translation">
+                                        <desc>the text is translated</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="msDesc" module="msdescription" mode="change">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:ref name="model.headLike"/>
+                            </rng:zeroOrMore>
+                            <rng:ref name="msIdentifier"/>
+                            <rng:choice>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="model.pLike"/>
+                                </rng:zeroOrMore>
+                                <rng:group>
+                                    <rng:optional>
+                                        <rng:ref name="physDesc"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="scribeDesc"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="msContents"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="history"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="additional"/>
+                                    </rng:optional>
+                                    <rng:zeroOrMore>
+                                        <rng:ref name="msPart"/>
+                                    </rng:zeroOrMore>
+                                </rng:group>
+                            </rng:choice>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="msIdentifier" module="msdescription" mode="change">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:ref name="msName"/>
+                            </rng:zeroOrMore>
+                            <rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="p"/>
+                                </rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="model.placeNamePart_sequenceOptional"/>
+                                </rng:zeroOrMore>
+                                <rng:optional>
+                                    <rng:ref name="institution"/>
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="repository"/>
+                                </rng:optional>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="collection"/>
+                                </rng:zeroOrMore>
+                                <rng:optional>
+                                    <rng:ref name="idno"/>
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="note"/>
+                                </rng:optional>
+                            </rng:zeroOrMore>
+                            <rng:zeroOrMore>
+                                <rng:ref name="altIdentifier"/>
+                            </rng:zeroOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="msItemStruct" module="msdescription" mode="change">
+                        <content>
+                            <rng:group>
+                                <rng:choice>
+                                    <rng:optional>
+                                        <rng:ref name="locus"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="locusGrp"/>
+                                    </rng:optional>
+                                </rng:choice>
+                                <rng:choice>
+                                    <rng:oneOrMore>
+                                        <rng:ref name="model.pLike"/>
+                                    </rng:oneOrMore>
+                                    <rng:group>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="title"/>
+                                        </rng:zeroOrMore>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="author"/>
+                                        </rng:zeroOrMore>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="respStmt"/>
+                                        </rng:zeroOrMore>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="model.noteLike"/>
+                                        </rng:zeroOrMore>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="filiation"/>
+                                        </rng:zeroOrMore>
+                                        <rng:optional>
+                                            <rng:ref name="textLang"/>
+                                        </rng:optional>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="decoNote"/>
+                                        </rng:zeroOrMore>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="colophon"/>
+                                        </rng:zeroOrMore>
+                                        <rng:optional>
+                                            <rng:choice>
+                                                <rng:ref name="sampleText"/>
+                                                <rng:ref name="div"/>
+                                            </rng:choice>
+                                        </rng:optional>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="msItemStruct"/>
+                                        </rng:zeroOrMore>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="listBibl"/>
+                                        </rng:zeroOrMore>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="bibl"/>
+                                        </rng:zeroOrMore>
+                                    </rng:group>
+                                </rng:choice>
+                            </rng:group>
+                        </content>
+                        <attList>
+                            <attDef ident="type">
+                                <desc>describes the type of the text</desc>
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="original">
+                                        <desc>the text is original</desc>
+                                    </valItem>
+                                    <valItem ident="compilation">
+                                        <desc>the text is compiled from variuos sources</desc>
+                                    </valItem>
+                                    <valItem ident="translation">
+                                        <desc>the text is translated</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="msPart" module="msdescription" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.typed" mode="add"/>
+                        </classes>
+                        <content>
+                            <rng:group>
+                                <rng:group>
+                                    <rng:choice>
+                                        <rng:zeroOrMore>
+                                            <rng:optional>
+                                                <rng:ref name="altIdentifier"/>
+                                            </rng:optional>
+                                            <rng:optional>
+                                                <rng:ref name="msIdentifier"/>
+                                            </rng:optional>
+                                            <rng:optional>
+                                                <rng:ref name="locus"/>
+                                            </rng:optional>
+                                            <rng:optional>
+                                                <rng:ref name="locusGrp"/>
+                                            </rng:optional>
+                                        </rng:zeroOrMore>
+                                    </rng:choice>
+                                </rng:group>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="model.headLike"/>
+                                </rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:oneOrMore>
+                                        <rng:ref name="model.pLike"/>
+                                    </rng:oneOrMore>
+                                    <rng:group>
+                                        <rng:optional>
+                                            <rng:ref name="physDesc"/>
+                                        </rng:optional>
+                                        <rng:optional>
+                                            <rng:ref name="scribeDesc"/>
+                                        </rng:optional>
+                                        <rng:optional>
+                                            <rng:ref name="msContents"/>
+                                        </rng:optional>
+                                        <rng:optional>
+                                            <rng:ref name="history"/>
+                                        </rng:optional>
+                                        <rng:optional>
+                                            <rng:ref name="additional"/>
+                                        </rng:optional>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="msPart"/>
+                                        </rng:zeroOrMore>
+                                    </rng:group>
+                                </rng:choice>
+                            </rng:group>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="musicNotation" module="msdescription" mode="change">
+                        <classes mode="replace">
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.typed" mode="add"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="macro.specialPara"/>
+                        </content>
+                        <attList>
+                            <attDef ident="system" usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="orthNote" module="msdescription"
+                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <classes mode="replace">
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.typed"/>
+                            <memberOf key="att.naming"/>
+                            <memberOf key="att.scoping"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="macro.specialPara"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="orthography" module="msdescription"
+                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <classes mode="replace">
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.typed"/>
+                        </classes>
+                        <content>
+                            <rng:choice>
+                                <rng:oneOrMore>
+                                    <rng:ref name="model.pLike"/>
+                                </rng:oneOrMore>
+                                <rng:group>
+                                    <rng:optional>
+                                        <rng:ref name="summary"/>
+                                    </rng:optional>
+                                    <rng:oneOrMore>
+                                        <rng:ref name="orthNote"/>
+                                    </rng:oneOrMore>
+                                </rng:group>
+                            </rng:choice>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="pagination" module="msdescription"
+                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <classes mode="change">
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.scoping"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="macro.specialPara"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="physDesc" mode="change" module="msdescription">
+                        <content>
+                            <rng:group>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="model.pLike"/>
+                                </rng:zeroOrMore>
+                                <rng:group>
+                                    <rng:optional>
+                                        <rng:ref name="objectDesc"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="ink"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="decoDesc"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="bindingDesc"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="sealDesc"/>
+                                    </rng:optional>
+                                    <rng:zeroOrMore>
+                                        <rng:ref name="additions"/>
+                                    </rng:zeroOrMore>
+                                </rng:group>
+                            </rng:group>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="pricking" module="msdescription"
+                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <desc>Repertorium: Description of pricking appearance and techniques
+                            applied</desc>
+                        <classes mode="change">
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.typed"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="quire" module="msdescription"
+                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <desc>Description of one or more quires.</desc>
+                        <classes mode="change">
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.typed"/>
+                        </classes>
+                        <content>
+                            <rng:choice>
+                                <rng:oneOrMore>
+                                    <rng:ref name="model.pLike"/>
+                                </rng:oneOrMore>
+                                <rng:group>
+                                    <rng:optional>
+                                        <rng:ref name="summary"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="locus"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="locusGrp"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="extent"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="formula"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="signatures"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="catchwords"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="gregoryRule"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="ruling"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="pricking"/>
+                                    </rng:optional>
+                                </rng:group>
+                            </rng:choice>
+                        </content>
+                        <attList>
+                            <attDef ident="status" usage="opt">
+                                <desc>Describes the status of the quire or folia: original, added,
+                                    missing</desc>
+                                <datatype>
+                                    <rng:ref name="datatype.Token"/>
+                                </datatype>
+                                <valList type="closed" mode="add">
+                                    <valItem ident="missing">
+                                        <gloss>Original quire is missing</gloss>
+                                    </valItem>
+                                    <valItem ident="added">
+                                        <gloss>New quire has been added</gloss>
+                                    </valItem>
+                                    <valItem ident="original">
+                                        <gloss>Quire is original</gloss>
+
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="ruling" module="msdescription"
+                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <desc>Repertorium: Ruling types and techniques goes here. </desc>
+                        <classes mode="change">
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.typed"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="sampleText" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
+                        <desc>Repertorium model: Text sample or edition of the original full text. </desc>
+                        <classes mode="change">
+                            <memberOf key="att.divLike"/>
+                            <memberOf key="att.declaring"/>
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.typed"/>
+                        </classes>
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="head"/>
+                                    <rng:ref name="rubric"/>
+                                    <rng:ref name="incipit"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="model.pLike"/>
+                                    <rng:ref name="div"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="explicit"/>
+                                    <rng:ref name="finalRubric"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </content>
+                        <attList>
+                            <attDef ident="script" usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="scribe" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
+                        <desc>Repertorium model: descrtiption of palaeography, orthography and
+                            language of particular scribe </desc>
+                        <classes mode="change">
+                            <memberOf key="att.global"/>
+                        </classes>
+                        <content>
+                            <rng:optional>
+                                <rng:choice>
+                                    <rng:ref name="locus"/>
+                                    <rng:ref name="locusGrp"/>
+                                </rng:choice>
+                            </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="model.nameLike.agent"/>
+                            </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="scriptDesc"/>
+                            </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="scribeLang"/>
+                            </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="bibl"/>
+                            </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="note"/>
+                            </rng:optional>
+                            <rng:zeroOrMore>
+                                <rng:ref name="respStmt"/>
+                            </rng:zeroOrMore>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="scribeDesc" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
+                        <desc>Repertorium model description of various scribes: palaeography,
+                            orthography and language. </desc>
+                        <classes mode="change">
+                            <memberOf key="att.global"/>
+                        </classes>
+                        <content>
+                            <rng:choice>
+                                <rng:oneOrMore>
+                                    <rng:ref name="model.pLike"/>
+                                </rng:oneOrMore>
+                                <rng:group>
+                                    <rng:optional>
+                                        <rng:ref name="summary"/>
+                                    </rng:optional>
+                                    <rng:zeroOrMore>
+                                        <rng:ref name="scribe"/>
+                                    </rng:zeroOrMore>
+                                </rng:group>
+                            </rng:choice>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="scribeLang" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
+                        <desc>Repertorium model: Language of the scribe. </desc>
+                        <classes mode="change">
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.typed"/>
+                        </classes>
+                        <content>
+                            <rng:choice>
+                                <rng:oneOrMore>
+                                    <rng:ref name="model.pLike"/>
+                                </rng:oneOrMore>
+                                <rng:group>
+                                    <rng:optional>
+                                        <rng:ref name="summary"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="orthography"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="grammar"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="lexis"/>
+                                    </rng:optional>
+                                </rng:group>
+                            </rng:choice>
+                        </content>
+                        <attList>
+                            <attDef ident="script" usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="scriptDesc" mode="change">
+                        <desc>Repertorium model: Paleographic characteristics</desc>
+                        <classes mode="change">
+                            <memberOf key="att.global.attributes"/>
+                            <memberOf key="att.handFeatures.attributes"/>
+                            <memberOf key="att.typed"/>
+                        </classes>
+                        <content>
+                            <rng:choice>
+                                <rng:oneOrMore>
+                                    <rng:ref name="model.pLike"/>
+                                </rng:oneOrMore>
+                                <rng:group>
+                                    <rng:optional>
+                                        <rng:ref name="summary"/>
+                                    </rng:optional>
+                                    <rng:zeroOrMore>
+                                        <rng:ref name="scriptNote"/>
+                                    </rng:zeroOrMore>
+                                    <rng:zeroOrMore>
+                                        <rng:ref name="musicNotation"/>
+                                    </rng:zeroOrMore>
+                                    <rng:optional>
+                                        <rng:ref name="crypto"/>
+                                    </rng:optional>
+                                </rng:group>
+                            </rng:choice>
+                        </content>
+                        <attList>
+                            <attDef ident="script" usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="scriptNote" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global.attributes"/>
+                            <memberOf key="att.handFeatures.attributes"/>
+                            <memberOf key="att.typed"/>
+                        </classes>
+                        <content>
+                            <rng:ref name="macro.specialPara"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="supportDesc" module="msdescription" mode="change">
+                        <content>
+                            <rng:choice>
+                                <rng:oneOrMore>
+                                    <rng:ref name="model.pLike"/>
+                                </rng:oneOrMore>
+                                <rng:group>
+                                    <rng:optional>
+                                        <rng:ref name="support"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="extent"/>
+                                    </rng:optional>
+                                    <rng:zeroOrMore>
+                                        <rng:choice>
+                                            <rng:ref name="foliation"/>
+                                            <rng:ref name="pagination"/>
+                                        </rng:choice>
+                                    </rng:zeroOrMore>
+                                    <rng:optional>
+                                        <rng:ref name="collation"/>
+                                    </rng:optional>
+                                    <rng:optional>
+                                        <rng:ref name="condition"/>
+                                    </rng:optional>
+                                </rng:group>
+                            </rng:choice>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="watermark" module="msdescription" mode="change">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text/>
+                                    <rng:ref name="model.phrase"/>
+                                    <rng:ref name="countermark"/>
+                                    <rng:ref name="motif"/>
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </content>
+                        <attList>
+                            <attDef ident="tracing">
+                                <desc>describes the methods of recording of some watermark. Methods
+                                    include: tracing, rubbing, etc.</desc>
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                </schemaSpec>
+            </div>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+     xml:id="RC-DRAdd15715BL">
+    <teiHeader>
+      <fileDesc>
+            <titleStmt>
+                <title xml:lang="en">Miscellany, Add. MS 15715, The British Library, 19th c.</title>
+                <title xml:lang="bg">Сборник, ХІХ век</title>
+                <author xml:id="DR">Dilyana Radoslavova</author>
+                <editor xml:id="AM">Anisava Miltenova</editor>
+                <editor xml:id="AB">Andrej Bojadžiev</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Istitute of Literature</publisher>
+                <pubPlace>Sofia, Bulgaria</pubPlace>
+                <date>11.2003</date>
+                <idno type="Repertorium">RC-DRAdd15715BL</idno>
+                <availability status="free">
+                    <p>The intellectual content of this file is copyrighted by the creators under the Creative
+            Commons Attribution-No Derivative Works 3.0 under legislation in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In
+            short, you could download and disseminate information, but you are not allowed to alter,
+            transform, or build upon the works on this section of the site. All reuse or
+            distribution of this work must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
+                    </p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This description is based on <emph>de visu</emph> observations and on the published
+               catalogue descriptions <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 68-70</ref>. </p>
+            </sourceDesc>
+        </fileDesc>
+      <profileDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="cu">Old Slavic</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="Repertorium">
+                    <list>
+                        <item>Euchologia</item>
+                        <item>Prayers</item>
+                        <item>Sacraments</item>
+                    </list>
+                </keywords>
+            </textClass>
+        </profileDesc>
+      <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="bib"
+                       matchPattern="([A-Za-zА-Яа-я]+)"
+                       replacementPattern="bib.xml#$1">
+                    <p> In the context of this project, private URIs with the prefix "bib" point to                         bibl elements in the project's bib.xml file. </p>
+                </prefixDef>
+            </listPrefixDef>
+        </encodingDesc>
+      <revisionDesc>
+            <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in element &lt;origDate&gt;</change>
+            <change who="#DR" when="2009-10-07">Removed entities for the basic Old Slavic characters </change>
+            <change who="#DR" when="2009-10-08">Transformation to Repertorium4 scheme </change>
+            <change who="#DR" when="2009-10-14">Checked against the MS; original text added</change>
+            <change who="#DR" when="2010-08-14">Editorial work on decoration</change>
+            <change who="#DR" when="2010-09-14">the Description of notes moved into "additions"; cheched
+        against the MSS</change>
+        </revisionDesc>
+   </teiHeader>
+    <text>
+        <body>
+            <msDesc>
+                <msIdentifier>
+                    <msName xml:lang="en" type="general">miscellany</msName>
+                    <msName xml:lang="en" type="specific">miscellany of mixed content</msName>
+                    <country>United Kingdom</country>
+                    <settlement>London</settlement>
+                    <repository>British Library</repository>
+                    <collection>Additional manuscripts</collection>
+                    <idno type="shelfmark">Add. MS 15715</idno>
+                    <altIdentifier type="catalgue">
+                        <idno type="catalogue">54</idno>
+                        <note>
+                            <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 68-70.</ref>
+                        </note>
+                    </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                    <objectDesc form="codex">
+                        <supportDesc material="paper">
+                            <support>
+                                <material>Paper. Three (or more) types of paper: white (ff. 1-96, 131-143), beige
+                  (ff. 97-101, 144-174) and grey-green (ff. 93-94, 119-128, 130), all thick and
+                  rough</material>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">ФМ, KФ</motif>
+                                    <term>cf.</term>
+                                    <ref type="bibl" target="bib:Клепиков1978">
+                                        <num>383</num>
+                                        <date>?</date>
+                                    </ref>
+                                    <date>1828</date>
+                                </watermark>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">A circle enclosing an eagle and the words Яросл. Яковлевъ, with date
+                      <date xmlns="http://www.tei-c.org/ns/1.0">1813</date>
+                                    </motif>
+                                </watermark>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">A crowned circle containing an animal (a lion?), with date [18]26</motif>
+                                    <date/>
+                                </watermark>There are also a few fragments of other, unidentified marks.</support>
+                            <extent>
+                                <measure unit="folia">iii+175+iii </measure>
+                                <dimensions unit="mm" type="folia">
+                                    <height>220</height>
+                                    <width>175</width>
+                                </dimensions>
+                                <dimensions type="written" unit="mm">
+                                    <height>150</height>
+                                    <width>117</width>
+                                </dimensions>
+                            </extent>
+                            <foliation>
+                                <date>Modern</date>
+                                <signatures>(i-iii), 1-105, (105a), 106-174, (174a), 175, (176).</signatures>
+                            </foliation>
+                            <collation>
+                                <summary>41 quires</summary>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1-8">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">4</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="9">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">2</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="10-18">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">4</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="19-21">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">6</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="22">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">2</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="23">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">6</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="24-28">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">4</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="29">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">2</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="30">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">10</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="31">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">4(-3)</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="32">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8(-6)</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="33">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">2</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="34-35">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">4</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="36">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">6(-6)</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="37-38">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">6</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="39-40">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">4</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="41">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">2</extent>
+                                </quire>
+                                <signatures>Gatherings signed in the mid lower margin, first recto: I-VIII <foreign xml:lang="cu">а҃-и҃</foreign>, IX <foreign xml:lang="cu"> ѳ҃а</foreign>, X
+                    <foreign xml:lang="cu">ѳ҃в</foreign>, XI <foreign xml:lang="cu">і҃</foreign>,
+                  XII-XVIII <foreign xml:lang="cu">а҃-з҃</foreign>, XIX-XXII <foreign xml:lang="cu">а҃-д҃</foreign>, XXVII-XVIII <foreign xml:lang="cu">а҃і-в҃і</foreign>, XXXII-XL
+                    <foreign xml:lang="cu">а҃-ѳ҃.</foreign>
+                                </signatures>
+                                <ruling xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">17 rulled ll./p.</ruling>
+                            </collation>
+                            <condition>Excellent, except for the back cover wich is slightly broken. </condition>
+                        </supportDesc>
+                        <layoutDesc>
+                            <layout columns="1" writtenLines="17" ruledLines="17">many pages are
+                half-written because the text coincides with miniatures.</layout>
+                        </layoutDesc>
+                    </objectDesc>
+                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Black, in parts brown; red for titles and initials.</ink>
+                    <decoDesc>
+                        <decoNote type="overview">Very
+              rich. 90 full-page framed miniatures forming pictorial cycless corresponding to the
+              narratives, probably the work of more than one artist They are executed in many
+              colours (blue, pink, yellow, green, grey, red) within ink outlines; the backgrounds,
+              the human faces, hands and feet are left with no colour. Some show the influence of
+              folk motifs. All are of a very high standard. The miniatures illustrate the text on
+              the opposite page. The preceding recto is frequently left blank, so there are many
+              blank pages, especially since the passages of text illustrated are often less than a
+              full page in length. There are coloured borders, headpieces of Barocco type, and red
+              initials with rich floral ornamentation, in some cases very large, preceeding each
+              passage. </decoNote>
+                        <decoNote type="overview">Framed, coloured pen drawings by three artists: 1. f. 1v–89v,
+              97v–105v; 2. f. 91v–95v; 3. the verso of the unnumbered folio after f. 105 and the
+              rest part of the manuscript.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 1v</locus>Feast
+              at King Abenner.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 3v</locus>King
+              Abenner and the astrologers.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 5v</locus>King
+              Abenner’s infant enthroned.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 7v</locus>Expelling the monks from the Ethiopian lands.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 9v</locus>The
+              young King calling a friend in the palace.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 11v</locus>The
+              young King at his father's.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 13v</locus>The
+              young King riding, meets a leprous man and a blind man.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 15v</locus>The
+              young King riding, meets two very old men.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 16v</locus>Revelation of Barlaam in the desert.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 17v</locus>Barlaam in merchant’s disguise going to the young King.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 19v</locus>Barlaam baptising Josaphat.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 21v</locus>Nauzardan disclosing Barlaam’s deed to King Abenner.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 23v</locus>King
+              Abenner urging Joasaph to give up Christiantity.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 25v</locus>The
+              King sending troops to hunt for Barlaam, the troops slaughter many monks.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 27v</locus>King
+              Abenner calling the wise men to argue with Josaphat.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 28v</locus>Wise
+              men defeated in the dispute; devils behind them.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 29v</locus>Following Archius’ advice, the King gives half the kingdom to his
+              son.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 30v</locus>Josaphat goes riding to his possession.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 32v</locus>Josaphat summoning the bishops and Christians who hide in the
+              mountains.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 33v</locus>Josaphat building a church in Christ’s Lord’s name.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 34v</locus>Josaphat crushing the idols.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 35v</locus>Baptism.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 36v</locus>The
+              baptism of King Abenner.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 37v</locus>The
+              death of King Abenner four years after his baptism.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 38v</locus>Josaphat handing down his kingdom to Archius.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 39v</locus>Josaphat assuming monk’s countenance.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 40v</locus>The
+              dormition of Barlaam and Josaphat after 55 years in the desert.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 41v</locus>Archius laying the bodies in the Christ’s church.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 43v</locus>Cosmas the Abbot with the monks.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 45v</locus>Cosmas in frenzy after a serious illness.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 47v</locus>Cosmas calling upon the monk to confession.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 49v</locus>Cosmas telling about his vision.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 51v</locus>Cosmas lead to Satan in the Limbo Hell.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 53v</locus>Cosmas with St Andrew and St John.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 55v</locus>Apostles showing Cosmas the Eden; Abraham in the midst of the
+              righteous.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 57v</locus>Eleon (Verdant place); a tree with the dead around it, every one under a
+              shadow.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 59v</locus>Cosmas with angels and the two Apostles in the Heavenly City.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 61v</locus>The
+              Heavenly City; a table set in a palace.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 63v</locus>The
+              apostles leading Cosmas to Hell.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 65v</locus>Cosmas in Abraham’s Bosom.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 67v</locus>Cosmas and the apostles at the Satan; designated as “a stinking man” “a
+              malodorous man”.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 69v</locus>The
+              dormition of monk Athanasios in the Stroianov Monastery.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 71v</locus>A
+              certain John in the monastery of the venerable Benedict in Jerusalem.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 73v</locus>John
+              the Monk in the monastery; the Devil assuming a dragon image comes down upon him
+              during his sleep; John recovers at Benedict’s.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 75v</locus>Benedict showing John a demons’ ladder.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 77v</locus>John
+              and Benedict reaching a wondrous place; a church with twelve men and Lord’s Mother the
+              Queen.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 79v</locus>The
+              angel leading Cosmas to Eden; a garden with a colonnade and prepared
+              thrones.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 81v</locus>The
+              angel showing Cosmas various trees and birds with magnificent decoration.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 83v</locus>The
+              angel leading Cosmas to Hell; devils on black background, a half-naked rider on fiery
+              horse, “merciless and unrighteous”.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 85v</locus>The
+              angel showing Cosmas two whores tortured and other tortures.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 87v</locus>Scene of tortures; infernal pigs belching forth fire to the
+              sinners.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 89v</locus>Scene of tortures; including a torture wheel with a naked man on
+              it.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 91v</locus>The
+              bird Alkonost.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 93v</locus>An
+              old man tormented by lust; an angel showing him a grave with male and female bones in
+              it.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 95v</locus>The
+              vita of Makarios of Egypt; image of a frightening devil with a spear.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 97v</locus>Scene representing monks in a monastery with a wonderful bird.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 99v</locus>The
+              monk in a beautiful garden with the wonderful bird.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 101v</locus>The
+              monk in a monastery at its abbot.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 103v</locus>The
+              monk in a monastery with two other monks.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 105v</locus>The
+              monk telling a story to the brothers.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. [105a]v</locus>The miracle with someone’s shepherd daughter.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 108v</locus>The
+              wondrous marvelous vision of a certain two monks; looking at a horde regiment of
+              beautiful virgins.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 110v</locus>The
+              wondrous marvelous vision: a second regiment horde of virgins with crowns and white
+              garments.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 112v</locus>The
+              wondrous marvelous vision: a third regiment horde of virgins with crowns and flowers;
+              among them is the Holy Mother.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 114v</locus>The
+              virgins, headed by the Holy Mother, find the shepherd’s daughter.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 116v</locus>The
+              monks looking at the virgins and the Holy Mother taking away the daughter’s
+              soul.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 118v</locus>The
+              birth of Onouphrios.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 121v</locus>The
+              King’s dream; an angel telling the King to take his infant nurtured by a
+              hind.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 123v</locus>The
+              King bringing the infant into a monastery.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 125v</locus>The
+              infant in front of a Holy Mother’s icon.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 127v</locus>The
+              infant giving Christ’s bread from the icon to the abbot.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 129v</locus>A
+              scene representing the infant, the bread and the monks.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 131v</locus>St
+              Haralampos preaching.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 134v</locus>Martyrdom of St Haralampos and slaying of the servants who pitied him and
+              believed in God.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 136v</locus>Martyrdom of St Haralampos; the torture’s arms are severed and sticked to the
+              saint’s body.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 138v</locus>St
+              Haralampos interceding for his tortures and is given the gift of healing.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 141v</locus>Martyrdom of St Haralampos; the saint is made pricked with nails.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 143v</locus>Martyrdom of St Haralampos; the saint being burned.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 145v</locus>St
+              Haralampos coming out of the fire, healing a mad man and bringing back to life a dead
+              man.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 148v</locus>Martyrdom of St Haralampos; the saint is being stoned and burned.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 151v</locus>The
+              King shooting at Christ with a bow; two people falling from the sky.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 153v</locus>The
+              vision of King’s daughter about the wonderful garden.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 156v</locus>The
+              King’s daughter bringing St Haralampos to the King; St Haralampos being lead with
+              reins.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 159v</locus>The
+              King’s daughter smashes the idols in the temple.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 161v</locus>The
+              King and the pagan priests forging new idols.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 163v</locus>The
+              King’s daughter Galina smashes the idols again.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 165v</locus>Galina and St Haralampos at the King.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 167v</locus>St
+              Haralampos and the widow who had to violate him.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 170v</locus>St
+              Haralampos at the King’s trial.</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 172v</locus>St
+              Haralampos carried away in the Heavenly Kingdom; Christ enthroned in glory, angels,
+              the soul of St Haralampos.</decoNote>
+                        <decoNote type="headpieces">
+                            <p>
+                                <locus>72 f.</locus> - of Barogue type; 
+                <locusGrp scheme="ff">
+                                    <locus>98</locus>
+                                    <locus>106</locus>
+                                    <locus>119</locus>
+                                    <locus>132</locus>
+                                </locusGrp>
+                                 - with Barogue motifs. </p>
+                        </decoNote>
+                        <decoNote type="borders">
+                            <p>
+                                <locus>2</locus> - text frame
+                with Barogue floral motif, 
+                
+               <locus>44</locus>
+                - with
+                reach vegetal ornament.
+                </p>
+                        </decoNote>
+                        <decoNote type="initials">
+                            <p>At each entry, drawn in red ink.  Large initials on </p>
+                            <locus>2 f.</locus>with Barocco-type
+              decoration, 
+              <locus>4 f.</locus>
+              with rich vegetal decoration in the extender, 
+              <locus>6 f.</locus>, large
+              initial on f. 
+              <locus>17</locus> of extremely large size.
+              </decoNote>
+                    </decoDesc>
+                    <bindingDesc>
+                        <p>Restored, ornamented leather on wooden boards, <dim>230mm x 180mm</dim>; two clasps,
+              restored; leave edges tinted in green; blind tooling: on the upper cover a border
+              tooled by a roll with volute-like pattern of ribbon and leaves; the central piece is a
+              medallion with a flower, in rich foliate frame of the same kind as the stamp on the
+              binding of Add. Ms 16373; corner stamps of a
+              foliate pattern; a frame around the composition tooled with a vegetal pattern of
+              foliate branches; on the lower cover an outer border identical with that on the upper
+              cover; rectangular frame around the central field of four inner borders; the vertical
+              ones stamped with a foliate branch-pattern, the horizontal ones are of a small,
+              repeated floral stamp; rosette stamped in the corners; central lozenge piece.</p>
+                    </bindingDesc>
+                    <additions type="inscriptions">
+                        <list>
+                            <item>
+                                <locus>f. ii</locus>
+                                <quote xml:lang="en">Purchased of A. Asher, 24th Janu. 1846</quote>
+                            </item>
+                            <item>
+                                <locus>f. 175r</locus>
+                                <quote xml:lang="en">
+                          After 1846 and before 1864. Contents. 1. Lives of
+                  the holy fathers Josephat and Barlaam. fol.2. 2 Visions of the Abbot Cosmas, fol.
+                  44. 3. From the "Great Mirror", the vision of a certain monk John, fol. 72, 4.
+                  Life of the Holy father Makarios of Egypt, fol. 96. 5. A Book on the holly star
+                  miracle with shpepherd's daughter, fol. 106. 6. Of the birth and education of St
+                  Onouphrios, fol. 119. 7. Sufferings of the holy martyr Haralampos, Bishop of
+                  Magnesium, fol. 132</quote>
+                            </item>
+                        </list>
+                    </additions>
+                </physDesc>
+                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                    <summary xmlns="http://www.tei-c.org/ns/1.0">A few scribes; very likely they were trained in a same scriptoria.</summary>
+                    <scribe n="1">
+                        <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
+                            <locus>ff. 1-176.</locus>
+                        </locusGrp>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="cyrs" type="semiuncial">
+                            <p>Late semiuncial</p>
+                        </scriptDesc>
+                        <scribeLang>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Russian Church Slavonic, with confusing of <foreign xml:lang="cu">ѣ</foreign> and
+                    <foreign xml:lang="cu">е</foreign>.</p>
+                            </orthography>
+                        </scribeLang>
+                    </scribe>
+                </scribeDesc>
+                <msContents>
+                    <summary>An Old Believer manuscript; contains various readings.</summary>
+                    <msItemStruct xml:id="ACD1" type="translation">
+                        <locus n="1">2-42</locus>
+                        <title xml:lang="bg">Повест за Варлаам и Йоасаф</title>
+                        <note>ff. 3, 4v, 5, 6v, 7, 8v, 9, 10v, 11, 12v, 13, 14v, 15, 18v, 19, 21, 22v, 23, 24v,
+              25, 26v, 27, 31v, 32 are blank.</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">
+                                <supplied>М</supplied> ц<seg rend="sup">с҇</seg>а ноѧ҆брѧ̀ въ. ѳ҃і де́нь житїѐ пр<seg rend="sup">д҇</seg>пбнаго о҆ц҃а на́шего і҆ѡаса́фа
+                пꙋсты́нника с҃на а҆вера ц҃рѧ и҆нді́искагѡ</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ е҆фїѡ̋пстѣй странѣ̀ г҃лемѣй и҆нді́йстѣй воста̀ ца́рь бога́тъ ѕѣло̀ и҆
+                сла́венъ, и̋мене<seg rend="sup">м҇</seg> а҆вени́ръ</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">И҆  возвѣсти́ша ц҃ре́ви а̋рхїю о҆ не́ю, ц҃рьже съ е҆п<seg rend="sup">с҇</seg>кпы и ҆попы̀ ше́дъ,
+                и҆взѧ̀ тѣлеса̀ бл҃же́нънꙋю о҆ц҃ꙋ, и҆ принесѐ въ цр<seg rend="sup">с҇</seg>твꙋющїи гра́дъ, и҆ положи́ша въ
+                ц҃ркви сп҃совѣ, сла́вѧще с҃тꙋю тр<seg rend="sup">о҇</seg>цꙋ</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD2" type="translation">
+                        <locus n="2">44-70</locus>
+                        <title xml:lang="bg">Видение на монах Козма</title>
+                        <note>ff. 46v, 47, 48v, 49, 50v, 51, 53, 54v, 55, 57, 59, 60v, 61, 63, 64v, 65, 66v, 67,
+              68v, 69 are blank.</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">МЦ<seg rend="sup">с҇</seg>А Ѡ҆КТѦБРѦ̀ В' Е҃ ДНЬ ПО́Ве<seg rend="sup">с҇</seg>ТЬ ѡ҆ видѣ́нїи козмы̀ и҆гꙋ́мена стра́шно
+                и҆ѕѣло̀ поле́зно</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ тре́тїе на́ десѧть лѣ́то цр<seg rend="sup">с҇</seg>тва рома́на грѣ́ческаго ц҃рѧ</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и҆ та́ко ѿ житїѧ̀ ѿше́дъ къ сла́вѣ б҃жїи</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD3" type="translation">
+                        <locus n="3">72-90v</locus>
+                        <title xml:lang="bg">Видение на монах Йоан</title>
+                        <note>Excerpt from the Dioptra. Ff. 73, 74v, 75, 77, 79, 80v, 81, 82v, 83, 85, 87, 89
+              are blank.</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">И҆с кни́ги вели́каго зерца́ла видѣ́нїе нѣ́котораго мни́ха і҆о҆а́нна ѕѣло̀ чю́дно
+                Гла<seg rend="sup">в҇</seg> е҃.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Бе не́который чл҃къ в'ми́рѣ и҆мени́тый, и̋мене<seg rend="sup">м҇</seg> и҆ѡ҃аннъ.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">Тогда̀ речѐ а҆рха́г҃глъ . і҆оа́ннѣ во<seg rend="sup">з҇</seg>ни́кни.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD4" type="translation">
+                        <locus n="4">92-92v</locus>
+                        <title xml:lang="bg">Физиолог. За алконоста</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Граногра́фъ глава̀.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Пти́ца ра́йскаѧ а҆лконо́стъ до персе́й же подо́бно а҆ки дв҃ца таковꙋ̀ бо
+                г<seg rend="sup">с҇</seg>дь сотвори́лъ</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0"> и҆ ѿ ́г<seg rend="sup">с҇</seg>да мзда̀ и̋мъ и҆ помышле́нїе и̋хъ пре<seg rend="sup">д҇</seg>вы́шни<seg rend="sup">м҇</seg> сего̀ ра́ди прїи́мꙋ<seg rend="sup">т҇</seg>
+                цр<seg rend="sup">с҇</seg>твїе</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD5" type="translation">
+                        <locus n="5">94</locus>
+                        <title xml:lang="bg">Разказ за монаха, измъчван от похот, от Патерика</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ста́рецъ нѣ́кто стꙋжа́е<seg rend="sup">м҇</seg> бѣ̀ по́хотїю плотско́ю, и҆  немогі́и терпѣ́ти о҆гнѧ̀
+                своеѧ̀ по́хоти и̋де в'ми́ръ хотѧ̀ и҆спо́лнити жела́нїе</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0"> и҆ премени́всѧ по́хоти воз'врати́сѧ в'мѣ́сто своѐ пребы́сть сла́вѧ
+                б҃га</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD6" type="translation">
+                        <locus n="6">96-96v</locus>
+                        <title xml:lang="bg">Разказ за отец Макарий Велики</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">ѿ житїѧ̀ прп<seg rend="sup">д҇</seg>бꙿнаго о҆ц҃а на́шего мака́рїѧ е҆ги́птѧнина</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ходѧ́щꙋ нѣ́когда прп<seg rend="sup">д҇</seg>бномꙋ о҆ц҃ꙋ на́шемꙋ мака́рїю во внꙋ́треннѣй пꙋсты́ни,
+                и҆ срѣ́те ста́рца нѣ́коего бре́мене<seg rend="sup">м҇</seg> тѧ́жки<seg rend="sup">м҇</seg> о҆бремене́на.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0"> ѿ того̀ помазꙋ́ю и̋ноковъ наблꙋ́дъ поѡ̋щрѧ́ю, а҆ и̋же на хребтѣ̀ мое<seg rend="sup">м҇</seg>
+                и҆ налыста́хъ мо́и<seg rend="sup">х҇</seg>
+                            </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD7" type="translation">
+                        <locus n="7">98-105a</locus>
+                        <title xml:lang="bg">Разказ за монаха, който живял триста години</title>
+                        <note>ff. 99, 100v, 101, 102v, 103 are blank.</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ҆СЛА́ВѢ НБ<seg rend="sup">с҇</seg>НѢЙ И҆Ѡ҆РА́ДОСТИ ПРА́ВЕдны<seg rend="sup">х҇</seg> вѣ́чнѣй и҆ что̀ есть 
+                                пре<seg rend="sup">д҇</seg> г<seg rend="sup">с҇</seg>дѣ<seg rend="sup">м҇</seg>
+                ты́сѧща лѣ́тъ ꙗ̋ко д҃нь е҆ди́нъ</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Нѣ́кїй соверше́нныи вꙿ добродѣ́телехꙿ и̋нокъ вꙿни́де вꙿ размышле́нїе, хотѧ̀
+                свѣ́дати ѡ҆ сла́вѣ нб<seg rend="sup">с҇</seg>нѣй.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">Ста́рецъ же о̋ныи с҃ты́и пребы̀ то́чїю трѝ днѝ и҆ преста́ви сѧ в'
+                соверъшеннꙋю и҆ вѣ́чнꙋю ра́дость, ю̋же ѹ҆гото́ва б҃гъ лю́бѧщи<seg rend="sup">м҇</seg> е҆гѡ̀</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD8" type="translation">
+                        <locus n="8">106-117</locus>
+                        <title xml:lang="bg">Чудо на Богородица за дъщерята на овчаря</title>
+                        <note>ff. 107v, 108, 110, 112, 114, 116 are blank.</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Кни́га звѣзда̀ пресвѣ́тлаѧ, чю́до прес҃ты́ѧ б<seg rend="sup">д҇</seg>цы о҆нѣ́коей ѹ҆бо́гой
+                пастꙋховой дще́ри</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Бы́сть вꙿ нѣ́коей вѣ́си дв<seg rend="sup">д҇</seg>ца и̋же и̋же  и҆мѧ́ше о҆ц҃а ѕѣло̀
+                ѹ҆бо́га. </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0"> и҆ бѣ́си прогна́ни бы́ша. вꙿ сла́вꙋ б҃гꙋ на́шемꙋ. сла́ва и҆ пр<seg rend="sup">с҇</seg>тѣ́й б<seg rend="sup">д҇</seg>цѣ
+                и҆ всѣ́мъ с҃ты́мъ, а҆ми́нь</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD9" type="translation">
+                        <locus n="9">119-130</locus>
+                        <title xml:lang="bg">Житие на св. Онуфрий</title>
+                        <note>ff. 121, 122v, 123, 125, 127, 128v, 129 are blank.</note>
+                        <note type="churchCal">June 12</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ҆ рожде́нїи и҆ ѡ҆тро́чествѣ пр<seg rend="sup">д҇</seg>пбнаго о҆нꙋ́фрїѧ</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ца́рь нѣ́кїй въ пер'си́дѣ. е҆го́же лѣто̀ писа́тели мнѧ<seg rend="sup">т҇</seg>
+                            </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0"> и҆ бы́сть всѣ́хъ лѣ́тъ о҆нꙋ́фрїѧ пр<seg rend="sup">д҇</seg>пбнаго се́дмьдесѧ<seg rend="sup">т҇</seg> поживѣ̀ в'монастырѝ
+                лѣ<seg rend="sup">т҇</seg> дѣсѧ<seg rend="sup">т҇</seg>, а҆  ше́стьдесѧ<seg rend="sup">т҇</seg> в пꙋсты́ни</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD10" type="translation">
+                        <locus n="10">132-174v</locus>
+                        <title xml:lang="bg">Житие на св. Харалампий</title>
+                        <note>ff. 134, 136, 138, 139v, 140, 143, 145, 148, 156v, 157, 153, 155v, 156, 158v, 159,
+              161, 162v, 163, 164v, 165, 166v, 167, 169v, 170, 172 are blank.</note>
+                        <note type="churchCal">February 10</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҇</seg>а ѳеврꙋа́рїѧ въ а҃ д҃нь, Страда́нїе с҃та<seg rend="sup">г҇</seg> сщ҃енномꙋ́ченика харла́мпїѧ
+                е҆пк<seg rend="sup">с҇</seg>па магни́сїи гра́да. и҆ и̋же сни<seg rend="sup">м҇</seg> пострада́вшихъ</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Цр<seg rend="sup">с҇</seg>твꙋющꙋ г<seg rend="sup">с҇</seg>дꙋ на́шемꙋ і҆с҃ꙋ х<seg rend="sup">с҇</seg>ртꙋ̀ скончева́шесѧ твори́маѧ бѣсо<seg rend="sup">м҇</seg>
+                слꙋ́жба</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">вꙿсѧ́ческиже пре<seg rend="sup">д҇</seg>стои<seg rend="sup">т҇</seg> о҆деснꙋ́ю пр<seg rend="sup">с҇</seg>то́ла б҃жїѧ молѧ̀ о҆на́съ г<seg rend="sup">с҇</seg>да
+                на́шего і҆с҃а хр<seg rend="sup">с҇</seg>та. е҆мꙋ́же сла́ва и҆ цр<seg rend="sup">с҇</seg>тво. н҃нѣ и҆ пр<seg rend="sup">с҇</seg>но и҆ во́ вѣки вѣко́мъ,
+                а҆ми́нь</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                </msContents>
+                <history>
+                    <origin evidence="de visu" resp="#DR">
+                        <origDate notBefore="1801" notAfter="1899">19th c.</origDate>
+                        <origPlace>Russian</origPlace>
+                    </origin>
+                    <provenance>This is clearly an Old Believer MS, and must have been quite new when
+            acquired. Purchased from A. Asher.</provenance>
+                    <acquisition>24th January 1846.</acquisition>
+                </history>
+                <additional>
+                    <adminInfo>
+                        <recordHist>
+                            <source>
+                                <p>Directly catalogued from the original manuscript using the printed catalogue <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 68-70</ref>. </p>
+                            </source>
+                        </recordHist>
+                    </adminInfo>
+                    <surrogates>
+                        <p>Microform: Central Library of
+              BAS, MF-32,</p>
+                        <p>Digital image of f. 2 (file:
+              C7912-03).</p>
+                    </surrogates>
+                </additional>
+            </msDesc>
+        </body>
+    </text>
+</TEI>

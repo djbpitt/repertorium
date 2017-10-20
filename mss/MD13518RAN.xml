@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+     xml:id="RC-MD13518RAN">
+    <teiHeader>
+      <fileDesc>
+            <titleStmt>
+                <title>Kotel Damaskin No 13.5.18 Library of RAS St. Petersburg</title>
+                <author xml:id="MD">Margaret Dimitrova</author>
+                <editor xml:id="AM">Anisava Miltenova</editor>
+                <editor xml:id="AB">Andrej Bojadžiev</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Institute of Literature</publisher>
+                <pubPlace>Sofia</pubPlace>
+                <date>23.12.1995</date>
+                <idno type="Repertorium">RC-MD13518RAN</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    <ref type="bibl" target="bib:Срезневский1915">Срезневский, Покровский 1915: 425-429</ref>
+                    <ref type="bibl" target="bib:Яцимирский1916">Яцимирский 1916: 104-109</ref>
+                    <ref type="bibl" target="bib:Иванов1921">Иванов 1921</ref>
+                    <ref type="bibl" target="bib:Ангелов1957">Ангелов 1957: 388-395</ref>
+                    <ref type="bibl" target="bib:Киселков1963">Киселков 1963: 118-121</ref>
+                    <ref type="bibl" target="bib:Демина1968">Демина 1968</ref>
+                    <ref type="bibl" target="bib:Калиник1989">Калиник 1989: 281-645, 689-695</ref>
+                </p>
+            </sourceDesc>
+        </fileDesc>
+      <profileDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="RU">Russian</language>
+                <language ident="bg">Bulgarian</language>
+                <language ident="cu">Old Slavic</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="Repertorium">
+                    <list type="simple">
+                        <item>Мodern Bulgarian damaskin</item>
+                        <item>Sofronij Vrachanski</item>
+                    </list>
+                </keywords>
+            </textClass>
+        </profileDesc>
+      <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="bib"
+                       matchPattern="([A-Za-zА-Яа-я]+)"
+                       replacementPattern="bib.xml#$1">
+                    <p> In the context of this project, private URIs with the prefix "bib" point to bibl
+                  elements in the project's bib.xml file.</p>
+                </prefixDef>
+            </listPrefixDef>
+        </encodingDesc>
+      <revisionDesc>
+            <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in element &lt;origDate&gt;</change>
+        </revisionDesc>
+   </teiHeader>
+    <text>
+        <body>
+            <msDesc>
+                <msIdentifier>
+                    <msName xml:lang="en" type="general">miscellany</msName>
+                    <msName xml:lang="en" type="specific">damaskin</msName>
+                    <msName xml:lang="en" type="specific">new Bulgarian damaskin</msName>
+                    <msName xml:lang="bg" type="individual">Котленски дамаскин</msName>
+                    <msName xml:lang="en" type="individual">Kotel Damaskin</msName>
+                    <msName xml:lang="ru" type="individual">Котленский дамаскин</msName>
+                    <country>Russia</country>
+                    <settlement>St. Petersburg</settlement>
+                    <repository>Russian Academy of Sciences</repository>
+                    <idno type="shelfmark">13.5.18</idno>
+                    <altIdentifier type="old">
+                        <idno type="shelfmark">59</idno>
+                        <collection>P. Syrku</collection>
+                    </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                    <objectDesc form="codex">
+                        <supportDesc material="paper">
+                            <support>
+                                <material>Paper</material>
+                                <watermark>unclear</watermark>
+                            </support>
+                            <extent>
+                                <measure unit="folia">I+181+I</measure>
+                                <dimensions unit="mm" type="folia">
+                                    <height>230</height>
+                                    <width>160</width>
+                                </dimensions>
+                            </extent>
+                            <foliation>Original by pop Stojko</foliation>
+                            <pagination xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">New arabic pagination</pagination>
+                            <condition>A well preserved manuscript</condition>
+                        </supportDesc>
+                        <layoutDesc>
+                            <layout columns="1" writtenLines="21"/>
+                        </layoutDesc>
+                    </objectDesc>
+                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Dark brown</ink>
+                    <decoDesc>
+                        <decoNote type="borders">at the beginning of each composition borders in southern Slavic style (3r, 11v, 18v, 25v, 32v, 52r, 60r, 79r, 88r, 104v, 109v, 119v, 127v, 141v, 166r)</decoNote>
+                        <decoNote type="initials">initials in red (kinovar), some with onthropological ornamentation</decoNote>
+                    </decoDesc>
+                    <bindingDesc>
+                        <binding>
+                            <p>Wooden panels covered with leather with floral ornament</p>
+                        </binding>
+                    </bindingDesc>
+                </physDesc>
+                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                    <scribe n="1">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">3r-175r</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">pop Stojko, i. e. Sofronij Vračanski</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="cyrs" type="semiuncial">
+                            <p>New semiuncial</p>
+                        </scriptDesc>
+                        <scribeLang>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Front jer, no juses, Bulgarian as well as sometimes Russian continuants of the nazals, jotisized "a", nonregular use of "jat",  nonregular and nonetymological use of "dzjalo", traces of reduction of nonstressed vowels typical of eastern Bulgarian dialects; diverse superscript signs: accents -  oksia and varia; spiritus, tilde</p>
+                            </orthography>
+                        </scribeLang>
+                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
+                            <name full="yes">Margaret Dimitrova</name>
+                            <resp>facsimile edition</resp>
+                        </respStmt>
+                    </scribe>
+                    <scribe n="2">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">175v-177v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="cyrs" type="semiuncial"/>
+                        <scribeLang>
+                            <orthography>
+                                <orthNote type="jers">Front jer</orthNote>
+                                <orthNote type="juses">no juses:back jus "ou", jotisized back jus "ju", front jus "e"</orthNote>
+                                <orthNote type="jotVowel">jotisized "ju", "ja"</orthNote>
+                                <orthNote type="otherLetters">nonregular use of "jat" - confusion between "jat" and "e"; use of "1h" preceding vowels including "a"; use of "dzjalo" </orthNote>
+                            </orthography>
+                        </scribeLang>
+                    </scribe>
+                    <scribe n="3">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">177v-179r</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="cyrs" type="semiuncial"/>
+                        <scribeLang>
+                            <orthography>
+                                <orthNote type="jers">Front jer, nonregular, but often vocalization of jers: front&gt;"e", back&gt;"o" </orthNote>
+                                <orthNote type="juses" subtype="nonConsis">only front jus used both in its etymoligical place and for "ja" </orthNote>
+                                <orthNote type="jotVowel">rare jotisized "ja"; regular "ju"</orthNote>
+                            </orthography>
+                        </scribeLang>
+                    </scribe>
+                </scribeDesc>
+                <msContents>
+                    <summary>The manuscript contains 23 texts</summary>
+                    <filiation type="translation">
+                        <date>17th c.</date>
+                    </filiation>
+                    <filiation type="protograph">Bulgarian</filiation>
+                    <filiation type="litRedaction">modern Bulgarian damaskin of the second group</filiation>
+                    <msItemStruct xml:id="ACD1">
+                        <locus n="1">1r-2v</locus>
+                        <title xml:lang="bg">Предисловие на поп Стойко</title>
+                        <author>Pop Stojko</author>
+                        <filiation type="source">authorial text<date>1765</date>
+                        </filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">
+              изволенїемь ѡ҃ца: и с поспешенїемь с҃на: и сьврьшенїемь с҃того д҃ха, исписах се азь ѡкаꙗнїи вь чл҃цѣхь стоико іереи ѿ село котиль
+            </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">и не стоить на едино<seg rend="sup">м</seg> мѣсте да и ми оулоучимь ц<seg rend="sup">с</seg>ртво н҃б<seg rend="sup">с</seg>ие сь всѣми ст҃ими. аминь.ключь слова л҃ індиктїѡ<seg rend="sup">н</seg> ги҃ вь роуцѣ лѣто е҃
+           </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD2">
+                        <locus n="2">3r-11v</locus>
+                        <title xml:lang="bg">Житие на св. Симеон Стълпник</title>
+                        <author>Antony the Monk</author>
+                        <note>
+                            <date when="--09-01">1 September: St. Symeon the Stylite</date>
+                        </note>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="translation">
+                            <num>A modern Bulgarian translation from Middle Bulgarian manuscript </num>
+                            <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">a modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">a modern Bulgarian damaskin</filiation>
+                        <filiation type="litRedaction">the second type of modern Bulgarian damaskins</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">с</seg>ц҃а септемврїа а҃ начело индикта, паметь препо<seg rend="sup">д</seg>обнаго ѡ҃ца нашего Сымеона стльпника</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">
+         Чудно идивносе стори вьнашите д҃ни. слоучисе имене грѣшномоу антонию
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ами инїи да се по<seg rend="sup">д</seg>канимь колкоу годе б҃гоу да оугодимь, ина<seg rend="sup">с</seg> бг҃ь даспо<seg rend="sup">д</seg>оби идапрїеме вьц҃р<seg rend="sup">с</seg>тво н҃б<seg rend="sup">с</seg>ное вьвѣки аминь
+         </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD3">
+                        <locus n="3">18v-25v</locus>
+                        <title xml:lang="bg">Слово за Рождество Богородично</title>
+                        <note>
+                            <date when="--09-08">8 September: Nativity of the Theotokos</date>
+                        </note>
+                        <filiation type="translation">
+                            <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">с</seg>ца того и҃ слово нарож<seg rend="sup">д</seg>ство прѣс҃тїи вл<seg rend="sup">д</seg>чци наше б҃ци ипр<seg rend="sup">с</seg>но д҃ви м҃рїи</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">като сьздаде б҃гь нашь чл҃ци. задоброги сьздаде даго знаꙗть сички людїе единаго истинаго б҃га
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ами нїи братїе даниѡсьж<seg rend="sup">д</seg>ами никого макарь сьгрѣшиль или несьгрѣшиль, даинїи на пришествїи х҃во данебьдемь посрамлени
+         </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD4">
+                        <locus n="4">18v-25v</locus>
+                        <title xml:lang="bg">Слово за Въздвижение на Честния кръст</title>
+                        <note>
+                            <date when="--09-14">14 September: Elevation of Holy Cross</date>
+                        </note>
+                        <filiation type="source">Middle Bulgarian</filiation>
+                        <filiation type="translation">
+                            <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">с</seg>ца того ді҃ вьз<seg rend="sup">д</seg>виженїе ч<seg rend="sup">с</seg>тнаго кр<seg rend="sup">с</seg>та г҃нꙗ слово</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Вьлѣто седмо ѿкога беше начель ц҃рь костантинь да цароува
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">защо да имаме ч<seg rend="sup">с</seg>тнаго кр<seg rend="sup">с</seg>та помощникь. навьсако мѣсто. даина<seg rend="sup">с</seg> б҃гь помилва вьцр<seg rend="sup">с</seg>тво нб<seg rend="sup">с</seg>ное, аминь
+         </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD5">
+                        <locus n="5">25v-32v</locus>
+                        <title xml:lang="bg">Житие на св. Петка Търновска</title>
+                        <author>Euthymios of Tŭrnovo</author>
+                        <note>
+                            <date when="--10-14">14 October 14: St. Paraskeve</date>
+                        </note>
+                        <filiation type="source">middle Bulgarian</filiation>
+                        <filiation type="translation">
+                            <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">с</seg>ца ѡктомврїа ді҃: житїе препо<seg rend="sup">д</seg>обнїи м҃три наше петки трьновскїи:</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Сл҃нце колкото има свѣть исвѣти, толкозїи инапрепо<seg rend="sup">д</seg>обна петка паметь, щосае просвѣтила посички свѣть
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ипрѣс҃тїꙗть и щото сичко ѡживꙗша неговїꙗть д҃хь. и сега исꙗкоги дори докраи свѣть ивь вѣки вѣкомь, аминь
+         </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD6">
+                        <locus n="6">32v-52r</locus>
+                        <title xml:lang="bg">Житие на св. Димитър Солунски</title>
+                        <author>Damaskenos Stoudites</author>
+                        <note>
+                            <date when="--10-26">26 October: Demetrios of Thessalonike</date>
+                        </note>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="translation">
+                            <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">a modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">a modern Bulgarian damaskin</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">с</seg>ца того кзі҃:моученїе с҃того славнаго великомоученика димитрїа мироточиваго: извадисе нанови езикь ѿдамаскина инока иподїакона истоудита; слово с҃томоу великоум<seg rend="sup">ч</seg>никоу димитрїю</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ѡбичае имать ц҃рїе бл<seg rend="sup">с</seg>вени хр<seg rend="sup">с</seg>тїане, кога щь<seg rend="sup">т</seg> дагостꙗт нꙗкого чл҃ка болерина, нестоꙗ<seg rend="sup">т</seg> самїи пре<seg rend="sup">д</seg>тꙗхь да имь слоужать
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">дасе и б҃гь вьзвесели ѡ нашето добро, итамо даспо<seg rend="sup">д</seg>оби ина<seg rend="sup">с</seg> вьцр<seg rend="sup">с</seg>тво свое нб<seg rend="sup">с</seg>ное вьвѣки <gap hand="MD"/>
+                            </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD7">
+                        <locus n="7">52r-60r</locus>
+                        <title xml:lang="bg">Слово за Събор на св. Архангели</title>
+                        <author>Damaskenos Stoudites</author>
+                        <note>In other modern Bulgarian damaskins the title of the composition differs from the title in the Kotel damaskin</note>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="translation">
+                            <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">с</seg>ц ноемврїа и҃ сьборь архагг҃ла михаила ипрочихь безпльтнимь слово</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Натри дꙗлове раздѣли бг҃ь сичка направа
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">иб҃гь щое спо<seg rend="sup">д</seg>обиль на<seg rend="sup">с</seg> тасме дочакале днешнїать д҃нь, итьи даспо<seg rend="sup">д</seg>оби нас нацр<seg rend="sup">с</seg>во нб<seg rend="sup">с</seg>ное, дето прилича немоу слава иче<seg rend="sup">с</seg> вьвѣки<gap hand="MD"/>
+                            </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD8">
+                        <locus n="8">60r-79r</locus>
+                        <title xml:lang="bg">Житие и чудеса на св. Николай Мирликийски</title>
+                        <note>
+                            <date when="--12-06">6 December: St. Nicholaos of Myra</date>
+                        </note>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="translation">
+                            <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">с</seg>ц декемврїа зі҃ иже вьс҃тихь ѡ҃ца нашего николае мирликїискаго чюдотворца. сьписано дамаскина инока иподїакона истоудита, соуще солоунскїи црк҃ви:</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Наанатолска страна наистокь насино<seg rend="sup">р</seg> мѵхриликїа епарїа
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">дето сичко ѡживꙗва, исега исꙗкоги, ивьбезскраинїи щото непреминоушать вьвѣкове ивѣкомь аминь
+         </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD9">
+                        <locus n="9">79r-87v</locus>
+                        <title xml:lang="bg">Слово за Кръстопоклонна неделя</title>
+                        <author>Damaskenos Stoudites</author>
+                        <note>
+                            <date>Sunday of Veneration of the Holy Cross</date>
+                        </note>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="translation">
+                            <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">слово вьне<seg rend="sup">д</seg>лю кр<seg rend="sup">с</seg>тоупоклонноую, дамаскина инока иподїакона истоудита</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">приличннье иднешнїꙗть с҃тїи д҃нь бл<seg rend="sup">с</seg>вени хр<seg rend="sup">с</seg>тїане колко, като единь ц҃рь иде навоиска
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">итамо даполоучимь ѡнази мислнаа паша вьц<seg rend="sup">с</seg>рство нб<seg rend="sup">с</seg>ное дето стоꙗть сички с҃ти. идетоса радва<seg rend="sup">т</seg> аггели дано бьде насинца намь даполоучимь зара<seg rend="sup">д</seg> х҃а истинаго б҃га. детомоу по<seg rend="sup">д</seg>обава <gap hand="MD"/>
+                            </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD10">
+                        <locus n="10">88r-104v</locus>
+                        <title xml:lang="bg">Житие на св. Мария Египетска</title>
+                        <author>Sophronios of Jerusalem (Pseudo)</author>
+                        <note>
+                            <date>The fifth Sunday of Lent</date>
+                        </note>
+                        <note>The vita was translated into modern Bulgarian from the  Middle Bulgarian or Serbian manuscript containing the second, later translation  of  the Greek original</note>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="translation">
+                            <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Вьнеделю петаа поста. житїе ижизнь препо<seg rend="sup">д</seg>обнїи мт҃ри наше м҃рїи егѵхптенина</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">таина речь или нꙗкои зговорь цр<seg rend="sup">с</seg>ки тае добре дапотаишь. абожїа работа дапрокаже<seg rend="sup">ш</seg>
+                            </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">да спо<seg rend="sup">д</seg>оби ина<seg rend="sup">с</seg> навторо пришествїе дастанемь ѡдѣсна страна. ради га҃ и исоуса хр<seg rend="sup">с</seg>та нашего. дето трѣбва сѣкоги инасѣки ча<seg rend="sup">с</seg> даго блгодаримь идамоуса покланꙗме вь веки
+         </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD11">
+                        <locus n="11">104v-109v</locus>
+                        <title xml:lang="bg">Слово за Възкресение Лазарово</title>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="translation">
+                            <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Слово навьскр<seg rend="sup">с</seg>нїе лазарова</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">
+            Гь҃ щото сичко види исекимоу знае наср҃цето. щое</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">идетоса недоврьша ѡнази агг҃ска гозба даполоучимьприхр<seg rend="sup">с</seg>та истинского б҃га нашего детомоуе слава идрьжава ч<seg rend="sup">с</seg>ть и поклоненїе безкраиномоу негово ѡ҃цоу ипрес҃ти<seg rend="sup">м</seg> д҃хомь. вьвѣки<gap hand="MD"/>
+                            </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD12">
+                        <locus n="12">109v-119v</locus>
+                        <title xml:lang="bg">Слово за Цветница</title>
+                        <author>Damaskenos Stoudites</author>
+                        <note>
+                            <date>Palm Sunday</date>
+                        </note>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="translation">A modern Bulgarian translation from the 16th-century  Bulgarian translation made in archaic language of medieval literacy.
+          <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="litRedaction">The second type of modern Bulgarian <emph>damaskini</emph>
+                        </filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Слово нацвѣтоносїе га҃ нашего іис҃а ха҃</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Имать законь ц҃рїе когащать нꙗкого големи дагостꙗть. и сами пре<seg rend="sup">д</seg>тꙗхь нестоꙗть да имь слоугоувать
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">идаполоучимь цр<seg rend="sup">с</seg>тво инб<seg rend="sup">с</seg>ное дето краи иконець нема. идетое слава безсконечна вьвѣки<gap hand="MD"/>
+                            </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD13">
+                        <locus n="13">119v-127v</locus>
+                        <title xml:lang="bg">Слово за предаването на Христос</title>
+                        <note>
+                            <date>The Maunday Thursday</date>
+                        </note>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="translation">
+                            <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">вьс҃тїи векикїи четврьткь. слово ѡ преданїе г҃не. евреѡмь</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Добрѣе вьзлюблена братїа дави кажемь как е добро доумаль їѡань пр<seg rend="sup">д</seg>тча вьадь
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">итьисе веселꙗха и ѿидоха вь раи иславѣха избавителꙗ нашего іи҃са ха҃. дето моуе честь и слава ипоклоненїе ѡ҃цоу и с҃ноу<gap hand="MD"/>
+                            </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD14">
+                        <locus n="14">127v-141r</locus>
+                        <title xml:lang="bg">Слово за погребение Христово</title>
+                        <author>Damaskenos Stoudites</author>
+                        <note>
+                            <date>The Holy Saturday</date>
+                        </note>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="translation">
+          A modern Bulgarian translation from the 16th-century Bulgarian translation written in the archaic language of 16th-century literacy
+          <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="litRedaction">The second type of modern Bulgarian <emph>damaskini</emph>
+                        </filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">вьс҃тоую векикоую соуботоу. слово слово на погребенїе г҃не. иѡриданїе прѣс҃тїи б҃ци</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Злина инапасть щонаходи хората ѿтри работи бива бл<seg rend="sup">с</seg>вени хр<seg rend="sup">с</seg>тїане. едно испитанїе б҃жїи кога испитва б҃гь чл҃ка
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ѡти тои краи и доврьшини нема. чїи ѿць ис҃тїи д҃хь сичко сьвершава. исеги исꙗкоги и докраи свѣть вьвѣки<gap hand="MD"/>
+                            </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD15" type="translation">
+                        <locus n="15">141v-166r</locus>
+                        <title xml:lang="bg">Житие на св. Георги</title>
+                        <author>Damaskenos Stoudites</author>
+                        <note>
+                            <date when="--04-23">23 April: St. George</date>
+                        </note>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="translation">
+                            <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">a modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">a modern Bulgarian damaskin</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">
+                                <title>Мс априлїа кг҃ моученїе с҃тго великомчника ичюдотворца геѡргїа: сьписано дамаскина інока иподїакона истоудита. приказвасе това слово изачюдесата щосае сторило ѿ него</title>Празс<seg rend="sup">д</seg>ници исьбори ц҃рковнїи. бл<seg rend="sup">с</seg>вени хр<seg rend="sup">с</seg>тїане зара<seg rend="sup">д</seg> дроуга работа небивать, ами тькмо зара<seg rend="sup">д</seg> д҃шевна добрина
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ипрес҃тїꙗть идобрꙗть неговь д҃хь дето сичко ѡживꙗва . исега исѣкоги и вь безкраинїи щото неприминоувать вѣкове вѣкомь аминь
+         </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD16">
+                        <title xml:lang="bg">Поучение за пророк Илия</title>
+                        <note>
+                            <date when="--07-20">20 July: Prophet Elijah</date>
+                        </note>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="translation">
+                            <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg> іюлїа .к҃. иже нанб<seg rend="sup">с</seg>а врненоснїи вьсхо<seg rend="sup">д</seg> с҃тго славнаго пр<seg rend="sup">о</seg>р<seg rend="sup">о</seg>ка илиїа тезвитенина</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ето сега свѣтливо сл҃нце нб<seg rend="sup">с</seg>но колило вьзнесенїе ѡгнени коне
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">илїа земнїи агг҃ль инб<seg rend="sup">с</seg>нїи ч҃кь щото давашь храна ѡтн҃бето наро<seg rend="sup">д</seg> члч<seg rend="sup">с</seg>кїи детоти поч<seg rend="sup">с</seg>тно праз<seg rend="sup">д</seg>никь строувать. наславоу инапоч<seg rend="sup">с</seg>ть с҃тѣи троици. ѡ҃цоу ис҃ноу истомоу д҃хоу . исега исꙗкоги идокраи свѣть вьвѣки вѣкомь
+         </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD17">
+                        <locus n="17">169r-173r</locus>
+                        <title xml:lang="bg">Поучение за душевното покаяние</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="translation">
+                            <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="litRedaction">The second type of modern Bulgarian <emph>damaskini</emph>
+                        </filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Слово с҃тго ѡ҃ца іѡанна златоѵхстаго ѡд҃шевно покаꙗнїе</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Кои даса непочюди или да са не оуплаши за тоизи свѣть. като са ѡставени тїа временна занашити тешки грѣхове
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ами сꙗкоги б҃га да смислꙗме и оумьть нашь дае камто него. итои да избави на<seg rend="sup">с</seg> ѿ сички зілини. инатоизи свѣть инаѡнзи, ѡтїе негова слава идержава исега исꙗкоги ивьвеки веко<seg rend="sup">м</seg>
+                            </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD18" type="translation">
+                        <locus n="18">173r-174r</locus>
+                        <title xml:lang="bg">Поучение за злите жени</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="translation">
+                            <num>2nd</num> A modern Bulgarian translation from medieval Slavic manuscript Bulgarian or Serbian
+          <date>17th c.</date>
+                        </filiation>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="litRedaction">The second type of modern Bulgarian <emph>damaskini</emph>
+                        </filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Слово с҃тго іѡанна златоѵхстаго ѡзли<seg rend="sup">х</seg> жена<seg rend="sup">х</seg>
+                            </head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Нищо нее прилично таквози като жена зілоꙗзична, иникаковь лють зівѣрь нищеса оутькми като лоукава жена крамолница
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">аколїа милвашь атїасе вьзноси. инезнаиси законать са<seg rend="sup">с</seg> любовь даго пази
+         </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD19">
+                        <locus n="19">174r-174v</locus>
+                        <title xml:lang="bg">Поучение за тези, които врачуват и баят</title>
+                        <filiation type="protograph">A modern Bulgarian damaskin</filiation>
+                        <filiation type="antigraph">A modern Bulgarian damaskin</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Слово кои врачоувать и баꙗ<seg rend="sup">т</seg>
+                            </head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Слоушаите стари баби ижени щоща дави доумамь: рибарь коги лови риба наморето
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">понеже била дїаволоу слоужитель анеб҃гоу: чоухтели бл<seg rend="sup">с</seg>венїи хр<seg rend="sup">с</seg>тїане пазетиса ꙗко хоубаве: Конець сказанїемь
+         </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD20">
+                        <locus n="20">175v-177r</locus>
+                        <title xml:lang="bg">Чинопоследование на изповед. Молитва, 1</title>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="protograph">Medieval South Slavic text</filiation>
+                        <filiation type="antigraph">Medieval South Slavic text</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">Бл<seg rend="sup">с</seg>вень бгь҃ нашь инн҃ꙗ ипр<seg rend="sup">с</seg>но Три ст҃ое ги҃ помилоуи ви҃ Три с҃тое Ги҃ помилоуи ви҃ Прїидете поклонимсе триж<seg rend="sup">д</seg>ь <gap hand="MD"/> Слава Ги҃ помилоуи на<seg rend="sup">с</seg> инн҃ꙗ мл<seg rend="sup">с</seg>рьдїе дверитаже Гоу҃ помолимсе</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ги҃ исоусе хе҃ бе҃ нашь. сн҃е ислове б҃га живаго, пастироу иагньче.
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и тебѣ подобаеть вьсѣка слава чь<seg rend="sup">с</seg>ть и покланꙗнїе . сьбезначелнимь ти ѡ҃цемь. и пр<seg rend="sup">с</seg>тимь бл҃гимь иживо творѣщимь д҃хомь . ин҃нꙗ и пр<seg rend="sup">с</seg>но и вь вѣки вѣкомь аминь
+         </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD21">
+                        <locus n="21">177r-177v</locus>
+                        <title xml:lang="bg">Чинопоследование на изповед. Молитва, 2</title>
+                        <filiation type="source">Greek</filiation>
+                        <filiation type="protograph">Medieval South Slavic text</filiation>
+                        <filiation type="antigraph">Medieval South Slavic text</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">мл҃тва томоуждѣ</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Гь҃ пр<seg rend="sup">д</seg>ммл҃тивие даѡщедритте гь҃ исоусь хр<seg rend="sup">с</seg>тось вьсакаа прошенїа бл҃гаа дадасть тебѣ
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ибл<seg rend="sup">с</seg>витте вьсе д҃нїи живота твоего. ꙗко томоу подобаеть вьсака слава іч<seg rend="sup">с</seg>ть покланꙗнїе. ѡ҃цоу ис҃ноу ис҃томоу д҃хоу, ин҃нꙗ ипр<seg rend="sup">с</seg>но и вь вѣки вѣкомь аминь
+         </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD22">
+                        <title xml:lang="bg">Слово за Възкресение Христово</title>
+                        <filiation type="source">Greek</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Тоизи д҃нь е҃ дето го е направиль г<seg rend="sup">с</seg>дь дасе возрадовами идасе веселимь внего. Сичкиꙗт свѣть дне<seg rend="sup">с</seg> придоби сп҃сителеітьси. ѡстрашно идивно!
+          </incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">Ноити овечнїи ц҃рю б҃говисочне-столе, на нб҃то долготерпеливе б҃же, детоси ц҃рь надь ц҃ето, иг<seg rend="sup">с</seg>дрь на<seg rend="sup">д</seg> г<seg rend="sup">с</seg>даріте, покажи на<seg rend="sup">м</seg> б҃же исветлотоси, вознесенїе, тебе треба песнь тебе слава подобаеть во веки вековь аминь
+         </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD23">
+                        <locus>142r</locus>
+                        <title xml:lang="bg">Колофон</title>
+                        <colophon>
+                     <p/>
+                  </colophon>
+                    </msItemStruct>
+                </msContents>
+                <history>
+                    <origin evidence="edition" resp="#MD">
+                        <origDate notBefore="1765" notAfter="1765">1765</origDate>
+                        <origPlace>Kotel</origPlace>
+                    </origin>
+                </history>
+            </msDesc>
+        </body>
+    </text>
+</TEI>
