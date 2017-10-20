@@ -984,7 +984,7 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>In addition of classification Repertorium provides an attribute <att>type</att> with the three possible values - original, compilation and translation. Furthermore, Repertorium adds a special element <gi>sampleText</gi> and includes <gi>div</gi>. In the contents of <gi>msCOntents</gi> only <gi>msItemStruct</gi> is allowed, not the unstructured <gi>msItem</gi> element. </p>
+                            <p>In addition of classification Repertorium provides an attribute <att>type</att> with the three possible values - <val>original</val>, <val>compilation</val> and <val>translation</val>. Furthermore, Repertorium adds a special element <gi>sampleText</gi> and includes <gi>div</gi>. In the contents of <gi>msCOntents</gi> only <gi>msItemStruct</gi> is allowed, not the unstructured <gi>msItem</gi> element. </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msContents>
                                     <filiation type="protograph">Bulgarian</filiation>
@@ -1151,6 +1151,63 @@
                                 </valList>
                             </attDef>
                         </attList>
+                        <exemplum>
+                            <p>TEI example: </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msItemStruct n="2" defective="false"
+                                    class="#biblComm">
+                                    <locus from="24v" to="97v">24v-97v</locus>
+                                    <author>Apringius de Beja</author>
+                                    <title type="uniform" xml:lang="la">Tractatus in Apocalypsin</title>
+                                    <rubric>Incipit Trac<supplied reason="omitted">ta</supplied>tus
+                                        in apoka<lb/>lipsin eruditissimi uiri <lb/> Apringi ep<ex>iscop</ex>i
+                                        Pacensis eccl<ex>esi</ex>e</rubric>
+                                    <finalRubric>EXPLIC<ex>IT</ex> EXPO<lb/>SITIO APOCALIPSIS
+                                        QVA<ex>M</ex> EXPOSVIT DOM<lb/>NVS APRINGIUS EP<ex>ISCOPU</ex>S.
+                                        DEO GR<ex>ACI</ex>AS AGO. FI<lb/>NITO LABORE ISTO.</finalRubric>
+                                    <bibl>
+                                        <ref target="http://amiBibl.xml#Apringius1900">Apringius</ref>, ed. Férotin</bibl>
+                                    <textLang mainLang="la">Latin</textLang>
+                                </msItemStruct>
+                            </egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>Repertorium makes significant changes in the content of this element. A new attribute <att>type</att> with three possible values is added: <val>original</val>, <val>compilation</val>, and <val>translation</val>. Places of elements <gi>title</gi> and <gi>author</gi> are in different order: first is the title, and then author. Elements <gi>incipit</gi>, <gi>explicit</gi>, <gi>rubric</gi> are part of the <gi>sampleText</gi> element, which is part of the Repertorium namespace. We included here the element <gi>div</gi> in cases where an edition of large part of prviously unknown text or its recension is described. </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msItemStruct xml:id="ACD1" type="translation">
+                                    <locus n="1">1r-15v</locus>
+                                    <title xml:lang="bg">Физиолог</title>
+                                    <note>The copy represents first group of the second Physiologus's
+                                        translation in South Slavic literature; other similar copies: No. 149 NB -
+                                        Wien, 16th c.; No. 433 NBKM - Sofia, second half of the 16th c. <ref type="bibl" target="bib:Стойкова1994">Стойкова 1994: 53–54,
+                                            70–71</ref>
+                                    </note>
+                                    <filiation type="source">
+                                        <ref type="bibl" target="bib:Sbordone1936">Sbordone
+                                            1936:218-221</ref> (approximate text)</filiation>
+                                    <filiation type="translation">2</filiation>
+                                    <filiation type="protograph">Bulgarian</filiation>
+                                    <filiation type="antigraph">Antigraph of No. 433 and No. 149?</filiation>
+                                    <filiation type="litRedaction">1</filiation>
+                                    <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                                        <head>Слово ѡ въсѣх вещеи ходещихъ и летещи<seg rend="sup">х</seg>
+                                        </head>
+                                    </sampleText>
+                                    <msItemStruct xml:id="ACD1.1">
+                                        <locus n="1">1r-1v</locus>
+                                        <title xml:lang="bg">Физиолог. За лъва</title>
+                                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                                            <head xmlns="http://www.tei-c.org/ns/1.0">Слово за лъва о ц҃ри ѕвѣрстѣ<seg rend="sup">м</seg>.</head>
+                                            <rubric xmlns="http://www.tei-c.org/ns/1.0">фисиолѡгь р<seg rend="sup">еч</seg>е ѡ лъвѣ. о҃че бл<seg rend="sup">с</seg>ви</rubric>
+                                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Лъвь ѥ<seg rend="sup">с</seg> имѣе дѣла велика три. къ с҃тѣи
+                                                тр<seg rend="sup">о</seg>ици примолѥнь. лъво<seg rend="sup">в</seg>
+                                                ѥ<seg rend="sup">с</seg> пръво дѣло. егда раж<seg rend="sup">д</seg>аеть лъвица.</incipit>
+                                        </sampleText>
+                                    </msItemStruct>
+                                    ...
+                                </msItemStruct>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="msPart" module="msdescription" mode="change">
