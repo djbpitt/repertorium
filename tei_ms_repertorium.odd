@@ -1319,6 +1319,103 @@
                                 </rng:choice>
                             </rng:group>
                         </content>
+                        <exemplum>
+                            <p>TEI example:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msDesc>
+                                    <msIdentifier>
+                                        <settlement>Amiens</settlement>
+                                        <repository>Bibliothèque Municipale</repository>
+                                        <idno>MS 3</idno>
+                                        <msName>Maurdramnus Bible</msName>
+                                    </msIdentifier>
+                                    <msContents>
+                                        <summary xml:lang="lat">Miscellany of various texts; Prudentius, Psychomachia; Physiologus de natura animantium</summary>
+                                        <textLang mainLang="lat">Latin</textLang>
+                                    </msContents>
+                                    <physDesc>
+                                        <objectDesc form="composite_manuscript"/>
+                                    </physDesc>
+                                    <msPart>
+                                        <msIdentifier>
+                                            <idno>ms. 10066-77 ff. 140r-156v</idno>
+                                        </msIdentifier>
+                                        <msContents>
+                                            <summary xml:lang="lat">Physiologus</summary>
+                                            <textLang mainLang="lat">Latin</textLang>
+                                        </msContents>
+                                    </msPart>
+                                    <msPart>
+                                        <msIdentifier>
+                                            <altIdentifier>
+                                                <idno>MS 6</idno>
+                                            </altIdentifier>
+                                        </msIdentifier>
+                                        <!-- other information specific to this part here -->
+                                    </msPart>
+                                    <!-- more parts here -->
+                                </msDesc>
+                            </egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>Repertorium adds <att>type</att> attribute. The other changes include posibilities to add different types of identifiers (<gi>msIdentifier</gi> and <gi>altIdentifier</gi>), and a special Repertorium <gi>sampleText</gi> element. An example for convolute (file AM!-108O.xml): </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msPart n="1">
+                    <locus>f. 1</locus>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc material="paper">
+                                <support>
+                                    <material>Paper</material>
+                                    <watermark>none</watermark>
+                                </support>
+                                <extent>
+                                   ...
+                                </extent>
+                                <condition>folio seems to be added to the book later</condition>
+                            </supportDesc>
+                            <layoutDesc>
+                              ...
+                            </layoutDesc>
+                        </objectDesc>
+                        ...
+                    </physDesc>
+                    <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                        ...
+                    </scribeDesc>
+                    <msContents>
+                        <msItemStruct xml:id="ACD1" type="translation">
+                            <locus n="1">1r-1v</locus>
+                            <title xml:lang="bg">Съдържание на втората книга на Паноплия догматики</title>
+                            <note>without end</note>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                                <head>Книга догматики паноплїе, втораа.</head>
+                                <incipit>Титле вторые книги, г҃и.</incipit>
+                                <explicit defective="true"> ег<seg rend="sup">д</seg>а ѿ гж<seg rend="sup">д</seg>е своѥе, шьствоваше<gap/>
+                                </explicit>
+                            </sampleText>
+                        </msItemStruct>
+                    </msContents>
+                   ...
+                </msPart>
+                <msPart n="2" xml:id="Gerasim">
+                    <locus>f. 2.</locus>
+                   ...
+                </msPart>
+                <msPart n="3">
+                    <locus>ff. 3-35</locus>
+                    ...
+                </msPart>
+                <msPart n="4">
+                    <locus>ff. 36-59</locus>
+                    ...
+                </msPart>
+                <msPart n="5">
+                    <locus>ff. 61-72</locus>
+                    ...
+                </msPart>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="musicNotation" module="msdescription" mode="change">
