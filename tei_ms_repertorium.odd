@@ -276,7 +276,8 @@
 </altIdentifier></egXML>
                         </exemplum>
                         <exemplum>
-                            <p>The Repertorium adds msName element as first child of altIdentifier, as in the following example from MDMarianus.xml:</p>
+                            <p>The Repertorium adds msName element as first child of altIdentifier,
+                                as in the following example from MDMarianus.xml:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
                                 <altIdentifier select="171ff" xml:id="Grig6" type="partial">
                         <msName type="individual" xml:lang="en">Grigorovič Gospel Book</msName>
@@ -491,7 +492,8 @@
                             <rng:ref name="macro.phraseSeq"/>
                         </content>
                         <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><ink>Brown ink for the text and dark red for the initials</ink>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><ink>Brown ink for the
+                                    text and dark red for the initials</ink>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -1049,8 +1051,10 @@
 
                     <elementSpec ident="scribe" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Repertorium model: descrtiption of palaeography, orthography and
-                            language of particular scribe </desc>
+                        <desc>Repertorium model: description of the paleography, orthography, and
+                            language of a scribe. <gi>scribeLang</gi> contains a modification of the
+                            TEI <gi>scriptDesc</gi> element and the Repertorium-specific
+                                <gi>scribeLang</gi> element.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                         </classes>
@@ -1080,6 +1084,25 @@
                                 <rng:ref name="respStmt"/>
                             </rng:zeroOrMore>
                         </content>
+                        <exemplum>
+                            <p></p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><scribe n="E"
+                                            ><locusGrp><locus>Q.п.I.63, 1r-3r</locus>
+                                        <locus>Sin. 34, 63v-71v</locus><locus>Sin. 34, 77r-81r
+                                        </locus></locusGrp>
+                                    <palaeoCharact script="cyrs"><p>Uncial</p></palaeoCharact>
+                                    <scribeLang><summary>Middle Bulgarian with Russian
+                                            features</summary><orthography><orthNote type="jer"
+                                                subtype="front">only <c xml:lang="cu">ь</c>
+                                            </orthNote><orthNote type="jus" subtype="nonConsis"><c
+                                                  xml:lang="cu">ѫ</c> replaced by <c xml:lang="cu"
+                                                  >оу</c>; <c xml:lang="cu">ѧ</c> replaced by <c
+                                                  xml:lang="cu">a</c>;</orthNote><orthNote
+                                                type="otherLetters"><c xml:lang="cu">ы</c>; <c
+                                                  xml:lang="cu">ѥ</c> and <c xml:lang="cu"
+                                                >ѩ</c></orthNote></orthography> …
+                                    </scribeLang></scribe></egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="scribeDesc" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
