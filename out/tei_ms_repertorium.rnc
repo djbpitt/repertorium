@@ -10,7 +10,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2017-10-20T15:07:02Z. .
+# Schema generated from ODD source 2017-10-20T15:15:50Z. .
 # TEI Edition: Version 3.2.0. Last updated on
 #	10th July 2017, revision 0fcf651
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -1431,7 +1431,6 @@ model.linePart =
   | w
   | c
   | pc
-  | zone
   | damage
   | handShift
   | restore
@@ -1442,8 +1441,7 @@ model.linePart =
   | undo
 model.ptrLike = ptr | ref
 model.lPart = notAllowed
-model.global.meta =
-  index | timeline | precision | certainty | respons | substJoin
+model.global.meta = index | timeline | precision | certainty | substJoin
 model.milestoneLike = milestone | gb | pb | lb | cb | anchor | fw
 model.gLike = notAllowed
 model.oddDecl = notAllowed
@@ -1575,7 +1573,7 @@ model.publicationStmtPart.agency = publisher | distributor | authority
 model.publicationStmtPart.detail =
   model.ptrLike | date | pubPlace | idno | availability
 model.availabilityPart = licence
-model.certLike = precision | certainty | respons
+model.certLike = precision | certainty
 model.descLike = desc
 model.glossLike = gloss
 model.quoteLike = quote | cit
@@ -4234,36 +4232,6 @@ certainty =
     attribute degree { xsd:double }?,
     empty
   }
-respons =
-  
-  ## (responsibility) identifies the individual(s) responsible for some aspect of the content or markup of particular element(s). [21.3. Attribution of Responsibility]
-  element respons {
-    (model.descLike | model.certLike)*,
-    att.global.attributes,
-    att.scoping.attributes,
-    
-    ## indicates the specific aspect of the encoding (markup or content) for which responsibility is being assigned.
-    attribute locus {
-      list {
-        (
-         ## responsibility is being assigned concerning the name of the element or attribute used.
-         "name"
-         | 
-           ## responsibility is being assigned concerning the start of the element concerned.
-           "start"
-         | 
-           ## responsibility is being assigned concerning the end of the element concerned.
-           "end"
-         | 
-           ## responsibility is being assigned concerning the location of the element concerned.
-           "location"
-         | 
-           ## responsibility is being assigned concerning the content (for an element) or the value (for an attribute)
-           "value")+
-      }
-    },
-    empty
-  }
 table =
   
   ## contains text displayed in tabular form, in rows and columns. [14.1.1. TEI Tables]
@@ -6115,7 +6083,7 @@ facsimile =
   
   ## contains a representation of some written source in the form of a set of images rather than as transcribed or encoded text. [11.1. Digital Facsimiles]
   element facsimile {
-    (front?, (model.graphicLike | surface | surfaceGrp)+, back?),
+    (front?, (model.graphicLike)+, back?),
     att.global.attributes,
     att.declaring.attributes,
     empty
@@ -6124,59 +6092,9 @@ sourceDoc =
   
   ## contains a transcription or other representation of a single source document potentially forming part of a dossier génétique or collection of sources. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]
   element sourceDoc {
-    (model.global | model.graphicLike | surface | surfaceGrp)+,
+    (model.global | model.graphicLike)+,
     att.global.attributes,
     att.declaring.attributes,
-    empty
-  }
-surface =
-  
-  ## defines a written surface as a two-dimensional coordinate space, optionally grouping one or more graphic representations of that space, zones of interest within that space, and transcriptions of the writing within them. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]
-  element surface {
-    ((model.global | model.labelLike | model.graphicLike)*,
-     ((zone | line | surface | surfaceGrp), model.global*)*),
-    att.global.attributes,
-    att.coordinated.attributes,
-    att.declaring.attributes,
-    att.typed.attributes,
-    
-    ## describes the method by which this surface is or was connected to the main surface
-    ## Sample values include: 1] glued; 2] pinned; 3] sewn
-    attribute attachment {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
-    }?,
-    
-    ## indicates whether the surface is attached and folded in such a way as to provide two writing surfaces
-    attribute flipping { xsd:boolean }?,
-    empty
-  }
-surfaceGrp =
-  
-  ## defines any kind of useful grouping of written surfaces, for example the recto and verso of a single leaf, which the encoder wishes to treat as a single unit. [11.1. Digital Facsimiles]
-  element surfaceGrp {
-    (model.global | surface | surfaceGrp)+,
-    att.global.attributes,
-    att.declaring.attributes,
-    att.typed.attributes,
-    empty
-  }
-zone =
-  
-  ## defines any two-dimensional area within a surface element. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]
-  element zone {
-    (text
-     | model.graphicLike
-     | model.global
-     | surface
-     | model.linePart)*,
-    att.global.attributes,
-    att.coordinated.attributes,
-    att.typed.attributes,
-    att.written.attributes,
-    
-    ## indicates the amount by which this zone has been rotated clockwise, with respect to the normal orientation of the parent surface element as implied by the dimensions given in the msDesc element or by the coordinates of the surface itself. The orientation is expressed in arc degrees.
-    [ a:defaultValue = "0" ]
-    attribute rotate { xsd:nonNegativeInteger }?,
     empty
   }
 addSpan =
