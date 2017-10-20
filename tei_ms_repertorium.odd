@@ -295,25 +295,24 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            
                             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
-                               <altIdentifier xml:id="NBKM500">
-                        <country>Bulgaria</country>
-                        <settlement>Sofia</settlement>
-                        <repository>SS Cyril and Methodius National Library </repository>
-                        <idno type="shelfmark">500</idno>
-                        <altIdentifier>
-                            <idno type="catalogue">500</idno>
-                            <note>
-                                <ref type="bibl" target="bib:Цонев1910">Цонев 1910: 35</ref>
-                            </note>
-                        </altIdentifier>
-                        <altIdentifier>
-                            <idno type="unioncatalogue">32</idno>
-                            <note>
-                                <ref type="bibl" target="bib:Христова1982">Христова и др. 1982: 30</ref>
-                            </note>
-                        </altIdentifier>
+                             ``<altIdentifier xml:id="NBKM500">
+                                    <country>Bulgaria</country>
+                                    <settlement>Sofia</settlement>
+                                    <repository>SS Cyril and Methodius National Library </repository>
+                                    <idno type="shelfmark">500</idno>
+                                    <altIdentifier>
+                                    <idno type="catalogue">500</idno>
+                                      <note>
+                                        <ref type="bibl" target="bib:Цонев1910">Цонев 1910: 35</ref>
+                                       </note>
+                                    </altIdentifier>
+                                    <altIdentifier>
+                                        <idno type="unioncatalogue">32</idno>
+                                        <note>
+                                            <ref type="bibl" target="bib:Христова1982">Христова и др. 1982: 30</ref>
+                                        </note>
+                                    </altIdentifier>
                         <altIdentifier type="former">
                             <idno type="shelfmark">184</idno>
                         </altIdentifier>
@@ -333,6 +332,29 @@
                                 </rng:choice>
                             </rng:oneOrMore>
                         </content>
+                        <exemplum>
+                            <p>TEI example:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <binding contemporary="true">
+                                    <p>Contemporary blind stamped leather over wooden boards with evidence of a fore edge clasp
+                                        closing to the back cover.</p>
+                                </binding>
+                            </egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>Repertorium adds an element bindingNote as a child element of binding: </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <binding>
+                                    <p>New, leather and cardboard</p>
+                                    <bindingNote type="cover">
+                                        <locus>On the back side of the upper cover:</locus>
+                                        <decoNote>
+                                            <stamp>angels with circles.</stamp>
+                                        </decoNote>
+                                    </bindingNote>
+                                </binding>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="bindingNote" module="msdescription"
@@ -356,6 +378,7 @@
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
+                        
                     </elementSpec>
 
                     <elementSpec ident="collation" module="msdescription" mode="change">
