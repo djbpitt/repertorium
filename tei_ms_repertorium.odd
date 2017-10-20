@@ -1481,8 +1481,9 @@
 
                     <elementSpec ident="scribeDesc" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Repertorium model description of various scribes: palaeography,
-                            orthography and language. </desc>
+                        <desc>The <gi>scribeDesc</gi> element serves as a wrapper for
+                                <gi>scribe</gi> elements, so that the characteristics of each scribe
+                            can be described separately, while also being bundled together.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                         </classes>
@@ -1501,6 +1502,54 @@
                                 </rng:group>
                             </rng:choice>
                         </content>
+                        <exemplum>
+                            <p>The following example, from AA771NBKM.xml, contains information about
+                                two scribes.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><scribeDesc>
+                                    <scribe n="1">
+                                        <locusGrp>
+                                            <locus>ff. 27–30</locus>
+                                            <locus>ff. 48–50</locus>
+                                            <locus>f. 54</locus>
+                                            <locus>ff. 61–62</locus>
+                                        </locusGrp>
+                                        <name full="yes">anonymous</name>
+                                        <scriptDesc script="cyrs" type="semiuncial"/>
+                                        <scribeLang>
+                                            <orthography>
+                                                <p>Two nasal vowels and two jers</p>
+                                            </orthography>
+                                        </scribeLang>
+                                        <respStmt>
+                                            <name full="yes">Adelina Angusheva</name>
+                                            <resp>de visu</resp>
+                                        </respStmt>
+                                    </scribe>
+                                    <scribe n="2">
+                                        <locusGrp>
+                                            <locus>ff. 6–16</locus>
+                                            <locus>ff. 18–21</locus>
+                                            <locus>ff. 33–34</locus>
+                                            <locus>ff. 38–42</locus>
+                                            <locus>ff. 44–45</locus>
+                                            <locus>ff. 51</locus>
+                                            <locus>ff. 53</locus>
+                                            <locus>ff. 71</locus>
+                                            <locus>ff. 78</locus>
+                                            <locus>ff. 91–92</locus>
+                                            <locus>f. 109</locus>
+                                            <locus>f. 131</locus>
+                                        </locusGrp>
+                                        <name full="yes">anonymous</name>
+                                        <scriptDesc script="cyrs" type="semiuncial"/>
+                                        <respStmt>
+                                            <name full="yes">Adelina Angusheva</name>
+                                            <resp>de visu</resp>
+                                        </respStmt>
+                                    </scribe>
+                                </scribeDesc>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="scribeLang" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
