@@ -653,12 +653,28 @@
 
                     <elementSpec ident="lexis" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <desc>Lexical features can be described similarly to grammatical ones.
+                            Whether this takes the form of a list with items or of just one unit
+                            depends on the encoder’s vision and the length of the material. </desc>
                         <classes mode="replace">
                             <memberOf key="att.global"/>
                         </classes>
                         <content>
                             <rng:ref name="macro.specialPara"/>
                         </content>
+                        <exemplum>
+                            <p>The following example is from MDMarianus.xml.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><lexis>The manuscript
+                                    uses lexis that is believed to be typical of the earliest Gospel
+                                    translation from Greek, cf. the use of the archaic lexemes
+                                        <foreign xml:lang="cu">баль, жаль, миса, шюи, братръ,
+                                        небесьскъ, неприѣзнь, пропѧти, иночѧдъ, врътъ, искрьнъ,
+                                        грѣсти</foreign>. In word-formation the manuscript prefers
+                                    the old suffix <m xml:lang="cu" type="suffix">ицеѫ</m> and not
+                                        <m xml:lang="cu" type="suffix">ждьі</m>. The following forms
+                                    are considered to be relatively later: <foreign xml:lang="cu"
+                                        >благодать, написание, дрѧхлъ</foreign>. </lexis></egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="motif" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
