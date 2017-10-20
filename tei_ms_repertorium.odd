@@ -193,18 +193,17 @@
                     <moduleRef key="header"
                         except="appInfo application biblFull correction correspAction correspContext correspDesc distributior funder hyphenation interpretation namespace normalization notesStmt principal punctuation quotation samplingDecl segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl xenoData"/>
                     <moduleRef key="linking" except="alt altGrp join joinGrp link linkGrp"/>
-                    <moduleRef key="core" except="postBox postCode teiCorpus"/>
+                    <moduleRef key="core" except="addrLine address binaryObject divGen postBox postCode street teiCorpus"/>
                     <moduleRef key="tei"/>
                     <moduleRef key="textstructure"
-                        except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7 opener postscript salute signed"/>
+                        except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7  docAuthor docDate docEdition docImprint docTitle floatingText opener postscript salute signed"/>
                     <!-- optional modules -->
-                    <moduleRef key="analysis"/>
+                    <moduleRef key="analysis" except="interp interpGrp span spanGrp"/>
                     <moduleRef key="certainty"/>
                     <moduleRef key="figures"/>
-                    <moduleRef key="msdescription"
-                        except="handDesc handNote msItem typeNote typeDesc"/>
-                    <moduleRef key="namesdates" except="climate terrain"/>
-                    <moduleRef key="transcr"/>
+                    <moduleRef key="msdescription" except="handDesc handNote msItem typeNote typeDesc"/>
+                    <moduleRef key="namesdates" except="climate langKnowledge langKnown listEvent listNym  listOrg nym offset population sex socecStatus state terrain"/>
+                    <moduleRef key="transcr" except="listTranspose metamark "/>
 
                     <classSpec ident="model.physDescPart" type="model" mode="delete"
                         module="msdescription"/>
