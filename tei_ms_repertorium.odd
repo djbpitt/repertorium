@@ -360,9 +360,8 @@
                     <elementSpec ident="bindingNote" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
                         <desc>The element allows structured description of binding characteristics
-                            in addition to decoration and condition. These features are not limited
-                            to the binding parts, and may include: cover, plates, headbands, edges,
-                            clasps, and sewing techniques.</desc>
+                            in addition to decoration and condition. These features may include: cover, plates, headbands, edges,
+                            clasps, sewing techniques, or any notes related to the binding.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -378,7 +377,20 @@
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
-                        
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <bindingDesc>
+                                    <binding notBefore="1700" notAfter="1800" contemporary="false">
+                                        <bindingNote type="boards">Boards covered with ornamented leather. </bindingNote>
+                                        <bindingNote type="ornaments">The ornaments consist of florar motifs. </bindingNote>
+                                        <bindingNote>
+                                            <date>Probably the binding dates from the 18th
+                                                century.</date>
+                                        </bindingNote>
+                                    </binding>
+                                </bindingDesc>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="collation" module="msdescription" mode="change">
