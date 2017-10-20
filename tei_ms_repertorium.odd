@@ -1122,8 +1122,9 @@
 
                     <elementSpec ident="pricking" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-                        <desc>Repertorium: Description of pricking appearance and techniques
-                            applied</desc>
+                        <desc>Descriptions of pricking are rare in the literature, although, as
+                            explained by Jones (1946a, 1946b), they could bear information on
+                            scriptorial techniques.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -1131,6 +1132,26 @@
                         <content>
                             <rng:ref name="macro.phraseSeq"/>
                         </content>
+                        <exemplum>
+                            <p>The following example is from DUL MS Cosin V.II.17 Anseis de
+                                Carthage, Ogier le Danois (in French) s. xiii2 description (<ptr
+                                    target="http://www.dur.ac.uk/library/asc/theme/medmss/apvii17/"
+                                />), encoded according to the Repertorium model.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><pricking>Pricking in
+                                    outer margins only, probably through folded quires, from front
+                                    to back.</pricking></egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p> The following example is from the web-based electronic description
+                                of St. Alban’s Psalter (<ptr
+                                    target="http://www.abdn.ac.uk/~lib399/english/essays/codicology.shtml"
+                                />), encoded according to the Repertorium model.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <pricking>Most prick marks have been trimmed off. On p 112, 6 prick
+                                    marks are visible on the outer margin. On p 417, thirteen prick
+                                    marks at 9mm intervals remain on the outer margin. There is no
+                                    pricking on the inner margins.</pricking></egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="quire" module="msdescription"
@@ -1217,7 +1238,7 @@
                             made for each of the two folia: once for the outer double leaf and once
                             for the inner one (double sign <q>&gt;&gt;</q> or <q>&lt;&lt;</q>). The
                             symbols <q>&gt;</q> or <q>&lt;</q> mean that on the leaf there is just a
-                            trace of the ruling made on the previous leaf . The attribute
+                            trace of the ruling made on the previous leaf. The attribute
                                 <att>type</att> can be used to provide information about the
                             classification scheme (e.g., Gilissen or Leroy) employed.</desc>
                         <classes mode="change">
@@ -1227,6 +1248,11 @@
                         <content>
                             <rng:ref name="macro.phraseSeq"/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><ruling>
+                                    <formula>1+1 1/1</formula>
+                                </ruling></egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="sampleText" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"

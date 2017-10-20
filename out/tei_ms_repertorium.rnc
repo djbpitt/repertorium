@@ -10,7 +10,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2017-10-20T08:17:32Z. .
+# Schema generated from ODD source 2017-10-20T09:00:54Z. .
 # TEI Edition: Version 3.2.0. Last updated on
 #	10th July 2017, revision 0fcf651
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -5394,7 +5394,7 @@ stamp =
   }
 watermark =
   
-  ## contains a word or phrase describing a watermark or similar device. [10.3.3. Watermarks and Stamps]
+  ## The content of this element includes phrase level elements, as well as specialized elements like countermark and motif. There are several special attributes for the content of this element. tracing is used to describe very briefly (with one word) the method of watermark tracing. The most usual method is still drawing by hand, but there could be other possibilities, such as rubbing by hand, usage of special Dylux print paper, beta- or x-radiography, scanning, etc. The place attribute from the class att.placement can refine where on the pages the watermark can be seen, and may be described in relation to wire lines and chain (laid) lines. [10.3.3. Watermarks and Stamps]
   element watermark {
     (text | model.phrase | countermark | motif)*,
     att.global.attributes,
@@ -7554,7 +7554,7 @@ bindingNote =
   }
 countermark =
   
-  ## Called also counter watermark
+  ## Called also counter watermark. A countermark has the same content and attributes as the watermark element.
   element re:countermark { (text | model.phrase | motif)* }
 crypto =
   
@@ -7590,7 +7590,7 @@ lexis =
   element re:lexis { macro.specialPara, att.global.attributes, empty }
 motif =
   
-  ##
+  ## The element motif is the most important part of the watermark description because it provides access to a formal terminological apparatus of watermark design. There are several ways to specify motif information:  * In the absence of reference books and watermark albums, simply as plain text  * If a more complicated motif is present and the encoder would like to provide full compatibility with professional watermark databases, with the attribute type  * By secondary is meant designs above or below the basic motif. Frequently used motifs above the basic one include bird, cross, flower, monogram, monogram with a combination with figures (e.g., monogram BA and cross), ramrod, different star shapes, star and monogram, trefoil, etc. Frequently used motifs below the basic one include grapes, monogram, etc.  * By supplemental is meant supplemental characteristics of the basic motif, e.g., in circle, in oval, in shield, etc.
   element re:motif {
     (text | model.phrase | motif)*,
     att.global.attributes,
@@ -7628,7 +7628,7 @@ pagination =
   }
 pricking =
   
-  ## Repertorium: Description of pricking appearance and techniques applied
+  ## Descriptions of pricking are rare in the literature, although, as explained by Jones (1946a, 1946b), they could bear information on scriptorial techniques.
   element re:pricking {
     macro.phraseSeq, att.global.attributes, att.typed.attributes, empty
   }
@@ -7666,7 +7666,7 @@ quire =
   }
 ruling =
   
-  ## Repertorium: Ruling types and techniques goes here. 
+  ## Two kinds of information can be entered in the ruling element. The first is related to the ruling type defined by researchers like Leroy (1976) or Gilissen (1977), who attempted to propose well-defined typologies of ruling types. In the other, information is related to the place of ruling in the quire, or the so called scheme. The former be expressed as a formula of ruled lines for writing, and the latter could be visualized as simple graphic showing the places in the quire where the ruling is accomplished, e.g.: >> | > | |< |<< = >>| >| |< | <<. This scheme means that in this quire the ruling is made for each of the two folia: once for the outer double leaf and once for the inner one (double sign >> or <<). The symbols > or < mean that on the leaf there is just a trace of the ruling made on the previous leaf. The attribute type can be used to provide information about the classification scheme (e.g., Gilissen or Leroy) employed.
   element re:ruling {
     macro.phraseSeq, att.global.attributes, att.typed.attributes, empty
   }
