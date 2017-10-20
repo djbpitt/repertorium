@@ -1156,7 +1156,11 @@
 
                     <elementSpec ident="quire" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-                        <desc>Description of one or more quires.</desc>
+                        <desc>The element <gi>quire</gi> brings together all possible features for
+                            the characterization of a quire or set of quires, including number,
+                            composition, how and where quires are marked, and with the assistance of
+                            what tool, etc. The child element <gi>formula</gi> provides information
+                            about how the quire is composed, of how many folia, etc.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -1216,11 +1220,26 @@
                                     </valItem>
                                     <valItem ident="original">
                                         <gloss>Quire is original</gloss>
-
                                     </valItem>
                                 </valList>
                             </attDef>
                         </attList>
+                        <exemplum>
+                            <p>In the following example, the first quire of the manuscript consists
+                                of 8 ff., all of which, with the exception of the f. 7, are now
+                                missing. Quires II through XXI have 8 ff. each. From quire XXII one
+                                folio (7) is missing. The last quire, number XXIII, consisted
+                                originally of 6 ff., but only 2 of them (5 and 6) are preserved
+                                intact.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><collation>
+                                    <quire n="I"><extent>2</extent><formula>8 (-1-2-3-4-5-6)
+                                        </formula></quire>
+                                    <quire n="II-XXI"><extent>8</extent></quire>
+                                    <quire n="XXII"><extent>7</extent><formula>7 (-7)</formula>
+                                    </quire>
+                                    <quire n="XXIII"><extent>2</extent><formula>6 (-1-2-3-4)
+                                        </formula></quire></collation></egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="ruling" module="msdescription"
