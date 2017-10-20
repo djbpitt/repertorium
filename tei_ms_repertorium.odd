@@ -190,7 +190,8 @@
 
                 <schemaSpec ident="tei_ms_repertorium" start="TEI msDesc" source="tei:3.2.0">
                     <!-- required modules -->
-                    <moduleRef key="header" except="appInfo application biblFull correction correspAction correspContext correspDesc distributior funder hyphenation interpretation namespace normalization notesStmt principal punctuation quotation samplingDecl segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl xenoData"/>
+                    <moduleRef key="header"
+                        except="appInfo application biblFull correction correspAction correspContext correspDesc distributior funder hyphenation interpretation namespace normalization notesStmt principal punctuation quotation samplingDecl segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl xenoData"/>
                     <moduleRef key="linking" except="alt altGrp join joinGrp link linkGrp"/>
                     <moduleRef key="core" except="postBox postCode teiCorpus"/>
                     <moduleRef key="tei"/>
@@ -200,7 +201,8 @@
                     <moduleRef key="analysis"/>
                     <moduleRef key="certainty"/>
                     <moduleRef key="figures"/>
-                    <moduleRef key="msdescription" except="handDesc handNote msItem typeNote typeDesc"/>
+                    <moduleRef key="msdescription"
+                        except="handDesc handNote msItem typeNote typeDesc"/>
                     <moduleRef key="namesdates" except="climate terrain"/>
                     <moduleRef key="transcr"/>
 
@@ -1209,32 +1211,45 @@
                         <exemplum>
                             <p>TEI example: </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <msItemStruct n="2" defective="false"
-                                    class="#biblComm">
+                                <msItemStruct n="2" defective="false" class="#biblComm">
                                     <locus from="24v" to="97v">24v-97v</locus>
                                     <author>Apringius de Beja</author>
-                                    <title type="uniform" xml:lang="la">Tractatus in Apocalypsin</title>
+                                    <title type="uniform" xml:lang="la">Tractatus in
+                                        Apocalypsin</title>
                                     <rubric>Incipit Trac<supplied reason="omitted">ta</supplied>tus
-                                        in apoka<lb/>lipsin eruditissimi uiri <lb/> Apringi ep<ex>iscop</ex>i
-                                        Pacensis eccl<ex>esi</ex>e</rubric>
+                                        in apoka<lb/>lipsin eruditissimi uiri <lb/> Apringi
+                                            ep<ex>iscop</ex>i Pacensis eccl<ex>esi</ex>e</rubric>
                                     <finalRubric>EXPLIC<ex>IT</ex> EXPO<lb/>SITIO APOCALIPSIS
-                                        QVA<ex>M</ex> EXPOSVIT DOM<lb/>NVS APRINGIUS EP<ex>ISCOPU</ex>S.
-                                        DEO GR<ex>ACI</ex>AS AGO. FI<lb/>NITO LABORE ISTO.</finalRubric>
+                                            QVA<ex>M</ex> EXPOSVIT DOM<lb/>NVS APRINGIUS
+                                            EP<ex>ISCOPU</ex>S. DEO GR<ex>ACI</ex>AS AGO.
+                                        FI<lb/>NITO LABORE ISTO.</finalRubric>
                                     <bibl>
-                                        <ref target="http://amiBibl.xml#Apringius1900">Apringius</ref>, ed. Férotin</bibl>
+                                        <ref target="http://amiBibl.xml#Apringius1900"
+                                            >Apringius</ref>, ed. Férotin</bibl>
                                     <textLang mainLang="la">Latin</textLang>
                                 </msItemStruct>
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Repertorium makes significant changes in the content of this element. A new attribute <att>type</att> with three possible values is added: <val>original</val>, <val>compilation</val>, and <val>translation</val>. Places of elements <gi>title</gi> and <gi>author</gi> are in different order: first is the title, and then author. Elements <gi>incipit</gi>, <gi>explicit</gi>, <gi>rubric</gi> are part of the <gi>sampleText</gi> element, which is part of the Repertorium namespace. We included here the element <gi>div</gi> in cases where an edition of large part of prviously unknown text or its recension is described. </p>
+                            <p>Repertorium makes significant changes in the content of this element.
+                                A new attribute <att>type</att> with three possible values is added:
+                                    <val>original</val>, <val>compilation</val>, and
+                                    <val>translation</val>. Places of elements <gi>title</gi> and
+                                    <gi>author</gi> are in different order: first is the title, and
+                                then author. Elements <gi>incipit</gi>, <gi>explicit</gi>,
+                                    <gi>rubric</gi> are part of the <gi>sampleText</gi> element,
+                                which is part of the Repertorium namespace. We included here the
+                                element <gi>div</gi> in cases where an edition of large part of
+                                prviously unknown text or its recension is described. </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msItemStruct xml:id="ACD1" type="translation">
                                     <locus n="1">1r-15v</locus>
                                     <title xml:lang="bg">Физиолог</title>
-                                    <note>The copy represents first group of the second Physiologus's
-                                        translation in South Slavic literature; other similar copies: No. 149 NB -
-                                        Wien, 16th c.; No. 433 NBKM - Sofia, second half of the 16th c. <ref type="bibl" target="bib:Стойкова1994">Стойкова 1994: 53–54,
+                                    <note>The copy represents first group of the second
+                                        Physiologus's translation in South Slavic literature; other
+                                        similar copies: No. 149 NB - Wien, 16th c.; No. 433 NBKM -
+                                        Sofia, second half of the 16th c. <ref type="bibl"
+                                            target="bib:Стойкова1994">Стойкова 1994: 53–54,
                                             70–71</ref>
                                     </note>
                                     <filiation type="source">
@@ -1242,25 +1257,32 @@
                                             1936:218-221</ref> (approximate text)</filiation>
                                     <filiation type="translation">2</filiation>
                                     <filiation type="protograph">Bulgarian</filiation>
-                                    <filiation type="antigraph">Antigraph of No. 433 and No. 149?</filiation>
+                                    <filiation type="antigraph">Antigraph of No. 433 and No.
+                                        149?</filiation>
                                     <filiation type="litRedaction">1</filiation>
-                                    <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                                        <head>Слово ѡ въсѣх вещеи ходещихъ и летещи<seg rend="sup">х</seg>
+                                    <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                        xml:lang="cu">
+                                        <head>Слово ѡ въсѣх вещеи ходещихъ и летещи<seg rend="sup"
+                                                >х</seg>
                                         </head>
                                     </sampleText>
                                     <msItemStruct xml:id="ACD1.1">
                                         <locus n="1">1r-1v</locus>
                                         <title xml:lang="bg">Физиолог. За лъва</title>
-                                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                                            <head>Слово за лъва о ц҃ри ѕвѣрстѣ<seg rend="sup">м</seg>.</head>
-                                            <rubric>фисиолѡгь р<seg rend="sup">еч</seg>е ѡ лъвѣ. о҃че бл<seg rend="sup">с</seg>ви</rubric>
-                                            <incipit>Лъвь ѥ<seg rend="sup">с</seg> имѣе дѣла велика три. къ с҃тѣи
-                                                тр<seg rend="sup">о</seg>ици примолѥнь. лъво<seg rend="sup">в</seg>
-                                                ѥ<seg rend="sup">с</seg> пръво дѣло. егда раж<seg rend="sup">д</seg>аеть лъвица.</incipit>
+                                        <sampleText
+                                            xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                            xml:lang="cu">
+                                            <head>Слово за лъва о ц҃ри ѕвѣрстѣ<seg rend="sup"
+                                                  >м</seg>.</head>
+                                            <rubric>фисиолѡгь р<seg rend="sup">еч</seg>е ѡ лъвѣ.
+                                                о҃че бл<seg rend="sup">с</seg>ви</rubric>
+                                            <incipit>Лъвь ѥ<seg rend="sup">с</seg> имѣе дѣла велика
+                                                три. къ с҃тѣи тр<seg rend="sup">о</seg>ици
+                                                примолѥнь. лъво<seg rend="sup">в</seg> ѥ<seg
+                                                  rend="sup">с</seg> пръво дѣло. егда раж<seg
+                                                  rend="sup">д</seg>аеть лъвица.</incipit>
                                         </sampleText>
-                                    </msItemStruct>
-                                    ...
-                                </msItemStruct>
+                                    </msItemStruct> ... </msItemStruct>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -1330,7 +1352,9 @@
                                         <msName>Maurdramnus Bible</msName>
                                     </msIdentifier>
                                     <msContents>
-                                        <summary xml:lang="lat">Miscellany of various texts; Prudentius, Psychomachia; Physiologus de natura animantium</summary>
+                                        <summary xml:lang="lat">Miscellany of various texts;
+                                            Prudentius, Psychomachia; Physiologus de natura
+                                            animantium</summary>
                                         <textLang mainLang="lat">Latin</textLang>
                                     </msContents>
                                     <physDesc>
@@ -1358,62 +1382,54 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Repertorium adds <att>type</att> attribute. The other changes include posibilities to add different types of identifiers (<gi>msIdentifier</gi> and <gi>altIdentifier</gi>), and a special Repertorium <gi>sampleText</gi> element. An example for convolute (file AM!-108O.xml): </p>
+                            <p>Repertorium adds <att>type</att> attribute. The other changes include
+                                posibilities to add different types of identifiers
+                                    (<gi>msIdentifier</gi> and <gi>altIdentifier</gi>), and a
+                                special Repertorium <gi>sampleText</gi> element. An example for
+                                convolute (file AM!-108O.xml): </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msPart n="1">
-                    <locus>f. 1</locus>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc material="paper">
-                                <support>
-                                    <material>Paper</material>
-                                    <watermark>none</watermark>
-                                </support>
-                                <extent>
-                                   ...
-                                </extent>
-                                <condition>folio seems to be added to the book later</condition>
-                            </supportDesc>
-                            <layoutDesc>
-                              ...
-                            </layoutDesc>
-                        </objectDesc>
-                        ...
-                    </physDesc>
-                    <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-                        ...
-                    </scribeDesc>
-                    <msContents>
-                        <msItemStruct xml:id="ACD1" type="translation">
-                            <locus n="1">1r-1v</locus>
-                            <title xml:lang="bg">Съдържание на втората книга на Паноплия догматики</title>
-                            <note>without end</note>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                                <head>Книга догматики паноплїе, втораа.</head>
-                                <incipit>Титле вторые книги, г҃и.</incipit>
-                                <explicit defective="true"> ег<seg rend="sup">д</seg>а ѿ гж<seg rend="sup">д</seg>е своѥе, шьствоваше<gap/>
-                                </explicit>
-                            </sampleText>
-                        </msItemStruct>
-                    </msContents>
-                   ...
-                </msPart>
-                <msPart n="2" xml:id="Gerasim">
-                    <locus>f. 2.</locus>
-                   ...
-                </msPart>
-                <msPart n="3">
-                    <locus>ff. 3-35</locus>
-                    ...
-                </msPart>
-                <msPart n="4">
-                    <locus>ff. 36-59</locus>
-                    ...
-                </msPart>
-                <msPart n="5">
-                    <locus>ff. 61-72</locus>
-                    ...
-                </msPart>
+                                    <locus>f. 1</locus>
+                                    <physDesc>
+                                        <objectDesc>
+                                            <supportDesc material="paper">
+                                                <support>
+                                                  <material>Paper</material>
+                                                  <watermark>none</watermark>
+                                                </support>
+                                                <extent> ... </extent>
+                                                <condition>folio seems to be added to the book
+                                                  later</condition>
+                                            </supportDesc>
+                                            <layoutDesc> ... </layoutDesc>
+                                        </objectDesc> ... </physDesc>
+                                    <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                                        ... </scribeDesc>
+                                    <msContents>
+                                        <msItemStruct xml:id="ACD1" type="translation">
+                                            <locus n="1">1r-1v</locus>
+                                            <title xml:lang="bg">Съдържание на втората книга на Паноплия догматики</title>
+                                            <note>without end</note>
+                                            <sampleText
+                                                xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                                xml:lang="cu">
+                                                <head>Книга догматики паноплїе, втораа.</head>
+                                                <incipit>Титле вторые книги, г҃и.</incipit>
+                                                <explicit defective="true"> ег<seg rend="sup"
+                                                  >д</seg>а ѿ гж<seg rend="sup">д</seg>е своѥе,
+                                                  шьствоваше<gap/>
+                                                </explicit>
+                                            </sampleText>
+                                        </msItemStruct>
+                                    </msContents> ... </msPart>
+                                <msPart n="2" xml:id="Gerasim">
+                                    <locus>f. 2.</locus> ... </msPart>
+                                <msPart n="3">
+                                    <locus>ff. 3-35</locus> ... </msPart>
+                                <msPart n="4">
+                                    <locus>ff. 36-59</locus> ... </msPart>
+                                <msPart n="5">
+                                    <locus>ff. 61-72</locus> ... </msPart>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -1436,15 +1452,14 @@
                         <exemplum>
                             <p>TEI example:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <musicNotation>Neumes in <term>campo aperto</term> of the St. Gall type.
-                                </musicNotation>
+                                <musicNotation>Neumes in <term>campo aperto</term> of the St. Gall
+                                    type. </musicNotation>
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p></p>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                An example to be included !!!
-                            </egXML>
+                            <p/>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"> An example to be
+                                included !!! </egXML>
                         </exemplum>
                     </elementSpec>
 
@@ -1640,11 +1655,10 @@
                                     <objectDesc form="codex">
                                         <supportDesc material="perg">
                                             <support>Parchment.</support>
-                                            <extent>i + 55 leaves
-                                                <dimensions scope="all" type="leaf"
-                                                    unit="inch">
-                                                    <height>7¼</height>
-                                                    <width>5⅜</width>
+                                            <extent>i + 55 leaves <dimensions scope="all"
+                                                  type="leaf" unit="inch">
+                                                  <height>7¼</height>
+                                                  <width>5⅜</width>
                                                 </dimensions>
                                             </extent>
                                         </supportDesc>
@@ -1662,46 +1676,76 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Repertorium totally removes elements <gi>handDesc</gi>, <gi>typeDesc</gi>. The element <gi>scriptDesc</gi> is moved to the contents of element <gi>scribeDesc</gi>. The element <gi>accMat</gi> becomes part of the <gi>history</gi>. One more is included from the Repertorium namespace: <gi>ink</gi>. An example from DRA787a10Stock.xml: </p>
+                            <p>Repertorium totally removes elements <gi>handDesc</gi>,
+                                    <gi>typeDesc</gi>. The element <gi>scriptDesc</gi> is moved to
+                                the contents of element <gi>scribeDesc</gi>. The element
+                                    <gi>accMat</gi> becomes part of the <gi>history</gi>. One more
+                                is included from the Repertorium namespace: <gi>ink</gi>. An example
+                                from DRA787a10Stock.xml: </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <physDesc>
                                     <objectDesc form="fragment">
                                         <supportDesc material="parchment">
                                             <support>
-                                                <material>Parchment of very fine quality. Ff.1r-2v and 2r-v (2 bifolia) both represents F-H, H-F sides sequences.</material>
+                                                <material>Parchment of very fine quality. Ff.1r-2v
+                                                  and 2r-v (2 bifolia) both represents F-H, H-F
+                                                  sides sequences.</material>
                                             </support>
                                             <extent>
                                                 <measure unit="folia">4</measure>
                                                 <dimensions unit="mm" type="folia">
-                                                    <height>ca218</height>
-                                                    <width>ca310</width>
+                                                  <height>ca218</height>
+                                                  <width>ca310</width>
                                                 </dimensions>
                                             </extent>
-                                            <foliation>Ff. 1v-8v are signed in pencil as follows: 10:A, 10: B, 10: C, 10: D in the upper right-hand corner.  </foliation>
-                                            <condition>It is a 4-leaf fragment composing to bifolia, as ff. 1 and 2 are detached. The parcment has retained much of its original light colour and the original size. Ff. 1r, 2v, 3r and 3v have served as document covers and are darker. There are number of stains. </condition>
+                                            <foliation>Ff. 1v-8v are signed in pencil as follows:
+                                                10:A, 10: B, 10: C, 10: D in the upper right-hand
+                                                corner. </foliation>
+                                            <condition>It is a 4-leaf fragment composing to bifolia,
+                                                as ff. 1 and 2 are detached. The parcment has
+                                                retained much of its original light colour and the
+                                                original size. Ff. 1r, 2v, 3r and 3v have served as
+                                                document covers and are darker. There are number of
+                                                stains. </condition>
                                         </supportDesc>
                                         <layoutDesc>
                                             <layout columns="1" writtenLines="18" ruledLines="18"/>
                                         </layoutDesc>
                                     </objectDesc>
-                                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Brownish for the main text, red and gold for the titles and the initials.</ink>
+                                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Brownish
+                                        for the main text, red and gold for the titles and the
+                                        initials.</ink>
                                     <decoDesc>
-                                        <p>Intials <foreign xml:lang="cu">В</foreign> on f. 1r - 55 mm (5 lines) of  heigh, almost outside the text column, <foreign xml:lang="cu">В</foreign> on f. 2r - 45mm of height, being outside the text column and discending in the lower margin, <foreign xml:lang="cu">Р</foreign> on f. 5v - 55 mm (5 lines) of  heigh, outside the text column, and <foreign xml:lang="cu">Р</foreign> on ff. 8v - 55 mm (5 lines) of  heigh, outside the text column, too. These are red covered with gold. The same technique is applied to the rubrics (titles) introducing the coresponding readings.</p>
+                                        <p>Intials <foreign xml:lang="cu">В</foreign> on f. 1r - 55
+                                            mm (5 lines) of heigh, almost outside the text column,
+                                                <foreign xml:lang="cu">В</foreign> on f. 2r - 45mm
+                                            of height, being outside the text column and discending
+                                            in the lower margin, <foreign xml:lang="cu">Р</foreign>
+                                            on f. 5v - 55 mm (5 lines) of heigh, outside the text
+                                            column, and <foreign xml:lang="cu">Р</foreign> on ff. 8v
+                                            - 55 mm (5 lines) of heigh, outside the text column,
+                                            too. These are red covered with gold. The same technique
+                                            is applied to the rubrics (titles) introducing the
+                                            coresponding readings.</p>
                                     </decoDesc>
                                     <bindingDesc>
                                         <binding>
-                                            <p>Kept together with other parchment fragments (A787a)</p>
+                                            <p>Kept together with other parchment fragments
+                                                (A787a)</p>
                                         </binding>
                                     </bindingDesc>
                                     <additions type="inscriptions">
                                         <list>
                                             <item>
                                                 <locus>f. 1r</locus>
-                                                <quote xml:lang="se">Lille Savolax p anno 1618 <lb/>Sigfrids Hindersons Opbördzlängds</quote>
+                                                <quote xml:lang="se">Lille Savolax p anno 1618
+                                                  <lb/>Sigfrids Hindersons Opbördzlängds</quote>
                                             </item>
                                             <item>
                                                 <locus>f. 3r</locus>
-                                                <quote xml:lang="se">Sigfred Henricksons Reckenskap <lb/>på Viborgz Lähn af Lille Sauolax för årh <lb/>1617, 618 och 619</quote>
+                                                <quote xml:lang="se">Sigfred Henricksons Reckenskap
+                                                  <lb/>på Viborgz Lähn af Lille Sauolax för årh
+                                                  <lb/>1617, 618 och 619</quote>
                                             </item>
                                         </list>
                                     </additions>
@@ -2184,7 +2228,13 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Repertorium adds optional attribute <att>script</att> the values of which are supposed to come from codes of ISO 15924:2004, cf <ref target="https://en.wikipedia.org/wiki/ISO_15924">https://en.wikipedia.org/wiki/ISO_15924</ref>. In the content of this element <gi>musicNotation</gi> is moved here from <gi>physDesc</gi> and a new <gi>crypto</gi> Repertorium is added. An example from the file AA771NBKM.xml </p>
+                            <p>Repertorium adds optional attribute <att>script</att> the values of
+                                which are supposed to come from codes of ISO 15924:2004, cf <ref
+                                    target="https://en.wikipedia.org/wiki/ISO_15924"
+                                    >https://en.wikipedia.org/wiki/ISO_15924</ref>. In the content
+                                of this element <gi>musicNotation</gi> is moved here from
+                                    <gi>physDesc</gi> and a new <gi>crypto</gi> Repertorium is
+                                added. An example from the file AA771NBKM.xml </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <scriptDesc script="cyrs" type="semiuncial"/>
                             </egXML>
@@ -2206,8 +2256,7 @@
                         </exemplum>
                         <exemplum>
                             <p>Repertorium adds <att>type</att> to the known TEI attributes. </p>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                To be added ...
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"> To be added ...
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -2250,27 +2299,31 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Repertorium adds a new element <gi>pagination</gi> after the <gi>foliation</gi>. An example from MP408G.xml: </p>
+                            <p>Repertorium adds a new element <gi>pagination</gi> after the
+                                    <gi>foliation</gi>. An example from MP408G.xml: </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <supportDesc material="paper">
                                     <support>
                                         <material>Paper</material>
                                         <watermark>
-                                            <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Letter P</motif>
+                                            <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                                >Letter P</motif>
                                             <ref type="bibl" target="bib:Mošin????">
                                                 <num>5449</num>
                                                 <date>?</date>
                                             </ref>
                                         </watermark>
                                         <watermark>
-                                            <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Clock</motif>
+                                            <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                                >Clock</motif>
                                             <ref type="bibl" target="bib:Mošin????">
                                                 <num>3002</num>
                                                 <date>?</date>
                                             </ref>
                                         </watermark>
                                         <watermark>
-                                            <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Hills</motif>
+                                            <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                                >Hills</motif>
                                             <ref type="bibl" target="bib:Mošin????">
                                                 <num>6255</num>
                                                 <date>?</date>
@@ -2284,11 +2337,14 @@
                                             <width>130</width>
                                         </dimensions>
                                     </extent>
-                                    <pagination xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Not original, J. de Saint-Genois for every page = 474</pagination>
+                                    <pagination xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                        >Not original, J. de Saint-Genois for every page =
+                                        474</pagination>
                                     <collation>
                                         <summary>31 quires of 8 folia</summary>
                                     </collation>
-                                    <condition>f. 5v-6, ff.101v-102, ff. 243-244 are damaged</condition>
+                                    <condition>f. 5v-6, ff.101v-102, ff. 243-244 are
+                                        damaged</condition>
                                 </supportDesc>
                             </egXML>
                         </exemplum>
@@ -2331,26 +2387,25 @@
                                 <objectDesc form="codex">
                                     <supportDesc>
                                         <p>Mostly <material>paper</material>, with watermarks
-                                            <watermark>unicorn</watermark> (<ref>Briquet 9993</ref>) and
-                                            <watermark>ox</watermark> (close to <ref>Briquet 2785</ref>). The first and last
-                                            leaf of each quire, with the exception of quires xvi and xviii, are constituted
-                                            by bifolia of parchment, and all seven miniatures have been painted on inserted
-                                            singletons of parchment.</p>
+                                                <watermark>unicorn</watermark> (<ref>Briquet
+                                                9993</ref>) and <watermark>ox</watermark> (close to
+                                                <ref>Briquet 2785</ref>). The first and last leaf of
+                                            each quire, with the exception of quires xvi and xviii,
+                                            are constituted by bifolia of parchment, and all seven
+                                            miniatures have been painted on inserted singletons of
+                                            parchment.</p>
                                     </supportDesc>
                                 </objectDesc>
                             </egXML>
                         </exemplum>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <watermark
-                                    tracing="drawing"><motif type="basic">Leo</motif>within 
-                                    <motif
-                                        type="supplemental">circle</motif> surmounted by <motif
-                                        type="secondary">quatrefoil</motif> and with
-                                        <countermark>“AP”</countermark> similar to <ref type="bibl" target="bib:Николаев1954">Nikolaev
-                                        #125</ref> from the year <date cert="yes"
-                                    >1585</date>.
-                                </watermark>
+                                <watermark tracing="drawing"><motif type="basic">Leo</motif>within
+                                        <motif type="supplemental">circle</motif> surmounted by
+                                        <motif type="secondary">quatrefoil</motif> and with
+                                        <countermark>“AP”</countermark> similar to <ref type="bibl"
+                                        target="bib:Николаев1954">Nikolaev #125</ref> from the year
+                                        <date cert="yes">1585</date>. </watermark>
                             </egXML>
                         </exemplum>
                     </elementSpec>
