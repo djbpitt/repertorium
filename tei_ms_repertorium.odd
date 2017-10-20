@@ -723,6 +723,52 @@
                                 </rng:group>
                             </rng:choice>
                         </content>
+                        <exemplum>
+                            <p>TEI example: </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <history>
+                                    <origin>
+                                        <p>Written in Durham during the mid twelfth
+                                            century.</p>
+                                    </origin>
+                                    <provenance>
+                                        <p>Recorded in two medieval
+                                            catalogues of the books belonging to Durham Priory, made in 1391 and
+                                            1405.</p>
+                                    </provenance>
+                                    <provenance>
+                                        <p>Given to W. Olleyf by William Ebchester, Prior (1446-56)
+                                            and later belonged to Henry Dalton, Prior of Holy Island (Lindisfarne)
+                                            according to inscriptions on ff. 4v and 5.</p>
+                                    </provenance>
+                                    <acquisition>
+                                        <p>Presented to Trinity College in 1738 by
+                                            Thomas Gale and his son Roger.</p>
+                                    </acquisition>
+                                </history>
+                            </egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>Repertorium removes <gi>accMat</gi> from the <code>model.physDescPart</code> and adds it to the content of the element <gi>history</gi></p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <history>
+                                    <origin evidence="catalogue" resp="#NG">
+                                        <origDate cert="high"
+                                            evidence="internal"
+                                            notBefore="1348"
+                                            notAfter="1348">1348</origDate>
+                                        <origPlace>Unknown</origPlace>
+                                    </origin>
+                                    <accMat>
+                                        <locus>binding</locus> From the hand of <name full="yes">Arsenij Suhanov</name> is the following
+                                        the inscripition: <q>163-го (7163=1655) взята изъ кѣльи госусаря патриарха</q>
+                                    </accMat>
+                                    <provenance>The MSS. was (probably) in Valahia or Moldova, then - in monastery "St.Pavel",
+                                        Mount Athos, and was discovered by Arsenij Suhanov in the monastery skit "St. Joan
+                                        Milostivi" and was taken in Pathriarhal (Synodal) library in 1655.</provenance>
+                                </history>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="ink" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
