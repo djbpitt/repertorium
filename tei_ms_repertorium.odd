@@ -151,7 +151,6 @@
                         <item><gi>colophon</gi></item>
                         <item><gi>history</gi></item>
                         <item><gi>keywords</gi></item>
-                        <item><gi>layout</gi></item>
                         <item><gi>msContents</gi></item>
                         <item><gi>msDesc</gi></item>
                         <item><gi>msIdentifier</gi></item>
@@ -809,19 +808,20 @@
                             </attDef>
                         </attList>
                         <exemplum>
+                            <p></p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <p></p>
-                                
+                                <keywords scheme="Repertorium">
+                                    <list type="simple">
+                                        <item>Miscellany of mixed content</item>
+                                        <item>Prognostic books</item>
+                                        <item>Visionary literature</item>
+                                        <item>Treatise on liturgy</item>
+                                    </list>
+                                </keywords>
                             </egXML>
                         </exemplum>
                     </elementSpec>
-
-                    <elementSpec ident="layout" module="msdescription" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.measurement" mode="add"/>
-                        </classes>
-                    </elementSpec>
-
+                    
                     <elementSpec ident="lexis" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
                         <desc>Lexical features can be described similarly to grammatical ones.
@@ -970,6 +970,42 @@
                                 </valList>
                             </attDef>
                         </attList>
+                        <exemplum>
+                            <p>TEI example:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msContents>
+                                    <summary>A collection of Lollard sermons</summary>
+                                    <msItem n="1">
+                                        <locus>fol. 4r-8r</locus>
+                                        <title>3rd Sunday Before Lent</title>
+                                    </msItem>
+                                    <msItem n="2">
+                                        <locus>fol. 9r-16v</locus>
+                                        <title>Sexagesima</title>
+                                    </msItem>
+                                </msContents>
+                            </egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>In addition of classification Repertorium provides an attribute <att>type</att> with the three possible values - original, compilation and translation. Furthermore, Repertorium adds a special element <gi>sampleText</gi> and includes <gi>div</gi>. In the contents of <gi>msCOntents</gi> only <gi>msItemStruct</gi> is allowed, not the unstructured <gi>msItem</gi> element. </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msContents>
+                                    <filiation type="protograph">Bulgarian</filiation>
+                                    <filiation type="antigraph">Middle Bulgarian</filiation>
+                                    <msItemStruct xml:id="ACD1">
+                                        <locus n="1">4r-8r</locus>
+                                        <title xml:lang="bg">Видение на цар Амфилохий</title>
+                                        <filiation type="protograph">Bulgarian</filiation>
+                                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                                            <head>Видѣнїе Амфилѡга царѧ Аравїе</head>
+                                            <incipit>Гл҃еть Баронїи хронографъ римскїи</incipit>
+                                        </sampleText>
+                                    </msItemStruct>
+                                    ...
+                                </msContents>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="msDesc" module="msdescription" mode="change">
