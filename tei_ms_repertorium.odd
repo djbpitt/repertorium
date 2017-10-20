@@ -610,6 +610,25 @@
 
                     <elementSpec ident="motif" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
+                        <desc>The element <gi>motif</gi> is the most important part of the watermark
+                            description because it provides access to a formal terminological
+                            apparatus of watermark design. There are several ways to specify motif
+                            information: <list>
+                                <item>In the absence of reference books and watermark albums, simply
+                                    as plain text</item>
+                                <item>If a more complicated motif is present and the encoder would
+                                    like to provide full compatibility with professional watermark
+                                    databases, with the attribute <att>type</att></item>
+                                <item>By <q>secondary</q> is meant designs above or below the basic
+                                    motif. Frequently used motifs above the basic one include bird,
+                                    cross, flower, monogram, monogram with a combination with
+                                    figures (e.g., monogram <q>BA</q> and cross), ramrod, different
+                                    star shapes, star and monogram, trefoil, etc. Frequently used
+                                    motifs below the basic one include grapes, monogram, etc.</item>
+                                <item>By <q>supplemental</q> is meant supplemental characteristics
+                                    of the basic motif, e.g., in circle, in oval, in shield,
+                                    etc.</item>
+                            </list></desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -623,6 +642,25 @@
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
+                        <exemplum>
+                            <p>The following example represents the motif of <q>anchor in circle
+                                    with 5-point star above</q>.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><motif type="basic"
+                                    >anchor</motif>in <motif type="supplemental">circle</motif> with
+                                    <motif type="secondary">star/5-point</motif> above.</egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>The <gi>watermark</gi> example below includes three <gi>motif</gi>
+                                child elements, identifying basic, supplemental, and secondary
+                                features.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><watermark
+                                    tracing="drawing"><motif type="basic">Leo</motif> within <motif
+                                        type="supplemental">circle</motif> surmounted by <motif
+                                        type="secondary">quatrefoil</motif> and with
+                                        <countermark>“AP”</countermark>, similar to <ref>Nikolaev
+                                        #125</ref> from the year <date cert="high"
+                                    >1585</date>.</watermark></egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="msContents" module="msdescription" mode="change">
