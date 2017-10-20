@@ -10,7 +10,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2017-10-20T07:58:43Z. .
+# Schema generated from ODD source 2017-10-20T08:17:32Z. .
 # TEI Edition: Version 3.2.0. Last updated on
 #	10th July 2017, revision 0fcf651
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -7544,7 +7544,7 @@ undo =
   }
 bindingNote =
   
-  ## The element allows structured description of binding characteristics in addition to decoration and condition. These features are not limited to the binding parts, and may include: cover, plates, headbands, edges, clasps, and sewing techniques.
+  ## The element allows structured description of binding characteristics in addition to decoration and condition. These features may include: cover, plates, headbands, edges, clasps, sewing techniques, or any notes related to the binding.
   element re:bindingNote {
     (text | model.phrase | decoNote | condition)*,
     att.global.attributes,
@@ -7599,7 +7599,7 @@ motif =
   }
 orthNote =
   
-  ## The orthNote element specifies a detail of the orthographic practice of a scribe. The type and subtype attributes support retrieval of manuscripts according to the most important characteristics of scribal practice, such as the use of jers (type value of jer), nasal vowels (type value of jus), and jotation (type value of jotVowel). and nasal vowel letters.
+  ## The orthNote element specifies a detail of the orthographic practice of a scribe. The type and subtype attributes support retrieval of manuscripts according to the most important characteristics of scribal practice. The four permitted type values are:  * jer: jer letters  * jus: nasal vowel letters  * jotVowel: jotation  * and otherLetters: anything other than jers, nasal vowels, and jotation. Jer and nasal vowel specifications are formalized through the subtype attribute, about shich see the examples below.
   element re:orthNote {
     macro.specialPara,
     att.global.attributes,
