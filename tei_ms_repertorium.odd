@@ -361,8 +361,9 @@
                     <elementSpec ident="bindingNote" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
                         <desc>The element allows structured description of binding characteristics
-                            in addition to decoration and condition. These features may include: cover, plates, headbands, edges,
-                            clasps, sewing techniques, or any notes related to the binding.</desc>
+                            in addition to decoration and condition. These features may include:
+                            cover, plates, headbands, edges, clasps, sewing techniques, or any notes
+                            related to the binding.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -382,8 +383,10 @@
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <bindingDesc>
                                     <binding notBefore="1700" notAfter="1800" contemporary="false">
-                                        <bindingNote type="boards">Boards covered with ornamented leather. </bindingNote>
-                                        <bindingNote type="ornaments">The ornaments consist of florar motifs. </bindingNote>
+                                        <bindingNote type="boards">Boards covered with ornamented
+                                            leather. </bindingNote>
+                                        <bindingNote type="ornaments">The ornaments consist of
+                                            florar motifs. </bindingNote>
                                         <bindingNote>
                                             <date>Probably the binding dates from the 18th
                                                 century.</date>
@@ -440,7 +443,8 @@
 
                     <elementSpec ident="countermark" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Called also counter watermark</desc>
+                        <desc>Called also counter watermark. A <gi>countermark</gi> has the same
+                            content and attributes as the <gi>watermark</gi> element.</desc>
                         <content>
                             <rng:zeroOrMore>
                                 <rng:choice>
@@ -450,6 +454,16 @@
                                 </rng:choice>
                             </rng:zeroOrMore>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><material>
+                                    <watermark tracing="drawing"><motif type="basic"
+                                        >Leo</motif>within <motif type="supplemental">circle</motif>
+                                        surmounted by <motif type="secondary">quatrefoil</motif> and
+                                        with <countermark>“AP”</countermark> similar to
+                                            <ref>Nikolaev #125</ref> from the year <date cert="yes"
+                                            >1585</date>.</watermark>
+                                </material></egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="crypto" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
@@ -1418,6 +1432,17 @@
                     </elementSpec>
 
                     <elementSpec ident="watermark" module="msdescription" mode="change">
+                        <desc>The content of this element includes phrase level elements, as well as
+                            specialized elements like <gi>countermark</gi> and <gi>motif</gi>. There
+                            are several special attributes for the content of this element.
+                                <att>tracing</att> is used to describe very briefly (with one word)
+                            the method of watermark tracing. The most usual method is still drawing
+                            by hand, but there could be other possibilities, such as rubbing by
+                            hand, usage of special Dylux print paper, beta- or x-radiography,
+                            scanning, etc. The <att>place</att> attribute from the class
+                            att.placement can refine where on the pages the watermark can be seen,
+                            and may be described in relation to wire lines and chain (laid)
+                            lines.</desc>
                         <content>
                             <rng:zeroOrMore>
                                 <rng:choice>
@@ -1437,6 +1462,15 @@
                                 </datatype>
                             </attDef>
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><watermark
+                                    tracing="drawing"><motif type="basic">Leo</motif>within <motif
+                                        type="supplemental">circle</motif> surmounted by <motif
+                                        type="secondary">quatrefoil</motif> and with
+                                        <countermark>“AP”</countermark> similar to <ref>Nikolaev
+                                        #125</ref> from the year <date cert="yes"
+                                    >1585</date>.</watermark></egXML>
+                        </exemplum>
                     </elementSpec>
 
                 </schemaSpec>
