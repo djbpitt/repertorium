@@ -10,7 +10,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2017-10-20T12:17:47Z. .
+# Schema generated from ODD source 2017-10-20T13:01:00Z. .
 # TEI Edition: Version 3.2.0. Last updated on
 #	10th July 2017, revision 0fcf651
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -5720,7 +5720,6 @@ layout =
   ## describes how text is laid out on the page, including information about any ruling, pricking, or other evidence of page-preparation techniques. [10.7.2. Writing, Decoration, and Other Notations]
   element layout {
     macro.specialPara,
-    att.measurement.attributes,
     att.global.attributes,
     
     ## specifies the number of columns per page
@@ -7549,7 +7548,7 @@ undo =
   }
 bindingNote =
   
-  ## The element allows structured description of binding characteristics in addition to decoration and condition. These features may include: cover, plates, headbands, edges, clasps, sewing techniques, or any notes related to the binding.
+  ## Allows structured description of binding characteristics in addition to decoration and condition.
   element re:bindingNote {
     (text | model.phrase | decoNote | condition)*,
     att.global.attributes,
@@ -7559,11 +7558,11 @@ bindingNote =
   }
 countermark =
   
-  ## Called also counter watermark. A countermark has the same content and attributes as the watermark element.
+  ## Contains information about a second, subsidiary watermark.
   element re:countermark { (text | model.phrase | motif)* }
 crypto =
   
-  ## Repertorium model: description of cryptographical system(s). The element for the description of a cryptographic system in the Repertorium model is called crypto and should be used in cases where encrypted letters or passages of text occur. The additional attribute type might identify the method, e.g., simple substitution cipher.
+  ## Contains a description of a cryptographic system used in a manuscript.
   element re:crypto {
     macro.paraContent,
     att.global.attributes,
@@ -7572,17 +7571,17 @@ crypto =
   }
 \grammar =
   
-  ## The description of grammatical characteristics can be divided into separate units, but in this case, unlike with orthography, there may not be a standard list of descriptive criteria, and the researcher has to introduce the structure using the available means.
+  ## Contains a description of the grammar of a scribe.
   element re:grammar { macro.specialPara, att.global.attributes, empty }
 gregoryRule =
   
-  ## The Gregory rule is a description of the layout of the parchment in the codex. There are two common abbreviations: HS for the hair (dark) side, and FS for the flesh (light) side of the parchment. Therefore, the content of this element is a sequence of HS and FS abbreviations. The sign | separates pages, – separates folios, and = signifies the middle of the quire.
+  ## Contains a description of the layout of the parchment according to the Gregory rule.
   element re:gregoryRule {
     macro.phraseSeq, att.global.attributes, att.typed.attributes, empty
   }
 ink =
   
-  ## Description of ink(s). Information about the ink is presented usually as a simple phrase like brown dark ink for the basic text and red ink for the headings and small initials. In principle these descriptions could be further developed to supply information about ink composition, brightness, loss of color, etc.
+  ## Contains a description of ink(s).
   element re:ink {
     macro.phraseSeq,
     att.global.attributes,
@@ -7591,11 +7590,11 @@ ink =
   }
 lexis =
   
-  ## Lexical features can be described similarly to grammatical ones. Whether this takes the form of a list with items or of just one unit depends on the encoder’s vision and the length of the material. 
+  ## Contains a description of lexical features of a scribe.
   element re:lexis { macro.specialPara, att.global.attributes, empty }
 motif =
   
-  ## The element motif is the most important part of the watermark description because it provides access to a formal terminological apparatus of watermark design. There are several ways to specify motif information:  * In the absence of reference books and watermark albums, simply as plain text  * If a more complicated motif is present and the encoder would like to provide full compatibility with professional watermark databases, with the attribute type  * By secondary is meant designs above or below the basic motif. Frequently used motifs above the basic one include bird, cross, flower, monogram, monogram with a combination with figures (e.g., monogram BA and cross), ramrod, different star shapes, star and monogram, trefoil, etc. Frequently used motifs below the basic one include grapes, monogram, etc.  * By supplemental is meant supplemental characteristics of the basic motif, e.g., in circle, in oval, in shield, etc.
+  ## (Watermark image type) Contains information about a watermark motif.
   element re:motif {
     (text | model.phrase | motif)*,
     att.global.attributes,
@@ -7604,7 +7603,7 @@ motif =
   }
 orthNote =
   
-  ## The orthNote element specifies a detail of the orthographic practice of a scribe. The type and subtype attributes support retrieval of manuscripts according to the most important characteristics of scribal practice. The four permitted type values are:  * jer: jer letters  * jus: nasal vowel letters  * jotVowel: jotation  * and otherLetters: anything other than jers, nasal vowels, and jotation. Jer and nasal vowel specifications are formalized through the subtype attribute, about shich see the examples below.
+  ## Specifies a detail of the orthographic practice of a scribe.
   element re:orthNote {
     macro.specialPara,
     att.global.attributes,
@@ -7615,7 +7614,7 @@ orthNote =
   }
 orthography =
   
-  ## The orthography element, which is a child of scribeLang, contains a formal, structured description of the orthography of a scribe. The individual orthographic features are specified in orthoNote children of orthography (see the separate documentation of orthNote).
+  ## Contains a formal, structured description of the orthography of a scribe.
   element re:orthography {
     (model.pLike+ | (summary?, orthNote+)),
     att.global.attributes,
@@ -7624,7 +7623,7 @@ orthography =
   }
 pagination =
   
-  ## The Repertorium adds a pagination element so that pagination and foliation (represented by the standard TEI foliation element) can be described separately. The pagination element, like the foliation element, may include information about when the pagination was made, whether it is original, and how the folios are marked or numbered.
+  ## Contains information about the pagination of the codex, separately from information about the foliation.
   element re:pagination {
     macro.specialPara,
     att.global.attributes,
@@ -7633,13 +7632,13 @@ pagination =
   }
 pricking =
   
-  ## Descriptions of pricking are rare in the literature, although, as explained by Jones (1946a, 1946b), they could bear information on scriptorial techniques.
+  ## Contains a description of pricking patterns in the manuscript.
   element re:pricking {
     macro.phraseSeq, att.global.attributes, att.typed.attributes, empty
   }
 quire =
   
-  ## The element quire brings together all possible features for the characterization of a quire or set of quires, including number, composition, how and where quires are marked, and with the assistance of what tool, etc. The child element formula provides information about how the quire is composed, of how many folia, etc.
+  ## Conains information that describes a quire or set of quires.
   element re:quire {
     (model.pLike+
      | (summary?,
@@ -7671,13 +7670,13 @@ quire =
   }
 ruling =
   
-  ## Two kinds of information can be entered in the ruling element. The first is related to the ruling type defined by researchers like Leroy (1976) or Gilissen (1977), who attempted to propose well-defined typologies of ruling types. In the other, information is related to the place of ruling in the quire, or the so called scheme. The former be expressed as a formula of ruled lines for writing, and the latter could be visualized as simple graphic showing the places in the quire where the ruling is accomplished, e.g.: >> | > | |< |<< = >>| >| |< | <<. This scheme means that in this quire the ruling is made for each of the two folia: once for the outer double leaf and once for the inner one (double sign >> or <<). The symbols > or < mean that on the leaf there is just a trace of the ruling made on the previous leaf. The attribute type can be used to provide information about the classification scheme (e.g., Gilissen or Leroy) employed.
+  ## Contains information about ruling lines in the manuscript.
   element re:ruling {
     macro.phraseSeq, att.global.attributes, att.typed.attributes, empty
   }
 sampleText =
   
-  ## The Repertorium uses a special sampleText element as a wrapper around several elements used for the identification of text items in a manuscript. Its function is to make a distinction between the language of the description (metadata used to describe the manuscript) and citations from the original text. The sampleText element uses the global TEI attribute xml:lang, which represents the language of the content, and for medieval Slavonic codices its value is almost always cu. The optional attribute script commonly contains the value cyrs (for old Cyrillic) or glag (for Glagolitic).
+  ## Wraps samples from the manuscript, both those with specific identities (such as head, incipit, etc.) and general ones (tagged as p).
   element re:sampleText {
     (head | rubric | incipit)*,
     (model.pLike | \div)*,
@@ -7693,7 +7692,7 @@ sampleText =
   }
 scribe =
   
-  ## Repertorium model: description of the paleography, orthography, and language of a scribe. scribe contains a modification of the TEI scriptDesc element and the Repertorium-specific scribeLang element.
+  ## Contains a description of the paleography, orthography, and language of a scribe.
   element re:scribe {
     (locus | locusGrp)?,
     model.nameLike.agent?,
@@ -7707,7 +7706,7 @@ scribe =
   }
 scribeDesc =
   
-  ## The scribeDesc element serves as a wrapper for scribe elements, so that the characteristics of each scribe can be described separately, while also being bundled together.
+  ## Serves as a wrapper for scribe elements, so that the characteristics of each scribe can be described separately, while also being bundled together.
   element re:scribeDesc {
     (model.pLike+ | (summary?, scribe*)),
     att.global.attributes,
@@ -7715,7 +7714,7 @@ scribeDesc =
   }
 scribeLang =
   
-  ## Repertorium model: Language of the scribe. scribeLang contains a formal description of the language of a scribe, expressed in the orthography, grammar, and lexis child elements.
+  ## Contains a description of the orthography and language of the scribe.
   element re:scribeLang {
     (model.pLike+ | (summary?, orthography?, \grammar?, lexis?)),
     att.global.attributes,
