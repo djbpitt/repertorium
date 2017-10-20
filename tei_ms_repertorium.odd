@@ -495,12 +495,65 @@
 
                     <elementSpec ident="grammar" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <desc>The description of grammatical characteristics can be divided into
+                            separate units, but in this case, unlike with orthography, there may not
+                            be a standard list of descriptive criteria, and the researcher has to
+                            introduce the structure using the available means.</desc>
                         <classes mode="replace">
                             <memberOf key="att.global"/>
                         </classes>
                         <content>
                             <rng:ref name="macro.specialPara"/>
                         </content>
+                        <exemplum>
+                            <p>In the example below, list items have been supplied with
+                                    <att>xml:id</att> values to indicate the aspect of the language
+                                to which they refer (in this case, <val>phonology</val>,
+                                    <val>verbs</val>, and <val>nomina</val>). Words and morphemes
+                                are tagged with the TEI <gi>w</gi> and <gi>m</gi> elements,
+                                respectively.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><grammar>
+                                    <list>
+                                        <item xml:id="phonology">Adjective forms prefer the archaic
+                                                <m xml:lang="cu">-сц-</m> to <m xml:lang="cu"
+                                                >-ст-</m>. Cases with <m xml:lang="cu">-ст-</m> are
+                                            rare. Uncontracted forms of pronominal adjectives and of
+                                            verbs of the -je-conjugation in Ind. Praes. Act. and of
+                                            verbs in Imperfect are much more frequent than
+                                            contracted ones. Verbal forms (Ind. Praes. Act., p.3,
+                                            je-conjugation) with assimilation, such as <w
+                                                xml:lang="cu">бѣгаат</w>, <w xml:lang="cu"
+                                                >радоуоутъ</w> are frequent. In Imperativus there is
+                                            variation of forms with <c xml:lang="cu">ѣ</c> and with
+                                                <c xml:lang="cu">и</c>, such as <w xml:lang="cu"
+                                                >покажѣте</w> 290.17 alongside <w lang="cu"
+                                                >покажите</w> 80.5.</item>
+                                        <item xml:id="verbs">The manuscript uses non-sigmatic
+                                            Aoristus (e.g., <w xml:lang="cu">вьнидъ</w>, <w
+                                                xml:lang="cu">сънидъ</w>, <w xml:lang="cu"
+                                            >идомъ</w>, <w xml:lang="cu">отидѫ</w>) and first
+                                            sigmatic Aoristus of verbs with stems ending in a
+                                            consonant (e.g., <w xml:lang="cu">привѣс</w>,<w
+                                                xml:lang="cu">въвѣсом</w>, <w xml:lang="cu">възнѣсѧ
+                                            </w>). Verbs with infinitive stems ending in a vowel
+                                            often preserve the archaic ending <m xml:lang="cu"
+                                                >-тъ</m> in Ind. Aor. Act, p. 2 and 3, Sg., e.g., <w
+                                                xml:lang="cu">обитъ</w>, <w xml:lang="cu"
+                                            >оумрѣт</w>. Three cases of omitted ending <m
+                                                xml:lang="cu">-тъ</m> for Ind. Praes. Act., p. 3.
+                                            Sg. are found (<w xml:lang="cu">e</w> instead of <w
+                                                xml:lang="cu">естъ</w>, <w xml:lang="cu">нѣ</w> for
+                                                <w xml:lang="cu">нѣст</w>, and <w xml:lang="cu"
+                                                >бѫд</w> for <w xml:lang="cu">bѫдет</w>).</item>
+                                        <item xml:id="nomina">The old suffix <m xml:lang="cu"
+                                                >-нье</m> is written frequently as <m xml:lang="cu"
+                                                >-ние</m>, e.g., <w xml:lang="cu">знамение</w>, but
+                                            this orthography is not consistently followed. In other
+                                            forms <m xml:lang="cu">-ье</m> is preferred (cf. <w
+                                                xml:lang="cu">абье</w>, 24r.20).</item>
+                                    </list>
+                                </grammar> Description of </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="gregoryRule" module="msdescription"
