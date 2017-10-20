@@ -360,10 +360,8 @@
 
                     <elementSpec ident="bindingNote" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-                        <desc>The element allows structured description of binding characteristics
-                            in addition to decoration and condition. These features may include:
-                            cover, plates, headbands, edges, clasps, sewing techniques, or any notes
-                            related to the binding.</desc>
+                        <desc>Allows structured description of binding characteristics in addition
+                            to decoration and condition.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -395,6 +393,11 @@
                                 </bindingDesc>
                             </egXML>
                         </exemplum>
+                        <remarks>
+                            <p>Features specified in <gi>bindingNote</gi> may include: cover,
+                                plates, headbands, edges, clasps, sewing techniques, or any notes
+                                related to the binding.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="collation" module="msdescription" mode="change">
@@ -450,7 +453,15 @@
                         </exemplum>
                         <exemplum>
 
-                            <p>TEI is using <code>macro.specialPara</code> which means that all the information is enclosed into <gi>p</gi> element. Repertorium provides a choice between possibility to use one or several paragraphs (<gi>p</gi> elements) or to make a structured description with summary and description of each quire or to describe various parts of the collation in general, e.g. signatures, catchwords, dispositions of flesh- and hair-side of the parchment, ruling and pricking schemes and types. The following is an example from DD437NBKM.xml:</p>
+                            <p>TEI is using <code>macro.specialPara</code> which means that all the
+                                information is enclosed into <gi>p</gi> element. Repertorium
+                                provides a choice between possibility to use one or several
+                                paragraphs (<gi>p</gi> elements) or to make a structured description
+                                with summary and description of each quire or to describe various
+                                parts of the collation in general, e.g. signatures, catchwords,
+                                dispositions of flesh- and hair-side of the parchment, ruling and
+                                pricking schemes and types. The following is an example from
+                                DD437NBKM.xml:</p>
                             <p>TEI is using <code>macro.specialPara</code> which means that all the
                                 information is enclosed into <code>p</code> element. Repertorium
                                 provides a choice between possibility to use one or several
@@ -517,45 +528,55 @@
                         <exemplum>
                             <p>TEI example:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <colophon>Explicit venenum viciorum domini illius, qui comparavit Anno
-                                    domini Millessimo Trecentesimo nonagesimo primo, Sabbato in festo
-                                    sancte Marthe virginis gloriose. Laus tibi criste quia finitur
-                                    libellus iste.
-                                </colophon>
+                                <colophon>Explicit venenum viciorum domini illius, qui comparavit
+                                    Anno domini Millessimo Trecentesimo nonagesimo primo, Sabbato in
+                                    festo sancte Marthe virginis gloriose. Laus tibi criste quia
+                                    finitur libellus iste. </colophon>
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>In TEI <gi>colophon</gi> is a phrase level element. For longer colophons with headings and more than one paragraphs we need reformulation of the XML content. This is example is from AB674NBKM.xml: </p>
+                            <p>In TEI <gi>colophon</gi> is a phrase level element. For longer
+                                colophons with headings and more than one paragraphs we need
+                                reformulation of the XML content. This is example is from
+                                AB674NBKM.xml: </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <colophon>
                                     <head xml:lang="grc">Ο ΧΣ ΕΣΤΙ ΑΡΧΗ ΚΑΙ ΤΕΛΟΣ</head>
                                     <p xml:lang="cu">Источникоу оубѡ на мѣстѣ сѫщꙋ и животныѫ воды
-                                        истачаѫщоу тѣмже и х҃с къ самарѣныни водѫ проси· женѫ даждъ ми водѫ
-                                        пити· и азъ дамъ тебѣ вѡдь пити ꙗко да въ вѣкы не възъжѫждаѥши·
-                                        тѣмже оубѡ и сиа книга источникоу есть подобна· еѫже аще кто съ
-                                        оусрѣдїемъ разгнѫвъ прочьтетъ, напоитъ дш҃ѫ своѫ живоносныѫ и вѣчныѫ
-                                        воды, и въ вѣкы не възждѫждет сѧ: –</p>
-                                    <p xml:lang="cu">Нѫ вы оубо прѣблазни г҃и мои, трїе въселенъстїи ст҃ле·
-                                        и оучителе григорїе, и василїе, и іѡанъ златооустъ прїимѣте вашего
-                                        раба ходага мита логоѳетѣ малое приношенїе, вѣщанїа изрѧднаа
-                                        бг҃ословаго грїгориїа· прѣ<supplied>мѫ</supplied>драаго оучителѣ и
-                                        наставника· троици сѫпоклонника <supplied>с</supplied>ѫпостатѡмъ еѧ
+                                        истачаѫщоу тѣмже и х҃с къ самарѣныни водѫ проси· женѫ даждъ
+                                        ми водѫ пити· и азъ дамъ тебѣ вѡдь пити ꙗко да въ вѣкы не
+                                        възъжѫждаѥши· тѣмже оубѡ и сиа книга источникоу есть
+                                        подобна· еѫже аще кто съ оусрѣдїемъ разгнѫвъ прочьтетъ,
+                                        напоитъ дш҃ѫ своѫ живоносныѫ и вѣчныѫ воды, и въ вѣкы не
+                                        възждѫждет сѧ: –</p>
+                                    <p xml:lang="cu">Нѫ вы оубо прѣблазни г҃и мои, трїе въселенъстїи
+                                        ст҃ле· и оучителе григорїе, и василїе, и іѡанъ златооустъ
+                                        прїимѣте вашего раба ходага мита логоѳетѣ малое приношенїе,
+                                        вѣщанїа изрѧднаа бг҃ословаго грїгориїа·
+                                            прѣ<supplied>мѫ</supplied>драаго оучителѣ и наставника·
+                                        троици сѫпоклонника <supplied>с</supplied>ѫпостатѡмъ еѧ
                                         раздрꙋшника, їересемъ прогонителѣ: –</p>
                                     <p xml:lang="cu">
-                                        <supplied>И</supplied>списавыи сиѫ книгѫ прьвославъ нарицаах сѧ,
-                                        самѣм, <supplied>по</supplied>велѣнїемъ всепочътенаго въ велмѫжехъ
-                                        бл҃гарскаго <supplied>цр҃с</supplied>тва логоѳетѣ мита· тогда же
-                                        прѣимѣѫщꙋ, хорѫгви <supplied>бл҃</supplied>гарскаго стола,
-                                        прѣвысокыи и самодръжецъ всѣмъ <supplied>бл҃г</supplied>арѡм и
-                                        гръкѡм цр҃ъ і҃ѡ, алеѯандр꙽· и прї цр҃ци его
-                                        новопросвѣ<supplied>щ</supplied>еннои и бл҃говѣрнои ѳеѡдорѣ. и
-                                        при сн҃ѣ их шишман младѡм цр҃и <gap quantity="24" unit="character"/>· Молѧ же всѣкого искꙋснаго помощи и напаствнном ѿ сѫпостата· не
-                                        злословити недостаткꙋ ѡскѫднꙗаго ꙋма поминаѫще <pb n="393v"/>
+                                        <supplied>И</supplied>списавыи сиѫ книгѫ прьвославъ нарицаах
+                                        сѧ, самѣм, <supplied>по</supplied>велѣнїемъ всепочътенаго въ
+                                        велмѫжехъ бл҃гарскаго <supplied>цр҃с</supplied>тва логоѳетѣ
+                                        мита· тогда же прѣимѣѫщꙋ, хорѫгви
+                                        <supplied>бл҃</supplied>гарскаго стола, прѣвысокыи и
+                                        самодръжецъ всѣмъ <supplied>бл҃г</supplied>арѡм и гръкѡм
+                                        цр҃ъ і҃ѡ, алеѯандр꙽· и прї цр҃ци его
+                                            новопросвѣ<supplied>щ</supplied>еннои и бл҃говѣрнои
+                                        ѳеѡдорѣ. и при сн҃ѣ их шишман младѡм цр҃и <gap quantity="24"
+                                            unit="character"/>· Молѧ же всѣкого искꙋснаго помощи и
+                                        напаствнном ѿ сѫпостата· не злословити недостаткꙋ ѡскѫднꙗаго
+                                        ꙋма поминаѫще <pb n="393v"/>
                                         <gap quantity="12" unit="character"/>
-                                        <unclear>ꙗко</unclear> имѣѫ и съвръшеное, тъчиѫ е<gap quantity="1" unit="character"/> въ памѧтъ томꙋ самомꙋ ве<supplied>ликомꙋ
-                                            логоѳетꙋ м</supplied>итꙋ вѣчнѫѫ, и бг҃одарованныи б҃е <gap/>
+                                        <unclear>ꙗко</unclear> имѣѫ и съвръшеное, тъчиѫ е<gap
+                                            quantity="1" unit="character"/> въ памѧтъ томꙋ самомꙋ
+                                            ве<supplied>ликомꙋ логоѳетꙋ м</supplied>итꙋ вѣчнѫѫ, и
+                                        бг҃одарованныи б҃е <gap/>
                                         <unclear>идѡм</unclear>, зде и въ грѧдѫщомъ вѣцѣ, и нынѣ и
-                                        <supplied>присно </supplied> · въ вѣкы :· вѣкѡмъ :· амин꙽·</p>
+                                            <supplied>присно </supplied> · въ вѣкы :· вѣкѡмъ :·
+                                        амин꙽·</p>
                                 </colophon>
                             </egXML>
                         </exemplum>
@@ -563,8 +584,7 @@
 
                     <elementSpec ident="countermark" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Called also counter watermark. A <gi>countermark</gi> has the same
-                            content and attributes as the <gi>watermark</gi> element.</desc>
+                        <desc>Contains information about a second, subsidiary watermark.</desc>
                         <content>
                             <rng:zeroOrMore>
                                 <rng:choice>
@@ -584,16 +604,17 @@
                                             >1585</date>.</watermark>
                                 </material></egXML>
                         </exemplum>
+                        <remarks>
+                            <p>Also called <term>counter watermark</term>. A <gi>countermark</gi>
+                                has the same content and attributes as the <gi>watermark</gi>
+                                element.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="crypto" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Repertorium model: description of cryptographical system(s). The
-                            element for the description of a cryptographic system in the Repertorium
-                            model is called <gi>crypto</gi> and should be used in cases where
-                            encrypted letters or passages of text occur. The additional attribute
-                                <att>type</att> might identify the method, e.g., simple substitution
-                            cipher.</desc>
+                        <desc>Contains a description of a cryptographic system used in a
+                            manuscript.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -611,14 +632,17 @@
                                     in their regular meanings, without
                                 substitution.</crypto></egXML>
                         </exemplum>
+                        <remarks>
+                            <p>The <gi>crypto</gi> element should be used in cases where encrypted
+                                letters or passages of text occur. The additional attribute
+                                    <att>type</att> might identify the method, e.g., simple
+                                substitution cipher.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="grammar" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-                        <desc>The description of grammatical characteristics can be divided into
-                            separate units, but in this case, unlike with orthography, there may not
-                            be a standard list of descriptive criteria, and the researcher has to
-                            introduce the structure using the available means.</desc>
+                        <desc>Contains a description of the grammar of a scribe.</desc>
                         <classes mode="replace">
                             <memberOf key="att.global"/>
                         </classes>
@@ -674,16 +698,18 @@
                                     </list>
                                 </grammar> Description of </egXML>
                         </exemplum>
+                        <remarks>
+                            <p>The description of grammatical characteristics can be divided into
+                                separate units, but in this case, unlike with orthography, there may
+                                not be a standard list of descriptive criteria, and the researcher
+                                has to introduce the structure using the available means.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="gregoryRule" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-                        <desc>The Gregory rule is a description of the layout of the parchment in
-                            the codex. There are two common abbreviations: <q>HS</q> for the hair
-                            (dark) side, and <q>FS</q> for the flesh (light) side of the parchment.
-                            Therefore, the content of this element is a sequence of <q>HS</q> and
-                                <q>FS</q> abbreviations. The sign <q>|</q> separates pages, <q>–</q>
-                            separates folios, and <q>=</q> signifies the middle of the quire.</desc>
+                        <desc>Contains a description of the layout of the parchment according to the
+                            Gregory rule.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -695,6 +721,14 @@
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"
                                     ><gregoryRule>HS|FS-FS|HS-HS|FS-FS|HS=HS|FS-FS|HS-HS|FSFS|HS</gregoryRule></egXML>
                         </exemplum>
+                        <remarks>
+                            <p>There are two common abbreviations: <term>HS</term> for the hair
+                                (dark) side, and <term>FS</term> for the flesh (light) side of the
+                                parchment. Therefore, the content of this element is a sequence of
+                                    <term>HS</term> and <term>FS</term> abbreviations. The sign
+                                    <q>|</q> separates pages, <q>–</q> separates folios, and
+                                    <q>=</q> signifies the middle of the quire.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="history" module="msdescription" mode="change">
@@ -727,44 +761,47 @@
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <history>
                                     <origin>
-                                        <p>Written in Durham during the mid twelfth
-                                            century.</p>
+                                        <p>Written in Durham during the mid twelfth century.</p>
                                     </origin>
                                     <provenance>
-                                        <p>Recorded in two medieval
-                                            catalogues of the books belonging to Durham Priory, made in 1391 and
-                                            1405.</p>
+                                        <p>Recorded in two medieval catalogues of the books
+                                            belonging to Durham Priory, made in 1391 and 1405.</p>
                                     </provenance>
                                     <provenance>
                                         <p>Given to W. Olleyf by William Ebchester, Prior (1446-56)
-                                            and later belonged to Henry Dalton, Prior of Holy Island (Lindisfarne)
-                                            according to inscriptions on ff. 4v and 5.</p>
+                                            and later belonged to Henry Dalton, Prior of Holy Island
+                                            (Lindisfarne) according to inscriptions on ff. 4v and
+                                            5.</p>
                                     </provenance>
                                     <acquisition>
-                                        <p>Presented to Trinity College in 1738 by
-                                            Thomas Gale and his son Roger.</p>
+                                        <p>Presented to Trinity College in 1738 by Thomas Gale and
+                                            his son Roger.</p>
                                     </acquisition>
                                 </history>
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Repertorium removes <gi>accMat</gi> from the <code>model.physDescPart</code> and adds it to the content of the element <gi>history</gi></p>
+                            <p>Repertorium removes <gi>accMat</gi> from the
+                                    <code>model.physDescPart</code> and adds it to the content of
+                                the element <gi>history</gi></p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <history>
                                     <origin evidence="catalogue" resp="#NG">
-                                        <origDate cert="high"
-                                            evidence="internal"
-                                            notBefore="1348"
+                                        <origDate cert="high" evidence="internal" notBefore="1348"
                                             notAfter="1348">1348</origDate>
                                         <origPlace>Unknown</origPlace>
                                     </origin>
                                     <accMat>
-                                        <locus>binding</locus> From the hand of <name full="yes">Arsenij Suhanov</name> is the following
-                                        the inscripition: <q>163-го (7163=1655) взята изъ кѣльи госусаря патриарха</q>
+                                        <locus>binding</locus> From the hand of <name full="yes"
+                                            >Arsenij Suhanov</name> is the following the
+                                        inscripition: <q>163-го (7163=1655) взята изъ кѣльи госусаря
+                                            патриарха</q>
                                     </accMat>
-                                    <provenance>The MSS. was (probably) in Valahia or Moldova, then - in monastery "St.Pavel",
-                                        Mount Athos, and was discovered by Arsenij Suhanov in the monastery skit "St. Joan
-                                        Milostivi" and was taken in Pathriarhal (Synodal) library in 1655.</provenance>
+                                    <provenance>The MSS. was (probably) in Valahia or Moldova, then
+                                        - in monastery "St.Pavel", Mount Athos, and was discovered
+                                        by Arsenij Suhanov in the monastery skit "St. Joan
+                                        Milostivi" and was taken in Pathriarhal (Synodal) library in
+                                        1655.</provenance>
                                 </history>
                             </egXML>
                         </exemplum>
@@ -772,11 +809,7 @@
 
                     <elementSpec ident="ink" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Description of ink(s). Information about the ink is presented usually
-                            as a simple phrase like <q>brown dark ink for the basic text and red ink
-                                for the headings and small initials</q>. In principle these
-                            descriptions could be further developed to supply information about ink
-                            composition, brightness, loss of color, etc.</desc>
+                        <desc>Contains a description of ink(s).</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.measurement"/>
@@ -789,6 +822,13 @@
                                     text and dark red for the initials</ink>
                             </egXML>
                         </exemplum>
+                        <remarks>
+                            <p>Information about ink is presented usually as a simple phrase like
+                                    <q>brown dark ink for the basic text and red ink for the
+                                    headings and small initials</q>. In principle these descriptions
+                                could be further developed to supply information about ink
+                                composition, brightness, loss of color, etc.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="keywords" mode="change">
@@ -805,7 +845,7 @@
                             </attDef>
                         </attList>
                         <exemplum>
-                            <p></p>
+                            <p/>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <keywords scheme="Repertorium">
                                     <list type="simple">
@@ -818,12 +858,10 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    
+
                     <elementSpec ident="lexis" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-                        <desc>Lexical features can be described similarly to grammatical ones.
-                            Whether this takes the form of a list with items or of just one unit
-                            depends on the encoder’s vision and the length of the material. </desc>
+                        <desc>Contains a description of lexical features of a scribe.</desc>
                         <classes mode="replace">
                             <memberOf key="att.global"/>
                         </classes>
@@ -843,29 +881,18 @@
                                     are considered to be relatively later: <foreign xml:lang="cu"
                                         >благодать, написание, дрѧхлъ</foreign>. </lexis></egXML>
                         </exemplum>
+                        <remarks>
+                            <p>The lexical features of a scribe can be described similarly to
+                                grammatical ones. Whether this takes the form of a list with items
+                                or of just one unit depends on the encoder’s vision and the length
+                                of the material.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="motif" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>The element <gi>motif</gi> is the most important part of the watermark
-                            description because it provides access to a formal terminological
-                            apparatus of watermark design. There are several ways to specify motif
-                            information: <list>
-                                <item>In the absence of reference books and watermark albums, simply
-                                    as plain text</item>
-                                <item>If a more complicated motif is present and the encoder would
-                                    like to provide full compatibility with professional watermark
-                                    databases, with the attribute <att>type</att></item>
-                                <item>By <q>secondary</q> is meant designs above or below the basic
-                                    motif. Frequently used motifs above the basic one include bird,
-                                    cross, flower, monogram, monogram with a combination with
-                                    figures (e.g., monogram <q>BA</q> and cross), ramrod, different
-                                    star shapes, star and monogram, trefoil, etc. Frequently used
-                                    motifs below the basic one include grapes, monogram, etc.</item>
-                                <item>By <q>supplemental</q> is meant supplemental characteristics
-                                    of the basic motif, e.g., in circle, in oval, in shield,
-                                    etc.</item>
-                            </list></desc>
+                        <gloss>Watermark image type</gloss>
+                        <desc>Contains information about a watermark motif.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -898,6 +925,29 @@
                                         #125</ref> from the year <date cert="high"
                                     >1585</date>.</watermark></egXML>
                         </exemplum>
+                        <remarks>
+                            <p>The element <gi>motif</gi> is the most important part of the
+                                watermark description because it provides access to a formal
+                                terminological apparatus of watermark design. There are several ways
+                                to specify motif information: <list>
+                                    <item>In the absence of reference books and watermark albums,
+                                        simply as plain text</item>
+                                    <item>If a more complicated motif is present and the encoder
+                                        would like to provide full compatibility with professional
+                                        watermark databases, with the attribute
+                                        <att>type</att></item>
+                                    <item>By <q>secondary</q> is meant designs above or below the
+                                        basic motif. Frequently used motifs above the basic one
+                                        include bird, cross, flower, monogram, monogram with a
+                                        combination with figures (e.g., monogram <q>BA</q> and
+                                        cross), ramrod, different star shapes, star and monogram,
+                                        trefoil, etc. Frequently used motifs below the basic one
+                                        include grapes, monogram, etc.</item>
+                                    <item>By <q>supplemental</q> is meant supplemental
+                                        characteristics of the basic motif, e.g., in circle, in
+                                        oval, in shield, etc.</item>
+                                </list></p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="msContents" module="msdescription" mode="change">
@@ -984,7 +1034,12 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>In addition of classification Repertorium provides an attribute <att>type</att> with the three possible values - original, compilation and translation. Furthermore, Repertorium adds a special element <gi>sampleText</gi> and includes <gi>div</gi>. In the contents of <gi>msCOntents</gi> only <gi>msItemStruct</gi> is allowed, not the unstructured <gi>msItem</gi> element. </p>
+                            <p>In addition of classification Repertorium provides an attribute
+                                    <att>type</att> with the three possible values - original,
+                                compilation and translation. Furthermore, Repertorium adds a special
+                                element <gi>sampleText</gi> and includes <gi>div</gi>. In the
+                                contents of <gi>msCOntents</gi> only <gi>msItemStruct</gi> is
+                                allowed, not the unstructured <gi>msItem</gi> element. </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msContents>
                                     <filiation type="protograph">Bulgarian</filiation>
@@ -994,13 +1049,13 @@
                                         <title xml:lang="bg">Видение на цар Амфилохий</title>
                                         <filiation type="protograph">Bulgarian</filiation>
                                         <filiation type="antigraph">Middle Bulgarian</filiation>
-                                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                                        <sampleText
+                                            xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                            xml:lang="cu">
                                             <head>Видѣнїе Амфилѡга царѧ Аравїе</head>
                                             <incipit>Гл҃еть Баронїи хронографъ римскїи</incipit>
                                         </sampleText>
-                                    </msItemStruct>
-                                    ...
-                                </msContents>
+                                    </msItemStruct> ... </msContents>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -1228,19 +1283,7 @@
 
                     <elementSpec ident="orthNote" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-                        <desc>The <gi>orthNote</gi> element specifies a detail of the orthographic
-                            practice of a scribe. The <att>type</att> and <att>subtype</att>
-                            attributes support retrieval of manuscripts according to the most
-                            important characteristics of scribal practice. The four permitted
-                                <att>type</att> values are: <list>
-                                <item><val>jer</val>: jer letters</item>
-                                <item><val>jus</val>: nasal vowel letters</item>
-                                <item><val>jotVowel</val>: jotation</item>
-                                <item>and <val>otherLetters</val>: anything other than jers, nasal
-                                    vowels, and jotation.</item>
-                            </list> Jer and nasal vowel specifications are formalized through the
-                                <att>subtype</att> attribute, about shich see the examples
-                            below.</desc>
+                        <desc>Specifies a detail of the orthographic practice of a scribe.</desc>
                         <classes mode="replace">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -1312,15 +1355,26 @@
                                     type="otherLetters"><c xml:lang="cu">ы</c>; <c xml:lang="cu"
                                         >ѥ</c> and <c xml:lang="cu">ѩ</c></orthNote></egXML>
                         </exemplum>
+                        <remarks>
+                            <p>The <att>type</att> and <att>subtype</att> attributes support
+                                retrieval of manuscripts according to the most important
+                                characteristics of scribal practice. The four permitted
+                                    <att>type</att> values are: <list>
+                                    <item><val>jer</val>: jer letters</item>
+                                    <item><val>jus</val>: nasal vowel letters</item>
+                                    <item><val>jotVowel</val>: jotation</item>
+                                    <item>and <val>otherLetters</val>: anything other than jers,
+                                        nasal vowels, and jotation.</item>
+                                </list> Jer and nasal vowel specifications are formalized through
+                                the <att>subtype</att> attribute, about shich see the examples
+                                above.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="orthography" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-                        <desc>The <gi>orthography</gi> element, which is a child of
-                                <gi>scribeLang</gi>, contains a formal, structured description of
-                            the orthography of a scribe. The individual orthographic features are
-                            specified in <gi>orthoNote</gi> children of <gi>orthography</gi> (see
-                            the separate documentation of <gi>orthNote</gi>).</desc>
+                        <desc>Contains a formal, structured description of the orthography of a
+                            scribe.</desc>
                         <classes mode="replace">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -1350,16 +1404,17 @@
                                             xml:lang="cu">ы</c>; <c xml:lang="cu">ѥ</c> and <c
                                             xml:lang="cu">ѩ</c></orthNote></orthography></egXML>
                         </exemplum>
+                        <remarks>
+                            <p>The individual orthographic features are specified in
+                                    <gi>orthoNote</gi> children of <gi>orthography</gi> (see the
+                                separate documentation of <gi>orthNote</gi>).</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="pagination" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-                        <desc>The Repertorium adds a <gi>pagination</gi> element so that pagination
-                            and foliation (represented by the standard TEI <gi>foliation</gi>
-                            element) can be described separately. The <gi>pagination</gi> element,
-                            like the <gi>foliation</gi> element, may include information about when
-                            the pagination was made, whether it is original, and how the folios are
-                            marked or numbered.</desc>
+                        <desc>Contains information about the pagination of the codex, separately
+                            from information about the foliation.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.scoping"/>
@@ -1373,6 +1428,14 @@
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"><foliation>original,
                                     from <date>1805</date></foliation></egXML>
                         </exemplum>
+                        <remarks>
+                            <p>The Repertorium adds a <gi>pagination</gi> element so that pagination
+                                and foliation (represented by the standard TEI <gi>foliation</gi>
+                                element) can be described separately. The <gi>pagination</gi>
+                                element, like the <gi>foliation</gi> element, may include
+                                information about when the pagination was made, whether it is
+                                original, and how the folios are marked or numbered.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="physDesc" mode="change" module="msdescription">
@@ -1407,9 +1470,7 @@
 
                     <elementSpec ident="pricking" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-                        <desc>Descriptions of pricking are rare in the literature, although, as
-                            explained by Jones (1946a, 1946b), they could bear information on
-                            scriptorial techniques.</desc>
+                        <desc>Contains a description of pricking patterns in the manuscript.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -1437,15 +1498,16 @@
                                     marks at 9mm intervals remain on the outer margin. There is no
                                     pricking on the inner margins.</pricking></egXML>
                         </exemplum>
+                        <remarks>
+                            <p>Descriptions of pricking are rare in the literature, although, as
+                                explained by Jones (1946a, 1946b), they could bear information on
+                                scriptorial techniques.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="quire" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-                        <desc>The element <gi>quire</gi> brings together all possible features for
-                            the characterization of a quire or set of quires, including number,
-                            composition, how and where quires are marked, and with the assistance of
-                            what tool, etc. The child element <gi>formula</gi> provides information
-                            about how the quire is composed, of how many folia, etc.</desc>
+                        <desc>Conains information that describes a quire or set of quires.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -1528,26 +1590,17 @@
                                 </collation>
                             </egXML>
                         </exemplum>
+                        <remarks>
+                            <p>Relevant information includes number, composition, how and where
+                                quires are marked, and with the assistance of what tool, etc. The
+                                child element <gi>formula</gi> provides information about how the
+                                quire is composed, of how many folia, etc.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="ruling" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-                        <desc>Two kinds of information can be entered in the <gi>ruling</gi>
-                            element. The first is related to the ruling type defined by researchers
-                            like Leroy (1976) or Gilissen (1977), who attempted to propose
-                            well-defined typologies of ruling types. In the other, information is
-                            related to the place of ruling in the quire, or the so called
-                                <q>scheme</q>. The former be expressed as a formula of ruled lines
-                            for writing, and the latter could be visualized as simple graphic
-                            showing the places in the quire where the ruling is accomplished, e.g.:
-                                <q>&gt;&gt; | &gt; | |&lt; |&lt;&lt; = &gt;&gt;| &gt;| |&lt; |
-                                &lt;&lt;</q>. This scheme means that in this quire the ruling is
-                            made for each of the two folia: once for the outer double leaf and once
-                            for the inner one (double sign <q>&gt;&gt;</q> or <q>&lt;&lt;</q>). The
-                            symbols <q>&gt;</q> or <q>&lt;</q> mean that on the leaf there is just a
-                            trace of the ruling made on the previous leaf. The attribute
-                                <att>type</att> can be used to provide information about the
-                            classification scheme (e.g., Gilissen or Leroy) employed.</desc>
+                        <desc>Contains information about ruling lines in the manuscript.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -1560,20 +1613,32 @@
                                     <formula>1+1 1/1</formula>
                                 </ruling></egXML>
                         </exemplum>
+                        <remarks>
+                            <p>Two kinds of information can be entered in the <gi>ruling</gi>
+                                element. The first is related to the ruling type defined by
+                                researchers like Leroy (1976) or Gilissen (1977), who attempted to
+                                propose well-defined typologies of ruling types. In the other,
+                                information is related to the place of ruling in the quire, or the
+                                so called <q>scheme</q>. The former be expressed as a formula of
+                                ruled lines for writing, and the latter could be visualized as
+                                simple graphic showing the places in the quire where the ruling is
+                                accomplished, e.g.: <q>&gt;&gt; | &gt; | |&lt; |&lt;&lt; = &gt;&gt;|
+                                    &gt;| |&lt; | &lt;&lt;</q>. This scheme means that in this quire
+                                the ruling is made for each of the two folia: once for the outer
+                                double leaf and once for the inner one (double sign <q>&gt;&gt;</q>
+                                or <q>&lt;&lt;</q>). The symbols <q>&gt;</q> or <q>&lt;</q> mean
+                                that on the leaf there is just a trace of the ruling made on the
+                                previous leaf. The attribute <att>type</att> can be used to provide
+                                information about the classification scheme (e.g., Gilissen or
+                                Leroy) employed.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="sampleText" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>The Repertorium uses a special <gi>sampleText</gi> element as a
-                            wrapper around several elements used for the identification of text
-                            items in a manuscript. Its function is to make a distinction between the
-                            language of the description (metadata used to describe the manuscript)
-                            and citations from the original text. The <gi>sampleText</gi> element
-                            uses the global TEI attribute <att>xml:lang</att>, which represents the
-                            language of the content, and for medieval Slavonic codices its value is
-                            almost always <val>cu</val>. The optional attribute <att>script</att>
-                            commonly contains the value <val>cyrs</val> (for old Cyrillic) or
-                                <val>glag</val> (for Glagolitic).</desc>
+                        <desc>Wraps samples from the manuscript, both those with specific identities
+                            (such as <gi>head</gi>, <gi>incipit</gi>, etc.) and general ones (tagged
+                            as <gi>p</gi>).</desc>
                         <classes mode="change">
                             <memberOf key="att.divLike"/>
                             <memberOf key="att.declaring"/>
@@ -1623,14 +1688,25 @@
                                         аминь.</explicit>
                                 </sampleText></egXML>
                         </exemplum>
+                        <remarks>
+                            <p>The Repertorium uses a special <gi>sampleText</gi> element as a
+                                wrapper around several elements used for the identification of text
+                                items in a manuscript. Its function is to make a distinction between
+                                the language of the description (metadata used to describe the
+                                manuscript) and citations from the original text. The
+                                    <gi>sampleText</gi> element uses the global TEI attribute
+                                    <att>xml:lang</att>, which represents the language of the
+                                content, and for medieval Slavonic codices its value is almost
+                                always <val>cu</val>. The optional attribute <att>script</att>
+                                commonly contains the value <val>cyrs</val> (for old Cyrillic) or
+                                    <val>glag</val> (for Glagolitic).</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="scribe" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Repertorium model: description of the paleography, orthography, and
-                            language of a scribe. <gi>scribe</gi> contains a modification of the TEI
-                                <gi>scriptDesc</gi> element and the Repertorium-specific
-                                <gi>scribeLang</gi> element.</desc>
+                        <desc>Contains a description of the paleography, orthography, and language
+                            of a scribe.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                         </classes>
@@ -1684,13 +1760,18 @@
                                                 >ѩ</c></orthNote></orthography> …
                                     </scribeLang></scribe></egXML>
                         </exemplum>
+                        <remarks>
+                            <p>The <gi>scribe</gi> element combines a modification of the TEI
+                                    <gi>scriptDesc</gi> element with the Repertorium-specific
+                                    <gi>scribeLang</gi> element.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="scribeDesc" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>The <gi>scribeDesc</gi> element serves as a wrapper for
-                                <gi>scribe</gi> elements, so that the characteristics of each scribe
-                            can be described separately, while also being bundled together.</desc>
+                        <desc>Serves as a wrapper for <gi>scribe</gi> elements, so that the
+                            characteristics of each scribe can be described separately, while also
+                            being bundled together.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                         </classes>
@@ -1761,10 +1842,8 @@
 
                     <elementSpec ident="scribeLang" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Repertorium model: Language of the scribe. <gi>scribeLang</gi>
-                            contains a formal description of the language of a scribe, expressed in
-                            the <gi>orthography</gi>, <gi>grammar</gi>, and <gi>lexis</gi> child
-                            elements.</desc>
+                        <desc>Contains a description of the orthography and language of the
+                            scribe.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -1810,6 +1889,11 @@
                                                 xml:lang="cu">ѥ</c> and <c xml:lang="cu"
                                             >ѩ</c></orthNote></orthography> … </scribeLang></egXML>
                         </exemplum>
+                        <remarks>
+                            <p>The <gi>scribeLang</gi> element contains a formal description of the
+                                language of a scribe, expressed in the <gi>orthography</gi>,
+                                    <gi>grammar</gi>, and <gi>lexis</gi> child elements.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="scriptDesc" mode="change">
