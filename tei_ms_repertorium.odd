@@ -336,13 +336,14 @@
                             <p>TEI example:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <binding contemporary="true">
-                                    <p>Contemporary blind stamped leather over wooden boards with evidence of a fore edge clasp
-                                        closing to the back cover.</p>
+                                    <p>Contemporary blind stamped leather over wooden boards with
+                                        evidence of a fore edge clasp closing to the back cover.</p>
                                 </binding>
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Repertorium adds an element bindingNote as a child element of binding: </p>
+                            <p>Repertorium adds an element bindingNote as a child element of
+                                binding: </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <binding>
                                     <p>New, leather and cardboard</p>
@@ -905,11 +906,16 @@
                         <desc>The <gi>orthNote</gi> element specifies a detail of the orthographic
                             practice of a scribe. The <att>type</att> and <att>subtype</att>
                             attributes support retrieval of manuscripts according to the most
-                            important characteristics of scribal practice, such as the use of jers
-                                (<att>type</att> value of <val>jer</val>), nasal vowels
-                                (<att>type</att> value of <val>jus</val>), and jotation
-                                (<att>type</att> value of <val>jotVowel</val>). and nasal vowel
-                            letters.</desc>
+                            important characteristics of scribal practice. The four permitted
+                                <att>type</att> values are: <list>
+                                <item><val>jer</val>: jer letters</item>
+                                <item><val>jus</val>: nasal vowel letters</item>
+                                <item><val>jotVowel</val>: jotation</item>
+                                <item>and <val>otherLetters</val>: anything other than jers, nasal
+                                    vowels, and jotation.</item>
+                            </list> Jer and nasal vowel specifications are formalized through the
+                                <att>subtype</att> attribute, about shich see the examples
+                            below.</desc>
                         <classes mode="replace">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -920,9 +926,11 @@
                             <rng:ref name="macro.specialPara"/>
                         </content>
                         <exemplum>
-                            <p>The <att>type</att> and <att>subtype</att> attributes can be used to
-                                retrieve all orthographies that use only the front jer. There are
-                                five possible <att>subtype</att> values for jers:<list>
+                            <p>In the example below, the <att>type</att> and <att>subtype</att>
+                                attributes are used to indicate that the orthography uses only the
+                                front jer. To describe jer orthography the value of the
+                                    <att>type</att> attribute must be <val>jer</val>, in which case
+                                there are five permitted <att>subtype</att> values:<list>
                                     <item><val>front</val>: only front jer is used</item>
                                     <item><val>back</val>: only back jer is used</item>
                                     <item><val>etymReg</val>: etymologically regular use of
@@ -937,10 +945,12 @@
                                 </orthNote></egXML>
                         </exemplum>
                         <exemplum>
-                            <p>The <att>type</att> and <att>subtype</att> attributes can be used to
-                                retrieve all orthographies that use both front and back nasals, but
-                                do so inconsistently.There are five possible <att>subtype</att>
-                                values for nasal vowels:<list>
+                            <p>In the example below, the <att>type</att> and <att>subtype</att>
+                                attributes are used to indicate that the orthography uses both front
+                                and back nasals, but does so inconsistently. To describe nasal vowel
+                                orthography the value of the <att>type</att> attribute must be
+                                    <val>jus</val>, in which case there are five permitted
+                                    <att>subtype</att> values:<list>
                                     <item><val>etymReg</val>: etymologically regular use of juses
                                         (e.g., as in Old Bulgarian)</item>
                                     <item><val>nonEtymReg</val>: non etymological, but otherwise
@@ -960,16 +970,19 @@
                                         xml:lang="cu">a</c>;</orthNote></egXML>
                         </exemplum>
                         <exemplum>
-                            <p>The <att>type</att> attribute indicates that this note
-                            pertains to jotation. There </p>
+                            <p>In the example below, the <att>type</att> attribute with the value of
+                                    <val>jotVowel</val>indicates that this note pertains to
+                                jotation. In this case there is no <att>subtype</att> attribute, and
+                                the behavior is described only in prose.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"><orthNote
-                                type="jotVowel">The letters <c xml:id="cu">є</c> and <c
-                                    xml:id="cu">ѥ</c> are both used in intervocalic
-                                position.</orthNote></egXML>
+                                    type="jotVowel">The letters <c xml:id="cu">є</c> and <c
+                                        xml:id="cu">ѥ</c> are both used in intervocalic
+                                    position.</orthNote></egXML>
                         </exemplum>
                         <exemplum>
-                            <p>The <att>type</att> attribute indicates that this note pertains to
-                                letters other than jers, nasals, and jotation.</p>
+                            <p>The <att>type</att> attribute value of <val>otherLetters</val>
+                                indicates that this note pertains to letters other than jers,
+                                nasals, and jotation.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"><orthNote
                                     type="otherLetters"><c xml:lang="cu">ы</c>; <c xml:lang="cu"
                                         >ѥ</c> and <c xml:lang="cu">ѩ</c></orthNote></egXML>
