@@ -1433,6 +1433,19 @@
                                 </datatype>
                             </attDef>
                         </attList>
+                        <exemplum>
+                            <p>TEI example:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <musicNotation>Neumes in <term>campo aperto</term> of the St. Gall type.
+                                </musicNotation>
+                            </egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p></p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                An example to be included !!!
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="orthNote" module="msdescription"
@@ -1620,6 +1633,81 @@
                                 </rng:group>
                             </rng:group>
                         </content>
+                        <exemplum>
+                            <p>TEI example:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <physDesc>
+                                    <objectDesc form="codex">
+                                        <supportDesc material="perg">
+                                            <support>Parchment.</support>
+                                            <extent>i + 55 leaves
+                                                <dimensions scope="all" type="leaf"
+                                                    unit="inch">
+                                                    <height>7¼</height>
+                                                    <width>5⅜</width>
+                                                </dimensions>
+                                            </extent>
+                                        </supportDesc>
+                                        <layoutDesc>
+                                            <layout columns="2">In double columns.</layout>
+                                        </layoutDesc>
+                                    </objectDesc>
+                                    <handDesc>
+                                        <p>Written in more than one hand.</p>
+                                    </handDesc>
+                                    <decoDesc>
+                                        <p>With a few coloured capitals.</p>
+                                    </decoDesc>
+                                </physDesc>
+                            </egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>Repertorium totally removes elements <gi>handDesc</gi>, <gi>typeDesc</gi>. The element <gi>scriptDesc</gi> is moved to the contents of element <gi>scribeDesc</gi>. The element <gi>accMat</gi> becomes part of the <gi>history</gi>. One more is included from the Repertorium namespace: <gi>ink</gi>. An example from DRA787a10Stock.xml: </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <physDesc>
+                                    <objectDesc form="fragment">
+                                        <supportDesc material="parchment">
+                                            <support>
+                                                <material>Parchment of very fine quality. Ff.1r-2v and 2r-v (2 bifolia) both represents F-H, H-F sides sequences.</material>
+                                            </support>
+                                            <extent>
+                                                <measure unit="folia">4</measure>
+                                                <dimensions unit="mm" type="folia">
+                                                    <height>ca218</height>
+                                                    <width>ca310</width>
+                                                </dimensions>
+                                            </extent>
+                                            <foliation>Ff. 1v-8v are signed in pencil as follows: 10:A, 10: B, 10: C, 10: D in the upper right-hand corner.  </foliation>
+                                            <condition>It is a 4-leaf fragment composing to bifolia, as ff. 1 and 2 are detached. The parcment has retained much of its original light colour and the original size. Ff. 1r, 2v, 3r and 3v have served as document covers and are darker. There are number of stains. </condition>
+                                        </supportDesc>
+                                        <layoutDesc>
+                                            <layout columns="1" writtenLines="18" ruledLines="18"/>
+                                        </layoutDesc>
+                                    </objectDesc>
+                                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Brownish for the main text, red and gold for the titles and the initials.</ink>
+                                    <decoDesc>
+                                        <p>Intials <foreign xml:lang="cu">В</foreign> on f. 1r - 55 mm (5 lines) of  heigh, almost outside the text column, <foreign xml:lang="cu">В</foreign> on f. 2r - 45mm of height, being outside the text column and discending in the lower margin, <foreign xml:lang="cu">Р</foreign> on f. 5v - 55 mm (5 lines) of  heigh, outside the text column, and <foreign xml:lang="cu">Р</foreign> on ff. 8v - 55 mm (5 lines) of  heigh, outside the text column, too. These are red covered with gold. The same technique is applied to the rubrics (titles) introducing the coresponding readings.</p>
+                                    </decoDesc>
+                                    <bindingDesc>
+                                        <binding>
+                                            <p>Kept together with other parchment fragments (A787a)</p>
+                                        </binding>
+                                    </bindingDesc>
+                                    <additions type="inscriptions">
+                                        <list>
+                                            <item>
+                                                <locus>f. 1r</locus>
+                                                <quote xml:lang="se">Lille Savolax p anno 1618 <lb/>Sigfrids Hindersons Opbördzlängds</quote>
+                                            </item>
+                                            <item>
+                                                <locus>f. 3r</locus>
+                                                <quote xml:lang="se">Sigfred Henricksons Reckenskap <lb/>på Viborgz Lähn af Lille Sauolax för årh <lb/>1617, 618 och 619</quote>
+                                            </item>
+                                        </list>
+                                    </additions>
+                                </physDesc>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="pricking" module="msdescription"
