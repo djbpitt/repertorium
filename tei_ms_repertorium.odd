@@ -1276,7 +1276,16 @@
 
                     <elementSpec ident="sampleText" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Repertorium model: Text sample or edition of the original full text. </desc>
+                        <desc>The Repertorium uses a special <gi>sampleText</gi> element as a
+                            wrapper around several elements used for the identification of text
+                            items in a manuscript. Its function is to make a distinction between the
+                            language of the description (metadata used to describe the manuscript)
+                            and citations from the original text. The <gi>sampleText</gi> element
+                            uses the global TEI attribute <att>xml:lang</att>, which represents the
+                            language of the content, and for medieval Slavonic codices its value is
+                            almost always <val>cu</val>. The optional attribute <att>script</att>
+                            commonly contains the value <val>cyrs</val> (for old Cyrillic) or
+                                <val>glag</val> (for Glagolitic).</desc>
                         <classes mode="change">
                             <memberOf key="att.divLike"/>
                             <memberOf key="att.declaring"/>
@@ -1311,6 +1320,21 @@
                                 </datatype>
                             </attDef>
                         </attList>
+                        <exemplum>
+                            <p>The following example is from the electronic description of
+                                DA1039NBKM.xml.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><sampleText
+                                    xml:lang="cu" script="cyrs">
+                                    <head>Mсц҃а тогожде · е҃· дн҃ь · словѡ · ѡ рождьствѣ іѡана
+                                        прт҃че и ѡ оумрьтїоу ѡц҃а его захарїе ѡч҃е бл҃сви · </head>
+                                    <incipit>Вь лѣто четврьтодесетноѥ црс҃твоующоу иродоу вьзысканиѥ
+                                        сьтвори изьбити млд҃нце, иже вь іерс҃лимѣ</incipit>
+                                    <explicit>.црс҃твова же архела ѳ҃ лѣт҃ испльнь. вь нас же
+                                        црс҃твоующоу бо҃у нашемоу ісо҃у хс҃оу· емоу же слав(а) сь
+                                        ѡц҃емь и сь ст҃мь дх҃омь нн҃ꙗ и присно и в вѣкы вѣкѡм(ь)
+                                        аминь.</explicit>
+                                </sampleText></egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="scribe" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
