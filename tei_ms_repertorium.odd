@@ -448,7 +448,7 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>TEI is using <code>macro.specialPara</code> which means that all the information is enclosed into <code>p</code> element. Repertorium provides a choice between possibility to use one or several paragraphs (<code>p</code> elements) or to make a structured description with summary and description of each quire or to describe various parts of the collation in general, e.g. signatures, catchwords, dispositions of flesh- and hair-side of the parchment, ruling and pricking schemes and types. The following is an example from DD437NBKM.xml:</p>
+                            <p>TEI is using <code>macro.specialPara</code> which means that all the information is enclosed into <gi>p</gi> element. Repertorium provides a choice between possibility to use one or several paragraphs (<gi>p</gi> elements) or to make a structured description with summary and description of each quire or to describe various parts of the collation in general, e.g. signatures, catchwords, dispositions of flesh- and hair-side of the parchment, ruling and pricking schemes and types. The following is an example from DD437NBKM.xml:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <collation>
                                     <summary>12 quires</summary>
@@ -502,6 +502,51 @@
                                 <rng:ref name="model.pLike"/>
                             </rng:oneOrMore>
                         </content>
+                        <exemplum>
+                            <p>TEI example:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <colophon>Explicit venenum viciorum domini illius, qui comparavit Anno
+                                    domini Millessimo Trecentesimo nonagesimo primo, Sabbato in festo
+                                    sancte Marthe virginis gloriose. Laus tibi criste quia finitur
+                                    libellus iste.
+                                </colophon>
+                            </egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>In TEI <gi>colophon</gi> is a phrase level element. For longer colophons with headings and more than one paragraphs we need reformulation of the XML content. This is example is from AB674NBKM.xml: </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <colophon>
+                                    <head xml:lang="grc">Ο ΧΣ ΕΣΤΙ ΑΡΧΗ ΚΑΙ ΤΕΛΟΣ</head>
+                                    <p xml:lang="cu">Источникоу оубѡ на мѣстѣ сѫщꙋ и животныѫ воды
+                                        истачаѫщоу тѣмже и х҃с къ самарѣныни водѫ проси· женѫ даждъ ми водѫ
+                                        пити· и азъ дамъ тебѣ вѡдь пити ꙗко да въ вѣкы не възъжѫждаѥши·
+                                        тѣмже оубѡ и сиа книга источникоу есть подобна· еѫже аще кто съ
+                                        оусрѣдїемъ разгнѫвъ прочьтетъ, напоитъ дш҃ѫ своѫ живоносныѫ и вѣчныѫ
+                                        воды, и въ вѣкы не възждѫждет сѧ: –</p>
+                                    <p xml:lang="cu">Нѫ вы оубо прѣблазни г҃и мои, трїе въселенъстїи ст҃ле·
+                                        и оучителе григорїе, и василїе, и іѡанъ златооустъ прїимѣте вашего
+                                        раба ходага мита логоѳетѣ малое приношенїе, вѣщанїа изрѧднаа
+                                        бг҃ословаго грїгориїа· прѣ<supplied>мѫ</supplied>драаго оучителѣ и
+                                        наставника· троици сѫпоклонника <supplied>с</supplied>ѫпостатѡмъ еѧ
+                                        раздрꙋшника, їересемъ прогонителѣ: –</p>
+                                    <p xml:lang="cu">
+                                        <supplied>И</supplied>списавыи сиѫ книгѫ прьвославъ нарицаах сѧ,
+                                        самѣм, <supplied>по</supplied>велѣнїемъ всепочътенаго въ велмѫжехъ
+                                        бл҃гарскаго <supplied>цр҃с</supplied>тва логоѳетѣ мита· тогда же
+                                        прѣимѣѫщꙋ, хорѫгви <supplied>бл҃</supplied>гарскаго стола,
+                                        прѣвысокыи и самодръжецъ всѣмъ <supplied>бл҃г</supplied>арѡм и
+                                        гръкѡм цр҃ъ і҃ѡ, алеѯандр꙽· и прї цр҃ци его
+                                        новопросвѣ<supplied>щ</supplied>еннои и бл҃говѣрнои ѳеѡдорѣ. и
+                                        при сн҃ѣ их шишман младѡм цр҃и <gap quantity="24" unit="character"/>· Молѧ же всѣкого искꙋснаго помощи и напаствнном ѿ сѫпостата· не
+                                        злословити недостаткꙋ ѡскѫднꙗаго ꙋма поминаѫще <pb n="393v"/>
+                                        <gap quantity="12" unit="character"/>
+                                        <unclear>ꙗко</unclear> имѣѫ и съвръшеное, тъчиѫ е<gap quantity="1" unit="character"/> въ памѧтъ томꙋ самомꙋ ве<supplied>ликомꙋ
+                                            логоѳетꙋ м</supplied>итꙋ вѣчнѫѫ, и бг҃одарованныи б҃е <gap/>
+                                        <unclear>идѡм</unclear>, зде и въ грѧдѫщомъ вѣцѣ, и нынѣ и
+                                        <supplied>присно </supplied> · въ вѣкы :· вѣкѡмъ :· амин꙽·</p>
+                                </colophon>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="countermark" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
@@ -1373,14 +1418,17 @@
                                 folio (7) is missing. The last quire, number XXIII, consisted
                                 originally of 6 ff., but only 2 of them (5 and 6) are preserved
                                 intact.</p>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><collation>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <collation>
                                     <quire n="I"><extent>2</extent><formula>8 (-1-2-3-4-5-6)
                                         </formula></quire>
                                     <quire n="II-XXI"><extent>8</extent></quire>
                                     <quire n="XXII"><extent>7</extent><formula>7 (-7)</formula>
                                     </quire>
                                     <quire n="XXIII"><extent>2</extent><formula>6 (-1-2-3-4)
-                                        </formula></quire></collation></egXML>
+                                        </formula></quire>
+                                </collation>
+                            </egXML>
                         </exemplum>
                     </elementSpec>
 
