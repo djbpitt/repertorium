@@ -10,8 +10,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2017-10-20T07:23:46Z. .
-
+# Schema generated from ODD source 2017-10-20T07:58:43Z. .
 # TEI Edition: Version 3.2.0. Last updated on
 #	10th July 2017, revision 0fcf651
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -7600,7 +7599,7 @@ motif =
   }
 orthNote =
   
-  ##
+  ## The orthNote element specifies a detail of the orthographic practice of a scribe. The type and subtype attributes support retrieval of manuscripts according to the most important characteristics of scribal practice, such as the use of jers (type value of jer), nasal vowels (type value of jus), and jotation (type value of jotVowel). and nasal vowel letters.
   element re:orthNote {
     macro.specialPara,
     att.global.attributes,
@@ -7611,7 +7610,7 @@ orthNote =
   }
 orthography =
   
-  ##
+  ## The orthography element, which is a child of scribeLang, contains a formal, structured description of the orthography of a scribe. The individual orthographic features are specified in orthoNote children of orthography (see the separate documentation of orthNote).
   element re:orthography {
     (model.pLike+ | (summary?, orthNote+)),
     att.global.attributes,
@@ -7689,7 +7688,7 @@ sampleText =
   }
 scribe =
   
-  ## Repertorium model: description of the paleography, orthography, and language of a scribe. scribeLang contains a modification of the TEI scriptDesc element and the Repertorium-specific scribeLang element.
+  ## Repertorium model: description of the paleography, orthography, and language of a scribe. scribe contains a modification of the TEI scriptDesc element and the Repertorium-specific scribeLang element.
   element re:scribe {
     (locus | locusGrp)?,
     model.nameLike.agent?,
@@ -7711,7 +7710,7 @@ scribeDesc =
   }
 scribeLang =
   
-  ## Repertorium model: Language of the scribe. 
+  ## Repertorium model: Language of the scribe. scribeLang contains a formal description of the language of a scribe, expressed in the orthography, grammar, and lexis child elements.
   element re:scribeLang {
     (model.pLike+ | (summary?, orthography?, \grammar?, lexis?)),
     att.global.attributes,
