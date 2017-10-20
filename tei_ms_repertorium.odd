@@ -451,7 +451,11 @@
 
                     <elementSpec ident="ink" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Description of ink(s)</desc>
+                        <desc>Description of ink(s). Information about the ink is presented usually
+                            as a simple phrase like <q>brown dark ink for the basic text and red ink
+                                for the headings and small initials</q>. In principle these
+                            descriptions could be further developed to supply information about ink
+                            composition, brightness, loss of color, etc.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.measurement"/>
@@ -459,6 +463,10 @@
                         <content>
                             <rng:ref name="macro.phraseSeq"/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><ink>Brown ink for the text and dark red for the initials</ink>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="keywords" mode="change">
