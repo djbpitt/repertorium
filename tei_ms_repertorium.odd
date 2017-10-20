@@ -2173,6 +2173,22 @@
                                 </datatype>
                             </attDef>
                         </attList>
+                        <exemplum>
+                            <p>TEI example: </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <scriptDesc>
+                                    <summary>Contains two distinct styles of scripts </summary>
+                                    <scriptNote xml:id="style-1">.</scriptNote>
+                                    <scriptNote xml:id="style-2">.</scriptNote>
+                                </scriptDesc>
+                            </egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>Repertorium adds optional attribute <att>script</att> the values of which are supposed to come from codes of ISO 15924:2004, cf <ref target="https://en.wikipedia.org/wiki/ISO_15924">https://en.wikipedia.org/wiki/ISO_15924</ref>. In the content of this element <gi>musicNotation</gi> is moved here from <gi>physDesc</gi> and a new <gi>crypto</gi> Repertorium is added. An example from the file AA771NBKM.xml </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <scriptDesc script="cyrs" type="semiuncial"/>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="scriptNote" mode="change">
