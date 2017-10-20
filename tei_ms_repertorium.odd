@@ -890,6 +890,14 @@
 
                     <elementSpec ident="orthNote" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <desc>The <gi>orthNote</gi> element specifies a detail of the orthographic
+                            practice of a scribe. The <att>type</att> and <att>subtype</att>
+                            attributes support retrieval of manuscripts according to the most
+                            important characteristics of scribal practice, such as the use of jers
+                                (<att>type</att> value of <val>jer</val>), nasal vowels
+                                (<att>type</att> value of <val>jus</val>), and jotation
+                                (<att>type</att> value of <val>jotVowel</val>). and nasal vowel
+                            letters.</desc>
                         <classes mode="replace">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -899,10 +907,70 @@
                         <content>
                             <rng:ref name="macro.specialPara"/>
                         </content>
+                        <exemplum>
+                            <p>The <att>type</att> and <att>subtype</att> attributes can be used to
+                                retrieve all orthographies that use only the front jer. There are
+                                five possible <att>subtype</att> values for jers:<list>
+                                    <item><val>front</val>: only front jer is used</item>
+                                    <item><val>back</val>: only back jer is used</item>
+                                    <item><val>etymReg</val>: etymologically regular use of
+                                        jers</item>
+                                    <item><val>nonEtymReg</val>: not etymological but regular use of
+                                        jers</item>
+                                    <item><val>irregular</val>: the use of jers cannot be formalized
+                                        in general rules</item>
+                                </list></p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><orthNote type="jer"
+                                    subtype="front">only <c xml:lang="cu">ь</c>
+                                </orthNote></egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>The <att>type</att> and <att>subtype</att> attributes can be used to
+                                retrieve all orthographies that use both front and back nasals, but
+                                do so inconsistently.There are five possible <att>subtype</att>
+                                values for nasal vowels:<list>
+                                    <item><val>etymReg</val>: etymologically regular use of juses
+                                        (e.g., as in Old Bulgarian)</item>
+                                    <item><val>nonEtymReg</val>: non etymological, but otherwise
+                                        regular use of the juses (Middle Bulgarian manuscripts, and
+                                        in part East Slavic examples)</item>
+                                    <item><val>nonConsis</val>: nonconsistent use of the
+                                        juses</item>
+                                    <item><val>nonJus</val>: orthography without juses</item>
+                                    <item><val>jusTrace</val>: orthography without or with very few
+                                        examples of the juses, but with traces, e.g., manuscripts
+                                        written generally with non-jus orthography but with traces
+                                        of the Middle Bulgarian alternation of juses</item>
+                                </list></p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><orthNote type="jus"
+                                    subtype="nonConsis"><c xml:lang="cu">ѫ</c> replaced by <c
+                                        xml:lang="cu">оу</c>; <c xml:lang="cu">ѧ</c> replaced by <c
+                                        xml:lang="cu">a</c>;</orthNote></egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>The <att>type</att> attribute indicates that this note
+                            pertains to jotation. There </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><orthNote
+                                type="jotVowel">The letters <c xml:id="cu">є</c> and <c
+                                    xml:id="cu">ѥ</c> are both used in intervocalic
+                                position.</orthNote></egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>The <att>type</att> attribute indicates that this note pertains to
+                                letters other than jers, nasals, and jotation.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><orthNote
+                                    type="otherLetters"><c xml:lang="cu">ы</c>; <c xml:lang="cu"
+                                        >ѥ</c> and <c xml:lang="cu">ѩ</c></orthNote></egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="orthography" module="msdescription"
                         ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                        <desc>The <gi>orthography</gi> element, which is a child of
+                                <gi>scribeLang</gi>, contains a formal, structured description of
+                            the orthography of a scribe. The individual orthographic features are
+                            specified in <gi>orthoNote</gi> children of <gi>orthography</gi> (see
+                            the separate documentation of <gi>orthNote</gi>).</desc>
                         <classes mode="replace">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -922,6 +990,16 @@
                                 </rng:group>
                             </rng:choice>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><orthography><orthNote
+                                        type="jer" subtype="front">only <c xml:lang="cu">ь</c>
+                                    </orthNote><orthNote type="jus" subtype="nonConsis"><c
+                                            xml:lang="cu">ѫ</c> replaced by <c xml:lang="cu">оу</c>;
+                                            <c xml:lang="cu">ѧ</c> replaced by <c xml:lang="cu"
+                                            >a</c>;</orthNote><orthNote type="otherLetters"><c
+                                            xml:lang="cu">ы</c>; <c xml:lang="cu">ѥ</c> and <c
+                                            xml:lang="cu">ѩ</c></orthNote></orthography></egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="pagination" module="msdescription"
@@ -1101,8 +1179,8 @@
                     <elementSpec ident="scribe" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
                         <desc>Repertorium model: description of the paleography, orthography, and
-                            language of a scribe. <gi>scribeLang</gi> contains a modification of the
-                            TEI <gi>scriptDesc</gi> element and the Repertorium-specific
+                            language of a scribe. <gi>scribe</gi> contains a modification of the TEI
+                                <gi>scriptDesc</gi> element and the Repertorium-specific
                                 <gi>scribeLang</gi> element.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
@@ -1134,7 +1212,12 @@
                             </rng:zeroOrMore>
                         </content>
                         <exemplum>
-                            <p></p>
+                            <p>In the example below, the portions of the manuscript written by
+                                Scribe E are identified in a <gi>locusGrp</gi>, followed by a
+                                general characterization of the paleography
+                                (<gi>palaeoCharact</gi>). See the separate documentation of the
+                                Repertorium <gi>scribeLang</gi>, <gi>orthography</gi>, and
+                                    <gi>orthNote</gi> elements.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"><scribe n="E"
                                             ><locusGrp><locus>Q.п.I.63, 1r-3r</locus>
                                         <locus>Sin. 34, 63v-71v</locus><locus>Sin. 34, 77r-81r
@@ -1180,7 +1263,10 @@
 
                     <elementSpec ident="scribeLang" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Repertorium model: Language of the scribe. </desc>
+                        <desc>Repertorium model: Language of the scribe. <gi>scribeLang</gi>
+                            contains a formal description of the language of a scribe, expressed in
+                            the <gi>orthography</gi>, <gi>grammar</gi>, and <gi>lexis</gi> child
+                            elements.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -1213,6 +1299,19 @@
                                 </datatype>
                             </attDef>
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"
+                                        ><scribeLang><summary>Middle Bulgarian with Russian
+                                        features</summary><orthography><orthNote type="jer"
+                                            subtype="front">only <c xml:lang="cu">ь</c>
+                                        </orthNote><orthNote type="jus" subtype="nonConsis"><c
+                                                xml:lang="cu">ѫ</c> replaced by <c xml:lang="cu"
+                                                >оу</c>; <c xml:lang="cu">ѧ</c> replaced by <c
+                                                xml:lang="cu">a</c>;</orthNote><orthNote
+                                            type="otherLetters"><c xml:lang="cu">ы</c>; <c
+                                                xml:lang="cu">ѥ</c> and <c xml:lang="cu"
+                                            >ѩ</c></orthNote></orthography> … </scribeLang></egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="scriptDesc" mode="change">
