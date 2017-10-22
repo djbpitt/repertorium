@@ -89,15 +89,17 @@
             <div>
                 <head>Repertorium manuscript description model based on TEI</head>
                 <p>This TEI customization describes a schema that includes several of the TEI (P5)
-                    modules and is especially designed to be used for manuscript description. This
-                    customization changes declarations for many of the TEI elements that are
-                    intended for manuscript description. In doing this a special emphasis is put on
-                    the tradition for description of Slavic manuscripts. However, this model could
-                    be used in the description of other European medieval manuscript traditions. The
-                    TEI modules in use are: analysis (optional), certainty (optional), core
-                    (required), figures (optional), header (required), msdescription (optional),
-                    namesdates (optional), tei (required), textstructure (required), transcr
-                    (optional).</p>
+                    modules and is especially designed to be used for manuscript description within
+                    the framework of the Repertorium of Old Bulgarian Literature and Letters (<ptr
+                        target="http://repertorium.obdurodon.org"/>). The modifications were
+                    motivated by the Slavistic codicological tradition, but the model may also be
+                    useful for describing other European medieval manuscripts.</p>
+                <p>The TEI modules in use are: <ident>analysis</ident> (optional),
+                        <ident>certainty</ident> (optional), <ident>core</ident> (required),
+                        <ident>figures</ident> (optional), <ident>header</ident> (required),
+                        <ident>msdescription</ident> (optional), <ident>namesdates</ident>
+                    (optional), <ident>tei</ident> (required), <ident>textstructure</ident>
+                    (required), <ident>transcr</ident> (optional).</p>
                 <p>From the preceding modules we exclude the following TEI elements:
                         <gi>address</gi>, <gi>addrLine</gi>, <gi>alt</gi>, <gi>altGrp</gi>,
                         <gi>appInfo</gi>, <gi>application</gi>, <gi>argument</gi>,
@@ -123,25 +125,25 @@
                         <gi>styleDefDecl</gi>, <gi>surface</gi>, <gi>surfaceGrp</gi>,
                         <gi>tagsDecl</gi>, <gi>tagUsage</gi>, <gi>teiCorpus</gi>, <gi>terrain</gi>,
                         <gi>typeDesc</gi>, <gi>typeNote</gi>, <gi>xenoData</gi>, <gi>zone</gi>.</p>
-                <p>The following TEI elements have been modified: <gi>additions</gi>,
-                        <gi>altIdentifier</gi>, <gi>binding</gi>, <gi>collation</gi>,
-                        <gi>colophon</gi>, <gi>history</gi>, <gi>keywords</gi>, <gi>msContents</gi>,
-                        <gi>msDesc</gi>, <gi>msIdentifier</gi>, <gi>msItemStruct</gi>,
-                        <gi>msPart</gi>, <gi>musicNotation</gi>, <gi>physDesc</gi>,
-                        <gi>scriptDesc</gi>, <gi>scriptNote</gi>, <gi>supportDesc</gi>,
-                        <gi>watermark</gi>.</p>
-                <p>The following new elements are declared in the Repertorium namespace:
-                        <gi>bindingNote</gi>, <gi>countermark</gi>, <gi>crypto</gi>,
-                        <gi>grammar</gi>, <gi>gregoryRule</gi>, <gi>ink</gi>, <gi>lexis</gi>,
-                        <gi>motif</gi>, <gi>orthNote</gi>, <gi>orthography</gi>,
-                    <gi>pagination</gi>, <gi>pricking</gi>, <gi>quire</gi>, <gi>ruling</gi>,
+                <p>The following elements in the TEI namespace have been modified:
+                        <gi>additions</gi>, <gi>altIdentifier</gi>, <gi>binding</gi>,
+                        <gi>collation</gi>, <gi>colophon</gi>, <gi>history</gi>, <gi>keywords</gi>,
+                        <gi>msContents</gi>, <gi>msDesc</gi>, <gi>msIdentifier</gi>,
+                        <gi>msItemStruct</gi>, <gi>msPart</gi>, <gi>musicNotation</gi>,
+                        <gi>physDesc</gi>, <gi>scriptDesc</gi>, <gi>scriptNote</gi>,
+                        <gi>supportDesc</gi>, <gi>watermark</gi>.</p>
+                <p>The following new elements are declared in the Repertorium namespace
+                        (<val>http://www.ilit.bas.bg/repertorium/ns/3</val>, for which we use the
+                    namespace prefix <code>re:</code>): <gi>bindingNote</gi>, <gi>countermark</gi>,
+                        <gi>crypto</gi>, <gi>grammar</gi>, <gi>gregoryRule</gi>, <gi>ink</gi>,
+                        <gi>lexis</gi>, <gi>motif</gi>, <gi>orthNote</gi>, <gi>orthography</gi>,
+                        <gi>pagination</gi>, <gi>pricking</gi>, <gi>quire</gi>, <gi>ruling</gi>,
                         <gi>sampleText</gi>, <gi>scribe</gi>, <gi>scribeDesc</gi>,
                         <gi>scribeLang</gi>.</p>
             </div>
 
             <div>
                 <head>Schema, modules, class and element specifications</head>
-
                 <schemaSpec ident="tei_ms_repertorium" start="TEI msDesc" source="tei:3.2.0">
                     <!-- required modules -->
                     <moduleRef key="header"
