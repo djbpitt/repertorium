@@ -285,7 +285,7 @@
 </additions></egXML>
                         </exemplum>
                         <exemplum>
-                            <p>The Repertorium adds attributes for type and dating, as in the
+                            <p>The Repertorium adds attributes for typing and dating, as in the
                                 following example from AA308NBKM.xml:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><additions type="inscriptions">
     <locus>f. 131r</locus>
@@ -298,62 +298,57 @@
 
                     <elementSpec ident="altIdentifier" module="msdescription" mode="change">
                         <content>
-                            <rng:zeroOrMore>
-                                <rng:ref name="msName"/>
-                            </rng:zeroOrMore>
-                            <rng:zeroOrMore>
-                                <rng:zeroOrMore>
-                                    <rng:ref name="model.placeNamePart_sequenceOptional"/>
-                                </rng:zeroOrMore>
-                                <rng:optional>
-                                    <rng:ref name="institution"/>
-                                </rng:optional>
-                                <rng:optional>
-                                    <rng:ref name="repository"/>
-                                </rng:optional>
-                                <rng:zeroOrMore>
-                                    <rng:ref name="collection"/>
-                                </rng:zeroOrMore>
-                                <rng:optional>
-                                    <rng:ref name="idno"/>
-                                </rng:optional>
-                                <rng:optional>
-                                    <rng:ref name="note"/>
-                                </rng:optional>
-                                <rng:optional>
-                                    <rng:ref name="altIdentifier"/>
-                                </rng:optional>
-                            </rng:zeroOrMore>
+                            <sequence>
+                                <elementRef key="msName" minOccurs="0"/>
+                                <classRef key="model.placeNamePart" expand="sequenceOptional"/>
+                                <elementRef key="institution" minOccurs="0"/>
+                                <elementRef key="repository" minOccurs="0"/>
+                                <elementRef key="collection" minOccurs="0"/>
+                                <elementRef key="idno"/>
+                                <elementRef key="note" minOccurs="0"/>
+                                <elementRef key="altIdentifier" minOccurs="0" maxOccurs="unbounded"
+                                />
+                            </sequence>
                         </content>
                         <exemplum>
                             <p>This is the original TEI example.</p>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <altIdentifier>
- <settlement>San Marino</settlement>
- <repository>Huntington Library</repository>
- <idno>MS.El.26.C.9</idno>
-</altIdentifier></egXML>
+                                    <settlement>San Marino</settlement>
+                                    <repository>Huntington Library</repository>
+                                    <idno>MS.El.26.C.9</idno>
+                                </altIdentifier></egXML>
                         </exemplum>
                         <exemplum>
-                            <p>The Repertorium adds msName element as first child of altIdentifier,
-                                as in the following example from MDMarianus.xml:</p>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
+                            <p>The Repertorium adds the <gi>msName</gi> element as an optional first
+                                child of <gi>altIdentifier</gi>, as in the following example from
+                                MDMarianus.xml:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <altIdentifier select="171ff" xml:id="Grig6" type="partial">
-                        <msName type="individual" xml:lang="en">Grigorovič Gospel Book</msName>
-                        <msName type="individual" xml:lang="bg">Григоровичово четвероевангелие</msName>
-                        <msName type="individual" xml:lang="ru">Четвероевангелие Григоровича</msName>
-                        <msName type="individual" xml:lang="en">Athonite Gospel Book</msName>
-                        <msName type="individual" xml:lang="bg" select="whole">Атонско четвероевангелие</msName>
-                        <msName type="individual" xml:lang="ru" select="whole">Афонское четвероевангелие</msName>
-                        <country>Russia</country>
-                        <settlement>Moscow</settlement>
-                        <repository>Russian State Library</repository>
-                        <collection>В. Григорович</collection>
-                        <idno type="shelfmark">6</idno>
-                    </altIdentifier>
+                                    <msName type="individual" xml:lang="en">Grigorovič Gospel
+                                        Book</msName>
+                                    <msName type="individual" xml:lang="bg">Григоровичово
+                                        четвероевангелие</msName>
+                                    <msName type="individual" xml:lang="ru">Четвероевангелие
+                                        Григоровича</msName>
+                                    <msName type="individual" xml:lang="en">Athonite Gospel
+                                        Book</msName>
+                                    <msName type="individual" xml:lang="bg" select="whole">Атонско
+                                        четвероевангелие</msName>
+                                    <msName type="individual" xml:lang="ru" select="whole">Афонское
+                                        четвероевангелие</msName>
+                                    <country>Russia</country>
+                                    <settlement>Moscow</settlement>
+                                    <repository>Russian State Library</repository>
+                                    <collection>В. Григорович</collection>
+                                    <idno type="shelfmark">6</idno>
+                                </altIdentifier>
                             </egXML>
                         </exemplum>
                         <exemplum>
+                            <p>The Repertorium model also permits <gi>altIdentifier</gi> as the last
+                                (and repeatable) child of <gi>altIdentifier</gi>, as in the
+                                following examples from NBKM500.xml:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
                              ``<altIdentifier xml:id="NBKM500">
                                     <country>Bulgaria</country>
