@@ -10,7 +10,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2017-10-22T15:19:11Z. .
+# Schema generated from ODD source 2017-10-22T17:28:50Z. .
 # TEI Edition: Version 3.2.0. Last updated on
 #	10th July 2017, revision 0fcf651
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -4707,7 +4707,7 @@ altIdentifier =
   
   ## (alternative identifier) contains an alternative or former structured identifier used for a manuscript, such as a former catalogue number. [10.4. The Manuscript Identifier]
   element altIdentifier {
-    (msName?,
+    (msName*,
      placeName?,
      bloc?,
      country?,
@@ -4931,7 +4931,7 @@ collation =
   
   ## contains a description of how the leaves or bifolia are physically arranged. [10.7.1. Object Description]
   element collation {
-    (model.pLike+
+    (macro.specialPara
      | (summary?,
         quire*,
         signatures?,
