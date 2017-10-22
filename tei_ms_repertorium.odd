@@ -282,14 +282,12 @@
 
                     <elementSpec ident="binding" module="msdescription" mode="change">
                         <content>
-                            <rng:oneOrMore>
-                                <rng:choice>
-                                    <rng:ref name="model.pLike"/>
-                                    <rng:ref name="bindingNote"/>
-                                    <rng:ref name="condition"/>
-                                    <rng:ref name="decoNote"/>
-                                </rng:choice>
-                            </rng:oneOrMore>
+                            <alternate minOccurs="1" maxOccurs="unbounded">
+                                <classRef key="model.pLike"/>
+                                <elementRef key="bindingNote"/>
+                                <elementRef key="condition"/>
+                                <elementRef key="decoNote"/>
+                            </alternate>
                         </content>
                         <exemplum>
                             <p>TEI example:</p>
@@ -301,17 +299,20 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Repertorium adds an element bindingNote as a child element of
-                                binding: </p>
+                            <p>Repertorium adds an element <gi>bindingNote</gi> in the Repertorium
+                                namespace as a child element of <gi>binding</gi>, as a way of
+                                wrapping a specific observation about a binding motif (in, eg., a
+                                    <gi>decoNote</gi>) together with its location (in
+                                <gi>locus</gi>).</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <binding>
                                     <p>New, leather and cardboard</p>
-                                    <bindingNote type="cover">
+                                    <re:bindingNote type="cover">
                                         <locus>On the back side of the upper cover:</locus>
                                         <decoNote>
                                             <stamp>angels with circles.</stamp>
                                         </decoNote>
-                                    </bindingNote>
+                                    </re:bindingNote>
                                 </binding>
                             </egXML>
                         </exemplum>
