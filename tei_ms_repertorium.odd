@@ -133,10 +133,10 @@
                         <gi>collation</gi>, <gi>colophon</gi>, <gi>history</gi>, <gi>keywords</gi>,
                         <gi>msContents</gi>, <gi>msDesc</gi>, <gi>msIdentifier</gi>,
                         <gi>msItemStruct</gi>, <gi>msPart</gi>, <gi>musicNotation</gi>,
-                        <gi>physDesc</gi>, <gi>scriptDesc</gi>, <gi>scriptNote</gi>,
-                        <gi>supportDesc</gi>, <gi>watermark</gi>. The class membership of
-                        <gi>accMat</gi> has been modified to remove it from <gi>physDesc</gi> and
-                    into <gi>history</gi>, but its content model remains the same.</p>
+                        <gi>physDesc</gi>, <gi>scriptDesc</gi>, <gi>supportDesc</gi>,
+                        <gi>watermark</gi>. The class membership of <gi>accMat</gi> has been
+                    modified to remove it from <gi>physDesc</gi> and into <gi>history</gi>, but its
+                    content model remains the same.</p>
                 <p>The following new elements are declared in the Repertorium namespace
                         (<val>http://www.ilit.bas.bg/repertorium/ns/3</val>, for which we use the
                     namespace prefix <code>re:</code>): <gi>bindingNote</gi>, <gi>countermark</gi>,
@@ -1514,31 +1514,17 @@
 
                     <elementSpec ident="physDesc" mode="change" module="msdescription">
                         <content>
-                            <rng:group>
-                                <rng:zeroOrMore>
-                                    <rng:ref name="model.pLike"/>
-                                </rng:zeroOrMore>
-                                <rng:group>
-                                    <rng:optional>
-                                        <rng:ref name="objectDesc"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="ink"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="decoDesc"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="bindingDesc"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="sealDesc"/>
-                                    </rng:optional>
-                                    <rng:zeroOrMore>
-                                        <rng:ref name="additions"/>
-                                    </rng:zeroOrMore>
-                                </rng:group>
-                            </rng:group>
+                            <alternate>
+                                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                <sequence>
+                                    <elementRef key="objectDesc" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="ink" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="decoDesc" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="bindingDesc" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="sealDesc" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="additions" minOccurs="0" maxOccurs="1"/>
+                                </sequence>
+                            </alternate>
                         </content>
                         <exemplum>
                             <p>TEI example:</p>
@@ -1568,12 +1554,12 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Repertorium totally removes elements <gi>handDesc</gi>,
-                                    <gi>typeDesc</gi>. The element <gi>scriptDesc</gi> is moved to
-                                the contents of element <gi>scribeDesc</gi>. The element
-                                    <gi>accMat</gi> becomes part of the <gi>history</gi>. One more
-                                is included from the Repertorium namespace: <gi>ink</gi>. An example
-                                from DRA787a10Stock.xml:</p>
+                            <p>The Repertorium eliminates the elements <gi>handDesc</gi> and
+                                    <gi>typeDesc</gi>. The element <gi>scriptDesc</gi> is moved into
+                                the contents of the element <gi>scribeDesc</gi>. The element
+                                    <gi>accMat</gi> is moved to <gi>history</gi>. The element
+                                    <gi>re:ink</gi> is added in the Repertorium namespace. The
+                                following example is from DRA787a10Stock.xml:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <physDesc>
                                     <objectDesc form="fragment">
@@ -1604,21 +1590,20 @@
                                             <layout columns="1" writtenLines="18" ruledLines="18"/>
                                         </layoutDesc>
                                     </objectDesc>
-                                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Brownish
-                                        for the main text, red and gold for the titles and the
-                                        initials.</ink>
+                                    <re:ink>Brownish for the main text, red and gold for the titles
+                                        and the initials.</re:ink>
                                     <decoDesc>
-                                        <p>Intials <foreign xml:lang="cu">В</foreign> on f. 1r - 55
-                                            mm (5 lines) of heigh, almost outside the text column,
+                                        <p>Initials <foreign xml:lang="cu">В</foreign> on f. 1r - 55
+                                            mm (5 lines) of height, almost outside the text column,
                                                 <foreign xml:lang="cu">В</foreign> on f. 2r - 45mm
-                                            of height, being outside the text column and discending
-                                            in the lower margin, <foreign xml:lang="cu">Р</foreign>
-                                            on f. 5v - 55 mm (5 lines) of heigh, outside the text
+                                            of height, outside the text column and descending into
+                                            the lower margin, <foreign xml:lang="cu">Р</foreign> on
+                                            f. 5v - 55 mm (5 lines) of height, outside the text
                                             column, and <foreign xml:lang="cu">Р</foreign> on ff. 8v
-                                            - 55 mm (5 lines) of heigh, outside the text column,
-                                            too. These are red covered with gold. The same technique
-                                            is applied to the rubrics (titles) introducing the
-                                            coresponding readings.</p>
+                                            - 55 mm (5 lines) of height, outside the text column.
+                                            All initials are red covered with gold. The same
+                                            technique is applied to the rubrics (headings)
+                                            introducing the corresponding readings.</p>
                                     </decoDesc>
                                     <bindingDesc>
                                         <binding>
@@ -2082,25 +2067,16 @@
                             <memberOf key="att.typed"/>
                         </classes>
                         <content>
-                            <rng:choice>
-                                <rng:oneOrMore>
-                                    <rng:ref name="model.pLike"/>
-                                </rng:oneOrMore>
-                                <rng:group>
-                                    <rng:optional>
-                                        <rng:ref name="summary"/>
-                                    </rng:optional>
-                                    <rng:zeroOrMore>
-                                        <rng:ref name="scriptNote"/>
-                                    </rng:zeroOrMore>
-                                    <rng:zeroOrMore>
-                                        <rng:ref name="musicNotation"/>
-                                    </rng:zeroOrMore>
-                                    <rng:optional>
-                                        <rng:ref name="crypto"/>
-                                    </rng:optional>
-                                </rng:group>
-                            </rng:choice>
+                            <alternate>
+                                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                <sequence>
+                                    <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="scriptNote" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="musicNotation" minOccurs="0"
+                                        maxOccurs="unbounded"/>
+                                    <elementRef key="crypto" minOccurs="0" maxOccurs="unbounded"/>
+                                </sequence>
+                            </alternate>
                         </content>
                         <attList>
                             <attDef ident="script" usage="opt">
@@ -2120,35 +2096,14 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Repertorium adds optional attribute <att>script</att> the values of
-                                which are supposed to come from codes of ISO 15924:2004, cf <ref
-                                    target="https://en.wikipedia.org/wiki/ISO_15924"
-                                    >https://en.wikipedia.org/wiki/ISO_15924</ref>. In the content
-                                of this element <gi>musicNotation</gi> is moved here from
+                            <p>Repertorium adds the optional attribute <att>script</att>, the values
+                                of which are supposed to come from codes of ISO 15924:2004, cf. <ptr
+                                    target="https://en.wikipedia.org/wiki/ISO_15924"/>. In the
+                                content of this element, <gi>musicNotation</gi> is moved here from
                                     <gi>physDesc</gi> and a new <gi>crypto</gi> Repertorium is
                                 added. An example from the file AA771NBKM.xml</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <scriptDesc script="cyrs" type="semiuncial"/>
-                            </egXML>
-                        </exemplum>
-                    </elementSpec>
-
-                    <elementSpec ident="scriptNote" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.typed"/>
-                        </classes>
-                        <content>
-                            <rng:ref name="macro.specialPara"/>
-                        </content>
-                        <exemplum>
-                            <p>TEI example:</p>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <scriptNote scope="sole"/>
-                            </egXML>
-                        </exemplum>
-                        <exemplum>
-                            <p>Repertorium adds <att>type</att> to the known TEI attributes.</p>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples"> To be added ...
                             </egXML>
                         </exemplum>
                     </elementSpec>
