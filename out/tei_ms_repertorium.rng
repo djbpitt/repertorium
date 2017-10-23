@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-10-23T11:37:53Z. .
+Schema generated from ODD source 2017-10-23T16:32:36Z. .
 TEI Edition: Version 3.2.0. Last updated on
 	10th July 2017, revision 0fcf651
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -5890,7 +5890,7 @@ Suggested values include: 1] WGS84(World Geodetic System) ; 2] MGRS(Military Gri
          </choice>
          <ref name="att.global.attributes"/>
          <attribute name="scheme">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The keywords element must have a scheme attribute with a value of Repertorium.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the keywords element must have a scheme attribute with a value of Repertorium</a:documentation>
             <choice>
                <value>Repertorium</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Keywords must be specified within the Repertorium
@@ -7731,7 +7731,7 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
    </define>
    <define name="watermark">
       <element name="watermark">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The content of this element includes phrase level elements, as well as specialized elements like motif and countermark. There are several special attributes for the content of this element. tracing is used to describe very briefly (with one word) the method of watermark tracing. The most usual method is still drawing by hand, but there could be other possibilities, such as rubbing by hand, usage of special Dylux print paper, beta- or x-radiography, scanning, etc. The place attribute from the class att.placement can refine where on the pages the watermark can be seen, and may be described in relation to wire lines and chain (laid) lines. [10.3.3. Watermarks and Stamps]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a word or phrase describing a watermark or similar device. [10.3.3. Watermarks and Stamps]</a:documentation>
          <oneOrMore>
             <choice>
                <text/>
@@ -7743,7 +7743,7 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
          <ref name="att.global.attributes"/>
          <optional>
             <attribute name="tracing">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes the methods of recording of some watermark. Methods include: tracing, rubbing, etc.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the methods of recording of some watermark. Methods include: tracing, rubbing, etc.</a:documentation>
                <data type="teidata.word"/>
             </attribute>
          </optional>
@@ -8036,14 +8036,12 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
       <element name="msItemStruct">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(structured manuscript item) contains a structured description for an individual work or item within the intellectual content of a manuscript or manuscript part. [10.6.1. The msItem and msItemStruct Elements]</a:documentation>
          <group>
-            <choice>
-               <optional>
+            <optional>
+               <choice>
                   <ref name="locus"/>
-               </optional>
-               <optional>
                   <ref name="locusGrp"/>
-               </optional>
-            </choice>
+               </choice>
+            </optional>
             <choice>
                <oneOrMore>
                   <ref name="model.pLike"/>
@@ -8369,7 +8367,7 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
    </define>
    <define name="scriptDesc">
       <element name="scriptDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Repertorium model: Paleographic characteristics [10.7.2.1. Writing]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of the scripts used in a manuscript or similar source. [10.7.2.1. Writing]</a:documentation>
          <choice>
             <oneOrMore>
                <ref name="model.pLike"/>
@@ -8404,14 +8402,8 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
       <element name="musicNotation">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains description of type of musical notation. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
          <ref name="macro.specialPara"/>
-         <ref name="att.global.attributes"/>
          <ref name="att.typed.attributes"/>
-         <optional>
-            <attribute name="system">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <data type="string"/>
-            </attribute>
-         </optional>
+         <ref name="att.global.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8762,22 +8754,14 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(manuscript part) contains information about an originally distinct manuscript or part of a manuscript, which is now part of a composite manuscript. [10.10. Manuscript Parts]</a:documentation>
          <group>
             <zeroOrMore>
-               <optional>
+               <choice>
                   <ref name="altIdentifier"/>
-               </optional>
-               <optional>
                   <ref name="msIdentifier"/>
-               </optional>
-               <optional>
                   <ref name="locus"/>
-               </optional>
-               <optional>
                   <ref name="locusGrp"/>
-               </optional>
+               </choice>
             </zeroOrMore>
-            <zeroOrMore>
-               <ref name="model.headLike"/>
-            </zeroOrMore>
+            <ref name="model.headLike"/>
             <choice>
                <oneOrMore>
                   <ref name="model.pLike"/>
@@ -10711,15 +10695,15 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="bindingNote">
       <element name="bindingNote" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Allows structured description of binding characteristics in addition to decoration and condition.</a:documentation>
-         <zeroOrMore>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">allows structured description of binding characteristics in addition to decoration and condition</a:documentation>
+         <oneOrMore>
             <choice>
                <text/>
                <ref name="model.phrase"/>
                <ref name="decoNote"/>
                <ref name="condition"/>
             </choice>
-         </zeroOrMore>
+         </oneOrMore>
          <ref name="att.global.attributes"/>
          <ref name="att.typed.attributes"/>
          <ref name="att.damaged.attributes"/>
@@ -10728,7 +10712,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="countermark">
       <element name="countermark" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains information about a second, subsidiary watermark.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information about a second, subsidiary watermark</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -10740,7 +10724,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="crypto">
       <element name="crypto" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a description of a cryptographic system used in a manuscript.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of a cryptographic system used in a manuscript</a:documentation>
          <ref name="macro.paraContent"/>
          <ref name="att.global.attributes"/>
          <ref name="att.typed.attributes"/>
@@ -10749,7 +10733,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="grammar">
       <element name="grammar" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a description of the grammar of a scribe.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of the grammar of a scribe</a:documentation>
          <ref name="macro.specialPara"/>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -10757,7 +10741,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="gregoryRule">
       <element name="gregoryRule" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a description of the layout of the parchment according to the Gregory rule.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of the layout of the parchment according to the Gregory rule</a:documentation>
          <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
          <ref name="att.typed.attributes"/>
@@ -10766,7 +10750,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="ink">
       <element name="ink" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a description of ink(s).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of ink(s)</a:documentation>
          <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
          <ref name="att.measurement.attributes"/>
@@ -10775,7 +10759,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="lexis">
       <element name="lexis" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a description of lexical features of a scribe.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of lexical features of a scribe</a:documentation>
          <ref name="macro.specialPara"/>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -10783,7 +10767,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="motif">
       <element name="motif" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Watermark image type) Contains information about a watermark motif.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Watermark image type) contains information about a watermark motif</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -10798,7 +10782,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="orthNote">
       <element name="orthNote" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies a detail of the orthographic practice of a scribe.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies a detail of the orthographic practice of a scribe</a:documentation>
          <ref name="macro.specialPara"/>
          <ref name="att.global.attributes"/>
          <ref name="att.typed.attributes"/>
@@ -10809,7 +10793,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="orthography">
       <element name="orthography" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a formal, structured description of the orthography of a scribe.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a formal, structured description of the orthography of a scribe</a:documentation>
          <choice>
             <oneOrMore>
                <ref name="model.pLike"/>
@@ -10830,7 +10814,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="pagination">
       <element name="pagination" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains information about the pagination of the codex, separately from information about the foliation.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information about the pagination of the codex, separately from information about the foliation</a:documentation>
          <ref name="macro.specialPara"/>
          <ref name="att.global.attributes"/>
          <ref name="att.scoping.attributes"/>
@@ -10839,7 +10823,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="pricking">
       <element name="pricking" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a description of pricking patterns in the manuscript.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of pricking patterns in the manuscript</a:documentation>
          <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
          <ref name="att.typed.attributes"/>
@@ -10848,11 +10832,8 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="quire">
       <element name="quire" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Conains information that describes a quire or set of quires.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information that describes a quire or set of quires</a:documentation>
          <choice>
-            <oneOrMore>
-               <ref name="model.pLike"/>
-            </oneOrMore>
             <group>
                <optional>
                   <ref name="summary"/>
@@ -10890,7 +10871,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
          <ref name="att.typed.attributes"/>
          <optional>
             <attribute name="status">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the status of the quire or folia: original, added, missing</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes the status of the quire or folia: original, added, missing</a:documentation>
                <choice>
                   <value>missing</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Original quire is missing) </a:documentation>
@@ -10906,7 +10887,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="ruling">
       <element name="ruling" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains information about ruling lines in the manuscript.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information about ruling lines in the manuscript</a:documentation>
          <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
          <ref name="att.typed.attributes"/>
@@ -10915,26 +10896,40 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="sampleText">
       <element name="sampleText" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Wraps samples from the manuscript, both those with specific identities (such as head, incipit, etc.) and general ones (tagged as p).</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <ref name="head"/>
-               <ref name="rubric"/>
-               <ref name="incipit"/>
-            </choice>
-         </zeroOrMore>
-         <zeroOrMore>
-            <choice>
-               <ref name="model.pLike"/>
-               <ref name="div"/>
-            </choice>
-         </zeroOrMore>
-         <zeroOrMore>
-            <choice>
-               <ref name="explicit"/>
-               <ref name="finalRubric"/>
-            </choice>
-         </zeroOrMore>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">wraps samples from the manuscript, both those with specific identities (such as head, incipit, etc.) and general ones (tagged as p)</a:documentation>
+         <optional>
+            <group>
+               <optional>
+                  <group>
+                     <zeroOrMore>
+                        <ref name="head"/>
+                     </zeroOrMore>
+                     <zeroOrMore>
+                        <ref name="incipit"/>
+                     </zeroOrMore>
+                     <zeroOrMore>
+                        <ref name="rubric"/>
+                     </zeroOrMore>
+                  </group>
+               </optional>
+               <zeroOrMore>
+                  <choice>
+                     <ref name="model.pLike"/>
+                     <ref name="div"/>
+                  </choice>
+               </zeroOrMore>
+               <optional>
+                  <group>
+                     <zeroOrMore>
+                        <ref name="explicit"/>
+                     </zeroOrMore>
+                     <zeroOrMore>
+                        <ref name="finalRubric"/>
+                     </zeroOrMore>
+                  </group>
+               </optional>
+            </group>
+         </optional>
          <ref name="att.divLike.attributes"/>
          <ref name="att.declaring.attributes"/>
          <ref name="att.global.attributes"/>
@@ -10950,11 +10945,10 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="scribe">
       <element name="scribe" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a description of the paleography, orthography, and language of a scribe.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of the paleography, orthography, and language of a scribe</a:documentation>
          <optional>
             <choice>
                <ref name="locus"/>
-               <ref name="locusGrp"/>
             </choice>
          </optional>
          <optional>
@@ -10966,12 +10960,12 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
          <optional>
             <ref name="scribeLang"/>
          </optional>
-         <optional>
+         <zeroOrMore>
             <ref name="bibl"/>
-         </optional>
-         <optional>
+         </zeroOrMore>
+         <zeroOrMore>
             <ref name="note"/>
-         </optional>
+         </zeroOrMore>
          <zeroOrMore>
             <ref name="respStmt"/>
          </zeroOrMore>
@@ -10981,31 +10975,33 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
    </define>
    <define name="scribeDesc">
       <element name="scribeDesc" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Serves as a wrapper for scribe elements, so that the characteristics of each scribe can be described separately, while also being bundled together.</a:documentation>
-         <choice>
-            <oneOrMore>
-               <ref name="model.pLike"/>
-            </oneOrMore>
-            <group>
-               <optional>
-                  <ref name="summary"/>
-               </optional>
-               <zeroOrMore>
-                  <ref name="scribe"/>
-               </zeroOrMore>
-            </group>
-         </choice>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">serves as a wrapper for scribe elements, so that the characteristics of each scribe can be described separately, while also being bundled together</a:documentation>
+         <optional>
+            <choice>
+               <oneOrMore>
+                  <ref name="model.pLike"/>
+               </oneOrMore>
+               <group>
+                  <optional>
+                     <ref name="summary"/>
+                  </optional>
+                  <zeroOrMore>
+                     <ref name="scribe"/>
+                  </zeroOrMore>
+               </group>
+            </choice>
+         </optional>
          <ref name="att.global.attributes"/>
          <empty/>
       </element>
    </define>
    <define name="scribeLang">
       <element name="scribeLang" ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a description of the orthography and language of the scribe.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of the orthography and language of the scribe</a:documentation>
          <choice>
-            <oneOrMore>
+            <zeroOrMore>
                <ref name="model.pLike"/>
-            </oneOrMore>
+            </zeroOrMore>
             <group>
                <optional>
                   <ref name="summary"/>

@@ -332,8 +332,8 @@
 
                     <elementSpec ident="bindingNote" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Allows structured description of binding characteristics in addition
-                            to decoration and condition.</desc>
+                        <desc>allows structured description of binding characteristics in addition
+                            to decoration and condition</desc>
                         <classes mode="change">
                             <memberOf key="att.global" mode="add"/>
                             <memberOf key="att.typed" mode="add"/>
@@ -528,15 +528,13 @@
 
                     <elementSpec ident="countermark" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Contains information about a second, subsidiary watermark.</desc>
+                        <desc>contains information about a second, subsidiary watermark</desc>
                         <content>
-                            <rng:zeroOrMore>
-                                <rng:choice>
-                                    <rng:text/>
-                                    <rng:ref name="model.phrase"/>
-                                    <rng:ref name="motif"/>
-                                </rng:choice>
-                            </rng:zeroOrMore>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode/>
+                                <classRef key="model.phrase"/>
+                                <elementRef key="motif"/>
+                            </alternate>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"><material>
@@ -557,8 +555,8 @@
 
                     <elementSpec ident="crypto" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Contains a description of a cryptographic system used in a
-                            manuscript.</desc>
+                        <desc>contains a description of a cryptographic system used in a
+                            manuscript</desc>
                         <classes mode="change">
                             <memberOf key="att.global" mode="add"/>
                             <memberOf key="att.typed" mode="add"/>
@@ -586,12 +584,12 @@
 
                     <elementSpec ident="grammar" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Contains a description of the grammar of a scribe.</desc>
+                        <desc>contains a description of the grammar of a scribe</desc>
                         <classes mode="replace">
                             <memberOf key="att.global" mode="add"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.specialPara"/>
+                            <macroRef key="macro.specialPara"/>
                         </content>
                         <exemplum>
                             <p>In the example below, list items have been supplied with
@@ -652,14 +650,14 @@
 
                     <elementSpec ident="gregoryRule" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Contains a description of the layout of the parchment according to the
-                            Gregory rule.</desc>
+                        <desc>contains a description of the layout of the parchment according to the
+                            Gregory rule</desc>
                         <classes mode="change">
                             <memberOf key="att.global" mode="add"/>
                             <memberOf key="att.typed" mode="add"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.phraseSeq"/>
+                            <macroRef key="macro.phraseSeq"/>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"
@@ -741,13 +739,13 @@
 
                     <elementSpec ident="ink" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Contains a description of ink(s).</desc>
+                        <desc>contains a description of ink(s)</desc>
                         <classes mode="change">
                             <memberOf key="att.global" mode="add"/>
                             <memberOf key="att.measurement" mode="add"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.phraseSeq"/>
+                            <macroRef key="macro.phraseSeq"/>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"><ink>Brown ink for the
@@ -766,8 +764,8 @@
                     <elementSpec ident="keywords" mode="change" module="header">
                         <attList>
                             <attDef ident="scheme" mode="replace" usage="req">
-                                <desc>The <gi>keywords</gi> element must have a <att>scheme</att>
-                                    attribute with a value of <val>Repertorium</val>.</desc>
+                                <desc>the <gi>keywords</gi> element must have a <att>scheme</att>
+                                    attribute with a value of <val>Repertorium</val></desc>
                                 <datatype>
                                     <dataRef key="teidata.enumerated"/>
                                 </datatype>
@@ -797,12 +795,12 @@
 
                     <elementSpec ident="lexis" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Contains a description of lexical features of a scribe.</desc>
+                        <desc>contains a description of lexical features of a scribe</desc>
                         <classes mode="replace">
                             <memberOf key="att.global" mode="add"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.specialPara"/>
+                            <macroRef key="macro.specialPara"/>
                         </content>
                         <exemplum>
                             <p>The following example is from MDMarianus.xml.</p>
@@ -828,19 +826,17 @@
                     <elementSpec ident="motif" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
                         <gloss>Watermark image type</gloss>
-                        <desc>Contains information about a watermark motif.</desc>
+                        <desc>contains information about a watermark motif</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
                         </classes>
                         <content>
-                            <rng:zeroOrMore>
-                                <rng:choice>
-                                    <rng:text/>
-                                    <rng:ref name="model.phrase"/>
-                                    <rng:ref name="motif"/>
-                                </rng:choice>
-                            </rng:zeroOrMore>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode/>
+                                <classRef key="model.phrase"/>
+                                <elementRef key="motif"/>
+                            </alternate>
                         </content>
                         <exemplum>
                             <p>The following example represents the motif of <q>anchor in circle
@@ -1022,62 +1018,39 @@
 
                     <elementSpec ident="msItemStruct" module="msdescription" mode="change">
                         <content>
-                            <rng:group>
-                                <rng:choice>
-                                    <rng:optional>
-                                        <rng:ref name="locus"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="locusGrp"/>
-                                    </rng:optional>
-                                </rng:choice>
-                                <rng:choice>
-                                    <rng:oneOrMore>
-                                        <rng:ref name="model.pLike"/>
-                                    </rng:oneOrMore>
-                                    <rng:group>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="title"/>
-                                        </rng:zeroOrMore>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="author"/>
-                                        </rng:zeroOrMore>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="respStmt"/>
-                                        </rng:zeroOrMore>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="model.noteLike"/>
-                                        </rng:zeroOrMore>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="filiation"/>
-                                        </rng:zeroOrMore>
-                                        <rng:optional>
-                                            <rng:ref name="textLang"/>
-                                        </rng:optional>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="decoNote"/>
-                                        </rng:zeroOrMore>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="colophon"/>
-                                        </rng:zeroOrMore>
-                                        <rng:optional>
-                                            <rng:choice>
-                                                <rng:ref name="sampleText"/>
-                                                <rng:ref name="div"/>
-                                            </rng:choice>
-                                        </rng:optional>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="msItemStruct"/>
-                                        </rng:zeroOrMore>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="listBibl"/>
-                                        </rng:zeroOrMore>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="bibl"/>
-                                        </rng:zeroOrMore>
-                                    </rng:group>
-                                </rng:choice>
-                            </rng:group>
+                            <sequence>
+                                <alternate minOccurs="0" maxOccurs="1">
+                                    <elementRef key="locus" minOccurs="1" maxOccurs="1"/>
+                                    <elementRef key="locusGrp" minOccurs="1" maxOccurs="1"/>
+                                </alternate>
+                                <alternate>
+                                    <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                    <sequence>
+                                        <elementRef key="title" minOccurs="0" maxOccurs="unbounded"/>
+                                        <elementRef key="author" minOccurs="0" maxOccurs="unbounded"/>
+                                        <elementRef key="respStmt" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                                        <classRef key="model.noteLike" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                                        <elementRef key="filiation" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                                        <elementRef key="textLang" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="decoNote" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                                        <elementRef key="colophon" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                                        <alternate minOccurs="0" maxOccurs="1">
+                                            <elementRef key="sampleText" minOccurs="1" maxOccurs="1"/>
+                                            <elementRef key="div" minOccurs="1" maxOccurs="1"/>
+                                        </alternate>
+                                        <elementRef key="msItemStruct" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                                        <elementRef key="listBibl" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                                        <elementRef key="bibl" minOccurs="0" maxOccurs="unbounded"/>
+                                    </sequence>
+                                </alternate>
+                            </sequence>
                         </content>
                         <attList>
                             <attDef ident="type">
@@ -1182,54 +1155,27 @@
                             <memberOf key="att.typed" mode="add"/>
                         </classes>
                         <content>
-                            <rng:group>
-                                <rng:group>
-                                    <rng:choice>
-                                        <rng:zeroOrMore>
-                                            <rng:optional>
-                                                <rng:ref name="altIdentifier"/>
-                                            </rng:optional>
-                                            <rng:optional>
-                                                <rng:ref name="msIdentifier"/>
-                                            </rng:optional>
-                                            <rng:optional>
-                                                <rng:ref name="locus"/>
-                                            </rng:optional>
-                                            <rng:optional>
-                                                <rng:ref name="locusGrp"/>
-                                            </rng:optional>
-                                        </rng:zeroOrMore>
-                                    </rng:choice>
-                                </rng:group>
-                                <rng:zeroOrMore>
-                                    <rng:ref name="model.headLike"/>
-                                </rng:zeroOrMore>
-                                <rng:choice>
-                                    <rng:oneOrMore>
-                                        <rng:ref name="model.pLike"/>
-                                    </rng:oneOrMore>
-                                    <rng:group>
-                                        <rng:optional>
-                                            <rng:ref name="physDesc"/>
-                                        </rng:optional>
-                                        <rng:optional>
-                                            <rng:ref name="scribeDesc"/>
-                                        </rng:optional>
-                                        <rng:optional>
-                                            <rng:ref name="msContents"/>
-                                        </rng:optional>
-                                        <rng:optional>
-                                            <rng:ref name="history"/>
-                                        </rng:optional>
-                                        <rng:optional>
-                                            <rng:ref name="additional"/>
-                                        </rng:optional>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="msPart"/>
-                                        </rng:zeroOrMore>
-                                    </rng:group>
-                                </rng:choice>
-                            </rng:group>
+                            <sequence>
+                                <alternate minOccurs="0" maxOccurs="unbounded">
+                                    <elementRef key="altIdentifier"/>
+                                    <elementRef key="msIdentifier"/>
+                                    <elementRef key="locus"/>
+                                    <elementRef key="locusGrp"/>
+                                </alternate>
+                                <classRef key="model.headLike"/>
+                                <alternate minOccurs="1" maxOccurs="1">
+                                    <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                    <sequence>
+                                        <elementRef key="physDesc" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="scribeDesc" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="msContents" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="history" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="additional" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="msPart" minOccurs="0" maxOccurs="unbounded"
+                                        />
+                                    </sequence>
+                                </alternate>
+                            </sequence>
                         </content>
                         <exemplum>
                             <p>TEI example:</p>
@@ -1272,11 +1218,11 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Repertorium adds <att>type</att> attribute. The other changes include
-                                posibilities to add different types of identifiers
-                                    (<gi>msIdentifier</gi> and <gi>altIdentifier</gi>), and a
-                                special Repertorium <gi>sampleText</gi> element. An example for
-                                convolute (file AM!-108O.xml):</p>
+                            <p>The Repertorium adds the <att>type</att> attribute to <gi>msPart</gi>
+                                (values might include <val>partial</val>, <val>palimpsest</val>),
+                                and it also adds <gi>msIdentifier</gi> and <gi>altIdentifier</gi> to
+                                the content model. The following example of a convolute is from
+                                AM1-108O.xml:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msPart n="1">
                                     <locus>f. 1</locus>
@@ -1288,74 +1234,77 @@
                                                   <watermark>none</watermark>
                                                 </support>
                                                 <extent> ... </extent>
-                                                <condition>folio seems to be added to the book
-                                                  later</condition>
+                                                <condition>the folio seems to have been added to the
+                                                  book later</condition>
                                             </supportDesc>
-                                            <layoutDesc> ... </layoutDesc>
-                                        </objectDesc> ... </physDesc>
-                                    <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-                                        ... </scribeDesc>
+                                            <layoutDesc>
+                                                <p><!-- stuff about layout of part 1 --></p>
+                                            </layoutDesc>
+                                        </objectDesc>
+                                    </physDesc>
+                                    <re:scribeDesc>
+                                        <!-- stuff about the scribe of part 1 -->
+                                    </re:scribeDesc>
                                     <msContents>
                                         <msItemStruct xml:id="ACD1" type="translation">
                                             <locus n="1">1r-1v</locus>
                                             <title xml:lang="bg">Съдържание на втората книга на Паноплия догматики</title>
                                             <note>without end</note>
-                                            <sampleText
-                                                xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                                xml:lang="cu">
+                                            <re:sampleText xml:lang="cu">
                                                 <head>Книга догматики паноплїе, втораа.</head>
                                                 <incipit>Титле вторые книги, г҃и.</incipit>
                                                 <explicit defective="true"> ег<seg rend="sup"
                                                   >д</seg>а ѿ гж<seg rend="sup">д</seg>е своѥе,
                                                   шьствоваше<gap/>
                                                 </explicit>
-                                            </sampleText>
+                                            </re:sampleText>
                                         </msItemStruct>
-                                    </msContents> ... </msPart>
+                                    </msContents>
+                                </msPart>
                                 <msPart n="2" xml:id="Gerasim">
-                                    <locus>f. 2.</locus> ... </msPart>
+                                    <locus>f. 2.</locus>
+                                    <!-- stuff about part 2 -->
+                                </msPart>
                                 <msPart n="3">
-                                    <locus>ff. 3-35</locus> ... </msPart>
+                                    <locus>ff. 3-35</locus>
+                                    <!-- stuff about part 3 -->
+                                </msPart>
                                 <msPart n="4">
-                                    <locus>ff. 36-59</locus> ... </msPart>
+                                    <locus>ff. 36-59</locus>
+                                    <!-- stuff about part 24 -->
+                                </msPart>
                                 <msPart n="5">
-                                    <locus>ff. 61-72</locus> ... </msPart>
+                                    <locus>ff. 61-72</locus>
+                                    <!-- stuff about part 5 -->
+                                </msPart>
                             </egXML>
                         </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="musicNotation" module="msdescription" mode="change">
-                        <classes mode="replace">
-                            <memberOf key="att.global"/>
+                        <classes mode="change">
                             <memberOf key="att.typed" mode="add"/>
                         </classes>
-                        <content>
-                            <rng:ref name="macro.specialPara"/>
-                        </content>
-                        <attList>
-                            <attDef ident="system" usage="opt">
-                                <datatype>
-                                    <dataRef key="teidata.text"/>
-                                </datatype>
-                            </attDef>
-                        </attList>
                         <exemplum>
                             <p>TEI example:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <musicNotation>Neumes in <term>campo aperto</term> of the St. Gall
-                                    type. </musicNotation>
+                                    type.</musicNotation>
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p/>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples"> An example to be
-                                included !!! </egXML>
+                            <p>The Repertorium adds a <add>type</add> attribute to identify the type
+                                of notational system, as in the following example:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><musicNotation
+                                    type="theta">Theta-notation is used together with double okseia,
+                                    double vareia (Piesma), and double
+                                apostrophos.</musicNotation></egXML>
                         </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="orthNote" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Specifies a detail of the orthographic practice of a scribe.</desc>
+                        <desc>specifies a detail of the orthographic practice of a scribe</desc>
                         <classes mode="replace">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
@@ -1363,7 +1312,7 @@
                             <memberOf key="att.scoping"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.specialPara"/>
+                            <macroRef key="macro.specialPara"/>
                         </content>
                         <exemplum>
                             <p>In the example below, the <att>type</att> and <att>subtype</att>
@@ -1445,26 +1394,20 @@
 
                     <elementSpec ident="orthography" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Contains a formal, structured description of the orthography of a
-                            scribe.</desc>
+                        <desc>contains a formal, structured description of the orthography of a
+                            scribe</desc>
                         <classes mode="replace">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
                         </classes>
                         <content>
-                            <rng:choice>
-                                <rng:oneOrMore>
-                                    <rng:ref name="model.pLike"/>
-                                </rng:oneOrMore>
-                                <rng:group>
-                                    <rng:optional>
-                                        <rng:ref name="summary"/>
-                                    </rng:optional>
-                                    <rng:oneOrMore>
-                                        <rng:ref name="orthNote"/>
-                                    </rng:oneOrMore>
-                                </rng:group>
-                            </rng:choice>
+                            <alternate>
+                                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                <sequence>
+                                    <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="orthNote" minOccurs="1" maxOccurs="unbounded"/>
+                                </sequence>
+                            </alternate>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"><orthography><orthNote
@@ -1485,14 +1428,14 @@
 
                     <elementSpec ident="pagination" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Contains information about the pagination of the codex, separately
-                            from information about the foliation.</desc>
+                        <desc>contains information about the pagination of the codex, separately
+                            from information about the foliation</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.scoping"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.specialPara"/>
+                            <macroRef key="macro.specialPara"/>
                         </content>
                         <exemplum>
                             <p>The following example is from the electronic description of MS
@@ -1631,13 +1574,13 @@
 
                     <elementSpec ident="pricking" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Contains a description of pricking patterns in the manuscript.</desc>
+                        <desc>contains a description of pricking patterns in the manuscript</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.phraseSeq"/>
+                            <macroRef key="macro.phraseSeq"/>
                         </content>
                         <exemplum>
                             <p>The following example is from DUL MS Cosin V.II.17 Anseis de
@@ -1668,54 +1611,33 @@
 
                     <elementSpec ident="quire" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Conains information that describes a quire or set of quires.</desc>
+                        <desc>contains information that describes a quire or set of quires</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
                         </classes>
                         <content>
-                            <rng:choice>
-                                <rng:oneOrMore>
-                                    <rng:ref name="model.pLike"/>
-                                </rng:oneOrMore>
-                                <rng:group>
-                                    <rng:optional>
-                                        <rng:ref name="summary"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="locus"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="locusGrp"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="extent"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="formula"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="signatures"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="catchwords"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="gregoryRule"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="ruling"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="pricking"/>
-                                    </rng:optional>
-                                </rng:group>
-                            </rng:choice>
+                            <alternate>
+                                <classRef key="mode.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                <sequence>
+                                    <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="locus" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="locusGrp" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="extent" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="formula" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="signatures" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="catchwords" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="gregoryRule" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="ruling" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="pricking" minOccurs="0" maxOccurs="1"/>
+                                </sequence>
+                            </alternate>
                         </content>
                         <attList>
                             <attDef ident="status" usage="opt">
-                                <desc>Describes the status of the quire or folia: original, added,
-                                    missing</desc>
+                                <desc>describes the status of the quire or folia:
+                                        <val>original</val>, <val>added</val>,
+                                    <val>missing</val></desc>
                                 <datatype>
                                     <dataRef name="teidata.word"/>
                                 </datatype>
@@ -1761,13 +1683,13 @@
 
                     <elementSpec ident="ruling" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Contains information about ruling lines in the manuscript.</desc>
+                        <desc>contains information about ruling lines in the manuscript</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.phraseSeq"/>
+                            <macroRef key="macro.phraseSeq"/>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"><ruling>
@@ -1797,9 +1719,9 @@
 
                     <elementSpec ident="sampleText" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Wraps samples from the manuscript, both those with specific identities
+                        <desc>wraps samples from the manuscript, both those with specific identities
                             (such as <gi>head</gi>, <gi>incipit</gi>, etc.) and general ones (tagged
-                            as <gi>p</gi>).</desc>
+                            as <gi>p</gi>)</desc>
                         <classes mode="change">
                             <memberOf key="att.divLike"/>
                             <memberOf key="att.declaring"/>
@@ -1807,25 +1729,22 @@
                             <memberOf key="att.typed"/>
                         </classes>
                         <content>
-                            <rng:zeroOrMore>
-                                <rng:choice>
-                                    <rng:ref name="head"/>
-                                    <rng:ref name="rubric"/>
-                                    <rng:ref name="incipit"/>
-                                </rng:choice>
-                            </rng:zeroOrMore>
-                            <rng:zeroOrMore>
-                                <rng:choice>
-                                    <rng:ref name="model.pLike"/>
-                                    <rng:ref name="div"/>
-                                </rng:choice>
-                            </rng:zeroOrMore>
-                            <rng:zeroOrMore>
-                                <rng:choice>
-                                    <rng:ref name="explicit"/>
-                                    <rng:ref name="finalRubric"/>
-                                </rng:choice>
-                            </rng:zeroOrMore>
+                            <sequence minOccurs="0" maxOccurs="1">
+                                <sequence minOccurs="0" maxOccurs="1">
+                                    <elementRef key="head" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="incipit" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="rubric" minOccurs="0" maxOccurs="unbounded"/>
+                                </sequence>
+                                <alternate minOccurs="0" maxOccurs="unbounded">
+                                    <classRef key="model.pLike"/>
+                                    <elementRef key="div"/>
+                                </alternate>
+                                <sequence minOccurs="0" maxOccurs="1">
+                                    <elementRef key="explicit" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="finalRubric" minOccurs="0"
+                                        maxOccurs="unbounded"/>
+                                </sequence>
+                            </sequence>
                         </content>
                         <attList>
                             <attDef ident="script" usage="opt">
@@ -1866,36 +1785,22 @@
 
                     <elementSpec ident="scribe" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Contains a description of the paleography, orthography, and language
-                            of a scribe.</desc>
+                        <desc>contains a description of the paleography, orthography, and language
+                            of a scribe</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                         </classes>
                         <content>
-                            <rng:optional>
-                                <rng:choice>
-                                    <rng:ref name="locus"/>
-                                    <rng:ref name="locusGrp"/>
-                                </rng:choice>
-                            </rng:optional>
-                            <rng:optional>
-                                <rng:ref name="model.nameLike.agent"/>
-                            </rng:optional>
-                            <rng:optional>
-                                <rng:ref name="scriptDesc"/>
-                            </rng:optional>
-                            <rng:optional>
-                                <rng:ref name="scribeLang"/>
-                            </rng:optional>
-                            <rng:optional>
-                                <rng:ref name="bibl"/>
-                            </rng:optional>
-                            <rng:optional>
-                                <rng:ref name="note"/>
-                            </rng:optional>
-                            <rng:zeroOrMore>
-                                <rng:ref name="respStmt"/>
-                            </rng:zeroOrMore>
+                            <alternate minOccurs="0" maxOccurs="1">
+                                <elementRef key="locus"/>
+                                <elementRef key="locusGroup"/>
+                            </alternate>
+                            <classRef key="model.nameLike.agent" minOccurs="0" maxOccurs="1"/>
+                            <elementRef key="scriptDesc" minOccurs="0" maxOccurs="1"/>
+                            <elementRef key="scribeLang" minOccurs="0" maxOccurs="1"/>
+                            <elementRef key="bibl" minOccurs="0" maxOccurs="unbounded"/>
+                            <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
+                            <elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/>
                         </content>
                         <exemplum>
                             <p>In the example below, the portions of the manuscript written by
@@ -1930,26 +1835,20 @@
 
                     <elementSpec ident="scribeDesc" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Serves as a wrapper for <gi>scribe</gi> elements, so that the
+                        <desc>serves as a wrapper for <gi>scribe</gi> elements, so that the
                             characteristics of each scribe can be described separately, while also
-                            being bundled together.</desc>
+                            being bundled together</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                         </classes>
                         <content>
-                            <rng:choice>
-                                <rng:oneOrMore>
-                                    <rng:ref name="model.pLike"/>
-                                </rng:oneOrMore>
-                                <rng:group>
-                                    <rng:optional>
-                                        <rng:ref name="summary"/>
-                                    </rng:optional>
-                                    <rng:zeroOrMore>
-                                        <rng:ref name="scribe"/>
-                                    </rng:zeroOrMore>
-                                </rng:group>
-                            </rng:choice>
+                            <alternate minOccurs="0" maxOccurs="1">
+                                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                <sequence>
+                                    <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="scribe" minOccurs="0" maxOccurs="unbounded"/>
+                                </sequence>
+                            </alternate>
                         </content>
                         <exemplum>
                             <p>The following example, from AA771NBKM.xml, contains information about
@@ -2003,32 +1902,22 @@
 
                     <elementSpec ident="scribeLang" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
                         mode="add">
-                        <desc>Contains a description of the orthography and language of the
-                            scribe.</desc>
+                        <desc>contains a description of the orthography and language of the
+                            scribe</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
                             <memberOf key="att.typed"/>
                         </classes>
                         <content>
-                            <rng:choice>
-                                <rng:oneOrMore>
-                                    <rng:ref name="model.pLike"/>
-                                </rng:oneOrMore>
-                                <rng:group>
-                                    <rng:optional>
-                                        <rng:ref name="summary"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="orthography"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="grammar"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="lexis"/>
-                                    </rng:optional>
-                                </rng:group>
-                            </rng:choice>
+                            <alternate>
+                                <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"/>
+                                <sequence>
+                                    <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="orthography" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="grammar" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="lexis" minOccurs="0" maxOccurs="1"/>
+                                </sequence>
+                            </alternate>
                         </content>
                         <attList>
                             <attDef ident="script" usage="opt">
@@ -2177,17 +2066,6 @@
                     </elementSpec>
 
                     <elementSpec ident="watermark" module="msdescription" mode="change">
-                        <desc>The content of this element includes phrase level elements, as well as
-                            specialized elements like <gi>motif</gi> and <gi>countermark</gi>. There
-                            are several special attributes for the content of this element.
-                                <att>tracing</att> is used to describe very briefly (with one word)
-                            the method of watermark tracing. The most usual method is still drawing
-                            by hand, but there could be other possibilities, such as rubbing by
-                            hand, usage of special Dylux print paper, beta- or x-radiography,
-                            scanning, etc. The <att>place</att> attribute from the class
-                                <ident>att.placement</ident> can refine where on the pages the
-                            watermark can be seen, and may be described in relation to wire lines
-                            and chain (laid) lines.</desc>
                         <content>
                             <alternate minOccurs="1" maxOccurs="unbounded">
                                 <textNode/>
@@ -2198,7 +2076,7 @@
                         </content>
                         <attList>
                             <attDef ident="tracing">
-                                <desc>describes the methods of recording of some watermark. Methods
+                                <desc>Describes the methods of recording of some watermark. Methods
                                     include: tracing, rubbing, etc.</desc>
                                 <datatype>
                                     <dataRef name="teidata.word"/>
@@ -2232,6 +2110,19 @@
                                         <date cert="yes">1585</date>. </watermark>
                             </egXML>
                         </exemplum>
+                        <remarks>
+                            <p>The content of this element includes phrase level elements, as well
+                                as specialized elements like <gi>motif</gi> and
+                                <gi>countermark</gi>. There are several special attributes for the
+                                content of this element. <att>tracing</att> is used to describe very
+                                briefly (with one word) the method of watermark tracing. The most
+                                usual method is still drawing by hand, but there could be other
+                                possibilities, such as rubbing by hand, usage of special Dylux print
+                                paper, beta- or x-radiography, scanning, etc. The <att>place</att>
+                                attribute from the class <ident>att.placement</ident> can refine
+                                where on the pages the watermark can be seen, and may be described
+                                in relation to wire lines and chain (laid) lines.</p>
+                        </remarks>
                     </elementSpec>
 
                 </schemaSpec>
