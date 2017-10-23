@@ -72,6 +72,9 @@
                     <item>Previous versions of the Repertorium schema permitted a <att>type</att>
                         attribute on the <gi>teiHeader</gi> with a value of <val>text</val>. This is
                         not permitted by P5, and the new ODD enforces that TEI requirement.</item>
+                    <item>Content models defined in the RelaxNG namespace are now defined using pure
+                        ODD. See <ptr target="http://teic.github.io/PDF/purifyDoc.pdf"/> for
+                        documentation.</item>
                 </list></change>
             <change who="#atb" when="2013-04-23"> Changed the content of the element scribeDesc.
                 Changed palaeoCharact to scriptDesc and palaeoNote to scriptNote to be compatible
@@ -768,7 +771,7 @@
                                 <desc>The <gi>keywords</gi> element must have a <att>scheme</att>
                                     attribute with a value of <val>Repertorium</val>.</desc>
                                 <datatype>
-                                    <dataRef key="teidata.text"/>
+                                    <dataRef key="teidata.enumerated"/>
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="Repertorium">
@@ -911,7 +914,7 @@
                             <attDef ident="type" usage="opt">
                                 <desc>describes the type of the text</desc>
                                 <datatype>
-                                    <dataRef name="teidata.text"/>
+                                    <dataRef name="teidata.enumerated"/>
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="original">
@@ -1082,7 +1085,7 @@
                             <attDef ident="type">
                                 <desc>describes the type of the text</desc>
                                 <datatype>
-                                    <dataRef key="teidata.text"/>
+                                    <dataRef key="teidata.enumerated"/>
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="original">
@@ -1731,7 +1734,7 @@
                                 <desc>Describes the status of the quire or folia: original, added,
                                     missing</desc>
                                 <datatype>
-                                    <dataRef name="token"/>
+                                    <dataRef name="teidata.word"/>
                                 </datatype>
                                 <valList type="closed" mode="add">
                                     <valItem ident="missing">
@@ -2241,32 +2244,30 @@
 
                     <elementSpec ident="watermark" module="msdescription" mode="change">
                         <desc>The content of this element includes phrase level elements, as well as
-                            specialized elements like <gi>countermark</gi> and <gi>motif</gi>. There
+                            specialized elements like <gi>motif</gi> and <gi>countermark</gi>. There
                             are several special attributes for the content of this element.
                                 <att>tracing</att> is used to describe very briefly (with one word)
                             the method of watermark tracing. The most usual method is still drawing
                             by hand, but there could be other possibilities, such as rubbing by
                             hand, usage of special Dylux print paper, beta- or x-radiography,
                             scanning, etc. The <att>place</att> attribute from the class
-                            att.placement can refine where on the pages the watermark can be seen,
-                            and may be described in relation to wire lines and chain (laid)
-                            lines.</desc>
+                                <ident>att.placement</ident> can refine where on the pages the
+                            watermark can be seen, and may be described in relation to wire lines
+                            and chain (laid) lines.</desc>
                         <content>
-                            <rng:zeroOrMore>
-                                <rng:choice>
-                                    <rng:text/>
-                                    <rng:ref name="model.phrase"/>
-                                    <rng:ref name="countermark"/>
-                                    <rng:ref name="motif"/>
-                                </rng:choice>
-                            </rng:zeroOrMore>
+                            <alternate minOccurs="1" maxOccurs="unbounded">
+                                <textNode/>
+                                <classRef key="model.phrase"/>
+                                <elementRef key="motif"/>
+                                <elementRef key="countermark"/>
+                            </alternate>
                         </content>
                         <attList>
                             <attDef ident="tracing">
                                 <desc>describes the methods of recording of some watermark. Methods
                                     include: tracing, rubbing, etc.</desc>
                                 <datatype>
-                                    <dataRef key="teidata.text"/>
+                                    <dataRef name="teidata.word"/>
                                 </datatype>
                             </attDef>
                         </attList>

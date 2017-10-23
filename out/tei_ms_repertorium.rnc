@@ -10,7 +10,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2017-10-23T09:52:02Z. .
+# Schema generated from ODD source 2017-10-23T10:56:15Z. .
 # TEI Edition: Version 3.2.0. Last updated on
 #	10th July 2017, revision 0fcf651
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -4636,13 +4636,13 @@ stamp =
   }
 watermark =
   
-  ## The content of this element includes phrase level elements, as well as specialized elements like countermark and motif. There are several special attributes for the content of this element. tracing is used to describe very briefly (with one word) the method of watermark tracing. The most usual method is still drawing by hand, but there could be other possibilities, such as rubbing by hand, usage of special Dylux print paper, beta- or x-radiography, scanning, etc. The place attribute from the class att.placement can refine where on the pages the watermark can be seen, and may be described in relation to wire lines and chain (laid) lines. [10.3.3. Watermarks and Stamps]
+  ## The content of this element includes phrase level elements, as well as specialized elements like motif and countermark. There are several special attributes for the content of this element. tracing is used to describe very briefly (with one word) the method of watermark tracing. The most usual method is still drawing by hand, but there could be other possibilities, such as rubbing by hand, usage of special Dylux print paper, beta- or x-radiography, scanning, etc. The place attribute from the class att.placement can refine where on the pages the watermark can be seen, and may be described in relation to wire lines and chain (laid) lines. [10.3.3. Watermarks and Stamps]
   element watermark {
-    (text | model.phrase | countermark | motif)*,
+    (text | model.phrase | motif | countermark)+,
     att.global.attributes,
     
     ## describes the methods of recording of some watermark. Methods include: tracing, rubbing, etc.
-    attribute tracing { xsd:string }?,
+    attribute tracing { xsd:token }?,
     empty
   }
 msIdentifier =
