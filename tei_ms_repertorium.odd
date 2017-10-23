@@ -82,9 +82,9 @@
                 choice between unstructured and stuctured description. Remove attribute style from
                 msContents and msItemStruct. Now it is a global TEI attribute.</change>
             <change who="#atb" when="2012-02-07"> Changed the introduction to this file, header
-                information, added div elements. </change>
+                information, added div elements.</change>
             <change who="#atb" when="2012-02-04"> Changed the content of elements decoDesc and
-                decoNote </change>
+                decoNote</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -268,7 +268,7 @@
                                     xml:id="NBKM500">
                                     <country>Bulgaria</country>
                                     <settlement>Sofia</settlement>
-                                    <repository>SS Cyril and Methodius National Library </repository>
+                                    <repository>SS Cyril and Methodius National Library</repository>
                                     <idno type="shelfmark">500</idno>
                                     <altIdentifier>
                                         <idno type="catalogue">500</idno>
@@ -335,28 +335,26 @@
                         <desc>Allows structured description of binding characteristics in addition
                             to decoration and condition.</desc>
                         <classes mode="change">
-                            <memberOf key="att.global"/>
-                            <memberOf key="att.typed"/>
-                            <memberOf key="att.damaged"/>
+                            <memberOf key="att.global" mode="add"/>
+                            <memberOf key="att.typed" mode="add"/>
+                            <memberOf key="att.damaged" mode="add"/>
                         </classes>
                         <content>
-                            <rng:zeroOrMore>
-                                <rng:choice>
-                                    <rng:text/>
-                                    <rng:ref name="model.phrase"/>
-                                    <rng:ref name="decoNote"/>
-                                    <rng:ref name="condition"/>
-                                </rng:choice>
-                            </rng:zeroOrMore>
+                            <alternate minOccurs="1" maxOccurs="unbounded">
+                                <textNode/>
+                                <macroRef key="model.phrase"/>
+                                <elementRef key="decoNote"/>
+                                <elementRef key="condition"/>
+                            </alternate>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <bindingDesc>
                                     <binding notBefore="1700" notAfter="1800" contemporary="false">
                                         <bindingNote type="boards">Boards covered with ornamented
-                                            leather. </bindingNote>
+                                            leather.</bindingNote>
                                         <bindingNote type="ornaments">The ornaments consist of
-                                            florar motifs. </bindingNote>
+                                            florar motifs.</bindingNote>
                                         <bindingNote>
                                             <date>Probably the binding dates from the 18th
                                                 century.</date>
@@ -388,7 +386,7 @@
                             </alternate>
                         </content>
                         <exemplum>
-                            <p>TEI example: </p>
+                            <p>TEI example:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <collation>
                                     <p>
@@ -454,7 +452,7 @@
                                         262)</summary>
                                     <signatures>Original signatures in the beginning and in the end
                                         of each quire (<foreign xml:lang="cu">а҃ - л҃е</foreign>),
-                                        too. </signatures>
+                                        too.</signatures>
                                 </collation>
                             </egXML>
                         </exemplum>
@@ -521,7 +519,7 @@
                                             ве<supplied>ликомꙋ логоѳетꙋ м</supplied>итꙋ вѣчнѫѫ, и
                                         бг҃одарованныи б҃е <gap/>
                                         <unclear>идѡм</unclear>, зде и въ грѧдѫщомъ вѣцѣ, и нынѣ и
-                                            <supplied>присно </supplied> · въ вѣкы :· вѣкѡмъ :·
+                                            <supplied>присно</supplied> · въ вѣкы :· вѣкѡмъ :·
                                         амин꙽·</p>
                                 </colophon>
                             </egXML>
@@ -562,11 +560,11 @@
                         <desc>Contains a description of a cryptographic system used in a
                             manuscript.</desc>
                         <classes mode="change">
-                            <memberOf key="att.global"/>
-                            <memberOf key="att.typed"/>
+                            <memberOf key="att.global" mode="add"/>
+                            <memberOf key="att.typed" mode="add"/>
                         </classes>
                         <content>
-                            <rng:ref name="macro.paraContent"/>
+                            <macroRef key="macro.paraContent"/>
                         </content>
                         <exemplum>
                             <p>The <att>type</att> attribute specifies that the method is a simple
@@ -590,7 +588,7 @@
                         mode="add">
                         <desc>Contains a description of the grammar of a scribe.</desc>
                         <classes mode="replace">
-                            <memberOf key="att.global"/>
+                            <memberOf key="att.global" mode="add"/>
                         </classes>
                         <content>
                             <rng:ref name="macro.specialPara"/>
@@ -642,7 +640,7 @@
                                             forms <m xml:lang="cu">-ье</m> is preferred (cf. <w
                                                 xml:lang="cu">абье</w>, 24r.20).</item>
                                     </list>
-                                </grammar> Description of </egXML>
+                                </grammar> Description of …</egXML>
                         </exemplum>
                         <remarks>
                             <p>The description of grammatical characteristics can be divided into
@@ -657,8 +655,8 @@
                         <desc>Contains a description of the layout of the parchment according to the
                             Gregory rule.</desc>
                         <classes mode="change">
-                            <memberOf key="att.global"/>
-                            <memberOf key="att.typed"/>
+                            <memberOf key="att.global" mode="add"/>
+                            <memberOf key="att.typed" mode="add"/>
                         </classes>
                         <content>
                             <rng:ref name="macro.phraseSeq"/>
@@ -745,8 +743,8 @@
                         mode="add">
                         <desc>Contains a description of ink(s).</desc>
                         <classes mode="change">
-                            <memberOf key="att.global"/>
-                            <memberOf key="att.measurement"/>
+                            <memberOf key="att.global" mode="add"/>
+                            <memberOf key="att.measurement" mode="add"/>
                         </classes>
                         <content>
                             <rng:ref name="macro.phraseSeq"/>
@@ -801,7 +799,7 @@
                         mode="add">
                         <desc>Contains a description of lexical features of a scribe.</desc>
                         <classes mode="replace">
-                            <memberOf key="att.global"/>
+                            <memberOf key="att.global" mode="add"/>
                         </classes>
                         <content>
                             <rng:ref name="macro.specialPara"/>
@@ -817,7 +815,7 @@
                                     the old suffix <m xml:lang="cu" type="suffix">ицеѫ</m> and not
                                         <m xml:lang="cu" type="suffix">ждьі</m>. The following forms
                                     are considered to be relatively later: <foreign xml:lang="cu"
-                                        >благодать, написание, дрѧхлъ</foreign>. </lexis></egXML>
+                                        >благодать, написание, дрѧхлъ</foreign>.</lexis></egXML>
                         </exemplum>
                         <remarks>
                             <p>The lexical features of a scribe can be described similarly to
@@ -2060,11 +2058,8 @@
                     </elementSpec>
 
                     <elementSpec ident="scriptDesc" mode="change" module="msdescription">
-                        <desc>Repertorium model: Paleographic characteristics</desc>
                         <classes mode="change">
-                            <memberOf key="att.global.attributes"/>
-                            <memberOf key="att.handFeatures.attributes"/>
-                            <memberOf key="att.typed"/>
+                            <memberOf key="att.typed" mode="add"/>
                         </classes>
                         <content>
                             <alternate>
@@ -2086,7 +2081,7 @@
                             </attDef>
                         </attList>
                         <exemplum>
-                            <p>TEI example: </p>
+                            <p>TEI example:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <scriptDesc>
                                     <summary>Contains two distinct styles of scripts </summary>
@@ -2096,8 +2091,8 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Repertorium adds the optional attribute <att>script</att>, the values
-                                of which are supposed to come from codes of ISO 15924:2004, cf. <ptr
+                            <p>The Repertorium adds the optional attribute <att>script</att>, the
+                                values of which shoul∏d come from codes of ISO 15924:2004, cf. <ptr
                                     target="https://en.wikipedia.org/wiki/ISO_15924"/>. In the
                                 content of this element, <gi>musicNotation</gi> is moved here from
                                     <gi>physDesc</gi> and a new <gi>crypto</gi> Repertorium is
