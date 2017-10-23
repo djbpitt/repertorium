@@ -10,7 +10,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2017-10-23T10:56:15Z. .
+# Schema generated from ODD source 2017-10-23T18:59:36Z. .
 # TEI Edition: Version 3.2.0. Last updated on
 #	10th July 2017, revision 0fcf651
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -3439,7 +3439,7 @@ keywords =
     (term+ | \list),
     att.global.attributes,
     
-    ## The keywords element must have a scheme attribute with a value of Repertorium.
+    ## the keywords element must have a scheme attribute with a value of Repertorium
     attribute scheme {
       
       ## (Keywords must be specified within the Repertorium
@@ -3512,7 +3512,6 @@ scriptNote =
   ## describes a particular script distinguished within the description of a manuscript or similar resource. [10.7.2. Writing, Decoration, and Other Notations]
   element scriptNote {
     macro.specialPara,
-    att.typed.attributes,
     att.global.attributes,
     att.handFeatures.attributes,
     empty
@@ -4636,13 +4635,15 @@ stamp =
   }
 watermark =
   
-  ## The content of this element includes phrase level elements, as well as specialized elements like motif and countermark. There are several special attributes for the content of this element. tracing is used to describe very briefly (with one word) the method of watermark tracing. The most usual method is still drawing by hand, but there could be other possibilities, such as rubbing by hand, usage of special Dylux print paper, beta- or x-radiography, scanning, etc. The place attribute from the class att.placement can refine where on the pages the watermark can be seen, and may be described in relation to wire lines and chain (laid) lines. [10.3.3. Watermarks and Stamps]
+  ## contains a word or phrase describing a watermark or similar device. [10.3.3. Watermarks and Stamps]
   element watermark {
     (text | model.phrase | motif | countermark)+,
     att.global.attributes,
     
-    ## describes the methods of recording of some watermark. Methods include: tracing, rubbing, etc.
-    attribute tracing { xsd:token }?,
+    ## Describes the methods of recording of some watermark. Methods include: tracing, rubbing, etc.
+    attribute tracing {
+      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    }?,
     empty
   }
 msIdentifier =
@@ -4651,13 +4652,13 @@ msIdentifier =
   element msIdentifier {
     (msName+,
      model.pLike*,
-     placeName?,
-     bloc?,
-     country?,
-     region?,
-     settlement?,
-     district?,
-     geogName?,
+     placeName*,
+     bloc*,
+     country*,
+     region*,
+     settlement*,
+     district*,
+     geogName*,
      institution?,
      repository?,
      collection*,
@@ -4714,18 +4715,18 @@ altIdentifier =
   ## (alternative identifier) contains an alternative or former structured identifier used for a manuscript, such as a former catalogue number. [10.4. The Manuscript Identifier]
   element altIdentifier {
     (msName*,
-     placeName?,
-     bloc?,
-     country?,
-     region?,
-     settlement?,
-     district?,
-     geogName?,
+     placeName*,
+     bloc*,
+     country*,
+     region*,
+     settlement*,
+     district*,
+     geogName*,
      institution?,
      repository?,
      collection?,
-     idno,
-     note?,
+     idno*,
+     note*,
      altIdentifier*),
     att.global.attributes,
     att.typed.attributes,
@@ -4827,7 +4828,7 @@ msItemStruct =
   
   ## (structured manuscript item) contains a structured description for an individual work or item within the intellectual content of a manuscript or manuscript part. [10.6.1. The msItem and msItemStruct Elements]
   element msItemStruct {
-    ((locus? | locusGrp?),
+    ((locus | locusGrp)?,
      (model.pLike+
       | (title*,
          author*,
@@ -4877,13 +4878,14 @@ physDesc =
   
   ## (physical description) contains a full physical description of a manuscript or manuscript part, optionally subdivided using more specialized elements from the model.physDescPart class. [10.7. Physical Description]
   element physDesc {
-    (model.pLike*,
-     (objectDesc?,
-      ink?,
-      decoDesc?,
-      bindingDesc?,
-      sealDesc?,
-      additions*)),
+    (model.pLike+
+     | (summary?,
+        objectDesc?,
+        ink?,
+        decoDesc?,
+        bindingDesc?,
+        sealDesc?,
+        additions*)),
     att.global.attributes,
     empty
   }
@@ -4907,9 +4909,10 @@ supportDesc =
     (model.pLike+
      | (support?,
         extent?,
-        (foliation | pagination)*,
-        collation?,
-        condition?)),
+        foliation*,
+        pagination*,
+        collation*,
+        condition*)),
     att.global.attributes,
     
     ## a short project-defined name for the material composing the majority of the support
@@ -4988,14 +4991,16 @@ layout =
   }
 scriptDesc =
   
-  ## Repertorium model: Paleographic characteristics [10.7.2.1. Writing]
+  ## contains a description of the scripts used in a manuscript or similar source. [10.7.2.1. Writing]
   element scriptDesc {
-    (model.pLike+ | (summary?, scriptNote*, musicNotation*, crypto?)),
+    (model.pLike+ | (summary?, scriptNote*, musicNotation*, crypto*)),
     att.typed.attributes,
     att.global.attributes,
     
     ##
-    attribute script { xsd:string }?,
+    attribute script {
+      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    }?,
     empty
   }
 musicNotation =
@@ -5003,11 +5008,8 @@ musicNotation =
   ## contains description of type of musical notation. [10.7.2. Writing, Decoration, and Other Notations]
   element musicNotation {
     macro.specialPara,
-    att.global.attributes,
     att.typed.attributes,
-    
-    ##
-    attribute system { xsd:string }?,
+    att.global.attributes,
     empty
   }
 decoDesc =
@@ -5187,7 +5189,7 @@ msPart =
   
   ## (manuscript part) contains information about an originally distinct manuscript or part of a manuscript, which is now part of a composite manuscript. [10.10. Manuscript Parts]
   element msPart {
-    ((altIdentifier?, msIdentifier?, locus?, locusGrp?)*,
+    ((altIdentifier | msIdentifier | locus | locusGrp)*,
      model.headLike*,
      (model.pLike+
       | (physDesc?,
@@ -6522,9 +6524,9 @@ undo =
   }
 bindingNote =
   
-  ## Allows structured description of binding characteristics in addition to decoration and condition.
+  ## allows structured description of binding characteristics in addition to decoration and condition
   element re:bindingNote {
-    (text | model.phrase | decoNote | condition)*,
+    (text | model.phrase | decoNote | condition)+,
     att.global.attributes,
     att.typed.attributes,
     att.damaged.attributes,
@@ -6532,11 +6534,11 @@ bindingNote =
   }
 countermark =
   
-  ## Contains information about a second, subsidiary watermark.
+  ## contains information about a second, subsidiary watermark
   element re:countermark { (text | model.phrase | motif)* }
 crypto =
   
-  ## Contains a description of a cryptographic system used in a manuscript.
+  ## contains a description of a cryptographic system used in a manuscript
   element re:crypto {
     macro.paraContent,
     att.global.attributes,
@@ -6545,17 +6547,17 @@ crypto =
   }
 \grammar =
   
-  ## Contains a description of the grammar of a scribe.
+  ## contains a description of the grammar of a scribe
   element re:grammar { macro.specialPara, att.global.attributes, empty }
 gregoryRule =
   
-  ## Contains a description of the layout of the parchment according to the Gregory rule.
+  ## contains a description of the layout of the parchment according to the Gregory rule
   element re:gregoryRule {
     macro.phraseSeq, att.global.attributes, att.typed.attributes, empty
   }
 ink =
   
-  ## Contains a description of ink(s).
+  ## contains a description of ink(s)
   element re:ink {
     macro.phraseSeq,
     att.global.attributes,
@@ -6564,11 +6566,11 @@ ink =
   }
 lexis =
   
-  ## Contains a description of lexical features of a scribe.
+  ## contains a description of lexical features of a scribe
   element re:lexis { macro.specialPara, att.global.attributes, empty }
 motif =
   
-  ## (Watermark image type) Contains information about a watermark motif.
+  ## (Watermark image type) contains information about a watermark motif
   element re:motif {
     (text | model.phrase | motif)*,
     att.global.attributes,
@@ -6577,7 +6579,7 @@ motif =
   }
 orthNote =
   
-  ## Specifies a detail of the orthographic practice of a scribe.
+  ## specifies a detail of the orthographic practice of a scribe
   element re:orthNote {
     macro.specialPara,
     att.global.attributes,
@@ -6588,7 +6590,7 @@ orthNote =
   }
 orthography =
   
-  ## Contains a formal, structured description of the orthography of a scribe.
+  ## contains a formal, structured description of the orthography of a scribe
   element re:orthography {
     (model.pLike+ | (summary?, orthNote+)),
     att.global.attributes,
@@ -6597,7 +6599,7 @@ orthography =
   }
 pagination =
   
-  ## Contains information about the pagination of the codex, separately from information about the foliation.
+  ## contains information about the pagination of the codex, separately from information about the foliation
   element re:pagination {
     macro.specialPara,
     att.global.attributes,
@@ -6606,13 +6608,13 @@ pagination =
   }
 pricking =
   
-  ## Contains a description of pricking patterns in the manuscript.
+  ## contains a description of pricking patterns in the manuscript
   element re:pricking {
     macro.phraseSeq, att.global.attributes, att.typed.attributes, empty
   }
 quire =
   
-  ## Conains information that describes a quire or set of quires.
+  ## contains information that describes a quire or set of quires
   element re:quire {
     (model.pLike+
      | (summary?,
@@ -6628,7 +6630,7 @@ quire =
     att.global.attributes,
     att.typed.attributes,
     
-    ## Describes the status of the quire or folia: original, added, missing
+    ## describes the status of the quire or folia: original, added, missing
     attribute status {
       
       ## (Original quire is missing) 
@@ -6644,58 +6646,62 @@ quire =
   }
 ruling =
   
-  ## Contains information about ruling lines in the manuscript.
+  ## contains information about ruling lines in the manuscript
   element re:ruling {
     macro.phraseSeq, att.global.attributes, att.typed.attributes, empty
   }
 sampleText =
   
-  ## Wraps samples from the manuscript, both those with specific identities (such as head, incipit, etc.) and general ones (tagged as p).
+  ## wraps samples from the manuscript, both those with specific identities (such as head, incipit, etc.) and general ones (tagged as p)
   element re:sampleText {
-    (head | rubric | incipit)*,
-    (model.pLike | \div)*,
-    (explicit | finalRubric)*,
+    ((head | rubric | incipit)*,
+     (model.pLike | \div)*,
+     (explicit*, finalRubric*)?)?,
     att.divLike.attributes,
     att.declaring.attributes,
     att.global.attributes,
     att.typed.attributes,
     
     ##
-    attribute script { xsd:string }?,
+    attribute script {
+      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    }?,
     empty
   }
 scribe =
   
-  ## Contains a description of the paleography, orthography, and language of a scribe.
+  ## contains a description of the paleography, orthography, and language of a scribe
   element re:scribe {
     (locus | locusGrp)?,
     model.nameLike.agent?,
     scriptDesc?,
     scribeLang?,
-    bibl?,
-    note?,
+    bibl*,
+    note*,
     respStmt*,
     att.global.attributes,
     empty
   }
 scribeDesc =
   
-  ## Serves as a wrapper for scribe elements, so that the characteristics of each scribe can be described separately, while also being bundled together.
+  ## serves as a wrapper for scribe elements, so that the characteristics of each scribe can be described separately, while also being bundled together
   element re:scribeDesc {
-    (model.pLike+ | (summary?, scribe*)),
+    (model.pLike+ | (summary?, scribe*))?,
     att.global.attributes,
     empty
   }
 scribeLang =
   
-  ## Contains a description of the orthography and language of the scribe.
+  ## contains a description of the orthography and language of the scribe
   element re:scribeLang {
-    (model.pLike+ | (summary?, orthography?, \grammar?, lexis?)),
+    (model.pLike* | (summary?, orthography?, \grammar?, lexis?)),
     att.global.attributes,
     att.typed.attributes,
     
     ##
-    attribute script { xsd:string }?,
+    attribute script {
+      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    }?,
     empty
   }
 start = TEI | msDesc

@@ -215,12 +215,12 @@
                         <content>
                             <sequence>
                                 <elementRef key="msName" minOccurs="0" maxOccurs="unbounded"/>
-                                <classRef key="model.placeNamePart" expand="sequenceOptional"/>
-                                <elementRef key="institution" minOccurs="0"/>
-                                <elementRef key="repository" minOccurs="0"/>
-                                <elementRef key="collection" minOccurs="0"/>
-                                <elementRef key="idno"/>
-                                <elementRef key="note" minOccurs="0"/>
+                                <classRef key="model.placeNamePart" expand="sequenceOptionalRepeatable"/>
+                                <elementRef key="institution" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="repository" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="collection" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="altIdentifier" minOccurs="0" maxOccurs="unbounded"
                                 />
                             </sequence>
@@ -908,7 +908,7 @@
                             <attDef ident="type" usage="opt">
                                 <desc>describes the type of the text</desc>
                                 <datatype>
-                                    <dataRef name="teidata.enumerated"/>
+                                    <dataRef key="teidata.enumerated"/>
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="original">
@@ -1162,7 +1162,7 @@
                                     <elementRef key="locus"/>
                                     <elementRef key="locusGrp"/>
                                 </alternate>
-                                <classRef key="model.headLike"/>
+                                <classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded"/>
                                 <alternate minOccurs="1" maxOccurs="1">
                                     <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
                                     <sequence>
@@ -1458,12 +1458,13 @@
                             <alternate>
                                 <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
                                 <sequence>
+                                    <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
                                     <elementRef key="objectDesc" minOccurs="0" maxOccurs="1"/>
                                     <elementRef key="ink" minOccurs="0" maxOccurs="1"/>
                                     <elementRef key="decoDesc" minOccurs="0" maxOccurs="1"/>
                                     <elementRef key="bindingDesc" minOccurs="0" maxOccurs="1"/>
                                     <elementRef key="sealDesc" minOccurs="0" maxOccurs="1"/>
-                                    <elementRef key="additions" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="additions" minOccurs="0" maxOccurs="unbounded"/>
                                 </sequence>
                             </alternate>
                         </content>
@@ -1618,7 +1619,7 @@
                         </classes>
                         <content>
                             <alternate>
-                                <classRef key="mode.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
                                 <sequence>
                                     <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
                                     <elementRef key="locus" minOccurs="0" maxOccurs="1"/>
@@ -1639,7 +1640,7 @@
                                         <val>original</val>, <val>added</val>,
                                     <val>missing</val></desc>
                                 <datatype>
-                                    <dataRef name="teidata.word"/>
+                                    <dataRef key="teidata.word"/>
                                 </datatype>
                                 <valList type="closed" mode="add">
                                     <valItem ident="missing">
@@ -1730,11 +1731,11 @@
                         </classes>
                         <content>
                             <sequence minOccurs="0" maxOccurs="1">
-                                <sequence minOccurs="0" maxOccurs="1">
-                                    <elementRef key="head" minOccurs="0" maxOccurs="unbounded"/>
-                                    <elementRef key="incipit" minOccurs="0" maxOccurs="unbounded"/>
-                                    <elementRef key="rubric" minOccurs="0" maxOccurs="unbounded"/>
-                                </sequence>
+                                <alternate minOccurs="0" maxOccurs="unbounded">
+                                    <elementRef key="head"/>
+                                    <elementRef key="rubric"/>
+                                    <elementRef key="incipit"/>
+                                </alternate>
                                 <alternate minOccurs="0" maxOccurs="unbounded">
                                     <classRef key="model.pLike"/>
                                     <elementRef key="div"/>
@@ -1749,7 +1750,7 @@
                         <attList>
                             <attDef ident="script" usage="opt">
                                 <datatype>
-                                    <dataRef key="teidata.text"/>
+                                    <dataRef key="teidata.word"/>
                                 </datatype>
                             </attDef>
                         </attList>
@@ -1793,7 +1794,7 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="1">
                                 <elementRef key="locus"/>
-                                <elementRef key="locusGroup"/>
+                                <elementRef key="locusGrp"/>
                             </alternate>
                             <classRef key="model.nameLike.agent" minOccurs="0" maxOccurs="1"/>
                             <elementRef key="scriptDesc" minOccurs="0" maxOccurs="1"/>
@@ -1922,7 +1923,7 @@
                         <attList>
                             <attDef ident="script" usage="opt">
                                 <datatype>
-                                    <dataRef key="teidata.text"/>
+                                    <dataRef key="teidata.word"/>
                                 </datatype>
                             </attDef>
                         </attList>
@@ -1965,7 +1966,7 @@
                         <attList>
                             <attDef ident="script" usage="opt">
                                 <datatype>
-                                    <dataRef key="teidata.text"/>
+                                    <dataRef key="teidata.word"/>
                                 </datatype>
                             </attDef>
                         </attList>
@@ -2079,7 +2080,7 @@
                                 <desc>Describes the methods of recording of some watermark. Methods
                                     include: tracing, rubbing, etc.</desc>
                                 <datatype>
-                                    <dataRef name="teidata.word"/>
+                                    <dataRef key="teidata.word"/>
                                 </datatype>
                             </attDef>
                         </attList>
