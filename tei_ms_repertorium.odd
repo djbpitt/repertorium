@@ -999,36 +999,24 @@
 
                     <elementSpec ident="msIdentifier" module="msdescription" mode="change">
                         <content>
-                            <rng:zeroOrMore>
-                                <rng:ref name="msName"/>
-                            </rng:zeroOrMore>
-                            <rng:zeroOrMore>
-                                <rng:zeroOrMore>
-                                    <rng:ref name="p"/>
-                                </rng:zeroOrMore>
-                                <rng:zeroOrMore>
-                                    <rng:ref name="model.placeNamePart_sequenceOptional"/>
-                                </rng:zeroOrMore>
-                                <rng:optional>
-                                    <rng:ref name="institution"/>
-                                </rng:optional>
-                                <rng:optional>
-                                    <rng:ref name="repository"/>
-                                </rng:optional>
-                                <rng:zeroOrMore>
-                                    <rng:ref name="collection"/>
-                                </rng:zeroOrMore>
-                                <rng:optional>
-                                    <rng:ref name="idno"/>
-                                </rng:optional>
-                                <rng:optional>
-                                    <rng:ref name="note"/>
-                                </rng:optional>
-                            </rng:zeroOrMore>
-                            <rng:zeroOrMore>
-                                <rng:ref name="altIdentifier"/>
-                            </rng:zeroOrMore>
+                            <sequence>
+                                <elementRef key="msName" minOccurs="1" maxOccurs="unbounded"/>
+                                <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"/>
+                                <classRef key="model.placeNamePart" expand="sequenceOptional"/>
+                                <elementRef key="institution" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="repository" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="collection" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="altIdentifier" minOccurs="0" maxOccurs="unbounded"
+                                />
+                            </sequence>
                         </content>
+                        <remarks>
+                            <p>The Repertorium puts <gi>msName</gi> first, in keeping with common
+                                Slavistic cataloguing practice. We also allow <gi>p</gi> and
+                                    <gi>note</gi> child elements.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="msItemStruct" module="msdescription" mode="change">

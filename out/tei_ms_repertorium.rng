@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-10-23T09:13:40Z. .
+Schema generated from ODD source 2017-10-23T09:51:52Z. .
 TEI Edition: Version 3.2.0. Last updated on
 	10th July 2017, revision 0fcf651
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -7754,16 +7754,34 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
    <define name="msIdentifier">
       <element name="msIdentifier">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(manuscript identifier) contains the information required to identify the manuscript being described. [10.4. The Manuscript Identifier]</a:documentation>
-         <zeroOrMore>
-            <ref name="msName"/>
-         </zeroOrMore>
-         <zeroOrMore>
+         <group>
+            <oneOrMore>
+               <ref name="msName"/>
+            </oneOrMore>
             <zeroOrMore>
-               <ref name="p"/>
+               <ref name="model.pLike"/>
             </zeroOrMore>
-            <zeroOrMore>
-               <ref name="model.placeNamePart_sequenceOptional"/>
-            </zeroOrMore>
+            <optional>
+               <ref name="placeName"/>
+            </optional>
+            <optional>
+               <ref name="bloc"/>
+            </optional>
+            <optional>
+               <ref name="country"/>
+            </optional>
+            <optional>
+               <ref name="region"/>
+            </optional>
+            <optional>
+               <ref name="settlement"/>
+            </optional>
+            <optional>
+               <ref name="district"/>
+            </optional>
+            <optional>
+               <ref name="geogName"/>
+            </optional>
             <optional>
                <ref name="institution"/>
             </optional>
@@ -7773,16 +7791,16 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
             <zeroOrMore>
                <ref name="collection"/>
             </zeroOrMore>
-            <optional>
+            <zeroOrMore>
                <ref name="idno"/>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                <ref name="note"/>
-            </optional>
-         </zeroOrMore>
-         <zeroOrMore>
-            <ref name="altIdentifier"/>
-         </zeroOrMore>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="altIdentifier"/>
+            </zeroOrMore>
+         </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei_ms_repertorium-msIdentifier-msId_minimal-constraint-report-19">
             <rule context="tei:msIdentifier">
@@ -7968,7 +7986,7 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
                   <ref name="title"/>
                </optional>
                <zeroOrMore>
-                  <ref name="title"/>
+                  <ref name="author"/>
                </zeroOrMore>
                <zeroOrMore>
                   <ref name="respStmt"/>

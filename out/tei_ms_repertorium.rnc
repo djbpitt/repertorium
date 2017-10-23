@@ -10,7 +10,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2017-10-23T09:13:48Z. .
+# Schema generated from ODD source 2017-10-23T09:52:02Z. .
 # TEI Edition: Version 3.2.0. Last updated on
 #	10th July 2017, revision 0fcf651
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -4649,15 +4649,21 @@ msIdentifier =
   
   ## (manuscript identifier) contains the information required to identify the manuscript being described. [10.4. The Manuscript Identifier]
   element msIdentifier {
-    msName*,
-    (p*,
-     model.placeNamePart_sequenceOptional*,
+    (msName+,
+     model.pLike*,
+     placeName?,
+     bloc?,
+     country?,
+     region?,
+     settlement?,
+     district?,
+     geogName?,
      institution?,
      repository?,
      collection*,
-     idno?,
-     note?)*,
-    (altIdentifier*)
+     idno*,
+     note*,
+     altIdentifier*)
     >> sch:pattern [
          id =
            "tei_ms_repertorium-msIdentifier-msId_minimal-constraint-report-19"
@@ -4790,7 +4796,7 @@ msContents =
      | (summary?,
         titlePage?,
         title?,
-        title*,
+        author*,
         respStmt*,
         model.noteLike*,
         filiation*,
