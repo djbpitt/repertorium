@@ -450,12 +450,14 @@
 
                     <elementSpec ident="colophon" mode="change">
                         <content>
-                            <rng:optional>
-                                <rng:ref name="model.pLike.front"/>
-                            </rng:optional>
-                            <rng:oneOrMore>
-                                <rng:ref name="model.pLike"/>
-                            </rng:oneOrMore>
+                            <alternate>
+                                <macroRef key="macro.phraseSeq"/>
+                                <sequence>
+                                    <classRef key="model.headLike" minOccurs="0" maxOccurs="1"/>
+                                    <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"
+                                    />
+                                </sequence>
+                            </alternate>
                         </content>
                         <exemplum>
                             <p>TEI example:</p>
@@ -463,14 +465,14 @@
                                 <colophon>Explicit venenum viciorum domini illius, qui comparavit
                                     Anno domini Millessimo Trecentesimo nonagesimo primo, Sabbato in
                                     festo sancte Marthe virginis gloriose. Laus tibi criste quia
-                                    finitur libellus iste. </colophon>
+                                    finitur libellus iste.</colophon>
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>In TEI <gi>colophon</gi> is a phrase level element. For longer
-                                colophons with headings and more than one paragraphs we need
-                                reformulation of the XML content. This is example is from
-                                AB674NBKM.xml: </p>
+                            <p>In TEI <gi>colophon</gi> is a phrase-level element. Because longer
+                                colophons may have headings and multiple paragraphs, we extend the
+                                TEI model to permit paragraph-line content items. The following
+                                example is from AB674NBKM.xml: </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <colophon>
                                     <head xml:lang="grc">Ο ΧΣ ΕΣΤΙ ΑΡΧΗ ΚΑΙ ΤΕΛΟΣ</head>
