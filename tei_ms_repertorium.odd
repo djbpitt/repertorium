@@ -89,166 +89,70 @@
             <div>
                 <head>Repertorium manuscript description model based on TEI</head>
                 <p>This TEI customization describes a schema that includes several of the TEI (P5)
-                    modules and is especially designed to be used for manuscript description. This
-                    customization changes declarations for many of the TEI elements that are
-                    intended for manuscript description. In doing this a special emphasis is put on
-                    the tradition for description of Slavic manuscripts. However, this model could
-                    be used in the description of other European medieval manuscript traditions. The
-                    TEI modules in use are: <list>
-                        <item>analysis - optional</item>
-                        <item>certainty - optional</item>
-                        <item>core - required</item>
-                        <item>figures - optional</item>
-                        <item>header - required</item>
-                        <item>msdescription - optional</item>
-                        <item>namesdates - optional</item>
-                        <item>tei - required</item>
-                        <item>textstructure - required</item>
-                        <item>transcr - optional</item>
-                    </list></p>
-                <p>From the preceding modules we exclude the following TEI elements: <list>
-                    <item><gi>address</gi></item>
-                    <item><gi>addrLine</gi></item>
-                    <item><gi>alt</gi></item>
-                    <item><gi>altGrp</gi></item>
-                    <item><gi>appInfo</gi></item>
-                    <item><gi>application</gi></item>
-                    <item><gi>argument</gi></item>
-                    <item><gi>biblFull</gi></item>
-                    <item><gi>binaryObject</gi></item>
-                    <item><gi>byline</gi></item>
-                    <item><gi>climate</gi></item>
-                    <item><gi>closer</gi></item>
-                    <item><gi>correction</gi></item>
-                    <item><gi>correspAction</gi></item>
-                    <item><gi>correspContext</gi></item>
-                    <item><gi>correspDesc</gi></item>
-                    <item><gi>dateline</gi></item>
-                    <item><gi>distributior</gi></item>
-                    <item><gi>div1</gi></item>
-                    <item><gi>div2</gi></item>
-                    <item><gi>div3</gi></item>
-                    <item><gi>div4</gi></item>
-                    <item><gi>div5</gi></item>
-                    <item><gi>div6</gi></item>
-                    <item><gi>div7</gi></item>
-                    <item><gi>divGen</gi></item>
-                    <item><gi>docAuthor</gi></item>
-                    <item><gi>docDate</gi></item>
-                    <item><gi>docEdition</gi></item>
-                    <item><gi>docImprint</gi></item>
-                    <item><gi>docTitle</gi></item>
-                    <item><gi>floatingText</gi></item>
-                    <item><gi>funder</gi></item>
-                    <item><gi>handDesc</gi></item>
-                    <item><gi>handNote</gi></item>
-                    <item><gi>hyphenation</gi></item>
-                    <item><gi>interp</gi></item>
-                    <item><gi>interpGrp</gi></item>
-                    <item><gi>interpretation</gi></item>
-                    <item><gi>join</gi></item>
-                    <item><gi>joinGrp</gi></item>
-                    <item><gi>langKnowledge</gi></item>
-                    <item><gi>langKnown</gi></item>
-                    <item><gi>link</gi></item>
-                    <item><gi>linkGrp</gi></item>
-                    <item><gi>listEvent</gi></item>
-                    <item><gi>listNym</gi></item>
-                    <item><gi>listOrg</gi></item>
-                    <item><gi>listTranspose</gi></item>
-                    <item><gi>metamark</gi></item>
-                    <item><gi>msItem</gi></item>
-                    <item><gi>namespace</gi></item>
-                    <item><gi>normalization</gi></item>
-                    <item><gi>notesStmt</gi></item>
-                    <item><gi>nym</gi></item>
-                    <item><gi>offset</gi></item>
-                    <item><gi>opener</gi></item>
-                    <item><gi>population</gi></item>
-                    <item><gi>postBox</gi></item>
-                    <item><gi>postCode</gi></item>
-                    <item><gi>postscript</gi></item>
-                    <item><gi>principal</gi></item>
-                    <item><gi>punctuation</gi></item>
-                    <item><gi>quotation</gi></item>
-                    <item><gi>respons</gi></item>
-                    <item><gi>salute</gi></item>
-                    <item><gi>samplingDecl</gi></item>
-                    <item><gi>segmentation</gi></item>
-                    <item><gi>sex</gi></item>
-                    <item><gi>signed</gi></item>
-                    <item><gi>socecStatus</gi></item>
-                    <item><gi>span</gi></item>
-                    <item><gi>spanGrp</gi></item>
-                    <item><gi>sponsor</gi></item>
-                    <item><gi>state</gi></item>
-                    <item><gi>stdVals</gi></item>
-                    <item><gi>street</gi></item>
-                    <item><gi>styleDefDecl</gi></item>
-                    <item><gi>surface</gi></item>
-                    <item><gi>surfaceGrp</gi></item>
-                    <item><gi>tagsDecl</gi></item>
-                    <item><gi>tagUsage</gi></item>
-                    <item><gi>teiCorpus</gi></item>
-                    <item><gi>terrain</gi></item>
-                    <item><gi>typeDesc</gi></item>
-                    <item><gi>typeNote</gi></item>
-                    <item><gi>xenoData</gi></item>
-                    <item><gi>zone</gi></item>
-                    
-                    </list>
-                </p>
-                <p>The following TEI elements are modified: <list>
-                        <item><gi>additions</gi></item>
-                        <item><gi>altIdentifier</gi></item>
-                        <item><gi>binding</gi></item>
-                        <item><gi>collation</gi></item>
-                        <item><gi>colophon</gi></item>
-                        <item><gi>history</gi></item>
-                        <item><gi>keywords</gi></item>
-                        <item><gi>msContents</gi></item>
-                        <item><gi>msDesc</gi></item>
-                        <item><gi>msIdentifier</gi></item>
-                        <item><gi>msItemStruct</gi></item>
-                        <item><gi>msPart</gi></item>
-                        <item><gi>musicNotation</gi></item>
-                        <item><gi>physDesc</gi></item>
-                        <item><gi>scriptDesc</gi></item>
-                        <item><gi>scriptNote</gi></item>
-                        <item><gi>supportDesc</gi></item>
-                        <item><gi>watermark</gi></item>
-                    </list></p>
-                <p>The following new elements are declared in the Repertorium namespace: <list>
-                        <item><gi>bindingNote</gi></item>
-                        <item><gi>countermark</gi></item>
-                        <item><gi>crypto</gi></item>
-                        <item><gi>grammar</gi></item>
-                        <item><gi>gregoryRule</gi></item>
-                        <item><gi>ink</gi></item>
-                        <item><gi>lexis</gi></item>
-                        <item><gi>motif</gi></item>
-                        <item><gi>orthNote</gi></item>
-                        <item><gi>orthography</gi></item>
-                        <item><gi>pagination</gi></item>
-                        <item><gi>pricking</gi></item>
-                        <item><gi>quire</gi></item>
-                        <item><gi>ruling</gi></item>
-                        <item><gi>sampleText</gi></item>
-                        <item><gi>scribe</gi></item>
-                        <item><gi>scribeDesc</gi></item>
-                        <item><gi>scribeLang</gi></item>
-                    </list></p>
+                    modules and is especially designed to be used for manuscript description within
+                    the framework of the Repertorium of Old Bulgarian Literature and Letters (<ptr
+                        target="http://repertorium.obdurodon.org"/>). The modifications were
+                    motivated by the Slavistic codicological tradition, but the model may also be
+                    useful for describing other European medieval manuscripts.</p>
+                <p>The TEI modules in use are: <ident>analysis</ident> (optional),
+                        <ident>certainty</ident> (optional), <ident>core</ident> (required),
+                        <ident>figures</ident> (optional), <ident>header</ident> (required),
+                        <ident>msdescription</ident> (optional), <ident>namesdates</ident>
+                    (optional), <ident>tei</ident> (required), <ident>textstructure</ident>
+                    (required), <ident>transcr</ident> (optional).</p>
+                <p>From the preceding modules we exclude the following TEI elements:
+                        <gi>address</gi>, <gi>addrLine</gi>, <gi>alt</gi>, <gi>altGrp</gi>,
+                        <gi>appInfo</gi>, <gi>application</gi>, <gi>argument</gi>,
+                    <gi>biblFull</gi>, <gi>binaryObject</gi>, <gi>byline</gi>, <gi>climate</gi>,
+                        <gi>closer</gi>, <gi>correction</gi>, <gi>correspAction</gi>,
+                        <gi>correspContext</gi>, <gi>correspDesc</gi>, <gi>dateline</gi>,
+                        <gi>distributior</gi>, <gi>div1</gi>, <gi>div2</gi>, <gi>div3</gi>,
+                        <gi>div4</gi>, <gi>div5</gi>, <gi>div6</gi>, <gi>div7</gi>, <gi>divGen</gi>,
+                        <gi>docAuthor</gi>, <gi>docDate</gi>, <gi>docEdition</gi>,
+                        <gi>docImprint</gi>, <gi>docTitle</gi>, <gi>floatingText</gi>,
+                        <gi>funder</gi>, <gi>handDesc</gi>, <gi>handNote</gi>, <gi>hyphenation</gi>,
+                        <gi>interp</gi>, <gi>interpGrp</gi>, <gi>interpretation</gi>, <gi>join</gi>,
+                        <gi>joinGrp</gi>, <gi>langKnowledge</gi>, <gi>langKnown</gi>, <gi>link</gi>,
+                        <gi>linkGrp</gi>, <gi>listEvent</gi>, <gi>listNym</gi>, <gi>listOrg</gi>,
+                        <gi>listTranspose</gi>, <gi>metamark</gi>, <gi>msFrag</gi>, <gi>msItem</gi>,
+                        <gi>namespace</gi>, <gi>normalization</gi>, <gi>notesStmt</gi>,
+                    <gi>nym</gi>, <gi>offset</gi>, <gi>opener</gi>, <gi>population</gi>,
+                        <gi>postBox</gi>, <gi>postCode</gi>, <gi>postscript</gi>,
+                    <gi>principal</gi>, <gi>punctuation</gi>, <gi>quotation</gi>, <gi>respons</gi>,
+                        <gi>salute</gi>, <gi>samplingDecl</gi>, <gi>segmentation</gi>, <gi>sex</gi>,
+                        <gi>signed</gi>, <gi>socecStatus</gi>, <gi>span</gi>, <gi>spanGrp</gi>,
+                        <gi>sponsor</gi>, <gi>state</gi>, <gi>stdVals</gi>, <gi>street</gi>,
+                        <gi>styleDefDecl</gi>, <gi>surface</gi>, <gi>surfaceGrp</gi>,
+                        <gi>tagsDecl</gi>, <gi>tagUsage</gi>, <gi>teiCorpus</gi>, <gi>terrain</gi>,
+                        <gi>typeDesc</gi>, <gi>typeNote</gi>, <gi>xenoData</gi>, <gi>zone</gi>.</p>
+                <p>The content models of the following elements in the TEI namespace have been
+                    modified: <gi>additions</gi>, <gi>altIdentifier</gi>, <gi>binding</gi>,
+                        <gi>collation</gi>, <gi>colophon</gi>, <gi>history</gi>, <gi>keywords</gi>,
+                        <gi>msContents</gi>, <gi>msDesc</gi>, <gi>msIdentifier</gi>,
+                        <gi>msItemStruct</gi>, <gi>msPart</gi>, <gi>musicNotation</gi>,
+                        <gi>physDesc</gi>, <gi>scriptDesc</gi>, <gi>scriptNote</gi>,
+                        <gi>supportDesc</gi>, <gi>watermark</gi>. The class membership of
+                        <gi>accMat</gi> has been modified to remove it from <gi>physDesc</gi> and
+                    into <gi>history</gi>, but its content model remains the same.</p>
+                <p>The following new elements are declared in the Repertorium namespace
+                        (<val>http://www.ilit.bas.bg/repertorium/ns/3</val>, for which we use the
+                    namespace prefix <code>re:</code>): <gi>bindingNote</gi>, <gi>countermark</gi>,
+                        <gi>crypto</gi>, <gi>grammar</gi>, <gi>gregoryRule</gi>, <gi>ink</gi>,
+                        <gi>lexis</gi>, <gi>motif</gi>, <gi>orthNote</gi>, <gi>orthography</gi>,
+                        <gi>pagination</gi>, <gi>pricking</gi>, <gi>quire</gi>, <gi>ruling</gi>,
+                        <gi>sampleText</gi>, <gi>scribe</gi>, <gi>scribeDesc</gi>,
+                        <gi>scribeLang</gi>.</p>
             </div>
 
             <div>
                 <head>Schema, modules, class and element specifications</head>
-
                 <schemaSpec ident="tei_ms_repertorium" start="TEI msDesc" source="tei:3.2.0">
                     <!-- required modules -->
                     <moduleRef key="header"
                         except="appInfo application biblFull correction correspAction correspContext correspDesc distributior funder hyphenation interpretation namespace normalization notesStmt principal punctuation quotation samplingDecl segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl xenoData"/>
                     <moduleRef key="linking" except="alt altGrp join joinGrp link linkGrp"/>
-                    <moduleRef key="core" except="addrLine address binaryObject divGen postBox postCode street teiCorpus"/>
+                    <moduleRef key="core"
+                        except="addrLine address binaryObject divGen postBox postCode street teiCorpus"/>
                     <moduleRef key="tei"/>
                     <moduleRef key="textstructure"
                         except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7  docAuthor docDate docEdition docImprint docTitle floatingText opener postscript salute signed"/>
@@ -256,12 +160,21 @@
                     <moduleRef key="analysis" except="interp interpGrp span spanGrp"/>
                     <moduleRef key="certainty" except="respons"/>
                     <moduleRef key="figures"/>
-                    <moduleRef key="msdescription" except="handDesc handNote msItem typeNote typeDesc"/>
-                    <moduleRef key="namesdates" except="climate langKnowledge langKnown listEvent listNym  listOrg nym offset population sex socecStatus state terrain"/>
+                    <moduleRef key="msdescription"
+                        except="handDesc handNote msFrag msItem typeNote typeDesc"/>
+                    <moduleRef key="namesdates"
+                        except="climate langKnowledge langKnown listEvent listNym  listOrg nym offset population sex socecStatus state terrain"/>
                     <moduleRef key="transcr" except="listTranspose surface surfaceGrp metamark zone"/>
 
                     <classSpec ident="model.physDescPart" type="model" mode="delete"
                         module="msdescription"/>
+
+                    <elementSpec ident="accMat" module="msdescription" mode="change">
+                        <!-- This change removes <accMat> from the <physDesc>; it is then added to <history> -->
+                        <classes>
+                            <memberOf key="model.physDescPart" mode="delete"/>
+                        </classes>
+                    </elementSpec>
 
                     <elementSpec ident="additions" module="msdescription" mode="change">
                         <classes mode="change">
@@ -270,123 +183,120 @@
                         </classes>
                         <exemplum>
                             <p>This is the original TEI example.</p>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><additions>
- <p>There are several marginalia in this manuscript. Some consist of
-   single characters and others are figurative. On 8v is to be found a drawing of
-   a mans head wearing a hat. At times sentences occurs: On 5v:
- <q xml:lang="is">Her er skrif andres isslendin</q>,
-   on 19r: <q xml:lang="is">þeim go</q>,
-   on 21r: <q xml:lang="is">amen med aund ok munn halla rei knar hofud summu all huad
-     batar þad mælgi ok mal</q>,
-   On 21v: some runic letters and the sentence <q xml:lang="la">aue maria gracia plena dominus</q>.</p>
-</additions></egXML>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><additions>
+                                    <p>There are several marginalia in this manuscript. Some consist
+                                        of single characters and others are figurative. On 8v is to
+                                        be found a drawing of a mans head wearing a hat. At times
+                                        sentences occurs: On 5v: <q xml:lang="is">Her er skrif
+                                            andres isslendin</q>, on 19r: <q xml:lang="is">þeim
+                                            go</q>, on 21r: <q xml:lang="is">amen med aund ok munn
+                                            halla rei knar hofud summu all huad batar þad mælgi ok
+                                            mal</q>, On 21v: some runic letters and the sentence <q
+                                            xml:lang="la">aue maria gracia plena dominus</q>.</p>
+                                </additions></egXML>
                         </exemplum>
                         <exemplum>
-                            <p>The Repertorium adds attributes for type and dating, as in the
+                            <p>The Repertorium adds attributes for typing and dating, as in the
                                 following example from AA308NBKM.xml:</p>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><additions type="inscriptions">
-    <locus>f. 131r</locus>
-    <quote xml:lang="cu">вь лѣто зѯи҃ сиие лето бисть соуша велика не роди
-        се<unclear>...</unclear>. бисть неволꙗ и зла. велика ѡ҃т҃
-        тоурци</quote>
-</additions></egXML>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><additions
+                                    type="inscriptions">
+                                    <locus>f. 131r</locus>
+                                    <quote xml:lang="cu">вь лѣто зѯи҃ сиие лето бисть соуша велика
+                                        не роди се<unclear>...</unclear>. бисть неволꙗ и зла. велика
+                                        ѡ҃т҃ тоурци</quote>
+                                </additions></egXML>
                         </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="altIdentifier" module="msdescription" mode="change">
                         <content>
-                            <rng:zeroOrMore>
-                                <rng:ref name="msName"/>
-                            </rng:zeroOrMore>
-                            <rng:zeroOrMore>
-                                <rng:zeroOrMore>
-                                    <rng:ref name="model.placeNamePart_sequenceOptional"/>
-                                </rng:zeroOrMore>
-                                <rng:optional>
-                                    <rng:ref name="institution"/>
-                                </rng:optional>
-                                <rng:optional>
-                                    <rng:ref name="repository"/>
-                                </rng:optional>
-                                <rng:zeroOrMore>
-                                    <rng:ref name="collection"/>
-                                </rng:zeroOrMore>
-                                <rng:optional>
-                                    <rng:ref name="idno"/>
-                                </rng:optional>
-                                <rng:optional>
-                                    <rng:ref name="note"/>
-                                </rng:optional>
-                                <rng:optional>
-                                    <rng:ref name="altIdentifier"/>
-                                </rng:optional>
-                            </rng:zeroOrMore>
+                            <sequence>
+                                <elementRef key="msName" minOccurs="0" maxOccurs="unbounded"/>
+                                <classRef key="model.placeNamePart" expand="sequenceOptional"/>
+                                <elementRef key="institution" minOccurs="0"/>
+                                <elementRef key="repository" minOccurs="0"/>
+                                <elementRef key="collection" minOccurs="0"/>
+                                <elementRef key="idno"/>
+                                <elementRef key="note" minOccurs="0"/>
+                                <elementRef key="altIdentifier" minOccurs="0" maxOccurs="unbounded"
+                                />
+                            </sequence>
                         </content>
                         <exemplum>
                             <p>This is the original TEI example.</p>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <altIdentifier>
- <settlement>San Marino</settlement>
- <repository>Huntington Library</repository>
- <idno>MS.El.26.C.9</idno>
-</altIdentifier></egXML>
+                                    <settlement>San Marino</settlement>
+                                    <repository>Huntington Library</repository>
+                                    <idno>MS.El.26.C.9</idno>
+                                </altIdentifier></egXML>
                         </exemplum>
                         <exemplum>
-                            <p>The Repertorium adds msName element as first child of altIdentifier,
-                                as in the following example from MDMarianus.xml:</p>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
+                            <p>The Repertorium adds the <gi>msName</gi> element as an optional and
+                                repeatable first child of <gi>altIdentifier</gi>, as in the
+                                following example from MDMarianus.xml:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <altIdentifier select="171ff" xml:id="Grig6" type="partial">
-                        <msName type="individual" xml:lang="en">Grigorovič Gospel Book</msName>
-                        <msName type="individual" xml:lang="bg">Григоровичово четвероевангелие</msName>
-                        <msName type="individual" xml:lang="ru">Четвероевангелие Григоровича</msName>
-                        <msName type="individual" xml:lang="en">Athonite Gospel Book</msName>
-                        <msName type="individual" xml:lang="bg" select="whole">Атонско четвероевангелие</msName>
-                        <msName type="individual" xml:lang="ru" select="whole">Афонское четвероевангелие</msName>
-                        <country>Russia</country>
-                        <settlement>Moscow</settlement>
-                        <repository>Russian State Library</repository>
-                        <collection>В. Григорович</collection>
-                        <idno type="shelfmark">6</idno>
-                    </altIdentifier>
+                                    <msName type="individual" xml:lang="en">Grigorovič Gospel
+                                        Book</msName>
+                                    <msName type="individual" xml:lang="bg">Григоровичово
+                                        четвероевангелие</msName>
+                                    <msName type="individual" xml:lang="ru">Четвероевангелие
+                                        Григоровича</msName>
+                                    <msName type="individual" xml:lang="en">Athonite Gospel
+                                        Book</msName>
+                                    <msName type="individual" xml:lang="bg" select="whole">Атонско
+                                        четвероевангелие</msName>
+                                    <msName type="individual" xml:lang="ru" select="whole">Афонское
+                                        четвероевангелие</msName>
+                                    <country>Russia</country>
+                                    <settlement>Moscow</settlement>
+                                    <repository>Russian State Library</repository>
+                                    <collection>В. Григорович</collection>
+                                    <idno type="shelfmark">6</idno>
+                                </altIdentifier>
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
-                             ``<altIdentifier xml:id="NBKM500">
+                            <p>The Repertorium model also permits <gi>altIdentifier</gi> as the last
+                                and repeatable child of <gi>altIdentifier</gi>, as in the following
+                                examples from NBKM500.xml:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><altIdentifier
+                                    xml:id="NBKM500">
                                     <country>Bulgaria</country>
                                     <settlement>Sofia</settlement>
                                     <repository>SS Cyril and Methodius National Library </repository>
                                     <idno type="shelfmark">500</idno>
                                     <altIdentifier>
-                                    <idno type="catalogue">500</idno>
-                                      <note>
-                                        <ref type="bibl" target="bib:Цонев1910">Цонев 1910: 35</ref>
-                                       </note>
+                                        <idno type="catalogue">500</idno>
+                                        <note>
+                                            <ref type="bibl" target="bib:Цонев1910">Цонев 1910:
+                                                35</ref>
+                                        </note>
                                     </altIdentifier>
                                     <altIdentifier>
                                         <idno type="unioncatalogue">32</idno>
                                         <note>
-                                            <ref type="bibl" target="bib:Христова1982">Христова и др. 1982: 30</ref>
+                                            <ref type="bibl" target="bib:Христова1982">Христова и
+                                                др. 1982: 30</ref>
                                         </note>
                                     </altIdentifier>
-                        <altIdentifier type="former">
-                            <idno type="shelfmark">184</idno>
-                        </altIdentifier>
-                    </altIdentifier>
+                                    <altIdentifier type="former">
+                                        <idno type="shelfmark">184</idno>
+                                    </altIdentifier>
+                                </altIdentifier>
                             </egXML>
                         </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="binding" module="msdescription" mode="change">
                         <content>
-                            <rng:oneOrMore>
-                                <rng:choice>
-                                    <rng:ref name="model.pLike"/>
-                                    <rng:ref name="bindingNote"/>
-                                    <rng:ref name="condition"/>
-                                    <rng:ref name="decoNote"/>
-                                </rng:choice>
-                            </rng:oneOrMore>
+                            <alternate minOccurs="1" maxOccurs="unbounded">
+                                <classRef key="model.pLike"/>
+                                <elementRef key="bindingNote"/>
+                                <elementRef key="condition"/>
+                                <elementRef key="decoNote"/>
+                            </alternate>
                         </content>
                         <exemplum>
                             <p>TEI example:</p>
@@ -398,24 +308,27 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Repertorium adds an element bindingNote as a child element of
-                                binding: </p>
+                            <p>Repertorium adds an element <gi>bindingNote</gi> in the Repertorium
+                                namespace as a child element of <gi>binding</gi>, as a way of
+                                wrapping a specific observation about a binding motif (in, eg., a
+                                    <gi>decoNote</gi>) together with its location (in
+                                <gi>locus</gi>).</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <binding>
                                     <p>New, leather and cardboard</p>
-                                    <bindingNote type="cover">
+                                    <re:bindingNote type="cover">
                                         <locus>On the back side of the upper cover:</locus>
                                         <decoNote>
                                             <stamp>angels with circles.</stamp>
                                         </decoNote>
-                                    </bindingNote>
+                                    </re:bindingNote>
                                 </binding>
                             </egXML>
                         </exemplum>
                     </elementSpec>
 
-                    <elementSpec ident="bindingNote" module="msdescription"
-                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                    <elementSpec ident="bindingNote" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
                         <desc>Allows structured description of binding characteristics in addition
                             to decoration and condition.</desc>
                         <classes mode="change">
@@ -458,34 +371,18 @@
 
                     <elementSpec ident="collation" module="msdescription" mode="change">
                         <content>
-                            <rng:choice>
-                                <rng:oneOrMore>
-                                    <rng:ref name="model.pLike"/>
-                                </rng:oneOrMore>
-                                <rng:group>
-                                    <rng:optional>
-                                        <rng:ref name="summary"/>
-                                    </rng:optional>
-                                    <rng:zeroOrMore>
-                                        <rng:ref name="quire"/>
-                                    </rng:zeroOrMore>
-                                    <rng:optional>
-                                        <rng:ref name="signatures"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="catchwords"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="gregoryRule"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="ruling"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="pricking"/>
-                                    </rng:optional>
-                                </rng:group>
-                            </rng:choice>
+                            <alternate minOccurs="1" maxOccurs="1">
+                                <macroRef key="macro.specialPara"/>
+                                <sequence minOccurs="1" maxOccurs="1">
+                                    <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="quire" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="signatures" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="catchwords" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="gregoryRule" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="ruling" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="pricking" minOccurs="0" maxOccurs="1"/>
+                                </sequence>
+                            </alternate>
                         </content>
                         <exemplum>
                             <p>TEI example: </p>
@@ -508,52 +405,40 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-
-                            <p>TEI is using <code>macro.specialPara</code> which means that all the
-                                information is enclosed into <gi>p</gi> element. Repertorium
-                                provides a choice between possibility to use one or several
-                                paragraphs (<gi>p</gi> elements) or to make a structured description
-                                with summary and description of each quire or to describe various
-                                parts of the collation in general, e.g. signatures, catchwords,
-                                dispositions of flesh- and hair-side of the parchment, ruling and
-                                pricking schemes and types. The following is an example from
+                            <p>The TEI content model is defined as <ident>macro.specialPara</ident>
+                                which contains paragraph-like elements and elements that can be
+                                contained by paragraphs. The Repertorium permits this type of
+                                content, but also provides a structured alternative, with specific
+                                child elements in a consistent order. The following example, which
+                                describes the collation of each quire in a structured way, is from
                                 DD437NBKM.xml:</p>
-                            <p>TEI is using <code>macro.specialPara</code> which means that all the
-                                information is enclosed into <code>p</code> element. Repertorium
-                                provides a choice between possibility to use one or several
-                                paragraphs (<code>p</code> elements) or to make a structured
-                                description with summary and description of each quire or to
-                                describe various parts of the collation in general, e.g. signatures,
-                                catchwords, dispositions of flesh- and hair-side of the parchment,
-                                ruling and pricking schemes and types. The following is an example
-                                from DD437NBKM.xml:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <collation>
                                     <summary>12 quires</summary>
-                                    <quire n="1-3">
+                                    <re:quire n="1-3">
                                         <extent>6</extent>
-                                    </quire>
-                                    <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="4">
+                                    </re:quire>
+                                    <re:quire n="4">
                                         <extent>7</extent>
-                                    </quire>
-                                    <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="5-7">
+                                    </re:quire>
+                                    <re:quire n="5-7">
                                         <extent>8</extent>
-                                    </quire>
-                                    <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="8">
+                                    </re:quire>
+                                    <re:quire n="8">
                                         <extent>10</extent>
-                                    </quire>
-                                    <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="9">
+                                    </re:quire>
+                                    <re:quire n="9">
                                         <extent>8</extent>
-                                    </quire>
-                                    <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="10">
+                                    </re:quire>
+                                    <re:quire n="10">
                                         <extent>10</extent>
-                                    </quire>
-                                    <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="11">
+                                    </re:quire>
+                                    <re:quire n="11">
                                         <extent>8</extent>
-                                    </quire>
-                                    <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="12">
+                                    </re:quire>
+                                    <re:quire n="12">
                                         <extent>10</extent>
-                                    </quire>
+                                    </re:quire>
                                 </collation>
                             </egXML>
                         </exemplum>
@@ -574,12 +459,14 @@
 
                     <elementSpec ident="colophon" mode="change">
                         <content>
-                            <rng:optional>
-                                <rng:ref name="model.pLike.front"/>
-                            </rng:optional>
-                            <rng:oneOrMore>
-                                <rng:ref name="model.pLike"/>
-                            </rng:oneOrMore>
+                            <alternate>
+                                <macroRef key="macro.phraseSeq"/>
+                                <sequence>
+                                    <classRef key="model.headLike" minOccurs="0" maxOccurs="1"/>
+                                    <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"
+                                    />
+                                </sequence>
+                            </alternate>
                         </content>
                         <exemplum>
                             <p>TEI example:</p>
@@ -587,14 +474,14 @@
                                 <colophon>Explicit venenum viciorum domini illius, qui comparavit
                                     Anno domini Millessimo Trecentesimo nonagesimo primo, Sabbato in
                                     festo sancte Marthe virginis gloriose. Laus tibi criste quia
-                                    finitur libellus iste. </colophon>
+                                    finitur libellus iste.</colophon>
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>In TEI <gi>colophon</gi> is a phrase level element. For longer
-                                colophons with headings and more than one paragraphs we need
-                                reformulation of the XML content. This is example is from
-                                AB674NBKM.xml: </p>
+                            <p>In TEI <gi>colophon</gi> is a phrase-level element. Because longer
+                                colophons may have headings and multiple paragraphs, we extend the
+                                TEI model to permit paragraph-line content items. The following
+                                example is from AB674NBKM.xml: </p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <colophon>
                                     <head xml:lang="grc">Ο ΧΣ ΕΣΤΙ ΑΡΧΗ ΚΑΙ ΤΕΛΟΣ</head>
@@ -696,8 +583,8 @@
                         </remarks>
                     </elementSpec>
 
-                    <elementSpec ident="grammar" module="msdescription"
-                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                    <elementSpec ident="grammar" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
                         <desc>Contains a description of the grammar of a scribe.</desc>
                         <classes mode="replace">
                             <memberOf key="att.global"/>
@@ -762,8 +649,8 @@
                         </remarks>
                     </elementSpec>
 
-                    <elementSpec ident="gregoryRule" module="msdescription"
-                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                    <elementSpec ident="gregoryRule" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
                         <desc>Contains a description of the layout of the parchment according to the
                             Gregory rule.</desc>
                         <classes mode="change">
@@ -789,28 +676,16 @@
 
                     <elementSpec ident="history" module="msdescription" mode="change">
                         <content>
-                            <rng:choice>
-                                <rng:oneOrMore>
-                                    <rng:ref name="model.pLike"/>
-                                </rng:oneOrMore>
-                                <rng:group>
-                                    <rng:optional>
-                                        <rng:ref name="summary"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="origin"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="accMat"/>
-                                    </rng:optional>
-                                    <rng:zeroOrMore>
-                                        <rng:ref name="provenance"/>
-                                    </rng:zeroOrMore>
-                                    <rng:optional>
-                                        <rng:ref name="acquisition"/>
-                                    </rng:optional>
-                                </rng:group>
-                            </rng:choice>
+                            <alternate>
+                                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                <sequence>
+                                    <elementRef key="summary" minOccurs="0"/>
+                                    <elementRef key="origin" minOccurs="0"/>
+                                    <elementRef key="accMat" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="provenance" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="acquisition" minOccurs="0"/>
+                                </sequence>
+                            </alternate>
                         </content>
                         <exemplum>
                             <p>TEI example: </p>
@@ -837,8 +712,8 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>Repertorium removes <gi>accMat</gi> from the
-                                    <code>model.physDescPart</code> and adds it to the content of
+                            <p>The Repertorium removes <gi>accMat</gi> from
+                                    <ident>model.physDescPart</ident> and adds it to the content of
                                 the element <gi>history</gi></p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <history>
@@ -892,6 +767,9 @@
                             <attDef ident="scheme" mode="replace" usage="req">
                                 <desc>The <gi>keywords</gi> element must have a <att>scheme</att>
                                     attribute with a value of <val>Repertorium</val>.</desc>
+                                <datatype>
+                                    <dataRef key="teidata.text"/>
+                                </datatype>
                                 <valList type="closed">
                                     <valItem ident="Repertorium">
                                         <gloss>Keywords must be specified within the Repertorium
@@ -901,11 +779,12 @@
                             </attDef>
                         </attList>
                         <exemplum>
-                            <p/>
+                            <p>The <gi>keywords</gi> element must have a <att>scheme</att> attribute
+                                with a value of <val>Repertorium</val>.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <keywords scheme="Repertorium">
                                     <list type="simple">
-                                        <item>Miscellany of mixed content</item>
+                                        <item>Mixed content miscellany</item>
                                         <item>Prognostic books</item>
                                         <item>Visionary literature</item>
                                         <item>Treatise on liturgy</item>
@@ -915,8 +794,8 @@
                         </exemplum>
                     </elementSpec>
 
-                    <elementSpec ident="lexis" module="msdescription"
-                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                    <elementSpec ident="lexis" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
                         <desc>Contains a description of lexical features of a scribe.</desc>
                         <classes mode="replace">
                             <memberOf key="att.global"/>
@@ -1008,64 +887,38 @@
 
                     <elementSpec ident="msContents" module="msdescription" mode="change">
                         <content>
-                            <rng:choice>
-                                <rng:oneOrMore>
-                                    <rng:ref name="model.pLike"/>
-                                </rng:oneOrMore>
-                                <rng:group>
-                                    <rng:group>
-                                        <rng:optional>
-                                            <rng:ref name="summary"/>
-                                        </rng:optional>
-                                        <rng:optional>
-                                            <rng:ref name="titlePage"/>
-                                        </rng:optional>
-                                        <rng:optional>
-                                            <rng:ref name="title"/>
-                                        </rng:optional>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="author"/>
-                                        </rng:zeroOrMore>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="respStmt"/>
-                                        </rng:zeroOrMore>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="model.noteLike"/>
-                                        </rng:zeroOrMore>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="filiation"/>
-                                        </rng:zeroOrMore>
-                                        <rng:optional>
-                                            <rng:ref name="textLang"/>
-                                        </rng:optional>
-                                        <rng:optional>
-                                            <rng:ref name="decoNote"/>
-                                        </rng:optional>
-                                        <rng:optional>
-                                            <rng:ref name="sampleText"/>
-                                        </rng:optional>
-                                        <rng:optional>
-                                            <rng:ref name="div"/>
-                                        </rng:optional>
-                                    </rng:group>
-                                    <rng:zeroOrMore>
-                                        <rng:ref name="msItemStruct"/>
-                                    </rng:zeroOrMore>
-                                </rng:group>
-                            </rng:choice>
+                            <alternate>
+                                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                <sequence>
+                                    <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="titlePage" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="title" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="title" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/>
+                                    <classRef key="model.noteLike" minOccurs="0"
+                                        maxOccurs="unbounded"/>
+                                    <elementRef key="filiation" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="textLang" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="decoNote" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="sampleText" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="div" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="msItemStruct" minOccurs="0"
+                                        maxOccurs="unbounded"/>
+                                </sequence>
+                            </alternate>
                         </content>
                         <attList>
-                            <attDef ident="type">
+                            <attDef ident="type" usage="opt">
                                 <desc>describes the type of the text</desc>
                                 <datatype>
-                                    <rng:text/>
+                                    <dataRef name="teidata.text"/>
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="original">
                                         <desc>the text is original</desc>
                                     </valItem>
                                     <valItem ident="compilation">
-                                        <desc>the text is compiled from variuos sources</desc>
+                                        <desc>the text is compiled from various sources</desc>
                                     </valItem>
                                     <valItem ident="translation">
                                         <desc>the text is translated</desc>
@@ -1090,12 +943,14 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>In addition of classification Repertorium provides an attribute
-                                    <att>type</att> with the three possible values - original,
-                                compilation and translation. Furthermore, Repertorium adds a special
-                                element <gi>sampleText</gi> and includes <gi>div</gi>. In the
-                                contents of <gi>msCOntents</gi> only <gi>msItemStruct</gi> is
-                                allowed, not the unstructured <gi>msItem</gi> element. </p>
+                            <p>The Repertorium adds an optional <att>type</att> attribute with three
+                                possible values: <val>original</val>, <val>compilation</val>, and
+                                    <val>translation</val>. The Repertorium also extents the element
+                                content by adding an optional <gi>sampleText</gi> (q.v.; a wrapper
+                                for citations from the manuscript) and an optional <gi>div</gi>. In
+                                the Repertorium, content items must be tagged as
+                                    <gi>msItemStruct</gi>; the unstructured <gi>msItem</gi> element
+                                has been excluded from the Repertorium model.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msContents>
                                     <filiation type="protograph">Bulgarian</filiation>
@@ -1105,49 +960,41 @@
                                         <title xml:lang="bg">Видение на цар Амфилохий</title>
                                         <filiation type="protograph">Bulgarian</filiation>
                                         <filiation type="antigraph">Middle Bulgarian</filiation>
-                                        <sampleText
-                                            xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                            xml:lang="cu">
+                                        <re:sampleText xml:lang="cu">
                                             <head>Видѣнїе Амфилѡга царѧ Аравїе</head>
                                             <incipit>Гл҃еть Баронїи хронографъ римскїи</incipit>
-                                        </sampleText>
-                                    </msItemStruct> ... </msContents>
+                                        </re:sampleText>
+                                    </msItemStruct>
+                                    <!-- other items -->
+                                </msContents>
                             </egXML>
                         </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="msDesc" module="msdescription" mode="change">
                         <content>
-                            <rng:zeroOrMore>
-                                <rng:ref name="model.headLike"/>
-                            </rng:zeroOrMore>
-                            <rng:ref name="msIdentifier"/>
-                            <rng:choice>
-                                <rng:zeroOrMore>
-                                    <rng:ref name="model.pLike"/>
-                                </rng:zeroOrMore>
-                                <rng:group>
-                                    <rng:optional>
-                                        <rng:ref name="physDesc"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="scribeDesc"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="msContents"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="history"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="additional"/>
-                                    </rng:optional>
-                                    <rng:zeroOrMore>
-                                        <rng:ref name="msPart"/>
-                                    </rng:zeroOrMore>
-                                </rng:group>
-                            </rng:choice>
+                            <sequence>
+                                <classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
+                                <alternate>
+                                    <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                    <sequence>
+                                        <elementRef key="physDesc" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="scribeDesc" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="msContents" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="history" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="additional" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="msPart" minOccurs="0" maxOccurs="unbounded"
+                                        />
+                                    </sequence>
+                                </alternate>
+                            </sequence>
                         </content>
+                        <remarks>
+                            <p>The Repertorium reorders the contents of <gi>msDesc</gi> to conform
+                                to the most common patterns in Slavistic manuscript cataloguing. The
+                                Repertorium does not use <gi>msFrag</gi>.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="msIdentifier" module="msdescription" mode="change">
@@ -1247,7 +1094,7 @@
                             <attDef ident="type">
                                 <desc>describes the type of the text</desc>
                                 <datatype>
-                                    <rng:text/>
+                                    <dataRef key="teidata.text"/>
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="original">
@@ -1499,7 +1346,7 @@
                         <attList>
                             <attDef ident="system" usage="opt">
                                 <datatype>
-                                    <rng:text/>
+                                    <dataRef key="teidata.text"/>
                                 </datatype>
                             </attDef>
                         </attList>
@@ -1517,8 +1364,8 @@
                         </exemplum>
                     </elementSpec>
 
-                    <elementSpec ident="orthNote" module="msdescription"
-                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                    <elementSpec ident="orthNote" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
                         <desc>Specifies a detail of the orthographic practice of a scribe.</desc>
                         <classes mode="replace">
                             <memberOf key="att.global"/>
@@ -1607,8 +1454,8 @@
                         </remarks>
                     </elementSpec>
 
-                    <elementSpec ident="orthography" module="msdescription"
-                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                    <elementSpec ident="orthography" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
                         <desc>Contains a formal, structured description of the orthography of a
                             scribe.</desc>
                         <classes mode="replace">
@@ -1647,8 +1494,8 @@
                         </remarks>
                     </elementSpec>
 
-                    <elementSpec ident="pagination" module="msdescription"
-                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                    <elementSpec ident="pagination" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
                         <desc>Contains information about the pagination of the codex, separately
                             from information about the foliation.</desc>
                         <classes mode="change">
@@ -1808,8 +1655,8 @@
                         </exemplum>
                     </elementSpec>
 
-                    <elementSpec ident="pricking" module="msdescription"
-                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                    <elementSpec ident="pricking" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
                         <desc>Contains a description of pricking patterns in the manuscript.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
@@ -1845,8 +1692,8 @@
                         </remarks>
                     </elementSpec>
 
-                    <elementSpec ident="quire" module="msdescription"
-                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                    <elementSpec ident="quire" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
                         <desc>Conains information that describes a quire or set of quires.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
@@ -1896,7 +1743,7 @@
                                 <desc>Describes the status of the quire or folia: original, added,
                                     missing</desc>
                                 <datatype>
-                                    <rng:ref name="datatype.Token"/>
+                                    <dataRef name="token"/>
                                 </datatype>
                                 <valList type="closed" mode="add">
                                     <valItem ident="missing">
@@ -1938,8 +1785,8 @@
                         </remarks>
                     </elementSpec>
 
-                    <elementSpec ident="ruling" module="msdescription"
-                        ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
+                    <elementSpec ident="ruling" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                        mode="add">
                         <desc>Contains information about ruling lines in the manuscript.</desc>
                         <classes mode="change">
                             <memberOf key="att.global"/>
@@ -2009,7 +1856,7 @@
                         <attList>
                             <attDef ident="script" usage="opt">
                                 <datatype>
-                                    <rng:text/>
+                                    <dataRef key="teidata.text"/>
                                 </datatype>
                             </attDef>
                         </attList>
@@ -2212,7 +2059,7 @@
                         <attList>
                             <attDef ident="script" usage="opt">
                                 <datatype>
-                                    <rng:text/>
+                                    <dataRef key="teidata.text"/>
                                 </datatype>
                             </attDef>
                         </attList>
@@ -2267,7 +2114,7 @@
                         <attList>
                             <attDef ident="script" usage="opt">
                                 <datatype>
-                                    <rng:text/>
+                                    <dataRef key="teidata.text"/>
                                 </datatype>
                             </attDef>
                         </attList>
@@ -2431,7 +2278,7 @@
                                 <desc>describes the methods of recording of some watermark. Methods
                                     include: tracing, rubbing, etc.</desc>
                                 <datatype>
-                                    <rng:text/>
+                                    <dataRef key="teidata.text"/>
                                 </datatype>
                             </attDef>
                         </attList>

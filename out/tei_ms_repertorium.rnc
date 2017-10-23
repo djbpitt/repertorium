@@ -10,7 +10,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2017-10-20T15:39:01Z. .
+# Schema generated from ODD source 2017-10-23T09:13:48Z. .
 # TEI Edition: Version 3.2.0. Last updated on
 #	10th July 2017, revision 0fcf651
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -4327,15 +4327,15 @@ msDesc =
   
   ## (manuscript description) contains a description of a single identifiable manuscript or other text-bearing object. [10.1. Overview]
   element msDesc {
-    model.headLike*,
-    msIdentifier,
-    (model.pLike*
-     | (physDesc?,
-        scribeDesc?,
-        msContents?,
-        history?,
-        additional?,
-        msPart*)),
+    (model.headLike*,
+     msIdentifier,
+     (model.pLike+
+      | (physDesc?,
+         scribeDesc?,
+         msContents?,
+         history?,
+         additional?,
+         msPart*))),
     att.global.attributes,
     att.sortable.attributes,
     att.typed.attributes,
@@ -4642,7 +4642,7 @@ watermark =
     att.global.attributes,
     
     ## describes the methods of recording of some watermark. Methods include: tracing, rubbing, etc.
-    attribute tracing { text }?,
+    attribute tracing { xsd:string }?,
     empty
   }
 msIdentifier =
@@ -4707,14 +4707,20 @@ altIdentifier =
   
   ## (alternative identifier) contains an alternative or former structured identifier used for a manuscript, such as a former catalogue number. [10.4. The Manuscript Identifier]
   element altIdentifier {
-    msName*,
-    (model.placeNamePart_sequenceOptional*,
+    (msName*,
+     placeName?,
+     bloc?,
+     country?,
+     region?,
+     settlement?,
+     district?,
+     geogName?,
      institution?,
      repository?,
-     collection*,
-     idno?,
+     collection?,
+     idno,
      note?,
-     altIdentifier?)*,
+     altIdentifier*),
     att.global.attributes,
     att.typed.attributes,
     empty
@@ -4732,8 +4738,7 @@ colophon =
   
   ## contains the colophon of a manuscript item: that is, a statement providing information regarding the date, place, agency, or reason for production of the manuscript. [10.6.1. The msItem and msItemStruct Elements]
   element colophon {
-    model.pLike.front?,
-    model.pLike+,
+    (macro.phraseSeq | (model.headLike?, model.pLike*)),
     att.global.attributes,
     att.msExcerpt.attributes,
     empty
@@ -4782,17 +4787,17 @@ msContents =
   ## (manuscript contents) describes the intellectual content of a manuscript or manuscript part, either as a series of paragraphs or as a series of structured manuscript items. [10.6. Intellectual Content]
   element msContents {
     (model.pLike+
-     | ((summary?,
-         titlePage?,
-         title?,
-         author*,
-         respStmt*,
-         model.noteLike*,
-         filiation*,
-         textLang?,
-         decoNote?,
-         sampleText?,
-         \div?),
+     | (summary?,
+        titlePage?,
+        title?,
+        title*,
+        respStmt*,
+        model.noteLike*,
+        filiation*,
+        textLang?,
+        decoNote*,
+        sampleText?,
+        \div?,
         msItemStruct*)),
     att.global.attributes,
     att.msExcerpt.attributes,
@@ -4804,7 +4809,7 @@ msContents =
       ## the text is original
       "original"
       | 
-        ## the text is compiled from variuos sources
+        ## the text is compiled from various sources
         "compilation"
       | 
         ## the text is translated
@@ -4925,7 +4930,7 @@ collation =
   
   ## contains a description of how the leaves or bifolia are physically arranged. [10.7.1. Object Description]
   element collation {
-    (model.pLike+
+    (macro.specialPara
      | (summary?,
         quire*,
         signatures?,
@@ -4984,7 +4989,7 @@ scriptDesc =
     att.global.attributes,
     
     ##
-    attribute script { text }?,
+    attribute script { xsd:string }?,
     empty
   }
 musicNotation =
@@ -4996,7 +5001,7 @@ musicNotation =
     att.typed.attributes,
     
     ##
-    attribute system { text }?,
+    attribute system { xsd:string }?,
     empty
   }
 decoDesc =
@@ -5087,18 +5092,13 @@ seal =
 accMat =
   
   ## (accompanying material) contains details of any significant additional material which may be closely associated with the manuscript being described, such as non-contemporaneous documents or fragments bound in with the manuscript at some earlier historical period. [10.7.3.3. Accompanying Material]
-  element accMat {
-    macro.specialPara,
-    att.global.attributes,
-    att.typed.attributes,
-    empty
-  }
+  element accMat { macro.specialPara }
 history =
   
   ## groups elements describing the full history of a manuscript or manuscript part. [10.8. History]
   element history {
     (model.pLike+
-     | (summary?, origin?, accMat?, provenance*, acquisition?)),
+     | (summary?, origin?, accMat*, provenance*, acquisition?)),
     att.global.attributes,
     empty
   }
@@ -6655,7 +6655,7 @@ sampleText =
     att.typed.attributes,
     
     ##
-    attribute script { text }?,
+    attribute script { xsd:string }?,
     empty
   }
 scribe =
@@ -6689,7 +6689,7 @@ scribeLang =
     att.typed.attributes,
     
     ##
-    attribute script { text }?,
+    attribute script { xsd:string }?,
     empty
   }
 start = TEI | msDesc
