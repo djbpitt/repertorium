@@ -169,6 +169,13 @@
                     <classSpec ident="model.physDescPart" type="model" mode="delete"
                         module="msdescription"/>
 
+                    <elementSpec ident="accMat" module="msdescription" mode="change">
+                        <!-- This change removes <accMat> from the <physDesc>; it is then added to <history> -->
+                        <classes>
+                            <memberOf key="model.physDescPart" mode="delete"/>
+                        </classes>
+                    </elementSpec>
+
                     <elementSpec ident="additions" module="msdescription" mode="change">
                         <classes mode="change">
                             <memberOf key="att.typed" mode="add"/>
@@ -667,13 +674,6 @@
                         </remarks>
                     </elementSpec>
 
-                    <elementSpec ident="accMat" module="msdescription" mode="change">
-                        <!-- This change removes <accMat> from the <physDesc>; it is then added to <history> -->
-                        <classes>
-                            <memberOf key="model.physDescPart" mode="delete"/>
-                        </classes>
-                    </elementSpec>
-
                     <elementSpec ident="history" module="msdescription" mode="change">
                         <content>
                             <alternate>
@@ -767,6 +767,9 @@
                             <attDef ident="scheme" mode="replace" usage="req">
                                 <desc>The <gi>keywords</gi> element must have a <att>scheme</att>
                                     attribute with a value of <val>Repertorium</val>.</desc>
+                                <datatype>
+                                    <dataRef key="teidata.text"/>
+                                </datatype>
                                 <valList type="closed">
                                     <valItem ident="Repertorium">
                                         <gloss>Keywords must be specified within the Repertorium
@@ -884,64 +887,38 @@
 
                     <elementSpec ident="msContents" module="msdescription" mode="change">
                         <content>
-                            <rng:choice>
-                                <rng:oneOrMore>
-                                    <rng:ref name="model.pLike"/>
-                                </rng:oneOrMore>
-                                <rng:group>
-                                    <rng:group>
-                                        <rng:optional>
-                                            <rng:ref name="summary"/>
-                                        </rng:optional>
-                                        <rng:optional>
-                                            <rng:ref name="titlePage"/>
-                                        </rng:optional>
-                                        <rng:optional>
-                                            <rng:ref name="title"/>
-                                        </rng:optional>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="author"/>
-                                        </rng:zeroOrMore>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="respStmt"/>
-                                        </rng:zeroOrMore>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="model.noteLike"/>
-                                        </rng:zeroOrMore>
-                                        <rng:zeroOrMore>
-                                            <rng:ref name="filiation"/>
-                                        </rng:zeroOrMore>
-                                        <rng:optional>
-                                            <rng:ref name="textLang"/>
-                                        </rng:optional>
-                                        <rng:optional>
-                                            <rng:ref name="decoNote"/>
-                                        </rng:optional>
-                                        <rng:optional>
-                                            <rng:ref name="sampleText"/>
-                                        </rng:optional>
-                                        <rng:optional>
-                                            <rng:ref name="div"/>
-                                        </rng:optional>
-                                    </rng:group>
-                                    <rng:zeroOrMore>
-                                        <rng:ref name="msItemStruct"/>
-                                    </rng:zeroOrMore>
-                                </rng:group>
-                            </rng:choice>
+                            <alternate>
+                                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                <sequence>
+                                    <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="titlePage" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="title" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="title" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/>
+                                    <classRef key="model.noteLike" minOccurs="0"
+                                        maxOccurs="unbounded"/>
+                                    <elementRef key="filiation" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="textLang" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="decoNote" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="sampleText" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="div" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="msItemStruct" minOccurs="0"
+                                        maxOccurs="unbounded"/>
+                                </sequence>
+                            </alternate>
                         </content>
                         <attList>
-                            <attDef ident="type">
+                            <attDef ident="type" usage="opt">
                                 <desc>describes the type of the text</desc>
                                 <datatype>
-                                    <rng:text/>
+                                    <dataRef name="teidata.text"/>
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="original">
                                         <desc>the text is original</desc>
                                     </valItem>
                                     <valItem ident="compilation">
-                                        <desc>the text is compiled from variuos sources</desc>
+                                        <desc>the text is compiled from various sources</desc>
                                     </valItem>
                                     <valItem ident="translation">
                                         <desc>the text is translated</desc>
@@ -966,12 +943,14 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>In addition of classification Repertorium provides an attribute
-                                    <att>type</att> with the three possible values - original,
-                                compilation and translation. Furthermore, Repertorium adds a special
-                                element <gi>sampleText</gi> and includes <gi>div</gi>. In the
-                                contents of <gi>msCOntents</gi> only <gi>msItemStruct</gi> is
-                                allowed, not the unstructured <gi>msItem</gi> element. </p>
+                            <p>The Repertorium adds an optional <att>type</att> attribute with three
+                                possible values: <val>original</val>, <val>compilation</val>, and
+                                    <val>translation</val>. The Repertorium also extents the element
+                                content by adding an optional <gi>sampleText</gi> (q.v.; a wrapper
+                                for citations from the manuscript) and an optional <gi>div</gi>. In
+                                the Repertorium, content items must be tagged as
+                                    <gi>msItemStruct</gi>; the unstructured <gi>msItem</gi> element
+                                has been excluded from the Repertorium model.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msContents>
                                     <filiation type="protograph">Bulgarian</filiation>
@@ -981,13 +960,13 @@
                                         <title xml:lang="bg">Видение на цар Амфилохий</title>
                                         <filiation type="protograph">Bulgarian</filiation>
                                         <filiation type="antigraph">Middle Bulgarian</filiation>
-                                        <sampleText
-                                            xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                            xml:lang="cu">
+                                        <re:sampleText xml:lang="cu">
                                             <head>Видѣнїе Амфилѡга царѧ Аравїе</head>
                                             <incipit>Гл҃еть Баронїи хронографъ римскїи</incipit>
-                                        </sampleText>
-                                    </msItemStruct> ... </msContents>
+                                        </re:sampleText>
+                                    </msItemStruct>
+                                    <!-- other items -->
+                                </msContents>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -1123,7 +1102,7 @@
                             <attDef ident="type">
                                 <desc>describes the type of the text</desc>
                                 <datatype>
-                                    <rng:text/>
+                                    <dataRef key="teidata.text"/>
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="original">
@@ -1375,7 +1354,7 @@
                         <attList>
                             <attDef ident="system" usage="opt">
                                 <datatype>
-                                    <rng:text/>
+                                    <dataRef key="teidata.text"/>
                                 </datatype>
                             </attDef>
                         </attList>
@@ -1772,7 +1751,7 @@
                                 <desc>Describes the status of the quire or folia: original, added,
                                     missing</desc>
                                 <datatype>
-                                    <rng:ref name="datatype.Token"/>
+                                    <dataRef name="token"/>
                                 </datatype>
                                 <valList type="closed" mode="add">
                                     <valItem ident="missing">
@@ -1885,7 +1864,7 @@
                         <attList>
                             <attDef ident="script" usage="opt">
                                 <datatype>
-                                    <rng:text/>
+                                    <dataRef key="teidata.text"/>
                                 </datatype>
                             </attDef>
                         </attList>
@@ -2088,7 +2067,7 @@
                         <attList>
                             <attDef ident="script" usage="opt">
                                 <datatype>
-                                    <rng:text/>
+                                    <dataRef key="teidata.text"/>
                                 </datatype>
                             </attDef>
                         </attList>
@@ -2143,7 +2122,7 @@
                         <attList>
                             <attDef ident="script" usage="opt">
                                 <datatype>
-                                    <rng:text/>
+                                    <dataRef key="teidata.text"/>
                                 </datatype>
                             </attDef>
                         </attList>
@@ -2307,7 +2286,7 @@
                                 <desc>describes the methods of recording of some watermark. Methods
                                     include: tracing, rubbing, etc.</desc>
                                 <datatype>
-                                    <rng:text/>
+                                    <dataRef key="teidata.text"/>
                                 </datatype>
                             </attDef>
                         </attList>
