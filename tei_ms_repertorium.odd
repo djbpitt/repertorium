@@ -114,7 +114,7 @@
                         <gi>interp</gi>, <gi>interpGrp</gi>, <gi>interpretation</gi>, <gi>join</gi>,
                         <gi>joinGrp</gi>, <gi>langKnowledge</gi>, <gi>langKnown</gi>, <gi>link</gi>,
                         <gi>linkGrp</gi>, <gi>listEvent</gi>, <gi>listNym</gi>, <gi>listOrg</gi>,
-                        <gi>listTranspose</gi>, <gi>metamark</gi>, <gi>msItem</gi>,
+                        <gi>listTranspose</gi>, <gi>metamark</gi>, <gi>msFrag</gi>, <gi>msItem</gi>,
                         <gi>namespace</gi>, <gi>normalization</gi>, <gi>notesStmt</gi>,
                     <gi>nym</gi>, <gi>offset</gi>, <gi>opener</gi>, <gi>population</gi>,
                         <gi>postBox</gi>, <gi>postCode</gi>, <gi>postscript</gi>,
@@ -161,7 +161,7 @@
                     <moduleRef key="certainty" except="respons"/>
                     <moduleRef key="figures"/>
                     <moduleRef key="msdescription"
-                        except="handDesc handNote msItem typeNote typeDesc"/>
+                        except="handDesc handNote msFrag msItem typeNote typeDesc"/>
                     <moduleRef key="namesdates"
                         except="climate langKnowledge langKnown listEvent listNym  listOrg nym offset population sex socecStatus state terrain"/>
                     <moduleRef key="transcr" except="listTranspose surface surfaceGrp metamark zone"/>
@@ -973,36 +973,28 @@
 
                     <elementSpec ident="msDesc" module="msdescription" mode="change">
                         <content>
-                            <rng:zeroOrMore>
-                                <rng:ref name="model.headLike"/>
-                            </rng:zeroOrMore>
-                            <rng:ref name="msIdentifier"/>
-                            <rng:choice>
-                                <rng:zeroOrMore>
-                                    <rng:ref name="model.pLike"/>
-                                </rng:zeroOrMore>
-                                <rng:group>
-                                    <rng:optional>
-                                        <rng:ref name="physDesc"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="scribeDesc"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="msContents"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="history"/>
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="additional"/>
-                                    </rng:optional>
-                                    <rng:zeroOrMore>
-                                        <rng:ref name="msPart"/>
-                                    </rng:zeroOrMore>
-                                </rng:group>
-                            </rng:choice>
+                            <sequence>
+                                <classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
+                                <alternate>
+                                    <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                    <sequence>
+                                        <elementRef key="physDesc" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="scribeDesc" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="msContents" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="history" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="additional" minOccurs="0" maxOccurs="1"/>
+                                        <elementRef key="msPart" minOccurs="0" maxOccurs="unbounded"
+                                        />
+                                    </sequence>
+                                </alternate>
+                            </sequence>
                         </content>
+                        <remarks>
+                            <p>The Repertorium reorders the contents of <gi>msDesc</gi> to conform
+                                to the most common patterns in Slavistic manuscript cataloguing. The
+                                Repertorium does not use <gi>msFrag</gi>.</p>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="msIdentifier" module="msdescription" mode="change">
