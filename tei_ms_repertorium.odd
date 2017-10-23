@@ -125,13 +125,15 @@
                         <gi>styleDefDecl</gi>, <gi>surface</gi>, <gi>surfaceGrp</gi>,
                         <gi>tagsDecl</gi>, <gi>tagUsage</gi>, <gi>teiCorpus</gi>, <gi>terrain</gi>,
                         <gi>typeDesc</gi>, <gi>typeNote</gi>, <gi>xenoData</gi>, <gi>zone</gi>.</p>
-                <p>The following elements in the TEI namespace have been modified:
-                        <gi>additions</gi>, <gi>altIdentifier</gi>, <gi>binding</gi>,
+                <p>The content models of the following elements in the TEI namespace have been
+                    modified: <gi>additions</gi>, <gi>altIdentifier</gi>, <gi>binding</gi>,
                         <gi>collation</gi>, <gi>colophon</gi>, <gi>history</gi>, <gi>keywords</gi>,
                         <gi>msContents</gi>, <gi>msDesc</gi>, <gi>msIdentifier</gi>,
                         <gi>msItemStruct</gi>, <gi>msPart</gi>, <gi>musicNotation</gi>,
                         <gi>physDesc</gi>, <gi>scriptDesc</gi>, <gi>scriptNote</gi>,
-                        <gi>supportDesc</gi>, <gi>watermark</gi>.</p>
+                        <gi>supportDesc</gi>, <gi>watermark</gi>. The class membership of
+                        <gi>accMat</gi> has been modified to remove it from <gi>physDesc</gi> and
+                    into <gi>history</gi>, but its content model remains the same.</p>
                 <p>The following new elements are declared in the Repertorium namespace
                         (<val>http://www.ilit.bas.bg/repertorium/ns/3</val>, for which we use the
                     namespace prefix <code>re:</code>): <gi>bindingNote</gi>, <gi>countermark</gi>,
@@ -774,11 +776,12 @@
                             </attDef>
                         </attList>
                         <exemplum>
-                            <p/>
+                            <p>The <gi>keywords</gi> element must have a <att>scheme</att> attribute
+                                with a value of <val>Repertorium</val>.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <keywords scheme="Repertorium">
                                     <list type="simple">
-                                        <item>Miscellany of mixed content</item>
+                                        <item>Mixed content miscellany</item>
                                         <item>Prognostic books</item>
                                         <item>Visionary literature</item>
                                         <item>Treatise on liturgy</item>
