@@ -215,7 +215,8 @@
                         <content>
                             <sequence>
                                 <elementRef key="msName" minOccurs="0" maxOccurs="unbounded"/>
-                                <classRef key="model.placeNamePart" expand="sequenceOptionalRepeatable"/>
+                                <classRef key="model.placeNamePart"
+                                    expand="sequenceOptionalRepeatable"/>
                                 <elementRef key="institution" minOccurs="0" maxOccurs="1"/>
                                 <elementRef key="repository" minOccurs="0" maxOccurs="1"/>
                                 <elementRef key="collection" minOccurs="0" maxOccurs="1"/>
@@ -999,7 +1000,8 @@
                             <sequence>
                                 <elementRef key="msName" minOccurs="1" maxOccurs="unbounded"/>
                                 <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"/>
-                                <classRef key="model.placeNamePart" expand="sequenceOptionalRepeatable"/>
+                                <classRef key="model.placeNamePart"
+                                    expand="sequenceOptionalRepeatable"/>
                                 <elementRef key="institution" minOccurs="0" maxOccurs="1"/>
                                 <elementRef key="repository" minOccurs="0" maxOccurs="1"/>
                                 <elementRef key="collection" minOccurs="0" maxOccurs="unbounded"/>
@@ -1028,6 +1030,7 @@
                                     <sequence>
                                         <elementRef key="title" minOccurs="0" maxOccurs="unbounded"/>
                                         <elementRef key="author" minOccurs="0" maxOccurs="unbounded"/>
+                                        <elementRef key="date" minOccurs="0" maxOccurs="unbounded"/>
                                         <elementRef key="respStmt" minOccurs="0"
                                             maxOccurs="unbounded"/>
                                         <classRef key="model.noteLike" minOccurs="0"
@@ -1099,11 +1102,14 @@
                                     <val>original</val>, <val>compilation</val>, and
                                     <val>translation</val>. Places of elements <gi>title</gi> and
                                     <gi>author</gi> are in different order: first is the title, and
-                                then author. Elements <gi>incipit</gi>, <gi>explicit</gi>,
-                                    <gi>rubric</gi> are children of the <gi>re:sampleText</gi>
-                                element, which is in the Repertorium namespace. We include here the
-                                element <gi>div</gi> for cases where an edition of previously
-                                unknown text or its recension is described in detail.</p>
+                                then author. The TEI <gi>date</gi> element is provided as a way of
+                                representing dates in the church calendar for liturgical material
+                                    (<tag>date type="churchCal" when="--09-24"</tag>). Elements
+                                    <gi>incipit</gi>, <gi>explicit</gi>, <gi>rubric</gi> are
+                                children of the <gi>re:sampleText</gi> element, which is in the
+                                Repertorium namespace. We include here the element <gi>div</gi> for
+                                cases where an edition of previously unknown text or its recension
+                                is described in detail.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msItemStruct xml:id="ACD1" type="translation">
                                     <locus n="1">1r-15v</locus>
@@ -1464,7 +1470,8 @@
                                     <elementRef key="decoDesc" minOccurs="0" maxOccurs="1"/>
                                     <elementRef key="bindingDesc" minOccurs="0" maxOccurs="1"/>
                                     <elementRef key="sealDesc" minOccurs="0" maxOccurs="1"/>
-                                    <elementRef key="additions" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="additions" minOccurs="0" maxOccurs="unbounded"
+                                    />
                                 </sequence>
                             </alternate>
                         </content>
