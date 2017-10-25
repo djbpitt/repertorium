@@ -1,0 +1,108 @@
+/*
+ * stanka_no-acd.css
+ * styles Repertorium description that doesn't specify ACD level
+ * */
+teiHeader {
+    background-color: yellow;
+}
+msIdentifier {
+    display: block;
+    background-color: pink;
+}
+physDesc {
+    background-color: lightgreen;
+}
+msContents {
+    padding-top: 1em;
+    counter-reset: counter1;
+}
+msItemStruct {
+    display: block;
+
+}
+msItemStruct > msItemStruct {
+    padding-left: 2em;
+}
+num {
+    background-color: cyan;
+}
+incipit {
+    display: block;
+    font-family: 'bukyvede';
+}
+supplied {
+    background-color: lightpink;
+}
+supplied:before {
+    content: '[';
+}
+supplied:after {
+    content: ']';
+}
+note {
+    display: block;
+    background-color: lightgray;
+}
+seg {
+    background-color: beige;
+}
+seg:before {
+    content: '(';
+}
+seg:after {
+    content: ')';
+}
+note:before {
+    content: '[';
+}
+note:after {
+    content: ']';
+}
+locus:before {
+    content: ' (';
+}
+locus:after {
+    content: ') ';
+}
+incipit:before {
+    content: 'Incipit: ';
+    font-family: serif;
+}
+msItemStruct:before {
+    background-color: lightblue;
+}
+msContents > msItemStruct {
+    counter-increment: counter1;
+    counter-reset: counter2;
+}
+msContents > msItemStruct:before {
+    content: 'ACD' counter(counter1) ': '
+}
+msContents > msItemStruct > msItemStruct {
+    counter-increment: counter2;
+    counter-reset: counter3;
+}
+msContents > msItemStruct > msItemStruct:before {
+    content: 'ACD' counter(counter1) '.' counter(counter2) '. '
+}
+msContents > msItemStruct > msItemStruct > msItemStruct {
+    counter-increment: counter3;
+    counter-reset: counter4;
+}
+msContents > msItemStruct > msItemStruct > msItemStruct:before {
+    content: 'ACD' counter(counter1) '.' counter(counter2) '.' counter(counter3) '. '
+}
+msContents > msItemStruct > msItemStruct > msItemStruct > msItemStruct {
+    counter-increment: counter4;
+    counter-reset: counter5;
+}
+msContents > msItemStruct > msItemStruct > msItemStruct > msItemStruct:before {
+    content: 'ACD' counter(counter1) '.' counter(counter2) '.' counter(counter3) '.' counter(counter4) '. '
+}
+msContents > msItemStruct > msItemStruct > msItemStruct > msItemStruct > msItemStruct {
+    counter-increment: counter5;
+    counter-reset: counter6;
+}
+msContents > msItemStruct > msItemStruct > msItemStruct > msItemStruct > msItemStruct:before {
+    content: 'ACD' counter(counter1) '.' counter(counter2) '.' counter(counter3) '.' counter(counter4) '.' counter(counter5) '. '
+}
