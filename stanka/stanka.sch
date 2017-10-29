@@ -10,7 +10,7 @@
             <sch:report
                 test="
                     some $i in text()
-                        satisfies matches($i, '[IV]+.+гл')"
+                        satisfies matches($i, '[IV]+')"
                 >Roman numerals representing mode numbers in &lt;title&gt; elements must be tagged
                 as &lt;num type="mode"&gt;</sch:report>
             <sqf:fix id="addTitleLg" use-when="not(@xml:lang)" role="add">
@@ -30,47 +30,101 @@
             </sqf:fix>
         </sch:rule>
     </sch:pattern>
-<!--    <sch:pattern id="msItemStruct-check">
+    <sch:pattern id="msItemStruct-check">
         <sch:rule context="tei:msItemStruct">
-            <sch:assert test="starts-with(@xml:id, 'ACD')" sqf:fix="addACD changeACD"
-                >&lt;msItemStruct&gt; elements must have an @xml:id value that begins with the
-                string 'ACD'.</sch:assert>
-            <sqf:fix id="addACD" use-when="not(@xml:id)">
-                <!-\- modify this to add full correct value -\->
+            <!-- rule-level variables -->
+            <sch:p><sch:emph>$stem</sch:emph> = @xml:id without final dot and trailing
+                digits</sch:p>
+            <sch:p><sch:emph>$tail</sch:emph> = @xml:id after final dot</sch:p>
+            <sch:p><sch:emph>$preceding-stem</sch:emph> = @xml:id of preceding sibling without final
+                dot and trailing digits</sch:p>
+            <sch:p><sch:emph>$preceding-tail</sch:emph> = @xml:id of preceding sibling after final
+                dot</sch:p>
+            <sch:let name="stem" value="replace(@xml:id, '\.\d+$', '')"/>
+            <sch:let name="tail" value="tokenize(@xml:id, '\.')[last()]"/>
+            <sch:let name="preceding-stem"
+                value="replace(preceding-sibling::tei:msItemStruct[1]/@xml:id, '\.\d+$', '')"/>
+            <sch:let name="preceding-tail"
+                value="tokenize(preceding-sibling::tei:msItemStruct[1]/@xml:id, '\.')[last()]"/>
+            <!-- end of rule-level variables -->
+            <sch:p>Add missing @xml:id anywhere</sch:p>
+            <sch:report test="not(@xml:id) or not(matches(@xml:id, 'ACD(\d+)(\.\d+)*'))"
+                sqf:fix="add-acd">&lt;msItemStruct&gt; must have an @xml:id attribute</sch:report>
+            <sqf:fix id="add-acd" use-when="not(@xml:id)">
                 <sqf:description>
-                    <sqf:title>Add @xml:id to &lt;msItemStruct&gt;</sqf:title>
-                    <sqf:p>Add @xml:id that begins with 'ACD' to @lt;msItemStruct&gt;</sqf:p>
+                    <sqf:title>Add missing @xml:id</sqf:title>
                 </sqf:description>
-                <sqf:add node-type="attribute" target="xml:id" select="'ACD'"/>
+                <sqf:add node-type="attribute" target="xml:id"/>
             </sqf:fix>
-            <sqf:fix id="changeACD" use-when="not(starts-with(@xml:id, 'ACD'))">
+            <sch:p>Applies only to first &lt;msItemStruct&gt;</sch:p>
+            <sch:report
+                test="not(preceding::tei:msItemStruct or ancestor::tei:msItemStruct) and @xml:id ne 'ACD1'"
+                sqf:fix="fix-first-acd">The @xml:id value of the first &lt;msItemStruct&gt; must be
+                'ACD1'</sch:report>
+            <sqf:fix id="fix-first-acd">
                 <sqf:description>
-                    <sqf:title>Change @xml:id to begin with 'ACD'</sqf:title>
+                    <sqf:title>Add 'ACD1' as @xml:id of first &lt;msItemStruct&gt;</sqf:title>
                 </sqf:description>
-                <sqf:replace match="./@xml:id" node-type="keep" target="xml:id" select="'ACD'"/>
+                <sqf:replace match="@xml:id" node-type="attribute" target="xml:id" select="'ACD1'"/>
+            </sqf:fix>
+            <sch:p>Applies only to first &lt;msItemStruct&gt;, but not at top of hierarchy</sch:p>
+            <sch:report
+                test="parent::tei:msItemStruct and not(preceding-sibling::tei:msItemStruct) and @xml:id ne concat(parent::tei:msItemStruct/@xml:id, '.1')"
+                sqf:fix="first-top-non-first-acd">First item at current level must have @xml:id
+                value equal to @xml:id of parent followed by '.1'</sch:report>
+            <sqf:fix id="first-top-non-first-acd">
+                <sqf:description>
+                    <sqf:title>Change @xml:id to append '.1' to @xml:id of parent</sqf:title>
+                </sqf:description>
+                <sqf:replace match="@xml:id" node-type="attribute" target="xml:id"
+                    select="concat(ancestor::tei:msItemStruct[2]/@xml:id, '.1')"/>
+            </sqf:fix>
+            <sch:p>@xml:id value of non-top item should be one greater than that of first preceding
+                sibling</sch:p>
+            <sch:report
+                test="preceding-sibling::tei:msItemStruct and @xml:id ne concat($preceding-stem, '.', number($preceding-tail) + 1)"
+                sqf:fix="fix-non-top-acd">The value of @xml:id should be one greater than the value
+                of @xml:id on the first preceding sibling</sch:report>
+            <sqf:fix id="fix-non-top-acd">
+                <sqf:description>
+                    <sqf:title>Change @xml:id to one greater than @xml:id of previous
+                        item</sqf:title>
+                </sqf:description>
+                <sqf:replace match="@xml:id" node-type="attribute" target="xml:id"
+                    select="concat($preceding-stem, '.', number($preceding-tail) + 1)"/>
             </sqf:fix>
         </sch:rule>
     </sch:pattern>
-    <!-\- add rule to validate and correct erroneous ACD -\->
--->    <sch:pattern id="sampleText-check">
+    <sch:pattern id="sampleText-check">
         <sch:rule context="re:sampleText">
-            <sch:assert test="@xml:lang eq 'cu'">&lt;re:sampleText&gt; elements must have an
-                @xml:lang attribute with the value 'cu'.</sch:assert>
-            <!-- 
-                fix should add lang as 'cu' and remove any lang equal to 'cu' from children
-                nb: lang might be Gk
-            -->
+            <sch:p>Usually &lt;re:sampleText&gt; has @xml:lang value of 'cu'. But other values
+                (e.g., 'gk') are not necessarily errors.</sch:p>
+            <sch:report test="not(@xml:lang) or @xml:lang eq ''" sqf:fix="sampleText-cu"
+                >&lt;re:sampleText&gt; lacks an @xml:lang attribute. The most common value is 'cu'
+                (Church Slavonic).</sch:report>
+            <sqf:fix id="sampleText-cu">
+                <sqf:description>
+                    <sqf:title>Add @xml:lang with value of 'cu' to
+                        &lt;re:sampleText&gt;.</sqf:title>
+                </sqf:description>
+                <sqf:add node-type="attribute" target="xml:lang" select="'cu'"/>
+            </sqf:fix>
+            <sch:report role="info" test="@xml:lang ne 'cu'">@xml:lang on &lt;re:sampleText&gt; is
+                not 'cu' (Church Slavonic). This is not necessarily an error.</sch:report>
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="incipit-check">
         <sch:rule context="tei:incipit">
-            <sch:report test="@xml:lang">&lt;incipit&gt; elements must not have an @xml:lang
-                attibute. Instead, their parent &lt;re:sampleText&gt; element must have an @xml:lang
-                attribute with the value 'cu'.</sch:report>
-            <!--
-                fix should remove lang from child of simpleText if it's 'cu' and add it to simpleText
-                nb: lang may be Gk
-            -->
+            <sch:report test="@xml:lang eq parent::re:sampleText/@xml:lang"
+                sqf:fix="remove-xml-lang">&lt;incipit&gt; elements must not have an @xml:lang
+                attribute value equal to that of the parent &lt;re:sampleText&gt;
+                element.</sch:report>
+            <sqf:fix id="remove-xml-lang">
+                <sqf:description>
+                    <sqf:title>Remove redundant @xml:lang attribute</sqf:title>
+                </sqf:description>
+                <sqf:delete match="@xml:lang"/>
+            </sqf:fix>
             <sch:report test="matches(., '[\[\]\(\)]')">Square brackets (to indicate text supplied
                 by the editor) and parentheses (to indicate superscription) are not permitted inside
                 &lt;incipit&gt; elements. Square brackets must be replaced with &lt;supplied&gt;
