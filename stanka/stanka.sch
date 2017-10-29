@@ -114,11 +114,10 @@
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="incipit-check">
-        <sch:rule context="tei:incipit">
+        <sch:rule context="re:sampleText/*">
             <sch:report test="@xml:lang eq parent::re:sampleText/@xml:lang"
-                sqf:fix="remove-xml-lang">&lt;incipit&gt; elements must not have an @xml:lang
-                attribute value equal to that of the parent &lt;re:sampleText&gt;
-                element.</sch:report>
+                sqf:fix="remove-xml-lang">Children of &lt;re:sampleText&gt; elements must not have
+                an @xml:lang attribute value equal to that of the parent</sch:report>
             <sqf:fix id="remove-xml-lang">
                 <sqf:description>
                     <sqf:title>Remove redundant @xml:lang attribute</sqf:title>
@@ -127,9 +126,10 @@
             </sqf:fix>
             <sch:report test="matches(., '[\[\]\(\)]')">Square brackets (to indicate text supplied
                 by the editor) and parentheses (to indicate superscription) are not permitted inside
-                &lt;incipit&gt; elements. Square brackets must be replaced with &lt;supplied&gt;
-                tags. Parentheses must be replaced with a &lt;seg&gt; element that has a @rend
-                attribute with the value 'sup', i.e., &lt;seg rend='sup'&gt;</sch:report>
+                children of &lt;re:sampleText&gt;. Square brackets must be replaced with
+                &lt;supplied&gt; tags. Parentheses must be replaced with a &lt;seg&gt; element that
+                has a @rend attribute with the value 'sup', i.e., &lt;seg
+                rend='sup'&gt;</sch:report>
             <!--
                 fix should convert wrapping square brackets to <supplied> and parens to <seg rend="sup"> 
             -->
