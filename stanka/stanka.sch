@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
+    xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process">
     <sch:ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/>
     <sch:ns uri="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re"/>
+    <xsl:key name="bgTitles" match="bg" use="."/>
+    <xsl:key name="genres" match="en" use="."/>
     <sch:pattern id="title-check">
         <sch:rule context="tei:msItemStruct/tei:title">
             <sch:assert test="@xml:lang eq 'bg'" sqf:fix="addTitleLg changeTitleLg">Titles of
                 articles must specify an @xml:lang attribute with the value 'bg'.</sch:assert>
-            <sch:report
-                test="
-                    some $i in text()
-                        satisfies matches($i, '[IV]+')"
-                >Roman numerals representing mode numbers in &lt;title&gt; elements must be tagged
-                as &lt;num type="mode"&gt;</sch:report>
             <sqf:fix id="addTitleLg" use-when="not(@xml:lang)" role="add">
                 <sqf:description>
                     <sqf:title>Specify that the article title is in Bulgarian</sqf:title>
@@ -27,6 +24,27 @@
                     <sqf:p>Change the current value of the @xml:lang attribute to 'bg'</sqf:p>
                 </sqf:description>
                 <sqf:replace match="./@xml:lang" node-type="keep" target="xml:lang" select="'bg'"/>
+            </sqf:fix>
+            <sch:assert test="normalize-space(.) eq ." sqf:fix="normalize-space">You have entered a
+                title with extra white space</sch:assert>
+            <sqf:fix id="normalize-space">
+                <sqf:description>
+                    <sqf:title>Remove extra white space</sqf:title>
+                </sqf:description>
+                <sqf:replace match="text()[1]" select="replace(., '^\s+', '')"/>
+                <sqf:replace match="text()[last()]" select="replace(., '\s+$', '')"/>
+            </sqf:fix>
+            <sch:let name="titles"
+                value="doc('http://repertorium.obdurodon.org/titles_cyrillic.xml')"/>
+            <sch:report test="child::text()[matches(., '[IVXLC]+')]" sqf:fix="roman">Roman numerals
+                representing mode numbers in &lt;title&gt; elements must be tagged as &lt;num
+                type="mode"&gt;</sch:report>
+            <sqf:fix id="roman">
+                <sqf:description>
+                    <sqf:title>Wrap Roman numerical in &lt;num type="mode"&gt; tags</sqf:title>
+                </sqf:description>
+                <sqf:stringReplace regex="[IVXCL]+" match="text()"><tei:num type="mode"
+                    >$0</tei:num></sqf:stringReplace>
             </sqf:fix>
         </sch:rule>
     </sch:pattern>
