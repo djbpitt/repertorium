@@ -72,9 +72,11 @@
     </sch:pattern>
     <sch:pattern id="msIdentifier-rules">
         <sch:rule context="tei:msIdentifier">
-            <sch:assert test="count(tei:idno[not(@type eq 'former')][@type eq 'shelfmark']) eq 1"
-                >There must be exactly one non-former &lt;idno&gt; element inside
-                &lt;msIdentifier&gt; with the @type value of 'shelfmark'</sch:assert>
+            <sch:assert
+                test="tei:altIdentifier or count(tei:idno[not(@type eq 'former')][@type eq 'shelfmark']) eq 1"
+                >Unless there is an &lt;altIdentifier&gt;, there must be exactly one non-former
+                &lt;idno&gt; element inside &lt;msIdentifier&gt; with the @type value of
+                'shelfmark'</sch:assert>
             <sch:assert test="count(tei:msName[@type eq 'general']) ge 1" sqf:fix="add-general"
                 >There must be at least one msName element of type general</sch:assert>
             <sqf:fix id="add-general">
