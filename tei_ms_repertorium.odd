@@ -47,6 +47,8 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
+            <change who="#djb" when="2017-11-01">Added examples and documentation for Repertorium
+                customizations. No change in functionality.</change>
             <change who="#atb #djb" when="2017-10-20">Minor general edits. Added documentation for
                 Repertorium customizations.</change>
             <change who="#djb" when="2017-10-18">Minor general edits. Updated version number from
@@ -128,6 +130,14 @@
                         <gi>styleDefDecl</gi>, <gi>surface</gi>, <gi>surfaceGrp</gi>,
                         <gi>tagsDecl</gi>, <gi>tagUsage</gi>, <gi>teiCorpus</gi>, <gi>terrain</gi>,
                         <gi>typeDesc</gi>, <gi>typeNote</gi>, <gi>xenoData</gi>, <gi>zone</gi>.</p>
+                <p>The following new elements are declared in the Repertorium namespace
+                        (<val>http://www.ilit.bas.bg/repertorium/ns/3</val>, for which we use the
+                    namespace prefix <code>re:</code>): <gi>bindingNote</gi>, <gi>countermark</gi>,
+                        <gi>crypto</gi>, <gi>grammar</gi>, <gi>gregoryRule</gi>, <gi>ink</gi>,
+                        <gi>lexis</gi>, <gi>motif</gi>, <gi>orthNote</gi>, <gi>orthography</gi>,
+                        <gi>pagination</gi>, <gi>pricking</gi>, <gi>quire</gi>, <gi>ruling</gi>,
+                        <gi>sampleText</gi>, <gi>scribe</gi>, <gi>scribeDesc</gi>,
+                        <gi>scribeLang</gi>.</p>
                 <p>The content models of the following elements in the TEI namespace have been
                     modified: <gi>additions</gi>, <gi>altIdentifier</gi>, <gi>binding</gi>,
                         <gi>collation</gi>, <gi>colophon</gi>, <gi>history</gi>, <gi>keywords</gi>,
@@ -137,14 +147,8 @@
                         <gi>watermark</gi>. The class membership of <gi>accMat</gi> has been
                     modified to remove it from <gi>physDesc</gi> and into <gi>history</gi>, but its
                     content model remains the same.</p>
-                <p>The following new elements are declared in the Repertorium namespace
-                        (<val>http://www.ilit.bas.bg/repertorium/ns/3</val>, for which we use the
-                    namespace prefix <code>re:</code>): <gi>bindingNote</gi>, <gi>countermark</gi>,
-                        <gi>crypto</gi>, <gi>grammar</gi>, <gi>gregoryRule</gi>, <gi>ink</gi>,
-                        <gi>lexis</gi>, <gi>motif</gi>, <gi>orthNote</gi>, <gi>orthography</gi>,
-                        <gi>pagination</gi>, <gi>pricking</gi>, <gi>quire</gi>, <gi>ruling</gi>,
-                        <gi>sampleText</gi>, <gi>scribe</gi>, <gi>scribeDesc</gi>,
-                        <gi>scribeLang</gi>.</p>
+                <p>The models for following elements in the TEI namespace have not been modified,
+                    but new Repertorium examples have been added: <gi>date</gi>.</p>
             </div>
 
             <div>
@@ -581,6 +585,54 @@
                                     <att>type</att> might identify the method, e.g., simple
                                 substitution cipher.</p>
                         </remarks>
+                    </elementSpec>
+
+                    <elementSpec ident="date" module="core" mode="change">
+                        <exemplum>
+                            <p>The following is a TEI example:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><date when="1980-02"
+                                    >early February 1980</date></egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>The following is a TEI example:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">Given on the <date
+                                    when="1977-06-12">Twelfth Day of June in the Year of Our Lord
+                                    One Thousand Nine Hundred and Seventy-seven of the Republic the
+                                    Two Hundredth and first and of the University the
+                                    Eighty-Sixth.</date></egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>The following is a TEI example:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><date when="1990-09"
+                                    >September 1990</date></egXML>
+                        </exemplum>
+                        <exemplum>
+                            <p>References to dates in the church calendar should be encoded as
+                                    <tag>date type="churchCal"</tag>, and the <gi>date</gi> element
+                                should be a child of <gi>msItemStruct</gi> (that is, not wrapped in
+                                a <gi>note</gi> element). Dates in the attributes <att>when</att>,
+                                    <att>notBefore</att>, and <att>notAfter</att> must be in ISO
+                                format. This means that dates that consist of just a year must be
+                                expressed with exactly four digits (using a leading zero for years
+                                before 1000). Year plus month must be formatted as
+                                    <val>YYYY-MM</val>. Month plus date (for example, in the church
+                                calendar) require two leading hyphens, i.e., <val>--MM-DD</val>. For
+                                more information see <ptr
+                                    target="https://en.wikipedia.org/wiki/ISO_8601"/>.The following
+                                example is from MP408G.xml:</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><msItemStruct
+                                    xml:id="ACD3" type="translation">
+                                    <locus n="3">39r-58r</locus>
+                                    <title xml:lang="bg">Житие на св. Текла</title>
+                                    <date type="churchCal" when="--09-24">24. September</date>
+                                    <filiation type="protograph">Bulgarian</filiation>
+                                    <filiation type="antigraph">Middle Bulgarian</filiation>
+                                    <re:sampleText xml:lang="cu">
+                                        <explicit>И погребоше тѣло ѥе вь, бь нѥмже паметь творимь
+                                            м҃сца Септембрѣ кд҃ д҃нь</explicit>
+                                    </re:sampleText>
+                                </msItemStruct></egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="grammar" ns="http://www.ilit.bas.bg/repertorium/ns/3.0"
