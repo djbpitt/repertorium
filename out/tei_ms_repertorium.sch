@@ -350,9 +350,15 @@
                 &lt;language&gt; element (<sch:value-of select="."/>) does not match value of @ident
                     (<sch:value-of select="@ident"/>)</sch:assert>
         </sch:rule>
+        <sch:rule context="tei:language/@ident">
+            <sch:assert test=". = $xmllang">Value of @ident (currently <sch:value-of select="."/>)
+                does not match any @xml:lang in file (<sch:value-of select="$xmllang"
+                />)</sch:assert>
+        </sch:rule>
         <sch:rule context="@xml:lang">
-            <sch:assert test=". = $xmllang">Value of &lt;language&gt; (currently <sch:value-of
-                    select="."/>) must be one of <sch:value-of select="$xmllang"/></sch:assert>
+            <sch:assert test=". = $allident">Value of @xml:lang (currently <sch:value-of select="."
+                />) does not match any @ident in file (<sch:value-of select="$allident"
+                />)</sch:assert>
         </sch:rule>
     </sch:pattern>
 </sch:schema>
