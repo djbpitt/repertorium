@@ -2,9 +2,11 @@
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2"
-    xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">
+    xmlns:tei="http://www.tei-c.org/ns/1.0" 
+    xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0/"
+    xml:lang="en">
     <sch:ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/>
-    <sch:ns uri="http://www.ilit.bas.bg/repertorium/ns/3.0/" prefix="re"/>
+    <sch:ns uri="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re"/>
     <xsl:key name="bgTitles" match="bg" use="."/>
     <xsl:key name="genres" match="en" use="."/>
     <sch:pattern id="TEI-rules">
@@ -283,7 +285,7 @@
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="sampleText-rules">
-        <sch:rule context="re:sampleText">
+        <sch:rule context="*:sampleText">
             <sch:p>Usually &lt;re:sampleText&gt; has @xml:lang value of 'cu'. But other values
                 (e.g., 'gk') are not necessarily errors.</sch:p>
             <sch:report test="not(@xml:lang) or @xml:lang eq ''" sqf:fix="sampleText-cu"
@@ -359,6 +361,36 @@
             <sch:assert test=". = $allident">Value of @xml:lang (currently <sch:value-of select="."
                 />) does not match any @ident in file (<sch:value-of select="$allident"
                 />)</sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    <sch:pattern id="orthography-rules">
+        <sch:p>&lt;re:orthNote&gt; requires a @type attribute with values restricted to 'jer' (jer
+            letters), 'jus' (nasal vowel letters), 'jotVowel' (jotation), and 'otherLetters'
+            (anything other than jers, nasal vowels, and jotation). @subtype values are contrained
+            according to the @type value.</sch:p>
+        <sch:rule context="re:orthNote[@type eq 'jer']">
+            <sch:assert test="@subtype = ('front', 'back', 'etymReg', 'nonEtymReg', 'irregular')"
+                >Legal values for jer @subtype are 'front', 'back', 'etymReg', 'nonEtymReg', and
+                'irregular'. <sch:value-of select="./namespace-uri()"/></sch:assert>
+        </sch:rule>
+        <sch:rule
+            context="orthNote[not(@type = ('jer', 'jus', 'jotVowel', 'otherLetters'))]">
+            <sch:assert test="@type = ('jer', 'jus', 'jotVowel', 'otherLetters')">&lt;orthoNote&gt;
+                elements must have a @type attribute with a value of 'jer' (jer letters), 'jus'
+                (nasal vowel letters), 'jotVowel' (jotation), or 'otherLetters' (anything other than
+                jers, nasal vowels, and jotation).</sch:assert>
+        </sch:rule>
+        <sch:rule context="orthNote[@type eq 'jus']">
+            <sch:assert
+                test="
+                    @subtype = ('etymReg', 'nonEtymReg', 'nonConsis', 'nonJus',
+                    'jusTrace')"
+                >Legal values for jus @subtype are 'etymReg', 'nonEtymReg', 'nonConsis', 'nonJus',
+                and 'jusTrace'.</sch:assert>
+        </sch:rule>
+        <sch:rule context="orthNote[@type eq 'jotation']">
+            <sch:assert test="not(@subtype)">The @subtype attribute is not permitted when the @type
+                value of an &lt;orthNote&gt; element is 'jotation'.</sch:assert>
         </sch:rule>
     </sch:pattern>
 </sch:schema>
