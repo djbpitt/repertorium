@@ -72,9 +72,11 @@
     </sch:pattern>
     <sch:pattern id="msIdentifier-rules">
         <sch:rule context="tei:msIdentifier">
-            <sch:assert test="count(tei:idno[not(@type eq 'former')][@type eq 'shelfmark']) eq 1"
-                >There must be exactly one non-former &lt;idno&gt; element inside
-                &lt;msIdentifier&gt; with the @type value of 'shelfmark'</sch:assert>
+            <sch:assert
+                test="tei:altIdentifier or count(tei:idno[not(@type eq 'former')][@type eq 'shelfmark']) eq 1"
+                >Unless there is an &lt;altIdentifier&gt;, there must be exactly one non-former
+                &lt;idno&gt; element inside &lt;msIdentifier&gt; with the @type value of
+                'shelfmark'</sch:assert>
             <sch:assert test="count(tei:msName[@type eq 'general']) ge 1" sqf:fix="add-general"
                 >There must be at least one msName element of type general</sch:assert>
             <sqf:fix id="add-general">
@@ -318,6 +320,45 @@
             <!--
                 fix should convert wrapping square brackets to <supplied> and parens to <seg rend="sup"> 
             -->
+        </sch:rule>
+    </sch:pattern>
+    <sch:pattern id="language-rules">
+        <sch:p>Rules for &lt;language&gt; and @xml:lang. Abbreviations are from
+            https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry.</sch:p>
+        <sch:let name="language"
+            value="('Bulgarian', 'Czech', 'English', 'German', 'Greek', 'Latin', 'Moldavian', 'Old Slavic', 'Polish', 'Romanian', 'Russian', 'Serbian', 'Swedish', 'Ukrainian')"/>
+        <sch:let name="xmllang"
+            value="('bg', 'cs', 'en', 'de', 'el', 'la', 'mo', 'cu', 'pl', 'ro', 'ru', 'sr', 'sv', 'uk')"/>
+        <sch:let name="allxmllang" value="distinct-values(//@xml:lang)"/>
+        <sch:let name="allident" value="//tei:language/@ident"/>
+        <sch:rule context="tei:profileDesc">
+            <sch:report test="not(tei:langUsage)">&lt;profileDesc&gt; must contain
+                &lt;langUsage&gt;</sch:report>
+        </sch:rule>
+        <sch:rule context="tei:langUsage">
+            <sch:report test="not(tei:language)">&lt;langUsage&gt; must contain at least one
+                &lt;language&gt;</sch:report>
+            <sch:assert test="count(tei:language) eq count(distinct-values(tei:language))"
+                >&lt;language&gt; values must be unique</sch:assert>
+        </sch:rule>
+        <sch:rule context="tei:langUsage/tei:language">
+            <sch:let name="langName" value="."/>
+            <sch:assert test=". = $language">Value of &lt;language&gt; (currently <sch:value-of
+                    select="(., '[empty]')[1]"/>) must be one of <sch:value-of select="$language"
+                /></sch:assert>
+            <sch:assert test="@ident eq $xmllang[index-of($language, $langName)]">Content of
+                &lt;language&gt; element (<sch:value-of select="."/>) does not match value of @ident
+                    (<sch:value-of select="@ident"/>)</sch:assert>
+        </sch:rule>
+        <sch:rule context="tei:language/@ident">
+            <sch:assert test=". = $xmllang">Value of @ident (currently <sch:value-of select="."/>)
+                does not match any @xml:lang in file (<sch:value-of select="$xmllang"
+                />)</sch:assert>
+        </sch:rule>
+        <sch:rule context="@xml:lang">
+            <sch:assert test=". = $allident">Value of @xml:lang (currently <sch:value-of select="."
+                />) does not match any @ident in file (<sch:value-of select="$allident"
+                />)</sch:assert>
         </sch:rule>
     </sch:pattern>
 </sch:schema>
