@@ -2,8 +2,7 @@
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2"
-    xmlns:tei="http://www.tei-c.org/ns/1.0" 
-    xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0/"
+    xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0/"
     xml:lang="en">
     <sch:ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/>
     <sch:ns uri="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re"/>
@@ -373,8 +372,7 @@
                 >Legal values for jer @subtype are 'front', 'back', 'etymReg', 'nonEtymReg', and
                 'irregular'. <sch:value-of select="./namespace-uri()"/></sch:assert>
         </sch:rule>
-        <sch:rule
-            context="orthNote[not(@type = ('jer', 'jus', 'jotVowel', 'otherLetters'))]">
+        <sch:rule context="orthNote[not(@type = ('jer', 'jus', 'jotVowel', 'otherLetters'))]">
             <sch:assert test="@type = ('jer', 'jus', 'jotVowel', 'otherLetters')">&lt;orthoNote&gt;
                 elements must have a @type attribute with a value of 'jer' (jer letters), 'jus'
                 (nasal vowel letters), 'jotVowel' (jotation), or 'otherLetters' (anything other than
@@ -391,6 +389,21 @@
         <sch:rule context="orthNote[@type eq 'jotation']">
             <sch:assert test="not(@subtype)">The @subtype attribute is not permitted when the @type
                 value of an &lt;orthNote&gt; element is 'jotation'.</sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    <sch:pattern id="whitespace-rules">
+        <sch:p>Manuscript names and textual citations cannot begin or end with whitespace, except
+            when the element has only element content except for whitespace-only text()
+            nodes.</sch:p>
+        <sch:rule context="tei:msName | re:sampleText/*">
+            <sch:report
+                test="text()[matches(., '\S')] and starts-with(node()[1][self::text()], ' ')">A
+                    &lt;<sch:value-of select="name(.)"/>&gt; element cannot begin with a whitespace
+                character</sch:report>
+            <sch:report
+                test="text()[matches(., '\S')] and ends-with(node()[last()][self::text()], ' ')">A
+                    &lt;<sch:value-of select="name(.)"/>&gt; element cannot end with a whitespace
+                character</sch:report>
         </sch:rule>
     </sch:pattern>
 </sch:schema>
