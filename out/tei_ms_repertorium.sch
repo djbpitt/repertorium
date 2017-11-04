@@ -421,7 +421,7 @@
             whitespace, except when the element has only element content. They also cannot be
             empty.</sch:p>
         <sch:rule
-            context="tei:condition | tei:date | tei:filiation | tei:msName | tei:note | tei:p | tei:ref | tei:signatures | tei:summary | re:sampleText/*">
+            context="tei:condition | tei:date | tei:filiation | tei:msName | tei:note | tei:p | tei:provenance | tei:ref | tei:signatures | tei:summary | re:sampleText/*">
             <sch:report
                 test="text()[matches(., '\S')] and starts-with(node()[1][self::text()], ' ')">A
                     &lt;<sch:value-of select="name(.)"/>&gt; element cannot begin with a whitespace
