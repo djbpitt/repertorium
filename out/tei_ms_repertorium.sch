@@ -77,9 +77,10 @@
                 type="churchCal"&gt; (not as a &lt;note&gt; element).</sch:report>
         </sch:rule>
         <sch:rule context="tei:date[@type = 'churchCal'][matches(., '\d')]" role="warn">
-            <sch:assert test="@when or @when-custom">If a date is given according to the Church
-                calendar, the &lt;date&gt; element should normally have either a @when (fixed dates)
-                or @when-custom (moveable dates) attribute.</sch:assert>
+            <sch:report test="not(@when or @when-custom) and not(matches(., '\d+\p{L}'))">If a date
+                is given according to the Church calendar, the &lt;date&gt; element should normally
+                have either a @when (fixed dates) or @when-custom (moveable dates)
+                attribute.</sch:report>
         </sch:rule>
         <sch:rule context="tei:msItemStruct/tei:date[not(@type eq 'churchCal')]" role="warn">
             <sch:report test="1">If a &lt;date&gt; child of &lt;msItemStruct&gt; refers to a date in
