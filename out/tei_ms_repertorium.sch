@@ -71,6 +71,27 @@
             </sqf:fix>
         </sch:rule>
     </sch:pattern>
+    <sch:pattern id="date-rules">
+        <sch:rule context="tei:note[@type = 'churchCal']">
+            <sch:report test="1">Dates according to the church calendar must be tagged as &lt;date
+                type="churchCal"&gt; (not as a &lt;note&gt; element).</sch:report>
+        </sch:rule>
+        <sch:rule context="tei:date[@type = 'churchCal'][matches(., '\d')]" role="warn">
+            <sch:assert test="@when or @when-custom">If a date is given according to the Church
+                calendar, the &lt;date&gt; element should normally have either a @when (fixed dates)
+                or @when-custom (moveable dates) attribute.</sch:assert>
+        </sch:rule>
+        <sch:rule context="tei:msItemStruct/tei:date[not(@type eq 'churchCal')]" role="warn">
+            <sch:report test="1">If a &lt;date&gt; child of &lt;msItemStruct&gt; refers to a date in
+                the church calendar, it must have a @type value of "churchCal".</sch:report>
+        </sch:rule>
+        <sch:rule context="tei:msItemStruct/tei:note">
+            <sch:report
+                test="tei:date and string-length(normalize-space(.)) eq sum(tei:date/string-length(normalize-space(.)))"
+                role="warn">A &lt;date&gt; in this position normally should not be wrapped in a
+                &lt;note&gt; parent</sch:report>
+        </sch:rule>
+    </sch:pattern>
     <sch:pattern id="msIdentifier-rules">
         <sch:rule context="tei:msIdentifier">
             <sch:assert
@@ -284,7 +305,7 @@
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="sampleText-rules">
-        <sch:rule context="*:sampleText">
+        <sch:rule context="resampleText">
             <sch:p>Usually &lt;re:sampleText&gt; has @xml:lang value of 'cu'. But other values
                 (e.g., 'gk') are not necessarily errors.</sch:p>
             <sch:report test="not(@xml:lang) or @xml:lang eq ''" sqf:fix="sampleText-cu"
@@ -299,6 +320,10 @@
             </sqf:fix>
             <sch:report role="info" test="@xml:lang ne 'cu'">@xml:lang on &lt;re:sampleText&gt; is
                 not 'cu' (Church Slavonic). This is not necessarily an error.</sch:report>
+        </sch:rule>
+        <sch:rule context="re:sampleText/*">
+            <sch:report test="descendant::tei:c" role="warn">The &lt;c&gt; element in cited text is
+                usually an error for &lt;seg rend="sup"&gt;</sch:report>
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="incipit-rules">
@@ -392,10 +417,11 @@
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="whitespace-rules">
-        <sch:p>Manuscript names and textual citations cannot begin or end with whitespace, except
-            when the element has only element content except for whitespace-only text()
-            nodes.</sch:p>
-        <sch:rule context="tei:msName | re:sampleText/*">
+        <sch:p>Manuscript names, textual citations, and paragraphs cannot begin or end with
+            whitespace, except when the element has only element content. They also cannot be
+            empty.</sch:p>
+        <sch:rule
+            context="tei:condition | tei:date | tei:filiation | tei:msName | tei:note | tei:p | tei:ref | tei:signatures | tei:summary | re:sampleText/*">
             <sch:report
                 test="text()[matches(., '\S')] and starts-with(node()[1][self::text()], ' ')">A
                     &lt;<sch:value-of select="name(.)"/>&gt; element cannot begin with a whitespace
@@ -404,6 +430,15 @@
                 test="text()[matches(., '\S')] and ends-with(node()[last()][self::text()], ' ')">A
                     &lt;<sch:value-of select="name(.)"/>&gt; element cannot end with a whitespace
                 character</sch:report>
+            <sch:report test="empty(.)">A &lt;<sch:value-of select="name(.)"/>&gt; element cannot be
+                empty.</sch:report>
+        </sch:rule>
+    </sch:pattern>
+    <sch:pattern id="capitalization-rules">
+        <sch:rule context="text()">
+            <sch:report test="matches(., 'bulgarian|greek|russian|serbian|[\P{L}]slavic[\P{L}]')"
+                >Names of languages and cultures (e.g., Bulgarian, Serbian) should normally be
+                capitalized.</sch:report>
         </sch:rule>
     </sch:pattern>
 </sch:schema>
