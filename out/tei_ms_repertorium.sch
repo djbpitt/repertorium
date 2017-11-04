@@ -82,7 +82,9 @@
                 have either a @when (fixed dates) or @when-custom (moveable dates)
                 attribute.</sch:report>
         </sch:rule>
-        <sch:rule context="tei:msItemStruct/tei:date[not(@type eq 'churchCal')]" role="warn">
+        <sch:rule
+            context="tei:msItemStruct[not(tei:title = 'Колофон')]/tei:date[not(@type eq 'churchCal')]"
+            role="warn">
             <sch:report test="1">If a &lt;date&gt; child of &lt;msItemStruct&gt; refers to a date in
                 the church calendar, it must have a @type value of "churchCal".</sch:report>
         </sch:rule>
@@ -422,7 +424,7 @@
             whitespace, except when the element has only element content. They also cannot be
             empty.</sch:p>
         <sch:rule
-            context="tei:condition | tei:date | tei:filiation | tei:msName | tei:note | tei:p | tei:provenance | tei:ref | tei:signatures | tei:summary | re:sampleText/*">
+            context="tei:acquisition | tei:condition | tei:date | tei:filiation | tei:foliation | tei:msName | tei:note | tei:p | tei:provenance | tei:ref | tei:signatures | tei:summary | re:sampleText/*">
             <sch:report
                 test="text()[matches(., '\S')] and starts-with(node()[1][self::text()], ' ')">A
                     &lt;<sch:value-of select="name(.)"/>&gt; element cannot begin with a whitespace
