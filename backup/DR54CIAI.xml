@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-DR54CIAI">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Prayer-book, Church-Historical and Archival Institute, Sofia, No. 54,
+                    1642</title>
+                <author xml:id="DR">Dilyana Radoslavova</author>
+                <editor xml:id="AM">Anisava Miltenova</editor>
+                <editor xml:id="AB">Andrej Bojadžiev</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Institute of Literature</publisher>
+                <pubPlace>Sofia</pubPlace>
+                <date when="1996-09-02">02 September 1996</date>
+                <idno type="Repertorium">RC-DR54CIAI</idno>
+                <availability status="free">
+                    <p>The intellectual content of this file is copyrighted by the creators under
+                        the Creative Commons Attribution-No Derivative Works 3.0 under legislation
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
+                        information, but you are not allowed to alter, transform, or build upon the
+                        works on this section of the site. All reuse or distribution of this work
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p><ref type="bibl" target="bib:Спространов1900">Спространов 1900: 86-88</ref>
+                    <ref type="bibl" target="bib:Христова1982">Своден каталог 1982: No.
+                    412</ref></p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="bg">Bulgarian</language>
+                <language ident="cu">Old Slavic</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="Repertorium">
+                    <list type="simple">
+                        <item>prayer-book</item>
+                        <item>prayers</item>
+                        <item>rites</item>
+                    </list>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
+                    <p>In the context of this project, private URIs with the prefix "bib" point to
+                        bibl elements in the project's bib.xml file.</p>
+                </prefixDef>
+            </listPrefixDef>
+        </encodingDesc>
+        <revisionDesc>
+            <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
+                element &lt;origDate&gt;</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <msDesc>
+                <msIdentifier>
+                    <msName type="general" xml:lang="en">euchologion</msName>
+                    <country>Bulgaria</country>
+                    <settlement>Sofia</settlement>
+                    <repository>Church-Historical and Archival Institute</repository>
+                    <idno type="shelfmark">54</idno>
+                    <idno type="catalogue">54</idno>
+                    <altIdentifier type="former">
+                        <idno type="shelfmark">35</idno>
+                    </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                    <objectDesc form="codex">
+                        <supportDesc material="paper">
+                            <support>
+                                <material>Paper</material>
+                                <watermark>unclear</watermark>
+                            </support>
+                            <extent>
+                                <measure unit="folia">227</measure>
+                                <dimensions type="folia" unit="mm">
+                                    <height>200</height>
+                                    <width>150</width>
+                                </dimensions>
+                                <dimensions type="written" unit="mm">
+                                    <height>155</height>
+                                    <width>95</width>
+                                </dimensions>
+                            </extent>
+                            <foliation>New typed pagination by pages</foliation>
+                            <collation>
+                                <summary>29 extant quires</summary>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">5</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="2-28">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="29">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">6</extent>
+                                </quire>
+                                <signatures>Original; with Old Slavic letters as a numerals
+                                        (<foreign xml:lang="cu">в҃-к҃и</foreign>) marked on the
+                                    first recto folio and on the last verso folio of each quire in
+                                    the bottom margin</signatures>
+                            </collation>
+                            <condition>The MS has been restored. There are 3 ff. missing in the
+                                beginning as well as 2 ff. missing in the end of MS</condition>
+                        </supportDesc>
+                        <layoutDesc>
+                            <layout columns="1" writtenLines="20 22"/>
+                        </layoutDesc>
+                    </objectDesc>
+                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Brown</ink>
+                    <decoDesc>
+                        <decoNote type="headpieces">
+                            <p>On f. 37v orthogonal headpiece in braid Balkan style with
+                                anthropomorphical motif (human head)</p>
+                        </decoNote>
+                        <decoNote type="initials">Large red initials in New-Byzantine style with
+                            floral motifs</decoNote>
+                    </decoDesc>
+                    <bindingDesc>
+                        <binding>
+                            <p>Old, maybe original; wooden panels covered with brown non ornamented
+                                leather</p>
+                        </binding>
+                    </bindingDesc>
+                    <additions type="inscriptions">
+                        <list type="simple">
+                            <item>
+                                <locus>back cover</locus>
+                                <quote xml:lang="cu">да се знае</quote>
+                            </item>
+                            <item>
+                                <locus>back cover</locus>
+                                <quote xml:lang="cu">никола васиилко + да са знае куге седель
+                                    василко тетовене та е писаль тоова писмо</quote>
+                            </item>
+                            <item>
+                                <locus>front cover</locus>
+                                <quote xml:lang="bg">Отъ Черепишкиі Мънастиръ "Успеніе Пресвятія
+                                    Богородици" при Лютібродъ Врачанска околия</quote>
+                            </item>
+                        </list>
+                    </additions>
+                </physDesc>
+                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                    <scribe n="1">
+                        <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
+                            <locus>1r-227v</locus>
+                        </locusGrp>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">hieromonk Vasilij from
+                            the Monastery of Theotokos near Teteven</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
+                            type="semiuncial">
+                            <p>3 mm high, of artistic quality</p>
+                        </scriptDesc>
+                        <scribeLang>
+                            <orthography type="resava">
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Resava orthography</p>
+                            </orthography>
+                        </scribeLang>
+                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
+                            <name full="yes">Dilyana Radoslavova</name>
+                            <resp>de visu</resp>
+                        </respStmt>
+                    </scribe>
+                </scribeDesc>
+                <msContents type="translation">
+                    <summary>The manuscript contains 26 rites and various prayers</summary>
+                    <note/>
+                    <filiation type="protograph">Bulgarian</filiation>
+                    <filiation type="antigraph">Middle Bulgarian</filiation>
+                    <filiation type="apograph">unknown</filiation>
+                    <msItemStruct xml:id="ACD1" type="translation" style="non-narrative">
+                        <locus n="1">1r-9r</locus>
+                        <title xml:lang="bg">Чинопоследование на водосвет</title>
+                        <author>anonymous</author>
+                        <note>The beginning of the text (first three folia) is missing</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu"
+                        />
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD2" type="original" style="non-narrative">
+                        <locus n="2">9r-10r</locus>
+                        <title xml:lang="bg">Чинопоследование на освещаване на нов дом</title>
+                        <author>anonymous</author>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">чинь бываемыи на бл<seg
+                                    rend="sup">с</seg>венїе новому храму</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD3" type="original">
+                        <locus n="3">10r-11v</locus>
+                        <title xml:lang="bg">Молитви над бабина вода</title>
+                        <note>This text contains three prayers</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">л</seg>тва
+                                бабѣ коꙗ прїимь отроче въ ча<seg rend="sup">с</seg> рож<seg
+                                    rend="sup">д</seg>енїа ѿ мт҃ре</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD4" type="translation">
+                        <locus n="4">11v-14r</locus>
+                        <title xml:lang="bg">Молитви над родилка на третия ден</title>
+                        <note>This text contains three prayers</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">о</seg>литвы
+                                женѣ въ треты д҃нь по рож<seg rend="sup">д</seg>енїи</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD5" type="translation" style="non-narrative">
+                        <locus n="5">14r-17r</locus>
+                        <title xml:lang="bg">Молитви над родилка на 40-тия ден</title>
+                        <note>This text contains three prayers</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">о</seg>литвы
+                                женѣ по, м҃, д҃ни</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD6" type="translation">
+                        <locus n="6">17r-37r</locus>
+                        <title xml:lang="bg">Чинопоследование на кръщение</title>
+                        <author>anonymous</author>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">последованїе еже сътворити
+                                ѡтроче оглашено и кр<seg rend="sup">с</seg>тити то</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD7" type="translation">
+                        <locus n="7">37r-37v</locus>
+                        <title xml:lang="bg">Молитва за бързо кръщение при страх от смърт</title>
+                        <author>anonymous</author>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мл҃тва инаа с҃ты<seg
+                                    rend="sup">х</seg> кр҃щенїи. имѣе начело въ кратцѣ. аще ког<seg
+                                    rend="sup">д</seg>аслучит се мл<seg rend="sup">д</seg>цу болну
+                                соущу быти и спѣшить кр<seg rend="sup">с</seg>тити того, страха ради
+                                    съмръ<seg rend="sup">т</seg>на<seg rend="sup">г</seg></head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD8" type="translation">
+                        <locus n="8">37v-40r</locus>
+                        <title xml:lang="bg">Чинопоследование на обручение</title>
+                        <author>anonymous</author>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">послѣдованїе бываемое
+                                обрученїю</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD9" type="translation">
+                        <locus n="9">40v-51r</locus>
+                        <title xml:lang="bg">Чинопоследование на венчание</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">чинь вѣнчанїю</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD10" type="translation">
+                        <locus n="10">51r-56r</locus>
+                        <title xml:lang="bg">Чинопоследование на венчание на второбрачни</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">чинь вѣнчанїю
+                                второбрачнымь</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD11" type="translation">
+                        <locus n="11">56r-68v</locus>
+                        <title xml:lang="bg">Чинопоследование на изповед</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">чинь исповѣданїю. хотеи каати
+                                се грѣховь свои<seg rend="sup">х</seg></head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD12" type="translation">
+                        <locus n="12">68v-111v</locus>
+                        <title xml:lang="bg">Чинопоследование на маслосвет</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">послѣдованїе ст҃го масла. си
+                                рѣчь маслос҃щенїа</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD13" type="translation">
+                        <locus n="13">111v-148v</locus>
+                        <title xml:lang="bg">Чинопоследование на опело и погребение на мирянин</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">послѣдованїе погрибанїю,
+                                    мирскы<seg rend="sup">м</seg> чл҃кѡ<seg rend="sup"
+                                >м</seg></head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD14" type="translation">
+                        <locus n="14">148v-154r</locus>
+                        <title xml:lang="bg">Чинопоследование на изход души</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">послѣдованїе на исхѡ<seg
+                                    rend="sup">д</seg> д҃ши. ег<seg rend="sup">д</seg>а
+                                    изнемагае<seg rend="sup">т</seg> брать</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD15" type="translation">
+                        <locus n="15">154r-159r</locus>
+                        <title xml:lang="bg">Чинопоследование на опело и погребение на младенец</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">чинь погрибанїю мл<seg
+                                    rend="sup">д</seg>нчьскому</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD16" type="translation">
+                        <locus n="16">159r-165v</locus>
+                        <title xml:lang="bg">Чинопоследование на опело и погребение през Светлата седмица</title>
+                        <date type="churchCal">Easter Week</date>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">друго опѣло аще кто пѣставит'
+                                се на с҃тое въскр<seg rend="sup">с</seg>енїе. или въ которыи д҃нь
+                                свѣтлыѥ не<seg rend="sup">д</seg>ли, до не<seg rend="sup">д</seg>лю
+                                ѳѡмину</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD17" type="translation">
+                        <locus n="17">165v-175r</locus>
+                        <title xml:lang="bg">Чинопоследование над коливо за умрели</title>
+                        <date type="churchCal">Easter Week</date>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">чинь бываемыи на<seg
+                                    rend="sup">д</seg> коливѡ<seg rend="sup">м</seg> оусопши<seg
+                                    rend="sup">х</seg></head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD18" type="translation">
+                        <locus n="18">175r-178r</locus>
+                        <title xml:lang="bg">Чинопоследование на причестяване на тежко болен</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">чинь егда ключит' се въскорѣ
+                                вел'ми бол'ному, дати причещенїе</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD19" type="translation">
+                        <locus n="19">178r-183v</locus>
+                        <title xml:lang="bg">Чинопоследование на братотворение</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">чинь братотворенїю</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD20" type="translation">
+                        <locus n="20">184r-195r</locus>
+                        <title xml:lang="bg">Чинопоследование на Велик водосвет</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">послѣдованїе на с҃тое
+                                б҃гоꙗвлѥнїе</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD21" type="translation">
+                        <locus n="21">195r-211r</locus>
+                        <title xml:lang="bg">Молитви различни “на всяка потреба”</title>
+                        <note>This text contains 14 prayers</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">о</seg>литви
+                                различныѥ на въсаку потрѣбу.</head>
+                        </sampleText>
+                        <msItemStruct xml:id="ACD21.1" type="translation">
+                            <title xml:lang="bg">Молитва преди построяване на нов дом</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                xml:lang="cu">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">мл҃тва въ нѥгда начети
+                                    храмину з<seg rend="sup">д</seg>ати</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">г҃лѥ<seg rend="sup"
+                                        >т</seg> іерѥи бл<seg rend="sup">с</seg>вень б҃ь нашь.
+                                        тр<seg rend="sup">с</seg>тое. и по ѡ҃че на<seg rend="sup"
+                                        >ш</seg>. ꙗко тво ѥ<seg rend="sup">с</seg> цр<seg rend="sup"
+                                        >с</seg>тво. та<seg rend="sup">ж</seg> тро<seg rend="sup"
+                                        >п</seg>. д҃ню и б<seg rend="sup">о</seg>, по се<seg
+                                        rend="sup">м</seg>, г҃у по<seg rend="sup">м</seg>. и м<seg
+                                        rend="sup">л</seg>, сїю ве<seg rend="sup">л</seg></rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0">б҃е въседръжителю,
+                                    сътворивы нб<seg rend="sup">с</seg>а разумо<seg rend="sup"
+                                        >м</seg></incipit>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">та<seg rend="sup"
+                                        >ж</seg>. сла<seg rend="sup">в</seg>. и н<seg rend="sup"
+                                        >н</seg>. г҃и пом҃луи, г<seg rend="sup">щ</seg>. г҃и бл<seg
+                                        rend="sup">с</seg>ви. и ѿпу<seg rend="sup">с</seg>
+                                    д҃нѥвныи.</rubric>
+                            </sampleText>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD21.2" type="translation">
+                            <title xml:lang="bg">Молитва над нов кладенец</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                xml:lang="cu">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тва на<seg rend="sup">д</seg> новы<seg rend="sup"
+                                        >м</seg> кладенце<seg rend="sup">м</seg></head>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0">ѕиж<seg rend="sup"
+                                        >д</seg>ителю водамь, и съз<seg rend="sup">д</seg>ателю
+                                    въсѣмь</incipit>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">сла<seg rend="sup"
+                                        >в</seg>. ї н<seg rend="sup">н</seg>. г҃и милуи, г<seg
+                                        rend="sup">щ</seg>. г҃и бл<seg rend="sup">с</seg>ви. та<seg
+                                        rend="sup">ж</seg> ѿпу<seg rend="sup">с</seg>.
+                                    д҃невны.</rubric>
+                            </sampleText>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD21.3" type="translation">
+                            <title xml:lang="bg">Молитва над осквернен кладенец</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                xml:lang="cu">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тва, ег<seg rend="sup">д</seg>а аще что въпаде<seg
+                                        rend="sup">т</seg> скръно въ кладен<seg rend="sup"
+                                    >ц</seg>ь</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тва, ег<seg rend="sup">д</seg>а аще что въпаде<seg
+                                        rend="sup">т</seg> скръно въ кладен<seg rend="sup"
+                                    >ц</seg>ь</rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                        >л</seg>тва, ег<seg rend="sup">д</seg>а аще что въпаде<seg
+                                        rend="sup">т</seg> скръно въ кладен<seg rend="sup"
+                                    >ц</seg>ь</incipit>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тва, ег<seg rend="sup">д</seg>а аще что въпаде<seg
+                                        rend="sup">т</seg> скръно въ кладен<seg rend="sup"
+                                    >ц</seg>ь</rubric>
+                            </sampleText>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD21.4" type="translation">
+                            <title xml:lang="bg">Молитва над осквернена храна, 1</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                xml:lang="cu">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тва аще что въпаде<seg rend="sup">т</seg> скврънѡ въ
+                                        съсоу<seg rend="sup">д</seg>. вина, или масла, или ме<seg
+                                        rend="sup">д</seg>.</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">до<seg rend="sup"
+                                        >с</seg>ить въпа<seg rend="sup">д</seg>шее изврѣщи вънь. и
+                                    инь съсоу<seg rend="sup">д</seg> омывши чисть. и изьвънутрь
+                                    оуду, и извьнѣ. и покадивь кр<seg rend="sup">с</seg>таобразно. и
+                                    въливаеть воду ѿ с҃ты<seg rend="sup">х</seg> б҃гоꙗвлѥнїи, г<seg
+                                        rend="sup">щ</seg>. и такѡ прѣливають, вино, или маслѡ или
+                                        ме<seg rend="sup">д'</seg>, въ тьи съсоу<seg rend="sup"
+                                        >д</seg> чистыи. г҃лѥ<seg rend="sup">т</seg> по<seg
+                                        rend="sup">п</seg>, бл<seg rend="sup">с</seg>вень б҃ь на<seg
+                                        rend="sup">ш</seg>. трїс҃тое, и по ѡ҃че нашь. тро<seg
+                                        rend="sup">п</seg>ре д҃нѥвныи, и б<seg rend="sup">о</seg>.
+                                    по се<seg rend="sup">м</seg>, г҃у по<seg rend="sup">м</seg>.
+                                        та<seg rend="sup">ж</seg> г҃лѥ<seg rend="sup">т</seg>, м<seg
+                                        rend="sup">л</seg> сїю на<seg rend="sup">д</seg>
+                                    съсоудомь:</rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0">с҃тыи вл<seg rend="sup"
+                                        >д</seg>ко г҃и і҃с х҃е б҃е на<seg rend="sup">ш</seg>. и<seg
+                                        rend="sup">ж</seg> твои<seg rend="sup">м</seg>
+                                        бл҃гоутробны<seg rend="sup">м</seg> на землю пришьствїе<seg
+                                        rend="sup">м</seg>. въсаку нечистоту вражїю упраз<seg
+                                        rend="sup">д</seg>нивь</incipit>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">и тако въкушаеть пръвѣе
+                                    попь пото<seg rend="sup">м</seg> прочїи чл҃ци, и тако г҃лѥ ч<seg
+                                        rend="sup">с</seg>тнѣишую херувї<seg rend="sup">м</seg>.
+                                    слава. и н҃нꙗ г҃и пом҃луи, г<seg rend="sup">щ</seg>. г҃и бл<seg
+                                        rend="sup">с</seg>ви и ѿпу<seg rend="sup">с</seg> д҃ню.
+                                        по<seg rend="sup">д</seg>обае<seg rend="sup">т</seg> вѣ<seg
+                                        rend="sup">д</seg>ти тебѣ ѡ с҃щенниче, испитовати добрѣ о
+                                    семь. аще боуде<seg rend="sup">т</seg> разгнилое въпа<seg
+                                        rend="sup">д</seg>шее въ вино или въ маслѣ, или въ медѣ, или
+                                    въ прѣсоли, или въ туршїи, или въ кон'босѣ. никто же да не
+                                        въкуси<seg rend="sup">т</seg> ѿ си<seg rend="sup">х</seg>
+                                        прѣж<seg rend="sup">д</seg>е ре<seg rend="sup"
+                                        >ч</seg>н'ны<seg rend="sup">х</seg>. нъ да пролꙗет се и въ
+                                    попранїе чл҃ко<seg rend="sup">м</seg> да буде<seg rend="sup"
+                                        >т</seg>.</rubric>
+                            </sampleText>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD21.5" type="translation">
+                            <title xml:lang="bg">Молитва отпустителна над човек, дал обет да пости</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                xml:lang="cu">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тва о иже самы себе заклеше постити на нѣколико лѣта. и
+                                    пакы хотещи<seg rend="sup">м</seg> пость оставити.</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">не по<seg rend="sup"
+                                        >д</seg>обаеть имь без' сїю мл҃тву пость оставлꙗти. нъ
+                                        приходе<seg rend="sup">т</seg> въ цр҃ковь къ с҃щен'нику. и
+                                        с҃щен<seg rend="sup">н</seg>икь на<seg rend="sup">д</seg>
+                                        ни<seg rend="sup">м</seg> ничто же г҃лѥ<seg rend="sup"
+                                        >т</seg> тъкмо г҃у по<seg rend="sup">м</seg> и м<seg
+                                        rend="sup">л</seg>, сїю ве<seg rend="sup">л</seg>ми</rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0">б҃е страшныи, и
+                                    чл҃колюбивыи, сил'ныи и мл<seg rend="sup">с</seg>рдыи</incipit>
+                            </sampleText>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD21.6" type="translation">
+                            <title xml:lang="bg">Молитва отпустителна за всяка клетва</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                xml:lang="cu">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тва, б҃, раз<seg rend="sup">д</seg>рѣшити въсаку
+                                    клетву</head>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0">вл<seg rend="sup"
+                                        >д</seg>ко г҃и б҃е въседръжителю. иже сп<seg rend="sup"
+                                        >с</seg>енїа ради роду чл҃чьскому съниде на землю</incipit>
+                            </sampleText>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD21.7" type="translation">
+                            <title xml:lang="bg">Молитва против всякакво оскверняване</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                xml:lang="cu">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тва ѿ въсакое сквръны</head>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0">г҃и б҃е нашь, единь
+                                    бл҃гыи цл҃колюб'ць. единь с҃ть и на с҃ты<seg rend="sup">х</seg>
+                                    почиваеи</incipit>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">сла<seg rend="sup"
+                                        >в</seg>, и н҃нꙗ г҃и пом҃луи, г<seg rend="sup">щ</seg>.
+                                        бл<seg rend="sup">с</seg>ви. и ѿпу<seg rend="sup">с</seg>,
+                                    д҃хю</rubric>
+                            </sampleText>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD21.8" type="translation">
+                            <title xml:lang="bg">Молитва на изход души, 1</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                xml:lang="cu">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тва на исхо<seg rend="sup">д</seg> д҃ши чл҃кѡ<seg
+                                        rend="sup">м</seg></head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">г҃лѥ<seg rend="sup"
+                                        >т</seg> іереи. бл<seg rend="sup">с</seg>вень б҃ь на<seg
+                                        rend="sup">ш</seg>. тр<seg rend="sup">с</seg>тое, и по ѡ҃че
+                                        на<seg rend="sup">ш</seg>, ꙗко твое ѥ<seg rend="sup">с</seg>
+                                        цр<seg rend="sup">с</seg>тво. та<seg rend="sup">ж</seg> г҃у
+                                    пом҃лим се</rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0">вл<seg rend="sup"
+                                        >д</seg>ко г҃и б҃е въседръжите. ѿче г҃а наше<seg rend="sup"
+                                        >г</seg> і҃с х҃а. иже въсѣмь чл҃комь хотеи сп<seg rend="sup"
+                                        >с</seg>ти се</incipit>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">слава, и н҃нꙗ. г҃и
+                                    помилуи. г<seg rend="sup">щ</seg>. г҃и бл<seg rend="sup"
+                                    >с</seg>ви. и ѿпу<seg rend="sup">с</seg> д҃хевны.</rubric>
+                            </sampleText>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD21.9" type="translation">
+                            <title xml:lang="bg">Молитва на изход души, 2</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                xml:lang="cu">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тва на<seg rend="sup">д</seg> оумърша<seg rend="sup"
+                                        >г</seg>.</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">стане<seg rend="sup"
+                                        >т</seg> ѿць д҃ховныи на<seg rend="sup">д</seg> гробь зре къ
+                                    западуг҃лѥ, г҃у пом҃лим' се. и прочитаеть</rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0">вл<seg rend="sup"
+                                        >д</seg>ко г҃и б҃е въседръжите. ѿче г҃а наше<seg rend="sup"
+                                        >г</seg> і҃с х҃а. иже въсѣмь чл҃комь хотеи сп<seg rend="sup"
+                                        >с</seg>ти се</incipit>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">слава, и н҃нꙗ. г҃и
+                                    помилуи. г<seg rend="sup">щ</seg>. г҃и бл<seg rend="sup"
+                                    >с</seg>ви. и ѿпу<seg rend="sup">с</seg> д҃хевны.</rubric>
+                            </sampleText>
+                            <msItemStruct xml:id="ACD21.9.1" type="translation">
+                                <title xml:lang="bg">Молитви на изход души. Молитва за опрощаване на грехове, 1</title>
+                                <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                    xml:lang="cu">
+                                    <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                            >л</seg>тву сїю прощену за грѣхы</head>
+                                    <incipit xmlns="http://www.tei-c.org/ns/1.0">въ име о҃ца и с҃на
+                                        и с҃таго д҃ха. и с҃тые прѣч<seg rend="sup">с</seg>тые вл<seg
+                                            rend="sup">д</seg>чце нашее б҃це и пр<seg rend="sup"
+                                            >с</seg>но д҃вы марїе. и с҃ты<seg rend="sup">х</seg>
+                                        силь нб<seg rend="sup">с</seg>ныхь</incipit>
+                                </sampleText>
+                            </msItemStruct>
+                            <msItemStruct xml:id="ACD21.9.2" type="translation">
+                                <title xml:lang="bg">Молитви на изход души. Молитва за опрощаване на грехове, 2</title>
+                                <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                    xml:lang="cu">
+                                    <head xmlns="http://www.tei-c.org/ns/1.0">а сїе мл҃тву ѿпу<seg
+                                            rend="sup">с</seg>тну написуеть ѿць д҃ховныи на хартїю,
+                                        и прочитавь вълагае<seg rend="sup">т</seg> въ рукы
+                                        оумьршому, г҃лѥть г҃у пом҃ли<seg rend="sup">м</seg>
+                                        се:</head>
+                                    <incipit xmlns="http://www.tei-c.org/ns/1.0">б҃ь мл<seg
+                                            rend="sup">с</seg>рдїи, и мноофомл<seg rend="sup"
+                                            >с</seg>тивыи иже на<seg rend="sup">с</seg> ради
+                                        въчл҃чивыи се</incipit>
+                                </sampleText>
+                            </msItemStruct>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD21.10" type="translation">
+                            <title xml:lang="bg">Молитва над абортирала жена</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                xml:lang="cu">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тва женѣ ег<seg rend="sup">д</seg>а изьвръже<seg
+                                        rend="sup">т</seg> отроче</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">г҃лѥ<seg rend="sup"
+                                        >т</seg> іереи. бл<seg rend="sup">с</seg>вень б҃ь на<seg
+                                        rend="sup">ш</seg>, тр<seg rend="sup">с</seg>тое. и по ѡ҃че
+                                        на<seg rend="sup">ш</seg>. тро<seg rend="sup">п</seg> д҃ню,
+                                    и б<seg rend="sup">о</seg>. по се<seg rend="sup">м</seg>,
+                                        г҃лѥ<seg rend="sup">т</seg> г҃у по<seg rend="sup">м</seg>. и
+                                        м<seg rend="sup">л</seg>, сїю. ве<seg rend="sup"
+                                    >л</seg>ми</rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0">вл<seg rend="sup"
+                                        >д</seg>ко г҃и б҃е нашь, рож<seg rend="sup">д</seg>еи се ѿ
+                                    с҃тые б҃це и пр<seg rend="sup">с</seg>но д҃вы м҃рїе. и въ
+                                        ꙗслꙗ<seg rend="sup">х</seg> ꙗко же отрочищь
+                                    възлегь</incipit>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">сла<seg rend="sup"
+                                        >в</seg>, і н<seg rend="sup">н</seg> г҃и пом҃луи, г<seg
+                                        rend="sup">щ</seg>, г҃и бл<seg rend="sup">с</seg>ви, и
+                                        ѿпу<seg rend="sup">с</seg> д҃ню.</rubric>
+                            </sampleText>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD21.11" type="translation">
+                            <title xml:lang="bg">Молитва над осквернен съд</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                xml:lang="cu">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тва на<seg rend="sup">д</seg> осквръ<seg rend="sup"
+                                        >н</seg>шим' се съсудѣ</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">іереи г҃лѥ<seg
+                                        rend="sup">т</seg>. бл<seg rend="sup">с</seg>вень б҃ь на<seg
+                                        rend="sup">ш</seg>. тр<seg rend="sup">с</seg>тое. и по ѡ҃че
+                                        на<seg rend="sup">ш</seg>. тро<seg rend="sup">п</seg> д҃нѥвы
+                                    и б<seg rend="sup">о</seg>. та<seg rend="sup">ж</seg> г҃у
+                                    пом҃лиме и мл҃тву сїю:</rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0">г҃и б҃е нашь, рекы
+                                    връховному ап<seg rend="sup">с</seg>лу своему петру. въ съсудѣ
+                                        плащанич'нѣ<seg rend="sup">м</seg>. нечистому и скврън<seg
+                                        rend="sup">н</seg>ому въсему чисту быти</incipit>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">сла<seg rend="sup"
+                                        >в</seg>, і н<seg rend="sup">н</seg>, г҃и по<seg rend="sup"
+                                        >м</seg>, г<seg rend="sup">щ</seg>. г҃и бл<seg rend="sup"
+                                        >с</seg>ви, и ѿпу<seg rend="sup">с</seg> д҃ню</rubric>
+                            </sampleText>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD21.12" type="translation">
+                            <title xml:lang="bg">Молитва за водосвет</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                xml:lang="cu">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тва ос҃тити воду въ кра<seg rend="sup">т</seg>цѣ</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">по<seg rend="sup"
+                                        >п</seg> г҃лѥ<seg rend="sup">т</seg>, бл<seg rend="sup"
+                                        >с</seg>вень б҃ь на<seg rend="sup">ш</seg>. та<seg
+                                        rend="sup">ж</seg> трїс҃тое и по ѡ҃че на<seg rend="sup"
+                                        >ш</seg>. тро<seg rend="sup">п</seg> и б<seg rend="sup"
+                                        >о</seg> д҃нѥвны. по се<seg rend="sup">м</seg> г҃у пом҃лим'
+                                    се. и м<seg rend="sup">л</seg>тву сїю ве<seg rend="sup"
+                                    >л</seg>ми</rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0">б҃е великоименитыи.
+                                    твореи чюдеса, им'же нѣ<seg rend="sup">с</seg> числа</incipit>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">сла<seg rend="sup"
+                                        >в</seg> ї н<seg rend="sup">н</seg>, г҃и пом҃луи, г<seg
+                                        rend="sup">щ</seg>, г҃и бл<seg rend="sup">с</seg>ви. и
+                                        ѿпу<seg rend="sup">с</seg>, д҃нев.</rubric>
+                            </sampleText>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD21.13" type="translation">
+                            <title xml:lang="bg">Молитва над осквернена храна, 2</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                xml:lang="cu">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тва на<seg rend="sup">д</seg> оскврьнши<seg rend="sup"
+                                        >м</seg> се брашнѣ</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">г҃лѥ<seg rend="sup"
+                                        >т</seg> ереи. бл<seg rend="sup">с</seg>вень б҃ь на<seg
+                                        rend="sup">ш</seg>. та<seg rend="sup">ж</seg> тр<seg
+                                        rend="sup">с</seg>тое, и по ѡ҃че на<seg rend="sup">ш</seg>,
+                                        птр<seg rend="sup">о</seg> и б<seg rend="sup">о</seg>
+                                    д҃невы. по семь г҃у пом<seg rend="sup">л</seg>и се. и м<seg
+                                        rend="sup">л</seg>тву сїе вел'ми</rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0">г҃и і҃се х҃е б҃е нашь,
+                                    заповѣдавыи връховному ап<seg rend="sup">с</seg>лу твоему петру.
+                                        видѣнїе<seg rend="sup">м</seg> и гласо<seg rend="sup"
+                                        >м</seg></incipit>
+                            </sampleText>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD21.14" type="translation">
+                            <title xml:lang="bg">Молитви над ново вино</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                xml:lang="cu">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup"
+                                    >л</seg>тви бл<seg rend="sup">с</seg>вити вино кипѣло,</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">по<seg rend="sup"
+                                        >п</seg> бл<seg rend="sup">с</seg>вень б҃ь на<seg rend="sup"
+                                        >ш</seg> та<seg rend="sup">ж</seg> тр<seg rend="sup"
+                                    >с</seg>тое. и по ѡ҃че на<seg rend="sup">ш</seg>. ꙗко твое ѥ<seg
+                                        rend="sup">с</seg> цр<seg rend="sup">с</seg>тво по се<seg
+                                        rend="sup">м</seg> тро<seg rend="sup">п</seg>ре вьскр<seg
+                                        rend="sup">с</seg>ны осмы<seg rend="sup">м</seg> гласо<seg
+                                        rend="sup">м</seg><gap hand="DR"/></rubric>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">и пока<seg rend="sup"
+                                        >ж</seg>еть вино. г҃лѥ<seg rend="sup">т</seg>, г҃у пом҃лим
+                                    се.по се<seg rend="sup">м</seg> г҃лѥ<seg rend="sup">т</seg>
+                                    мл҃тву сїе велегласнѡ</rubric>
+                            </sampleText>
+                            <msItemStruct xml:id="ACD21.14.1" type="translation">
+                                <title xml:lang="bg">Молитви над ново вино. Молитва над ново вино, 1</title>
+                                <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                    xml:lang="cu">
+                                    <rubric xmlns="http://www.tei-c.org/ns/1.0">и пока<seg
+                                            rend="sup">ж</seg>еть вино. г҃лѥ<seg rend="sup">т</seg>,
+                                        г҃у пом҃лим се.по се<seg rend="sup">м</seg> г҃лѥ<seg
+                                            rend="sup">т</seg> мл҃тву сїе велегласнѡ</rubric>
+                                    <incipit xmlns="http://www.tei-c.org/ns/1.0">г҃и і҃с х҃е б҃е
+                                            на<seg rend="sup">ш</seg>. прѣложивыи воду въ вино. въ
+                                        кана галилеисцѣ<seg rend="sup">м</seg> брацѣ</incipit>
+                                </sampleText>
+                            </msItemStruct>
+                            <msItemStruct xml:id="ACD21.14.2" type="translation">
+                                <title xml:lang="bg">Молитви над ново вино. Молитва над ново вино, 2</title>
+                                <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                    xml:lang="cu">
+                                    <rubric xmlns="http://www.tei-c.org/ns/1.0">г҃у помо<seg
+                                            rend="sup">л</seg>.</rubric>
+                                    <head xmlns="http://www.tei-c.org/ns/1.0">и мл҃тву втору
+                                            тому<seg rend="sup">ж</seg></head>
+                                    <incipit xmlns="http://www.tei-c.org/ns/1.0">г҃и бл҃гыи
+                                        чл҃колюбче. призри на вино сїе</incipit>
+                                    <rubric xmlns="http://www.tei-c.org/ns/1.0">та<seg rend="sup"
+                                            >ж</seg> ч<seg rend="sup">с</seg>тнѣишую херувї<seg
+                                            rend="sup">м</seg>. сла<seg rend="sup">в</seg>, і н<seg
+                                            rend="sup">н</seg>ꙗ. г҃и пом҃луи, г<seg rend="sup"
+                                            >щ</seg>. г҃и бл<seg rend="sup">с</seg>ви.</rubric>
+                                </sampleText>
+                            </msItemStruct>
+                        </msItemStruct>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD22" type="translation">
+                        <locus n="22">211r-212v</locus>
+                        <title xml:lang="bg">Тропари дневни и богородични през седмицата</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">тропаре и б<seg rend="sup"
+                                    >о</seg>городичны пѣз не<seg rend="sup">д</seg>лю.</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD23" type="translation">
+                        <locus n="23">212v-213r</locus>
+                        <title xml:lang="bg">Отпусти дневни през седмицата</title>
+                        <note>This text contains 14 prayers</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">ѿпусте прѣз не<seg rend="sup"
+                                    >д</seg>лю</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD24" type="translation">
+                        <locus n="24">213r-217v</locus>
+                        <title xml:lang="bg">Апостолски четива за Светлата седмица</title>
+                        <note>
+                            <date type="churchCal">Easter Week</date>s</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">ап<seg rend="sup">с</seg>лы
+                                    прѣ<seg rend="sup">з</seg> вьсу не<seg rend="sup">д</seg>лю
+                                свѣтлу</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD25" type="translation">
+                        <locus n="25">218r-221v</locus>
+                        <title xml:lang="bg">Молитви разрешителни, четени от архиерей или духовен отец</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">л</seg>тва
+                                юже г҃лѥ<seg rend="sup">т</seg> архїереи. или д҃ховни<seg rend="sup"
+                                    >к</seg> прощену, за грѣхы в'се, вол'ныѥ же и неволныѥ. и въсаку
+                                клетву и заклинанїе. и вънѥг<seg rend="sup">д</seg>а причещати се
+                                    прѣч<seg rend="sup">с</seg>ты<seg rend="sup">х</seg>
+                                таинь</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD26" type="translation">
+                        <locus n="26">222r-226v</locus>
+                        <title xml:lang="bg">Правила епитимийни</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">праволо изложено лъгчаише. по
+                                їѡан'ну постнику еже не по<seg rend="sup">д</seg>обаеть ни мало что
+                                оставити, или простити. нъ въса да поститъ каеи се съ поклоны
+                                    соухоꙗденїе<seg rend="sup">м</seg> по еднущь на д҃нь</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD27" type="translation">
+                        <locus n="27">226v-227v</locus>
+                        <title xml:lang="bg">Правила за степените на сродство и за законните бракове</title>
+                        <note>The end of the text is missing</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">о различїи съро<seg rend="sup"
+                                    >д</seg>ства. и о брацѣ законо<seg rend="sup">м</seg>. заповѣдїи
+                                    с҃ты<seg rend="sup">х</seg> ѿць</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD28" type="original">
+                        <locus n="28">221v</locus>
+                        <title xml:lang="bg">Колофон</title>
+                        <colophon>
+                            <p>тѣм' же изволенїе<seg rend="sup">м</seg> велика<seg rend="sup"
+                                    >г</seg> г҃а б҃а и сп<seg rend="sup">т</seg>а наше<seg
+                                    rend="sup">г</seg> ї҃ѵх х҃а. и бл҃годѣти дару с҃таго д҃ха: труди
+                                се о се<seg rend="sup">м</seg> писанїи, азь грѣшны. мно<seg
+                                    rend="sup">г</seg>о окаан<seg rend="sup">н</seg>ѣиши, и мьн'ши
+                                въ їермонасѣ<seg rend="sup">х</seg> василїа. ѿ монасти<seg
+                                    rend="sup">р</seg> ст҃го илїа близь се<seg rend="sup">л</seg>
+                                тѣтовѣне. ѿчьство ми ѥ<seg rend="sup">т</seg> загорїе таразїа от<seg
+                                    rend="sup">т</seg> гра(де) оугреша, бли<seg rend="sup">з</seg>
+                                монастыра с҃таа петка. молю вы ѿцїи и братїа, и колѣнѡ<seg
+                                    rend="sup">м</seg> касаю се. аще нерукую нъ езыкомъ. аще
+                                    буде<seg rend="sup">т</seg> що погрѣшено, чьтуще или прѣписоующе
+                                любве ради исправлꙗите и наставит. и мене оусрьд'но грѣшна<seg
+                                    rend="sup">г</seg> не клъѣте нъ бл<seg rend="sup">т</seg>вѣте.
+                                да, и ви услышите х҃а г҃люща прїидѣте бл<seg rend="sup"
+                                >т</seg>вен'ныи и прочее. их'же буди вьсѣ<seg rend="sup">м</seg>
+                                    на<seg rend="sup">м</seg> получити. ꙗко бо плавающе въ глъбинѣ
+                                мор'сцѣи обуреваемы, желають прїити въ пристанище бл҃го ѡтишно. сице
+                                и пишущеи, желаю<seg rend="sup">т</seg> постигнути въ кон'ць пишемїе
+                                книги. се и азь блг҃дѣтїю х<seg rend="sup">т</seg>вою достиго<seg
+                                    rend="sup">х</seg>. съ бо ѥ<seg rend="sup">т</seg> зачело и
+                                    съвръшите<seg rend="sup">л</seg> въсакому дѣлу бл҃гому. ему же
+                                слава въ вѣкы, аминь: съвръши се сїа с҃та. и бж<seg rend="sup"
+                                    >т</seg>тва книга, г҃лѥми молитьвны<seg rend="sup">к</seg>. ѡ
+                                бытїа въ лѣ<seg rend="sup">т</seg>, #з҃рн҃. а ѿ рож<seg rend="sup"
+                                    >д</seg>ьства х҃ва, #а҃х҃. кру<seg rend="sup">г</seg> слн҃цу,
+                                иї҃, а лу<seg rend="sup">н</seg>, дї҃. ѳеме<seg rend="sup"
+                                >л</seg>їе, з҃, зако<seg rend="sup">н</seg>а фа<seg rend="sup"
+                                    >т</seg>, ѳ<seg rend="sup">а</seg>. епа<seg rend="sup"
+                                >х</seg>та, з҃. злато число зї҃.</p>
+                        </colophon>
+                    </msItemStruct>
+                </msContents>
+                <history>
+                    <origin evidence="de visu" resp="#DR">
+                        <origDate notBefore="1642" notAfter="1642">1642</origDate>
+                        <origPlace>Monastery of Theotokos, near Teteven</origPlace>
+                    </origin>
+                </history>
+            </msDesc>
+        </body>
+    </text>
+</TEI>
