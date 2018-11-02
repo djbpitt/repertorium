@@ -15,8 +15,10 @@
                 value="substring-before(tokenize(base-uri(.), '/')[last()], '.xml')"/>
             <sch:let name="id" value="substring(@xml:id, 4)"/>
             <sch:assert test="$filename eq $id" sqf:fix="change-tei-xml-id">The filename
-                    (<sch:value-of select="$filename"/>) doesn't match the @xml:id (<sch:value-of
+                    (<sch:value-of select="$filename"/>) does not match the @xml:id (<sch:value-of
                     select="$id"/>)</sch:assert>
+            <sch:assert test="starts-with(@xml:id, 'RC-')">The @xml:id (<sch:value-of
+                    select="@xml:id"/>) does not begin with "RC-"</sch:assert>
             <sqf:fix id="change-tei-xml-id">
                 <sqf:description>
                     <sqf:title>Change TEI/@xml:id to match filename</sqf:title>
@@ -96,7 +98,9 @@
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="msIdentifier-rules">
-        <sch:rule context="tei:msIdentifier">
+        <sch:rule context="tei:msDesc/tei:msIdentifier">
+            <sch:p>Rules for &lt;msIdentifier&gt; do not apply inside &lt;msPart&gt; or
+                &lt;msFrag&gt;</sch:p>
             <sch:assert
                 test="tei:altIdentifier or count(tei:idno[not(@type eq 'former')][@type eq 'shelfmark']) eq 1"
                 >Unless there is an &lt;altIdentifier&gt;, there must be exactly one non-former
@@ -253,10 +257,14 @@
             <sch:assert test="string-length(normalize-space(.)) gt 0">general and specific
                 &lt;msName&gt; elements cannot be empty</sch:assert>
         </sch:rule>
-
         <sch:rule context="tei:msName[@type eq 'individual' and @subtype]">
             <sch:assert test="@subtype eq 'old'">The only legal value of the @subtype attribute is
                 "old". Current subtypes should not specify the subtype attribute</sch:assert>
+        </sch:rule>
+        <sch:rule context="tei:msName">
+            <sch:report test="not(@type = ('general', 'specific', 'individual'))">The only legal
+                values of the @type attribute are "general", "specific", and "individual". The value
+                    "<sch:value-of select="@type"/>" is invalid</sch:report>
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="watermark-rules">
