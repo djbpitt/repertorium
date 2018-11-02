@@ -8,23 +8,24 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Repertorium MS model based on TEI P5 (Version 3.2.0. Last updated on 10th
-                    July 2017, revision 0fcf651)</title>
+                <title>Repertorium MS model based on TEI P5 (Version 3.4.0. Last updated on 23rd July 2018, revision 1fa0b54)</title>
                 <author xml:id="atb">Andrej Bojadžiev</author>
                 <author xml:id="djb">David J. Birnbaum</author>
             </titleStmt>
             <editionStmt>
+                
+                <!-- Previous edition: 3.1 Last updated 2017-10-18 -->
                 <!-- Previous edition: 3.0 Last updated 23.04.2013 -->
-                <edition>3.1 Last updated 2017-10-18</edition>
+                <edition>3.2 Last updated 2018-11-02</edition>
             </editionStmt>
             <publicationStmt>
                 <authority>David J. Birnbaum (<email>djbpitt@gmail.com</email>) on behalf of the
                     Repertorium Project (<ptr target="http://repertorium.obdurodon.org"
                     />)</authority>
-                <date when="2017-10-18">2017-10-20</date>
+                <date when="2018-11-18">2018-11-02</date>
                 <availability status="free">
                     <p>
-                        <hi>Copyright © 2012-2017 TEI Consortium and Repertorium Project</hi>
+                        <hi>Copyright © 2012-2018 TEI Consortium and Repertorium Project</hi>
                     </p>
                     <p>This template file is freely available and you are hereby authorised to copy,
                         modify, and redistribute it in any way without further reference or
@@ -41,12 +42,13 @@
 
             <sourceDesc>
                 <p>Version 3.0 was written from scratch by Andrej Bojadžiev,
-                        <email>aboy@uni-sofia.bg</email>. The current version 3.1 was revised
-                    2017-10-18 by David J. Birnbaum (<email>djbpitt@gmail.com</email>) and Andrej
-                    Bojadžiev.</p>
+                        <email>aboy@uni-sofia.bg</email>. The current version 3.2 was revised
+                    2018-11-02 by David J. Birnbaum (<email>djbpitt@gmail.com</email>) and Andrej
+                    Bojadžiev (<email>aboy@uni-sofia.bg</email>).</p>
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
+            <change who="#atb" when="2018-11-02">Included teicrit module to allow critical editions and some information for descriptions of diplomata. Included typeDesc and typeNote from the msdescription module. Included elements from the model classes divTop and divBottom. Included the element <gi>msFrag</gi> and changed its contents</change>
             <change who="#djb" when="2017-11-01">Added examples and documentation for Repertorium
                 customizations. No change in functionality.</change>
             <change who="#atb #djb" when="2017-10-20">Minor general edits. Added documentation for
@@ -119,7 +121,7 @@
                         <gi>interp</gi>, <gi>interpGrp</gi>, <gi>interpretation</gi>, <gi>join</gi>,
                         <gi>joinGrp</gi>, <gi>langKnowledge</gi>, <gi>langKnown</gi>, <gi>link</gi>,
                         <gi>linkGrp</gi>, <gi>listEvent</gi>, <gi>listNym</gi>, <gi>listOrg</gi>,
-                        <gi>listTranspose</gi>, <gi>metamark</gi>, <gi>msFrag</gi>, <gi>msItem</gi>,
+                        <gi>listTranspose</gi>, <gi>metamark</gi>, <gi>msItem</gi>,
                         <gi>namespace</gi>, <gi>normalization</gi>, <gi>notesStmt</gi>,
                     <gi>nym</gi>, <gi>offset</gi>, <gi>opener</gi>, <gi>population</gi>,
                         <gi>postBox</gi>, <gi>postCode</gi>, <gi>postscript</gi>,
@@ -153,26 +155,26 @@
 
             <div>
                 <head>Schema, modules, class and element specifications</head>
-                <schemaSpec ident="tei_ms_repertorium" start="TEI msDesc" source="tei:3.2.0">
+                <schemaSpec ident="tei_ms_repertorium" start="TEI msDesc" source="tei:3.4.0">
                     <!-- required modules -->
                     <moduleRef key="header"
-                        except="appInfo application biblFull correction correspAction correspContext correspDesc distributior funder hyphenation interpretation namespace normalization notesStmt principal punctuation quotation samplingDecl segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl xenoData"/>
+                        except="appInfo application biblFull correspAction correspContext correspDesc distributor funder namespace notesStmt principal samplingDecl stdVals styleDefDecl tagUsage tagsDecl xenoData"/>
                     <moduleRef key="linking" except="alt altGrp join joinGrp link linkGrp"/>
                     <moduleRef key="core"
-                        except="addrLine address binaryObject divGen postBox postCode street teiCorpus"/>
+                        except="binaryObject divGen postBox postCode street teiCorpus"/>
                     <moduleRef key="tei"/>
                     <moduleRef key="textstructure"
-                        except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7  docAuthor docDate docEdition docImprint docTitle floatingText opener postscript salute signed"/>
+                        except="div1 div2 div3 div4 div5 div6 div7"/>
                     <!-- optional modules -->
                     <moduleRef key="analysis" except="interp interpGrp span spanGrp"/>
                     <moduleRef key="certainty" except="respons"/>
                     <moduleRef key="figures"/>
                     <moduleRef key="msdescription"
-                        except="handDesc handNote msFrag msItem typeNote typeDesc"/>
+                        except="handDesc handNote msItem"/>
                     <moduleRef key="namesdates"
-                        except="climate langKnowledge langKnown listEvent listNym  listOrg nym offset population sex socecStatus state terrain"/>
+                        except="climate langKnowledge langKnown listEvent listNym nym offset population sex socecStatus state terrain"/>
                     <moduleRef key="transcr" except="listTranspose surface surfaceGrp metamark zone"/>
-
+                    <moduleRef key="textcrit"/>
                     <classSpec ident="model.physDescPart" type="model" mode="delete"
                         module="msdescription"/>
 
@@ -1033,24 +1035,28 @@
                                         <elementRef key="scribeDesc" minOccurs="0" maxOccurs="1"/>
                                         <elementRef key="msContents" minOccurs="0" maxOccurs="1"/>
                                         <elementRef key="history" minOccurs="0" maxOccurs="1"/>
+                                        
                                         <elementRef key="additional" minOccurs="0" maxOccurs="1"/>
+                                        <alternate>
                                         <elementRef key="msPart" minOccurs="0" maxOccurs="unbounded"
                                         />
+                                            <elementRef key="msFrag" minOccurs="0"
+                                                maxOccurs="unbounded"/>
+                                        </alternate>
                                     </sequence>
                                 </alternate>
                             </sequence>
                         </content>
                         <remarks>
                             <p>The Repertorium reorders the contents of <gi>msDesc</gi> to conform
-                                to the most common patterns in Slavistic manuscript cataloguing. The
-                                Repertorium does not use <gi>msFrag</gi>.</p>
+                                to the most common patterns in Slavistic manuscript cataloguing. </p>
                         </remarks>
                     </elementSpec>
 
                     <elementSpec ident="msIdentifier" module="msdescription" mode="change">
                         <content>
                             <sequence>
-                                <elementRef key="msName" minOccurs="1" maxOccurs="unbounded"/>
+                                <elementRef key="msName" minOccurs="0" maxOccurs="unbounded"/>
                                 <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"/>
                                 <classRef key="model.placeNamePart"
                                     expand="sequenceOptionalRepeatable"/>
@@ -1209,13 +1215,9 @@
                     </elementSpec>
 
                     <elementSpec ident="msPart" module="msdescription" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.typed" mode="add"/>
-                        </classes>
-                        <content>
+                       <content>
                             <sequence>
                                 <alternate minOccurs="0" maxOccurs="unbounded">
-                                    <elementRef key="altIdentifier"/>
                                     <elementRef key="msIdentifier"/>
                                     <elementRef key="locus"/>
                                     <elementRef key="locusGrp"/>
@@ -1276,10 +1278,7 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>The Repertorium adds the <att>type</att> attribute to <gi>msPart</gi>
-                                (values might include <val>partial</val>, <val>palimpsest</val>),
-                                and it also adds <gi>msIdentifier</gi> and <gi>altIdentifier</gi> to
-                                the content model. The following example of a convolute is from
+                            <p>The following example of a convolute is from
                                 AM1-108O.xml:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msPart n="1">
@@ -1337,6 +1336,35 @@
                                 </msPart>
                             </egXML>
                         </exemplum>
+                    </elementSpec>
+                    
+                    <elementSpec ident="msFrag" module="msdescription" mode="change">
+                        <content>
+                            <sequence>
+                                <alternate>
+                                    <elementRef key="altIdentifier" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="msIdentifier"/>
+                                </alternate>
+                                <classRef key="model.headLike"
+                                    minOccurs="0" maxOccurs="unbounded"/>
+                                <alternate>
+                                    <classRef key="model.pLike"
+                                        minOccurs="1" maxOccurs="unbounded"/>
+                                    <sequence>
+                                        <elementRef key="physDesc"
+                                            minOccurs="0"/>
+                                        <elementRef key="scribeDesc" minOccurs="0"/>
+                                        <elementRef key="msContents"
+                                            minOccurs="0"/>
+                                        <elementRef key="history" minOccurs="0"/>
+                                        <elementRef key="additional"
+                                            minOccurs="0"/>
+                                        <elementRef key="msPart"
+                                            minOccurs="0" maxOccurs="unbounded"/>
+                                    </sequence>
+                                </alternate>
+                            </sequence>
+                        </content>
                     </elementSpec>
 
                     <elementSpec ident="musicNotation" module="msdescription" mode="change">
