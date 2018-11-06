@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
+<?xml-model href="../../../../../Desktop/new_schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
     xml:id="RC-MPSuprasliensis">
     <teiHeader>
@@ -66,6 +71,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2018-11-04">Reformat to include msFrag. </change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when-iso="2010-07-10">Conversion to Repertorium 3.3. Included head
@@ -90,35 +96,12 @@
                     <msName xml:lang="la" type="individual">Codex Suprasliensis</msName>
                     <msName xml:lang="en" type="individual">Codex Suprasliensis</msName>
                     <msName xml:lang="ru" type="individual">Супрасльская рукопись</msName>
-                    <p>Parts are:</p>
-                    <altIdentifier type="partial" n="1." xml:id="Kopitar2">
-                        <country>Slovenia</country>
-                        <settlement>Ljubljana</settlement>
-                        <repository>National and University library</repository>
-                        <idno type="shelfmark">Cod. Kopitrar 2</idno>
-                    </altIdentifier>
-                    <altIdentifier type="partial" n="2." xml:id="BO3201">
-                        <country>Poland</country>
-                        <settlement>Warszawa</settlement>
-                        <repository>Biblioteka Narodowa</repository>
-                        <collection>Zamojski's collection</collection>
-                        <idno type="shelfmark">BO 3.201</idno>
-                    </altIdentifier>
-                    <altIdentifier type="partial" n="3." xml:id="QpI72">
-                        <country>Russia</country>
-                        <settlement>Sankt Peterburg</settlement>
-                        <repository>Rossiiskaia natsional’naia biblioteka</repository>
-                        <collection>Osnovnoe sobranie</collection>
-                        <idno type="shelfmark">Q.p.I.72</idno>
-                    </altIdentifier>
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="codex">
                         <supportDesc material="parchment">
                             <extent>
                                 <measure unit="folia">285</measure>
-                                <note>(<ref target="#Kopitar2">118 ff.</ref>, <ref target="#BO3201"
-                                        >151 ff.</ref>, <ref target="#QpI72">16 ff</ref>)</note>
                                 <dimensions unit="mm" corresp="Kopitar2" type="folia">
                                     <height>310</height>
                                     <width>213</width>
@@ -136,12 +119,6 @@
                                     >no;</pricking>
                             </collation>
                             <condition>
-                                <p>The beginning and the end of Ljubljana part is missing; f. 38
-                                    (containing part of the Vita of SS Terentius, Africanus and
-                                    Pompius) is bound at a wrong place and should be read after f.
-                                    88v. Two leaves have been lost from the middle of the Vita of St
-                                    Paul the Simple, after f. 86v. There are lacunae between
-                                    ff.78v-79r, 84v-85r.</p>
                                 <p>The edges of the folia in Ljubljana part were trimmed during the
                                     restoration of this part of the MS, with the result that the
                                     parts that are now in Saint Petersburg and Warsaw are slightly
@@ -268,9 +245,8 @@
                     <msItemStruct xml:id="ACD4">
                         <locus n="4">27v-34v</locus>
                         <title xml:lang="bg">Житие на св. Теодор, Константин, Теофил, Калист, Васой и дружината им</title>
-                        <date type="churchCal" when="--03-07">7th of March, Vita of the 42 Martyrs
-                            of Amorion</date>
-                        <note xml:lang="bg">(Житие на 42-мата аморийски мъченици)</note>
+                        <date type="churchCal" when="--03-07">7th of March</date>
+                        <note xml:lang="bg">Vita of the 42 Martyrs of Amorion</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта ·з꙯· мѫчениѥ
@@ -1171,6 +1147,79 @@
                         </recordHist>
                     </adminInfo>
                 </additional>
+                <msFrag>
+                    <msIdentifier  n="1" xml:id="Kopitar2">
+                    <country>Slovenia</country>
+                    <settlement>Ljubljana</settlement>
+                    <repository>National and University library</repository>
+                    <idno type="shelfmark">Cod. Kopitrar 2</idno>
+                </msIdentifier>
+                    <physDesc>
+                        <objectDesc form="codex">
+                            <supportDesc material="parchment">
+                                <extent>
+                                    <measure unit="folia">118</measure>
+                                    <dimensions unit="mm" corresp="Kopitar2" type="folia">
+                                        <height>310</height>
+                                        <width>213</width>
+                                    </dimensions>
+                                </extent>
+                                <condition>
+                                    <p>The beginning and the end of Ljubljana part is missing; f. 38
+                                        (containing part of the Vita of SS Terentius, Africanus and
+                                        Pompius) is bound at a wrong place and should be read after f.
+                                        88v. Two leaves have been lost from the middle of the Vita of St
+                                        Paul the Simple, after f. 86v. There are lacunae between
+                                        ff. 78v-79r, 84v-85r.</p>
+                                </condition>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>                
+                </msFrag>
+                <msFrag>
+                    <msIdentifier n="2" xml:id="BO3201">
+                    <country>Poland</country>
+                    <settlement>Warszawa</settlement>
+                    <repository>Biblioteka Narodowa</repository>
+                    <collection>Zamojski's collection</collection>
+                    <idno type="shelfmark">BO 3.201</idno>
+                </msIdentifier>
+                    <physDesc>
+                        <objectDesc form="codex">
+                            <supportDesc material="parchment">
+                                <extent>
+                                    <measure unit="folia">151</measure>
+                                    <dimensions unit="mm" corresp="BO3201" type="folia">
+                                        <height>310</height>
+                                        <width>213</width>
+                                    </dimensions>
+                                </extent>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msFrag>
+                <msFrag>
+                    <msIdentifier n="3" xml:id="QpI72">
+                    <country>Russia</country>
+                    <settlement>Sankt Peterburg</settlement>
+                    <repository>Rossiiskaia natsional’naia biblioteka</repository>
+                    <collection>Osnovnoe sobranie</collection>
+                    <idno type="shelfmark">Q.p.I.72</idno>
+                </msIdentifier>
+                    <physDesc>
+                        <objectDesc form="codex">
+                            <supportDesc material="parchment">
+                                <extent>
+                                    <measure unit="folia">16</measure>
+                                    <dimensions unit="mm" corresp="QpI72" type="folia">
+                                        <height>312</height>
+                                        <width>250</width>
+                                    </dimensions>
+                                </extent>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msFrag>
             </msDesc>
         </body>
     </text>
