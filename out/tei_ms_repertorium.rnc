@@ -10,7 +10,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2018-11-02T13:45:22Z. .
+# Schema generated from ODD source 2018-11-05T09:48:01Z. .
 # TEI Edition: Version 3.4.0. Last updated on
 #	23rd July 2018, revision 1fa0b54
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -3782,12 +3782,14 @@ keywords =
     (term+ | \list),
     att.global.attributes,
     
-    ## the keywords element must have a scheme attribute with a value of Repertorium
+    ## the keywords element must have a scheme attribute with a value of Repertorium or Zograf
     attribute scheme {
       
-      ## (Keywords must be specified within the Repertorium
-      ##                                             scheme.) 
+      ## Repertorium project keywords must be specified within the Repertorium scheme.
       "Repertorium"
+      | 
+        ## Zograf project keywords must be specified within the Zograf scheme.
+        "Zograf"
     },
     empty
   }

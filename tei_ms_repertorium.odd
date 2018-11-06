@@ -13,7 +13,7 @@
                 <author xml:id="djb">David J. Birnbaum</author>
             </titleStmt>
             <editionStmt>
-                
+
                 <!-- Previous edition: 3.1 Last updated 2017-10-18 -->
                 <!-- Previous edition: 3.0 Last updated 23.04.2013 -->
                 <edition>3.2 Last updated 2018-11-02</edition>
@@ -48,7 +48,10 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
-            <change who="#atb" when="2018-11-02">Included teicrit module to allow critical editions and some information for descriptions of diplomata. Included typeDesc and typeNote from the msdescription module. Included elements from the model classes divTop and divBottom. Included the element <gi>msFrag</gi> and changed its contents</change>
+            <change who="#atb" when="2018-11-02">Included teicrit module to allow critical editions
+                and some information for descriptions of diplomata. Included typeDesc and typeNote
+                from the msdescription module. Included elements from the model classes divTop and
+                divBottom. Included the element <gi>msFrag</gi> and changed its contents</change>
             <change who="#djb" when="2017-11-01">Added examples and documentation for Repertorium
                 customizations. No change in functionality.</change>
             <change who="#atb #djb" when="2017-10-20">Minor general edits. Added documentation for
@@ -163,14 +166,12 @@
                     <moduleRef key="core"
                         except="binaryObject divGen postBox postCode street teiCorpus"/>
                     <moduleRef key="tei"/>
-                    <moduleRef key="textstructure"
-                        except="div1 div2 div3 div4 div5 div6 div7"/>
+                    <moduleRef key="textstructure" except="div1 div2 div3 div4 div5 div6 div7"/>
                     <!-- optional modules -->
                     <moduleRef key="analysis" except="interp interpGrp span spanGrp"/>
                     <moduleRef key="certainty" except="respons"/>
                     <moduleRef key="figures"/>
-                    <moduleRef key="msdescription"
-                        except="handDesc handNote msItem"/>
+                    <moduleRef key="msdescription" except="handDesc handNote msItem"/>
                     <moduleRef key="namesdates"
                         except="climate langKnowledge langKnown listEvent listNym nym offset population sex socecStatus state terrain"/>
                     <moduleRef key="transcr" except="listTranspose surface surfaceGrp metamark zone"/>
@@ -820,21 +821,26 @@
                         <attList>
                             <attDef ident="scheme" mode="replace" usage="req">
                                 <desc>the <gi>keywords</gi> element must have a <att>scheme</att>
-                                    attribute with a value of <val>Repertorium</val></desc>
+                                    attribute with a value of <val>Repertorium</val> or
+                                        <val>Zograf</val></desc>
                                 <datatype>
                                     <dataRef key="teidata.enumerated"/>
                                 </datatype>
                                 <valList type="closed">
                                     <valItem ident="Repertorium">
-                                        <gloss>Keywords must be specified within the Repertorium
-                                            scheme.</gloss>
+                                        <desc>Repertorium project keywords must be specified within
+                                            the Repertorium scheme.</desc>
+                                    </valItem>
+                                    <valItem ident="Zograf">
+                                        <desc>Zograf project keywords must be specified within the
+                                            Zograf scheme.</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
                         </attList>
                         <exemplum>
                             <p>The <gi>keywords</gi> element must have a <att>scheme</att> attribute
-                                with a value of <val>Repertorium</val>.</p>
+                                with a value of <val>Repertorium</val> or <val>Zograf</val>.</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <keywords scheme="Repertorium">
                                     <list type="simple">
@@ -1035,11 +1041,11 @@
                                         <elementRef key="scribeDesc" minOccurs="0" maxOccurs="1"/>
                                         <elementRef key="msContents" minOccurs="0" maxOccurs="1"/>
                                         <elementRef key="history" minOccurs="0" maxOccurs="1"/>
-                                        
+
                                         <elementRef key="additional" minOccurs="0" maxOccurs="1"/>
                                         <alternate>
-                                        <elementRef key="msPart" minOccurs="0" maxOccurs="unbounded"
-                                        />
+                                            <elementRef key="msPart" minOccurs="0"
+                                                maxOccurs="unbounded"/>
                                             <elementRef key="msFrag" minOccurs="0"
                                                 maxOccurs="unbounded"/>
                                         </alternate>
@@ -1049,7 +1055,8 @@
                         </content>
                         <remarks>
                             <p>The Repertorium reorders the contents of <gi>msDesc</gi> to conform
-                                to the most common patterns in Slavistic manuscript cataloguing. </p>
+                                to the most common patterns in Slavistic manuscript cataloguing.
+                            </p>
                         </remarks>
                     </elementSpec>
 
@@ -1215,7 +1222,7 @@
                     </elementSpec>
 
                     <elementSpec ident="msPart" module="msdescription" mode="change">
-                       <content>
+                        <content>
                             <sequence>
                                 <alternate minOccurs="0" maxOccurs="unbounded">
                                     <elementRef key="msIdentifier"/>
@@ -1278,8 +1285,7 @@
                             </egXML>
                         </exemplum>
                         <exemplum>
-                            <p>The following example of a convolute is from
-                                AM1-108O.xml:</p>
+                            <p>The following example of a convolute is from AM1-108O.xml:</p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msPart n="1">
                                     <locus>f. 1</locus>
@@ -1337,30 +1343,26 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    
+
                     <elementSpec ident="msFrag" module="msdescription" mode="change">
                         <content>
                             <sequence>
                                 <alternate>
-                                    <elementRef key="altIdentifier" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="altIdentifier" minOccurs="0"
+                                        maxOccurs="unbounded"/>
                                     <elementRef key="msIdentifier"/>
                                 </alternate>
-                                <classRef key="model.headLike"
-                                    minOccurs="0" maxOccurs="unbounded"/>
+                                <classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded"/>
                                 <alternate>
-                                    <classRef key="model.pLike"
-                                        minOccurs="1" maxOccurs="unbounded"/>
+                                    <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
                                     <sequence>
-                                        <elementRef key="physDesc"
-                                            minOccurs="0"/>
+                                        <elementRef key="physDesc" minOccurs="0"/>
                                         <elementRef key="scribeDesc" minOccurs="0"/>
-                                        <elementRef key="msContents"
-                                            minOccurs="0"/>
+                                        <elementRef key="msContents" minOccurs="0"/>
                                         <elementRef key="history" minOccurs="0"/>
-                                        <elementRef key="additional"
-                                            minOccurs="0"/>
-                                        <elementRef key="msPart"
-                                            minOccurs="0" maxOccurs="unbounded"/>
+                                        <elementRef key="additional" minOccurs="0"/>
+                                        <elementRef key="msPart" minOccurs="0" maxOccurs="unbounded"
+                                        />
                                     </sequence>
                                 </alternate>
                             </sequence>

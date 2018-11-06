@@ -102,7 +102,7 @@
             <sch:p>Rules for &lt;msIdentifier&gt; do not apply inside &lt;msPart&gt; or
                 &lt;msFrag&gt;</sch:p>
             <sch:assert
-                test="tei:altIdentifier or count(tei:idno[not(@type eq 'former')][@type eq 'shelfmark']) eq 1"
+                test="tei:altIdentifier or following-sibling::tei:msFrag or count(tei:idno[not(@type eq 'former')][@type eq 'shelfmark']) eq 1"
                 >Unless there is an &lt;altIdentifier&gt;, there must be exactly one non-former
                 &lt;idno&gt; element inside &lt;msIdentifier&gt; with the @type value of
                 'shelfmark'</sch:assert>
