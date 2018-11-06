@@ -14,11 +14,11 @@
             <sch:let name="filename"
                 value="substring-before(tokenize(base-uri(.), '/')[last()], '.xml')"/>
             <sch:let name="id" value="substring(@xml:id, 4)"/>
+            <sch:assert test="starts-with(@xml:id, 'RC-')">The @xml:id (<sch:value-of
+                select="@xml:id"/>) does not begin with "RC-"</sch:assert>
             <sch:assert test="$filename eq $id" sqf:fix="change-tei-xml-id">The filename
                     (<sch:value-of select="$filename"/>) does not match the @xml:id (<sch:value-of
                     select="$id"/>)</sch:assert>
-            <sch:assert test="starts-with(@xml:id, 'RC-')">The @xml:id (<sch:value-of
-                    select="@xml:id"/>) does not begin with "RC-"</sch:assert>
             <sqf:fix id="change-tei-xml-id">
                 <sqf:description>
                     <sqf:title>Change TEI/@xml:id to match filename</sqf:title>
