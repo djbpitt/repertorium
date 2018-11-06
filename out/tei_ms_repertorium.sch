@@ -74,6 +74,10 @@
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="date-rules">
+        <sch:rule context="tei:publicationStmt/tei:date">
+            <sch:assert test="@when">The Date in the &lt;publicationStmt&gt; must have a @when
+                attribute</sch:assert>
+        </sch:rule>
         <sch:rule context="tei:note[@type = 'churchCal']">
             <sch:report test="1">Dates according to the church calendar must be tagged as &lt;date
                 type="churchCal"&gt; (not as a &lt;note&gt; element).</sch:report>
