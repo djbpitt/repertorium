@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-19.5 -19.5 39 39">
+    <!-- sqrt(10) = 3.16227766017 -->
+    <!-- short sides at right angle are both 10; length of hypotenuse = sqrt(200) = 14.1421356237 -->
+    <!-- height at right angle of hypotenuse to opposite vertex = sqrt(10^2 - ((14.1421356237 / 2)^2) ) = 7.07106781188-->
+    <!-- centroid of a triangle at 0 0, 0 10, 10 0 is 3.33, 3.33; http://www.mathopenref.com/coordcentroid.html -->
+    <defs>
+        <polygon id="triangle" points="0,0 0,10 10,0"/>
+    </defs>
+    <g>
+        <line x1="-12.5" y1="0" x2="12.5" y2="0" stroke-width="4" fill="black" stroke="black"/>
+        <line x1="0" y1="-12.5" x2="0" y2="12.5" stroke-width="4" fill="black" stroke="black"/>
+        <use xlink:href="#triangle" x="0" y="0" transform="translate(-15) rotate(315) translate(-3.33, -3.33)"/>
+        <use xlink:href="#triangle" x="0" y="0" transform="translate(15) rotate(135) translate(-3.33, -3.33)"/>
+        <use xlink:href="#triangle" x="0" y="0" transform="translate(0,-15) rotate(45) translate(-3.33, -3.33)"/>
+        <use xlink:href="#triangle" x="0" y="0" transform="translate(0,15) rotate(225) translate(-3.33, -3.33)"/>
+    </g>
+</svg>

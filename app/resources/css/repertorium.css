@@ -1,0 +1,413 @@
+@font-face {
+  font-family: 'Bukyvede_raised-pokrytie';
+  src: url('/css/fonts/Bukyvede-Regular_raised-pokrytie.eot'); /* IE9 Compat Modes */
+  src: url('/css/fonts/Bukyvede-Regular_raised-pokrytie.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/css/fonts/Bukyvede-Regular_raised-pokrytie.woff') format('woff'), /* Modern Browsers */
+       url('/css/fonts/Bukyvede-Regular_raised-pokrytie.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/css/fonts/Bukyvede-Regular_raised-pokrytie.svg#79df6eed989ab9ded1da8b07bf601a25') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+@font-face{
+    font-family: 'KlimentStdRegularWeb';
+    src: url('/css/fonts/kliment_std-webfont.eot');
+    src: url('/css/fonts/kliment_std-webfont.eot?#iefix') format('embedded-opentype'), 
+url('/css/fonts/kliment_std-webfont.woff') format('woff'), 
+url('/css/fonts/kliment_std-webfont.ttf') format('truetype'), 
+url('/css/fonts/kliment_std-webfont.svg#KlimentStdRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'BukyvedeWeb';
+    src: url('/css/fonts/bukyvede-regular-webfont.eot');
+    src: url('/css/fonts/bukyvede-regular-webfont.eot?#iefix') format('embedded-opentype'), 
+url('/css/fonts/bukyvede-regular-webfont.woff') format('woff'), 
+url('/css/fonts/bukyvede-regular-webfont.ttf') format('truetype'), 
+url('/css/fonts/bukyvede-regular-webfont.svg#BukyvedeRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'BukyvedeLightWeb';
+    src: url('/css/fonts/Bukyvede_Light.eot'); /* IE9 Compat Modes */
+    src: url('/css/fonts/Bukyvede_Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ 
+url('/css/fonts/Bukyvede_Light.woff') format('woff'), /* Modern Browsers */ 
+url('/css/fonts/Bukyvede_Light.ttf') format('truetype'), /* Safari, Android, iOS */ 
+url('/css/fonts/Bukyvede_Light.svg#1d6dadb2045bcf2c9fcbd3f4b1735ff4') format('svg'); /* Legacy iOS */
+
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face{
+    font-family: 'MenaionWeb';
+    src: url('/css/fonts/menaion_djb_5.1-webfont.eot');
+    src: url('/css/fonts/menaion_djb_5.1-webfont.eot?#iefix') format('embedded-opentype'), 
+url('/css/fonts/menaion_djb_5.1-webfont.woff') format('woff'), 
+url('/css/fonts/menaion_djb_5.1-webfont.ttf') format('truetype'), 
+url('/css/fonts/menaion_djb_5.1-webfont.svg#BukyvedeRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'LazovWeb';
+    src: url('/css/fonts/lazov05-webfont.eot');
+    src: url('/css/fonts/lazov05-webfont.eot?#iefix') format('embedded-opentype'), 
+url('/css/fonts/lazov05-webfont.woff') format('woff'), 
+url('/css/fonts/lazov05-webfont.ttf') format('truetype'), 
+url('/css/fonts/lazov05-webfont.svg#BukyvedeRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.os{
+    font-family: BukyvedeWeb, KlimentStdRegularWeb, LazovWeb, MenaionWeb;
+    font-weight: normal;
+    font-size: larger;
+}
+.gk{
+    font-family: Palatino;
+    font-size: 95%;
+}
+/* in folio view, text on left, image on right, scale image */
+body{
+    overflow-x: hidden;
+}
+h1{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+sup{
+    line-height: 0;
+}
+/* Components of sampleText: rubric, head, incipit, explicit, p, div */
+span.incipit,
+span.explicit,
+span.head,
+span.rubric,
+span.colophon,
+span.sampleText,
+p.sampleText{
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-indent: 0;
+    font-size: 90%;
+    font-family: 'BukyvedeWeb';
+}
+.additions {font-size: 80%;}
+div.archeaography{
+    text-indent: 2em;
+}
+span.head:before{
+    content: 'Head: ';
+    font-weight: bold;
+    font-family: serif;
+}
+span.incipit:before{
+    content: 'Incipit: ';
+    font-weight: bold;
+    font-family: serif;
+}
+span.explicit:before{
+    content: 'Explicit: ';
+    font-weight: bold;
+    font-family: serif;
+}
+span.rubric{
+    color: red;
+    font-weight: bold;
+}
+span.rubric:before{
+    content: 'Rubric: ';
+    font-weight: bold;
+    font-family: serif;
+}
+span.sampleText:before,
+p.sampleText:before{
+    content: 'Sample: ';
+    font-weight: bold;
+    font-family: serif;
+}
+span.colophon:before{
+    content: 'Colophon: ';
+    font-weight: bold;
+    font-family: serif;
+}
+.boilerplate{
+    margin: 1em 0;
+    position: relative;
+}
+.boilerplate > span.text{
+    text-indent: -1em;
+    margin-left: 1em;
+    display: block;
+    font-size: smaller;
+    line-height: 1.2em;
+}
+.flags{
+    position: absolute;
+    right: 1em;
+    top: 0;
+}
+/*.textTitle.bg,
+.select.bg,
+.msName.bg{
+    display: inline;
+}
+.textTitle.en,
+.textTitle.ru,
+.select.en,
+.select.ru,
+.msName.ru,
+.msName.en{
+    display: none;
+}*/
+.small{
+    font-size: smaller;
+}
+.archeography{
+    display: inline !important;
+}
+.sic{
+    color: red;
+}
+.sic:after{
+    content: " [sic]";
+    font-family: serif;
+}
+span.unclear:before,
+span.supplied:before{
+    content: "[";
+}
+span.unclear:after,
+span.supplied:after{
+    content: "]";
+}
+span.add{
+    color: green;
+}
+a{
+    color: blue;
+}
+.label{
+    color: gray;
+}
+#msDescTable,
+msDescTable > *{
+    border: 1px lightgray solid;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+/* Right-aligned numbering from http://jsfiddle.net/zgMYu/10/ */
+th{
+    text-align: left;
+}
+table,
+tr,
+td,
+th{
+    border: 1px solid lightgray;
+}
+#msDescContents{
+    counter-reset: l1
+}
+#msDescContents > div.text{
+    counter-reset: l2
+}
+#msDescContents > div.text::before{
+    counter-increment: l1;
+    content: counter(l1) '.';
+    display: inline-block;
+    padding-right: .5em;
+    width: 1.5em;
+    text-align: right;
+}
+#msDescContents > div.text > div.text{
+    counter-reset: l3;
+    padding-left: 2em;
+}
+#msDescContents > div.text > div.text::before{
+    counter-increment: l2;
+    content: counter(l1) '.' counter(l2) '.';
+    display: inline-block;
+    padding-right: .5em;
+}
+#msDescContents > div.text > div.text > div.text{
+    padding-left: 2em;
+}
+#msDescContents > div.text > div.text > div.text::before{
+    counter-increment: l3;
+    content: counter(l1) '.' counter(l2) '.' counter(l3) '. ';
+    display: inline-block;
+    padding-right: .5em;
+}
+#msDescContents div.text > div.samples{
+    padding-left: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.samples *.head,
+.samples *.incipit,
+.samples *.explicit,
+.samples *.rubric,
+.samples *.sampleText,
+.samples *.finalRubric,
+.samples *.colophon{
+    font-family: BukyvedeLightWeb;
+}
+.lozenge{
+    margin-bottom: -2px;
+}
+/* in-line SVG in manuscript listings*/
+li .lozenge{
+    height: 13px;
+}
+li .lozenge:before,
+li .lozenge:after{
+    content: " "
+}
+.flags .lozenge{
+    margin-bottom: 0;
+}
+/* SVG rendering */
+#main_svg > g{
+    fill: yellow;
+    stroke: black;
+    stroke-width: 1px;
+}
+#main_svg > g > rect{
+    width: 60px;
+    height: 17px;
+}
+#main_svg > g > a > text{
+    font-size: 90%;
+    fill: black;
+    stroke: black;
+}
+#main_svg > line{
+    stroke-width: 0.5px;
+}
+.additions > ul{
+    margin: 0;
+    padding-left: 2em;
+}
+.additions .os{
+    font-family: BukyvedeLightWeb;
+}
+
+/* pop-up bibliography information is in <div class="bibData">
+    wavy underline from http://stackoverflow.com/questions/28152175/a-wavy-underline-in-css
+*/
+@keyframes animate_opacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-webkit-keyframes animate_opacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+div.bibl{
+    display: inline-block;
+    border-bottom: 1px dotted orange;
+    position: relative;
+}
+div.bibl:after{
+    content: '';
+    height: 5px;
+    border-bottom: 1px dotted orange;
+    position: absolute;
+    bottom: -2px;
+    left: -1px;
+}
+div.bibData{
+    display: none;
+    position: fixed;
+    width: 500px;
+    right: 10px;
+    top: 0;
+    background: lightgoldenrodyellow;
+    z-index: 10;
+    padding: 5px 5px 5px 1.5em;
+    border: 1px solid firebrick;
+}
+div.bibl:hover > div.bibData
+{
+    display: block;
+    margin-top: 1em;
+    animation-name: animate_opacity;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-name: animate_opacity;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+div.bibData > *{
+    /* except part of biblScope; see below */
+    display: block;
+    text-indent: -1em;
+}
+div.bibData > .author:before{
+    content: 'Author: ';
+    font-weight: bolder;
+}
+div.bibData > .articleTitle:before{
+    content: 'Article title: ';
+    font-weight: bolder;
+}
+div.bibData > .monographTitle{
+    font-style: italic;
+}
+div.bibData > .monographTitle:before{
+    content: 'Volume title: ';
+    font-weight: bolder;
+    font-style: normal;
+}
+div.bibData > .journalTitle{
+    font-style: italic;
+}
+div.bibData > .journalTitle:before{
+    content: 'Journal title: ';
+    font-weight: bolder;
+    font-style: normal;
+}
+div.bibData > .seriesTitle:before{
+    content: 'Series title: ';
+    font-weight: bolder;
+}
+div.bibData > .publication:before{
+    content: 'Published: ';
+    font-weight: bolder;
+}
+div.bibData > .date:before{
+    content: 'Date: ';
+    font-weight: bolder;
+}
+div.bibData > .scope:before{
+    content: 'Scope: ';
+    font-weight: bolder;
+}
+.scope > *{
+    display: inline;
+}
+.scope > .volume:before{
+    content: 'Volume: ';
+    color: gray;
+}
+.scope > .issue:before{
+    content: 'Issue: ';
+    color: gray;
+}
+.scope > .pages:before{
+    content: 'Pages: ';
+    color: gray;
+}
+.lg{
+    display: inline;
+}
+.hide{
+    display: none;
+}
