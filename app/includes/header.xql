@@ -14,5 +14,5 @@ declare variable $fqcontroller external;
         href="{concat($fqcontroller, 'resources/css/repertorium.css')}"/>
     <link
         rel="shortcut icon"
-        href="{concat($fqcontroller, 'images/favicon.ico')}"/>
+        href="{concat($fqcontroller, 'resources/images/favicon.ico')}"/>
 </head>
