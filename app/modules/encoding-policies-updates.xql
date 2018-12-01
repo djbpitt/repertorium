@@ -7,6 +7,7 @@ declare option output:method "xml";
 declare option output:media-type "application/xhtml+xml";
 declare option output:omit-xml-declaration "no";
 declare option output:indent "no";
+declare option output:doctype-system "about:legacy-compat";
 declare variable $title as xs:string := "Repertorium of Old Bulgarian Literature and Letters";
 declare variable $exist:root as xs:string := request:get-parameter("exist:root", ());
 declare variable $exist:prefix as xs:string := request:get-parameter("exist:prefix", ());
