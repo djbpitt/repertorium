@@ -1,0 +1,217 @@
+# Sustainability plan
+
+Based on <https://sites.haa.pitt.edu/sustainabilityroadmap/>  
+Last revised 2018-12-10 by David J. Birnbaum
+
+## Module A1: What is the scope of your project?
+
+_Q: Where are the access points (_sites of production_) for the project? Is there only one? Where there are different access points, there are often different creative outputs._
+
+### End-user
+
+Single, integrated web site currently at <http://repertorium.obdurodon.org>. Principal access types are:
+
+1. Browse the collection
+2. Search the collection
+3. Dendrogram overview of corpus
+
+_Digital workstation_ model where there are (ideally) no dead ends that require the back button or going back to start (although those navigations are always available). Information about individual manuscripts in XML, contents, and codicological (manuscript description) views, where only the first should be a dead end. Browse and search  views facilitate follow-up searches, as well as plectogram generation. Plectogram and dendrogram also support follow-up searching. Plectogram is dynamic (can the system suggest optimal organization?).  Bibliographic search, an ancillary resource, is not yet fully conceptualized, let alone integrated.
+
+### Developer
+
+Encoding guidelines, schemas, authority files (text titles, genres), summary data dumps of element types. Inconsistency checks (Unicode, missing titles, corpus consistency reports [schematron]), external references (e.g., TEI guidelines), links to tools and similar resources (fonts, etc.). Reliable resources are in GitHub at <https://github.com/djbpitt/repertorium>. 
+
+_Q: Have you created different project deliverables to serve unique purposes or reach specific audiences? Different deliverables can signal different manifestations of your project._
+
+Principal end-user deliverable is plectogram visualization and navigation, plus content browsing and searching, to support study of textual transmission in convoy. Secondary end-user deliverable is traditional codicological description for information access and preservation purposes. Codicological view is not yet fully interactive, that is, does not have full workstation integration.
+
+Developer deliverables include markup documentation (reference and tutorial), summary reports, and consistency checks.
+
+_Q: What different workflows do you have on your team? Do they correlate with different creative outputs?_
+
+Products and associated workflows include:
+
+1. The main data product is an open-ended corpus of manuscript descriptions, which, in the case of new contributors, relies on tutorial and reference documentation for taggers. Insofar as new data may introduce new complications and new research questions, they may necessitate schema enhancements, which require documentation updates. New texts also require augmentation of the master text and genre lists. New structures (document types) often require code revision, e.g., `<msPart>` and `<msFrag>`.
+2. The ODD (and derived schemas) require maintenance, both expansion to support additional manuscript types and constraints to reduce opportunities for errors, as those are discovered. Each new error type requires creating a new schematron rule. Schema changes require documentation and code updates.
+3. Auxiliary resources, especially the title list (also the genre list), is maintained in sync with the corpus.
+4. Bibliographic management and integration with codicological descriptions. Bibliographic references are part of the descriptions (pointers must resolve), and they are also a potential entry point into the corpus (a mode of access that is not currently implemented).
+
+_Q: How do the intellectual goals of your project manifest themselves? Do they appear together in one creative output, or are they distributed across many?_
+
+Intellectual output is in books, articles, conference reports, most of which focus on subcorpora. These are separate projects that use the Repertorium for data access, management, visualization, and analysis, but they are not part of the Repertorium project itself. They are not tracked within the Repertorium, although at least a list of them should be.
+
+The spin-off _Slovo-ASO: Toward a digital library of South Slavic manuscripts_ project (<http://aso.obdurodon.org/>) relies on the same core technology, but the extent of description, and therefore research support, is substantially different. Slovo-ASO is completed, live, but no longer actively maintained.
+
+_Q: How does your data flow through your project? Is it analyzed and presented in a single way, or a variety of ways? As the data changes shape, it can signal different manifestations of your project._
+
+From a model—view—controller perspective, all views emerge from the same core data, the XML manuscript description files, and involve either a single manuscript-description record or multiple records. Research questions drive the views, and the controller is updated to support new views as they are added. The first product was XML descriptions with no publication or interaction, then controlled searching, then textual content views (e.g., lists), then graphic visualization (first plectograms, then also dendrograms). The organizing principle is the digital workstation, and each new view requires new integration with existing views to maintain that organization. The project is attentive to non-goals, e.g., no effort at graphic visualization of geographic mapping, timelines, or social networking, since those would not be connected to research goals.
+
+## Module A2: How long do you want your project to last?
+
+There are only three phases of development:
+
+1. Active creation
+2. Ongoing maintenance (_regular non-transformative activity_)
+3. Retirement (_graceful degradation_, where components are allowed to fail).
+
+When you change the focus or scope, active creation restarts. 
+
+Lifespans can conveniently be divided into:
+
+1. Expected development for fewer than three years from now (_bloom and fade_ or first steps toward retirement)
+2. More than three years from now, with expectation of retirement, and
+3. More than three years, with no plans for retirement (_book time_). 
+
+In all cases, plan for three years and then plan again three years later; don’t plan for perpetuity. Different products within the same project may be in different stages. Lifespan #3, above, may require input from sustainability specialists.
+
+Considerations (with Repertorium values)
+
+* The intellectual goals of your project: ongoing
+* Available funding sources: assume none
+* Current and future staffing: assume limited but committed
+* Preferred technologies: assume general stability with controlled improvement
+
+_Q: How long do you want your project to last, that is: what is your anticipated digital project lifespan?_
+
+Longer than three years, no plan for retirement, similarly to Perseus.
+
+_Q: Why have you chosen this lifespan? Intellectual goals? Financial reasons? Staffing reasons? Technical reasons? Other reasons?_
+
+Ongoing research value, potentially unbounded corpus, where having more data increases the value of the project as a whole. Future financing and staffing are uncertain; the project depends on volunteer labor by a small corps of trained (not crowd) end-users.
+
+_Q: What phase of development would you currently say your project is in? How long has it been in this phase? How long do you project that it will continue in this phase?_
+
+Active creation. We continue to add new manuscript descriptions, and new types of manuscript descriptions (most recently detailed hymnography), and therefore to expand the schema and modify processing code accordingly. We continue to enhance views. The project currently also includes some non-transformative development, such as the port from PHP to `.xar` currently under way. That is, from this perspective the project has two products.
+
+_Q: What is the next phase of development you foresee for this project? When do you think that the project will enter this phase?_
+
+The `.xar` port will be concluded in 2019. Corpus expansion, with associated modifications of schema, auxiliary files, and processing code has no planned end.
+
+## Module A3: Who is the project designed for?
+
+_Designated communities_ are the target audiences (see <http://www.oclc.org/research/publications/library/2000/lavoie-oais.html>). Different team members may prioritize different target audiences, but if you don’t know who your public is, you don’t know what to sustain to meet their needs. _General public_ is okay (e.g., it might be a target audience for Folger), but we can still be specific about the types of members of the general public we have in mind. If the project is openly accessible, there is also necessarily an implicit _unanticipated users_ community. Which features of the project are to be aligned with which communities? 
+
+Core questions include:
+
+1. Who do you imagine using your project?
+2. Why do you imagine they use it? What needs do they have?
+3. What do you imagine they get out of it? 
+
+Contrast that to:
+
+1. Who uses your project?
+1. Why do they use it? What needs do they have?
+1. What do you imagine they get out of it? 
+
+### Further thoughts
+
+Ir the _general public_ is a user communities, what types of people constitute that group? How does your project meet the needs of your users, whether actual or imagined? What skills and knowledges do you assume your users have that would allow this interaction to succeed? Have you done usability studies to find out how your users engage with your project? Who might you have as unanticipated users? What other publics have access to your work?
+
+Think of a three-column table: user community, needs, how are their needs met? 
+
+Community | Needs | How
+----|----|----
+Medieval Slavic philologists interested in the transmission of texts in mixed-content miscellanies, i.e., the core development team | Identify, visualize, analyze patterns of transmission in convoy | Search interface, workstation browsing, graphic visualizations
+Slavic manuscript scholars | Codicological information about manuscripts | Codicological and XML views
+Slavist and Byzantinist literary historians | Textual transmission of individual works | Search interface, workstation browsing
+
+In the case of the Repertorium, we don’t care about general public. All three categories of target users have domain-specific expert knowledge and language proficiency. Usability studies are inwardly focused: we are our own primary target audience, so the project must meet our research needs, although we respond to feedback from other users. We do not devote attention to unanticipated users, but the site is fully public, i.e., they are welcome to do whatever they find useful with it. Learners are not a separate community; they are members of one or another of the principal communities, but at an earlier stage of knowledge acquisition and practical proficiency.
+
+## Module A4: What are the project’s sustainability priorities?
+
+Focus on *significant properties*, which are fluid. Each has three aspects: 
+
+Content: narrative argumentation, depends on technological and discursive scaffolding
+
+Context: institutional, technological, social. Discipline, institution, audience; who is in charge? Source and ownership of data. Technologies. Often represented by metadata, including external process metadata.
+
+Structure: data (as part of technological architecture, rather than intellectual content), technology stack, interfaces (presentation layer). 
+
+Not all aspects of the project are equally significant, at least at all stages? Is open access a significant property? Password protection? Browse but not search, or vice versa, or both are interface-significant properties? Abstract significant properties: data are stored as XML. This site will always be about Mitford, and only Mitford. 
+
+Q: What is your project’s narrative, argument, or mission? Where and how do your intellectual goals unfold?
+
+Mission defined by research hypotheses about textual transmission in a miscellany context. The project is a tool for structured exploration, aggregation, analysis, and visualization, in support of traditional (human-centered) research reporting.
+
+Q: What information is your project intended to convey? How does it convey it?
+
+Which texts are available where and in what contexts? Which texts co-occur in the same order? How do sets of individual manuscripts compare internally? What does the entire corpus look like? Information is conveyed in lists of manuscript identifiers, that is, in plain language, and graphically (plectograms, dendrograms). 
+
+Q: How do you define your project’s institutional context? What are its contours and features?
+
+Does the institutional hosting matter? Collaboration? Funding agencies? None of it does, except that the host needs to be committed to the goals. Collaboration is open to all who are willing to contribute. As for funding, we'll be grateful for whatever we can get. Must be open access, fairly committed to BY, less so to SA, less so to NC, but all are currently part of the license, and under reconsideration.
+
+Q: What are the structural components of your project? What about your project’s chosen technologies and/or digital interactivity is most salient to you? What forms does it take?
+
+Whatever works. Highest priority is computational tractability. Ambivalent commitment to TEI: community and fundability, but entails technological compromises and costs. Need to balance portability (avoid platform lock-in) with maintenance (Apache PHP + eXist-db is much harder to maintain than .xar). Mobile devices are a low priority. Accessibility matters, but not enough to compromise functionality (cf. secret link underlining for color-blind user). That is, don't forget (explicit, considered) non-goals.
+
+Q: Of all the things you have listed so far in this exercise, what are the features without which your project simply would not be your project? Which seem utterly essential to your overall intellectual and technological goals? And, recalling your work in Module A3, which of these characteristics seem most essential to your designated communities? 
+
+Highest end-user priority is ability to explore patterns of agreement, which means graphically enabled workstation interactivity. With respect to content, mixed-content miscellanies are most important, then fixed-content miscellanies, then other compilations, then the rest.
+
+In tabular form: significant property, function on project, designated communities served
+
+Rank | Property | Function | Community
+----|----|----|----
+1 | Content (hierarchy of content types) | Improve research coverage | Philologists (following hierarchy of user communities, above)
+2 | Workstation interface | User-oriented research interaction| Ditto
+2 | Varied (text and graphic) representations | Form follows function | Ditto
+3 | Markup documentation, consistency testing, developing guides | Improve integrity and consistency of data | Developers, both core (reference) and new (tutorial)
+4 | Non-goals: mobile, accessibility | Avoid scope creep | Prioritize allocation of limited resources to target users
+
+Within the workstation interface (#2, above), plectogram and content views have the highest priority and codicology and dendrogram are secondary. XML publication has the lowest value for us (because we control the API, we can modify it whenever a need is identified), but a high community value (it provides access that bypasses the API).
+
+## Module A5: Project Documentation Checklist
+
+Documentation may be paper or digital, but is best stored in reliable shared location. Number of locations should be small. 
+
+Spreadsheet columns are:
+
+1. Documentation site
+1. Type of documentation
+1. Reliable?
+1. Accessible by whom?
+1. Funded how?
+
+The Visual Media Workshop (VMW) doesn’t regard Google docs as reliable, not because it is inadequate, but because there were many choices, and the team picked Box. As a side-effect, they decided that what they do in Google docs is expendable. This means that when a Google doc becomes important, it moves to Box. The reliable site itself becomes a _significant property_. 
+
+Project documentation in a hierarchical folder system should be shallow because fewer buckets improves the likelihood that people will file in the same place. VMW has only four top-level folders:
+
+1. Articles-books-links (bibliography): Zotero might do here
+1. Data: machine-actionable. If you keep old versions, be clear about what is old and what is current
+1. Process documentation (admin): hosting, local bureaucracy, Asana or Slack chat
+1. Sites of production: correspond to A1 _creative outputs_, perhaps organized into subfolders. 
+
+VMW uses Google docs for drafts and working documents. Asana and Slack are project documentation; in VMW, they are not _reliable sites_, so information in them that needs to be preserved needs to be moved. You may need to compromise between the sites that offer the best functionality and those that the team is willing to use. Sigh. With that in place, you can back up only the reliable sites, without having to worry about everything else. 
+
+_Copy of record_ is a thing; put it in a reliable site and mark it as such. Email is drafts, and is not manageable; once you’ve sent documents in various forms around, record whatever you’ve agreed elsewhere. If you must use email as a reliable site, make it a communal account to which all users have access. Keep names, email addresses, dates, and attachments. 
+
+“Funded by whom?” may contain sustainability red flags. For example, a Google doc is funded at the pleasure of Google. VMW uses it, too, but it entails a risk.
+
+Sample locations and record types are:
+
+* Working drafts in Google Docs;
+* File folders in Dropbox;
+* File folders on a university server;
+* Data visualizations on a web server;
+* Documentation in GitHub repositories;
+* Communication in email accounts or Slack;
+* Printed documents in filing cabinets. 
+
+The Repertorium is currently in transition, with the following scattered resources, not all well curated:
+
+* Dropbox, multiple dated folders and subfolders, all types of data, some reliable and some not, accessible by all but curated by djb, owned by Dropbox
+* GitHub, not widely used except by djb; master branch is well managed, others less so; intended to include all development and deliverable materials, including app
+* Email correspondence is disorganized, opportunistic, and not reliable
+* There is no organized collection or curation of third-party research resources (many of which cannot be shared in public for copyright reasons)
+* There is no organized collection—or even list—of internal research products, that is, publications or other derived works
+
+### Possible reorganization
+
+* All data in public GitHub repo
+* Developers download data from Obdurodon to work on it, and check it out on a Google spreadsheet to avoid simultaneous edits
+* Developers submit (most often manuscript descriptions, but also ODD and schemas) to djb by email or pull request, and then check it back in in the Google spreadsheet
+* Only djb updates master branch, so all data is reviewed before being committed to the reliable resource
+* Better workflow: download data from Obdurodon, check out on Google spreadsheet for management, submit to djb for review before upload
+
+Alison: It’s a little control-freaky, but it’s workable, and it simplifies management a lot
