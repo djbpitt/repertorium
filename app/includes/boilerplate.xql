@@ -1,6 +1,13 @@
 xquery version "3.1";
 declare variable $title external;
 declare variable $fqcontroller external;
+declare variable $resource external;
+(:
+    slider:         plectogram
+    plectogram:     browse, search
+    browse/search:  browse, search, encoding-policies-updates
+    languages
+:)
 <div
     xmlns="http://www.w3.org/1999/xhtml">
     <h1><a
@@ -24,16 +31,21 @@ declare variable $fqcontroller external;
         </span>
         <span
             class="flags">
-            <span
-                id="slider">
-                <input
-                    id="slider1"
-                    type="range"
-                    value="1"
-                    min="0.1"
-                    max="2"
-                    step="0.01"/>
-            </span>
+            {
+                if ($resource = ('plectogram')) then
+                    <span
+                        id="slider">
+                        <input
+                            id="slider1"
+                            type="range"
+                            value="1"
+                            min="0.1"
+                            max="2"
+                            step="0.01"/>
+                    </span>
+                else
+                    ()
+            }
             <span
                 id="codic">
                 <a
@@ -73,7 +85,7 @@ declare variable $fqcontroller external;
                 id="browse">
                 <a
                     title="Browse the collection"
-                    href="/browse-checkbox.php">
+                    href="browse">
                     <img
                         src="{concat($fqcontroller, 'resources/images/browse.png')}"
                         alt="[Browse]"/>
@@ -83,37 +95,42 @@ declare variable $fqcontroller external;
                 id="search">
                 <a
                     title="Search the collection"
-                    href="/search.php">
+                    href="search">
                     <img
                         src="{concat($fqcontroller, 'resources/images/search.png')}"
                         alt="[Search]"/>
                 </a>
             </span>
-            <span>&#xa0;&#xa0;</span>
-            <span
-                class="flag"
-                id="bg">
-                <img
-                    title="Use Bulgarian titles"
-                    src="{concat($fqcontroller, 'resources/images/bg.png')}"
-                    alt="[Bulgarian]"/>
-            </span>
-            <span
-                class="flag"
-                id="en">
-                <img
-                    title="Use English titles"
-                    src="{concat($fqcontroller, 'resources/images/us.png')}"
-                    alt="[Englist]"/>
-            </span>
-            <span
-                class="flag"
-                id="ru">
-                <img
-                    title="Use Russian titles"
-                    src="{concat($fqcontroller, 'resources/images/ru.png')}"
-                    alt="[Russian]"/>
-            </span>
+            {
+                if ($resource = ('browse')) then
+                    (<span>&#xa0;&#xa0;</span>,
+                    <span
+                        class="flag"
+                        id="bg">
+                        <img
+                            title="Use Bulgarian titles"
+                            src="{concat($fqcontroller, 'resources/images/bg.png')}"
+                            alt="[Bulgarian]"/>
+                    </span>,
+                    <span
+                        class="flag"
+                        id="en">
+                        <img
+                            title="Use English titles"
+                            src="{concat($fqcontroller, 'resources/images/us.png')}"
+                            alt="[Englist]"/>
+                    </span>,
+                    <span
+                        class="flag"
+                        id="ru">
+                        <img
+                            title="Use Russian titles"
+                            src="{concat($fqcontroller, 'resources/images/ru.png')}"
+                            alt="[Russian]"/>
+                    </span>)
+                else
+                    ()
+            }
         </span>
         <span
             class="text">

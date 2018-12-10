@@ -15,4 +15,7 @@ declare variable $fqcontroller external;
     <link
         rel="shortcut icon"
         href="{concat($fqcontroller, 'resources/images/favicon.ico')}"/>
+    <script
+        type="text/javascript"
+        src="{concat($fqcontroller, 'resources/js/lgToggle.js')}"></script>
 </head>

@@ -179,7 +179,9 @@ return
                         '/includes/boilerplate.xql?title=',
                         encode-for-uri($title),
                         '&amp;fqcontroller=',
-                        $fqcontroller
+                        $fqcontroller,
+                        '&amp;resource=',
+                        $exist:resource
                         )
                     }"
             />
