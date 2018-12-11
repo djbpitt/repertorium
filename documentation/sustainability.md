@@ -571,7 +571,7 @@ For each item in modules C2–C4 identify:
             <th>First step</th>
             <th>Timeframe for completion</th>
         </tr>
-        <tr><td style="color: black; background-color: black; line-height: 1px;" colspan="5">x</td></tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
     </tbody>
     <tbody>
         <tr>
