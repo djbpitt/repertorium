@@ -544,8 +544,10 @@ For each item in modules C2–C4 identify:
 * Specific team members who will be responsible for each of these sustainability actions
 * A timeframe for completion of each action (should be fewer than three years)
 
-<table>
-    <tbody>
+|Access|||||
+|----|----|----|----|----|
+|1|2|3|4|5|
+
         <tr>
             <th colspan="5" style="font-size: larger;">Access</td>
         </tr>
@@ -571,144 +573,7 @@ For each item in modules C2–C4 identify:
             <th>First step</th>
             <th>Timeframe for completion</th>
         </tr>
-        <tr><td style="color: black; background-color: black; line-height: 1px;" colspan="5">x</td></tr>
-    </tbody>
-    <tbody style="border-bottom: 5px solid black;">
-        <tr>
-            <th colspan="5" style="font-size: larger;">Backup</td>
-        </tr>
-        <tr>
-            <th>Level</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th>Rationale for level</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th>Timeframe</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th colspan="5">Catalog of individual sustainability actions</td>
-        </tr>
-        <tr>
-            <th>Technology</th>
-            <th>Action</th>
-            <th>Party responsible</th>
-            <th>First step</th>
-            <th>Timeframe for completion</th>
-        </tr>
-    </tbody>
-    <tbody style="border-bottom: 5px solid black;">
-        <tr>
-            <th colspan="5" style="font-size: larger;">Permissions</td>
-        </tr>
-        <tr>
-            <th>Level</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th>Rationale for level</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th>Timeframe</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th colspan="5">Catalog of individual sustainability actions</td>
-        </tr>
-        <tr>
-            <th>Technology</th>
-            <th>Action</th>
-            <th>Party responsible</th>
-            <th>First step</th>
-            <th>Timeframe for completion</th>
-        </tr>
-    </tbody>
-    <tbody style="border-bottom: 5px solid black;">
-        <tr>
-            <th colspan="5" style="font-size: larger;">Metadata</td>
-        </tr>
-        <tr>
-            <th>Level</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th>Rationale for level</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th>Timeframe</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th colspan="5">Catalog of individual sustainability actions</td>
-        </tr>
-        <tr>
-            <th>Technology</th>
-            <th>Action</th>
-            <th>Party responsible</th>
-            <th>First step</th>
-            <th>Timeframe for completion</th>
-        </tr>
-    </tbody>
-    <tbody style="border-bottom: 5px solid black;">
-        <tr>
-            <th colspan="5" style="font-size: larger;">File formats</td>
-        </tr>
-        <tr>
-            <th>Level</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th>Rationale for level</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th>Timeframe</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th colspan="5">Catalog of individual sustainability actions</td>
-        </tr>
-        <tr>
-            <th>Technology</th>
-            <th>Action</th>
-            <th>Party responsible</th>
-            <th>First step</th>
-            <th>Timeframe for completion</th>
-        </tr>
-    </tbody>
-    <tbody style="border-bottom: 5px solid black;">
-        <tr>
-            <th colspan="5" style="font-size: larger;">Data integrity</td>
-        </tr>
-        <tr>
-            <th>Level</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th>Rationale for level</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th>Timeframe</th>
-            <td colspan="4">stuff</td>
-        </tr>
-        <tr>
-            <th colspan="5">Catalog of individual sustainability actions</td>
-        </tr>
-        <tr>
-            <th>Technology</th>
-            <th>Action</th>
-            <th>Party responsible</th>
-            <th>First step</th>
-            <th>Timeframe for completion</th>
-        </tr>
-    </tbody>
-
+<table>
     <tbody color="gray;">
         <tr>
             <td colspan="5">[Template]</td>
