@@ -332,7 +332,7 @@ Issues include the following:
 C1 is informational; no project-specific deliverables.
 
 
-## Module C2: Access & Backing Up Your Work
+## Module C2: Access and backing up your work
 
 ### Access
 
@@ -382,33 +382,25 @@ Level 4 is only slightly more secure than Level 1.
             </tr>
             <tr>
                 <td style="vertical-align: top;"><ul>
-                        <li>Document your reliable sites of project documentation including a
-                            description of their contents</li>
+                        <li>Document your reliable sites of project documentation including a description of their contents</li>
                         <li>Maintain two complete copies, stored separately</li>
-                        <li>Reduce to a minimum data stored on heterogeneous types of media (hard
-                            drives, flash drives, etc.)</li>
+                        <li>Reduce to a minimum data stored on heterogeneous types of media (hard drives, flash drives, etc.)</li>
                     </ul></td>
 
                 <td style="vertical-align: top;"><ul>
-                        <li>Keep an inventory of storage media and systems used and their technical
-                            requirements</li>
-                        <li> Maintain three complete copies, with at least one copy in a different
-                            geographic location</li>
-                        <li>Transfer all data from heterogeneous media (hard drives, flash drives,
-                            etc.) to a central storage system</li>
+                        <li>Keep an inventory of storage media and systems used and their technical requirements</li>
+                        <li> Maintain three complete copies, with at least one copy in a different geographic location</li>
+                        <li>Transfer all data from heterogeneous media (hard drives, flash drives, etc.) to a central storage system</li>
                     </ul></td>
 
                 <td style="vertical-align: top;"><ul>
-                        <li>Of the three copies, keep at least one in a geographic location with a
-                            different disaster threat</li>
+                        <li>Of the three copies, keep at least one in a geographic location with a different disaster threat</li>
                         <li>Routinely monitor your storage systems and media for obsolescence</li>
                     </ul></td>
 
                 <td style="vertical-align: top;"><ul>
-                        <li>Keep three copies in separate geographic locations, each with different
-                            disaster threats</li>
-                        <li>Have a comprehensive plan in place to keep files and metadata on
-                            currently accessible media or systems</li>
+                        <li>Keep three copies in separate geographic locations, each with different disaster threats</li>
+                        <li>Have a comprehensive plan in place to keep files and metadata on currently accessible media or systems</li>
                     </ul></td>
             </tr>
 </table>
@@ -418,7 +410,7 @@ Level 4 is only slightly more secure than Level 1.
 * **Your desired level of sustainability practices (as a goal to be achieved within the next three years).** Level 3.
 * **The resources and actions that will be required to meet your desired level.** Complete migration from Dropbox to GitHub to consolidate resource locations.
 
-## Module C3: File Formats & Metadata
+## Module C3: File formats and metadata
 
 ### File formats
 
@@ -443,24 +435,20 @@ When possible, create files using a limited set of known open file formats | Mai
     <tr>
         <td style="vertical-align: top;">
             <ul>
-                <li>Document your reliable sites of project documentation including a
-                    description of their contents </li>
+                <li>Document your reliable sites of project documentation including a description of their contents </li>
             </ul>
         </td>
         <td style="vertical-align: top;"><ul>
                 <li>Keep an inventory of file types and sizes </li>
-                <li>Create and make available descriptive metadata, such as title, abstract,
-                    keywords, or other information that is useful for discovery</li>
+                <li>Create and make available descriptive metadata, such as title, abstract, keywords, or other information that is useful for discovery</li>
             </ul>
         </td>
         <td style="vertical-align: top;"><ul>
-                <li>Store administrative metadata, such as when files were created and with
-                    what technologies</li>
+                <li>Store administrative metadata, such as when files were created and with what technologies</li>
             </ul>
         </td>
         <td style="vertical-align: top;"><ul>
-                <li>Store transformative metadata, such as a log of how files have been
-                    altered over time </li>
+                <li>Store transformative metadata, such as a log of how files have been altered over time </li>
                 <li>Store standard preservation metadata</li>
             </ul>
         </td>
@@ -472,5 +460,79 @@ When possible, create files using a limited set of known open file formats | Mai
 * **Your desired level of sustainability practices (as a goal to be achieved within the next three years).** Level 4.
 * **The resources and actions that will be required to meet your desired level.** Complete GitHub migration.
 
+## Module C4: Permissions and data integrity
 
+### Permissions
+
+<table>
+    <tr>
+        <th>Level 1</th>
+        <th>Level 2</th>
+        <th>Level 3</th>
+        <th>Level 4</th>
+    </tr>
+    <tr>
+        <td style="vertical-align: top;">
+            <ul>
+                <li>Permissions Identify which project members have login credentials to accounts and services used </li>
+                <li>Identify which project members have read, write, move, and delete authorization to individual files</li>
+            </ul>
+        </td style="vertical-align: top;">
+        <td><ul>
+                <li>Restrict authorizations to only necessary team members </li>
+                <li>Document access restrictions for services and files</li>
+            </ul>
+        </td>
+        <td style="vertical-align: top;"><ul>
+                <li>Maintain logs of who performs what actions on files, including deletions and preservation actions</li>
+            </ul>
+        </td>
+        <td style="vertical-align: top;"><ul>
+                <li>Perform routine audits of activity logs</li>
+            </ul></td>
+    </tr>
+</table>
+
+High priority; target is Level 2. With migration to GitHub, permission is controlled by GitHub and activity is logged at Level 3 automatically. Insofar as only David pushes to GitHub, all significant activity is implicitly attributable, and GitHub commit history adds date and time tracking, and therefore sequencing. Andrej has push access to GitHub repo, but does not commonly use it. Repo is public, so all have read access. Only David has write and admin permissions on Obdurodon.
+
+### Data integrity
+
+<table>
+    <tr>
+        <th>Level 1</th>
+        <th>Level 2</th>
+        <th>Level 3</th>
+        <th>Level 4</th>
+    </tr>
+    <tr>
+        <td style="vertical-align: top;">
+            <ul>
+                <li>Identify which project members have login credentials to accounts and
+                    services used </li>
+                <li>Identify which project members have read, write, move, and delete
+                    authorization to individual files</li>
+            </ul>
+        </td>
+        <td style="vertical-align: top;"><ul>
+                <li>Be able to replace/repair corrupted data </li>
+                <li>Create fixity information for stable project files</li>
+            </ul>
+        </td>
+        <td style="vertical-align: top;"><ul>
+                <li>Check fixity of stable content at fixed intervals</li>
+            </ul>
+        </td>
+        <td style="vertical-align: top;"><ul>
+                <li>Check fixity of stable content in response to specific events or
+                    activities</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+Repair can normally be as easy as restoring from backup, but not if context has changed, so XML, schema, XSLT, etc. must be kept in sync. Fixity information is tricky because checksums don't distinguish significant from insignificant (informational from non-informational) change, so need to normalize before checksumming. 
+
+Very important; target is Level 2. GitHub provides Level 2 conformance.
+
+## Module C5: Digital Sustainability Action Plan
 
