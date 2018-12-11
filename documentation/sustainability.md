@@ -318,5 +318,159 @@ Spreadsheet is an extension of B1, B2: Technology, function on project, funding 
 
 All participants have access to all open-source technology resources. &lt;oXygen/&gt; licenses are self-funded (David) or underwritten by employers (Sofia University, Bulgarian Academy of Sciences). 
 
+## Module C1: Adapting the NDSA Levels of Preservation
+
+Issues include the following:
+
+* Access
+* Backing Up Your Work
+* File Formats
+* Metadata
+* Permissions
+* Data Integrity
+
+C1 is informational; no project-specific deliverables.
+
+
+## Module C2: Access & Backing Up Your Work
+
+### Access
+
+<table>
+<tr><th>Level 1</th><th>Level 2</th><th>Level 3</th><th>Level 4</th></tr>
+<tr>
+<td>
+<ul>
+<li>Determine designated communities. </li>
+<li>Create and make available descriptive metadata, such as title, abstract, keywords, or other information that is useful for discovery</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Have publicly available documentation, user guides, or other materials that make your work legible to users</li></ul>
+</td>
+<td>
+<ul>
+<li>Have a publicly available access and use policy
+</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Provide access to the parts of the project that have become obsolete or difficult to access via a native environment and/or emulation
+</li>
+</ul>
+</td></tr>
+</table>
+
+
+* **How high a priority this area is for your project?** Medium. Target users are experts or near-experts. Access for others is not actively, but active facilitation is low priority.
+* **Your current level of sustainability practices.** In Level 1, we’ve identified communities, but we have not prioritized discovery, although we have non-structured metadata on site. Our documentation is geared to developers, not end-users, and therefore not Level 2, unless we define targeting an expert community as providing usability guidance (provision through obviation?). Our CC license is on every page, so Level 3 is complete. We are migrating all content (data and application) to public GitHub repo, and therefore slouching toward Level 4.
+* **Your desired level of sustainability practices (as a goal to be achieved within the next three years).** Complete migration to GitHub (Level 4). End-user documentation is a goal, although not highest priority, and nobody has taken responsibility for it.
+* **The resources and actions that will be required to meet your desired level.**  Complete migration to GitHub (in progress, completion is certain). Write end-user documentation (no activity or explicit planning yet). 
+
+### Backing up your work
+
+Level 4 is only slightly more secure than Level 1.
+
+<table>
+            <tr>
+                <th>Level 1</th>
+                <th>Level 2</th>
+                <th>Level 3</th>
+                <th>Level 4</th>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;"><ul>
+                        <li>Document your reliable sites of project documentation including a
+                            description of their contents</li>
+                        <li>Maintain two complete copies, stored separately</li>
+                        <li>Reduce to a minimum data stored on heterogeneous types of media (hard
+                            drives, flash drives, etc.)</li>
+                    </ul></td>
+
+                <td style="vertical-align: top;"><ul>
+                        <li>Keep an inventory of storage media and systems used and their technical
+                            requirements</li>
+                        <li> Maintain three complete copies, with at least one copy in a different
+                            geographic location</li>
+                        <li>Transfer all data from heterogeneous media (hard drives, flash drives,
+                            etc.) to a central storage system</li>
+                    </ul></td>
+
+                <td style="vertical-align: top;"><ul>
+                        <li>Of the three copies, keep at least one in a geographic location with a
+                            different disaster threat</li>
+                        <li>Routinely monitor your storage systems and media for obsolescence</li>
+                    </ul></td>
+
+                <td style="vertical-align: top;"><ul>
+                        <li>Keep three copies in separate geographic locations, each with different
+                            disaster threats</li>
+                        <li>Have a comprehensive plan in place to keep files and metadata on
+                            currently accessible media or systems</li>
+                    </ul></td>
+            </tr>
+</table>
+
+* **How high a priority this area is for your project?** Very
+* **Your current level of sustainability practices.** Level 3. No crucial data on heterogeneous media. Complete copies on multiple machines (djb desktop and laptop, sometimes in different locations) and in the cloud (Dropbox, transitioning to GitHub).
+* **Your desired level of sustainability practices (as a goal to be achieved within the next three years).** Level 3.
+* **The resources and actions that will be required to meet your desired level.** Complete migration from Dropbox to GitHub to consolidate resource locations.
+
+## Module C3: File Formats & Metadata
+
+### File formats
+
+Level 1 | Level 2 | Level 3 | Level 4
+----|----|----|----
+When possible, create files using a limited set of known open file formats | Maintain an inventory of all file formats used in your project | Routinely monitor your file formats for obsolescence issues | Perform format migrations, emulations, and other updating activities as needed
+
+* **How high a priority this area is for your project?** Low
+* **Your current level of sustainability practices.** Levels 1, 3, and 4; 2 is implicit.
+* **Your desired level of sustainability practices (as a goal to be achieved within the next three years).** Level 4.
+* **The resources and actions that will be required to meet your desired level.** At target level, so requires periodic verification, and possible intervention.
+
+### Metadata
+
+<table>
+    <tr>
+        <th>Level 1</th>
+        <th>Level 2</th>
+        <th>Level 3</th>
+        <th>Level 4</th>
+    </tr>
+    <tr>
+        <td style="vertical-align: top;">
+            <ul>
+                <li>Document your reliable sites of project documentation including a
+                    description of their contents </li>
+            </ul>
+        </td>
+        <td style="vertical-align: top;"><ul>
+                <li>Keep an inventory of file types and sizes </li>
+                <li>Create and make available descriptive metadata, such as title, abstract,
+                    keywords, or other information that is useful for discovery</li>
+            </ul>
+        </td>
+        <td style="vertical-align: top;"><ul>
+                <li>Store administrative metadata, such as when files were created and with
+                    what technologies</li>
+            </ul>
+        </td>
+        <td style="vertical-align: top;"><ul>
+                <li>Store transformative metadata, such as a log of how files have been
+                    altered over time </li>
+                <li>Store standard preservation metadata</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+* **How high a priority this area is for your project?** Low
+* **Your current level of sustainability practices.** Level 1 in progress as part of migration to GitHub. Levels 2–4 are managed by GitHub (preservation metadata only where releases are published).
+* **Your desired level of sustainability practices (as a goal to be achieved within the next three years).** Level 4.
+* **The resources and actions that will be required to meet your desired level.** Complete GitHub migration.
+
 
 
