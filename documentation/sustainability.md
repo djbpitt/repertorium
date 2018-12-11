@@ -708,7 +708,6 @@ For each item in modules C2–C4 identify:
             <th>Timeframe for completion</th>
         </tr>
     </tbody>
-
     <tbody color="gray;">
         <tr>
             <td colspan="5">[Template]</td>
