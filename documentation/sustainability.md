@@ -545,7 +545,7 @@ For each item in modules C2–C4 identify:
 * A timeframe for completion of each action (should be fewer than three years)
 
 <table>
-    <tbody style="border-bottom: 5px solid black;">
+    <tbody>
         <tr>
             <th colspan="5" style="font-size: larger;">Access</td>
         </tr>
@@ -571,6 +571,7 @@ For each item in modules C2–C4 identify:
             <th>First step</th>
             <th>Timeframe for completion</th>
         </tr>
+        <tr><td colspan="5" style="background-color: black; height="1em;">&nbsp;</td></tr>
     </tbody>
     <tbody style="border-bottom: 5px solid black;">
         <tr>
