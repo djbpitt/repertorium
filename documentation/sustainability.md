@@ -374,35 +374,35 @@ C1 is informational; no project-specific deliverables.
 Level 4 is only slightly more secure than Level 1.
 
 <table>
-            <tr>
-                <th>Level 1</th>
-                <th>Level 2</th>
-                <th>Level 3</th>
-                <th>Level 4</th>
-            </tr>
-            <tr>
-                <td style="vertical-align: top;"><ul>
-                        <li>Document your reliable sites of project documentation including a description of their contents</li>
-                        <li>Maintain two complete copies, stored separately</li>
-                        <li>Reduce to a minimum data stored on heterogeneous types of media (hard drives, flash drives, etc.)</li>
-                    </ul></td>
+<tr>
+    <th>Level 1</th>
+    <th>Level 2</th>
+    <th>Level 3</th>
+    <th>Level 4</th>
+</tr>
+<tr>
+    <td style="vertical-align: top;"><ul>
+            <li>Document your reliable sites of project documentation including a description of their contents</li>
+            <li>Maintain two complete copies, stored separately</li>
+            <li>Reduce to a minimum data stored on heterogeneous types of media (hard drives, flash drives, etc.)</li>
+        </ul></td>
 
-                <td style="vertical-align: top;"><ul>
-                        <li>Keep an inventory of storage media and systems used and their technical requirements</li>
-                        <li> Maintain three complete copies, with at least one copy in a different geographic location</li>
-                        <li>Transfer all data from heterogeneous media (hard drives, flash drives, etc.) to a central storage system</li>
-                    </ul></td>
+    <td style="vertical-align: top;"><ul>
+            <li>Keep an inventory of storage media and systems used and their technical requirements</li>
+            <li> Maintain three complete copies, with at least one copy in a different geographic location</li>
+            <li>Transfer all data from heterogeneous media (hard drives, flash drives, etc.) to a central storage system</li>
+        </ul></td>
 
-                <td style="vertical-align: top;"><ul>
-                        <li>Of the three copies, keep at least one in a geographic location with a different disaster threat</li>
-                        <li>Routinely monitor your storage systems and media for obsolescence</li>
-                    </ul></td>
+    <td style="vertical-align: top;"><ul>
+            <li>Of the three copies, keep at least one in a geographic location with a different disaster threat</li>
+            <li>Routinely monitor your storage systems and media for obsolescence</li>
+        </ul></td>
 
-                <td style="vertical-align: top;"><ul>
-                        <li>Keep three copies in separate geographic locations, each with different disaster threats</li>
-                        <li>Have a comprehensive plan in place to keep files and metadata on currently accessible media or systems</li>
-                    </ul></td>
-            </tr>
+    <td style="vertical-align: top;"><ul>
+            <li>Keep three copies in separate geographic locations, each with different disaster threats</li>
+            <li>Have a comprehensive plan in place to keep files and metadata on currently accessible media or systems</li>
+        </ul></td>
+</tr>
 </table>
 
 * **How high a priority this area is for your project?** Very
@@ -544,10 +544,8 @@ For each item in modules C2–C4 identify:
 * Specific team members who will be responsible for each of these sustainability actions
 * A timeframe for completion of each action (should be fewer than three years)
 
-|Access|||||
-|----|----|----|----|----|
-|1|2|3|4|5|
-
+<table>
+    <tbody>
         <tr>
             <th colspan="5" style="font-size: larger;">Access</td>
         </tr>
@@ -573,7 +571,144 @@ For each item in modules C2–C4 identify:
             <th>First step</th>
             <th>Timeframe for completion</th>
         </tr>
-<table>
+        <tr><td style="color: black; background-color: black; line-height: 1px;" colspan="5">x</td></tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <th colspan="5">Backup</td>
+        </tr>
+        <tr>
+            <th>Level</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th>Rationale for level</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th>Timeframe</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th colspan="5">Catalog of individual sustainability actions</td>
+        </tr>
+        <tr>
+            <th>Technology</th>
+            <th>Action</th>
+            <th>Party responsible</th>
+            <th>First step</th>
+            <th>Timeframe for completion</th>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <th colspan="5">Permissions</td>
+        </tr>
+        <tr>
+            <th>Level</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th>Rationale for level</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th>Timeframe</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th colspan="5">Catalog of individual sustainability actions</td>
+        </tr>
+        <tr>
+            <th>Technology</th>
+            <th>Action</th>
+            <th>Party responsible</th>
+            <th>First step</th>
+            <th>Timeframe for completion</th>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <th colspan="5">Metadata</td>
+        </tr>
+        <tr>
+            <th>Level</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th>Rationale for level</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th>Timeframe</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th colspan="5">Catalog of individual sustainability actions</td>
+        </tr>
+        <tr>
+            <th>Technology</th>
+            <th>Action</th>
+            <th>Party responsible</th>
+            <th>First step</th>
+            <th>Timeframe for completion</th>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <th colspan="5">File formats</td>
+        </tr>
+        <tr>
+            <th>Level</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th>Rationale for level</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th>Timeframe</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th colspan="5">Catalog of individual sustainability actions</td>
+        </tr>
+        <tr>
+            <th>Technology</th>
+            <th>Action</th>
+            <th>Party responsible</th>
+            <th>First step</th>
+            <th>Timeframe for completion</th>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <th colspan="5">Data integrity</td>
+        </tr>
+        <tr>
+            <th>Level</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th>Rationale for level</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th>Timeframe</th>
+            <td colspan="4">stuff</td>
+        </tr>
+        <tr>
+            <th colspan="5">Catalog of individual sustainability actions</td>
+        </tr>
+        <tr>
+            <th>Technology</th>
+            <th>Action</th>
+            <th>Party responsible</th>
+            <th>First step</th>
+            <th>Timeframe for completion</th>
+        </tr>
+    </tbody>
+
     <tbody color="gray;">
         <tr>
             <td colspan="5">[Template]</td>
