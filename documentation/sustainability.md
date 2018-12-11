@@ -1,7 +1,7 @@
 # Sustainability plan
 
 Based on <https://sites.haa.pitt.edu/sustainabilityroadmap/>  
-Last revised 2018-12-10 by David J. Birnbaum
+Last revised 2018-12-11 by David J. Birnbaum
 
 ## Module A1: What is the scope of your project?
 
@@ -535,4 +535,234 @@ Repair can normally be as easy as restoring from backup, but not if context has 
 Very important; target is Level 2. GitHub provides Level 2 conformance.
 
 ## Module C5: Digital Sustainability Action Plan
+
+For each item in modules C2–C4 identify:
+
+* Your chosen level of sustainability and the rationale for your decision
+* The anticipated timeframe for attaining that sustainability level
+* A catalog of individual actions you will take to reach your chosen level
+* Specific team members who will be responsible for each of these sustainability actions
+* A timeframe for completion of each action (should be fewer than three years)
+
+<table>
+    <tbody style="border-bottom: 5px solid black;">
+        <tr>
+            <td colspan="5">Access</td>
+        </tr>
+        <tr>
+            <td colspan="5">Level chosen (0 to 4)</td>
+        </tr>
+        <tr>
+            <td colspan="5">Rationale for decision (including Level 0) [Includes options
+                such as time constraints; staffing constraints; technology constraints;
+                budget constraints; attention constraints; project contraints]</td>
+        </tr>
+        <tr>
+            <td colspan="5">Timeframe for achievement of sustainability Level</td>
+        </tr>
+        <tr>
+            <td colspan="5">Catalog of individual sustainability actions [Includes a list of
+                all specific actions identified as being necessary to achieve your desired
+                sustainability level, listed by technology]</td>
+        </tr>
+        <tr>
+            <td>Technology</td>
+            <td>Sustainability action</td>
+            <td>Party responsible for sustainability action</td>
+            <td>First step to be taken</td>
+            <td>Timeframe for action completion</td>
+        </tr>
+    </tbody>
+    <tbody style="border-bottom: 5px solid black;">
+        <tr>
+            <td colspan="5">Backing Up Your Work</td>
+        </tr>
+        <tr>
+            <td colspan="5">Level chosen (0 to 4)</td>
+        </tr>
+        <tr>
+            <td colspan="5">Rationale for decision (including Level 0) [Includes options
+                such as time constraints; staffing constraints; technology constraints;
+                budget constraints; attention constraints; project contraints]</td>
+        </tr>
+        <tr>
+            <td colspan="5">Timeframe for achievement of sustainability Level</td>
+        </tr>
+        <tr>
+            <td colspan="5">Catalog of individual sustainability actions [Includes a list of
+                all specific actions identified as being necessary to achieve your desired
+                sustainability level, listed by technology]</td>
+        </tr>
+        <tr>
+            <td>Technology</td>
+            <td>Sustainability action</td>
+            <td>Party responsible for sustainability action</td>
+            <td>First step to be taken</td>
+            <td>Timeframe for action completion</td>
+        </tr>
+    </tbody>
+    <tbody style="border-bottom: 5px solid black;">
+        <tr>
+            <td colspan="5">Permissions</td>
+        </tr>
+        <tr>
+            <td colspan="5">Level chosen (0 to 4)</td>
+        </tr>
+        <tr>
+            <td colspan="5">Rationale for decision (including Level 0) [Includes options
+                such as time constraints; staffing constraints; technology constraints;
+                budget constraints; attention constraints; project contraints]</td>
+        </tr>
+        <tr>
+            <td colspan="5">Timeframe for achievement of sustainability Level</td>
+        </tr>
+        <tr>
+            <td colspan="5">Catalog of individual sustainability actions [Includes a list of
+                all specific actions identified as being necessary to achieve your desired
+                sustainability level, listed by technology]</td>
+        </tr>
+        <tr>
+            <td>Technology</td>
+            <td>Sustainability action</td>
+            <td>Party responsible for sustainability action</td>
+            <td>First step to be taken</td>
+            <td>Timeframe for action completion</td>
+        </tr>
+    </tbody>
+    <tbody style="border-bottom: 5px solid black;">
+        <tr>
+            <td colspan="5">Metadata</td>
+        </tr>
+        <tr>
+            <td colspan="5">Level chosen (0 to 4)</td>
+        </tr>
+        <tr>
+            <td colspan="5">Rationale for decision (including Level 0) [Includes options
+                such as time constraints; staffing constraints; technology constraints;
+                budget constraints; attention constraints; project contraints]</td>
+        </tr>
+        <tr>
+            <td colspan="5">Timeframe for achievement of sustainability Level</td>
+        </tr>
+        <tr>
+            <td colspan="5">Catalog of individual sustainability actions [Includes a list of
+                all specific actions identified as being necessary to achieve your desired
+                sustainability level, listed by technology]</td>
+        </tr>
+        <tr>
+            <td>Technology</td>
+            <td>Sustainability action</td>
+            <td>Party responsible for sustainability action</td>
+            <td>First step to be taken</td>
+            <td>Timeframe for action completion</td>
+        </tr>
+    </tbody>
+    <tbody style="border-bottom: 5px solid black;">
+        <tr>
+            <td colspan="5">File formats</td>
+        </tr>
+        <tr>
+            <td colspan="5">Level chosen (0 to 4)</td>
+        </tr>
+        <tr>
+            <td colspan="5">Rationale for decision (including Level 0) [Includes options
+                such as time constraints; staffing constraints; technology constraints;
+                budget constraints; attention constraints; project contraints]</td>
+        </tr>
+        <tr>
+            <td colspan="5">Timeframe for achievement of sustainability Level</td>
+        </tr>
+        <tr>
+            <td colspan="5">Catalog of individual sustainability actions [Includes a list of
+                all specific actions identified as being necessary to achieve your desired
+                sustainability level, listed by technology]</td>
+        </tr>
+        <tr>
+            <td>Technology</td>
+            <td>Sustainability action</td>
+            <td>Party responsible for sustainability action</td>
+            <td>First step to be taken</td>
+            <td>Timeframe for action completion</td>
+        </tr>
+    </tbody>
+    <tbody style="border-bottom: 5px solid black;">
+        <tr>
+            <td colspan="5">Data integrity</td>
+        </tr>
+        <tr>
+            <td colspan="5">Level Chosen (0 to 4)</td>
+        </tr>
+        <tr>
+            <td colspan="5">Rationale for Decision (including Level 0) [Includes options
+                such as time constraints; staffing constraints; technology constraints;
+                budget constraints; attention constraints; project contraints]</td>
+        </tr>
+        <tr>
+            <td colspan="5">Timeframe for Achievement of Sustainability Level</td>
+        </tr>
+        <tr>
+            <td colspan="5">Catalog of Individual Sustainability Actions [Includes a list of
+                all specific actions identified as being necessary to achieve your desired
+                sustainability level, listed by technology]</td>
+        </tr>
+        <tr>
+            <td>Technology</td>
+            <td>Sustainability Action</td>
+            <td>Party Responsible for Sustainability Action</td>
+            <td>First Step to be Taken</td>
+            <td>Timeframe for Action Completion</td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td colspan="5">[Template]</td>
+        </tr>
+        <tr>
+            <td colspan="5">Level chosen (0 to 4)</td>
+        </tr>
+        <tr>
+            <td colspan="5">Rationale for decision (including Level 0) [Includes options
+                such as time constraints; staffing constraints; technology constraints;
+                budget constraints; attention constraints; project contraints]</td>
+        </tr>
+        <tr>
+            <td colspan="5">Timeframe for achievement of sustainability Level</td>
+        </tr>
+        <tr>
+            <td colspan="5">Catalog of individual sustainability actions [Includes a list of
+                all specific actions identified as being necessary to achieve your desired
+                sustainability level, listed by technology]</td>
+        </tr>
+        <tr>
+            <td>Technology</td>
+            <td>Sustainability action</td>
+            <td>Party responsible for sustainability action</td>
+            <td>First step to be taken</td>
+            <td>Timeframe for action completion</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+____
+
+## Outcomes of workshop
+
+### Awareness
+
+* How project’s scope and intellectual goals relate to sustainability goals
+* People and technologies on which the project depends, how they are connected, and how they are funded
+* Knowledges that contribute to digital sustainability and specific tasks that can be taken to support project over time
+
+### Documents
+
+* List of sites of production
+* Description of designated communities and significant properties
+* Inventory of reliable sites of project documentation
+* Spreadsheet mapping project team members, technologies used, and sources and duration of funding for each (B3)
+* List of current and desired sustainability levels
+* Action plan detailing specific sustainability actions and staff responsibilties for completing them (C5)
+
+B3 and C5 are the deliverables; everything else is worksheets.
 
