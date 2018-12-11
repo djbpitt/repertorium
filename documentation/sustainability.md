@@ -547,173 +547,168 @@ For each item in modules C2–C4 identify:
 <table>
     <tbody style="border-bottom: 5px solid black;">
         <tr>
-            <td colspan="5">Access</td>
+            <th colspan="5" style="font-size: larger;">Access</td>
         </tr>
         <tr>
-            <td colspan="5">Level chosen (0 to 4)</td>
+            <th>Level</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Rationale for decision (including Level 0) [Includes options
-                such as time constraints; staffing constraints; technology constraints;
-                budget constraints; attention constraints; project contraints]</td>
+            <th>Rationale for level</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Timeframe for achievement of sustainability Level</td>
+            <th>Timeframe</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Catalog of individual sustainability actions [Includes a list of
-                all specific actions identified as being necessary to achieve your desired
-                sustainability level, listed by technology]</td>
+            <th colspan="5">Catalog of individual sustainability actions</td>
         </tr>
         <tr>
-            <td>Technology</td>
-            <td>Sustainability action</td>
-            <td>Party responsible for sustainability action</td>
-            <td>First step to be taken</td>
-            <td>Timeframe for action completion</td>
+            <th>Technology</th>
+            <th>Action</th>
+            <th>Party responsible</th>
+            <th>First step</th>
+            <th>Timeframe for completion</th>
         </tr>
     </tbody>
     <tbody style="border-bottom: 5px solid black;">
         <tr>
-            <td colspan="5">Backing Up Your Work</td>
+            <th colspan="5" style="font-size: larger;">Backup</td>
         </tr>
         <tr>
-            <td colspan="5">Level chosen (0 to 4)</td>
+            <th>Level</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Rationale for decision (including Level 0) [Includes options
-                such as time constraints; staffing constraints; technology constraints;
-                budget constraints; attention constraints; project contraints]</td>
+            <th>Rationale for level</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Timeframe for achievement of sustainability Level</td>
+            <th>Timeframe</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Catalog of individual sustainability actions [Includes a list of
-                all specific actions identified as being necessary to achieve your desired
-                sustainability level, listed by technology]</td>
+            <th colspan="5">Catalog of individual sustainability actions</td>
         </tr>
         <tr>
-            <td>Technology</td>
-            <td>Sustainability action</td>
-            <td>Party responsible for sustainability action</td>
-            <td>First step to be taken</td>
-            <td>Timeframe for action completion</td>
+            <th>Technology</th>
+            <th>Action</th>
+            <th>Party responsible</th>
+            <th>First step</th>
+            <th>Timeframe for completion</th>
         </tr>
     </tbody>
     <tbody style="border-bottom: 5px solid black;">
         <tr>
-            <td colspan="5">Permissions</td>
+            <th colspan="5" style="font-size: larger;">Permissions</td>
         </tr>
         <tr>
-            <td colspan="5">Level chosen (0 to 4)</td>
+            <th>Level</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Rationale for decision (including Level 0) [Includes options
-                such as time constraints; staffing constraints; technology constraints;
-                budget constraints; attention constraints; project contraints]</td>
+            <th>Rationale for level</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Timeframe for achievement of sustainability Level</td>
+            <th>Timeframe</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Catalog of individual sustainability actions [Includes a list of
-                all specific actions identified as being necessary to achieve your desired
-                sustainability level, listed by technology]</td>
+            <th colspan="5">Catalog of individual sustainability actions</td>
         </tr>
         <tr>
-            <td>Technology</td>
-            <td>Sustainability action</td>
-            <td>Party responsible for sustainability action</td>
-            <td>First step to be taken</td>
-            <td>Timeframe for action completion</td>
+            <th>Technology</th>
+            <th>Action</th>
+            <th>Party responsible</th>
+            <th>First step</th>
+            <th>Timeframe for completion</th>
         </tr>
     </tbody>
     <tbody style="border-bottom: 5px solid black;">
         <tr>
-            <td colspan="5">Metadata</td>
+            <th colspan="5" style="font-size: larger;">Metadata</td>
         </tr>
         <tr>
-            <td colspan="5">Level chosen (0 to 4)</td>
+            <th>Level</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Rationale for decision (including Level 0) [Includes options
-                such as time constraints; staffing constraints; technology constraints;
-                budget constraints; attention constraints; project contraints]</td>
+            <th>Rationale for level</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Timeframe for achievement of sustainability Level</td>
+            <th>Timeframe</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Catalog of individual sustainability actions [Includes a list of
-                all specific actions identified as being necessary to achieve your desired
-                sustainability level, listed by technology]</td>
+            <th colspan="5">Catalog of individual sustainability actions</td>
         </tr>
         <tr>
-            <td>Technology</td>
-            <td>Sustainability action</td>
-            <td>Party responsible for sustainability action</td>
-            <td>First step to be taken</td>
-            <td>Timeframe for action completion</td>
+            <th>Technology</th>
+            <th>Action</th>
+            <th>Party responsible</th>
+            <th>First step</th>
+            <th>Timeframe for completion</th>
         </tr>
     </tbody>
     <tbody style="border-bottom: 5px solid black;">
         <tr>
-            <td colspan="5">File formats</td>
+            <th colspan="5" style="font-size: larger;">File formats</td>
         </tr>
         <tr>
-            <td colspan="5">Level chosen (0 to 4)</td>
+            <th>Level</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Rationale for decision (including Level 0) [Includes options
-                such as time constraints; staffing constraints; technology constraints;
-                budget constraints; attention constraints; project contraints]</td>
+            <th>Rationale for level</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Timeframe for achievement of sustainability Level</td>
+            <th>Timeframe</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Catalog of individual sustainability actions [Includes a list of
-                all specific actions identified as being necessary to achieve your desired
-                sustainability level, listed by technology]</td>
+            <th colspan="5">Catalog of individual sustainability actions</td>
         </tr>
         <tr>
-            <td>Technology</td>
-            <td>Sustainability action</td>
-            <td>Party responsible for sustainability action</td>
-            <td>First step to be taken</td>
-            <td>Timeframe for action completion</td>
+            <th>Technology</th>
+            <th>Action</th>
+            <th>Party responsible</th>
+            <th>First step</th>
+            <th>Timeframe for completion</th>
         </tr>
     </tbody>
     <tbody style="border-bottom: 5px solid black;">
         <tr>
-            <td colspan="5">Data integrity</td>
+            <th colspan="5" style="font-size: larger;">Data integrity</td>
         </tr>
         <tr>
-            <td colspan="5">Level Chosen (0 to 4)</td>
+            <th>Level</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Rationale for Decision (including Level 0) [Includes options
-                such as time constraints; staffing constraints; technology constraints;
-                budget constraints; attention constraints; project contraints]</td>
+            <th>Rationale for level</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Timeframe for Achievement of Sustainability Level</td>
+            <th>Timeframe</th>
+            <td colspan="4">stuff</td>
         </tr>
         <tr>
-            <td colspan="5">Catalog of Individual Sustainability Actions [Includes a list of
-                all specific actions identified as being necessary to achieve your desired
-                sustainability level, listed by technology]</td>
+            <th colspan="5">Catalog of individual sustainability actions</td>
         </tr>
         <tr>
-            <td>Technology</td>
-            <td>Sustainability Action</td>
-            <td>Party Responsible for Sustainability Action</td>
-            <td>First Step to be Taken</td>
-            <td>Timeframe for Action Completion</td>
+            <th>Technology</th>
+            <th>Action</th>
+            <th>Party responsible</th>
+            <th>First step</th>
+            <th>Timeframe for completion</th>
         </tr>
     </tbody>
-    <tbody>
+
+    <tbody color="gray;">
         <tr>
             <td colspan="5">[Template]</td>
         </tr>
