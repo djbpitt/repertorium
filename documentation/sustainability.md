@@ -381,24 +381,24 @@ Level 4 is only slightly more secure than Level 1.
 <th>Level 4</th>
 </tr>
 <tr>
-<td style="vertical-align: top;"><ul>
+<td><ul>
 <li>Document your reliable sites of project documentation including a description of their contents</li>
 <li>Maintain two complete copies, stored separately</li>
 <li>Reduce to a minimum data stored on heterogeneous types of media (hard drives, flash drives, etc.)</li>
 </ul></td>
 
-<td style="vertical-align: top;"><ul>
+<td><ul>
 <li>Keep an inventory of storage media and systems used and their technical requirements</li>
 <li> Maintain three complete copies, with at least one copy in a different geographic location</li>
 <li>Transfer all data from heterogeneous media (hard drives, flash drives, etc.) to a central storage system</li>
 </ul></td>
 
-<td style="vertical-align: top;"><ul>
+<td><ul>
 <li>Of the three copies, keep at least one in a geographic location with a different disaster threat</li>
 <li>Routinely monitor your storage systems and media for obsolescence</li>
 </ul></td>
 
-<td style="vertical-align: top;"><ul>
+<td><ul>
 <li>Keep three copies in separate geographic locations, each with different disaster threats</li>
 <li>Have a comprehensive plan in place to keep files and metadata on currently accessible media or systems</li>
 </ul></td>
@@ -433,21 +433,21 @@ When possible, create files using a limited set of known open file formats | Mai
         <th>Level 4</th>
     </tr>
     <tr>
-        <td style="vertical-align: top;">
+        <td>
             <ul>
                 <li>Document your reliable sites of project documentation including a description of their contents </li>
             </ul>
         </td>
-        <td style="vertical-align: top;"><ul>
+        <td><ul>
                 <li>Keep an inventory of file types and sizes </li>
                 <li>Create and make available descriptive metadata, such as title, abstract, keywords, or other information that is useful for discovery</li>
             </ul>
         </td>
-        <td style="vertical-align: top;"><ul>
+        <td><ul>
                 <li>Store administrative metadata, such as when files were created and with what technologies</li>
             </ul>
         </td>
-        <td style="vertical-align: top;"><ul>
+        <td><ul>
                 <li>Store transformative metadata, such as a log of how files have been altered over time </li>
                 <li>Store standard preservation metadata</li>
             </ul>
@@ -472,22 +472,22 @@ When possible, create files using a limited set of known open file formats | Mai
         <th>Level 4</th>
     </tr>
     <tr>
-        <td style="vertical-align: top;">
+        <td>
             <ul>
                 <li>Permissions Identify which project members have login credentials to accounts and services used </li>
                 <li>Identify which project members have read, write, move, and delete authorization to individual files</li>
             </ul>
-        </td style="vertical-align: top;">
+        </td>
         <td><ul>
                 <li>Restrict authorizations to only necessary team members </li>
                 <li>Document access restrictions for services and files</li>
             </ul>
         </td>
-        <td style="vertical-align: top;"><ul>
+        <td><ul>
                 <li>Maintain logs of who performs what actions on files, including deletions and preservation actions</li>
             </ul>
         </td>
-        <td style="vertical-align: top;"><ul>
+        <td><ul>
                 <li>Perform routine audits of activity logs</li>
             </ul></td>
     </tr>
@@ -505,7 +505,7 @@ High priority; target is Level 2. With migration to GitHub, permission is contro
         <th>Level 4</th>
     </tr>
     <tr>
-        <td style="vertical-align: top;">
+        <td>
             <ul>
                 <li>Identify which project members have login credentials to accounts and
                     services used </li>
@@ -513,16 +513,16 @@ High priority; target is Level 2. With migration to GitHub, permission is contro
                     authorization to individual files</li>
             </ul>
         </td>
-        <td style="vertical-align: top;"><ul>
+        <td><ul>
                 <li>Be able to replace/repair corrupted data </li>
                 <li>Create fixity information for stable project files</li>
             </ul>
         </td>
-        <td style="vertical-align: top;"><ul>
+        <td><ul>
                 <li>Check fixity of stable content at fixed intervals</li>
             </ul>
         </td>
-        <td style="vertical-align: top;"><ul>
+        <td><ul>
                 <li>Check fixity of stable content in response to specific events or
                     activities</li>
             </ul>
