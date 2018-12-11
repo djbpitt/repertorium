@@ -375,33 +375,33 @@ Level 4 is only slightly more secure than Level 1.
 
 <table>
 <tr>
-    <th>Level 1</th>
-    <th>Level 2</th>
-    <th>Level 3</th>
-    <th>Level 4</th>
+<th>Level 1</th>
+<th>Level 2</th>
+<th>Level 3</th>
+<th>Level 4</th>
 </tr>
 <tr>
-    <td style="vertical-align: top;"><ul>
-            <li>Document your reliable sites of project documentation including a description of their contents</li>
-            <li>Maintain two complete copies, stored separately</li>
-            <li>Reduce to a minimum data stored on heterogeneous types of media (hard drives, flash drives, etc.)</li>
-        </ul></td>
+<td style="vertical-align: top;"><ul>
+<li>Document your reliable sites of project documentation including a description of their contents</li>
+<li>Maintain two complete copies, stored separately</li>
+<li>Reduce to a minimum data stored on heterogeneous types of media (hard drives, flash drives, etc.)</li>
+</ul></td>
 
-    <td style="vertical-align: top;"><ul>
-            <li>Keep an inventory of storage media and systems used and their technical requirements</li>
-            <li> Maintain three complete copies, with at least one copy in a different geographic location</li>
-            <li>Transfer all data from heterogeneous media (hard drives, flash drives, etc.) to a central storage system</li>
-        </ul></td>
+<td style="vertical-align: top;"><ul>
+<li>Keep an inventory of storage media and systems used and their technical requirements</li>
+<li> Maintain three complete copies, with at least one copy in a different geographic location</li>
+<li>Transfer all data from heterogeneous media (hard drives, flash drives, etc.) to a central storage system</li>
+</ul></td>
 
-    <td style="vertical-align: top;"><ul>
-            <li>Of the three copies, keep at least one in a geographic location with a different disaster threat</li>
-            <li>Routinely monitor your storage systems and media for obsolescence</li>
-        </ul></td>
+<td style="vertical-align: top;"><ul>
+<li>Of the three copies, keep at least one in a geographic location with a different disaster threat</li>
+<li>Routinely monitor your storage systems and media for obsolescence</li>
+</ul></td>
 
-    <td style="vertical-align: top;"><ul>
-            <li>Keep three copies in separate geographic locations, each with different disaster threats</li>
-            <li>Have a comprehensive plan in place to keep files and metadata on currently accessible media or systems</li>
-        </ul></td>
+<td style="vertical-align: top;"><ul>
+<li>Keep three copies in separate geographic locations, each with different disaster threats</li>
+<li>Have a comprehensive plan in place to keep files and metadata on currently accessible media or systems</li>
+</ul></td>
 </tr>
 </table>
 
