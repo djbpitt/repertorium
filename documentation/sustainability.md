@@ -599,6 +599,7 @@ For each item in modules C2–C4 identify:
             <th>First step</th>
             <th>Timeframe for completion</th>
         </tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
     </tbody>
     <tbody>
         <tr>
@@ -626,6 +627,7 @@ For each item in modules C2–C4 identify:
             <th>First step</th>
             <th>Timeframe for completion</th>
         </tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
     </tbody>
     <tbody>
         <tr>
@@ -653,6 +655,7 @@ For each item in modules C2–C4 identify:
             <th>First step</th>
             <th>Timeframe for completion</th>
         </tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
     </tbody>
     <tbody>
         <tr>
@@ -680,6 +683,7 @@ For each item in modules C2–C4 identify:
             <th>First step</th>
             <th>Timeframe for completion</th>
         </tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
     </tbody>
     <tbody>
         <tr>
@@ -707,6 +711,7 @@ For each item in modules C2–C4 identify:
             <th>First step</th>
             <th>Timeframe for completion</th>
         </tr>
+        <tr><td colspan="5">&nbsp;</td></tr>
     </tbody>
     <tbody color="gray;">
         <tr>
