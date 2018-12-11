@@ -215,3 +215,108 @@ The Repertorium is currently in transition, with the following scattered resourc
 * Better workflow: download data from Obdurodon, check out on Google spreadsheet for management, submit to djb for review before upload
 
 Alison: It’s a little control-freaky, but it’s workable, and it simplifies management a lot
+
+## Module B1: Who is on the project team and what are their roles?
+
+Spreadsheet includes: name, Title, Responsibilities (be specific), funding source, funding duration.
+
+Additionally: 
+
+1. Institutional partners (PI's institution, e.g., administration, equipment, storage, meeting and work space, IT support)
+1. Extra-institutional partners (GitHub, Google, hosting, etc.; detail what they do)
+1. Project charter: guiding document, typically developed at the beginning and refreshed every three years. Intersects substantially with sustainability plan, since it depends on the information in this module. Avoids issues like having each participant think someone else is maintaining the server.
+
+### Core team
+
+**Name:** David J. Birnbaum (Obdurodon).  
+**Title:** Technical director for deployment and publication.  
+**Responsibilities:** Design, implement, maintain, deploy, and host official site; maintain Schematron validation rules; maintain documentation (with Andrej).  
+**Current funding source and duration:** none
+
+**Name:** Andrej Bojadžiev (Sofia University).  
+**Title:** Research assistant director; Technical director for markup.  
+**Responsibilities:** Design, implement, and maintain ODD and derived schemas and documentation; advise and assist on site design and implementation; maintain documentation (with David); train taggers (with Anisava); content development and editing, including master lists of titles.  
+**Current funding source and duration:** none
+
+**Name:** Anisava Miltenova (Bulgarian Academy of Sciences).  
+**Title:** Project owner, Research director.  
+**Responsibilities:** Formulate research goals, manage research publication program; train taggers (with Andrej); content development and editing, including master list of titles.  
+**Current funding source and duration:** none
+
+**Name:** Dilyana Radoslavova (Bulgarian Academy of Sciences).  
+**Title:** Content developer.  
+**Responsibilities:** Content development and editing, including assisting with master list of titles.  
+**Current funding source and duration:** none
+
+**Content contributors (past):** Adelina Anguševa, Ana Stojkova, Desislava Atanasova, Dimitrinka Dimitrova, Elena Tomova, Elisaveta Musakova, Elisaveta Nenčeva, Margaret Dimitrova, Marina Jordanova, Marija Jovčeva, Maja Petrova, Nina Gagova, Radoslava Stankova, Ralph Cleminson.  
+**Other contributors (past):** Rumjan Lazov (font development); Milena Dobreva (project management and administration; grant development); Harry Gaylord (schema development); Berend Dijk (schema development).  
+**Content contributors (current):** Stanka
+**Content contributors (in training):** Ivan Iliev
+
+**Institutional partners:** None.   
+**Extra-institutional partners:**
+
+1. **Dropbox:** Development resource hosting, transitioning out
+2. **Google:** Spreadsheet to track content editing
+3. **GitHub:** Development resource hosting (in transition from Dropbox)
+4. **Rackspace:** Obdurodon hosting
+5. (**OSU:** potential permanent host; in conversation with Pasha)
+
+**Former funding sources:** ACLS, IREX (others to be supplied by Anisava)
+
+No charter, but mission statement on site: 
+
+> The Repertorium of Old Bulgarian Literature and Letters was conceived as an archival repository capable of encoding and preserving in SGML (and, subsequently, XML) format archeographic, paleographic, codicological, textological, and literary-historical data concerning original and translated medieval texts represented in Balkan and other Slavic manuscripts. The files are intended to serve both as documentation (fulfilling the goals of traditional manuscript catalogues) and as direct input for computer-assisted philological research. The present site was designed and implemented by David J. Birnbaum, Andrej Bojadžiev, Anisava Miltenova, and Diljana Radoslavova.
+
+## Module B2: What is the technological infrastructure of the project?
+
+Three categories: 
+
+### Data
+
+Authoritative data is in GitHub (public repo https://github.com/djbpitt/repertorium), transitioning from (temporary) Dropbox. Delivered from http://repertorium.obdurodon.org (migration to institutional hosting at OSU under discussion).
+
+### Software, including server software, operating systems, and presentation layer applications
+
+Documented, with links, as "Repertorium toolkit" at <http://repertorium.obdurodon.org/.> Currently: 
+
+* eXist-db XML database
+* &lt;oXygen/&gt; XML editor and IDE
+* Saxon XSLT and XQuery processor
+* xmlsh command-line shell for XML
+* XMLStarlet command-line XML utilities
+* PhpStorm web technologies editor and IDE
+* Anaconda Python 3 platform
+* PyCharm Python editor and IDE
+* R project for statistical computing
+* RStudio R IDE
+* Bukyvede Slavic Cyrillic font from MacCampus (production)
+* Quivera broad-spectrum Unicode font (development)
+* FontForge font editor
+* FontPrep web-font generator
+* UnicodeChecker to explore and convert Unicode
+* Unicode code converter online utility
+* UniView online utility
+* Cloudconvert online convert anything utility
+
+### Hardware, including the machines that you own, “use for free,” or rent. 
+
+Data and application at GitHub, with distributed local clones. Hosting at <http://repertorium.obdurodon.org> with Rackspace, paid by David.
+
+### Hardware and software infrastructure questions
+
+* **What is the function of this technology on your project?** Documented on the project site (see list of software, above)
+* **How is the technology funded, and for how long will that funding last?** Open source, no funding needed, except &lt;oXygen/&gt;, which we pay and renew individually, in perpetuity
+* **How long will this technology be required by your project?** Indefinitely (under constant active development)
+
+## Module B3: Socio-Technical Responsibility Checklist
+
+Spreadsheet is an extension of B1, B2: Technology, function on project, funding source, funding duration, duration of need, member responsible (with title, responsibilities, funding source, funding duration, as in B1). Then:
+
+1. Flag any situations where funding for person and technology do not overlap; not necessarily a problem, but at a minimum a known risk (which can be fixed; put someone else on it). 
+2. Look back at significant-properties list, which should mention technologies, and see which items on this list are high on the significant-properties list. Are they securely staffed and funded? We wind up with mapping of significant properties to the people and technologies that make them work. Make sure that people have access to the technologies they need.
+
+All participants have access to all open-source technology resources. &lt;oXygen/&gt; licenses are self-funded (David) or underwritten by employers (Sofia University, Bulgarian Academy of Sciences). 
+
+
+
