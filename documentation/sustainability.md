@@ -3,6 +3,8 @@
 Based on <https://sites.haa.pitt.edu/sustainabilityroadmap/>  
 Last revised 2018-12-11 by David J. Birnbaum
 
+Main plan components are B3 and C5. Other portions are for planning purposes.
+
 ## Module A1: What is the scope of your project?
 
 _Q: Where are the access points (_sites of production_) for the project? Is there only one? Where there are different access points, there are often different creative outputs._
@@ -551,15 +553,15 @@ For each item in modules C2–C4 identify:
         </tr>
         <tr>
             <th>Level</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">3</td>
         </tr>
         <tr>
             <th>Rationale for level</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">Target users are experts or near-experts. Access for others is not actively discouraged, but active facilitation is low priority.</td>
         </tr>
         <tr>
             <th>Timeframe</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">Basic end-user documentation by end of 2019</td>
         </tr>
         <tr>
             <th colspan="5">Catalog of individual sustainability actions</td>
@@ -570,6 +572,27 @@ For each item in modules C2–C4 identify:
             <th>Party responsible</th>
             <th>First step</th>
             <th>Timeframe for completion</th>
+        </tr>
+        <tr>
+        	<th>HTML</th>
+        	<td>Author end-user documentation: UI/UX</td>
+        	<td>David</td>
+        	<td>Create framework and initial content</td>
+        	<td>Basic end-user documentation by end of 2019</td>
+        </tr>
+        <tr>
+        	<th>HTML</th>
+        	<td>Author end-user documentation: Research questions</td>
+        	<td>Anisava</td>
+        	<td>Develop sample research queries</td>
+        	<td>Basic end-user documentation by end of 2019</td>
+        </tr>
+        <tr>
+        	<th>HTML</th>
+        	<td>Author end-user documentation: Integrate queries with markup access points</td>
+        	<td>Andrej</td>
+        	<td>Develop enhanced research queries to cover markup features</td>
+        	<td>Basic end-user documentation by end of 2020</td>
         </tr>
         <tr><td colspan="5">&nbsp;</td></tr>
     </tbody>
@@ -579,15 +602,15 @@ For each item in modules C2–C4 identify:
         </tr>
         <tr>
             <th>Level</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">3</td>
         </tr>
         <tr>
             <th>Rationale for level</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">Reasonable and robust preservation, available at no additional cost</td>
         </tr>
         <tr>
             <th>Timeframe</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">End of 2019</td>
         </tr>
         <tr>
             <th colspan="5">Catalog of individual sustainability actions</td>
@@ -598,6 +621,20 @@ For each item in modules C2–C4 identify:
             <th>Party responsible</th>
             <th>First step</th>
             <th>Timeframe for completion</th>
+        </tr>
+        <tr>
+        <td>eXist-db</td>
+        <td>Migrate all active content to eXist-db for deployment</td>
+        <td>David</td>
+        <td>In progress; continue development</td>
+        <td>End of 2019</td>
+        </tr>
+        <tr>
+        <td>GitHub</td>
+        <td>Migrate all active content to GitHub for development</td>
+        <td>David</td>
+        <td>In progress; continue migration</td>
+        <td>End of 2019</td>
         </tr>
         <tr><td colspan="5">&nbsp;</td></tr>
     </tbody>
@@ -607,15 +644,15 @@ For each item in modules C2–C4 identify:
         </tr>
         <tr>
             <th>Level</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">2</td>
         </tr>
         <tr>
             <th>Rationale for level</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">With migration to GitHub, permission is controlled by GitHub and activity is logged at Level 3 automatically. Insofar as only David pushes to GitHub, all significant activity is implicitly attributable, and GitHub commit history adds date and time tracking, and therefore sequencing. Andrej has push access to GitHub repo, but does not commonly use it. Repo is public, so all have read access. Only David has write and admin permissions on Obdurodon.</td>
         </tr>
         <tr>
             <th>Timeframe</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">End of 2019</td>
         </tr>
         <tr>
             <th colspan="5">Catalog of individual sustainability actions</td>
@@ -626,6 +663,27 @@ For each item in modules C2–C4 identify:
             <th>Party responsible</th>
             <th>First step</th>
             <th>Timeframe for completion</th>
+        </tr>
+        <tr>
+        	<th>GitHub</th>
+        	<td>Migrate to eXist-db app</td>
+        	<td>David</td>
+        	<td>In progress; continue development</td>
+        	<td>End of 2019</td>
+        </tr>
+        <tr>
+        	<th>GitHub</th>
+        	<td>Train Andrej in GitHub use</td>
+        	<td>David</td>
+        	<td>Review with Andrej</td>
+        	<td>End of 2019</td>
+        </tr>
+        <tr>
+        	<th>Obdurodon PHP framework</th>
+        	<td>Decommission once eXist-db app is in place; redirect</td>
+        	<td>David</td>
+        	<td>Complete eXist-db app migration</td>
+        	<td>End of 2019</td>
         </tr>
         <tr><td colspan="5">&nbsp;</td></tr>
     </tbody>
@@ -635,15 +693,15 @@ For each item in modules C2–C4 identify:
         </tr>
         <tr>
             <th>Level</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">4</td>
         </tr>
         <tr>
             <th>Rationale for level</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">Level 1 in progress as part of migration to GitHub. Levels 2–4 are managed by GitHub (preservation metadata only where releases are published).</td>
         </tr>
         <tr>
             <th>Timeframe</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">End of 2019</td>
         </tr>
         <tr>
             <th colspan="5">Catalog of individual sustainability actions</td>
@@ -654,6 +712,20 @@ For each item in modules C2–C4 identify:
             <th>Party responsible</th>
             <th>First step</th>
             <th>Timeframe for completion</th>
+        </tr>
+        <tr>
+        	<th>GitHub</th>
+        	<td>Complete migration</td>
+        	<td>David</td>
+        	<td>In progress; continue development</td>
+        	<td>End of 2019</td>
+        </tr>
+        <tr>
+        	<th>HTML/XQuery</th>
+        	<td>Add SEO metadata</td>
+        	<td>David</td>
+        	<td>Review best practice recommendations</td>
+        	<td>End of 2019</td>
         </tr>
         <tr><td colspan="5">&nbsp;</td></tr>
     </tbody>
@@ -663,15 +735,16 @@ For each item in modules C2–C4 identify:
         </tr>
         <tr>
             <th>Level</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">4</td>
         </tr>
         <tr>
             <th>Rationale for level</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">Level 1, 3, and 4 activities are already under way; Level
+            2 is implicit.</td>
         </tr>
         <tr>
             <th>Timeframe</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">End of 2019</td>
         </tr>
         <tr>
             <th colspan="5">Catalog of individual sustainability actions</td>
@@ -682,6 +755,13 @@ For each item in modules C2–C4 identify:
             <th>Party responsible</th>
             <th>First step</th>
             <th>Timeframe for completion</th>
+        </tr>
+        <tr>
+            <th>eXist-db</th>
+            <td>Monitor and adapt file formats as needed</td>
+            <td>David</td>
+            <td>In progress; continue migration</td>
+            <td>End of 2019</td>
         </tr>
         <tr><td colspan="5">&nbsp;</td></tr>
     </tbody>
@@ -691,15 +771,15 @@ For each item in modules C2–C4 identify:
         </tr>
         <tr>
             <th>Level</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">2</td>
         </tr>
         <tr>
             <th>Rationale for level</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">GitHub provides Level 2 conformance</td>
         </tr>
         <tr>
             <th>Timeframe</th>
-            <td colspan="4">stuff</td>
+            <td colspan="4">End of 2019</td>
         </tr>
         <tr>
             <th colspan="5">Catalog of individual sustainability actions</td>
@@ -710,6 +790,13 @@ For each item in modules C2–C4 identify:
             <th>Party responsible</th>
             <th>First step</th>
             <th>Timeframe for completion</th>
+        </tr>
+        <tr>
+        	<th>GitHub</th>
+        	<td>Complete GitHub migration</td>
+        	<td>David</td>
+        	<td>In progress; continue migration</td>
+        	<td>End of 2019</td>
         </tr>
         <tr><td colspan="5">&nbsp;</td></tr>
     </tbody>
