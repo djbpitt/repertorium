@@ -71,6 +71,7 @@ declare variable $resource external;
                     href="placeholder"
                 ><!--#include virtual="../images/xml.svg" --></a>
             </span>
+            {if ($resource = ('browse')) then
             <span
                 id="plectogram">
                 <input
@@ -82,6 +83,7 @@ declare variable $resource external;
                     title="Generate plectogram"
                     alt="[Generate plectogram]"/>
             </span>
+            else ()}
             <span
                 id="browse">
                 <a

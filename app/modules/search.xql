@@ -127,7 +127,7 @@ let $query :=
                     value="all">All texts ({$realTextCount})</option>,
                 for $enText in $enTexts
                 (: $bgEquiv is faster than a nested predicate :)
-                let $bgEquiv := $enText/preceding-sibling::bg
+                let $bgEquiv := $enText/preceding-sibling::Q{}bg
                     order by lower-case($enText)
                 return
                     <option
