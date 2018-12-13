@@ -1,4 +1,5 @@
 xquery version "3.1";
+declare namespace xi = "http://www.w3.org/2001/XInclude";
 declare variable $title external;
 declare variable $fqcontroller external;
 <head

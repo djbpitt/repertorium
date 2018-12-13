@@ -79,7 +79,7 @@ declare variable $fqcontroller as xs:string := concat($context, $exist:prefix, $
             </li>
             <li>Search the collection <ul>
                     <li><a
-                            href="search.php">By location, full text of title, etc.</a></li>
+                            href="search">By location, full text of title, etc.</a></li>
                     <li><label
                             for="searchTitlesFree">Case-insensitive substring search in text
                             title </label>

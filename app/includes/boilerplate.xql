@@ -1,4 +1,5 @@
 xquery version "3.1";
+declare namespace xinclude = "http://www.w3.org/2001/XInclude";
 declare variable $title external;
 declare variable $fqcontroller external;
 declare variable $resource external;
@@ -102,7 +103,7 @@ declare variable $resource external;
                 </a>
             </span>
             {
-                if ($resource = ('browse')) then
+                if ($resource = ('browse', 'search')) then
                     (<span>&#xa0;&#xa0;</span>,
                     <span
                         class="flag"
