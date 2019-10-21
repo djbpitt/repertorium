@@ -32,9 +32,7 @@ declare variable $fqcontroller as xs:string := concat($context, $exist:prefix, $
                 )
             }"/>
     <body>
-        <h1><a
-                href="http://repertorium.obdurodon.org"
-                class="logo">&lt;rep&gt;</a>
+        <h1><span class="logo">&lt;rep&gt;</span>
             <cite>Repertorium of Old Bulgarian Literature and Letters</cite></h1>
         <hr/>
         <p>
