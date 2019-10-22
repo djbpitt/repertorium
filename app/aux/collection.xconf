@@ -1,0 +1,29 @@
+<collection xmlns="http://exist-db.org/collection-config/1.0">
+  <index xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:djb="http://www.obdurodon.org">
+    <!-- New full text index based on Lucene -->
+    <lucene>
+      <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
+      <analyzer id="ws" class="org.apache.lucene.analysis.core.WhitespaceAnalyzer"/>
+      <text qname="bg" analyzer="ws"/>
+      <text qname="en" analyzer="ws"/>
+      <text qname="ru" analyzer="ws"/>
+      <text qname="tei:biblStruct"/>
+      <text qname="tei:surname"/>
+      <text qname="tei:pubPlace"/>
+      <text qname="tei:term"/>
+    </lucene>
+    <!-- Range indexes -->
+    <create qname="bg" type="xs:string"/>
+    <create qname="en" type="xs:string"/>
+    <create qname="ru" type="xs:string"/>
+    <create qname="@xml:id" type="xs:string"/>
+    <create qname="tei:ref" type="xs:string"/>
+    <create qname="djb:position" type="xs:string"/>
+    <create qname="djb:value" type="xs:string"/>
+    <create qname="tei:term" type="xs:string"/>
+    <!-- ngram indexes -->
+    <ngram qname="bg"/>
+    <ngram qname="en"/>
+    <ngram qname="ru"/>
+  </index>
+</collection>
