@@ -12,7 +12,7 @@ declare variable $resource external;
 <div
     xmlns="http://www.w3.org/1999/xhtml">
     <h1><a
-            href="{concat($fqcontroller, '/')}"
+            href="{$fqcontroller}"
             class="logo">&lt;rep&gt;</a>
         <cite>Repertorium of Old Bulgarian Literature and Letters</cite></h1>
     <hr/>
