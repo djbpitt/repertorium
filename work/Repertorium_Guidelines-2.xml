@@ -502,50 +502,50 @@
             </div>
          </div>
          <div>
-            <head>The main Structure</head>
+            <head>The main structure</head>
             <p>A manuscript description can occur in two different places in a Repertorium XML
                document. When the description (cataloguing information) serves as an introduction to
                the digital representation of transcribed text, it is encoded inside the
-                  <gi>teiHeader</gi> element that provides metadata for the edition itself. However,
-               when the goal of the project is focused on manuscript descriptions, without
+                  <gi>teiHeader</gi> element, where it provides metadata for the edition itself.
+               However, when the goal of the project is focused on manuscript descriptions, without
                transcribed full text, the descriptive elements and content are regarded as primary
                data and the description itself becomes a primary object. In this case it serves no
-               longer as metadata and must be entered as part of the content of the element
+               longer as metadata and must be entered instead as part of the content of the element
                   <gi>body</gi>.</p>
-            <p>The basic, wrapper element for a description is called <gi>msDesc</gi> (manuscript
-               description) and it serves as a container for seven additional parts: general
+            <p>The basic, wrapper element for a description is <gi>msDesc</gi> (manuscript
+               description), which serves as a container for seven additional subcomponents: general
                cataloguing information (<gi>msIdentifier</gi>); headings (<gi>head</gi>);
                information on physical characteristics and layout of the manuscript
-                  (<gi>physDesc</gi>); palaeographical and linguistic data (<gi>scribeDesc</gi>);
-               the description of the manuscript content as a whole, as separate texts, and its
-               notes and colophon(s) (<gi>msContents</gi>); conclusions about the time and place of
-               writing of the manuscript and a sketch of the manuscript’s history
-               (<gi>history</gi>); as well as a place for additional information the describer may
-               need to encode (element <gi>additional</gi>).</p>
-            <p>Convolutes and palimpsest parts are described as part of the element <gi>msPart</gi>.
-               Additional notes by the authors of earlier descriptions and by owners of the
-               manuscript form part of the element <gi>accMat</gi>.</p>
-            <p>The specification of the source could be extended further as part of the
+                  (<gi>physDesc</gi>); palaeographic and linguistic data (<gi>scribeDesc</gi>); the
+               description of the manuscript content as a whole, as separate texts, with any notes
+               and colophon (<gi>msContents</gi>); conclusions about the time and place of writing
+               of the manuscript and a sketch of the manuscript’s history (<gi>history</gi>); and a
+               place for additional information the describer may need to include
+                  (<gi>additional</gi>). The only obligatory child of <gi>msDesc</gi> is
+                  <gi>msIdentifier</gi>. All other main elements are optional.</p>
+            <p>Parts of convolutes and layers of palimpsests are represented by <gi>msPart</gi>
+               elements. Additional notes by the authors of earlier descriptions and by owners of
+               the manuscript form part of the element <gi>accMat</gi> (accompanying material). The
+               specification of the source could be extended further as part of the
                   <gi>recordHist</gi> (recorded history) element at the end of the description (cf.
                Additional information).</p>
-            <p>Only one part of this information is mandatory and must always appear in the
-               description: <gi>msIdentifier</gi>. All other main elements are optional.</p>
             <p>Information is entered step by step, in an ordered and purposeful way. The first step
-               concerns general cataloguing information, then comes information related to physical
+               concerns general cataloguing information; then comes information related to physical
                features of the manuscript, palaeography, language, content, sources of manuscript
-               description and, finally, administrative information, such as custodial history,
-               restoration, available photocopies and bibliographic information.</p>
+               description; and, finally, administrative information, such as custodial history,
+               restoration, available photocopies, and bibliographic information.</p>
             <div>
                <head>Levels of representation</head>
-               <p>Descriptions of medieval manuscripts may differ significantly both in structure
-                  and length. There exist many traditions in cataloguing medieval materials, which
-                  means that similar information can look different in different frameworks. The
-                  first thing to consider is the completeness and length of the description.</p>
+               <p>Descriptions of medieval manuscripts may differ significantly in both length and
+                  structure. There are many competing or overlapping traditions in cataloguing
+                  medieval materials, which means that similar information may look different and be
+                  represented differently in different frameworks. The first thing to consider is
+                  the completeness and length of the description.</p>
                <div>
                   <head>Description with the <gi>msIdentifier </gi>and <gi>head</gi> elements</head>
                   <p>The briefest possible description consists of the elements
-                        <gi>msIdentifier</gi> and <gi>head</gi>, as shown in the following
-                     example:</p>
+                        <gi>msIdentifier</gi> and <gi>head</gi>, as shown in the following example
+                     (from Богдановић 1982: 25, No 153):</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <msDesc>
                         <head>Homilies by Macarius of Egypt, Russian, 17th c., paper, XI+229 ff.,
@@ -556,20 +556,21 @@
                            <repository>Patriarchal Library</repository>
                            <idno>178</idno>
                         </msIdentifier>
-                     </msDesc> (Богдановић 1982: 25, No 153) </egXML>
+                     </msDesc></egXML>
                   <p>Even this checklist description could be further segmented into more discrete
                      units, so that the above information could be recorded differently from the
-                     encoder’s point of view as</p>
+                     encoder’s point of view as:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <msDesc>
                         <head type="briefDesc">
                            <term type="textClass">Homilies</term> by <name type="author">Macarius of
                               Egypt</name>, <term type="lang">Russian</term>, <origDate>17th
                               c.</origDate>, <material>paper,</material><seg type="extent"> XI+229
-                              ff., </seg>
-                           <dimensions type="folia" unit="mm"><height>185</height><width>145</width></dimensions> Slavic
-                           translation from Greek from the year <date type="translation">1599</date>. Notes by the scribe <name type="scribe">Stefan
-                              Jovanović</name></head>
+                              ff.,</seg>
+                           <dimensions type="folia" unit="mm"><height>185</height><width>145</width></dimensions> Slavic translation from Greek from the year 
+                             <date type="translation">1599</date>. Notes by the scribe 
+                             <name type="scribe">Stefan Jovanović</name>
+                        </head>
                         <msIdentifier>
                            <settlement>Belgrade</settlement>
                            <repository>Patriarchal Library</repository>
@@ -577,18 +578,22 @@
                         </msIdentifier>
                      </msDesc>
                   </egXML>
-                  <p>We attach <att>type</att> to the element <gi>head</gi> to make a distinction
-                     between the proper headings in some editions and the heading that serves as a
-                     brief statement here. Next we encode each valuable piece of information by
-                     giving it a name. A possible rationale for this more complete approach would be
-                     the extraction of or search for specific pieces of data, or the attachment to
-                     it of specific formatting during rendering.</p>
+                  <p>In this more detailed version we attach the attribute <att>type</att> to the
+                     element <gi>head</gi> to make a distinction between the proper headings in some
+                     editions and the heading that serves as a brief statement here, and we tag each
+                     identifiable type of information with appropriate TEI elements. One rationale
+                     for using this more complete approach would be a need to extract or search for
+                     specific types of data, or to format different types of data differently during
+                     rendering. Like TEI P5, the Repertorium model supports both sparsely and richly
+                     tagged information, with the degree of detail determined by the requirements of
+                     the individual project.</p>
                </div>
                <div>
                   <head>Description with <gi>msIdentifier </gi>and paragraphs</head>
                   <p>An alternative to the preceding involves the use of the element <gi>p</gi>,
                      which can unite all data related to physical description, palaeography,
-                     language and the manuscript’s provenance and history, e.g.:</p>
+                     language, and the manuscript’s provenance and history, as in the following
+                     description of MS BAS 90 by Elena Tomova:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <msDesc>
                         <msIdentifier>
@@ -598,14 +603,14 @@
                            <idno>90</idno>
                         </msIdentifier>
                         <p>Damaskin of priest Joan from 1788, 272 ff., paper of two types, both of
-                           bad quality, cf. Nikolaev 473b (1751) 608b (1779), 664 (1783). 1 column,
-                           23-29 lines per page. Literature: Иванов 1891: 83-112, 1892: 169-193;
-                           Цонев 1940: 180-181; Ангелов 1958; Кодов 1969 : 227-232</p> (From the
-                        electronic description of MS BAS 90 by Elena Tomova) </msDesc>
+                           bad quality, cf. Nikolaev 473b (1751), 608b (1779), 664 (1783). 1 column,
+                           23–29 lines per page. Literature: Иванов 1891: 83-112, 1892: 169-93;
+                           Цонев 1940: 180-81; Ангелов 1958; Кодов 1969: 227-32</p></msDesc>
                   </egXML>
                   <p>If we decide to use just paragraphs, we can nonetheless select whatever
                      granularity we consider most appropriate to our purposes. For example, we can
-                     divide the preceding information into smaller units, as in this example:</p>
+                     divide the preceding information into smaller units in separate paragraphs, as
+                     in the following example from Райков и др. 1994: 105:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <msDesc>
                         <msIdentifier>
@@ -616,7 +621,7 @@
                               <name>Athos</name>
                            </geogName>
                            <placeName>Zograph Monastery</placeName>
-                           <repository>Monastery’s library</repository>
+                           <repository>Monastery library</repository>
                            <idno type="shelfmark">III.г.7</idno> ... </msIdentifier>
                         <p xml:id="material">Paper - thin, rough and white. Watermark: scissors,
                            similar to Briquet, Nr 3688 from the year 1496.</p>
@@ -624,23 +629,28 @@
                         <p xml:id="writing">Writing: middle semi-uncial, 23 lines per page. Without
                            decoration.</p>
                         <p xml:id="language">Serbian.</p>
-                        <p xml:id="photo">Photograph from the f. 1r</p>
+                        <p xml:id="photo">Photograph from f. 1r</p>
                         <p xml:id="biblio">Райков, Кожухаров, Миклас, Кодов 1994, tabl. 176.</p>
-                     </msDesc> (Райков и др. 1994: 105) </egXML>
+                     </msDesc>
+                  </egXML>
                   <p>In this example the cataloguing model consists of the identification of the
                      codex (<gi>msIdentifier</gi>) and a sequence of paragraphs, each of which
-                     provides information that is identified with the help of <att>xml:id</att>. The
+                     provides information that is typed with the help of <att>xml:id</att>. The
                      choice of paragraph types can be determined by the goals of the individual
-                     project.</p>
+                        project.<note>For example, <att>xml:id</att> attributes must be unique in an
+                        XML document instance, so the use of that attribute for typing would not be
+                        appropriate in situations where a single XML document contains multiple
+                           <gi>msDesc</gi> elements.</note></p>
                </div>
                <div>
                   <head>Extraction of information from a full description</head>
                   <p>Another way to obtain information in the form of a checklist or short catalogue
-                     is to extract already existing data from an analytical description. For this
-                     purpose, the form of the full-length catalogue must follow encoding rules that
-                     will allow data extraction without loss of information. For example, small
+                     is to extract already existing data from a richer analytical description. For
+                     this purpose, the form of the full-length catalogue must follow encoding rules
+                     that will allow data extraction without loss of information. For example, small
                      summaries or overviews might coexist with more elaborated, structured features
-                     of manuscript or text analysis, e.g.:</p>
+                     of manuscript or text analysis, as in the following excerpt from an electronic
+                     description of NBKM 848 by Margaret Dimitrova:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <msContents>
                         <summary>The fragment contains 11 Lenten lessons; the last one includes only
@@ -648,16 +658,17 @@
                            (Palm day)</summary>
                         <msItemStruct xml:id="ACD1"><locus n="1">1r</locus>
                            <title>Mc 1:35-44;</title>
-                           <note>The beginning is missing. <date>Saturday II </date></note>
+                           <note>The beginning is missing. <date>Saturday II</date></note>
                         </msItemStruct>
-                        <msItemStruct xml:id="ACD2"><locus n="2">1r-1v </locus>
+                        <msItemStruct xml:id="ACD2"><locus n="2">1r–1v</locus>
                            <title>Mc 2:1-12 </title> ... </msItemStruct>
-                     </msContents> (From an electronic description of NBKM 848 by Margaret
-                     Dimitrova) </egXML>
-                  <p>In this example the element <gi>summary</gi> is used as an introduction to the
-                     more extensive, formalized description of each text from the manuscript. This
-                     hybrid format permits the use of XSLT or XQuery to extract whatever information
-                     might be needed.</p>
+                     </msContents>
+                  </egXML>
+                  <p>In this example the element <gi>summary</gi> precedes a more extensive,
+                     formalized description of each text from the manuscript. This hybrid format
+                     permits the use of XSLT or XQuery to extract whatever information might be
+                     needed, from just the summary (for use in a short catalogue or shelflist) to
+                     more specific details (for comparison or other types of analysis).</p>
                </div>
             </div>
          </div>
