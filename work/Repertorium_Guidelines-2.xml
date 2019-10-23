@@ -103,14 +103,14 @@
                <p>Previous versions of these Guidelines circulated only in electronic form. The
                   first was compiled for the Annual TEI Members’ Meeting in 2005 in Sofia.
                   Subsequently, within the framework of the project <orgName>Slovo: Toward a Digital
-                     Library of South Slavic Manuscripts</orgName> (2007–08, cf. Miklas &amp;
+                     Library of South Slavic Manuscripts</orgName> (2007–08, cf. Miklas and
                   Miltenova 2008), funded by the Austrian Science and Liaison Offices, a new
                   electronic version was prepared. Both are now archived and available on request.
                   The present, new Guidelines are based on the ideas and proposals contained in
-                  various project papers, proceedings and special volumes (Birnbaum &amp; Miltenova
-                  2000, esp. Miltenova &amp; Bojadžiev 2000, Bojadžiev 2000, Dobreva 2000, Stojkova
+                  various project papers, proceedings and special volumes (Birnbaum and Miltenova
+                  2000, esp. Miltenova and Bojadžiev 2000, Bojadžiev 2000, Dobreva 2000, Stojkova
                   2000, Radoslavova 2000; Miltenova et al. 2003, esp. Cleminson 2003, Bojadžiev et
-                  al. 2003, Moussakova 2003, Krushelnitskaya 2003; Miklas &amp; Miltenova 2008, cf.
+                  al. 2003, Moussakova 2003, Krushelnitskaya 2003; Miklas and Miltenova 2008, cf.
                   Birnbaum et. al. 1995; Cleminson 1998; Gagova 1998, 2000; Radoslavova 1998;
                   Stoykova 1998), as well as in the Commission’s journal
                   <title level="j">Scripta &amp; e-Scripta</title> (e.g., Miltenova 2008; Boyadzhiev
@@ -130,7 +130,7 @@
                   should not be considered a general introduction to markup technologies, nor a
                   tutorial on the TEI approach to linguistic and literary markup. For the latter,
                   see the fifth chapter of the current P5 edition of the TEI Guidelines
-                  <title level="a">A gentle introduction to XML</title> (Burnard &amp; Bauman
+                  <title level="a">A gentle introduction to XML</title> (Burnard and Bauman
                   2007).</p>
             </div>
             <div>
@@ -383,32 +383,32 @@
                <list rend="numbered">
                   <item><ident>tei</ident> – the main module of the TEI Infrastructure (Burnard,
                      Bauman 2007: 1 <title level="a">The TEI infrastructure</title>);</item>
-                  <item><ident>header</ident> – common metadata information (Burnard, Bauman 2007: 2
-                     <title level="a">The TEI header</title>);</item>
+                  <item><ident>header</ident> – common metadata information (Burnard and Bauman
+                     2007: 2 <title level="a">The TEI header</title>);</item>
                   <item><ident>textstructure</ident> – the default text structure (Burnard, Bauman
                      2007: 4 <title level="a">Default text structure</title>);</item>
-                  <item><ident>core</ident> – common core (Burnard, Bauman 2007: 3
+                  <item><ident>core</ident> – common core (Burnard and Bauman 2007: 3
                      <title level="a">Elements
                      available in all TEI documents</title>);</item>
                </list>
                <p>In addition to these required modules, several optional ones have been
                   included:</p>
                <list rend="numbered">
-                  <item><ident>linking</ident> – linking, segmentation, and alignment (Burnard,
+                  <item><ident>linking</ident> – linking, segmentation, and alignment (Burnard and
                      Bauman 2007: 16
                      <title level="a">Linking, segmentation, and alignment</title>);</item>
                   <item><ident>analysis</ident> – associates simple analyses and interpretations
-                     with text elements (Burnard, Bauman 2007: 17
+                     with text elements (Burnard and Bauman 2007: 17
                      <title level="a">Simple analytic mechanisms</title>);</item>
                   <item><ident>certainty</ident> – elements and attributes to indicate the degree of
-                     certainty attached to the encoded text (Burnard, Bauman 2007: 21
+                     certainty attached to the encoded text (Burnard and Bauman 2007: 21
                      <title level="a">Certainty and
                      responsibility</title>);</item>
                   <item><ident>figures</ident> – representation of tables, formulae, figures and
-                     graphics (Burnard, Bauman 2007: 14
+                     graphics (Burnard and Bauman 2007: 14
                      <title level="a">Tables, formulæ, and graphics</title>);</item>
                   <item><ident>namesdates</ident> – representation of names (of people, places,
-                     organizations), times and dates (Burnard, Bauman 2007: 13
+                     organizations), times and dates (Burnard and Bauman 2007: 13
                      <title level="a">Names, dates, people, and
                      places</title>);</item>
                   <item><ident>transcr</ident> – transcription of primary sources (Burnard, Bauman
@@ -487,7 +487,7 @@
                      earlier Repertorium schemas to provide general palaeographic information.
                      Because an element with the same name now exists in P5 with a completely
                      different meaning (<q>a passage of written text revealed to participants in the
-                        course of a spoken text</q>, cf. Burnard, Bauman 2007), the Repertorium
+                        course of a spoken text</q>, cf. Burnard and Bauman 2007), the Repertorium
                      element has been renamed <gi>summary</gi>.</item>
                   <item>Specific Repertorium elements and structures from earlier versions are
                      retained only if there are structural or semantic differences between the
@@ -512,23 +512,23 @@
                data and the description itself becomes a primary object. In this case it serves no
                longer as metadata and must be entered instead as part of the content of the element
                   <gi>body</gi>.</p>
-            <p>The basic, wrapper element for a description is <gi>msDesc</gi> (manuscript
-               description), which serves as a container for seven additional subcomponents: general
-               cataloguing information (<gi>msIdentifier</gi>); headings (<gi>head</gi>);
-               information on physical characteristics and layout of the manuscript
-                  (<gi>physDesc</gi>); palaeographic and linguistic data (<gi>scribeDesc</gi>); the
-               description of the manuscript content as a whole, as separate texts, with any notes
-               and colophon (<gi>msContents</gi>); conclusions about the time and place of writing
-               of the manuscript and a sketch of the manuscript’s history (<gi>history</gi>); and a
-               place for additional information the describer may need to include
-                  (<gi>additional</gi>). The only obligatory child of <gi>msDesc</gi> is
-                  <gi>msIdentifier</gi>. All other main elements are optional.</p>
+            <p>The basic, wrapper element for a description is <gi>msDesc</gi> (<gloss>manuscript
+                  description</gloss>), which serves as a container for seven additional
+               subcomponents: general cataloguing information (<gi>msIdentifier</gi>); headings
+                  (<gi>head</gi>); information on physical characteristics and layout of the
+               manuscript (<gi>physDesc</gi>); palaeographic and linguistic data
+                  (<gi>scribeDesc</gi>); the description of the manuscript content as a whole, as
+               separate texts, with any notes and colophon (<gi>msContents</gi>); conclusions about
+               the time and place of writing of the manuscript and a sketch of the manuscript’s
+               history (<gi>history</gi>); and a place for additional information the describer may
+               need to include (<gi>additional</gi>). The only obligatory child of <gi>msDesc</gi>
+               is <gi>msIdentifier</gi>. All other main elements are optional.</p>
             <p>Parts of convolutes and layers of palimpsests are represented by <gi>msPart</gi>
                elements. Additional notes by the authors of earlier descriptions and by owners of
-               the manuscript form part of the element <gi>accMat</gi> (accompanying material). The
-               specification of the source could be extended further as part of the
-                  <gi>recordHist</gi> (recorded history) element at the end of the description (cf.
-               Additional information).</p>
+               the manuscript form part of the element <gi>accMat</gi> (<gloss>accompanying
+                  material</gloss>). The specification of the source could be extended further as
+               part of the <gi>recordHist</gi> (<gloss>recorded history</gloss>) element at the end
+               of the description (cf. Additional information).</p>
             <p>Information is entered step by step, in an ordered and purposeful way. The first step
                concerns general cataloguing information; then comes information related to physical
                features of the manuscript, palaeography, language, content, sources of manuscript
@@ -673,74 +673,78 @@
             </div>
          </div>
          <div>
-            <head>Cataloguing Information</head>
+            <head>Cataloguing information</head>
             <div>
                <head>General remarks</head>
                <p>Cataloguing information is an obligatory part of each manuscript description and
                   it should provide an introduction for researchers consisting of:</p>
                <list rend="simple">
-                  <item>identification of manuscript name, as a type or genre (e.g., Menaion or
-                     Triodion) or as a specific name that has become standardized in the research
-                     tradition (e.g., Euchologium Sinaiticum);</item>
+                  <item>identification of manuscript name, as a type or genre (e.g., <hi
+                        rend="italic">Menaion</hi> or <hi rend="italic">Triodion</hi>) or as a
+                     specific name that has become standardized in the research tradition (e.g., <hi
+                        rend="italic">Euchologium Sinaiticum</hi>);</item>
                   <item>information about where the manuscript is kept, together with its
                      shelfmark(s);</item>
                   <item>optional additional notes</item>
                </list>
                <p>The description thus begins with answers to questions like: What is the name of
-                  the manuscript? Where it is now kept? and Are there earlier descriptions? The
-                  answers to all of these questions constitute part of the content of the element
-                     <gi>msIdentifier</gi> (i.e., manuscript identifier, Burnard &amp; Bauman
-                  2007).</p>
-               <p>The encoder can provide information about the name of the manuscript
-                     (<gi>msName</gi>) if it exists, and about the country, geographical region
-                  and/or city, and the institution, repository, or collection (Burnard &amp; Bauman
-                  2007: <code lang="XML">model.placeNamePart</code>).</p>
-               <p>Between <gi>msName</gi> and following structured information it is possible to
-                  insert a brief summary description in the form of paragraph (cf. below). More
-                  information, including optional bibliographic records or lists of records, may be
-                  entered as part of the element <gi>note</gi>.</p>
+                  the manuscript? Where it is now kept? Are there earlier descriptions? The answers
+                  to all of these questions constitute part of the content of the element
+                     <gi>msIdentifier</gi> (<gloss>manuscript identifier</gloss>, Burnard and Bauman
+                  2007). The encoder can provide information about the name of the manuscript
+                     (<gi>msName</gi>), if it exists, and about the country, city or other
+                  geographical region, and the institution, repository, or collection where the
+                  manuscript can be found (Burnard and Bauman 2007:
+                     <ident>model.placeNamePart</ident>). Between <gi>msName</gi> and following
+                  structured information it is possible to insert a brief summary description in the
+                  form of paragraph (cf. below). More information, including optional bibliographic
+                  records or lists of records, may be entered as part of the element
+                  <gi>note</gi>.</p>
                <p>The element <gi>msIdentifier</gi> (manuscript identifier) has <att>type</att> and
                      <att>subtype</att> attributes. These attributes may be used, for example, when
                   the manuscript is now lost or its place is now unknown, so that the type of
                   identifier is not current, and the electronic form represents an encoding of an
-                  old description, and not the de visu work of the current encoder.</p>
+                  old description, and not the de visu observations of the current encoder.</p>
             </div>
             <div>
                <head>The manuscript name</head>
                <p>The name of the manuscript is a word or a short phrase that can be used to
                   classify the manuscript according to a known scheme and to provide a special or
-                  supplied name that has become established by the research tradition.</p>
+                  supplied name that has become established in the research tradition.</p>
                <p>There are many characteristics involved in assigning a name to a manuscript. The
                   most important is the so-called generic or unified name, based on typological
-                  characteristics, with values such as <emph>Psalter</emph> or
-                     <emph>Miscellany</emph>. In some cases manuscripts may also already have unique
-                  names, such as <emph>Codex Zographensis</emph> or <emph>Kodov Triodion</emph>.
-                  These names should be provided separately.</p>
-               <p>This element may contain only plain text. The <att>type</att> attribute may be
-                  used to give further information whether the name is general (i.e., unified or
-                  generic) or individual (nickname).</p>
-               <p>The following example from the description of Codex Marianus demonstrates the use
-                  of this element:</p>
+                  characteristics, with values such as <hi rend="italic">Psalter</hi> or <hi
+                     rend="italic">Miscellany</hi>. In some cases manuscripts may also already have
+                  unique names, such as <hi rend="italic">Codex Zographensis</hi> or <hi
+                     rend="italic">Kodov Triodion</hi>. These names should be provided
+                  separately.</p>
+               <p>The <gi>msName</gi> element contains only plain text. The <att>type</att>
+                  attribute may be used to give further information whether the name is general
+                  (i.e., unified or generic) or individual (nickname). The following example from
+                  the description of <hi rend="italic">Codex Marianus</hi> demonstrates the use of
+                  this element:</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msName type="general" xml:lang="la">Tetraeuangelion</msName>
                   <msName type="general" xml:lang="bg">Четвероевангелие</msName>
-                  <msName type="individual" current="yes" xml:lang="bg">Мариинско евангелие </msName>
-                  <msName type="individual" subtype="current" xml:lang="la">Codex Marianus </msName>
+                  <msName type="individual" current="yes" xml:lang="bg">Мариинско евангелие</msName>
+                  <msName type="individual" subtype="current" xml:lang="la">Codex Marianus</msName>
                   <msName type="individual" subtype="old" xml:lang="en">Grigorovič
                      tetraeuangelion</msName>
                   <msName type="individual" subtype="old" xml:lang="en">Athonite
                      tetraeuangelion</msName>
                </egXML>
-               <p>Here we have the following information: the general information on the manuscript
-                  name is encoded with the values general or individual of the <att>type</att>
-                  attribute in Latin and in Bulgarian. The manuscript name currently accepted among
-                  scholars is <emph>Codex Marianus</emph> and the older names are <emph>Grigorovič
-                     tetraeuangelion</emph>, and <emph>Athonite tetraeuangelion</emph>.</p>
+               <p>Here general information about the manuscript name in Latin and in Bulgarian is
+                  annotated with the values <q>general</q> or <q>individual</q> for the
+                     <att>type</att> attribute. The manuscript name currently accepted among
+                  scholars is <hi rend="italic">Codex Marianus</hi> and the older names are <hi
+                     rend="italic">Grigorovič tetraeuangelion</hi>, and <hi rend="italic">Athonite
+                     tetraeuangelion</hi>.</p>
                <p>When the manuscript has different nicknames for separate parts that are kept in
                   different repositories, this information goes into corresponding sections of
-                  description. As in case with <emph>Codex Marianus</emph>, there are two leaves now
-                  kept in Vienna that have been known by two names that are no longer generally
-                  used: <emph>Mihanović folia</emph> and <emph>Miklošič folia</emph>:</p>
+                  description. In case of the <hi rend="italic">Codex Marianus</hi>, there are two
+                  leaves now kept in Vienna that have been known by two names that are no longer
+                  generally used: <hi rend="italic">Mihanović folia</hi> and <hi rend="italic"
+                     >Miklošič folia</hi>:</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <altIdentifier xml:id="OENB146">
                      <msName type="individual" subtype="old">Mihanović folia</msName>
@@ -753,18 +757,17 @@
                <p>The use of this paragraph is restricted to cases when special annotation is needed
                   to summarize the locations of different parts of the same manuscript. The current
                   location in different countries, archives, or collections could require a special
-                  introduction to this state with possible links to sections on manuscript history,
-                  acquisition, and to the various signatures or numbers in the catalogues. The
-                  following extract from the description of <emph>Manuilev Apostolos</emph>
-                  illustrates this approach:</p>
+                  description, possibly with links to sections on manuscript history, acquisition,
+                  and to the various signatures or numbers in various catalogues. The following
+                  extract from the description of <hi rend="italic">Manuilev Apostolos</hi> by
+                  Margaret Dimitrova and Andrej Bojadžiev illustrates this approach:</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <p>Six fragments belonging to an once larger codex have been identified by
-                     Tixomirov ...</p> (From the electronic description of Manuilev Apostle by
-                  Margaret Dimitrova and Andrej Bojadžiev) </egXML>
+                  <p>Six fragments belonging to what was once a larger codex have been identified by
+                     Tixomirov ...</p>
+               </egXML>
                <p>This short introduction to the cataloguing information in the description of the
-                     <emph>Manuilev Apostle</emph> is needed to understand the rest of the
-                  description. The formal declaration of the element <gi>p</gi> (paragraph) is used
-                  exactly as the same element in TEI models (Burnard &amp; Bauman 2007: p).</p>
+                     <hi rend="italic">Manuilev Apostle</hi> is needed to understand the rest of the
+                  description.</p>
             </div>
             <div>
                <head>Location of the manuscript</head>
@@ -774,9 +777,8 @@
                      where the manuscript is kept. There are three levels for this information:
                      geographical pointers, institutional identification, and (optionally) data
                      regarding the collection in which the manuscript is kept. The latter often
-                     appears as part of the shelfmark designation.</p>
-                  <p>The specified order of elements is important, going from largest to
-                     smallest:</p>
+                     appears as part of the shelfmark designation. The order of these elements is
+                     important, proceeding from largest to smallest:</p>
                   <list type="numbered">
                      <item>country</item>
                      <item>geographical region</item>
@@ -785,75 +787,81 @@
                      <item>collection</item>
                      <item>shelfmark, inventory number or some other designation</item>
                   </list>
-                  <p>This set of elements is followed by optional information on identification
-                     based on <term>secundo folio </term>and bibliographic records.</p>
-                  <p>Following example from the description of Ms NBKM 848 illustrates the usage of
-                     the element:</p>
+                  <p>This set of elements is followed by optional identifying information based on
+                        <term>secundo folio</term> and bibliographic records.</p>
+                  <p>Following example from the description of MS Plovdiv 25 by Desislava Atanasova
+                     illustrates the usage of the element:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <country>Bulgaria</country>
                      <settlement>Plovdiv</settlement>
                      <repository>Plovdiv National Library</repository>
-                     <idno type="shelfmark">25</idno> (From the electronic description of MS Plovdiv
-                     25 by Desislava Atanasova) </egXML>
+                     <idno type="shelfmark">25</idno></egXML>
                </div>
                <div>
                   <head>Country</head>
-                  <p>The most simple content of the element <gi>country</gi> is the name of country,
+                  <p>The simplest content of the element <gi>country</gi> is the name of country,
                      e.g.:</p>
-                  <egXML xmlns="http://www.tei-c.org/ns/Examples"><country>Bulgaria</country></egXML>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <country>Bulgaria</country>
+                  </egXML>
                   <p>In some cases it may be useful to provide a country code as well as a country
-                     name. This can be achieved by supplying a value to the key attribute. It is
-                     recommended by the TEI that this value follow the country names and codes
-                     defined by ISO 3166 (Burnard &amp; Bauman 2007: country). The encoder can
-                     choose among three representations defined in the standard: alpha-2 code
-                     (two-letter, ISO 3166-1-alpha-2-code), alpha-3 code (three-letter, ISO
-                     3166-1-alpha-3-code), and numeric code (ISO 3166-numeric). The three variants
-                     are illustrated below:</p>
+                     name. This can be achieved by supplying a value to the <att>key</att>
+                     attribute. It is recommended by the TEI that this value follow the country
+                     names and codes defined by ISO 3166 (Burnard and Bauman 2007:
+                     <gi>country</gi>). The encoder can choose among three representations defined
+                     in the standard: alpha-2 code (two-letter, ISO 3166-1-alpha-2-code), alpha-3
+                     code (three-letter, ISO 3166-1-alpha-3-code), and numeric code (ISO
+                     3166-numeric). The three variants are illustrated below:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <country key="bg">Bulgaria</country>
                      <country key="BGR">Bulgaria</country>
-                     <country key="100">Bulgaria</country> For the full list cf. Common Data Hub:
-                     ISO 3166 Country Codes. </egXML>
+                     <country key="100">Bulgaria</country>
+                  </egXML>
+                  <p>For the full list see Common Data Hub: ISO 3166 Country Codes.</p>
                </div>
                <div>
                   <head>Settlement (city or town, etc.)</head>
-                  <p>The next part of the information is related to the place where the manuscript
-                     is currently kept. Two different elements are provided for this purpose. In
-                     most cases the manuscript is kept in libraries or archives in cities, for which
-                     the element settlement is used:</p>
+                  <p>The next part of the cataloguing information is related to the place where the
+                     manuscript is currently kept. Two different elements are provided for this
+                     purpose. In most cases the manuscript is kept in libraries or archives in
+                     cities, for which the element <gi>settlement</gi> is used:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <settlement>Sankt Peterburg</settlement>
                   </egXML>
-                  <p>The type of settlement may be further specified by adding a standard type, as
-                     in this example:</p>
+                  <p>The type of settlement may be specified more precisely by adding a standard
+                     value for the <att>type</att> attribute, as in this example:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <settlement type="town">Kazanlăk</settlement>
                   </egXML>
                </div>
                <div>
                   <head>Region</head>
-                  <p>When the name of place is not well-known or there could be two or more places
-                     with the same name, an additional element <gi>region</gi> may be added. By
-                        <gi>region</gi> is meant an administrative unit smaller than a country but
-                     larger than a city, town or village (Burnard &amp; Bauman 2007: region).</p>
+                  <p>When the name of place is not well known or where there could be two or more
+                     places with the same name, an additional element <gi>region</gi> may be added.
+                     The <gi>region</gi> element describes an administrative unit smaller than a
+                     country but larger than a city, town, or village (Burnard and Bauman 2007:
+                        <gi>region</gi>), as in the following example, where Alino is a village in
+                     the Sofia province (<hi rend="italic">oblast</hi>) of Bulgaria, but not within
+                     the city limits of Sofia:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <region type="district">Sofia</region>
                      <settlement type="village">Alino</settlement>
                   </egXML>
                </div>
                <div>
-                  <head>The place and geographical names</head>
-                  <p>When the codex is kept in a specific place not normally considered a region or
+                  <head>Place and geographical names</head>
+                  <p>When a codex is kept in a specific place not normally considered a region or
                      settlement, e.g., in a monastery, the alternative elements <gi>placeName</gi>
                      and <gi>geogName</gi> may be used. These elements are part of the TEI element
                      infrastructure and may contain plain text, sub-elements like <gi>region</gi>
                      (for some places that are smaller than countries, but bigger than cities) or
                         <gi>district</gi> (for names of non-administrative, geographical places).
                      With the help of <gi>geogFeat</gi> we can encode such geographical features as
-                     valley, river, mount, etc. (Burnard &amp; Bauman 2007: geogFeat). Then we can
-                     provide the name of the place using general purpose <gi>name</gi> element.</p>
+                     valley, river, mount, etc. (Burnard and Bauman 2007: <gi>geogFeat</gi>). We can
+                     then provide the name of the place using the general-purpose <gi>name</gi>
+                     element.</p>
                   <p>The choice in this case should be made on the level of the whole project,
-                     unifying the appearance of the information in order to format, transform or
+                     unifying the structure of the information in order to format, transform or
                      search the data. For example, a possible encoding for manuscripts kept at the
                      Zograph Monastery on Mount Athos could look like the following:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -863,25 +871,27 @@
                      </geogName>
                      <placeName type="monastery">Zograph monastery</placeName>
                   </egXML>
-                  <p>The same information could be encoded in two other ways. The first is using a
-                     general purpose element <gi>name</gi> with <att>type</att>, e. g.:</p>
+                  <p>The same information could be encoded in at least two other ways. The first is
+                     using a general purpose element <gi>name</gi> with a <att>type</att> attribute,
+                     e.g.:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <name type="monastery">Zograph monastery</name>
                   </egXML>
                   <p>The other is to use a special referencing string as the value of the
-                        <att>key</att> attribute, e. g.:</p>
+                        <att>key</att> attribute, e.g.:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <placeName key="ZM" type="monastery">Zograph Monastery</placeName>
                   </egXML>
                   <p>In the last example the <gi>placeName</gi> element has two special attributes.
-                     As explained in the TEI Guidelines <att>key</att> „provides an
-                     externally-defined means of identifying the entity (or entities) being named,
-                     using a coded value of some kind.” (Burnard &amp; Bauman 2007:
-                        <code>att.canonical/key</code>) and <att>type</att> is intended to be used
-                     as a general characteristic of the place name. That means that project should
-                     have a list of abbreviations of some sort, one of which must be ZM (= Zograph
-                     Monastery). For the manuscripts kept at Mount Sinai „St. Catherine” the same
-                     model is also valid, e.g.:</p>
+                     As explained in the TEI Guidelines <att>key</att>
+                     <q>provides an externally-defined means of identifying the entity (or entities)
+                        being named, using a coded value of some kind</q>. (Burnard and Bauman 2007:
+                        <ident>att.canonical/key</ident>) and <att>type</att> is intended to be used
+                     as a general characteristic of the place name. A project that observes this
+                     convention should provide a list of abbreviations, one of which would be
+                        <abbr>ZM</abbr> (= <expan>Zograph Monastery</expan>). For the manuscripts
+                     kept in the St. Catherine Monastery on Mount Sinai the same model is also
+                     appropriate, e.g.:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <country>Egypt</country>
                      <geogName>
@@ -894,19 +904,19 @@
                   <head>Repository (library, archive, etc.)</head>
                   <p>The next piece of information in the electronic description,
                         <gi>repository</gi>, identifies a public or private library or archive. This
-                     element should contain a common or official designation, as in this
-                     example:</p>
+                     element should contain a common or official designation, as in this example
+                     from the electronic description of MS IX.H.16 by Irina Kuzidova:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <country>Czech Republic</country>
                      <settlement>Prague</settlement>
-                     <repository>National Museum</repository> (From the electronic description of MS
-                     IX.H.16 by Irina Kuzidova) </egXML>
+                     <repository>National Museum</repository>
+                  </egXML>
                </div>
                <div>
                   <head>Name of the institution</head>
-                  <p>Sometimes the repository is part of another institution, and in such cases the
-                     name of the institution comes before the name of the archive, as in the
-                     following examples:</p>
+                  <p>Sometimes the repository in which a manuscript is located is part of another
+                     institution, and in such cases the name of the institution comes before the
+                     name of the archive, as in the following examples:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <institution>University of Sofia</institution>
                      <repository>Central University Library</repository>
@@ -919,13 +929,13 @@
                </div>
                <div>
                   <head>Shelfmarks, inventory and catalogue designations</head>
-                  <p>This information forms the content of the element <gi>idno</gi>. This element
-                     has an <att>type</att> value that specifies whether the identification is a
-                     shelfmark, inventory number, or catalogue number. This attribute value is
-                     especially important in archives that combine several collections that may be
-                     arranged and identified according to former owners or thematic principles. In
-                     practice, shelfmarks are often formed from the initials or special codes for
-                     separate collections. Typical examples could be:</p>
+                  <p>This information is provided as the content of the element <gi>idno</gi>. The
+                        <gi>idno</gi> element has an <att>type</att> value that specifies whether
+                     the identification is a shelfmark, inventory number, or catalogue number. This
+                     attribute value is especially important in archives that combine several
+                     collections that may be arranged and identified according to former owners or
+                     thematic principles. In practice, shelfmarks are often formed from the initials
+                     or special codes for separate collections. Typical examples could be:</p>
                   <p>1. shelfmark:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <idno type="shelfmark">Пог. 8</idno>
@@ -934,13 +944,13 @@
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <idno type="catalogue">1</idno>
                   </egXML>
-                  <p>3. Information on identification in inventory catalogue:</p>
+                  <p>3. Identifying information in an inventory catalogue:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <idno type="inventory">5/1946</idno>
                   </egXML>
                </div>
                <div>
-                  <head>Current and former shelfmarks, catalogue and inventory numbers</head>
+                  <head>Current and former shelfmarks, catalogue numbers, and inventory numbers</head>
                   <p>The best way to differentiate between current and former designations is to
                      wrap the element <gi>idno</gi> around <gi>altIdentifier</gi> elements. Consider
                      the following examples:</p>
@@ -1155,7 +1165,7 @@
                      and sixteenth centuries) a common component of manuscript description. The term
                      refers to transcribing the first word or words from the second leaf of a codex.
                      The element <gi>secFol</gi> (Lat. secundo folio, or Eng. second folio) is used
-                     for this purpose (Burnard &amp; Bauman 2007: <gi>secFol</gi>). The following
+                     for this purpose (Burnard and Bauman 2007: <gi>secFol</gi>). The following
                      example illustrates the usage:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <secFol>dixit ad me</secFol> (Description of MS Crispin 16, Dutschke et al.
@@ -1175,9 +1185,9 @@
             <div>
                <head>General remarks</head>
                <p>The markup definition of the physical structure should be entered in the element
-                     <gi>physDesc</gi> (Burnard &amp; Bauman 2007), which unites information about
-                  the physical condition of the manuscript with observations about the material,
-                  layout, binding and decoration. The encoder can choose between two options:</p>
+                     <gi>physDesc</gi> (Burnard and Bauman 2007), which unites information about the
+                  physical condition of the manuscript with observations about the material, layout,
+                  binding and decoration. The encoder can choose between two options:</p>
                <list rend="numbered">
                   <item>To make a very short sketch of different features of the manuscript in
                      paragraphs, or</item>
@@ -1209,8 +1219,8 @@
                <head>Description of material and layout</head>
                <p>Information about manuscript materials and their characteristics and about the
                   layout of the leaves is encoded within <gi>objectDesc</gi>. This element has one
-                  special attribute, <att>form</att> . The proposed values (Burnard &amp; Bauman
-                  2007) of this attribute could be codex, roll, fragment, leaf, partial leaf or some
+                  special attribute, <att>form</att> . The proposed values (Burnard and Bauman 2007)
+                  of this attribute could be codex, roll, fragment, leaf, partial leaf or some
                   typologically relevant value, e.g.</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <objectDesc form="codex"> ... </objectDesc> or <objectDesc form="roll"> ...
@@ -1227,7 +1237,7 @@
                   illustrate an overview of the use of structured data for various aspects of
                   cataloguing the support.</p>
                <p><gi>supportDesc</gi> has one important attribute, <att>material</att>. The value
-                  of this attribute, as suggested by TEI Guidelines (Burnard &amp; Bauman 2007:
+                  of this attribute, as suggested by TEI Guidelines (Burnard and Bauman 2007:
                      <gi>supportDesc</gi>), is most commonly parchment, paper, or mixed, as in this
                   example:</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1693,7 +1703,7 @@
             <div>
                <head>Description of the page layout</head>
                <p>This description is entered as part of the element <gi>layoutDesc</gi> (Burnard
-                  &amp; Bauman 2007). As in many other places in the model you can choose between
+                  and Bauman 2007). As in many other places in the model you can choose between
                   unstructured description (with element <gi>p</gi>) or structured data in the
                   element <gi>layout</gi>, probably preceded by an introduction (element
                      <gi>summary</gi>).</p>
@@ -1802,9 +1812,9 @@
                      consists of statements like “Wooden panels covered with ornamented leathers.
                      Not original. Done probably in 16th century." In most cases this information is
                      entered in brief descriptions using the sub-element <gi>p</gi> of the element
-                        <gi>bindingDesc</gi> (Burnard &amp; Bauman 2007). The describer can
-                     supplement this with further notes about the binding decoration
-                        (<gi>decoDesc</gi>) and its recent condition (<gi>condition</gi>).</p>
+                        <gi>bindingDesc</gi> (Burnard and Bauman 2007). The describer can supplement
+                     this with further notes about the binding decoration (<gi>decoDesc</gi>) and
+                     its recent condition (<gi>condition</gi>).</p>
                   <p>If the encoder prefers to use a structured description, a short statement
                      should be entered in the element <gi>binding</gi> as value of the attribute
                         <att>contemporary</att>, such as <val>true</val>, <val>false</val>,
@@ -2371,7 +2381,7 @@
                   parts: (1)<gi>resp</gi> (responsibility), here a brief statement in the form of
                   words as <code>editor</code>, <code>compiler</code>, <code>scribe</code>, etc.,
                   could be made, and (2) information about the person in elements <gi>name</gi> or
-                     <gi>persName</gi> (personal name, cf. Burnard &amp; Bauman 2007:
+                     <gi>persName</gi> (personal name, cf. Burnard and Bauman 2007:
                      <gi>respStmt</gi>).</p>
             </div>
             <div>
@@ -2418,7 +2428,7 @@
                <head>The characterization of each text</head>
                <p>Information about each individual text resembles closely the description of the
                   whole text collection. All features of such a description are given as part of the
-                  element <gi>msItemStruct</gi> (a structured manuscript item, Burnard &amp; Bauman
+                  element <gi>msItemStruct</gi> (a structured manuscript item, Burnard and Bauman
                   2007: msItemStruct). This element has the same three attributes, with the same
                   functions, as <gi>msContents</gi>: <att>type</att>, <att>style</att> and
                      <att>class</att>. In addition to these attributes it may be convenient to use
@@ -2738,8 +2748,8 @@
                   <p>In some manuscripts there may be texts that are rare or perhaps completely
                      unknown to researchers, and the edition of such texts in the description of a
                      manuscript could serve as a preliminary publication. In such cases an element
-                        <gi>div</gi> (division, Burnard &amp; Bauman 2007: div) should be used with
-                     an appropriate value in the attribute <att>xml:lang</att>.</p>
+                        <gi>div</gi> (division, Burnard and Bauman 2007: div) should be used with an
+                     appropriate value in the attribute <att>xml:lang</att>.</p>
                </div>
                <div>
                   <head>Original texts in other parts of the electronic description</head>
@@ -2755,7 +2765,7 @@
                         (grammatical clause), <gi>m</gi> (grammatical morpheme), <gi>pc</gi>
                         (punctuation character), <gi>phr</gi> (grammatical phrase), <gi>s</gi>
                         (sentence-like text division), <gi>seg</gi> (arbitrary segmentation) or
-                           <gi>w</gi> (grammatical word), cf. Burnard &amp; Bauman 2007:
+                           <gi>w</gi> (grammatical word), cf. Burnard and Bauman 2007:
                            <code>model.segLike</code>. As with the elements <gi>sampleText</gi> and
                            <gi>foreign</gi>, these should all have attribute <att>xml:lang</att>
                         with the corresponding value.</item>
@@ -2805,11 +2815,9 @@
                      <title xml:lang="la">Physiologus</title>
                      <note place="inline">
                         <bibl><ref target="../bibliography/scyr.xml#
-                           StojkovaA1994">Стойкова 1994</ref>
-                        </bibl>
+                           StojkovaA1994">Стойкова 1994</ref></bibl>
                         <bibl><ref target="../bibliography/acyr.xmlAleksandrovA1893">Александров
-                              1893</ref>
-                        </bibl>
+                              1893</ref></bibl>
                      </note>
                      <filiation type="protograph">Bulgarian</filiation>
                      <filiation type="redaction">Pseudo-Basil’s</filiation>
@@ -2877,7 +2885,7 @@
                   and acquisition</head>
                <p>Notes representing data about manuscript possession and acquisition, as well its
                   edition, should be encoded as part of the manuscript history in the element
-                     <gi>accMat</gi> (accompanying material, Burnard &amp; Bauman 2007:
+                     <gi>accMat</gi> (accompanying material, Burnard and Bauman 2007:
                      <gi>accMat</gi>):</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <history>
@@ -2899,7 +2907,7 @@
                      Kämpfer</persName></provenance> From the electronic description of British
                   Library Sloane MS 2910b by Dilyana Radoslavova </egXML>
                <p>This part of description should provide all facts and events prior to the
-                  manuscript’s acquisition in the library or archive (Burnard &amp; Bauman 2007:
+                  manuscript’s acquisition in the library or archive (Burnard and Bauman 2007:
                      <gi>provenance</gi>).</p>
             </div>
             <div>
@@ -2965,9 +2973,8 @@
                   <head>Custodial facts</head>
                   <p>Here too, the encoder has two ways to submit data – as one or more paragraphs
                         (<gi>p</gi>) or as one or more <gi>custEvent</gi> (custodial event, Burnard
-                     &amp; Bauman 2007) elements. This element might include facts about
-                     restoration, conservation of the manuscript, participation in exhibitions,
-                     etc., e.g.:</p>
+                     and Bauman 2007) elements. This element might include facts about restoration,
+                     conservation of the manuscript, participation in exhibitions, etc., e.g.:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <custodialHist>
                         <custEvent type="exhibition" from="2011-05-11" to="2011-06-11">Part of the
@@ -3331,8 +3338,8 @@
             <head>Recommended minimum metadata content in manuscript description files for the
                Repertorium</head>
             <p>The metadata information contained in the <gi>teiHeader</gi> element conforms
-               completely to the TEI Guidelines Minimal and recommended headers (Burnard &amp;
-               Bauman 2007: Chapter 2.6). The only mandatory element is the description of file
+               completely to the TEI Guidelines Minimal and recommended headers (Burnard and Bauman
+               2007: Chapter 2.6). The only mandatory element is the description of file
                   (<gi>fileDesc</gi>), which, in the framework of Repertorium, should give the
                following information:</p>
             <list rend="simple">
@@ -3439,7 +3446,7 @@
             </div>
             <div>
                <head>Non-bibliographic aspects of the document</head>
-               <p>This information forms part of the <gi>profileDesc</gi> element (Burnard &amp;
+               <p>This information forms part of the <gi>profileDesc</gi> element (Burnard and
                   Bauman 2007: profileDesc). Here the following aspects are encoded:</p>
                <list>
                   <item>exact date of the first document edition (day, month and year)</item>
@@ -3546,7 +3553,7 @@
                <head>Bibliographies and references</head>
                <p>Bibliographies provide a choice between one simple bibliographical reference
                   (element <gi>bibl</gi>) and a list of such references (element <gi>listBibl</gi>).
-                  Both elements are described in TEI Guidelines (Burnard &amp; Bauman 2007). In the
+                  Both elements are described in TEI Guidelines (Burnard and Bauman 2007). In the
                   Repertorium framework neither of these should contain a full bibliographical
                   record; Repertorium practice is that these elements contain only pointers to full
                   bibliographic information, which is encoded at the end of a description or, when
@@ -3564,229 +3571,236 @@
          <div>
             <head>References</head>
             <listBibl>
-               <bibl>Altheim, Murray &amp; Shane McCaron (eds.). 2001. XHTMLtm 1.1 – Module-based
+               <bibl>Altheim, Murray and Shane McCaron (eds.). 2001. XHTMLtm 1.1 – Module-based
                   XHTML. W3C Recommendation 31 May 2001. http://www.w3.org/TR/2001/REC-xhtml11-
-                  20010531/ (12.02.2012). </bibl>
+                  20010531/ (12.02.2012).</bibl>
                <bibl>Berglund, Anders (ed.). 2006: Extensible Stylesheet Language (XSL) Version 1.1.
                   W3C Recommendation 05 December 2006. http://http://www.w3.org/TR/2006/REC-xsl11-
-                  20061205/ (12.02.2012). </bibl>
+                  20061205/ (12.02.2012).</bibl>
                <bibl>Berners-Lee, T., Fielding, R., Masinter, L. (eds.). 2005: Uniform Resource
                   Identifier (URI): Generic Syntax. RFC 3986, IETF, January 2005.
-                  http://www.ietf.org/rfc/ rfc3986.txt/ (12.02.2012). </bibl>
+                  http://www.ietf.org/rfc/ rfc3986.txt/ (12.02.2012).</bibl>
                <bibl>Birnbaum, David J. 2009. An XML user steps into, and escapes from, XPath
                   quicksand. Balisage: The Markup Conference 2009, August 11 - 14, 2009.
                   http://www.balisage.net/Proceedings/vol3/print/Birnbaum01/BalisageVol3-Birnbaum01.html
-                  (12.02.2012). </bibl>
-               <bibl>Birnbaum, David J. &amp; Anissava L. Miltenova (eds.). 2000. Medieval Slavic
+                  (12.02.2012).</bibl>
+               <bibl>Birnbaum, David J. and Anissava L. Miltenova (eds.). 2000. Medieval Slavic
                   Manuscripts and SGML: Problems and Perspectives. Sofia: Marin Drinov Publishing
-                  House. </bibl>
+                  House.</bibl>
                <bibl>Birnbaum, David J., Andrej T. Boyadzhiev, Milena Dobreva, Anissava L. Miltenova
                   (eds.). 1995. Computer Processing of Medieval Slavic Manuscripts. Proceedings.
                   First International Conference, 24-28 July 1995, Blagoevgrad, Bulgaria. Sofia:
-                  Marin Drinov Publishing House. </bibl>
+                  Marin Drinov Publishing House.</bibl>
                <bibl>Boag, Scott, Don Chamberlin, Mary F. Fernández, Daniela Florescu, Jonathan
                   Robie, Jérôme Siméon (eds.). 2007. XQuery 1.0: An XML Query Language. W3C
                   Recommendation 23 January 2007. http://www.w3.org/TR/2007/REC-xquery-20070123/
-                  (12.02.2012). </bibl>
+                  (12.02.2012).</bibl>
                <bibl>Bojadžiev, Andrej. 2000. Codicology, Palaeography, and Language in the Computer
-                  Description of Medieval Slavic Manuscripts. In A. Miltenova &amp; D. J. Birnbaum
+                  Description of Medieval Slavic Manuscripts. In A. Miltenova and D. J. Birnbaum
                   (eds.), Medieval Slavic Manuscripts and SGML. Problems and Perspectives. Sofia:
-                  Marin Drinov, 2000. 69-90. </bibl>
-               <bibl>Bojadžiev, Andrej, Anissava Miltenova &amp; Dilyana Radoslavova 2003. A Unified
+                  Marin Drinov, 2000. 69-90.</bibl>
+               <bibl>Bojadžiev, Andrej, Anissava Miltenova and Dilyana Radoslavova 2003. A Unified
                   Model for the Description of Medieval Manuscripts? Computational Approaches to the
                   Study of Early and Modern Slavic Languages and Texts. Proceedings of the
                   „Electronic Description and Edition of Slavic Sources” conference, 24-26 September
                   2002, Pomorie, Bulgaria. Sofia: Boyan Penev Publishing Center, Institute of
-                  Literature. 113-135. </bibl>
+                  Literature. 113-135.</bibl>
                <bibl>Boyadzhiev, Andrej. 2009. Constructing Repertorium 3.0. Scripta &amp; e-Scripta
                   7. 13–48.</bibl>
                <bibl>Bos, Bert, Håkon Wium Lie, Chris Lilley, Ian Jacobs (eds.). 2008. Cascading
                   Style Sheets, Level 2 CSS2 Specification. W3C Recommendation, 11 April 2008.
-                  http://www.w3.org/ TR/2008/REC-CSS2-20080411(15 July 2010). </bibl>
+                  http://www.w3.org/ TR/2008/REC-CSS2-20080411(15 July 2010).</bibl>
                <bibl>Bray, Tim, Dave Hollander, Andrew Laymon, Richard Tobin (eds.). 2006a:
                   Namespaces in XML1.0 (Second edition), W3C Recommendation, 16 August 2006.
-                  http://www.w3.org/ TR/xml-names/ (15 July 2010). </bibl>
-               <bibl>Bray, Tim, Jean Paoli, C. M. Sperberg-McQueen, Eve Maler &amp; François Yergau
+                  http://www.w3.org/ TR/xml-names/ (15 July 2010).</bibl>
+               <bibl>Bray, Tim, Jean Paoli, C. M. Sperberg-McQueen, Eve Maler and François Yergau
                   (eds.). 2008: Extensible Markup Language (XML) Version 1.0 (Fifth edition), W3C
-                  Recommendation, 26 November 2008. http://www.w3.org/TR/REC-xml/ (12.02.2012). </bibl>
-               <bibl>Burnard, Lou &amp; Syd Bauman (eds.). 2007: TEI P5: Guidelines for Electronic
-                  Text Encoding and Interchange. http://www.tei-c.org/Guidelines/P5/ (12.02.2012). </bibl>
-               <bibl>Burnard, Lou, Syd Bauman &amp; Steven DeRose (eds.) 2001: TEI P4: Guidelines
-                  for Electronic Text Encoding and Interchange.
-                  http://www.tei-c.org/Guidelines/P4/index.xml (12.02.2012). </bibl>
-               <bibl>Burnard, Lou, Richard Gartner &amp; Peter Kidd. 1997. The Cataloguing of
-                  Western Medieval Manuscripts in Bodleian Library: a TEI approach with appendix
-                  describing a TEI-conformant manuscript description.
-                  http://www.users.ac.uk/~lou/wip/MS/ (12.10.2010). </bibl>
+                  Recommendation, 26 November 2008. http://www.w3.org/TR/REC-xml/
+                  (12.02.2012).</bibl>
+               <bibl>Burnard, Lou and Syd Bauman (eds.). 2007: TEI P5: Guidelines for Electronic
+                  Text Encoding and Interchange. http://www.tei-c.org/Guidelines/P5/
+                  (12.02.2012).</bibl>
+               <bibl>Burnard, Lou, Syd Bauman and Steven DeRose (eds.) 2001: TEI P4: Guidelines for
+                  Electronic Text Encoding and Interchange.
+                  http://www.tei-c.org/Guidelines/P4/index.xml (12.02.2012).</bibl>
+               <bibl>Burnard, Lou, Richard Gartner and Peter Kidd. 1997. The Cataloguing of Western
+                  Medieval Manuscripts in Bodleian Library: a TEI approach with appendix describing
+                  a TEI-conformant manuscript description. http://www.users.ac.uk/~lou/wip/MS/
+                  (12.10.2010).</bibl>
                <bibl>Clark, James (ed.). 1999: XSL Transformations (XSLT) Version 1.0, W3C
                   Recommendation 16 November 1999. http://www.w3.org/TR/1999/REC-xslt-19991116
-                  (12.02.2012). </bibl>
+                  (12.02.2012).</bibl>
                <bibl>Clark, James (ed.). 2002: Relax NG Compact Syntax. OASIS Committee
                   Specification 21 November 2002. http://www.relaxng.org/compact-20021121.html
-                  (12.02.2012). </bibl>
-               <bibl>Clark, James &amp; Steve DeRose (eds.). 1999. XML Path Language (XPath) Version
+                  (12.02.2012).</bibl>
+               <bibl>Clark, James and Steve DeRose (eds.). 1999. XML Path Language (XPath) Version
                   1.0. W3C Recommendation 16 November 1999.
-                  http://www.w3.org/TR/1999/REC-xpath-19991116 (12.02.2012). </bibl>
-               <bibl>Clark, James &amp; Murata Makomoto (eds.). 2001. Relax NG Specification. OASIS
+                  http://www.w3.org/TR/1999/REC-xpath-19991116 (12.02.2012).</bibl>
+               <bibl>Clark, James and Murata Makomoto (eds.). 2001. Relax NG Specification. OASIS
                   Committee Specification 3 December 2001.http://www.relaxng.org/spec-20011203.html
-                  (12.02.2012). </bibl>
+                  (12.02.2012).</bibl>
                <bibl>Cleminson, Ralph. 1998. Computer Applications and the Study of Early Cyrillic
-                  Printed Books. Palaeobulgarica 22 (2). 104–115. </bibl>
+                  Printed Books. Palaeobulgarica 22 (2). 104–115.</bibl>
                <bibl>Cleminson, Ralph. 2003. A Good Servant but a Bad MASTER: Uses and Abuses of
-                  Standards in Manuscript Description. In A. Miltenova, D. J. Birnbaum &amp; S.
+                  Standards in Manuscript Description. In A. Miltenova, D. J. Birnbaum and S.
                   Slevinsky (eds.), Computational Approaches to the Study of Early and Modern Slavic
                   Languages and Texts. Proceedings of the „Electronic Description and Edition of
                   Slavic Sources” conference, 24-26 September 2002, Pomorie, Bulgaria. Sofia: Boyan
-                  Penev Publishing Center, Institute of Literature. 105-111. </bibl>
+                  Penev Publishing Center, Institute of Literature. 105-111.</bibl>
                <bibl>Common Data Hub: ISO 3166 Country Codes: http://www.commondatahub.com/live/
-                  geography/country/iso_3166_country_codes (12.02.2012). </bibl>
-               <bibl>DeRose, Steven, Ron Daniel Jr., Eve Maler, &amp; Jonathan Marsh (eds.). 2003.
+                  geography/country/iso_3166_country_codes (12.02.2012).</bibl>
+               <bibl>DeRose, Steven, Ron Daniel Jr., Eve Maler, and Jonathan Marsh (eds.). 2003.
                   Xpointer xmlns() Scheme. W3C Recommendation 25 March 2003
-                  http://www.w3.org/TR/2003/ REC- xptr-xmlns-20030325/ (12.02.2012). </bibl>
-               <bibl>DeRose, Steven, Eve Maler &amp; David Orchard (eds.). 2001. XML Linking
-                  Language (XLink) Version 1.0. W3C Recommendation 27 June 2001.
-                  http://www.w3.org/TR/2000/REC- xlink-20010627/ (12.02.2012). </bibl>
+                  http://www.w3.org/TR/2003/ REC- xptr-xmlns-20030325/ (12.02.2012).</bibl>
+               <bibl>DeRose, Steven, Eve Maler and David Orchard (eds.). 2001. XML Linking Language
+                  (XLink) Version 1.0. W3C Recommendation 27 June 2001.
+                  http://www.w3.org/TR/2000/REC- xlink-20010627/ (12.02.2012).</bibl>
                <bibl>Dobreva, Milena. 2000. A repertory of the old Bulgarian literature: Problems
-                  concerning the design and use of a computer supported model. In A. Miltenova &amp;
+                  concerning the design and use of a computer supported model. In A. Miltenova and
                   D. J. Birnbaum (eds.), Medieval Slavic Manuscripts and SGML. Problems and
-                  Perspectives. Sofia: Marin Drinov. 91–98. </bibl>
-               <bibl>Dutschke, C. W., Mirella Ferrari &amp; R. H. Rouse (eds.). 1987. Medieval and
+                  Perspectives. Sofia: Marin Drinov. 91–98.</bibl>
+               <bibl>Dutschke, C. W., Mirella Ferrari and R. H. Rouse (eds.). 1987. Medieval and
                   Renaissance Manuscripts in the Claremont Libraries. University of California
-                  Press. </bibl>
+                  Press.</bibl>
                <bibl>Gagova, Nina. 1998. TSM: Тhe element NOТE: Improvement of the encoding
                   possibilities: а philo1ogica1 proposal. In Milena Dobreva (ed.), Text Variety in
                   the Witnesses of Medieval Texts. Sofia: Institute of Mathematics and Informatics.
-                  161-164. </bibl>
+                  161-164.</bibl>
                <bibl>Gagova, Nina. 2000. Study of groups of manuscripts chosen by socio-cultural
                   criteria (Manuscripts belonging to rulers libraries from the fourteenth and
-                  fifteenth centuries). In A. Miltenova &amp; D. J. Birnbaum (eds.), Medieval Slavic
-                  Manuscripts and SGML. Problems and Perspectives. Sofia: Marin Drinov. 131–169. </bibl>
+                  fifteenth centuries). In A. Miltenova and D. J. Birnbaum (eds.), Medieval Slavic
+                  Manuscripts and SGML. Problems and Perspectives. Sofia: Marin Drinov.
+                  131–169.</bibl>
                <bibl>Gillisen, L. 1977. Prolégomènes à la codicologie. Recherches sur la
-                  construction des cahiers et la mise en page des manuscrits médiévaux. Gand. </bibl>
-               <bibl>Grosso, Paul, Eve Maler, Jonathan Marsh &amp; Norman Walsh (eds.). 2003a.
+                  construction des cahiers et la mise en page des manuscrits médiévaux. Gand.</bibl>
+               <bibl>Grosso, Paul, Eve Maler, Jonathan Marsh and Norman Walsh (eds.). 2003a.
                   XPointer Frame- work, W3C Recommendation 25 March 2003.
-                  http://www.w3.org/TR/xptr-framework/ (12.02.2012). </bibl>
-               <bibl>Grosso, Paul, Eve Maler, Jonathan Marsh &amp; Norman Walsh (eds.). 2003b.
+                  http://www.w3.org/TR/xptr-framework/ (12.02.2012).</bibl>
+               <bibl>Grosso, Paul, Eve Maler, Jonathan Marsh and Norman Walsh (eds.). 2003b.
                   XPointer element() Scheme, W3C Recommendation 25 March 2003.
-                  http://www.w3.org/TR/xptr-element/ (12.02.2012). </bibl>
+                  http://www.w3.org/TR/xptr-element/ (12.02.2012).</bibl>
                <bibl>ISO 10646: International Organization for Standardization, “ISO/IEC 10646:2003.
                   Information technology – Universal Multiple-Octet Coded Character Set (UCS)”,
-                  2003. </bibl>
+                  2003.</bibl>
                <bibl>ISO 15924: International Organization for Standardization, “ISO 15924:2004.
                   Information and documentation -- Codes for the representation of names of
-                  scripts”, January 2004. </bibl>
+                  scripts”, January 2004.</bibl>
                <bibl>ISO 3166-1: International Organization for Standardization, “ISO 3166-1:1997.
                   Codes for the representation of names of countries and their subdivisions -- Part
-                  1: Country codes”, 1997. </bibl>
+                  1: Country codes”, 1997.</bibl>
                <bibl>ISO 639-1: International Organization for Standardization, “ISO 639-1:2002.
-                  Codes for the representation of names of languages -- Part 1: Alpha-2 code”, 2002. </bibl>
+                  Codes for the representation of names of languages -- Part 1: Alpha-2 code”,
+                  2002.</bibl>
                <bibl>ISO 639-2. International Organization for Standardization, “ISO 639-2:1998.
                   Codes for the representation of names of languages -- Part 2: Alpha-3 code, first
-                  edition”, 1998. </bibl>
+                  edition”, 1998.</bibl>
                <bibl>Jones, L. W. 1946a. Pricking Systems in New York Manuscripts. Miscellanea G.
-                  Mercati, vol. VI (Studi e Testi, 126). Città del Vaticano. 80–92. </bibl>
+                  Mercati, vol. VI (Studi e Testi, 126). Città del Vaticano. 80–92.</bibl>
                <bibl>Jones, L. W. 1946b. Pricking Manuscripts: The Instruments and Their
-                  Significance. Speculum 21. 389-403. </bibl>
+                  Significance. Speculum 21. 389-403.</bibl>
                <bibl>Krushelnitskaya, Ekaterina V. 2003. Description of Medieval Slavic Sources in
                   the Electronic Catalog of the Department of Manuscripts in the National Library of
-                  Russia: Goals, Research Problems, and Prospects. In A. Miltenova. D. Birnbaum
-                  &amp; S. Slevinski (eds.), Computational Approaches to the Study of Early and
-                  Modern Slavic Languages and Texts. Proceedings of the „Electronic Description and
-                  Edition of Slavic Sources” conference, 24-26 September 2002, Pomorie, Bulgaria.
-                  Sofia: Boyan Penev Publishing Center, Institute of Literature. 157–188. </bibl>
+                  Russia: Goals, Research Problems, and Prospects. In A. Miltenova. D. Birnbaum and
+                  S. Slevinski (eds.), Computational Approaches to the Study of Early and Modern
+                  Slavic Languages and Texts. Proceedings of the „Electronic Description and Edition
+                  of Slavic Sources” conference, 24-26 September 2002, Pomorie, Bulgaria. Sofia:
+                  Boyan Penev Publishing Center, Institute of Literature. 157–188.</bibl>
                <bibl>Leroy, J. 1976. Les types de réglure des manuscrits grecs. Paris: Institut de
                   recherche et d’histoire des textes (Bibliographie-Colloques-Travaux
-                  préparatoires). </bibl>
-               <bibl>Marsh, Jonathan &amp; Richard Tobin (eds.). 2009. XML Base (Second Edition).
-                  W3C Recommendation, 28 January 2009.
-                  http://www.w3.org/TR/2009/REC-xmlbase-20090128/ (12.02.2012). </bibl>
-               <bibl>Miklas, Heinz &amp; Anissava Miltenova (eds.). 2008. Slovo: Towards a Digital
+                  préparatoires).</bibl>
+               <bibl>Marsh, Jonathan and Richard Tobin (eds.). 2009. XML Base (Second Edition). W3C
+                  Recommendation, 28 January 2009. http://www.w3.org/TR/2009/REC-xmlbase-20090128/
+                  (12.02.2012).</bibl>
+               <bibl>Miklas, Heinz and Anissava Miltenova (eds.). 2008. Slovo: Towards a Digital
                   Library of South Slavic Manuscripts. Proceedings of the International Conference
                   21-26 February 2008, Sofia, Bulgaria. Sofia: Bulgarian Academy of Sciences,
-                  Institute of literature. </bibl>
+                  Institute of literature.</bibl>
                <bibl>Miltenov, Yavor. 2010. A New Source for Studying the Symeonic Zlatostruy
-                  Collection. Scripta &amp; e-Scripta 8-9. 387–404. </bibl>
+                  Collection. Scripta &amp; e-Scripta 8-9. 387–404.</bibl>
                <bibl>Miltenova, Anissava. 2008. Metadata and Electronic Catalogs of Slavic
                   Manuscripts: A Multilingual Web-based Terminological Resource for Mediaeval Slavic
-                  Studies. Scripta &amp; e-Scripta 6. 83–104. </bibl>
-               <bibl>Miltenova, Anissava, A. Boyadzhiev &amp; St. Velev 1998. Repertorium of
-                  Medieval Slavic Literature: Computer and Philological Standards. Palaeobulgarica
-                  22 (2). 50-69. </bibl>
-               <bibl>Miltenova, Anissava &amp; Andrey Boyadzhiev. 2000. An Electronic Repertory of
-                  Medieval Slavic Literature and Letters: A Suite of Guidelines. In A. Miltenova
-                  &amp; D. J. Birnbaum (eds.), Medieval Slavic Manuscripts and SGML. Problems and
-                  Perspectives. Sofia: Marin Drinov. 43-68. </bibl>
-               <bibl>Miltenova, Anissava, David Birnbaum &amp; Sarah Slevinski (eds.). 2003.
+                  Studies. Scripta &amp; e-Scripta 6. 83–104.</bibl>
+               <bibl>Miltenova, Anissava, A. Boyadzhiev and St. Velev 1998. Repertorium of Medieval
+                  Slavic Literature: Computer and Philological Standards. Palaeobulgarica 22 (2).
+                  50-69.</bibl>
+               <bibl>Miltenova, Anissava and Andrey Boyadzhiev. 2000. An Electronic Repertory of
+                  Medieval Slavic Literature and Letters: A Suite of Guidelines. In A. Miltenova and
+                  D. J. Birnbaum (eds.), Medieval Slavic Manuscripts and SGML. Problems and
+                  Perspectives. Sofia: Marin Drinov. 43-68.</bibl>
+               <bibl>Miltenova, Anissava, David Birnbaum and Sarah Slevinski (eds.). 2003.
                   Computational Approaches to the Study of Early and Modern Slavic Languages and
                   Texts. Proceedings of the „Electronic Description and Edition of Slavic Sources”
                   conference, 24-26 September 2002, Pomorie, Bulgaria. Sofia: Boyan Penev Publishing
-                  Center, Institute of Literature. </bibl>
+                  Center, Institute of Literature.</bibl>
                <bibl>Moussakova, Elissaveta. 2003. The Element “Decoration” in Electronic Manuscript
-                  Catalogs. In A. Miltenova, D. J. Birnbaum &amp; S. Slevinski (eds), Computational
+                  Catalogs. In A. Miltenova, D. J. Birnbaum and S. Slevinski (eds), Computational
                   Approaches to the Study of Early and Modern Slavic Languages and Texts.
                   Proceedings of the „Electronic Description and Edition of Slavic Sources”
                   conference, 24-26 September 2002, Pomorie, Bulgaria. Sofia: Boyan Penev Publishing
-                  Center, Institute of Literature. 137–156. </bibl>
+                  Center, Institute of Literature. 137–156.</bibl>
                <bibl>PDF Reference: PDF Reference Sixth Edition. Adobe Portable Document Format 1.7
                   November 2006. Adobe Systems Incorporated. http://www.adobe.com/devnet/acrobat/
-                  pdfs/pdf_reference_1-7.pdf/ (12.02.2012). </bibl>
-               <bibl>Peterson, David, Shudi (Sandy) Gao, Ashok Malhotra, C. M. Sperberg-McQueen
-                  &amp; Henry S Thomson (eds.). 2009: W3C XML Schema Definition Language (XSD) 1.1
-                  Part 2: Datatypes. W3C Working Draft 30 January 2009.
-                  http://www.w3.org/TR/xmlschema11-2/ (12.02.2012). </bibl>
+                  pdfs/pdf_reference_1-7.pdf/ (12.02.2012).</bibl>
+               <bibl>Peterson, David, Shudi (Sandy) Gao, Ashok Malhotra, C. M. Sperberg-McQueen and
+                  Henry S Thomson (eds.). 2009: W3C XML Schema Definition Language (XSD) 1.1 Part 2:
+                  Datatypes. W3C Working Draft 30 January 2009. http://www.w3.org/TR/xmlschema11-2/
+                  (12.02.2012).</bibl>
                <bibl>Philips, A., Davis, M. (eds) 2006c: BCP 47, which consists of Philips, Davis
-                  2006a and Philips Davis 2006b </bibl>
+                  2006a and Philips Davis 2006b</bibl>
                <bibl>Philips, A., Davis, M. (eds). 2006a: Tags for Identifying Languages, BCP 47,
-                  RFC 4646, September 2006. http://tools.ietf.org/html/rfc4646 (12.02.2012) </bibl>
+                  RFC 4646, September 2006. http://tools.ietf.org/html/rfc4646 (12.02.2012)</bibl>
                <bibl>Philips, A., Davis, M. (eds). 2006b: Matching of Language Tags, BCP 47, RFC
-                  4647, September 2006. http://tools.ietf.org/html/rfc4647 (12.02.2012) </bibl>
+                  4647, September 2006. http://tools.ietf.org/html/rfc4647 (12.02.2012)</bibl>
                <bibl>Philips, A., M. Davis (eds). 2006c: BCP 47 (RFC 5646), which consists of
                   Philips, Davis 2006a and Philips Davis 2006b. http://tools.ietf.org/html/bcp47
-                  (12.02.2012). </bibl>
+                  (12.02.2012).</bibl>
                <bibl>Radoslavova, Dilyana. 1998. SGML Tagging of Complex Texts in Old Slavic
                   Liturgical Manuscripts. In Milena Dobreva (ed.), Text Variety in the Witnesses of
-                  Medieval Texts. Sofia: Institute of Mathematics and Informatics. 164–166. </bibl>
+                  Medieval Texts. Sofia: Institute of Mathematics and Informatics. 164–166.</bibl>
                <bibl>Radoslavova, Dilyana. 2000. Problems Concerning the Computer Description and
                   Processing of Slavic Manuscripts of Euchlogical Type with the Help of TSM (A
                   typology of Bulgarian trebnici in the 17th century. Preliminary results). In A.
-                  Miltenova &amp; D. J. Birnbaum (eds.), Medieval Slavic Manuscripts and SGML.
-                  Problems and Perspectives. Sofia: Marin Drinov. 170-204. </bibl>
-               <bibl>Szirmai, J. A. 1999. The Archaeology of Medieval Bookbinding. Ashgate. </bibl>
-               <bibl>Shudi (Sandy) Gao, C. M. Sperberg-McQueen &amp; Henry S. Thompson (eds.). 2012.
+                  Miltenova and D. J. Birnbaum (eds.), Medieval Slavic Manuscripts and SGML.
+                  Problems and Perspectives. Sofia: Marin Drinov. 170-204.</bibl>
+               <bibl>Szirmai, J. A. 1999. The Archaeology of Medieval Bookbinding. Ashgate.</bibl>
+               <bibl>Shudi (Sandy) Gao, C. M. Sperberg-McQueen and Henry S. Thompson (eds.). 2012.
                   W3C XML Schema Definition Language (XSD) 1.1 Part 1: Structures. W3C Proposed
-                  Recommendation 19 January 2012. http://www.w3.org/TR/xmlschema11-1/ (12.02.2012). </bibl>
+                  Recommendation 19 January 2012. http://www.w3.org/TR/xmlschema11-1/
+                  (12.02.2012).</bibl>
                <bibl>Sperberg-McQueen, C. M. and Burnard, Lou (eds.). 1994: TEI P3: Guidelines for
                   Electronic Text Encoding and Interchange.
-                  http://www.tei-c.org/Vault/GL/P3/index.htm (12.02.2012). </bibl>
+                  http://www.tei-c.org/Vault/GL/P3/index.htm (12.02.2012).</bibl>
                <bibl>Stojkova, Ana. 1998. Variety and Standardization of Old Slavonic Texts
                   (Problems of Creating a Data Base). In Milena Dobreva (ed.), Text Variety in the
                   Witnesses of Medieval Texts. Sofia: Institute of Mathematics and Informatics.
-                  147–153. </bibl>
+                  147–153.</bibl>
                <bibl>Stojkova, Ana. 2000. Problems of the Composition of Late Medieval
                   Non-Liturgical Miscellanies and the Place of Hagiographic Works in them. In A.
-                  Miltenova &amp; D. J. Birnbaum (eds.), Medieval Slavic Manuscripts and SGML.
-                  Problems and Perspectives. Sofia: Marin Drinov. 108-130. </bibl>
+                  Miltenova and D. J. Birnbaum (eds.), Medieval Slavic Manuscripts and SGML.
+                  Problems and Perspectives. Sofia: Marin Drinov. 108-130.</bibl>
                <bibl>Thomson, Francis. 1982. Chrysostomica Palaeoslavica. A Preliminary Study of the
-                  Sources of the Chrysorrhoas (Zlatorstrui) Collection. Cyrillomethodianum 6. 1-65. </bibl>
+                  Sources of the Chrysorrhoas (Zlatorstrui) Collection. Cyrillomethodianum 6.
+                  1-65.</bibl>
                <bibl>Unicode 5.1. The Unicode Standard, Version 5.1, Unicode Consortium. 2008.
                   Addison-Wesley Professional. http://www.unicode.org/ (15 July 2010).</bibl>
                <bibl>Walsh, Norman (ed.). 2002. XML Catalogs. OASIS Committee Specification 06
                   August 2001. http://www.oasis-open.org/committees/entity/spec-2001-08-06.html/
                   (12.02.2012).</bibl>
-               <bibl>Александров, А. 1893. Физиолог. </bibl>
+               <bibl>Александров, А. 1893. Физиолог.</bibl>
                <bibl>Дринов, Марин. 1882. Български летописен разказ от края на ХVІІ в. Периодично
-                  списание 3. 8–12 </bibl>
+                  списание 3. 8–12</bibl>
                <bibl>Милтенов, Явор. 2011. Славянский перевод слова Иоанна Златоуста De sancto
-                  hieromartyre Phoca. Byzantinoslavica 59 (1–2). 311–368. </bibl>
+                  hieromartyre Phoca. Byzantinoslavica 59 (1–2). 311–368.</bibl>
                <bibl>Райков, Божидар, Ст. Кожухаров, Х. Миклас и Хр. Кодов. 1994. Каталог на
                   славянските ръкописи в библиотеката на Зографския манастир в Света гора. София:
-                  CIBAL. </bibl>
-               <bibl>Стойкова, Ана. 1994. Физиологът в южнославянските литератури. София: БАН. </bibl>
+                  CIBAL.</bibl>
+               <bibl>Стойкова, Ана. 1994. Физиологът в южнославянските литератури. София:
+                  БАН.</bibl>
                <bibl>Стойкова, Ана. 2011. Славянският Физиолог. Византийска редакция: Електронно
                   издание на текста и сравнително изследване. http://physiologus.proab.info/
-                  (12.02.2012). </bibl>
+                  (12.02.2012).</bibl>
                <bibl>Цонев, Беньо. 1910. Опис на ръкописите и старопечатните книги на Народната
-                  библиотека в София. София: Народна библиотека. </bibl>
+                  библиотека в София. София: Народна библиотека.</bibl>
             </listBibl>
          </div>
       </body>
