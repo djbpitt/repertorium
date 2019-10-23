@@ -1444,62 +1444,70 @@
                </div>
             </div>
             <div>
-               <head>A note inside <gi>material</gi></head>
+               <head>A <gi>note</gi> inside <gi>material</gi></head>
                <p>The meaning of this note is to enable the encoder to describe other features of
                   the material, which is especially important for the description of paper. Although
                   not structured in a systematic way, the information to be entered here might
                   involve:</p>
-               <p><term>Wire lines</term>: The relevant information of wire lines could contain:</p>
-               <list rend="simple">
-                  <item>The density of the wire lines as the measure of 20 wirelines (in mm) — a
-                     standard procedure common in paper descriptions;</item>
-                  <item>Description of wire lines, usually in terms like: thin wire lines; thick
-                     wire lines; alternating thick and thin; very thick wire lines; thick wire
-                     lines, thin lines at edges; wire lines in corrugated pattern; wires wrapped
-                     around the chain lines; alternate wires wrapped around the chains; etc.</item>
+               <list>
+                  <item>
+                     <term>Wire lines</term>: Information about wire (also known as laid) lines
+                     could contain: <list rend="simple">
+                        <item>The density of the wire lines as the measure of 20 wirelines (in mm) —
+                           a standard procedure common in paper descriptions;</item>
+                        <item>Description of wire lines, usually in terms like: thin wire lines;
+                           thick wire lines; alternating thick and thin; very thick wire lines;
+                           thick wire lines, thin lines at edges; wire lines in corrugated pattern;
+                           wires wrapped around the chain lines; alternate wires wrapped around the
+                           chains; etc.</item>
+                     </list>
+                  </item>
+                  <item><term>Chain or laid lines</term>: The most important feature of chain lines
+                     is the spacing between them, which could be described by entering the element
+                        <gi>dim</gi> and its sub element <gi>height</gi>. The following are
+                     recommendations from the Watermark Initiative: <q>If the watermark is on the
+                        chain line the spaces on either side of it should be given in parentheses:
+                        28,25,(15,14),28,25. If the watermark is positioned between or across two
+                        chain lines, the space between them should be given in parentheses:
+                        44,45,(50),47,43</q> (<ptr
+                        target="http://abacus.bates.edu/Faculty/wmarchive/FORM_ descriptions.html"
+                     />). An example of such description is provided as well: <q>04. Wire/Chain line
+                        description: Density of Wirelines: 26 mm. for 20 wirelines. (style: thin
+                        wirelines) Chain line Interval(s): / 50 mm.</q></item>
+                  <item><term>Paper or parchment thickness</term>: The data on paper thickness could
+                     be entered in the element <gi>dim</gi> with the <att>type</att> attribute and a
+                     thickness value. This value could be relative, e.g.: very thin, thin, medium
+                     thin, medium, medium thick, thick, very thick; or, alternatively, it could be
+                     measured in another way.</item>
+                  <item><term>Paper or parchment color</term>: This information could be entered as
+                     content of the element <gi>colour</gi>.</item>
+                  <item><p><term>Texture</term>: For paper
+                        terms in common use include: smooth, matte, fuzzy, patina, glazed, bumpy,
+                        etc. One might also record whether the dark fibres and wire lines are
+                        visible on the surface of the paper.</p></item>
+                  <item><term>Stiffness</term>: Information about the stiffness of paper is rare in
+                     manuscript descriptions, but possible values could include: stiff, crisp,
+                     supple, limp, etc. <p><term>Date of the paper</term>: Usually the dating of the
+                        paper is part of the watermark description. This is the most familiar place
+                        because the watermark image is the most characteristic part of the paper
+                        description. In addition to providing the date or date range, the encoder
+                        could further specify the justification for the dating. Possible values
+                        could include:</p>
+                     <list rend="numbered">
+                        <item>published watermark(s) cited in references;</item>
+                        <item>codex date given in scribal note;</item>
+                        <item>codex dated on palaeographical grounds;</item>
+                        <item>codex dated by comparison of papers;</item>
+                        <item>codex dated from other evidence;</item>
+                        <item>the paper associated with binding, etc.</item>
+                     </list>
+                     <p>The date range could be entered with the asterisk (*) as a wildcard, so
+                        that, for example, the expression 15** would mean the range from 1500 to
+                        1599, 156*, from 1560 to 1569, and 156*-157* - each year from the 1560 up to
+                        the 1579.</p>
+                     <p><emph>References</emph>: The references are given as external reference
+                        element inside the elements <gi>bibl</gi> or <gi>listBibl</gi>.</p></item>
                </list>
-               <p><term>Chain or laid lines</term>: The most important feature of the chain lines is
-                  the spacing between them, which could be described by entering the element
-                     <gi>dim</gi> and its sub element <gi>height</gi>. The following are
-                  recommendations from the Watermark Initiative: “If the watermark is on the chain
-                  line the spaces on either side of it should be given in parentheses:
-                  28,25,(15,14),28,25. If the watermark is positioned between or across two chain
-                  lines, the space between them should be given in parentheses: 44,45,(50),47,43“
-                  (http://abacus.bates.edu/Faculty/wmarchive/FORM_ descriptions.html). An example of
-                  such description is provided as well: “04. Wire/Chain line description: Density of
-                  Wirelines: 26 mm. for 20 wirelines. (style: thin wirelines) Chain line
-                  Interval(s): / 50 mm.”</p>
-               <p><term>Paper or parchment thickness</term>: The data on paper thickness could be
-                  entered in the element <gi>dim</gi> with the <att>type</att> attribute and a
-                  thickness value. This value could be relative, e.g.: very thin, thin, medium thin,
-                  medium, medium thick, thick, very thick; or, alternatively, it could be measured
-                  in another way.</p>
-               <p><term>Paper or parchment colour</term>: This information could be entered as
-                  content of the element <gi>colour</gi>.</p>
-               <p><term>Texture</term>: For paper terms in common use include: smooth, matte, fuzzy,
-                  patina, glazed, bumpy, etc. One might also record whether the dark fibres and wire
-                  lines are visible on the surface of the paper.</p>
-               <p><term>Stiffness</term>: Information about the stiffness of paper is rare in
-                  manuscript descriptions, but possible values could include: stiff, crisp, supple,
-                  limp, etc.</p>
-               <p><term>Date of the paper</term>: Usually the dating of the paper is part of the
-                  watermark description. This is the most familiar place because the watermark image
-                  is the most characteristic part of the paper description. In addition to providing
-                  the date or date range, the encoder could further specify the justification for
-                  the dating. Possible values could include:</p>
-               <list rend="numbered">
-                  <item>published watermark(s) cited in references;</item>
-                  <item>codex date given in scribal note;</item>
-                  <item>codex dated on palaeographical grounds;</item>
-                  <item>codex dated by comparison of papers;</item>
-                  <item>codex dated from other evidence;</item>
-                  <item>the paper associated with binding, etc.</item>
-               </list>
-               <p>The date range could be entered with the asterisk (*) as a wildcard, so that, for
-                  example, the expression 15** would mean the range from 1500 to 1599, 156*, from
-                  1560 to 1569, and 156*-157* - each year from the 1560 up to the 1579.</p>
-               <p><emph>References</emph>: The references are given as external reference element
-                  inside the elements <gi>bibl</gi> or <gi>listBibl</gi>.</p>
             </div>
             <div>
                <head>Number of leaves or folia</head>
