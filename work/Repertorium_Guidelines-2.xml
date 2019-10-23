@@ -950,11 +950,13 @@
                   </egXML>
                </div>
                <div>
-                  <head>Current and former shelfmarks, catalogue numbers, and inventory numbers</head>
+                  <head>Current and former shelfmarks, catalogue numbers, and inventory
+                     numbers</head>
                   <p>The best way to differentiate between current and former designations is to
-                     wrap the element <gi>idno</gi> around <gi>altIdentifier</gi> elements. Consider
-                     the following examples:</p>
-                  <p>1. Manuscript with shelfmark, inventory and catalogue numbers</p>
+                     embed <gi>idno</gi> elements for non-current identifiers inside
+                        <gi>altIdentifier</gi> elements. Consider the following examples:</p>
+                  <p>1. Manuscript with shelfmark, inventory number, and catalogue number (from the
+                     electronic description of MS 1415 of NLCM, Sofia by Dilyana Radoslavova):</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <msIdentifier> ... <settlement>Sofia</settlement>
                         <repository>National Library SS Cyril and Methodios</repository>
@@ -964,14 +966,15 @@
                         </altIdentifier>
                         <altIdentifier>
                            <idno type="catalogue">1415</idno>
-                        </altIdentifier> ... </msIdentifier> (From the electronic description of MS
-                     1415 of NLCM, Sofia by Dilyana Radoslavova) </egXML>
-                  <p>2. Manuscript with current and several former shelfmarks:</p>
+                        </altIdentifier> ... </msIdentifier>
+                  </egXML>
+                  <p>2. Manuscript with current and several former shelfmarks (from the electronic
+                     description of MS 1/102 of Odessa State Libary by Anisava Miltenova):</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <msIdentifier> ... <country>Ukraine</country>
                         <settlement>Odessa</settlement>
                         <repository>State Library</repository>
-                        <collection>V. Grigirovich</collection>
+                        <collection>V. Grigorovič</collection>
                         <idno type="shelfmark">1/102</idno>
                         <altIdentifier type="former">
                            <idno type="shelfmark">1/211</idno>
@@ -984,48 +987,50 @@
                         </altIdentifier>
                         <altIdentifier>
                            <idno type="catalogue">20</idno>
-                        </altIdentifier> ... </msIdentifier> (From the electronic description of MS
-                     1/102 of Odessa State Libary by Anisava Miltenova) </egXML>
+                        </altIdentifier> ... </msIdentifier>
+                  </egXML>
                   <p>In this example the manuscript has one current and three former shelfmarks and
                      it is described in the catalogue as item number 20.</p>
-                  <p>By setting the value of <att>type</att> in the <gi>altIdentifier</gi> element
-                     the encoder can choose between the values current and former and then further
-                     define values in its sub-elements, e.g.:</p>
+                  <p>By setting the value of the <att>type</att> attribute in the
+                        <gi>altIdentifier</gi> element the encoder can choose between the values
+                        <q>current</q> and <q>former</q> and then supply appropriate values in its
+                     sub-elements, e.g.:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <altIdentifier type="current"> ... <idno type="shelfmark">Ms 3045</idno> ...
-                     </altIdentifier>
+                     <altIdentifier type="current"> ... <idno type="shelfmark">Ms 3045</idno> ... </altIdentifier>
                   </egXML>
                </div>
                <div>
                   <head>Collections</head>
-                  <p>Some repositories use a complex archiving system with special divisions between
-                     the separate collections and archives. Very often the names of the sections
-                     bear the names of previous owners or commissioners, which can be represented
-                     with the <gi>collection</gi> element. The <att>type</att> and
-                        <att>subtype</att> attributes are available for cases where a more detailed
-                     characterization is necessary.</p>
+                  <p>Some repositories use a complex archiving system with special divisions among
+                     separate collections and archives. Very often the sections bear the names of
+                     previous owners or commissioners, which can be represented with the
+                        <gi>collection</gi> element. The <att>type</att> and <att>subtype</att>
+                     attributes are available for cases where a more detailed characterization is
+                     necessary.</p>
                   <p>The <gi>collection</gi> element may contain unstructured (plain) text,
                      e.g.:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <collection>П. Сырку</collection>
                      <idno>15</idno>
                   </egXML>
-                  <p>In this fragment it is stated that the collection belongs to the gatherings of
-                     P. Syrku under the number 15.</p>
+                  <p>In this fragment it is stated that the collection belongs to the materials of
+                     P. Syrku and is catalogued under the number 15.</p>
                   <p>When thе <gi>collection</gi> element appears, it is immediately followed by the
-                     shelfmark or inventory number as an identification inside the collection:</p>
+                     shelfmark or inventory number as an identification inside the collection, as in
+                     the following example (from the electronic description of a Vidin Miscellany by
+                     Antoaneta Granberg):</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <msIdentifier> ... <collection>M. Pogodin</collection>
                         <idno type="shelfmark">Pog. 1204</idno>
                         <altIdentifier type="current">
                            <idno type="catalogue">77</idno>
-                        </altIdentifier> ... </msIdentifier> (From the electronic description of a
-                     Vidin Miscellany by Antoaneta Granberg) </egXML>
-                  <p>In some cases the current collection of some repository contains an entire
-                     earlier repository collection. This is often the case in Russian collections
-                     like the National Russian Library in Sankt-Petersburg, the Historical Museum,
-                     the State Russian Library and the Russian State Archive of Ancient Acts. In
-                     this case it is helpful to include this information, as well, e.g.:</p>
+                        </altIdentifier> ... </msIdentifier></egXML>
+                  <p>In some cases the current collection of a repository may have absorbed an
+                     entire earlier repository collection. This is often the case in Russian
+                     collections like the Russian National Library in Sankt-Petersburg, the
+                     Historical Museum, the Russian State Library, and the Russian State Archive of
+                     Ancient Acts. In this case it is helpful to include this information, as well,
+                     e.g.:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <msIdentifier>
                         <msName>Hitrovo Evangelion</msName>
@@ -1035,7 +1040,7 @@
                         <collection>ф. 304. III.</collection>
                         <idno type="shelfmark">3</idno>
                         <altIdentifier type="former">
-                           <collection>M. </collection>
+                           <collection>M.</collection>
                            <idno type="shelfmark">8657</idno>
                         </altIdentifier>
                         <altIdentifier type="former">
@@ -1047,44 +1052,50 @@
                </div>
                <div>
                   <head>Various parts of the manuscript in one repository</head>
-                  <p>In this case the information about the country, city, geographical or place
-                     names and repository remain the same and only information about the shelfmarks,
-                     collections or catalogue numbers differ. This approach is illustrated with the
-                     description of the Pirdop Apostle:</p>
+                  <p>In this case information about the country, city, geographical or place names,
+                     and repository remain the same, and only information about the shelfmarks,
+                     collections, or catalogue numbers differ. This approach is illustrated below
+                     with the description of the <hi rend="italic">Pirdop Apostle</hi> by Dimitrinka
+                     Dimitrova:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <msIdentifier>
-                        <msName>Пирдопски апостол</msName>
-                        <msName>Pirdop Apostle</msName>
+                        <msName xml:lang="bg">Пирдопски апостол</msName>
+                        <msName xml:lang="en">Pirdop Apostle</msName>
                         <country>Bulgaria</country>
                         <settlement>Sofia</settlement>
                         <repository>National Library SS Cyril and Methodios</repository>
                         <altIdentifier xml:id="NBKM497">
                            <idno type="shelfmark">497</idno>
                            <idno type="inventory">237</idno>
-                           <note place="inline"><ref type="bibl" target="../bibliography/TsonevB1923">Цонев II, с. 70, Nr 497</ref>
+                           <note place="inline">
+                              <ref type="bibl" target="../bibliography/TsonevB1923">Цонев II, с. 70, Nr 497</ref>
                            </note>
                         </altIdentifier>
                         <altIdentifier xml:id="NBKM90">
                            <idno type="shelfmark">90</idno>
                            <idno type="inventory">588</idno>
-                           <note place="inline"><ref type="bibl" target="../bibliography/TsonevB1910">Цонев I, с. 31-33, Nr 90</ref>
+                           <note place="inline">
+                              <ref type="bibl" target="../bibliography/TsonevB1910">Цонев I, с. 31-33, Nr 90</ref>
                            </note>
-                        </altIdentifier></msIdentifier> (From the electronic description of the
-                     Pirdop Apostle by Dimitrinka Dimitrova) </egXML>
+                        </altIdentifier></msIdentifier>
+                  </egXML>
                </div>
                <div>
                   <head>One and the same manuscript in different repositories</head>
-                  <p>When the manuscript is separated into different repositories the encoder should
-                     use the element <gi>altIdentifier</gi> to designate each part. There are two
-                     main cases:</p>
+                  <p>When the manuscript has become separated, with fragments now stored in
+                     different repositories, the encoder should use the element
+                        <gi>altIdentifier</gi> to designate each part. There are two main cases:</p>
                   <list rend="numbered">
                      <item>If the manuscript is separated into one larger part and several smaller
                         pieces, the cataloguing part of the description could be included
-                        immediately after <gi>msIdentifier</gi> and the other parts inside an
-                           <gi>altIdentifier</gi> element.</item>
-                     <item>A better approach is to designate all parts inside <gi>altIdentifier</gi>
-                        elements. This approach could be used also when there is no unambiguous main
-                        part:</item>
+                        immediately after <gi>msIdentifier</gi> and the other parts inside
+                           <gi>altIdentifier</gi> elements.</item>
+                     <item>An alternative approach, which does not encode a distinction between main
+                        and minor parts, is to designate all parts inside <gi>altIdentifier</gi>
+                        elements. This approach could be used especially when there is no
+                        unambiguous main part. The following information about the Slepcha Apostol
+                        illustrates one way of representing cataloguing information about a
+                        manuscript that has become fragmented across repositories:</item>
                   </list>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <msIdentifier>
@@ -1125,16 +1136,17 @@
                   </egXML>
                </div>
                <div>
-                  <head>Once again about the usage of <gi>altIdentifier</gi> and <gi>idno
+                  <head>Summary informaation about the <gi>altIdentifier</gi> and <gi>idno
                      </gi>elements</head>
                   <p>In an analytical catalogue where there may be combinations of former and
-                     current collections and shelfmarks in a repository it is often useful to encode
-                     all these designations. The encoder can then further explain the history of the
-                     manuscript in sections about its origin, provenance and acquisition.</p>
-                  <p>The usage of <gi>altIdentifier</gi> in the Repertorium approach as a
-                     sub-element of <gi>msIdentifier</gi> is to define the current or old
+                     current collections and shelfmarks in a repository, it is often useful to
+                     encode all these designations. The encoder can then further explain the history
+                     of the manuscript in sections about its origin, provenance, and
+                     acquisition.</p>
+                  <p>The <gi>altIdentifier</gi> element may be used in the Repertorium approach as a
+                     child of <gi>msIdentifier</gi> is to represent the current or old
                      identification of a codex or to distinguish among parts of one and the same
-                     manuscript dispersed in one or in various repositories.</p>
+                     manuscript now dispersed within one or over more than one repository.</p>
                   <p>The element <gi>idno</gi>, on the other hand, is used for various kinds of
                      designations, such as shelfmarks and inventory or catalogue numbers. In this
                      approach, if we have a part of the manuscript in one repository with an old
@@ -1153,10 +1165,10 @@
                         </altIdentifier>
                      </altIdentifier>
                   </egXML>
-                  <p>In this example both Grig. 14 and M. 1696 are used as identifications in the
-                     tradition in spite of the fact that the latter points to the previous owner. In
-                     this case the shelfmark signifies the intermediate change of owner. Further
-                     details should be given in the section about the history of the codex.</p>
+                  <p>In this example both Grig. 14 and M. 1696 are used as identifiers even though
+                     the latter points to a previous owner. In this case the shelfmark signifies the
+                     intermediate change of owner. Further details should be given in the section
+                     about the history of the codex.</p>
                </div>
                <div>
                   <head>Secundo folio</head>
@@ -1164,12 +1176,12 @@
                      but for western medieval manuscripts it has been (mainly between the thirteenth
                      and sixteenth centuries) a common component of manuscript description. The term
                      refers to transcribing the first word or words from the second leaf of a codex.
-                     The element <gi>secFol</gi> (Lat. secundo folio, or Eng. second folio) is used
-                     for this purpose (Burnard and Bauman 2007: <gi>secFol</gi>). The following
-                     example illustrates the usage:</p>
+                     The element <gi>secFol</gi> (Lat. <gloss>secundo folio</gloss>, or Eng.
+                        <gloss>second folio</gloss>) is used for this purpose (Burnard and Bauman
+                     2007: <gi>secFol</gi>). The following example, from a description of MS Crispin
+                     16, Dutschke et al. 1987: 35–36, illustrates this usage:</p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <secFol>dixit ad me</secFol> (Description of MS Crispin 16, Dutschke et al.
-                     1987: 35–36) </egXML>
+                     <secFol>dixit ad me</secFol></egXML>
                </div>
                <div>
                   <head>Additional information in the catalogue description</head>
