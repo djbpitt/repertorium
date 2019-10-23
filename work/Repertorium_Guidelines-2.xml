@@ -1199,31 +1199,31 @@
                <p>The markup definition of the physical structure should be entered in the element
                      <gi>physDesc</gi> (Burnard and Bauman 2007), which unites information about the
                   physical condition of the manuscript with observations about the material, layout,
-                  binding and decoration. The encoder can choose between two options:</p>
+                  binding, and decoration. The encoder can choose between two options:</p>
                <list rend="numbered">
-                  <item>To make a very short sketch of different features of the manuscript in
+                  <item>To provide a very short sketch of different features of the manuscript in
                      paragraphs, or</item>
-                  <item>2. To use special elements for the description of material, layout, binding,
-                     decoration, etc.</item>
+                  <item>To use special elements in a structured description of material, layout,
+                     binding, decoration, etc.</item>
                </list>
-               <p>For the former approach the encoder should use only paragraphs, as in this
-                  example:</p>
+               <p>For the former approach the encoder should use only paragraphs, as in this example
+                  from the electronic description of MS CIAI 369 by Margaret Dimitrova
+                  (simplified):</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <physDesc>
-                     <p>4+516 ff. (Stojanov wrongly gives 273ff.). Paper with watermark three
+                     <p>4+516 ff. (Stojanov wrongly gives 273ff.). Paper with watermark of three
                         cylinders with letters FA. 230 x 180 mm. In 1 column, 30 lines per page</p>
                      <p>Greek cursive of the 19th century.</p>
-                     <p>The original binding is preserved: leather on boards. Remains of clasps
+                     <p>The original binding is preserved: leather on boards. Remains of clasps.
                         Blind-tooled frames of floral motifs and blind stamped central medallions on
                         both covers.</p>
                      <p>The codex is in good condition. The folios containing the Table of contents
                         are now unfolded. Originally they formed the last quire of the
-                        manuscript</p>
-                  </physDesc> (From the electronic description of MS CIAI 369 by Margaret Dimitrova,
-                  simplified) </egXML>
+                        manuscript.</p>
+                  </physDesc>
+               </egXML>
                <p>The element <gi>physDesc</gi> has no special attributes. Its only use is to
-                  contain other elements, which encode the physical characteristics of the
-                  manuscript.</p>
+                  contain elements that encode the physical characteristics of the manuscript.</p>
                <p>The second approach also permits the use of the element <gi>p</gi>, in this case
                   for an introduction to the physical description.</p>
             </div>
@@ -1231,49 +1231,57 @@
                <head>Description of material and layout</head>
                <p>Information about manuscript materials and their characteristics and about the
                   layout of the leaves is encoded within <gi>objectDesc</gi>. This element has one
-                  special attribute, <att>form</att> . The proposed values (Burnard and Bauman 2007)
-                  of this attribute could be codex, roll, fragment, leaf, partial leaf or some
-                  typologically relevant value, e.g.</p>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <objectDesc form="codex"> ... </objectDesc> or <objectDesc form="roll"> ...
-                  </objectDesc>
+                  special attribute, <att>form</att>, with proposed values (cf. Burnard and Bauman
+                  2007) <q>codex</q>, <q>roll</q>, <q>fragment</q>, <q>leaf</q>, <q>partial
+                  leaf</q>, or some typologically relevant value, e.g.:
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <objectDesc form="codex"> ... </objectDesc></egXML>
+                  or
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <objectDesc form="roll"> ...</objectDesc>
                </egXML>
-               <p>This information could be entered as an unstructured sequence of paragraphs, or as
+               </p>
+               <p>This information could be entered as an unstructured sequence of paragraphs or as
                   part of the content of the specialized elements <gi>supportDesc</gi> and
                      <gi>layoutDesc</gi> .</p>
             </div>
             <div>
                <head>Description of physical support</head>
-               <p>The information in <gi>supportDesc</gi> could be also entered in two ways: 1) as
-                  an unstructured (paragraph) view, or 2) using specialized elements. Here we
-                  illustrate an overview of the use of structured data for various aspects of
-                  cataloguing the support.</p>
-               <p><gi>supportDesc</gi> has one important attribute, <att>material</att>. The value
-                  of this attribute, as suggested by TEI Guidelines (Burnard and Bauman 2007:
-                     <gi>supportDesc</gi>), is most commonly parchment, paper, or mixed, as in this
-                  example:</p>
+               <p>The information in <gi>supportDesc</gi> may be entered in two ways: <list
+                     rend="numbered">
+                     <item>as an unstructured (paragraph) view, or</item>
+                     <item>using specialized elements.</item>
+                  </list> Here we illustrate an overview of the use of structured data for various
+                  aspects of cataloguing the support. </p>
+               <p><gi>supportDesc</gi> has one important attribute, <att>material</att>. Valuea of
+                  this attribute, as suggested by TEI Guidelines (Burnard and Bauman 2007:
+                     <gi>supportDesc</gi>), are most commonly <q>parchment</q>, <q>paper</q>, or
+                     <q>mixed</q>, as in this example:</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <supportDesc material="paper"> ... </supportDesc>
                </egXML>
                <p>The meaning of the value of this attribute is to give a general type of the
                   material of the manuscript, and it is not associated with the possible
                   construction of manuscript’s binding or the box in which the manuscript is kept.
-                  Especially in cases when the value is „mixed,” a further explanation should be
-                  provided.</p>
+                  Especially in cases when the value is <q>mixed</q>, a further explanation should
+                  be provided.</p>
                <p>The order of information in this element is significant, and follows traditional
                   paper-based descriptions. There is no required minimal content, and the range of
                   information depends on the opportunities the researcher may have had to work with
-                  the manuscript de visu. The brief explanation of the proposed elements is as
+                  the manuscript de visu. A brief explanation of the proposed elements is as
                   follows:</p>
-               <p><gi>support</gi> – describes in more detail the material of the leaves or roll</p>
-               <p><gi>extent</gi> – describes the size of manuscript in terms like number of folia
-                  or pages, or the length of the roll;</p>
-               <p><gi>foliation</gi> and/or <gi>pagination</gi> – information about whether the
-                  manuscript is foliated (paginated), with further explanation;</p>
-               <p><gi>collation</gi> – description of the folia collation, ruling, pricking and
-                  other techniques related to the quire structure;</p>
-               <p><gi>condition</gi> – an overview of possible damage, absence or additions of
-                  folia, blank leaves, etc.</p>
+               <list>
+                  <item><gi>support</gi>: describes in more detail the material of the leaves or
+                     roll</item>
+                  <item><gi>extent</gi>: describes the size of manuscript in terms like number of
+                     folia or pages, or the length of the roll</item>
+                  <item><gi>foliation</gi> and/or <gi>pagination</gi>: information about whether the
+                     manuscript is foliated (paginated), with further explanation</item>
+                  <item><gi>collation</gi>: description of the folia collation, ruling, pricking,
+                     and other features related to the quire structure</item>
+                  <item><gi>condition</gi>: an overview of possible damage, absence or addition of
+                     folia, blank leaves, etc.</item>
+               </list>
             </div>
             <div>
                <head>Detailed description of material</head>
@@ -1281,31 +1289,33 @@
                      (<gi>p</gi>) in the element <gi>support</gi> or as one or more instances of the
                   element <gi>material</gi>. It contains a brief statement that can serve as an
                   overview of a more in-depth description that can follow. Here is an example of the
-                  first type:</p>
+                  first type, from the electronic description of MS Rila 3/6 by Dilyana Radoslavova,
+                  simplified:</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <support>
                      <p>Paper with <watermark>Harbalet in Ring</watermark>: similar to
-                           <bibl>Harlfinger Nr. 2/a</bibl> from the years 1471-1472</p>
-                  </support> (From the electronic description of MS Rila 3/6 by Dilyana Radoslavova,
-                  simplified) </egXML>
-               <p>However, in the case of an analytical description we may choose to use a paragraph
-                  as just an introduction to a more elaborate description of the material, or we may
-                  use only one or more <gi>material</gi> elements, often depending on the
-                  completeness of information we have. For example, if we are describing a
-                  manuscript that we have not been able to examine de visu, or are making an
-                  electronic edition of an old catalogue, we may lack information about the paper or
-                  quality of parchment. In such cases we may ignore the <gi>support</gi> section of
-                  description and provide the information we do have only as the value of the
-                  attribute <att>material</att> in the element <gi>supportDesc</gi>, as in the
-                  example above.</p>
+                           <bibl>Harlfinger Nr. 2/a</bibl> from the years 1471–72</p>
+                  </support>
+               </egXML>
+               <p>In the case of an analytical description we may choose to use a paragraph as just
+                  an introduction to a more elaborate description of the material, or we may use
+                  only one or more <gi>material</gi> elements, with the decision often depending on
+                  the completeness of available information. For example, if we are describing a
+                  manuscript that we have not been able to examine de visu, or are creating an
+                  electronic edition on the basis of an old catalogue, we may lack information about
+                  the paper or quality of parchment. In such cases we may ignore the
+                     <gi>support</gi> section of the description and provide the information we do
+                  have only as the value of the attribute <att>material</att> on the element
+                     <gi>supportDesc</gi>, as in the example above.</p>
                <p>In contrast with this, when we use one or more <gi>material</gi> elements not as
-                  part of <gi>p</gi>, that means that we have enough information to complete a
-                  parchment or paper description of the codex. Consider the following example:</p>
+                  part of <gi>p</gi>, that means that we have enough information to provide a
+                  detailed parchment or paper description of the codex. Consider the following
+                  template:</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <supportDesc material="mixed">
                      <support>
-                        <material key="parchment">Here is the information on parchment</material>
-                        <material key="paper">Here is the information on paper. </material>
+                        <material key="parchment">Here is the information about parchment.</material>
+                        <material key="paper">Here is the information about paper.</material>
                      </support> ... </supportDesc>
                </egXML>
                <p>Here the <att>key</att> attribute is used to distinguish the different materials
@@ -1313,33 +1323,35 @@
                      <att>material</att>, with values that might include (but are not limited
                   to):</p>
                <list rend="simple">
-                  <item>original: original parchment used for the main body of the
-                     manuscript;</item>
-                  <item>reused: reused parchment (palimpsest) or paper;</item>
-                  <item>supplement: a supplement written for the original manuscript;</item>
-                  <item>restoration: added during the restoration process;</item>
-                  <item>endleaf: use for the end leaves;</item>
-                  <item>pastedown: leaf or leaves glued to the inside of a board;</item>
-                  <item>binding: part of the binding (but not the only part of it);</item>
-                  <item>wrapper: a wrapper for the manuscript;</item>
-                  <item>distinct: an originally distinct leaf or leaves (bound with the manuscript
-                     at a latter date);</item>
-                  <item>other: all other possible cases that could not be formalized clearly in
-                     advance.</item>
+                  <item><q>original</q>: original parchment used for the main body of the
+                     manuscript</item>
+                  <item><q>reused</q>: reused parchment (palimpsest) or paper</item>
+                  <item><q>supplement</q>: a supplement written for the original manuscript</item>
+                  <item><q>restoration</q>: added during the restoration process</item>
+                  <item><q>endleaf</q>: use for the end leaves</item>
+                  <item><q>pastedown</q>: leaf or leaves glued to the inside of a board</item>
+                  <item><q>binding</q>: part of the binding (but not the only part of it)</item>
+                  <item><q>wrapper</q>: a wrapper for the manuscript</item>
+                  <item><q>distinct</q>: an originally distinct leaf or leaves, bound with the
+                     manuscript at a latter date</item>
+                  <item><q>other</q>: cases that could not be formalized clearly in advance</item>
                </list>
             </div>
             <div>
                <head>Description of parchment</head>
-               <p>The parchment description is restricted to the technological process and its outer
-                  appearance. However, the encoder might wish to add a statement regarding the
-                  origin, quality, colour and thickness of the parchment, as in these examples:</p>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <p>The description of parchment is restricted to the technological process and its
+                  outer appearance. However, the encoder might wish to add a statement regarding the
+                  origin, quality, color and thickness of the parchment, as in the following
+                  examples (from <ptr target="https://www.mossercatalogue.net/record.php?recID=Hg"
+                  />):
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <material key="parchment" usage="original">More probably sheep than calf...of
                      middling thickness and quality, with a good mat (velvety) finish" (Doyle and
-                     Parkes 1979: xxi), trimmed and very stained. </material>
+                     Parkes 1979: xxi), trimmed and very stained.</material>
                   <material key="parchment" usage="restoration">Portions eroded (gnawed by rats?)
-                     have been replaced with blank parchment (1956). </material>
-                  (http://www.canterburytalesproject.org/pubs/HGMsDesc.html) </egXML>
+                     have been replaced with blank parchment (1956).</material>
+               </egXML>
+               </p>
             </div>
             <div>
                <head>Description of paper</head>
@@ -1350,73 +1362,80 @@
                      information in the catalogues, and, on the other, there are much more
                      specialized research initiatives in the field of paper and watermark studies.
                      Therefore, the description of the paper in a manuscript could consist of an
-                     overview and comments followed by a description of watermark(s) and of other
-                     aspects of the paper production:</p>
-                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     overview and comments followed by a description of watermarks and of other
+                     aspects of the paper production. A simple paper description is illustrated by
+                     the following excerpt from the electronic description of Add. Ms 37233 by
+                     Dilyana Radoslavova (simplified):
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <material usage="original">
-                        <dim type="format">4°</dim>thick, rough, non-glazed paper </material> (From
-                     the electronic description of Add. Ms 37233 by Dilyana Radoslavova, simplified) </egXML>
+                        <dim type="format">4°</dim>thick, rough, non-glazed paper </material>
+                     </egXML>
+                  </p>
                   <p>The description of obviously different kind of paper, possibly from various
-                     manufactures, and of varying quality and age could be accomplished by repeating
+                     manufactures and of varying quality and age, could be accomplished by repeating
                      the element <gi>material</gi> and its attributes exactly in the same manner as
                      it is implemented for the description of parchment.</p>
                </div>
                <div>
                   <head>Watermarks</head>
                   <p>The central and most important information in the description of the paper is
-                     the watermark. The information on its characteristics is part of the element
-                        <gi>watermark</gi>. The content of this element includes phrase level
+                     the watermark, and information on its characteristics is part of the element
+                        <gi>watermark</gi>. The content of this element includes phrase-level
                      elements, as well as specialized elements like <gi>countermark</gi> and
                         <gi>motif</gi>.</p>
-                  <p>There are several special attributes for the content of this element
-                        <gi>tracing</gi> is used to describe very briefly (with one word) the method
-                     of watermark tracing. The most usual method is still drawing by hand, but there
-                     could be other possibilities like rubbing by hand, usage of special Dylux print
-                     paper, beta- or x-radiography, scanning, etc. Further more the <att>place</att>
-                     from the <code>class att.placement</code> can refine where on the pages the
-                     watermark could be seen. This feature could be described in relation to wire
-                     lines and chain (laid) lines. The possible content might read something like:
-                     chain lines regularly spaced, between chain lines more widely spaced, on a
-                     chain line, on a supplemental chain line, across 2 chain lines, across 3 chain
-                     lines, or could be expressed in some other terms, e.g., in millimeters between
-                     various points of the leaf.</p>
+                  <p>There are several special attributes for the content of this element.
+                        <att>tracing</att> is used to describe very briefly (with one word) the
+                     method of watermark tracing. The most usual method is still drawing by hand,
+                     but other possibilities include rubbing by hand, use of special Dylux print
+                     paper, beta- or x-radiography, scanning, etc. The <att>place</att> attribute
+                     from the <ident>class att.placement</ident> class can specify more precisely
+                     the location of the watermark on the page. This feature could be described in
+                     relation to chain and laid (also called wire) lines. The possible content might
+                     read something like <q>between widely spaced chain lines</q>, <q>on a chain
+                        line</q>, <q>on a supplemental chain line</q>, <q>across 2 chain lines</q>,
+                        <q>across 3 chain lines</q>, or could be expressed in some other terms,
+                     e.g., in millimeters between various locations on the leaf.</p>
                   <div>
                      <head>Motif</head>
                      <p>The element <gi>motif</gi> is the most important part of the watermark
-                        description because it is intended to give a special terminological
-                        apparatus of watermark design.</p>
-                     <p>There are several ways to add information on this subject:</p>
+                        description because it is intended to represent information from a special
+                        terminological apparatus of watermark design. There are several ways to
+                        include motif information:</p>
                      <list>
                         <item>In the absence of reference books and watermark albums, simply as
-                           plain text;</item>
+                           plain text</item>
                         <item>If a more complicated motif is present and the encoder would like to
                            provide full compatibility with professional watermark databases, with
-                           the attribute <att>type</att>, as described below;</item>
-                        <item>By secondary is meant designs above or below the basic motif.
+                           the attribute <att>type</att>, as described below</item>
+                        <item>By <q>secondary</q> is meant designs above or below the basic motif.
                            Frequently used motifs above the basic one include bird, cross, flower,
                            monograms, monograms with a combination with figures (e.g., monogram BA
                            and cross), ramrod, different star shapes, star and monogram, trefoil,
                            etc. Frequently used motifs below the basic one include grapes,
-                           monograms, etc.;</item>
-                        <item>By supplemental is meant supplemental characteristics of the basic
-                           motif, e.g., in circle, in oval, in shield, etc.</item>
+                           monograms, etc.</item>
+                        <item>By <q>supplemental</q> is meant supplemental characteristics of the
+                           basic motif, e.g., in circle, in oval, in shield, etc.</item>
                      </list>
-                     <p>In this approach the usual description of the motif “anchor in circle with
-                        5-point star above” could be encoded as:</p>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <motif type="basic">anchor<motif type="supplemental">in circle</motif>
+                     <p>In this approach a typical description of the motif <q>anchor in circle with
+                           5-point star above</q> could be encoded hierarchically, as follows:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <motif type="basic">anchor
+                           <motif type="supplemental">in circle</motif>
                            <motif type="secondary">with star/5-point above</motif>
                         </motif>
                      </egXML>
+                     </p>
                   </div>
                   <div>
                      <head>Countermark</head>
-                     <p>A countermark has the same content and attributes as the <gi>watermark</gi>
-                        element. Example:</p>
+                     <p>The <gi>countermark</gi> element has the same content and attributes as a
+                           <gi>watermark</gi> element. For example:</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <material>
-                           <watermark tracing="drawing"><motif type="basic">Leo</motif>within <motif type="supplemental">circle</motif> surmounted by <motif type="secondary">quatrefoil</motif> and with
-                                 <countermark>"AP"</countermark> similar to <ref>Nikolaev #125</ref>
+                           <watermark tracing="drawing">
+                              <motif type="basic">Leo</motif> within <motif type="supplemental">circle</motif> 
+                              surmounted by <motif type="secondary">quatrefoil</motif> and with
+                                 <countermark>AP</countermark> similar to <ref>Nikolaev #125</ref>
                               from the year <date cert="yes">1585</date>
                            </watermark>
                         </material>
