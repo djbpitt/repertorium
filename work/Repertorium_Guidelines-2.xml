@@ -58,10 +58,10 @@
                <titlePart>Guidelines for the Repertorium Initiative XML Model for manuscript
                   description</titlePart>
             </docTitle>
-            <docEdition>Second Edition</docEdition>
+            <docEdition>Second edition</docEdition>
             <docAuthor>Andrej Bojadžiev</docAuthor>
-            <docAuthor>Anisava Miltenova</docAuthor>
             <docAuthor>David J. Birnbaum</docAuthor>
+            <docAuthor>Anisava Miltenova</docAuthor>
             <docAuthor>Dilyana Radoslavova</docAuthor>
             <docImprint>
                <publisher>Repertorium Initiative (Institute of Literature, Bulgarian Academy of
@@ -516,14 +516,14 @@
                      has a structured model of the same information, an attempt has been made to
                      integrate both approaches into the declaration of element. This is the case,
                      for example, with <gi>bindingDesc</gi>. The declaration of this element in TEI
-                     P5 is: <code>&lt;!ELEMENT bindingDesc ((%model.pLike; | decoNote | condition)+
-                        | binding+)&gt;</code> The the content of <gi>binding</gi> has been declared
-                     as
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples"> &lt;!ELEMENT binding (%model.pLike; | condition | decoNote)+&gt;</egXML>
+                     P5 is:
+                        <eg><![CDATA[<!ELEMENT bindingDesc ((%model.pLike; | decoNote | condition)+ | binding+)>]]></eg>
+                     The content of <gi>binding</gi> has been declared as
+                        <eg><![CDATA[<!ELEMENT binding (%model.pLike; | condition | decoNote)+>]]></eg>
                      The proposed model leaves the declaration of <gi>bindingDesc</gi> without
                      changes but modifies the content of the element <gi>binding</gi> to include
                      structured information:
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples"> &lt;!ELEMENT binding (%model.pLike; | bindingNote |condition | decoNote)+&gt; </egXML></item>
+                        <eg><![CDATA[<!ELEMENT binding (%model.pLike; | bindingNote |condition | decoNote)>]]></eg></item>
                   <item>If there is an element in the Repertorium that has the same name as in TEI
                      P5 but a different meaning, the Repertorium element has been removed or
                      renamed. An example of such an element is <gi>writing</gi>, which was used in
@@ -4249,34 +4249,38 @@
          </div>
          <div>
             <head>Obsolete Repertorium elements</head>
-            <p>articleContentDesc, articleData, articleName, borders, cadels, catalogNr,
-               catalogueStmt, churchCal, codicology, compositionQuire, contentDesc, decoration,
-               disposition, headpieces, initials, ligature, linefillers, litRedaction, location,
-               locNumber, man uscriptContentDesc,manuscriptCreation,manuscriptDate, manuscriptName,
-               manuscriptPlace, markings, miniatures, miscObservat, neighbour, noteAuthor,
-               noteContent, noteData, noteFormula, numbColumn, numberTexts, numbLines, numFolio,
-               numPage, otherDecoration, overview, pageRange, paperList, parchmentList, position,
-               protograph, quireStructure, repositCity, repositCountry, repositSignature, repro,
-               scribeList, source, sup, tailpieces, translation, wash.</p>
+            <p><gi>articleContentDesc</gi>, <gi>articleData</gi>, <gi>articleName</gi>,
+                  <gi>borders</gi>, <gi>cadels</gi>, <gi>catalogNr</gi>, <gi>catalogueStmt</gi>,
+                  <gi>churchCal</gi>, <gi>codicology</gi>, <gi>compositionQuire</gi>,
+                  <gi>contentDesc</gi>, <gi>decoration</gi>, <gi>disposition</gi>,
+                  <gi>headpieces</gi>, <gi>initials</gi>, <gi>ligature</gi>, <gi>linefillers</gi>,
+                  <gi>litRedaction</gi>, <gi>location</gi>, <gi>locNumber</gi>, <gi>man</gi>
+               <gi>uscriptContentDesc</gi>,<gi>manuscriptCreation</gi>,<gi>manuscriptDate</gi>,
+                  <gi>manuscriptName</gi>, <gi>manuscriptPlace</gi>, <gi>markings</gi>,
+                  <gi>miniatures</gi>, <gi>miscObservat</gi>, <gi>neighbour</gi>,
+                  <gi>noteAuthor</gi>, <gi>noteContent</gi>, <gi>noteData</gi>,
+               <gi>noteFormula</gi>, <gi>numbColumn</gi>, <gi>numberTexts</gi>, <gi>numbLines</gi>,
+                  <gi>numFolio</gi>, <gi>numPage</gi>, <gi>otherDecoration</gi>, <gi>overview</gi>,
+                  <gi>pageRange</gi>, <gi>paperList</gi>, <gi>parchmentList</gi>, <gi>position</gi>,
+                  <gi>protograph</gi>, <gi>quireStructure</gi>, <gi>repositCity</gi>,
+                  <gi>repositCountry</gi>, <gi>repositSignature</gi>, <gi>repro</gi>,
+                  <gi>scribeList</gi>, <gi>source</gi>, <gi>sup</gi>, <gi>tailpieces</gi>,
+                  <gi>translation</gi>, <gi>wash</gi></p>
          </div>
          <div>
             <head>TEI modules used in the Repertorium and their changes</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-               <moduleRef key="header" except="appInfo application
-              biblFull handNote scriptNote typeNote"/>
-               <moduleRef key="linking" except="alt altGrp join joinGrp
-              link linkGrp"/>
+               <moduleRef key="header" except="appInfo application biblFull handNote scriptNote typeNote"/>
+               <moduleRef key="linking" except="alt altGrp join joinGrp link linkGrp"/>
                <moduleRef key="core" except="postBox postCode teiCorpus"/>
                <moduleRef key="tei"/>
-               <moduleRef key="textstructure" except="argument byline
-              closer dateline div1 div2 div3 div4 div5 div6 div7 opener
-              postscript salute signed"/>
+               <moduleRef key="textstructure" except="argument byline closer dateline div1 
+                  div2 div3 div4 div5 div6 div7 opener postscript salute signed"/>
                <!-- optional modules -->
                <moduleRef key="analysis"/>
                <moduleRef key="certainty"/>
                <moduleRef key="figures"/>
-               <moduleRef key="msdescription" except="handDesc msItem
-              scriptDesc typeDesc"/>
+               <moduleRef key="msdescription" except="handDesc msItem scriptDesc typeDesc"/>
                <moduleRef key="namesdates" except="climate terrain"/>
                <moduleRef key="transcr" except="handNotes"/>
             </egXML>
