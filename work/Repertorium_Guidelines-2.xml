@@ -74,7 +74,7 @@
          </titlePage>
          <div>
             <head>Preface to the second edition</head>
-            <p>... blah blah</p>
+            <p>… blah blah</p>
          </div>
          <div>
             <head>Preface to the first edition</head>
@@ -149,168 +149,122 @@
             <list>
                <head>Special signs and reserved words (markup)</head>
                <item>
-                  <p><code>--></code> – end of a comment</p>
+                  <code>--></code>: end of a comment </item>
+               <item>
+                  <code>,</code>: sequence, followed by </item>
+               <item>
+                  <code>;</code>: end of entity </item>
+               <item>
+                  <code>?</code>: must appear 0 or 1 time (optional) </item>
+               <item>
+                  <code>?></code>: end of a processing instruction </item>
+               <item>
+                  <code>'</code> or <code>"</code>: (paired) enclose an attribute value </item>
+               <item>
+                  <code>@</code>: attribute, e.g., read <code>@type</code> as <q>attribute with the
+                     name <q>type</q></q>
                </item>
                <item>
-                  <p><code>,</code> – sequence, followed by</p>
-               </item>
+                  <code>*</code>: 0 or more times (optional and repeatable) </item>
                <item>
-                  <p><code>;</code> – end of entity</p>
-               </item>
+                  <code>%</code>: introduces a parameter entity </item>
                <item>
-                  <p><code>?</code> – must appear 0 or 1 time (optional)</p>
-               </item>
+                  <code>+</code>: 1 or more times (required and repeatable, i.e., must appear at
+                  least once) </item>
                <item>
-                  <p><code>?></code> – end of a processing instruction</p>
-               </item>
+                  <code>&lt;</code>: less than (recognised as reserved entity
+                  <code>&amp;lt;</code>), start of a declaration of any sort </item>
                <item>
-                  <p><code>'</code> or <code>"</code> – (paired) enclose an attribute value</p>
-               </item>
+                  <code>&lt;!</code>: start of a declaration </item>
                <item>
-                  <p><code>@</code> – attribute, e.g., read <code>@type</code> as <q>attribute with
-                        the name <q>type</q></q></p>
-               </item>
+                  <code>&lt;!--</code>: start of a comment </item>
                <item>
-                  <p><code>*</code> – 0 or more times (optional and repeatable)</p>
-               </item>
+                  <code>&lt;!DOCTYPE</code>: start of a document type declaration (DTD) </item>
                <item>
-                  <p><code>%</code> – introduces a parameter entity</p>
-               </item>
+                  <code>&lt;!ELEMENT</code>: start of an element declaration in a DTD </item>
                <item>
-                  <p><code>+</code> – 1 or more times (required and repeatable, i.e., must appear at
-                     least once)</p>
-               </item>
+                  <code>&lt;!ENTITY</code>: start of an entity declaration in a DTD </item>
                <item>
-                  <p><code>&lt;</code> – less than (recognised as reserved entity
-                        <code>&amp;lt;</code>), start of a declaration of any sort</p>
-               </item>
+                  <code>&lt;?</code>: start of a processing instruction </item>
                <item>
-                  <p><code>&lt;!</code> – start of a declaration</p>
-               </item>
+                  <code>&lt;… /></code>: empty element (self-closing; combining start and end tag in
+                  one) </item>
                <item>
-                  <p><code>&lt;!--</code> – start of a comment</p>
-               </item>
+                  <code>&lt;…></code>: start tag </item>
                <item>
-                  <p><code>&lt;!DOCTYPE</code> – start of a document type declaration (DTD)</p>
-               </item>
+                  <code>&lt;/…></code>: end tag </item>
                <item>
-                  <p><code>&lt;!ELEMENT</code> – start of an element declaration in a DTD</p>
-               </item>
+                  <code>&gt;</code>: greater than (recognised as reserved entity
+                     <code>&amp;gt;</code>), end of a declaration of any sort </item>
                <item>
-                  <p><code>&lt;!ENTITY</code> – start of an entity declaration in a DTD</p>
-               </item>
+                  <code>|</code>: alternation, or </item>
                <item>
-                  <p><code>&lt;?</code> – start of a processing instruction</p>
-               </item>
+                  <code>a.</code>: abbreviation for attribute class </item>
                <item>
-                  <p><code>&lt;... /></code> – empty element (self-closing; combining start and end
-                     tag in one)</p>
-               </item>
+                  <code>CDATA</code>: in attributes, any valid character data, including spaces or
+                  punctuation marks </item>
                <item>
-                  <p><code>&lt;...></code> – start tag</p>
-               </item>
-               <item>
-                  <p><code>&lt;/...></code> – end tag</p>
-               </item>
-               <item>
-                  <p><code>&gt;</code> – greater than (recognised as reserved entity
-                        <code>&amp;gt;</code>), end of a declaration of any sort</p>
-               </item>
-               <item>
-                  <p><code>|</code> – alternation, or</p>
-               </item>
-               <item>
-                  <p><code>a.</code> – abbreviation for attribute class</p>
-               </item>
-               <item>
-                  <p><code>CDATA</code> – in attributes, any valid character data, including spaces
-                     or punctuation marks</p>
-               </item>
-               <item>
-                  <p><code>DOCTYPE</code> – document type, encloses the document type
-                     declaration</p>
+                  <code>DOCTYPE</code>: document type, encloses the document type declaration
                </item>
             </list>
             <list>
                <head>Abbreviations and acronyms in the text</head>
                <item>
-                  <p><abbr>BCP</abbr>: Best current practice (<ptr
-                        target="http://www.rfc-editor.org/categories/rfc-best.html/"/>)</p>
+                  <abbr>BCP</abbr>: Best current practice (<ptr
+                     target="http://www.rfc-editor.org/categories/rfc-best.html/"/>) </item>
+               <item>
+                  <abbr>CSS</abbr>: Cascading Stylesheet (<ptr target="http://www.w3.org/TR/CSS2"/>,
+                  Bos et al.2008) </item>
+               <item>
+                  <abbr>ISO</abbr>: International Organization of Standardization <ptr
+                     target="http://www.iso.org/"/>
                </item>
                <item>
-                  <p><abbr>CSS</abbr>: Cascading Stylesheet (<ptr target="http://www.w3.org/TR/CSS2"
-                     />, Bos et al.2008)</p>
+                  <abbr>MASTER</abbr>: Manuscript Access through Standards for Electronic Records,
+                     <ptr target="http://www.ucl.ac.uk/ ~ucgadkw/mscat.html/"/>
                </item>
                <item>
-                  <p><abbr>ISO</abbr>: International Organization of Standardization <ptr
-                        target="http://www.iso.org/"/></p>
+                  <abbr>MS</abbr>: manuscript </item>
+               <item>
+                  <abbr>MSS</abbr>: manuscripts </item>
+               <item>
+                  <abbr>OASIS</abbr>: The Organization for the Advancement of Structured Information
+                  Standards <ptr target="http://www.oasis-open.org/"/>
                </item>
                <item>
-                  <p><abbr>MASTER</abbr>: Manuscript Access through Standards for Electronic
-                     Records, <ptr target="http://www.ucl.ac.uk/ ~ucgadkw/mscat.html/"/></p>
-               </item>
+                  <abbr>PDF</abbr>: Portable Document Format (<ptr
+                     target="http://www.adobe.com/products/acrobat/adobepdf.html"/>) </item>
                <item>
-                  <p><abbr>MS</abbr>: manuscript</p>
-               </item>
+                  <abbr>PI</abbr>: Public Identifier (Bray et al. 2008) </item>
                <item>
-                  <p><abbr>MSS</abbr>: manuscripts</p>
-               </item>
+                  <abbr>RFC</abbr>: Request for comments (<ptr
+                     target="http://www.ietf.org/rfc.html/"/>) </item>
                <item>
-                  <p><abbr>OASIS</abbr>: The Organization for the Advancement of Structured
-                     Information Standards <ptr target="http://www.oasis-open.org/"/></p>
-               </item>
+                  <abbr>SGML</abbr> – Standard Generalized Markup Language (ISO 8859:1987) </item>
                <item>
-                  <p><abbr>PDF</abbr>: Portable Document Format (<ptr
-                        target="http://www.adobe.com/products/acrobat/adobepdf.html"/>)</p>
-               </item>
+                  <abbr>SI</abbr>: System Identifier (cf. Bray et al. 2008) </item>
                <item>
-                  <p><abbr>PI</abbr>: Public Identifier (Bray et al. 2008)</p>
-               </item>
+                  <abbr>TEI</abbr>: Text Encoding Initiative Consortium (<ptr
+                     target="http://www.tei-c.org"/>) </item>
                <item>
-                  <p><abbr>RFC</abbr>: Request for comments (<ptr
-                        target="http://www.ietf.org/rfc.html/"/>)</p>
-               </item>
+                  <abbr>W3C</abbr>: World Wide Web Consortium (<ptr target="http://www.w3.org"/>) </item>
                <item>
-                  <p><abbr>SGML</abbr> – Standard Generalized Markup Language (ISO 8859:1987)</p>
-               </item>
+                  <abbr>XHTML</abbr>: Extensible HyperText Markup Language (Altheim, McCarron 2001) </item>
                <item>
-                  <p><abbr>SI</abbr>: System Identifier (cf. Bray et al. 2008)</p>
-               </item>
+                  <abbr>XLink</abbr>: XML Linking Language (DeRose et al. 2001) </item>
                <item>
-                  <p><abbr>TEI</abbr>: Text Encoding Initiative Consortium (<ptr
-                        target="http://www.tei-c.org"/>)</p>
-               </item>
+                  <abbr>XML</abbr>: Extensible Markup Language (Bray et al. 2008) </item>
                <item>
-                  <p><abbr>W3C</abbr>: World Wide Web Consortium (<ptr target="http://www.w3.org"
-                     />)</p>
-               </item>
+                  <abbr>XPath</abbr>: XML Path Language (Clark, DeRose 1999) </item>
                <item>
-                  <p><abbr>XHTML</abbr>: Extensible HyperText Markup Language (Altheim, McCarron
-                     2001)</p>
-               </item>
+                  <abbr>XPointer</abbr>: XML Pointer Language (Grosso et al. 2003a, 2003b, DeRose
+                  2003) </item>
                <item>
-                  <p><abbr>XLink</abbr>: XML Linking Language (DeRose et al. 2001)</p>
-               </item>
+                  <abbr>XSL</abbr>: Extensible Stylesheet Language (Berglund 2006) </item>
                <item>
-                  <p><abbr>XML</abbr>: Extensible Markup Language (Bray et al. 2008)</p>
-               </item>
+                  <abbr>XSL:FO</abbr>: Extensible Stylesheet Language Formatting Objects (cf. XSL) </item>
                <item>
-                  <p><abbr>XPath</abbr>: XML Path Language (Clark, DeRose 1999)</p>
-               </item>
-               <item>
-                  <p><abbr>XPointer</abbr>: XML Pointer Language (Grosso et al. 2003a, 2003b, DeRose
-                     2003)</p>
-               </item>
-               <item>
-                  <p><abbr>XSL</abbr>: Extensible Stylesheet Language (Berglund 2006)</p>
-               </item>
-               <item>
-                  <p><abbr>XSL:FO</abbr>: Extensible Stylesheet Language Formatting Objects (cf.
-                     XSL)</p>
-               </item>
-               <item>
-                  <p><abbr>XSLT</abbr>: Extensible Stylesheet Language Transformations (Clark
-                     1999)</p>
+                  <abbr>XSLT</abbr>: Extensible Stylesheet Language Transformations (Clark 1999)
                </item>
             </list>
          </div>
@@ -562,9 +516,9 @@
                      has a structured model of the same information, an attempt has been made to
                      integrate both approaches into the declaration of element. This is the case,
                      for example, with <gi>bindingDesc</gi>. The declaration of this element in TEI
-                     P5 is:
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples"> &lt;!ELEMENT bindingDesc ((%model.pLike; | decoNote | condition)+ | binding+)&gt;</egXML>
-                     The the content of <gi>binding</gi> has been declared as
+                     P5 is: <code>&lt;!ELEMENT bindingDesc ((%model.pLike; | decoNote | condition)+
+                        | binding+)&gt;</code> The the content of <gi>binding</gi> has been declared
+                     as
                      <egXML xmlns="http://www.tei-c.org/ns/Examples"> &lt;!ELEMENT binding (%model.pLike; | condition | decoNote)+&gt;</egXML>
                      The proposed model leaves the declaration of <gi>bindingDesc</gi> without
                      changes but modifies the content of the element <gi>binding</gi> to include
@@ -645,7 +599,8 @@
                            <repository>Patriarchal Library</repository>
                            <idno>178</idno>
                         </msIdentifier>
-                     </msDesc></egXML></p>
+                     </msDesc>
+                     </egXML></p>
                   <p>Even this checklist description could be further segmented into more discrete
                      units, so that the above information could be recorded differently from the
                      encoder’s point of view as:
@@ -711,7 +666,7 @@
                            </geogName>
                            <placeName>Zograph Monastery</placeName>
                            <repository>Monastery library</repository>
-                           <idno type="shelfmark">III.г.7</idno> ... </msIdentifier>
+                           <idno type="shelfmark">III.г.7</idno> … </msIdentifier>
                         <p xml:id="material">Paper - thin, rough and white. Watermark: scissors,
                            similar to Briquet, Nr 3688 from the year 1496.</p>
                         <p xml:id="binding">Binding: new, made in the library.</p>
@@ -750,7 +705,8 @@
                            <note>The beginning is missing. <date>Saturday II</date></note>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD2"><locus n="2">1r–1v</locus>
-                           <title>Mc 2:1-12 </title> ... </msItemStruct>
+                           <title>Mc 2:1-12 </title> … 
+                        </msItemStruct>
                      </msContents>
                   </egXML></p>
                   <p>In this example the element <gi>summary</gi> precedes a more extensive,
@@ -823,7 +779,7 @@
                      tetraeuangelion</msName>
                </egXML></p>
                <p>Here general information about the manuscript name in Latin and in Bulgarian is
-                  annotated with the values <q>general</q> or <q>individual</q> for the
+                  annotated with the values <val>general</val> or <val>individual</val> for the
                      <att>type</att> attribute. The manuscript name currently accepted among
                   scholars is <hi rend="italic">Codex Marianus</hi> and the older names are <hi
                      rend="italic">Grigorovič tetraeuangelion</hi>, and <hi rend="italic">Athonite
@@ -837,7 +793,7 @@
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <altIdentifier xml:id="OENB146">
                      <msName type="individual" subtype="old">Mihanović folia</msName>
-                     <msName type="individual" subtype="old">Miklošič folia</msName> ...
+                     <msName type="individual" subtype="old">Miklošič folia</msName> …
                   </altIdentifier>
                </egXML></p>
             </div>
@@ -852,7 +808,7 @@
                   Margaret Dimitrova and Andrej Bojadžiev illustrates this approach:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <p>Six fragments belonging to what was once a larger codex have been identified by
-                     Tixomirov ...</p>
+                     Tixomirov …</p>
                </egXML></p>
                <p>This short introduction to the cataloguing information in the description of the
                      <hi rend="italic">Manuilev Apostle</hi> is needed to understand the rest of the
@@ -1047,7 +1003,7 @@
                   <p>1. Manuscript with shelfmark, inventory number, and catalogue number (from the
                      electronic description of MS 1415 of NLCM, Sofia by Dilyana Radoslavova):
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <msIdentifier> ... <settlement>Sofia</settlement>
+                     <msIdentifier> … <settlement>Sofia</settlement>
                         <repository>National Library SS Cyril and Methodios</repository>
                         <idno type="shelfmark">1415</idno>
                         <altIdentifier>
@@ -1055,12 +1011,12 @@
                         </altIdentifier>
                         <altIdentifier>
                            <idno type="catalogue">1415</idno>
-                        </altIdentifier> ... </msIdentifier>
+                        </altIdentifier> … </msIdentifier>
                   </egXML></p>
                   <p>2. Manuscript with current and several former shelfmarks (from the electronic
                      description of MS 1/102 of Odessa State Libary by Anisava Miltenova):
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <msIdentifier> ... <country>Ukraine</country>
+                     <msIdentifier> … <country>Ukraine</country>
                         <settlement>Odessa</settlement>
                         <repository>State Library</repository>
                         <collection>V. Grigorovič</collection>
@@ -1076,7 +1032,7 @@
                         </altIdentifier>
                         <altIdentifier>
                            <idno type="catalogue">20</idno>
-                        </altIdentifier> ... </msIdentifier>
+                        </altIdentifier> … </msIdentifier>
                   </egXML></p>
                   <p>In this example the manuscript has one current and three former shelfmarks and
                      it is described in the catalogue as item number 20.</p>
@@ -1085,7 +1041,7 @@
                         <q>current</q> and <q>former</q> and then supply appropriate values in its
                      sub-elements, e.g.:
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <altIdentifier type="current"> ... <idno type="shelfmark">Ms 3045</idno> ... </altIdentifier>
+                     <altIdentifier type="current"> … <idno type="shelfmark">Ms 3045</idno> … </altIdentifier>
                   </egXML></p>
                </div>
                <div>
@@ -1108,11 +1064,11 @@
                      the following example (from the electronic description of a Vidin Miscellany by
                      Antoaneta Granberg):
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <msIdentifier> ... <collection>M. Pogodin</collection>
+                     <msIdentifier> … <collection>M. Pogodin</collection>
                         <idno type="shelfmark">Pog. 1204</idno>
                         <altIdentifier type="current">
                            <idno type="catalogue">77</idno>
-                        </altIdentifier> ... </msIdentifier></egXML></p>
+                        </altIdentifier> … </msIdentifier></egXML></p>
                   <p>In some cases the current collection of a repository may have absorbed an
                      entire earlier repository collection. This is often the case in Russian
                      collections like the Russian National Library in Sankt-Petersburg, the
@@ -1319,13 +1275,13 @@
                <p>Information about manuscript materials and their characteristics and about the
                   layout of the leaves is encoded within <gi>objectDesc</gi>. This element has one
                   special attribute, <att>form</att>, with proposed values (cf. Burnard and Bauman
-                  2007) <q>codex</q>, <q>roll</q>, <q>fragment</q>, <q>leaf</q>, <q>partial
-                  leaf</q>, or some typologically relevant value, e.g.:
+                  2007) <val>codex</val>, <val>roll</val>, <val>fragment</val>, <val>leaf</val>,
+                     <val>partial leaf</val>, or some typologically relevant value, e.g.:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <objectDesc form="codex"> ... </objectDesc></egXML>
+                  <objectDesc form="codex"> … </objectDesc></egXML>
                   or
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <objectDesc form="roll"> ...</objectDesc>
+                  <objectDesc form="roll"> …</objectDesc>
                </egXML>
                </p>
                <p>This information could be entered as an unstructured sequence of paragraphs or as
@@ -1345,7 +1301,7 @@
                      <gi>supportDesc</gi>), are most commonly <q>parchment</q>, <q>paper</q>, or
                      <q>mixed</q>, as in this example:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <supportDesc material="paper"> ... </supportDesc>
+                  <supportDesc material="paper"> … </supportDesc>
                </egXML></p>
                <p>The meaning of the value of this attribute is to give a general type of the
                   material of the manuscript, and it is not associated with the possible
@@ -1403,25 +1359,27 @@
                      <support>
                         <material key="parchment">Here is the information about parchment.</material>
                         <material key="paper">Here is the information about paper.</material>
-                     </support> ... </supportDesc>
+                     </support> … </supportDesc>
                </egXML></p>
                <p>Here the <att>key</att> attribute is used to distinguish the different materials
                   in the manuscript. The element <gi>material</gi> can include an attribute
                      <att>material</att>, with values that might include (but are not limited to):
                      <list rend="simple">
-                     <item><q>original</q>: original parchment used for the main body of the
+                     <item><val>original</val>: original parchment used for the main body of the
                         manuscript</item>
-                     <item><q>reused</q>: reused parchment (palimpsest) or paper</item>
-                     <item><q>supplement</q>: a supplement written for the original
+                     <item><val>reused</val>: reused parchment (palimpsest) or paper</item>
+                     <item><val>supplement</val>: a supplement written for the original
                         manuscript</item>
-                     <item><q>restoration</q>: added during the restoration process</item>
-                     <item><q>endleaf</q>: use for the end leaves</item>
-                     <item><q>pastedown</q>: leaf or leaves glued to the inside of a board</item>
-                     <item><q>binding</q>: part of the binding (but not the only part of it)</item>
-                     <item><q>wrapper</q>: a wrapper for the manuscript</item>
-                     <item><q>distinct</q>: an originally distinct leaf or leaves, bound with the
-                        manuscript at a latter date</item>
-                     <item><q>other</q>: cases that could not be formalized clearly in
+                     <item><val>restoration</val>: added during the restoration process</item>
+                     <item><val>endleaf</val>: use for the end leaves</item>
+                     <item><val>pastedown</val>: leaf or leaves glued to the inside of a
+                        board</item>
+                     <item><val>binding</val>: part of the binding (but not the only part of
+                        it)</item>
+                     <item><val>wrapper</val>: a wrapper for the manuscript</item>
+                     <item><val>distinct</val>: an originally distinct leaf or leaves, bound with
+                        the manuscript at a latter date</item>
+                     <item><val>other</val>: cases that could not be formalized clearly in
                         advance</item>
                   </list></p>
             </div>
@@ -1433,7 +1391,7 @@
                   examples (from <ptr target="https://www.mossercatalogue.net/record.php?recID=Hg"
                   />):
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <material key="parchment" usage="original">More probably sheep than calf...of
+                  <material key="parchment" usage="original">More probably sheep than calf…of
                      middling thickness and quality, with a good mat (velvety) finish" (Doyle and
                      Parkes 1979: xxi), trimmed and very stained.</material>
                   <material key="parchment" usage="restoration">Portions eroded (gnawed by rats?)
@@ -1769,7 +1727,7 @@
                            <extent>2</extent>
                            <formula>6 (-1-2-3-4) </formula>
                         </quire>
-                     ... </collation>
+                     … </collation>
                   </egXML></p>
                   <p>This means that first quire of the manuscript was formed of 8 ff., all of
                      which, with the exception of the f. 7, are now missing. Quires II to XXI have 8
@@ -1884,14 +1842,14 @@
             </div>
             <div>
                <head>Decoration</head>
-               <p>The element <gi>decoDesc</gi> is used to give information about manuscript
-                  illumination. There are two basic ways of using this element and the sub-elements
-                  of its structure. The first is to provide basic notions on the styles and art
-                  objects in the codex with the help of the element <gi>p</gi> (paragraph). Another
-                  way is to provide a thorough description of each kind of manuscript decoration
-                  with the element <gi>decoNote</gi>, possibly preceded by some kind of introduction
-                  (in the element <gi>summary</gi>). In the second approach each <gi>decoNote</gi>
-                  is supplied with the attribute <att>type</att> and an appropriate value, e.g.,
+               <p>The element <gi>decoDesc</gi> is used to provide information about manuscript
+                  illumination. There are two basic ways of using this element and its children. The
+                  first is to provide general prose descriptions of the styles and art objects in
+                  the codex with the help of the element <gi>p</gi> elements. The second is to
+                  construct a thorough description of each kind of manuscript decoration in the
+                  element <gi>decoNote</gi>, possibly preceded by some kind of introduction (in the
+                  element <gi>summary</gi>). Under the second approach, each <gi>decoNote</gi> is
+                  supplied with the attribute <att>type</att> and an appropriate value, e.g.,
                      <val>miniatures</val>, <val>headpieces</val>, <val>tail-pieces</val>,
                      <val>initials</val>, <val>borders</val>, <val>line-fillers</val>,
                      <val>marginal</val>, <val>wash</val>, etc. Here we will give some examples:</p>
@@ -1994,15 +1952,15 @@
                         <gi>decoDesc</gi> or <gi>condition</gi>, could be entered in the element
                         <gi>bindingNote</gi> with different values of the attributes <att>type</att>
                      or <att>subtype</att>. For example, all aspects of the description of the cover
-                     should be entered in the content of the element <gi>bindingNote</gi> with
-                     attribute <att>type</att> = <val>cover</val>. The material of the cover should
-                     be then described as part of the sub-element <gi>material</gi>. The same is
-                     true also for other parts of bookbinding, such as edges (e.g., technology,
-                     beveling of edges), fly-leaves, etc. The observations in <gi>fastening</gi>
-                     could include how the fastening is done, e.g., by peg and strap, by hook and
-                     clasp; the length or width of the elements could be measured; their place(s)
-                     could be described, etc. In <gi>furnishing</gi> the encoder should describe all
-                     the bosses, corner pieces, etc. that can be observed on the binding.</p>
+                     should be entered in the content of the element <tag>bindingNote
+                        type="cover"</tag>. The material of the cover should be then described as
+                     part of the sub-element <gi>material</gi>. The same is true also for other
+                     parts of bookbinding, such as edges (e.g., technology, beveling of edges),
+                     fly-leaves, etc. The observations in <gi>fastening</gi> could include how the
+                     fastening is done, e.g., by peg and strap, by hook and clasp; the length or
+                     width of the elements could be measured; their place(s) could be described,
+                     etc. In <gi>furnishing</gi> the encoder should describe all the bosses, corner
+                     pieces, etc. that can be observed on the binding.</p>
                   <p>A description of the sewing could include the types of attachments to the
                      quires and leaves or to the main boards. A text block can be sewn through the
                      side of the leaves, e.g., through as over sewing or side sewing, etc. In
@@ -2131,7 +2089,7 @@
                               <quote xml:lang="cu">сїа дамаскинъ на ст҃ого архангела повеза го
                                  кр(с)то граматикъ и тꙋгава беха два попа на стого архангела попъ
                                  Бено и Ꙋзꙋнъ попъ кр(с)то догава отиде на ст҃а гора мц҃ъ
-                                 маїѧ</quote></item> ... <item><locus>f. 61v</locus>
+                                 маїѧ</quote></item> … <item><locus>f. 61v</locus>
                               <persName type="reader">Stefan Stojanovich </persName>
                               <date evidence="internal">1834</date>
                               <quote xml:lang="cu">Извѣстую какво на време то на Дꙋонисїа епїскопа
@@ -2183,7 +2141,7 @@
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <scribeDesc>
                      <scribe n="1">
-                        <name>Unknown</name> ... </scribe>
+                        <name>Unknown</name> … </scribe>
                   </scribeDesc>
                </egXML></p>
                <p>This information is followed by a description of palaeographic and linguistic
@@ -2204,7 +2162,7 @@
                   for Old Cyrillic, <val>Latn</val> for Latin or <val>Glag</val> for Glagolitic
                   (http://unicode.org/iso15924/iso15924-codes.html):
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <palaeoCharact script="Glag"> ... </palaeoCharact>
+                  <palaeoCharact script="Glag"> … </palaeoCharact>
                </egXML></p>
                <p>A brief introduction to the palaeographical characteristics of the scribe can be
                   included in the element <gi>summary</gi>, e.g.:
@@ -2217,8 +2175,8 @@
                   <p>This optional element may be useful when the exact shape of a letter or other
                      sign is important, as in:
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <palaeoNote>The letter <c xml:lang="cu">a</c> is written ... </palaeoNote>
-                     <palaeoNote>The letter <c xml:lang="cu">б</c> is written ... </palaeoNote>
+                     <palaeoNote>The letter <c xml:lang="cu">a</c> is written … </palaeoNote>
+                     <palaeoNote>The letter <c xml:lang="cu">б</c> is written … </palaeoNote>
                   </egXML></p>
                </div>
                <div>
@@ -2272,7 +2230,7 @@
                            and after the vowel letters front nasal is turned into the back one.
                            After ч this change is not observed. A relatively small number of
                            ligatures and supralinear signs. A few examples of accent marks
-                        ...</p></orthography>
+                        …</p></orthography>
                   </egXML></p>
                   <p>The other way to describe the orthography of the scribe is with a structured
                      description, where each piece of the description is entered as a separate
@@ -2430,7 +2388,7 @@
                   The usage of these three attributes with their values can be illustrated with this
                   example:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <msContents class="vitas" type="translation" style="narrative"> ... </msContents>
+                  <msContents class="vitas" type="translation" style="narrative"> … </msContents>
                </egXML></p>
                <p>Here the basic information about all the texts in the manuscript is given. In this
                   case, the main classification of the texts falls under the category of Vitas of
@@ -2459,25 +2417,28 @@
                   <p>For more elaborate cataloguing purposes it is necessary to use special elements
                      to describe the textual characteristics of the manuscript content in full.
                      These elements are:</p>
-                  <p><gi>summary</gi>: a short characteristic of all of the texts</p>
-                  <p><gi>titlePage</gi>: the title page of the manuscript if it exists</p>
-                  <p><gi>title</gi>: the title of the manuscript set of texts as given by the
-                     research tradition</p>
-                  <p><gi>author</gi>: the author or authors of the whole text collection</p>
-                  <p><gi>respStmt</gi>: responsibility statement – used for information about the
-                     editors or translators of the collection</p>
-                  <p><gi>note</gi>: notes about the manuscript’s texts: e.g., missing parts of the
-                     collection or layout of the whole text collection</p>
-                  <p><gi>filiation</gi>: text historical data; place of this collection in the
-                     textual traditions, e.g., with respect to protograph, antigraph, apograph or
-                     various sources of text compilation and/or translation</p>
-                  <p><gi>textLang</gi>: information about the language of the text collection in
-                     relation of its textual tradition (not the language of the scribe or
-                     copyist)</p>
-                  <p><gi>sampleText</gi>: a snippet of original text in the language and script of
-                     the manuscript; typically includes the main manuscript heading, rubric, incipit
-                     and explicit of the whole manuscript</p>
-                  <p><gi>msItemStruct</gi>: description of each text in the manuscript</p>
+                  <list>
+                     <item><gi>summary</gi>: a short characteristic of all of the texts</item>
+                     <item><gi>titlePage</gi>: the title page of the manuscript if it exists</item>
+                     <item><gi>title</gi>: the title of the manuscript set of texts as given by the
+                        research tradition</item>
+                     <item><gi>author</gi>: the author or authors of the whole text
+                        collection</item>
+                     <item><gi>respStmt</gi>: responsibility statement – used for information about
+                        the editors or translators of the collection</item>
+                     <item><gi>note</gi>: notes about the manuscript’s texts: e.g., missing parts of
+                        the collection or layout of the whole text collection</item>
+                     <item><gi>filiation</gi>: text historical data; place of this collection in the
+                        textual traditions, e.g., with respect to protograph, antigraph, apograph or
+                        various sources of text compilation and/or translation</item>
+                     <item><gi>textLang</gi>: information about the language of the text collection
+                        in relation of its textual tradition (not the language of the scribe or
+                        copyist)</item>
+                     <item><gi>sampleText</gi>: a snippet of original text in the language and
+                        script of the manuscript; typically includes the main manuscript heading,
+                        rubric, incipit and explicit of the whole manuscript</item>
+                     <item><gi>msItemStruct</gi>: description of each text in the manuscript</item>
+                  </list>
                </div>
             </div>
             <div>
@@ -2599,7 +2560,7 @@
                   the important attributes of <gi>msItemStruct</gi> can be illustrated by this
                   hypothetical example:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <msItemStruct defective="false" type="compilation" style="non-narrative" xml:id="ACD1"> ... </msItemStruct>
+                  <msItemStruct defective="false" type="compilation" style="non-narrative" xml:id="ACD1"> … </msItemStruct>
                </egXML></p>
             </div>
             <div>
@@ -2647,7 +2608,7 @@
                      <filiation type="source" subtype="Greek"><bibl>Migne, PG 10, col.
                            952-953</bibl></filiation>
                      <filiation type="translation"><num>1?</num></filiation>
-                     <filiation type="protograph">Bulgarian</filiation> ... </msItemStruct>
+                     <filiation type="protograph">Bulgarian</filiation> … </msItemStruct>
                </egXML></p>
                <p>If the title were just transferred automatically from the original text of the
                   manuscript, the text would read “About the 12 Apostles. Where each of them
@@ -2709,7 +2670,7 @@
                <p>Consider the example:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <textLang>Only in this text we could find the older forms of the stemmatic
-                     Aoristus ... </textLang>
+                     Aoristus … </textLang>
                </egXML></p>
                <p>This observation could lead to closer comparison of this text with other parts of
                   the contents, and may help determine whether its origin is different from
@@ -2776,14 +2737,14 @@
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msItemStruct xml:id="ACD1" type="translation">
                      <locus n="3">109r-110r</locus>
-                     <title>Calendologion</title> ...</msItemStruct>
+                     <title>Calendologion</title> …</msItemStruct>
                </egXML></p>
                <p>The same text in the description of Slav Dujčev 17 has the same number in
                      <gi>locus</gi> but comes in the second place:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msItemStruct xml:id="ACD2" type="translation">
                      <locus n="3">3v-6v</locus>
-                     <title>Calendologion</title> ... </msItemStruct>
+                     <title>Calendologion</title> … </msItemStruct>
                </egXML></p>
                <p>One text is missing in MS NBKM 309 but it is present in Dujčev 17, where it bears
                   a designation number 2:
@@ -2792,7 +2753,7 @@
                      <locus n="2">2r-3v</locus>
                      <title xml:lang="bg">Thunder book according to ascending and descending
                         moon</title>
-                     ... </msItemStruct> From the electronic descriptions of MSS NBKM 309 and Slav.
+                     … </msItemStruct> From the electronic descriptions of MSS NBKM 309 and Slav.
                   Dujčev 17 by Anisava Miltenova </egXML></p>
                <p>In both manuscripts the first item from the reconstructed cycle is missing, and
                   therefore an element <gi>locus</gi> with <code>n="1"</code> is absent as well.</p>
@@ -2841,7 +2802,7 @@
                         чс҃тнѣмъ дрѣвѣ. и кꙋпї ю пет҆кѡ велковъ. да работи за еговꙋ дш҃ꙋ и за
                         родители его. велка и мт҃ри его не(д)ли. и приложи ю оу ст҃го арх҃аггла. оу
                         махала сръбска ꙋ етрополе, бъ҃ да прости. </colophon>
-                  </msItemStruct> ... <msItemStruct xml:id="ACD10" type="original" class="colophon">
+                  </msItemStruct> … <msItemStruct xml:id="ACD10" type="original" class="colophon">
                      <locus>f. 203r</locus>
                      <author>Daniil of Etropole</author>
                      <note><date evidence="internal">1640</date></note>
@@ -2859,14 +2820,14 @@
                   of the text in terms of diplomatic structures, e.g., the form and parts of
                      <term>protocollo</term>, <term>testo</term>, <term>eschatollo</term>:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <formula>protocollo(invocatio)+ ...</formula>
+                  <formula>protocollo(invocatio)+ …</formula>
                </egXML></p>
                <p>Then in the text the various parts could be encoded with the help of the element
                      <gi>seg</gi> with a corresponding value of the attribute <att>type</att>:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <colophon>
                      <seg type="protocollo">+ Изволенїемъ оц҃а и поспѣшенїе(м) сн҄а и съвръшенїемь
-                        ст҃го дх҃а аминъ</seg> ...</colophon>
+                        ст҃го дх҃а аминъ</seg> …</colophon>
                </egXML></p>
             </div>
             <div>
@@ -2962,8 +2923,8 @@
                   monastery, Mount Athos 22 by Ana Stojkova :
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msItemStruct>
-                     <msItemStruct>...</msItemStruct>
-                     <msItemStruct>...</msItemStruct>
+                     <msItemStruct>…</msItemStruct>
+                     <msItemStruct>…</msItemStruct>
                   </msItemStruct>
                </egXML></p>
                <p>The elements can be synchronized as in this example:
@@ -2994,7 +2955,7 @@
                            <incipit>Начнѣмь рещи ѡ львѣ ц҃рѣ звѣремь. іеже какѡвь скоть іесть. ибо
                               Іаковь бл҃влаше Іоудоу гл҃ааше. скѵмень львовь.</incipit>
                         </sampleText>
-                     </msItemStruct> ... </msItemStruct></egXML></p>
+                     </msItemStruct> … </msItemStruct></egXML></p>
                <p>In this example the main text is called „Physiologus" and it contains more than 40
                   small stories. The first one is „About the lion". The numbers and identifiers are
                   set in such a way that it is possible from their value to see the text hierarchy
@@ -3056,7 +3017,7 @@
                               Rochefort</persName>, alias <persName>Dimitrij Adol’fovič</persName>,
                            indicating his relationship to the Oznobišin family and saying what the
                            MS is.</p>
-                     </accMat> ... </history>
+                     </accMat> … </history>
                </egXML></p>
             </div>
             <div>
@@ -3171,7 +3132,7 @@
                            <list>
                               <item><locus>f. 184</locus>
                                  <idno type="file">C5246-07</idno></item>
-                              <item><locus>188</locus><idno type="file">C5247-07</idno></item> ...
+                              <item><locus>188</locus><idno type="file">C5247-07</idno></item> …
                            </list></p>
                      </surrogates>
                   </egXML></p>
@@ -3235,12 +3196,12 @@
                      <gi>msPart</gi> elements, as in this example:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msDesc>
-                     <msIdentifier> ... Here comes the common information for all parts, e.g.,
+                     <msIdentifier> … Here comes the common information for all parts, e.g.,
                         country, repository, shelfmark, etc. </msIdentifier>
                      <physDesc>
                         <objectDesc form="codex">
                            <supportDesc material="parchment">
-                              <p>The manuscript is a palimpsest consisting of ... parts</p>
+                              <p>The manuscript is a palimpsest consisting of … parts</p>
                               <!-- Common data about the both parts -->
                            </supportDesc>
                         </objectDesc>
@@ -3249,23 +3210,23 @@
                         <altIdentifier type="laterPart">
                            <msName>e.g., Boyana Gospel</msName>
                         </altIdentifier>
-                        <physDesc> ... </physDesc>
-                        <scribeDesc> ... </scribeDesc>
-                        <msContents> ... </msContents>
+                        <physDesc> … </physDesc>
+                        <scribeDesc> … </scribeDesc>
+                        <msContents> … </msContents>
                         <history>
                            <origin>
                               <origDate/>
                               <origPlace/>
                            </origin>
                         </history>
-                        <additional> ... </additional>
+                        <additional> … </additional>
                      </msPart>
                      <msPart n="2" type="palimpsest">
                         <altIdentifier>
                            <msName>e.g., Boyana Palimpsest</msName></altIdentifier>
                         <physDesc/>
-                        <scribeDesc> ... </scribeDesc>
-                        <msContents> ... </msContents>
+                        <scribeDesc> … </scribeDesc>
+                        <msContents> … </msContents>
                         <history>
                            <origin>
                               <origDate/>
@@ -3292,34 +3253,34 @@
                   sequence of parts. For example:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msDesc>
-                     <msIdentifier> ... Here comes the common information for all parts, e.g.,
+                     <msIdentifier> … Here comes the common information for all parts, e.g.,
                         country, repository, shelfmark, etc. </msIdentifier>
                      <physDesc>
                         <objectDesc form="codex">
                            <supportDesc material="parchment">
-                              <p>The manuscript is a convolute consisting of ... parts</p>
+                              <p>The manuscript is a convolute consisting of … parts</p>
                               <!-- Common data about the both parts -->
                            </supportDesc>
                         </objectDesc>
                      </physDesc>
                      <msPart n="1" type="original">
-                        <locus> ... </locus>
-                        <physDesc> ... </physDesc>
-                        <scribeDesc> ... </scribeDesc>
-                        <msContents> ... </msContents>
+                        <locus> … </locus>
+                        <physDesc> … </physDesc>
+                        <scribeDesc> … </scribeDesc>
+                        <msContents> … </msContents>
                         <history>
                            <origin>
                               <origDate/>
                               <origPlace/>
                            </origin>
                         </history>
-                        <additional> ... </additional>
+                        <additional> … </additional>
                      </msPart>
                      <msPart n="2" type="convoluted">
-                        <locus> ... </locus>
+                        <locus> … </locus>
                         <physDesc/>
-                        <scribeDesc> ... </scribeDesc>
-                        <msContents> ... </msContents>
+                        <scribeDesc> … </scribeDesc>
+                        <msContents> … </msContents>
                         <history>
                            <origin>
                               <origDate/>
@@ -3345,16 +3306,16 @@
                   additional:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msPart n="1" type="additional">
-                     <locus> ... </locus>
-                     <physDesc> ... </physDesc>
-                     <scribeDesc> ... </scribeDesc>
-                     <msContents> ... </msContents>
+                     <locus> … </locus>
+                     <physDesc> … </physDesc>
+                     <scribeDesc> … </scribeDesc>
+                     <msContents> … </msContents>
                      <history>
                         <origin>
                            <origDate/>
                            <origPlace/>
                         </origin>
-                     </history> ... </msPart>
+                     </history> … </msPart>
                </egXML></p>
                <p>Examples of such usage could include an additional note on a separate leaf, or
                   text from a later scribe.</p>
@@ -3370,16 +3331,16 @@
                   sub-elements should be provided, as in the following example:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msPart>
-                     <locus>bottom margins</locus> ... <msContents>
+                     <locus>bottom margins</locus> … <msContents>
                         <div xml:lang="cu"> Пишемь азь ереи Петрь, да се (знае) какво врѣме бѣше.
                            (Бех) попь на село Мирково и бѣше попь Стоянь, заедно дръжѣхме село
-                           Мирково ... при злочьстиваго цара сультань Мехмеда, да го богь убие и да
+                           Мирково … при злочьстиваго цара сультань Мехмеда, да го богь убие и да
                            го порази, че той расипа христѣнски вѣре и велики цркви и велики градове
-                           ... Бѣше честита земѣ Загоре, та па се яви байракь от запать, та доде до
+                           … Бѣше честита земѣ Загоре, та па се яви байракь от запать, та доде до
                            срѣдь демле от Бечь, от Будимь, от Янекь, дори от Злате яблъке. Та се
                            проврьвихе турци и прѣзморци, татаре и каталане и хиньдие и миньдие, и
                            опашата вѣра, та ги вдигѫ царь Мехметь на воиске и самси трьгнѫ, Кара
-                           кехая му бе везирь. Та трь... този лѣто изгине войска турска, исбрахе ги
+                           кехая му бе везирь. Та трь… този лѣто изгине войска турска, исбрахе ги
                            латинска войска. Едва утече царь Мехметь и Кара кехая назать. И да знае,
                            кой чете да види, че беше от Бога, че даде Богь жито скьпо, сирене скьпо,
                            а на Загоре рож ходеше гроше. Та беше зло и невола и зими зли. Да не даде
@@ -3400,7 +3361,7 @@
                            рая и кадие, та да не утече Еень паша. А той тръгне тогись на Бельградь
                            да отиде, а то дадохе аламанци, та превзехе Белиградь и опрехе до Нишь. И
                            Еень се запрѣхе на Нишь, а тие отидохе на Босне да прѣвьземать Босне. А
-                           Еень пусти мойске, та оплени Кипровець и изьгуби и пороби... </div>
+                           Еень пусти мойске, та оплени Кипровець и изьгуби и пороби… </div>
                      </msContents>
                      <additional>
                         <listBibl>
@@ -3419,7 +3380,7 @@
                   Glagolitic and Greek. The description begins with the heading:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msDesc>
-                     <head>Codex Sinaiticus, 12th c., the end-13 c., and 13 c.</head> ... </msDesc>
+                     <head>Codex Sinaiticus, 12th c., the end-13 c., and 13 c.</head> … </msDesc>
                </egXML></p>
                <p>In this case we have separate <gi>altIdentifier</gi> elements following
                   immediately after the head:
@@ -3457,7 +3418,7 @@
                               features</summary><orthography><orthNote type="jer" subtype="front">only <c xml:lang="cu">ь</c>
                            </orthNote><orthNote type="jus" subtype="nonConsis"><c xml:lang="cu">ѫ</c> replaced by <c xml:lang="cu">оу</c>; <c xml:lang="cu">ѧ</c>
                               replaced by <c xml:lang="cu">a</c>;</orthNote><orthNote type="otherLetters"><c xml:lang="cu">ы</c>; <c xml:lang="cu">ѥ</c> and
-                                 <c xml:lang="cu">ѩ</c></orthNote></orthography> ...
+                                 <c xml:lang="cu">ѩ</c></orthNote></orthography> …
                      </scribeLang></scribe>
                </egXML></p>
                <p>Here the place where scribe E wrote is identified and attributed, followed by a
@@ -3467,7 +3428,7 @@
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msContents>
                      <filiation type="protograph">Middle Bulgarian</filiation>
-                     <filiation type="antigraph">Russian</filiation> ... </msContents>
+                     <filiation type="antigraph">Russian</filiation> … </msContents>
                </egXML></p>
                <p>Since the texts now are in different repositories, their sequence and locations
                   are especially important. Consider the following example:
@@ -3477,8 +3438,8 @@
                         <locus n="Sin.18N.1">Sin. 18/N, 1v–8v</locus>
                         <locus n="Gr.70.2">Gr. 70, 54r-98r (54, 59, 60, 57, 58, 55, 56,
                            61–98)</locus>
-                     </locusGrp> ... <title xml:lang="la">Pandectae</title>
-                     <author xml:lang="la">Nicon monachus</author> ... </msItemStruct>
+                     </locusGrp> … <title xml:lang="la">Pandectae</title>
+                     <author xml:lang="la">Nicon monachus</author> … </msItemStruct>
                </egXML></p>
                <p>The cataloguing information of the common part ends with data about the
                   manuscript’s origin, history and administrative information. Then begins a
@@ -3536,7 +3497,7 @@
                               <name xml:id="AB">Andrej Bojadziev</name>
                               <resp>edition of XML code</resp>
                            </respStmt>
-                        </titleStmt> ... </fileDesc>
+                        </titleStmt> … </fileDesc>
                   </teiHeader>
                </egXML></p>
                <p>The first part of the TEI file contains the <gi>titleStmt</gi> (i.e., title
@@ -3560,7 +3521,7 @@
                      <availability status="free">
                         <p>The intellectual content of this file is copyrighted by the creators
                            under the Creative Commons Attribution-No Derivative Works 3.0 under
-                           legislation in ...</p>
+                           legislation in …</p>
                      </availability>
                   </publicationStmt>
                </egXML></p>
@@ -3602,11 +3563,11 @@
                   would constitute the body of the document:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <TEI>
-                     <teiHeader> ... <sourceDesc>
-                           <msDesc>...</msDesc>
-                        </sourceDesc> ... </teiHeader>
+                     <teiHeader> … <sourceDesc>
+                           <msDesc>…</msDesc>
+                        </sourceDesc> … </teiHeader>
                      <text>
-                        <body> ... </body>
+                        <body> … </body>
                      </text>
                   </TEI>
                </egXML></p>
@@ -4071,7 +4032,7 @@
                </row>
                <row>
                   <cell>locNumber</cell>
-                  <cell>locus n="..."</cell>
+                  <cell>locus n="…"</cell>
                </row>
                <row>
                   <cell>manuscriptCreation</cell>
