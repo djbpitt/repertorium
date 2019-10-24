@@ -17,13 +17,34 @@
                 <link rel="stylesheet" type="text/css" href="guidelines.css"/>
             </head>
             <body>
-                <h1>
-                    <xsl:value-of select="//titleStmt/title"/>
-                </h1>
                 <xsl:apply-templates select="//text"/>
             </body>
         </html>
     </xsl:template>
+    <!-- Title page -->
+    <xsl:template match="titlePage">
+        <xsl:apply-templates select="docTitle"/>
+        <p>
+            <xsl:value-of select="'By ' || string-join(docAuthor, ', ')"/>
+        </p>
+        <xsl:apply-templates select="docImprint"/>
+        <p class="note">
+            <xsl:apply-templates select="/TEI/teiHeader//availability"/>
+        </p>
+    </xsl:template>
+    <xsl:template match="docTitle">
+        <h1>
+            <xsl:apply-templates/>
+        </h1>
+    </xsl:template>
+    <xsl:template match="docImprint">
+        <p>
+            <xsl:value-of
+                select="../docEdition || '. ' || pubPlace || ': ' || publisher || ', ' || docDate || '.'"
+            />
+        </p>
+    </xsl:template>
+    <!-- Main -->
     <xsl:template match="div">
         <div>
             <xsl:apply-templates/>
@@ -88,8 +109,25 @@
         </code>
     </xsl:template>
     <xsl:template match="head">
+        <xsl:variable name="current" as="element(head)" select="."/>
         <!-- headerlevel is determined by nesting depth -->
-        <xsl:element name="{concat('h', count(ancestor::div) + 1)}">
+        <xsl:variable name="level" as="xs:integer" select="count(ancestor::div)"/>
+        <xsl:variable name="number" as="xs:integer*">
+            <xsl:for-each select="reverse(1 to $level)">
+                <xsl:value-of
+                    select="$current/ancestor::div[current()]/count(preceding-sibling::div) + 1"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:element name="{concat('h', $level + 1)}">
+            <xsl:choose>
+                <xsl:when test="ancestor::body">
+                    <xsl:value-of select="string-join($number, '.') || '. '"/>
+                </xsl:when>
+                <xsl:when test="parent::div/parent::back">
+                    <xsl:text>Appendix </xsl:text>
+                    <xsl:number select="parent::div" format="A. "/>
+                </xsl:when>
+            </xsl:choose>
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
@@ -115,6 +153,7 @@
             TODO: each line except the first winds up with a leading space
                 temporarily add extra space before first line to align them
                 should instead get rid of spurious spaces from other lines
+            TODO: highlight markup in example (e.g., bold for gis and blue for attribute names)
         -->
         <xsl:variable name="lines" as="xs:string*"
             select="((serialize(node()) ! 
