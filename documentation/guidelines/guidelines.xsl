@@ -297,7 +297,7 @@
         </pre>
     </xsl:template>
     <xsl:template match="eg">
-        <pre><xsl:apply-templates/></pre>
+        <pre class="markup-highlight"><xsl:apply-templates/></pre>
     </xsl:template>
 
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->

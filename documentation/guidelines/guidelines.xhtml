@@ -100,8 +100,8 @@
                      MASTER: Manuscript Access through Standards for Electronic
                      Records, <a href="http://www.ucl.ac.uk/ ~ucgadkw/mscat.html/">http://www.ucl.ac.uk/ ~ucgadkw/mscat.html/</a>
                   </li><li>
-                     MS: manuscript </li><li>
-                     MSS: manuscripts </li><li>
+                     MS: manuscript</li><li>
+                     MSS: manuscripts</li><li>
                      OASIS: The Organization for the Advancement of Structured
                      Information Standards <a href="http://www.oasis-open.org/">http://www.oasis-open.org/</a>
                   </li><li>
@@ -347,13 +347,13 @@
                      integrate both approaches into the declaration of element. This is the case,
                      for example, with <code>&lt;bindingDesc&gt;</code>. The declaration of this element in TEI
                      P5 is:
-                        <pre>&lt;!ELEMENT bindingDesc ((%model.pLike; | decoNote | condition)+ | binding+)&gt;</pre>
+                        <pre class="markup-highlight">&lt;!ELEMENT bindingDesc ((%model.pLike; | decoNote | condition)+ | binding+)&gt;</pre>
                      The content of <code>&lt;binding&gt;</code> has been declared as
-                        <pre>&lt;!ELEMENT binding (%model.pLike; | condition | decoNote)+&gt;</pre>
+                        <pre class="markup-highlight">&lt;!ELEMENT binding (%model.pLike; | condition | decoNote)+&gt;</pre>
                      The proposed model leaves the declaration of <code>&lt;bindingDesc&gt;</code> without
                      changes but modifies the content of the element <code>&lt;binding&gt;</code> to include
                      structured information:
-                        <pre>&lt;!ELEMENT binding (%model.pLike; | bindingNote |condition | decoNote)&gt;</pre></li><li>If there is an element in the Repertorium that has the same name as in TEI
+                        <pre class="markup-highlight">&lt;!ELEMENT binding (%model.pLike; | bindingNote |condition | decoNote)&gt;</pre></li><li>If there is an element in the Repertorium that has the same name as in TEI
                      P5 but a different meaning, the Repertorium element has been removed or
                      renamed. An example of such an element is <code>&lt;writing&gt;</code>, which was used in
                      earlier Repertorium schemas to provide general palaeographic information.
@@ -431,10 +431,12 @@
                      encoder’s point of view as:
                      <pre><span class="markup-highlight">&lt;msDesc&gt;</span>
     <span class="markup-highlight">&lt;head type="briefDesc"&gt;</span>
-       <span class="markup-highlight">&lt;term type="textClass"&gt;</span>Homilies<span class="markup-highlight">&lt;/term&gt;</span> by <span class="markup-highlight">&lt;name type="author"&gt;</span>Macarius of
-          Egypt<span class="markup-highlight">&lt;/name&gt;</span>, <span class="markup-highlight">&lt;term type="lang"&gt;</span>Russian<span class="markup-highlight">&lt;/term&gt;</span>, <span class="markup-highlight">&lt;origDate&gt;</span>17th
-          c.<span class="markup-highlight">&lt;/origDate&gt;</span>, <span class="markup-highlight">&lt;material&gt;</span>paper,<span class="markup-highlight">&lt;/material&gt;</span><span class="markup-highlight">&lt;seg type="extent"&gt;</span> XI+229
-          ff.,<span class="markup-highlight">&lt;/seg&gt;</span>
+       <span class="markup-highlight">&lt;term type="textClass"&gt;</span>Homilies<span class="markup-highlight">&lt;/term&gt;</span> by 
+       <span class="markup-highlight">&lt;name type="author"&gt;</span>Macarius of Egypt<span class="markup-highlight">&lt;/name&gt;</span>, 
+       <span class="markup-highlight">&lt;term type="lang"&gt;</span>Russian<span class="markup-highlight">&lt;/term&gt;</span>, 
+       <span class="markup-highlight">&lt;origDate&gt;</span>17th c.<span class="markup-highlight">&lt;/origDate&gt;</span>, 
+       <span class="markup-highlight">&lt;material&gt;</span>paper,<span class="markup-highlight">&lt;/material&gt;</span>
+       <span class="markup-highlight">&lt;seg type="extent"&gt;</span> XI+229 ff.,<span class="markup-highlight">&lt;/seg&gt;</span>
        <span class="markup-highlight">&lt;dimensions type="folia" unit="mm"&gt;</span>
           <span class="markup-highlight">&lt;height&gt;</span>185<span class="markup-highlight">&lt;/height&gt;</span>
           <span class="markup-highlight">&lt;width&gt;</span>145<span class="markup-highlight">&lt;/width&gt;</span>
@@ -460,7 +462,7 @@
                      the individual project.</div>
                </div>
                <div>
-                  <h4 id="m3.1.2.">3.1.2. Description with <code>&lt;msIdentifier &gt;</code>and paragraphs</h4>
+                  <h4 id="m3.1.2.">3.1.2. Description with <code>&lt;msIdentifier&gt;</code> and paragraphs</h4>
                   <div class="p">An alternative to the preceding involves the use of the element <code>&lt;p&gt;</code>,
                      which can unite all data related to physical description, palaeography,
                      language, and the manuscript’s provenance and history, as in the following
@@ -474,8 +476,9 @@
     <span class="markup-highlight">&lt;/msIdentifier&gt;</span>
     <span class="markup-highlight">&lt;p&gt;</span>Damaskin of priest Joan from 1788, 272 ff., paper of two types, both of
        bad quality, cf. Nikolaev 473b (1751), 608b (1779), 664 (1783). 1 column,
-       23–29 lines per page. Literature: Иванов 1891: 83-112, 1892: 169-93;
-       Цонев 1940: 180-81; Ангелов 1958; Кодов 1969: 227-32<span class="markup-highlight">&lt;/p&gt;</span><span class="markup-highlight">&lt;/msDesc&gt;</span>
+       23–29 lines per page. Literature: Иванов 1891: 83–112, 1892: 169–93;
+       Цонев 1940: 180–81; Ангелов 1958; Кодов 1969: 227–32<span class="markup-highlight">&lt;/p&gt;</span>
+<span class="markup-highlight">&lt;/msDesc&gt;</span>
 </pre></div>
                   <div class="p">If we decide to use just paragraphs, we can nonetheless select whatever
                      granularity we consider most appropriate to our purposes. For example, we can
@@ -491,7 +494,9 @@
        <span class="markup-highlight">&lt;/geogName&gt;</span>
        <span class="markup-highlight">&lt;placeName&gt;</span>Zograph Monastery<span class="markup-highlight">&lt;/placeName&gt;</span>
        <span class="markup-highlight">&lt;repository&gt;</span>Monastery library<span class="markup-highlight">&lt;/repository&gt;</span>
-       <span class="markup-highlight">&lt;idno type="shelfmark"&gt;</span>III.г.7<span class="markup-highlight">&lt;/idno&gt;</span> … <span class="markup-highlight">&lt;/msIdentifier&gt;</span>
+       <span class="markup-highlight">&lt;idno type="shelfmark"&gt;</span>III.г.7<span class="markup-highlight">&lt;/idno&gt;</span>
+       … 
+    <span class="markup-highlight">&lt;/msIdentifier&gt;</span>
     <span class="markup-highlight">&lt;p xml:id="material"&gt;</span>Paper - thin, rough and white. Watermark: scissors,
        similar to Briquet, Nr 3688 from the year 1496.<span class="markup-highlight">&lt;/p&gt;</span>
     <span class="markup-highlight">&lt;p xml:id="binding"&gt;</span>Binding: new, made in the library.<span class="markup-highlight">&lt;/p&gt;</span>
@@ -524,12 +529,15 @@
     <span class="markup-highlight">&lt;summary&gt;</span>The fragment contains 11 Lenten lessons; the last one includes only
        the first three verses from 2nd Lent Sunday to the 6th Sunday at Orthros
        (Palm day)<span class="markup-highlight">&lt;/summary&gt;</span>
-    <span class="markup-highlight">&lt;msItemStruct xml:id="ACD1"&gt;</span><span class="markup-highlight">&lt;locus n="1"&gt;</span>1r<span class="markup-highlight">&lt;/locus&gt;</span>
-       <span class="markup-highlight">&lt;title&gt;</span>Mc 1:35-44;<span class="markup-highlight">&lt;/title&gt;</span>
+    <span class="markup-highlight">&lt;msItemStruct xml:id="ACD1"&gt;</span>
+       <span class="markup-highlight">&lt;locus n="1"&gt;</span>1r<span class="markup-highlight">&lt;/locus&gt;</span>
+       <span class="markup-highlight">&lt;title&gt;</span>Mc 1:35–44;<span class="markup-highlight">&lt;/title&gt;</span>
        <span class="markup-highlight">&lt;note&gt;</span>The beginning is missing. <span class="markup-highlight">&lt;date&gt;</span>Saturday II<span class="markup-highlight">&lt;/date&gt;</span><span class="markup-highlight">&lt;/note&gt;</span>
     <span class="markup-highlight">&lt;/msItemStruct&gt;</span>
-    <span class="markup-highlight">&lt;msItemStruct xml:id="ACD2"&gt;</span><span class="markup-highlight">&lt;locus n="2"&gt;</span>1r–1v<span class="markup-highlight">&lt;/locus&gt;</span>
-       <span class="markup-highlight">&lt;title&gt;</span>Mc 2:1-12 <span class="markup-highlight">&lt;/title&gt;</span> … 
+    <span class="markup-highlight">&lt;msItemStruct xml:id="ACD2"&gt;</span>
+       <span class="markup-highlight">&lt;locus n="2"&gt;</span>1r–1v<span class="markup-highlight">&lt;/locus&gt;</span>
+       <span class="markup-highlight">&lt;title&gt;</span>Mc 2:1–12 <span class="markup-highlight">&lt;/title&gt;</span>
+       … 
     <span class="markup-highlight">&lt;/msItemStruct&gt;</span>
 <span class="markup-highlight">&lt;/msContents&gt;</span>
 </pre></div>
@@ -602,7 +610,8 @@
                   different repositories, this information goes into corresponding sections of
                   description. In case of the <i>Codex Marianus</i>, there are two
                   leaves now kept in Vienna that have been known by two names that are no longer
-                  generally used: <i>Mihanović folia</i> and <i>Miklošič folia</i>:
+                  generally used: <i>Mihanović folia</i> and
+                  <cite>Miklošič folia</cite>:
                   <pre><span class="markup-highlight">&lt;altIdentifier xml:id="OENB146"&gt;</span>
     <span class="markup-highlight">&lt;msName type="individual" subtype="old"&gt;</span>Mihanović folia<span class="markup-highlight">&lt;/msName&gt;</span>
     <span class="markup-highlight">&lt;msName type="individual" subtype="old"&gt;</span>Miklošič folia<span class="markup-highlight">&lt;/msName&gt;</span> …
@@ -791,7 +800,9 @@
                         <code>&lt;altIdentifier&gt;</code> elements. Consider the following examples:</div>
                   <div class="p">1. Manuscript with shelfmark, inventory number, and catalogue number (from the
                      electronic description of MS 1415 of NLCM, Sofia by Dilyana Radoslavova):
-                     <pre><span class="markup-highlight">&lt;msIdentifier&gt;</span> … <span class="markup-highlight">&lt;settlement&gt;</span>Sofia<span class="markup-highlight">&lt;/settlement&gt;</span>
+                     <pre><span class="markup-highlight">&lt;msIdentifier&gt;</span>
+    … 
+    <span class="markup-highlight">&lt;settlement&gt;</span>Sofia<span class="markup-highlight">&lt;/settlement&gt;</span>
     <span class="markup-highlight">&lt;repository&gt;</span>National Library SS Cyril and Methodios<span class="markup-highlight">&lt;/repository&gt;</span>
     <span class="markup-highlight">&lt;idno type="shelfmark"&gt;</span>1415<span class="markup-highlight">&lt;/idno&gt;</span>
     <span class="markup-highlight">&lt;altIdentifier&gt;</span>
@@ -799,11 +810,15 @@
     <span class="markup-highlight">&lt;/altIdentifier&gt;</span>
     <span class="markup-highlight">&lt;altIdentifier&gt;</span>
        <span class="markup-highlight">&lt;idno type="catalogue"&gt;</span>1415<span class="markup-highlight">&lt;/idno&gt;</span>
-    <span class="markup-highlight">&lt;/altIdentifier&gt;</span> … <span class="markup-highlight">&lt;/msIdentifier&gt;</span>
+    <span class="markup-highlight">&lt;/altIdentifier&gt;</span>
+    … 
+<span class="markup-highlight">&lt;/msIdentifier&gt;</span>
 </pre></div>
                   <div class="p">2. Manuscript with current and several former shelfmarks (from the electronic
                      description of MS 1/102 of Odessa State Libary by Anisava Miltenova):
-                     <pre><span class="markup-highlight">&lt;msIdentifier&gt;</span> … <span class="markup-highlight">&lt;country&gt;</span>Ukraine<span class="markup-highlight">&lt;/country&gt;</span>
+                     <pre><span class="markup-highlight">&lt;msIdentifier&gt;</span>
+    … 
+    <span class="markup-highlight">&lt;country&gt;</span>Ukraine<span class="markup-highlight">&lt;/country&gt;</span>
     <span class="markup-highlight">&lt;settlement&gt;</span>Odessa<span class="markup-highlight">&lt;/settlement&gt;</span>
     <span class="markup-highlight">&lt;repository&gt;</span>State Library<span class="markup-highlight">&lt;/repository&gt;</span>
     <span class="markup-highlight">&lt;collection&gt;</span>V. Grigorovič<span class="markup-highlight">&lt;/collection&gt;</span>
@@ -819,7 +834,9 @@
     <span class="markup-highlight">&lt;/altIdentifier&gt;</span>
     <span class="markup-highlight">&lt;altIdentifier&gt;</span>
        <span class="markup-highlight">&lt;idno type="catalogue"&gt;</span>20<span class="markup-highlight">&lt;/idno&gt;</span>
-    <span class="markup-highlight">&lt;/altIdentifier&gt;</span> … <span class="markup-highlight">&lt;/msIdentifier&gt;</span>
+    <span class="markup-highlight">&lt;/altIdentifier&gt;</span>
+    … 
+<span class="markup-highlight">&lt;/msIdentifier&gt;</span>
 </pre></div>
                   <div class="p">In this example the manuscript has one current and three former shelfmarks and
                      it is described in the catalogue as item number 20.</div>
@@ -848,11 +865,15 @@
                      shelfmark or inventory number as an identification inside the collection, as in
                      the following example (from the electronic description of a Vidin Miscellany by
                      Antoaneta Granberg):
-                     <pre><span class="markup-highlight">&lt;msIdentifier&gt;</span> … <span class="markup-highlight">&lt;collection&gt;</span>M. Pogodin<span class="markup-highlight">&lt;/collection&gt;</span>
+                     <pre><span class="markup-highlight">&lt;msIdentifier&gt;</span>
+    … 
+    <span class="markup-highlight">&lt;collection&gt;</span>M. Pogodin<span class="markup-highlight">&lt;/collection&gt;</span>
     <span class="markup-highlight">&lt;idno type="shelfmark"&gt;</span>Pog. 1204<span class="markup-highlight">&lt;/idno&gt;</span>
     <span class="markup-highlight">&lt;altIdentifier type="current"&gt;</span>
        <span class="markup-highlight">&lt;idno type="catalogue"&gt;</span>77<span class="markup-highlight">&lt;/idno&gt;</span>
-    <span class="markup-highlight">&lt;/altIdentifier&gt;</span> … <span class="markup-highlight">&lt;/msIdentifier&gt;</span>
+    <span class="markup-highlight">&lt;/altIdentifier&gt;</span>
+    … 
+<span class="markup-highlight">&lt;/msIdentifier&gt;</span>
 </pre></div>
                   <div class="p">In some cases the current collection of a repository may have absorbed an
                      entire earlier repository collection. This is often the case in Russian
@@ -902,9 +923,10 @@
        <span class="markup-highlight">&lt;idno type="shelfmark"&gt;</span>90<span class="markup-highlight">&lt;/idno&gt;</span>
        <span class="markup-highlight">&lt;idno type="inventory"&gt;</span>588<span class="markup-highlight">&lt;/idno&gt;</span>
        <span class="markup-highlight">&lt;note place="inline"&gt;</span>
-          <span class="markup-highlight">&lt;ref type="bibl" target="../bibliography/TsonevB1910"&gt;</span>Цонев I, с. 31-33, Nr 90<span class="markup-highlight">&lt;/ref&gt;</span>
+          <span class="markup-highlight">&lt;ref type="bibl" target="../bibliography/TsonevB1910"&gt;</span>Цонев I, с. 31–33, Nr 90<span class="markup-highlight">&lt;/ref&gt;</span>
        <span class="markup-highlight">&lt;/note&gt;</span>
-    <span class="markup-highlight">&lt;/altIdentifier&gt;</span><span class="markup-highlight">&lt;/msIdentifier&gt;</span>
+    <span class="markup-highlight">&lt;/altIdentifier&gt;</span>
+<span class="markup-highlight">&lt;/msIdentifier&gt;</span>
 </pre></div>
                </div>
                <div>
@@ -933,7 +955,7 @@
     <span class="markup-highlight">&lt;altIdentifier type="partial" xml:id="RAS2446"&gt;</span>
        <span class="markup-highlight">&lt;country&gt;</span>Russia<span class="markup-highlight">&lt;/country&gt;</span>
        <span class="markup-highlight">&lt;settlement&gt;</span>St. Petersburg<span class="markup-highlight">&lt;/settlement&gt;</span>
-       <span class="markup-highlight">&lt;repository&gt;</span>Russian Academy of Sciences <span class="markup-highlight">&lt;/repository&gt;</span>
+       <span class="markup-highlight">&lt;repository&gt;</span>Russian Academy of Sciences<span class="markup-highlight">&lt;/repository&gt;</span>
        <span class="markup-highlight">&lt;idno type="shelfmark"&gt;</span>24.4.6.<span class="markup-highlight">&lt;/idno&gt;</span>
        <span class="markup-highlight">&lt;collection&gt;</span>I. Sreznevskij<span class="markup-highlight">&lt;/collection&gt;</span>
        <span class="markup-highlight">&lt;idno type="CS"&gt;</span>Srez. 53<span class="markup-highlight">&lt;/idno&gt;</span>
@@ -1119,7 +1141,9 @@
     <span class="markup-highlight">&lt;support&gt;</span>
        <span class="markup-highlight">&lt;material key="parchment"&gt;</span>Here is the information about parchment.<span class="markup-highlight">&lt;/material&gt;</span>
        <span class="markup-highlight">&lt;material key="paper"&gt;</span>Here is the information about paper.<span class="markup-highlight">&lt;/material&gt;</span>
-    <span class="markup-highlight">&lt;/support&gt;</span> … <span class="markup-highlight">&lt;/supportDesc&gt;</span>
+    <span class="markup-highlight">&lt;/support&gt;</span>
+    … 
+<span class="markup-highlight">&lt;/supportDesc&gt;</span>
 </pre></div>
                <div class="p">Here the <code>@key</code> attribute is used to distinguish the different materials
                   in the manuscript. The element <code>&lt;material&gt;</code> can include an attribute
@@ -1160,7 +1184,7 @@
                      the following excerpt from the electronic description of Add. Ms 37233 by
                      Dilyana Radoslavova (simplified):
                      <pre><span class="markup-highlight">&lt;material usage="original"&gt;</span>
-    <span class="markup-highlight">&lt;dim type="format"&gt;</span>4°<span class="markup-highlight">&lt;/dim&gt;</span>thick, rough, non-glazed paper <span class="markup-highlight">&lt;/material&gt;</span>
+    <span class="markup-highlight">&lt;dim type="format"&gt;</span>4°<span class="markup-highlight">&lt;/dim&gt;</span> thick, rough, non-glazed paper<span class="markup-highlight">&lt;/material&gt;</span>
 </pre>
                   </div>
                   <div class="p">The description of obviously different kind of paper, possibly from various
@@ -1296,9 +1320,10 @@
        <span class="markup-highlight">&lt;ref target="ERGB1689"&gt;</span>(Moscow)<span class="markup-highlight">&lt;/ref&gt;</span>
 <span class="markup-highlight">&lt;/extent&gt;</span>
 </pre></div>
-               <div class="p">This shows the location of the folia in both repositories. The <i>Codex Marianus</i> consists of 2 ff. kept in Vienna and 171 in Moscow. The
-                  element <code>&lt;ref&gt;</code> adds a link to the corresponding part of the description
-                     (<code>&lt;msIdentifier&gt;</code>or <code>&lt;altIdentifier&gt;</code>).</div>
+               <div class="p">This shows the location of the folia in both repositories. The
+                  <cite>Codex Marianus</cite> consists of 2 ff. kept in Vienna and 171
+                  in Moscow. The element <code>&lt;ref&gt;</code> adds a link to the corresponding part of the
+                  description (<code>&lt;msIdentifier&gt;</code>or <code>&lt;altIdentifier&gt;</code>).</div>
                <div class="p">An even more complicated example can be illustrated by the description of the <i>Manuilev Apostle</i>, which is now separated into six pieces
                   housed in three different libraries:
                   <pre><span class="markup-highlight">&lt;extent unit="folia"&gt;</span>lacuna + 
@@ -1309,7 +1334,7 @@
     lacuna + 
     f. 5 + 
     lacuna + 
-    ff. 6-10 + 
+    ff. 6–10 + 
     lacuna + 
     f. 11–12 <span class="markup-highlight">&lt;ref target="#NBKM499"&gt;</span>(NBKM 499)<span class="markup-highlight">&lt;/ref&gt;</span> + 
     lacuna + 
@@ -1318,7 +1343,7 @@
     1 <span class="markup-highlight">&lt;ref target="#RSLGrig15.III"&gt;</span>(Grig. 15.III, 2r/v)<span class="markup-highlight">&lt;/ref&gt;</span> + 
     lacuna + 
     1 <span class="markup-highlight">&lt;ref target="#NBKM500"&gt;</span>(NBKM 500)<span class="markup-highlight">&lt;/ref&gt;</span> +
-    2 <span class="markup-highlight">&lt;ref target="#NBKM499"&gt;</span>(ff. 1-2, NBKM 499)<span class="markup-highlight">&lt;/ref&gt;</span> + 
+    2 <span class="markup-highlight">&lt;ref target="#NBKM499"&gt;</span>(ff. 1–2, NBKM 499)<span class="markup-highlight">&lt;/ref&gt;</span> + 
     1 <span class="markup-highlight">&lt;ref target="#BAN4.5.24"&gt;</span>(BAN 4.5.24)<span class="markup-highlight">&lt;/ref&gt;</span>
 <span class="markup-highlight">&lt;/extent&gt;</span>
 </pre></div>
@@ -1399,7 +1424,7 @@
             <div>
                <h3 id="m5.11.">5.11. Collation</h3>
                <div class="p">The description of collation offers three alternatives: <ul><li>to describe the general collation using the element <code>&lt;p&gt;</code> for an
-                        unstructured description </li><li>to begin with a general overview using the element <code>&lt;p&gt;</code> but also to
+                        unstructured description</li><li>to begin with a general overview using the element <code>&lt;p&gt;</code> but also to
                         describe such characteristics as signatures, catchwords, pricking, ruling or
                         dispositions of folia in the gatherings in separate elements;</li><li>when some of the quires deviate from the general rules, to describe them
                         in one or more separate <code>&lt;quire&gt;</code> elements</li></ul></div>
@@ -1443,7 +1468,8 @@
        <span class="markup-highlight">&lt;extent&gt;</span>2<span class="markup-highlight">&lt;/extent&gt;</span>
        <span class="markup-highlight">&lt;formula&gt;</span>6 (-1-2-3-4) <span class="markup-highlight">&lt;/formula&gt;</span>
     <span class="markup-highlight">&lt;/quire&gt;</span>
- … <span class="markup-highlight">&lt;/collation&gt;</span>
+    … 
+<span class="markup-highlight">&lt;/collation&gt;</span>
 </pre></div>
                   <div class="p">This means that first quire of the manuscript was formed of 8 ff., all of
                      which, with the exception of the f. 7, are now missing. Quires II to XXI have 8
@@ -1476,8 +1502,8 @@
                      related to the place of ruling in the quire, or the so called
                         <dfn>scheme</dfn>. The former could be expressed as a formula of ruled
                      lines for writing, and the latter could be visualized as simple graphic showing
-                     the places in the quire where the ruling is accomplished, e.g.:
-                     <pre><span class="markup-highlight">&lt;ruling&gt;</span>&amp;gt;&amp;gt; | &amp;gt; | |&amp;lt; |&amp;lt;&amp;lt; = &amp;gt;&amp;gt;| &amp;gt;| |&amp;lt; | &amp;lt;&amp;lt;<span class="markup-highlight">&lt;/ruling&gt;</span>
+                     the places in the quire where the ruling is accomplished, e.g.: 
+                     <pre><span class="markup-highlight">&lt;ruling&gt;</span>›› | › | | ‹ | ‹‹ = ›› | › | | ‹ | ‹‹<span class="markup-highlight">&lt;/ruling&gt;</span>
 </pre></div>
                   <div class="p">This scheme means that in this quire the ruling is made for each of the two
                      folia: once for the outer double leaf and once for the inner one (double sign:
@@ -1588,10 +1614,13 @@
           <span class="markup-highlight">&lt;item&gt;</span><span class="markup-highlight">&lt;locus&gt;</span>f. 44v, the beginning of St. Mark’s Gospel<span class="markup-highlight">&lt;/locus&gt;</span>, an
              interlaced headband with floral endings at the corners and a central
              motif on the upper rim.<span class="markup-highlight">&lt;/item&gt;</span>
-       <span class="markup-highlight">&lt;/list&gt;</span><span class="markup-highlight">&lt;/decoNote&gt;</span><span class="markup-highlight">&lt;/decoDesc&gt;</span>
+       <span class="markup-highlight">&lt;/list&gt;</span>
+    <span class="markup-highlight">&lt;/decoNote&gt;</span>
+<span class="markup-highlight">&lt;/decoDesc&gt;</span>
 </pre></li><li>For initials:
                      <pre><span class="markup-highlight">&lt;decoDesc&gt;</span>
-    <span class="markup-highlight">&lt;decoNote type="initials"&gt;</span><span class="markup-highlight">&lt;label&gt;</span>Floral elements and interlaces<span class="markup-highlight">&lt;/label&gt;</span>
+    <span class="markup-highlight">&lt;decoNote type="initials"&gt;</span>
+       <span class="markup-highlight">&lt;label&gt;</span>Floral elements and interlaces<span class="markup-highlight">&lt;/label&gt;</span>
        <span class="markup-highlight">&lt;list&gt;</span>
           <span class="markup-highlight">&lt;item&gt;</span><span class="markup-highlight">&lt;locus&gt;</span>f. 44v, beginning of St. Mark’s Gospel<span class="markup-highlight">&lt;/locus&gt;</span> initial 
              <span class="markup-highlight">&lt;c xml:lang="cu" rend="glag"&gt;</span>З <span class="markup-highlight">&lt;/c&gt;</span> with floral elements and 
@@ -1609,7 +1638,7 @@
        39r, 55v, 71v, 88r, 89r, 102r, 111v, 120r, 131r, 141r, 143r, 163r, 179v,
        198v, 213, 229r; 245v; 257v, 269v, 281r; 279r, 296r, 297r-v, 298v, 300r-v,
        301r-v, 302v, 303r, 304r, 305v, 311r-v, 312r-v, 313r, 314v; 274r - picture
-       of the Holy Cross; <span class="markup-highlight">&lt;/decoNote&gt;</span>
+       of the Holy Cross;<span class="markup-highlight">&lt;/decoNote&gt;</span>
 <span class="markup-highlight">&lt;/decoDesc&gt;</span>
 </pre></li></ul>
                <div class="p">In the last example the various appearances of floral motifs could be further
@@ -1636,19 +1665,21 @@
                   <div class="p">The encoder can include a short statement before continuing the description of
                      the binding, or he or she can provide only this information. In the latter case
                      he or she could give information about all of the main parts of the
-                     book-binding structure and decoration. For example:
+                     book-binding structure and decoration. The following example is from the
+                     description of British library Ms Egerton 3045 by Dilyana Radoslavova:
                      <pre><span class="markup-highlight">&lt;bindingDesc&gt;</span>
-    <span class="markup-highlight">&lt;binding contemporary="true"&gt;</span><span class="markup-highlight">&lt;p&gt;</span>Brocade on wooden boards, 
+    <span class="markup-highlight">&lt;binding contemporary="true"&gt;</span>
+       <span class="markup-highlight">&lt;p&gt;</span>Brocade on wooden boards, 
        <span class="markup-highlight">&lt;dimensions unit="mm" type="plate"&gt;</span>
-          <span class="markup-highlight">&lt;width&gt;</span>145<span class="markup-highlight">&lt;/width&gt;</span><span class="markup-highlight">&lt;height&gt;</span>205<span class="markup-highlight">&lt;/height&gt;</span>
+          <span class="markup-highlight">&lt;width&gt;</span>145<span class="markup-highlight">&lt;/width&gt;</span>
+          <span class="markup-highlight">&lt;height&gt;</span>205<span class="markup-highlight">&lt;/height&gt;</span>
        <span class="markup-highlight">&lt;/dimensions&gt;</span>. Two clasps. The paste-downs and first and last flyleaves 
        are backed with mauve cloth. Illumination and marginalia have suffered a 
        little from excessive trimming. The edges of the pages are gauffred and 
        gilded.Two metal bosses on the lower side of each cover.<span class="markup-highlight">&lt;/p&gt;</span>
        <span class="markup-highlight">&lt;condition&gt;</span>Well preserved.<span class="markup-highlight">&lt;/condition&gt;</span>
     <span class="markup-highlight">&lt;/binding&gt;</span>
-<span class="markup-highlight">&lt;/bindingDesc&gt;</span> (from the description of British library Ms Egerton 3045 by
- Dilyana Radoslavova) 
+<span class="markup-highlight">&lt;/bindingDesc&gt;</span>
 </pre></div>
                   <div class="p">All other aspects of the binding description, not covered by elements like
                         <code>&lt;decoDesc&gt;</code> or <code>&lt;condition&gt;</code>, could be entered in the element
@@ -1703,10 +1734,10 @@
                      <pre><span class="markup-highlight">&lt;date certainty="likely"&gt;</span>15 century<span class="markup-highlight">&lt;/date&gt;</span>
 </pre></div>
                   <div class="p">Sometimes the exact date is known from a note by the copyist or book-binder. In
-                     these cases a reference to the description and its edition should be made,
-                     e.g.:
+                     these cases a reference to the description and its edition should be made, as
+                     in this example from Tachiaos 1981: 69–70, No 25:
                      <pre><span class="markup-highlight">&lt;date certainty="yes"&gt;</span>1667<span class="markup-highlight">&lt;ref target="note1"&gt;</span>cf. bookbinder’s
-    note<span class="markup-highlight">&lt;/ref&gt;</span><span class="markup-highlight">&lt;/date&gt;</span> (from Tachiaos 1981: 69–70, No 25) 
+    note<span class="markup-highlight">&lt;/ref&gt;</span><span class="markup-highlight">&lt;/date&gt;</span>
 </pre></div>
                   <div class="p">In this case the <code>&lt;date&gt;</code> element bears the attribute <code>@certainty</code>
                      with the value <q>yes</q> and this information is further referenced with
@@ -1752,31 +1783,41 @@
                      more <code>&lt;item&gt;</code> elements. If there is just one note, the structure could be
                      as follows:
                      <pre><span class="markup-highlight">&lt;additions type="inscription"&gt;</span>
-    <span class="markup-highlight">&lt;p&gt;</span><span class="markup-highlight">&lt;locus&gt;</span>the place in the manuscript, e.g., f. 104r, inner margin<span class="markup-highlight">&lt;/locus&gt;</span>
+    <span class="markup-highlight">&lt;p&gt;</span>
+       <span class="markup-highlight">&lt;locus&gt;</span>the place in the manuscript, e.g., f. 104r, inner margin<span class="markup-highlight">&lt;/locus&gt;</span>
        <span class="markup-highlight">&lt;persName&gt;</span>if available<span class="markup-highlight">&lt;/persName&gt;</span>
        <span class="markup-highlight">&lt;date&gt;</span>if available<span class="markup-highlight">&lt;/date&gt;</span>
        <span class="markup-highlight">&lt;quote&gt;</span>an edition of the original text<span class="markup-highlight">&lt;/quote&gt;</span>
        <span class="markup-highlight">&lt;note&gt;</span>other notes and/or bibliographic reference, e.g., previous editions
-          and interpretations.<span class="markup-highlight">&lt;/note&gt;</span><span class="markup-highlight">&lt;/p&gt;</span>
+          and interpretations.<span class="markup-highlight">&lt;/note&gt;</span>
+    <span class="markup-highlight">&lt;/p&gt;</span>
 <span class="markup-highlight">&lt;/additions&gt;</span>
 </pre></div>
                   <div class="p">In cases with more than one note, it might be most convenient to represent them
                      as a list of separate items:
                      <pre><span class="markup-highlight">&lt;additions&gt;</span>
-    <span class="markup-highlight">&lt;list&gt;</span><span class="markup-highlight">&lt;item&gt;</span><span class="markup-highlight">&lt;locus&gt;</span>front cover<span class="markup-highlight">&lt;/locus&gt;</span>
+    <span class="markup-highlight">&lt;list&gt;</span>
+       <span class="markup-highlight">&lt;item&gt;</span>
+          <span class="markup-highlight">&lt;locus&gt;</span>front cover<span class="markup-highlight">&lt;/locus&gt;</span>
           <span class="markup-highlight">&lt;persName type="binder"&gt;</span>Krastio Gramatik<span class="markup-highlight">&lt;/persName&gt;</span>
           <span class="markup-highlight">&lt;date evidence="conjecture"&gt;</span>1785<span class="markup-highlight">&lt;/date&gt;</span>
           <span class="markup-highlight">&lt;quote xml:lang="cu"&gt;</span>сїа дамаскинъ на ст҃ого архангела повеза го
              кр(с)то граматикъ и тꙋгава беха два попа на стого архангела попъ
              Бено и Ꙋзꙋнъ попъ кр(с)то догава отиде на ст҃а гора мц҃ъ
-             маїѧ<span class="markup-highlight">&lt;/quote&gt;</span><span class="markup-highlight">&lt;/item&gt;</span> … <span class="markup-highlight">&lt;item&gt;</span><span class="markup-highlight">&lt;locus&gt;</span>f. 61v<span class="markup-highlight">&lt;/locus&gt;</span>
-          <span class="markup-highlight">&lt;persName type="reader"&gt;</span>Stefan Stojanovich <span class="markup-highlight">&lt;/persName&gt;</span>
+             маїѧ<span class="markup-highlight">&lt;/quote&gt;</span>
+       <span class="markup-highlight">&lt;/item&gt;</span>
+       … 
+       <span class="markup-highlight">&lt;item&gt;</span>
+          <span class="markup-highlight">&lt;locus&gt;</span>f. 61v<span class="markup-highlight">&lt;/locus&gt;</span>
+          <span class="markup-highlight">&lt;persName type="reader"&gt;</span>Stefan Stojanovich<span class="markup-highlight">&lt;/persName&gt;</span>
           <span class="markup-highlight">&lt;date evidence="internal"&gt;</span>1834<span class="markup-highlight">&lt;/date&gt;</span>
           <span class="markup-highlight">&lt;quote xml:lang="cu"&gt;</span>Извѣстую какво на време то на Дꙋонисїа епїскопа
              ловчанскагѡ собираха ѿ патраршиꙗ та ѿ секи попъ по 43 гро(ш).
              заради да права(т) ст҃о мꙋро. ꙗже сщ҃ени(к) помажет новорожденныꙗ
              мл(д)нцы съ сегѡ ст҃аго мꙋро бывате сыни бжїꙗ, и наслдѣники
-             цр(с)твїя его. 1834 марѳ. 23 г҃ѡ днꙗ<span class="markup-highlight">&lt;/quote&gt;</span><span class="markup-highlight">&lt;/item&gt;</span><span class="markup-highlight">&lt;/list&gt;</span>
+             цр(с)твїя его. 1834 марѳ. 23 г҃ѡ днꙗ<span class="markup-highlight">&lt;/quote&gt;</span>
+       <span class="markup-highlight">&lt;/item&gt;</span>
+    <span class="markup-highlight">&lt;/list&gt;</span>
 <span class="markup-highlight">&lt;/additions&gt;</span>
 </pre></div>
                   <div class="p">The elements in both approaches should contain information about the place in
@@ -1819,7 +1860,9 @@
                   the encoder can record that as:
                   <pre><span class="markup-highlight">&lt;scribeDesc&gt;</span>
     <span class="markup-highlight">&lt;scribe n="1"&gt;</span>
-       <span class="markup-highlight">&lt;name&gt;</span>Unknown<span class="markup-highlight">&lt;/name&gt;</span> … <span class="markup-highlight">&lt;/scribe&gt;</span>
+       <span class="markup-highlight">&lt;name&gt;</span>Unknown<span class="markup-highlight">&lt;/name&gt;</span>
+       … 
+    <span class="markup-highlight">&lt;/scribe&gt;</span>
 <span class="markup-highlight">&lt;/scribeDesc&gt;</span>
 </pre></div>
                <div class="p">This information is followed by a description of palaeographic and linguistic
@@ -1902,7 +1945,8 @@
        and after the vowel letters front nasal is turned into the back one.
        After ч this change is not observed. A relatively small number of
        ligatures and supralinear signs. A few examples of accent marks
-    …<span class="markup-highlight">&lt;/p&gt;</span><span class="markup-highlight">&lt;/orthography&gt;</span>
+    …<span class="markup-highlight">&lt;/p&gt;</span>
+<span class="markup-highlight">&lt;/orthography&gt;</span>
 </pre></div>
                   <div class="p">The other way to describe the orthography of the scribe is with a structured
                      description, where each piece of the description is entered as a separate
@@ -2068,16 +2112,16 @@
                   <h4 id="m7.2.1.">7.2.1. Unstructured view</h4>
                   <div class="p">If we are compiling just a short description of the manuscript without
                      information about each text, the most convenient method is to use just a
-                     paragraph with short information:
+                     paragraph with short information. The following example is from the electronic
+                     description of MS Zogr. 282 by Andrej Bojadžiev:
                      <pre><span class="markup-highlight">&lt;msContents class="NT.Gospels" type="translation" style="narrative"&gt;</span>
     <span class="markup-highlight">&lt;p&gt;</span>The Aprakos Evangelion is without beginning and end. It starts with the
-       reading for the Saturday of the 3rd week after Lent (Mk 8:30-31),
+       reading for the Saturday of the 3rd week after Lent (Mk 8:30–31),
        continues with the Sunday after the 4th week of the Lent (Mk 9:17), and
        then the reading for the Saturday of the 5th week after Lent follows.
        After that there are texts for Palm Sunday and for the Monday and Tuesday
        of Holy Week.<span class="markup-highlight">&lt;/p&gt;</span>
-<span class="markup-highlight">&lt;/msContents&gt;</span> From the electronic description of MS Zogr. 282 by Andrej
- Bojadžiev 
+<span class="markup-highlight">&lt;/msContents&gt;</span>
 </pre></div>
                </div>
                <div>
@@ -2137,7 +2181,7 @@
                   Nikon of Montenegro or Chrysorrhoas collection with writings of John Chrysostom
                   (Thomson 1982; Miltenov 2010; Милтенов 2011) we can provide information about the
                   author and sometimes about the editor/compiler of the whole set of texts, as in
-                  this example:
+                  this example, from the electronic description of MS Rila 3/6 by Anisava Miltenova:
                   <pre><span class="markup-highlight">&lt;author&gt;</span>John Chrysostom<span class="markup-highlight">&lt;/author&gt;</span>
 <span class="markup-highlight">&lt;respStmt&gt;</span>
     <span class="markup-highlight">&lt;resp&gt;</span>Translator<span class="markup-highlight">&lt;/resp&gt;</span>
@@ -2146,7 +2190,7 @@
 <span class="markup-highlight">&lt;respStmt&gt;</span>
     <span class="markup-highlight">&lt;resp&gt;</span>Compiler<span class="markup-highlight">&lt;/resp&gt;</span>
     <span class="markup-highlight">&lt;name&gt;</span>Vladislav Grammatik<span class="markup-highlight">&lt;/name&gt;</span>
-<span class="markup-highlight">&lt;/respStmt&gt;</span> From the electronic description of MS Rila 3/6 by Anisava Miltenova 
+<span class="markup-highlight">&lt;/respStmt&gt;</span>
 </pre></div>
                <div class="p">Here we have three kinds of information: 1) about the original author of the texts
                   (John Chrysostom), 2) about the translator of his works (monk Antonij), and 3)
@@ -2162,7 +2206,7 @@
                <h3 id="m7.6.">7.6. A note in the description of texts</h3>
                <div class="p">The element <code>&lt;note&gt;</code> in the description of texts is restricted to cases that
                   deal with extra-textual historical features, such as missing parts of the texts:
-                  <pre><span class="markup-highlight">&lt;note&gt;</span>Most of the texts have some missing parts. Cf. Manuscript Condition <span class="markup-highlight">&lt;/note&gt;</span>
+                  <pre><span class="markup-highlight">&lt;note&gt;</span>Most of the texts have some missing parts. Cf. Manuscript Condition<span class="markup-highlight">&lt;/note&gt;</span>
 </pre></div>
                <div class="p">Here, a reference to the physical condition of the manuscript is given. In other
                   cases the element <code>&lt;note&gt;</code> could be useful to further refine the text
@@ -2170,25 +2214,22 @@
                   <pre><span class="markup-highlight">&lt;note&gt;</span>Sprostranov was the first to attribute the whole collection to the single
     compiler <span class="markup-highlight">&lt;bibl&gt;</span>
        <span class="markup-highlight">&lt;ref target="../bibliography/scyr.xml#Sprostanov1902"&gt;</span>Sprostranov 
-          1902: 52-56<span class="markup-highlight">&lt;/ref&gt;</span><span class="markup-highlight">&lt;/bibl&gt;</span><span class="markup-highlight">&lt;/note&gt;</span>
+          1902: 52–56<span class="markup-highlight">&lt;/ref&gt;</span><span class="markup-highlight">&lt;/bibl&gt;</span><span class="markup-highlight">&lt;/note&gt;</span>
 </pre></div>
             </div>
             <div>
                <h3 id="m7.7.">7.7. Information about text history for the whole manuscript</h3>
                <div class="p">The text historical information on the level of the whole manuscripts is part of
                   the content of the series of element <code>&lt;filiation&gt;</code>. This element has one
-                  important attribute, <code>@type</code>, the most common values of which are :</div>
-               <div class="p"><q>antigraph</q>: information about the text collection’s antigraph</div>
-               <div class="p"><q>apograph</q>: information about the text collection’s apograph</div>
-               <div class="p"><q>litRedaction</q>: information about the textual redaction or recension of
-                  the whole manuscript</div>
-               <div class="p"><q>protograph</q>: information about the text collection’s protograph</div>
-               <div class="p"><q>source</q>: the source of the whole text collection</div>
-               <div class="p"><q>translation:</q> data about the translation with respect to number and/or
-                  origin.</div>
-               <div class="p">Examples of usage are given below. On the level of the whole manuscript these
-                  features are invoked only when conclusions can be drawn for the whole text
-                  collection about a common source, protograph, literary redaction, etc.</div>
+                  important attribute, <code>@type</code>, the most common values of which are:</div>
+               <ul><li><q>antigraph</q>: information about the text collection’s
+                     antigraph</li><li><q>apograph</q>: information about the text collection’s apograph</li><li><q>litRedaction</q>: information about the textual redaction or
+                     recension of the whole manuscript</li><li><q>protograph</q>: information about the text collection’s
+                     protograph</li><li><q>source</q>: the source of the whole text collection</li><li><q>translation:</q> data about the translation with respect to number
+                     and/or origin.</li><li>Examples of usage are given below. On the level of the whole manuscript
+                     these features are invoked only when conclusions can be drawn for the whole
+                     text collection about a common source, protograph, literary redaction,
+                     etc.</li></ul>
             </div>
             <div>
                <h3 id="m7.8.">7.8. The original text on the level of the whole manuscript</h3>
@@ -2259,7 +2300,7 @@
     <span class="markup-highlight">&lt;author&gt;</span>St. Hyppolitus of Rome. <span class="markup-highlight">&lt;/author&gt;</span>
     <span class="markup-highlight">&lt;note&gt;</span>Interpretation on the 9th Proverb: “Wisdom has built her house".<span class="markup-highlight">&lt;/note&gt;</span>
     <span class="markup-highlight">&lt;filiation type="source" subtype="Greek"&gt;</span><span class="markup-highlight">&lt;bibl&gt;</span>Migne, PG 10, col.
-          952-953<span class="markup-highlight">&lt;/bibl&gt;</span><span class="markup-highlight">&lt;/filiation&gt;</span>
+          952–53<span class="markup-highlight">&lt;/bibl&gt;</span><span class="markup-highlight">&lt;/filiation&gt;</span>
     <span class="markup-highlight">&lt;filiation type="translation"&gt;</span><span class="markup-highlight">&lt;num&gt;</span>1?<span class="markup-highlight">&lt;/num&gt;</span><span class="markup-highlight">&lt;/filiation&gt;</span>
     <span class="markup-highlight">&lt;filiation type="protograph"&gt;</span>Bulgarian<span class="markup-highlight">&lt;/filiation&gt;</span> … <span class="markup-highlight">&lt;/msItemStruct&gt;</span>
 </pre></div>
@@ -2298,13 +2339,13 @@
                <h3 id="m7.14.">7.14. Dates for texts sung or read on particular occasions</h3>
                <div class="p">As part of the same element <code>&lt;note&gt;</code> inside the <code>&lt;msItemStruct&gt;</code> element
                   we could enter fixed or movable dates presented in the manuscript copy or known by
-                  the encoder in comparison with other sources. Consider the following example:
+                  the encoder in comparison with other sources. Consider the following example from
+                  the electronic description of the Codex Suprasliensis by Maya Petrova-Taneva:
                   <pre><span class="markup-highlight">&lt;title xml:lang="en"&gt;</span>Vita of John the Hesychast<span class="markup-highlight">&lt;/title&gt;</span>
 <span class="markup-highlight">&lt;note place="inline"&gt;</span>
     <span class="markup-highlight">&lt;date when="--03-31" type="church" evidence="internal" subtype="fixed"&gt;</span>31st of
        March<span class="markup-highlight">&lt;/date&gt;</span>
-<span class="markup-highlight">&lt;/note&gt;</span> From the electronic description of the Codex Suprasliensis by Maya
- Petrova-Taneva 
+<span class="markup-highlight">&lt;/note&gt;</span>
 </pre></div>
                <div class="p">Here we have all possible information about this date in the
                   <cite>Codex
@@ -2334,7 +2375,7 @@
                <div class="p">Usually the source in the Slavonic tradition is a Greek or Latin original text
                   that served as the source of translation. In the example above the excerpt:
                   <pre><span class="markup-highlight">&lt;filiation type="source" subtype="Greek"&gt;</span><span class="markup-highlight">&lt;bibl&gt;</span>Migne, PG 10, col.
-    952-953<span class="markup-highlight">&lt;/bibl&gt;</span><span class="markup-highlight">&lt;/filiation&gt;</span>
+    952–53<span class="markup-highlight">&lt;/bibl&gt;</span><span class="markup-highlight">&lt;/filiation&gt;</span>
 </pre></div>
                <div class="p">does not mean that the given text is a direct source for the translation, but that
                   it is cited as a parallel to the Slavic text in the described manuscript.</div>
@@ -2364,11 +2405,12 @@
     112<span class="markup-highlight">&lt;/ref&gt;</span><span class="markup-highlight">&lt;/bibl&gt;</span><span class="markup-highlight">&lt;/filiation&gt;</span>
 </pre></div>
                <div class="p">A combination of several <code>&lt;filiation&gt;</code> elements with different values of
-                     <code>@type</code> can specify the exact place of a text copy, as in this example:
+                     <code>@type</code> can specify the exact place of a text copy, as in this example,
+                  from the electronic description of MS Odessa, State Library 1/112 by Anisava
+                  Miltenova:
                   <pre><span class="markup-highlight">&lt;filiation type="protograph"&gt;</span>Bulgarian<span class="markup-highlight">&lt;/filiation&gt;</span>
 <span class="markup-highlight">&lt;filiation type="antigraph"&gt;</span>Middle Bulgarian<span class="markup-highlight">&lt;/filiation&gt;</span>
-<span class="markup-highlight">&lt;filiation type="litRedaction"&gt;</span>2<span class="markup-highlight">&lt;/filiation&gt;</span> From the electronic description of MS
- Odessa, State Library 1/112 by Anisava Miltenova 
+<span class="markup-highlight">&lt;filiation type="litRedaction"&gt;</span>2<span class="markup-highlight">&lt;/filiation&gt;</span>
 </pre></div>
             </div>
             <div>
@@ -2396,13 +2438,13 @@
     <span class="markup-highlight">&lt;title&gt;</span>Calendologion<span class="markup-highlight">&lt;/title&gt;</span> … <span class="markup-highlight">&lt;/msItemStruct&gt;</span>
 </pre></div>
                <div class="p">One text is missing in MS NBKM 309 but it is present in Dujčev 17, where it bears
-                  a designation number 2:
+                  a designation number 2 (this example is from the electronic descriptions of MSS
+                  NBKM 309 and Slav. Dujčev 17 by Anisava Miltenova):
                   <pre><span class="markup-highlight">&lt;msItemStruct xml:id="ACD1" type="translation"&gt;</span>
     <span class="markup-highlight">&lt;locus n="2"&gt;</span>2r-3v<span class="markup-highlight">&lt;/locus&gt;</span>
     <span class="markup-highlight">&lt;title xml:lang="bg"&gt;</span>Thunder book according to ascending and descending
        moon<span class="markup-highlight">&lt;/title&gt;</span>
-    … <span class="markup-highlight">&lt;/msItemStruct&gt;</span> From the electronic descriptions of MSS NBKM 309 and Slav.
- Dujčev 17 by Anisava Miltenova 
+    … <span class="markup-highlight">&lt;/msItemStruct&gt;</span>
 </pre></div>
                <div class="p">In both manuscripts the first item from the reconstructed cycle is missing, and
                   therefore an element <code>&lt;locus&gt;</code> with <code>n="1"</code> is absent as well.</div>
@@ -2425,7 +2467,8 @@
                   of the genuine content of the manuscript. As such it is part of the
                      <code>&lt;msItemStruct&gt;</code> element and its description shares the same features as
                   other text. The only exception to this rule is that the text of the colophon is
-                  entered as a special element <code>&lt;colophon&gt;</code>:
+                  entered as a special element <code>&lt;colophon&gt;</code>, as in this example from the
+                  electronic description of MS Rila 3/6 by Anisava Miltenova:
                   <pre><span class="markup-highlight">&lt;msItemStruct defective="false" type="original" style="narrative" xml:id="ACD15"&gt;</span>
     <span class="markup-highlight">&lt;locus n="15"&gt;</span>77v<span class="markup-highlight">&lt;/locus&gt;</span>
     <span class="markup-highlight">&lt;author&gt;</span>Vladislav Gramatik<span class="markup-highlight">&lt;/author&gt;</span>
@@ -2434,11 +2477,12 @@
        въведение прꙗчистые бц҃е въ ст҃аа сты(х). и дописа се тогож(д)е м(с)ца
        ное(м). в гредущее лѣто. а҃і. днь. у пе(к). дне(м). Въ лѣто ҂ѕц҃ѯе.
        Владислав диак писа книгу сию. ѿ новога брьда. <span class="markup-highlight">&lt;/colophon&gt;</span>
-<span class="markup-highlight">&lt;/msItemStruct&gt;</span> From the electronic description of MS Rila 3/6 by Anisava
- Miltenova 
+<span class="markup-highlight">&lt;/msItemStruct&gt;</span>
 </pre></div>
                <div class="p">Sometimes a manuscript contains more than one authentic scribal colophons. In this
-                  case all are described and edited in the corresponding places of the description:
+                  case all are described and edited in the corresponding places of the description
+                  (the following example is from the electronic description of MS NBKM 1388 by
+                  Dilyana Radoslavova):
                   <pre><span class="markup-highlight">&lt;msItemStruct type="original" xml:id="ACD6" class="colophon"&gt;</span>
     <span class="markup-highlight">&lt;locus&gt;</span>f. 154v<span class="markup-highlight">&lt;/locus&gt;</span>
     <span class="markup-highlight">&lt;author&gt;</span>Nikita<span class="markup-highlight">&lt;/author&gt;</span>
@@ -2462,8 +2506,7 @@
        ба҃ и ѿ прч(с)тꙋю его мт҃еры и ѿ т҃иї бг҃оносны(х) ѿц҃ъ. при цара тꙋрска
        сꙋлтань ибрахи(м). и при еп(с)кпа ловечка кꙋ(р) сꙋмеѡна. въ лѣто ѿ адама.
        зрм҃и <span class="markup-highlight">&lt;/colophon&gt;</span>
-<span class="markup-highlight">&lt;/msItemStruct&gt;</span> From the electronic description of MS NBKM 1388 by Dilyana
- Radoslavova 
+<span class="markup-highlight">&lt;/msItemStruct&gt;</span>
 </pre></div>
                <div class="p">The description and edition of the colophon could include data about the formula
                   of the text in terms of diplomatic structures, e.g., the form and parts of
@@ -2562,7 +2605,7 @@
                   method for describing such texts as part of the larger ones. This task could be
                   accomplished by nesting <code>&lt;msItemStruct&gt;</code> inside another <code>&lt;msItemStruct&gt;</code>
                   element, as in the following example from the electronic description of MS Pant.
-                  monastery, Mount Athos 22 by Ana Stojkova :
+                  monastery, Mount Athos 22 by Ana Stojkova:
                   <pre><span class="markup-highlight">&lt;msItemStruct&gt;</span>
     <span class="markup-highlight">&lt;msItemStruct&gt;</span>…<span class="markup-highlight">&lt;/msItemStruct&gt;</span>
     <span class="markup-highlight">&lt;msItemStruct&gt;</span>…<span class="markup-highlight">&lt;/msItemStruct&gt;</span>
@@ -2760,14 +2803,24 @@
                      characteristics are encoded as part of the element <code>&lt;surrogates&gt;</code>.
                      Consider the following example:
                      <pre><span class="markup-highlight">&lt;surrogates&gt;</span>
-    <span class="markup-highlight">&lt;p&gt;</span><span class="markup-highlight">&lt;label&gt;</span>Microform<span class="markup-highlight">&lt;/label&gt;</span>
-       <span class="markup-highlight">&lt;idno&gt;</span>Central Library of BAS, MF-11<span class="markup-highlight">&lt;/idno&gt;</span><span class="markup-highlight">&lt;/p&gt;</span>
-    <span class="markup-highlight">&lt;p&gt;</span><span class="markup-highlight">&lt;label&gt;</span>Digital images<span class="markup-highlight">&lt;/label&gt;</span>
+    <span class="markup-highlight">&lt;p&gt;</span>
+       <span class="markup-highlight">&lt;label&gt;</span>Microform<span class="markup-highlight">&lt;/label&gt;</span>
+       <span class="markup-highlight">&lt;idno&gt;</span>Central Library of BAS, MF-11<span class="markup-highlight">&lt;/idno&gt;</span>
+    <span class="markup-highlight">&lt;/p&gt;</span>
+    <span class="markup-highlight">&lt;p&gt;</span>
+       <span class="markup-highlight">&lt;label&gt;</span>Digital images<span class="markup-highlight">&lt;/label&gt;</span>
        <span class="markup-highlight">&lt;list&gt;</span>
-          <span class="markup-highlight">&lt;item&gt;</span><span class="markup-highlight">&lt;locus&gt;</span>f. 184<span class="markup-highlight">&lt;/locus&gt;</span>
-             <span class="markup-highlight">&lt;idno type="file"&gt;</span>C5246-07<span class="markup-highlight">&lt;/idno&gt;</span><span class="markup-highlight">&lt;/item&gt;</span>
-          <span class="markup-highlight">&lt;item&gt;</span><span class="markup-highlight">&lt;locus&gt;</span>188<span class="markup-highlight">&lt;/locus&gt;</span><span class="markup-highlight">&lt;idno type="file"&gt;</span>C5247-07<span class="markup-highlight">&lt;/idno&gt;</span><span class="markup-highlight">&lt;/item&gt;</span> …
-       <span class="markup-highlight">&lt;/list&gt;</span><span class="markup-highlight">&lt;/p&gt;</span>
+          <span class="markup-highlight">&lt;item&gt;</span>
+             <span class="markup-highlight">&lt;locus&gt;</span>f. 184<span class="markup-highlight">&lt;/locus&gt;</span>
+             <span class="markup-highlight">&lt;idno type="file"&gt;</span>C5246-07<span class="markup-highlight">&lt;/idno&gt;</span>
+          <span class="markup-highlight">&lt;/item&gt;</span>
+          <span class="markup-highlight">&lt;item&gt;</span>
+             <span class="markup-highlight">&lt;locus&gt;</span>188<span class="markup-highlight">&lt;/locus&gt;</span>
+             <span class="markup-highlight">&lt;idno type="file"&gt;</span>C5247-07<span class="markup-highlight">&lt;/idno&gt;</span>
+          <span class="markup-highlight">&lt;/item&gt;</span>
+          …
+       <span class="markup-highlight">&lt;/list&gt;</span>
+    <span class="markup-highlight">&lt;/p&gt;</span>
 <span class="markup-highlight">&lt;/surrogates&gt;</span>
 </pre></div>
                   <div class="p">Some manuscript may have multiple copies. This information is recorded as a
@@ -3088,7 +3141,7 @@
                   section are from the electronic description made by Anisava Miltenova and Yavor
                   Miltenov):
                   <pre><span class="markup-highlight">&lt;msPart type="palimpsest" subtype="Glagolitic" corresp="QpI64"&gt;</span>
-    <span class="markup-highlight">&lt;locus&gt;</span>ff. 1-8<span class="markup-highlight">&lt;/locus&gt;</span>
+    <span class="markup-highlight">&lt;locus&gt;</span>ff. 1–8<span class="markup-highlight">&lt;/locus&gt;</span>
     <span class="markup-highlight">&lt;physDesc&gt;</span><span class="markup-highlight">&lt;objectDesc&gt;</span><span class="markup-highlight">&lt;layoutDesc&gt;</span><span class="markup-highlight">&lt;layout&gt;</span>one
           column<span class="markup-highlight">&lt;/layout&gt;</span><span class="markup-highlight">&lt;/layoutDesc&gt;</span><span class="markup-highlight">&lt;/objectDesc&gt;</span><span class="markup-highlight">&lt;/physDesc&gt;</span>
     <span class="markup-highlight">&lt;scribeDesc&gt;</span><span class="markup-highlight">&lt;scribe&gt;</span><span class="markup-highlight">&lt;palaeoCharact script="glag"&gt;</span>
@@ -3161,7 +3214,7 @@
                <div class="p">The content of the works in the Repertorium are published under a Creative Commons
                   license that allows users to share (to copy, distribute and transmit the work)
                   under the condition that they must attribute the work in appropriate way and may
-                  not alter, transform, or build upon it (<a href="http://creativecommons.org /licenses/by-nd/3.0/">http://creativecommons.org /licenses/by-nd/3.0/</a> ). This license is valid
+                  not alter, transform, or build upon it (<a href="http://creativecommons.org /licenses/by-nd/3.0/">http://creativecommons.org /licenses/by-nd/3.0/</a>). This license is valid
                   for the content written by the researchers. For TEI licensing and citation
                   guidelines for software and text materials users may consult the TEI: Licen­sing
                   and Citation part of TEI Guidelines (<a href="http://www.tei-c.org/Guidelines/access.xml">http://www.tei-c.org/Guidelines/access.xml</a>). The XML additions and
@@ -3173,7 +3226,7 @@
                   a manuscript description that is intended to serve as the sole content of the
                   electronic file, this information may be very brief. A thorough explanation of the
                   sources for the description could then be part of the <code>&lt;recordHist&gt;</code> element
-                  in the administrative part of the file (<code>&lt;adminInfo&gt;</code> ). A short example of a
+                  in the administrative part of the file (<code>&lt;adminInfo&gt;</code>). A short example of a
                   bibliographic reference could be:
                   <pre><span class="markup-highlight">&lt;sourceDesc&gt;</span>
     <span class="markup-highlight">&lt;p&gt;</span><span class="markup-highlight">&lt;ref type="edition" target="../bibliography/zbib.xml#ZaimovJ_CapaldoM1982"&gt;</span>
@@ -3331,7 +3384,7 @@
                   House.</li>
                <li>Birnbaum, David J., Andrej T. Boyadzhiev, Milena Dobreva, Anissava L. Miltenova
                   (eds.). 1995. Computer Processing of Medieval Slavic Manuscripts. Proceedings.
-                  First International Conference, 24-28 July 1995, Blagoevgrad, Bulgaria. Sofia:
+                  First International Conference, 24–28 July 1995, Blagoevgrad, Bulgaria. Sofia:
                   Marin Drinov Publishing House.</li>
                <li>Boag, Scott, Don Chamberlin, Mary F. Fernández, Daniela Florescu, Jonathan
                   Robie, Jérôme Siméon (eds.). 2007. XQuery 1.0: An XML Query Language. W3C
@@ -3340,13 +3393,13 @@
                <li>Bojadžiev, Andrej. 2000. Codicology, Palaeography, and Language in the Computer
                   Description of Medieval Slavic Manuscripts. In A. Miltenova and D. J. Birnbaum
                   (eds.), Medieval Slavic Manuscripts and SGML. Problems and Perspectives. Sofia:
-                  Marin Drinov, 2000. 69-90.</li>
+                  Marin Drinov, 2000. 69–90.</li>
                <li>Bojadžiev, Andrej, Anissava Miltenova and Dilyana Radoslavova 2003. A Unified
                   Model for the Description of Medieval Manuscripts? Computational Approaches to the
                   Study of Early and Modern Slavic Languages and Texts. Proceedings of the
                      <i>Electronic Description and Edition of Slavic Sources</i>
-                  conference, 24-26 September 2002, Pomorie, Bulgaria. Sofia: Boyan Penev Publishing
-                  Center, Institute of Literature. 113-135.</li>
+                  conference, 24–26 September 2002, Pomorie, Bulgaria. Sofia: Boyan Penev Publishing
+                  Center, Institute of Literature. 113–35.</li>
                <li>Boyadzhiev, Andrej. 2009. Constructing Repertorium 3.0. Scripta &amp; e-Scripta
                   7. 13–48.</li>
                <li>Bos, Bert, Håkon Wium Lie, Chris Lilley, Ian Jacobs (eds.). 2008. Cascading
@@ -3387,9 +3440,9 @@
                   Standards in Manuscript Description. In A. Miltenova, D. J. Birnbaum and S.
                   Slevinsky (eds.), Computational Approaches to the Study of Early and Modern Slavic
                   Languages and Texts. Proceedings of the <i>Electronic Description and
-                     Edition of Slavic Sources</i> conference, 24-26 September 2002, Pomorie,
+                     Edition of Slavic Sources</i> conference, 24–26 September 2002, Pomorie,
                   Bulgaria. Sofia: Boyan Penev Publishing Center, Institute of Literature.
-                  105-111.</li>
+                  105–11.</li>
                <li>Common Data Hub: ISO 3166 Country Codes: http://www.commondatahub.com/live/
                   geography/country/iso_3166_country_codes (12.02.2012).</li>
                <li>DeRose, Steven, Ron Daniel Jr., Eve Maler, and Jonathan Marsh (eds.). 2003.
@@ -3408,7 +3461,7 @@
                <li>Gagova, Nina. 1998. TSM: Тhe element NOТE: Improvement of the encoding
                   possibilities: а philo1ogica1 proposal. In Milena Dobreva (ed.), Text Variety in
                   the Witnesses of Medieval Texts. Sofia: Institute of Mathematics and Informatics.
-                  161-164.</li>
+                  161–64.</li>
                <li>Gagova, Nina. 2000. Study of groups of manuscripts chosen by socio-cultural
                   criteria (Manuscripts belonging to rulers libraries from the fourteenth and
                   fifteenth centuries). In A. Miltenova and D. J. Birnbaum (eds.), Medieval Slavic
@@ -3440,13 +3493,13 @@
                <li>Jones, L. W. 1946a. Pricking Systems in New York Manuscripts. Miscellanea G.
                   Mercati, vol. VI (Studi e Testi, 126). Città del Vaticano. 80–92.</li>
                <li>Jones, L. W. 1946b. Pricking Manuscripts: The Instruments and Their
-                  Significance. Speculum 21. 389-403.</li>
+                  Significance. Speculum 21. 389–403.</li>
                <li>Krushelnitskaya, Ekaterina V. 2003. Description of Medieval Slavic Sources in
                   the Electronic Catalog of the Department of Manuscripts in the National Library of
                   Russia: Goals, Research Problems, and Prospects. In A. Miltenova. D. Birnbaum and
                   S. Slevinski (eds.), Computational Approaches to the Study of Early and Modern
                   Slavic Languages and Texts. Proceedings of the <i>Electronic Description and
-                     Edition of Slavic Sources</i> conference, 24-26 September 2002, Pomorie,
+                     Edition of Slavic Sources</i> conference, 24–26 September 2002, Pomorie,
                   Bulgaria. Sofia: Boyan Penev Publishing Center, Institute of Literature.
                   157–188.</li>
                <li>Leroy, J. 1976. Les types de réglure des manuscrits grecs. Paris: Institut de
@@ -3457,30 +3510,30 @@
                   (12.02.2012).</li>
                <li>Miklas, Heinz and Anissava Miltenova (eds.). 2008. Slovo: Towards a Digital
                   Library of South Slavic Manuscripts. Proceedings of the International Conference
-                  21-26 February 2008, Sofia, Bulgaria. Sofia: Bulgarian Academy of Sciences,
+                  21–26 February 2008, Sofia, Bulgaria. Sofia: Bulgarian Academy of Sciences,
                   Institute of literature.</li>
                <li>Miltenov, Yavor. 2010. A New Source for Studying the Symeonic Zlatostruy
-                  Collection. Scripta &amp; e-Scripta 8-9. 387–404.</li>
+                  Collection. Scripta &amp; e-Scripta 8–9. 387–404.</li>
                <li>Miltenova, Anissava. 2008. Metadata and Electronic Catalogs of Slavic
                   Manuscripts: A Multilingual Web-based Terminological Resource for Mediaeval Slavic
                   Studies. Scripta &amp; e-Scripta 6. 83–104.</li>
                <li>Miltenova, Anissava, A. Boyadzhiev and St. Velev 1998. Repertorium of Medieval
                   Slavic Literature: Computer and Philological Standards. Palaeobulgarica 22 (2).
-                  50-69.</li>
+                  50–69.</li>
                <li>Miltenova, Anissava and Andrey Boyadzhiev. 2000. An Electronic Repertory of
                   Medieval Slavic Literature and Letters: A Suite of Guidelines. In A. Miltenova and
                   D. J. Birnbaum (eds.), Medieval Slavic Manuscripts and SGML. Problems and
-                  Perspectives. Sofia: Marin Drinov. 43-68.</li>
+                  Perspectives. Sofia: Marin Drinov. 43–68.</li>
                <li>Miltenova, Anissava, David Birnbaum and Sarah Slevinski (eds.). 2003.
                   Computational Approaches to the Study of Early and Modern Slavic Languages and
                   Texts. Proceedings of the <i>Electronic Description and Edition of Slavic
-                     Sources</i> conference, 24-26 September 2002, Pomorie, Bulgaria. Sofia:
+                     Sources</i> conference, 24–26 September 2002, Pomorie, Bulgaria. Sofia:
                   Boyan Penev Publishing Center, Institute of Literature.</li>
                <li>Moussakova, Elissaveta. 2003. The Element “Decoration” in Electronic Manuscript
                   Catalogs. In A. Miltenova, D. J. Birnbaum and S. Slevinski (eds), Computational
                   Approaches to the Study of Early and Modern Slavic Languages and Texts.
                   Proceedings of the <i>Electronic Description and Edition of Slavic
-                     Sources</i> conference, 24-26 September 2002, Pomorie, Bulgaria. Sofia:
+                     Sources</i> conference, 24–26 September 2002, Pomorie, Bulgaria. Sofia:
                   Boyan Penev Publishing Center, Institute of Literature. 137–156.</li>
                <li>PDF Reference: PDF Reference Sixth Edition. Adobe Portable Document Format 1.7
                   November 2006. Adobe Systems Incorporated. http://www.adobe.com/devnet/acrobat/
@@ -3505,7 +3558,7 @@
                   Processing of Slavic Manuscripts of Euchlogical Type with the Help of TSM (A
                   typology of Bulgarian trebnici in the 17th century. Preliminary results). In A.
                   Miltenova and D. J. Birnbaum (eds.), Medieval Slavic Manuscripts and SGML.
-                  Problems and Perspectives. Sofia: Marin Drinov. 170-204.</li>
+                  Problems and Perspectives. Sofia: Marin Drinov. 170–204.</li>
                <li>Szirmai, J. A. 1999. The Archaeology of Medieval Bookbinding. Ashgate.</li>
                <li>Shudi (Sandy) Gao, C. M. Sperberg-McQueen and Henry S. Thompson (eds.). 2012.
                   W3C XML Schema Definition Language (XSD) 1.1 Part 1: Structures. W3C Proposed
@@ -3521,10 +3574,10 @@
                <li>Stojkova, Ana. 2000. Problems of the Composition of Late Medieval
                   Non-Liturgical Miscellanies and the Place of Hagiographic Works in them. In A.
                   Miltenova and D. J. Birnbaum (eds.), Medieval Slavic Manuscripts and SGML.
-                  Problems and Perspectives. Sofia: Marin Drinov. 108-130.</li>
+                  Problems and Perspectives. Sofia: Marin Drinov. 108–30.</li>
                <li>Thomson, Francis. 1982. Chrysostomica Palaeoslavica. A Preliminary Study of the
                   Sources of the Chrysorrhoas (Zlatorstrui) Collection. Cyrillomethodianum 6.
-                  1-65.</li>
+                  1–65.</li>
                <li>Unicode 5.1. The Unicode Standard, Version 5.1, Unicode Consortium. 2008.
                   Addison-Wesley Professional. http://www.unicode.org/ (15 July 2010).</li>
                <li>Walsh, Norman (ed.). 2002. XML Catalogs. OASIS Committee Specification 06
