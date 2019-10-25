@@ -1,0 +1,44 @@
+/* 
+ * Supplementary styles for guidelines.xhtml (Repertorium guidelines)
+ * Use with http://www.obdurodon.org/css/style.css
+ * 
+ * David J. Birnbaum (djbpitt@gmail.com), last revised 2019-0=10-25
+ */
+div.p {
+    margin-bottom: 1em;
+    line-height: 1.2em;
+}
+body {
+    display: flex;
+    height: 100vh; /* must have height for section scrolling to work */
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
+nav,
+main {
+    display: block;
+    padding: 0 1em;
+    border: 1px gray solid;
+    overflow-y: scroll;
+    height: 100%;
+    height: 100vh; /* must have height for section scrolling to work */
+}
+nav {
+    width: 20%;
+}
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav > ul > li {
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+main {
+    width: 80%;
+}
+h3 {
+    font-style: italic;
+}
