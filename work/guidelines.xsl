@@ -6,6 +6,10 @@
     version="3.0">
     <!--
         Transform the Repertorium guidlines from TEI P5 to XHTML.
+        
+        David J. Birnbaum (djbpitt@gmail.com). Last revised 2019-10-25
+        Part of http://repertorium.obdurodon.org (https://github.com/djbpitt/repertorium)
+        Run with: saxon Repertorium_Guidelines-2.xml guidelines.xsl > guidelines.xhtml
     -->
     <xsl:output method="xml" indent="no"/>
 
@@ -135,18 +139,42 @@
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
+    <xsl:template match="note">
+        <xsl:text> (</xsl:text>
+        <xsl:apply-templates/>
+        <xsl:text>)</xsl:text>
+    </xsl:template>
 
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
-    <!-- highlighting and emphaasis -->
+    <!-- highlighting and emphasis: term, hi, q -->
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
     <xsl:template match="term">
         <dfn>
             <xsl:apply-templates/>
         </dfn>
     </xsl:template>
+    <xsl:template match="hi">
+        <xsl:choose>
+            <xsl:when test="@rend eq 'italic'">
+                <i>
+                    <xsl:apply-templates/>
+                </i>
+            </xsl:when>
+            <xsl:when test="@rend eq 'bold'">
+                <b>
+                    <xsl:apply-templates/>
+                </b>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="q">
+        <q>
+            <xsl:apply-templates/>
+        </q>
+    </xsl:template>
 
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
-    <!-- links -->
+    <!-- links: ref, ptr -->
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
     <xsl:template match="ref">
         <!-- <ref> has content, with URL in @target attribute -->
@@ -165,7 +193,7 @@
     </xsl:template>
 
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
-    <!-- code: gi, tag, att, val, code  -->
+    <!-- code: gi, tag, att, val, code, ident -->
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
     <xsl:template match="gi | tag">
         <!-- 
@@ -196,14 +224,22 @@
             <xsl:apply-templates/>
         </code>
     </xsl:template>
+    <xsl:template match="ident">
+        <b>
+            <xsl:apply-templates/>
+        </b>
+    </xsl:template>
 
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
-    <!-- code blocks: egXML and eg -->
+    <!-- code blocks: egXML, eg -->
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
     <xsl:template match="Q{http://www.tei-c.org/ns/Examples}egXML">
         <!--
             $lines is a sequence of each line of an XML example after flattening
             $minLpad is the smallest left padding for a line, which must be stripped to remove indentation
+            introduce LF before namespace declaration since serialize() won't retain an LF inside a long start-tag
+            serialize entire <egXML> and then remove start and end tag because serializing just the children
+                winds up writing the stupid egXML namespace declaration into the output
             TODO: highlight markup in example (e.g., bold for gis and blue for attribute names)
         -->
         <xsl:variable name="lines" as="xs:string*"
@@ -221,16 +257,18 @@
             <xsl:value-of separator="" select="
                     for $line in $lines
                     return
-                        concat(substring(replace($line,'&amp;#xA;','&#x0a;'), $minLpad + 1), '&#x0a;')"/>
+                        concat(substring($line =>
+                        replace('&amp;#xA;', '&#x0a;') =>
+                        replace('ns=&quot;http://www.ilit.bas.bg/repertorium/ns/3.0&quot;', '&#x0a;  ns=&quot;http://www.ilit.bas.bg/repertorium/ns/3.0&quot;'),
+                        $minLpad + 1), '&#x0a;')"/>
         </pre>
-        <!--<pre><xsl:sequence select="serialize(., $params)"/></pre>-->
     </xsl:template>
     <xsl:template match="eg">
         <pre><xsl:apply-templates/></pre>
     </xsl:template>
 
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
-    <!-- bibliography -->
+    <!-- bibliography: listBibl, bibl -->
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
     <xsl:template match="listBibl">
         <ul>
@@ -244,7 +282,7 @@
     </xsl:template>
 
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
-    <!-- tables -->
+    <!-- tables: table, row, cell -->
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
     <xsl:template match="table">
         <table>
@@ -272,7 +310,30 @@
     </xsl:template>
 
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
-    <!-- TOC mode -->
+    <!-- misc: orgName -->
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
+    <xsl:template match="title">
+        <xsl:choose>
+            <xsl:when test="@level = ('m', 'j')">
+                <cite>
+                    <xsl:apply-templates/>
+                </cite>
+            </xsl:when>
+            <xsl:when test="@level eq 'a'">
+                <q>
+                    <xsl:apply-templates/>
+                </q>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="orgName">
+        <i>
+            <xsl:apply-templates/>
+        </i>
+    </xsl:template>
+
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
+    <!-- TOC mode: head -->
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
     <xsl:template match="head" mode="toc">
         <li>

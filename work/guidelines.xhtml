@@ -26,16 +26,16 @@
                <h3>Introduction</h3>
                <div class="p">These Guidelines are the first complete introduction to the Repertorium Initiative
                   XML model for the electronic description of medieval manuscripts. The model is
-                  part of the activity of the Special Commission for Computer Processing of
-                     Medieval Slavonic Manuscripts and Early Printed Books to the Executive
-                  Board of the International Committee of Slavists. This version of the Guidelines
-                  differs significantly from all previous versions in both form and content. The
-                  most important new feature is the synchronization with the “P5: Guidelines for
-                  Electronic Text Encoding and Interchange” of the Text Encoding Initiative
-                  Consortium (TEI) XML. We have retained differences between the TEI and the
-                  Repertorium manuscript description models in situations where it was necessary to
-                  extend the TEI resources, but we have made every effort to bring two as close as
-                  possible, taking into consideration primarily the three principal medieval
+                  part of the activity of the <i>Special Commission for Computer Processing of
+                     Medieval Slavonic Manuscripts and Early Printed Books</i> to the
+                  Executive Board of the International Committee of Slavists. This version of the
+                  Guidelines differs significantly from all previous versions in both form and
+                  content. The most important new feature is the synchronization with the “P5:
+                  Guidelines for Electronic Text Encoding and Interchange” of the Text Encoding
+                  Initiative Consortium (TEI) XML. We have retained differences between the TEI and
+                  the Repertorium manuscript description models in situations where it was necessary
+                  to extend the TEI resources, but we have made every effort to bring two as close
+                  as possible, taking into consideration primarily the three principal medieval
                   manuscript traditions in Europe: Slavic, Greek, and Latin. We hope that the result
                   will contribute to further discussion of how to encode a manuscript description in
                   electronic form. An Appendix to this text explains and discusses remaining
@@ -46,8 +46,8 @@
                   about a wide variety of topics.</div>
                <div class="p">Previous versions of these Guidelines circulated only in electronic form. The
                   first was compiled for the Annual TEI Members’ Meeting in 2005 in Sofia.
-                  Subsequently, within the framework of the project Slovo: Toward a Digital
-                     Library of South Slavic Manuscripts (2007–08, cf. Miklas and
+                  Subsequently, within the framework of the project <i>Slovo: Toward a Digital
+                     Library of South Slavic Manuscripts</i> (2007–08, cf. Miklas and
                   Miltenova 2008), funded by the Austrian Science and Liaison Offices, a new
                   electronic version was prepared. Both are now archived and available on request.
                   The present, new Guidelines are based on the ideas and proposals contained in
@@ -57,7 +57,7 @@
                   al. 2003, Moussakova 2003, Krushelnitskaya 2003; Miklas and Miltenova 2008, cf.
                   Birnbaum et. al. 1995; Cleminson 1998; Gagova 1998, 2000; Radoslavova 1998;
                   Stoykova 1998), as well as in the Commission’s journal
-                  Scripta &amp; e-Scripta (e.g., Miltenova 2008; Boyadzhiev
+                  <cite>Scripta &amp; e-Scripta</cite> (e.g., Miltenova 2008; Boyadzhiev
                   2009). These ideas have also been presented and discussed at several conferences
                   and workshops. It goes without saying that this published document can reflect
                   only the current level of our work and the model may undergo further changes, but
@@ -74,7 +74,7 @@
                   should not be considered a general introduction to markup technologies, nor a
                   tutorial on the TEI approach to linguistic and literary markup. For the latter,
                   see the fifth chapter of the current P5 edition of the TEI Guidelines
-                  A gentle introduction to XML (Burnard and Bauman
+                  <q>A gentle introduction to XML</q> (Burnard and Bauman
                   2007).</div>
             </div>
             <div>
@@ -97,8 +97,8 @@
                   <code>?</code>: must appear 0 or 1 time (optional) </li><li>
                   <code>?&gt;</code>: end of a processing instruction </li><li>
                   <code>'</code> or <code>"</code>: (paired) enclose an attribute value </li><li>
-                  <code>@</code>: attribute, e.g., read <code>@type</code> as attribute with the
-                     name type
+                  <code>@</code>: attribute, e.g., read <code>@type</code> as <q>attribute with the
+                     name <q>type</q></q>
                </li><li>
                   <code>*</code>: 0 or more times (optional and repeatable) </li><li>
                   <code>%</code>: introduces a parameter entity </li><li>
@@ -162,8 +162,8 @@
             <h2>1. Introduction to the model</h2>
             <div>
                <h3>1.1. Short history</h3>
-               <div class="p">The Repertorium Initiative started during 1994–95 as Computer-Supported
-                     Processing of Medieval Slavic Manuscripts, an international project
+               <div class="p">The Repertorium Initiative started during 1994–95 as <i>Computer-Supported
+                     Processing of Medieval Slavic Manuscripts</i>, an international project
                   with coordinators Prof. David J. Birnbaum (University of Pittsburgh) and Dr.
                   Anisava Miltenova (Institute of Literature, Bulgarian Academy of Sciences). The
                   project was supported by a grant from the International Research and Exchanges
@@ -177,16 +177,16 @@
                <div class="p">During the next three years (1996–98) the project continued as a joint initiative
                   under the guidance of Prof. Ralph Cleminson (Central European University
                   [Budapest, Hungary] and the University of Portsmouth [UK]) and Dr. Anisava
-                  Miltenova, with the name Computer Supported Processing of Medieval Slavic
-                     Manuscripts and Early Printed Books (a joint project supported by
+                  Miltenova, with the name <i>Computer Supported Processing of Medieval Slavic
+                     Manuscripts and Early Printed Books</i> (a joint project supported by
                   Central European University). At this time more than one hundred manuscript
                   descriptions were encoded electronically and the project gained in popularity
                   among scholars.</div>
                <div class="p">At the Twelfth International Congress of Slavists in 1998 in Kraków the need for
                   markup technologies and standards and the lack of unified and well-established
                   terminology in the field of Slavic Medieval Studies became obvious, and a new
-                     Commission for the Computer Processing of Medieval Slavonic
-                     Manuscripts and Early Printed Books was chartered by the Executive
+                     <i>Commission for the Computer Processing of Medieval Slavonic
+                     Manuscripts and Early Printed Books</i> was chartered by the Executive
                   Board of the International Committee of Slavists (Miltenova et al. 1998). Members
                   of the Commission are scholars from more than twelve countries and the main
                   function of the Commission is to serve as a coordinator among projects in the
@@ -305,35 +305,35 @@
                <div class="p">The TEI model that has served as the foundation for the Repertorium schema is
                   designed specifically to support the description of medieval manuscripts. The
                   required modules are:</div>
-               <ul><li>tei – the main module of the TEI Infrastructure (Burnard,
-                     Bauman 2007: 1 The TEI infrastructure);</li><li>header – common metadata information (Burnard and Bauman
-                     2007: 2 The TEI header);</li><li>textstructure – the default text structure (Burnard, Bauman
-                     2007: 4 Default text structure);</li><li>core – common core (Burnard and Bauman 2007: 3
-                     Elements
-                     available in all TEI documents);</li></ul>
+               <ul><li><b>tei</b> – the main module of the TEI Infrastructure (Burnard,
+                     Bauman 2007: 1 <q>The TEI infrastructure</q>);</li><li><b>header</b> – common metadata information (Burnard and Bauman
+                     2007: 2 <q>The TEI header</q>);</li><li><b>textstructure</b> – the default text structure (Burnard, Bauman
+                     2007: 4 <q>Default text structure</q>);</li><li><b>core</b> – common core (Burnard and Bauman 2007: 3
+                     <q>Elements
+                     available in all TEI documents</q>);</li></ul>
                <div class="p">In addition to these required modules, several optional ones have been
                   included:</div>
-               <ul><li>linking – linking, segmentation, and alignment (Burnard and
+               <ul><li><b>linking</b> – linking, segmentation, and alignment (Burnard and
                      Bauman 2007: 16
-                     Linking, segmentation, and alignment);</li><li>analysis – associates simple analyses and interpretations
+                     <q>Linking, segmentation, and alignment</q>);</li><li><b>analysis</b> – associates simple analyses and interpretations
                      with text elements (Burnard and Bauman 2007: 17
-                     Simple analytic mechanisms);</li><li>certainty – elements and attributes to indicate the degree of
+                     <q>Simple analytic mechanisms</q>);</li><li><b>certainty</b> – elements and attributes to indicate the degree of
                      certainty attached to the encoded text (Burnard and Bauman 2007: 21
-                     Certainty and
-                     responsibility);</li><li>figures – representation of tables, formulae, figures and
+                     <q>Certainty and
+                     responsibility</q>);</li><li><b>figures</b> – representation of tables, formulae, figures and
                      graphics (Burnard and Bauman 2007: 14
-                     Tables, formulæ, and graphics);</li><li>namesdates – representation of names (of people, places,
+                     <q>Tables, formulæ, and graphics</q>);</li><li><b>namesdates</b> – representation of names (of people, places,
                      organizations), times and dates (Burnard and Bauman 2007: 13
-                     Names, dates, people, and
-                     places);</li><li>transcr – transcription of primary sources (Burnard, Bauman
-                     2007: 11 Representation of primary sources).</li></ul>
+                     <q>Names, dates, people, and
+                     places</q>);</li><li><b>transcr</b> – transcription of primary sources (Burnard, Bauman
+                     2007: 11 <q>Representation of primary sources</q>).</li></ul>
                <div class="p">In the most recent Repertorium model, based on TEI P5, the modules for
-                     drama, verse, and feature
-                     structures were included. In practice they have never been used in our
+                     <b>drama</b>, <b>verse</b>, and <b>feature
+                     structures</b> were included. In practice they have never been used in our
                   work, and they have therefore been removed from the current model. The Repertorium
-                  deviates from the prebuilt <a href="https://tei-c.org/guidelines/customization/#section-1">TEI for manuscript description</a> customization
-                  provided by the TEI by incorporating the standard TEI analysis and
-                     certainty modules.</div>
+                  deviates from the prebuilt <a href="https://tei-c.org/guidelines/customization/#section-1"><q>TEI for manuscript description</q></a> customization
+                  provided by the TEI by incorporating the standard TEI <b>analysis</b> and
+                     <b>certainty</b> modules.</div>
             </div>
             <div>
                <h3>2.4. Some principles</h3>
@@ -342,13 +342,13 @@
                   level of compatibility and interchangeability. To fulfill this task several
                   principles were formulated to govern the transformation of the prior Repertorium
                   schema into the present one:</div>
-               <ul><li>All attributes and elements from the core and additional tag
+               <ul><li>All attributes and elements from the <b>core</b> and additional tag
                      sets that have been changed from TEI P4 to TEI P5 have been changed in
                      Repertorium 3.0, as well.</li><li>All attributes and elements that share the same functionality between TEI P5
                      and Repertorium have been renamed in favor of TEI P5.</li><li>No customizations are made on the level of TEI macro structures or on the
                      level of model classes, with two exceptions: model classes related to specific
                      manuscript description element and the exclusion of all numbered
-                        divLike models and their corresponding elements. This
+                        <b>divLike</b> models and their corresponding elements. This
                      includes removal of <code>&lt;div1&gt;</code>, <code>&lt;div2&gt;</code>, <code>&lt;div3&gt;</code>, <code>&lt;div4&gt;</code>,
                         <code>&lt;div5&gt;</code>, <code>&lt;div6&gt;</code>, and <code>&lt;div7&gt;</code>.</li><li>When there is an element with the same name and a compatible content model
                      in TEI P5 and the Repertorium, it is declared in the TEI, not the Repertorium,
@@ -388,8 +388,8 @@
                      renamed. An example of such an element is <code>&lt;writing&gt;</code>, which was used in
                      earlier Repertorium schemas to provide general palaeographic information.
                      Because an element with the same name now exists in P5 with a completely
-                     different meaning (a passage of written text revealed to participants in the
-                        course of a spoken text, cf. Burnard and Bauman 2007), the Repertorium
+                     different meaning (<q>a passage of written text revealed to participants in the
+                        course of a spoken text</q>, cf. Burnard and Bauman 2007), the Repertorium
                      element has been renamed <code>&lt;summary&gt;</code>.</li><li>Specific Repertorium elements and structures from earlier versions are
                      retained only if there are structural or semantic differences between the
                      Repertorium and TEI models. One example is the element <code>&lt;scribeDesc&gt;</code>,
@@ -533,10 +533,10 @@
                      codex (<code>&lt;msIdentifier&gt;</code>) and a sequence of paragraphs, each of which
                      provides information that is typed with the help of <code>@xml:id</code>. The
                      choice of paragraph types can be determined by the goals of the individual
-                        project.For example, <code>@xml:id</code> attributes must be unique in an
+                        project. (For example, <code>@xml:id</code> attributes must be unique in an
                         XML document instance, so the use of that attribute for typing would not be
                         appropriate in situations where a single XML document contains multiple
-                           <code>&lt;msDesc&gt;</code> elements.</div>
+                           <code>&lt;msDesc&gt;</code> elements.)</div>
                </div>
                <div>
                   <h4>3.1.3. Extraction of information from a full description</h4>
@@ -574,8 +574,8 @@
                <h3>4.1. General remarks</h3>
                <div class="p">Cataloguing information is an obligatory part of each manuscript description and
                   it should provide an introduction for researchers consisting of:</div>
-               <ul><li>identification of manuscript name, as a type or genre (e.g., Menaion or Triodion) or as a
-                     specific name that has become standardized in the research tradition (e.g., Euchologium Sinaiticum);</li><li>information about where the manuscript is kept, together with its
+               <ul><li>identification of manuscript name, as a type or genre (e.g., <i>Menaion</i> or <i>Triodion</i>) or as a
+                     specific name that has become standardized in the research tradition (e.g., <i>Euchologium Sinaiticum</i>);</li><li>information about where the manuscript is kept, together with its
                      shelfmark(s);</li><li>optional additional notes</li></ul>
                <div class="p">The description thus begins with answers to questions like: What is the name of
                   the manuscript? Where it is now kept? Are there earlier descriptions? The answers
@@ -585,7 +585,7 @@
                      (<code>&lt;msName&gt;</code>), if it exists, and about the country, city or other
                   geographical region, and the institution, repository, or collection where the
                   manuscript can be found (Burnard and Bauman 2007:
-                     model.placeNamePart). Between <code>&lt;msName&gt;</code> and following
+                     <b>model.placeNamePart</b>). Between <code>&lt;msName&gt;</code> and following
                   structured information it is possible to insert a brief summary description in the
                   form of paragraph (cf. below). More information, including optional bibliographic
                   records or lists of records, may be entered as part of the element
@@ -603,13 +603,13 @@
                   supplied name that has become established in the research tradition.</div>
                <div class="p">There are many characteristics involved in assigning a name to a manuscript. The
                   most important is the so-called generic or unified name, based on typological
-                  characteristics, with values such as Psalter or Miscellany. In some cases manuscripts may also already have
-                  unique names, such as Codex Zographensis or Kodov Triodion. These names should be provided
+                  characteristics, with values such as <i>Psalter</i> or <i>Miscellany</i>. In some cases manuscripts may also already have
+                  unique names, such as <i>Codex Zographensis</i> or <i>Kodov Triodion</i>. These names should be provided
                   separately.</div>
                <div class="p">The <code>&lt;msName&gt;</code> element contains only plain text. The <code>@type</code>
                   attribute may be used to give further information whether the name is general
                   (i.e., unified or generic) or individual (nickname). The following example from
-                  the description of Codex Marianus demonstrates the use of
+                  the description of <i>Codex Marianus</i> demonstrates the use of
                   this element:
                   <pre>&lt;msName type="general" xml:lang="la"&gt;Tetraeuangelion&lt;/msName&gt;
 &lt;msName type="general" xml:lang="bg"&gt;Четвероевангелие&lt;/msName&gt;
@@ -623,13 +623,13 @@
                <div class="p">Here general information about the manuscript name in Latin and in Bulgarian is
                   annotated with the values <q>general</q> or <q>individual</q> for the
                      <code>@type</code> attribute. The manuscript name currently accepted among
-                  scholars is Codex Marianus and the older names are Grigorovič tetraeuangelion, and Athonite
-                     tetraeuangelion.</div>
+                  scholars is <i>Codex Marianus</i> and the older names are <i>Grigorovič tetraeuangelion</i>, and <i>Athonite
+                     tetraeuangelion</i>.</div>
                <div class="p">When the manuscript has different nicknames for separate parts that are kept in
                   different repositories, this information goes into corresponding sections of
-                  description. In case of the Codex Marianus, there are two
+                  description. In case of the <i>Codex Marianus</i>, there are two
                   leaves now kept in Vienna that have been known by two names that are no longer
-                  generally used: Mihanović folia and Miklošič folia:
+                  generally used: <i>Mihanović folia</i> and <i>Miklošič folia</i>:
                   <pre>&lt;altIdentifier xml:id="OENB146"&gt;
    &lt;msName type="individual" subtype="old"&gt;Mihanović folia&lt;/msName&gt;
    &lt;msName type="individual" subtype="old"&gt;Miklošič folia&lt;/msName&gt; …
@@ -643,13 +643,13 @@
                   location in different countries, archives, or collections could require a special
                   description, possibly with links to sections on manuscript history, acquisition,
                   and to the various signatures or numbers in various catalogues. The following
-                  extract from the description of Manuilev Apostolos by
+                  extract from the description of <i>Manuilev Apostolos</i> by
                   Margaret Dimitrova and Andrej Bojadžiev illustrates this approach:
                   <pre>&lt;p&gt;Six fragments belonging to what was once a larger codex have been identified by
    Tixomirov …&lt;/p&gt;
 </pre></div>
                <div class="p">This short introduction to the cataloguing information in the description of the
-                     Manuilev Apostle is needed to understand the rest of the
+                     <i>Manuilev Apostle</i> is needed to understand the rest of the
                   description.</div>
             </div>
             <div>
@@ -713,7 +713,7 @@
                      The <code>&lt;region&gt;</code> element describes an administrative unit smaller than a
                      country but larger than a city, town, or village (Burnard and Bauman 2007:
                         <code>&lt;region&gt;</code>), as in the following example, where Alino is a village in
-                     the Sofia province (oblast) of Bulgaria, but not within
+                     the Sofia province (<i>oblast</i>) of Bulgaria, but not within
                      the city limits of Sofia:
                      <pre>&lt;region type="district"&gt;Sofia&lt;/region&gt;
 &lt;settlement type="village"&gt;Alino&lt;/settlement&gt;
@@ -752,9 +752,9 @@
 </pre></div>
                   <div class="p">In the last example the <code>&lt;placeName&gt;</code> element has two special attributes.
                      As explained in the TEI Guidelines <code>@key</code>
-                     provides an externally-defined means of identifying the entity (or entities)
-                        being named, using a coded value of some kind. (Burnard and Bauman 2007:
-                        att.canonical/key) and <code>@type</code> is intended to be used
+                     <q>provides an externally-defined means of identifying the entity (or entities)
+                        being named, using a coded value of some kind</q>. (Burnard and Bauman 2007:
+                        <b>att.canonical/key</b>) and <code>@type</code> is intended to be used
                      as a general characteristic of the place name. A project that observes this
                      convention should provide a list of abbreviations, one of which would be
                         ZM (= Zograph Monastery). For the manuscripts
@@ -852,7 +852,7 @@
                      it is described in the catalogue as item number 20.</div>
                   <div class="p">By setting the value of the <code>@type</code> attribute in the
                         <code>&lt;altIdentifier&gt;</code> element the encoder can choose between the values
-                        current and former and then supply appropriate values in its
+                        <q>current</q> and <q>former</q> and then supply appropriate values in its
                      sub-elements, e.g.:
                      <pre>&lt;altIdentifier type="current"&gt; … &lt;idno type="shelfmark"&gt;Ms 3045&lt;/idno&gt; … &lt;/altIdentifier&gt;
 </pre></div>
@@ -910,7 +910,7 @@
                   <div class="p">In this case information about the country, city, geographical or place names,
                      and repository remain the same, and only information about the shelfmarks,
                      collections, or catalogue numbers differ. This approach is illustrated below
-                     with the description of the Pirdop Apostle by Dimitrinka
+                     with the description of the <i>Pirdop Apostle</i> by Dimitrinka
                      Dimitrova:
                      <pre>&lt;msIdentifier&gt;
    &lt;msName xml:lang="bg"&gt;Пирдопски апостол&lt;/msName&gt;
@@ -1094,14 +1094,14 @@
                   aspects of cataloguing the support. </div>
                <div class="p"><code>&lt;supportDesc&gt;</code> has one important attribute, <code>@material</code>. Valuea of
                   this attribute, as suggested by TEI Guidelines (Burnard and Bauman 2007:
-                     <code>&lt;supportDesc&gt;</code>), are most commonly parchment, paper, or
-                     mixed, as in this example:
+                     <code>&lt;supportDesc&gt;</code>), are most commonly <q>parchment</q>, <q>paper</q>, or
+                     <q>mixed</q>, as in this example:
                   <pre>&lt;supportDesc material="paper"&gt; … &lt;/supportDesc&gt;
 </pre></div>
                <div class="p">The meaning of the value of this attribute is to give a general type of the
                   material of the manuscript, and it is not associated with the possible
                   construction of manuscript’s binding or the box in which the manuscript is kept.
-                  Especially in cases when the value is mixed, a further explanation should
+                  Especially in cases when the value is <q>mixed</q>, a further explanation should
                   be provided.</div>
                <div class="p">The order of information in this element is significant, and follows traditional
                   paper-based descriptions. There is no required minimal content, and the range of
@@ -1207,12 +1207,12 @@
                      method of watermark tracing. The most usual method is still drawing by hand,
                      but other possibilities include rubbing by hand, use of special Dylux print
                      paper, beta- or x-radiography, scanning, etc. The <code>@place</code> attribute
-                     from the class att.placement class can specify more precisely
+                     from the <b>class att.placement</b> class can specify more precisely
                      the location of the watermark on the page. This feature could be described in
                      relation to chain and laid (also called wire) lines. The possible content might
-                     read something like between widely spaced chain lines, on a chain
-                        line, on a supplemental chain line, across 2 chain lines,
-                        across 3 chain lines, or could be expressed in some other terms,
+                     read something like <q>between widely spaced chain lines</q>, <q>on a chain
+                        line</q>, <q>on a supplemental chain line</q>, <q>across 2 chain lines</q>,
+                        <q>across 3 chain lines</q>, or could be expressed in some other terms,
                      e.g., in millimeters between various locations on the leaf.</div>
                   <div>
                      <h5>5.6.2.1. Motif</h5>
@@ -1223,15 +1223,15 @@
                      <ul><li>In the absence of reference books and watermark albums, simply as
                            plain text</li><li>If a more complicated motif is present and the encoder would like to
                            provide full compatibility with professional watermark databases, with
-                           the attribute <code>@type</code>, as described below</li><li>By secondary is meant designs above or below the basic motif.
+                           the attribute <code>@type</code>, as described below</li><li>By <q>secondary</q> is meant designs above or below the basic motif.
                            Frequently used motifs above the basic one include bird, cross, flower,
                            monograms, monograms with a combination with figures (e.g., monogram BA
                            and cross), ramrod, different star shapes, star and monogram, trefoil,
                            etc. Frequently used motifs below the basic one include grapes,
-                           monograms, etc.</li><li>By supplemental is meant supplemental characteristics of the
+                           monograms, etc.</li><li>By <q>supplemental</q> is meant supplemental characteristics of the
                            basic motif, e.g., in circle, in oval, in shield, etc.</li></ul>
-                     <div class="p">In this approach a typical description of the motif anchor in circle with
-                           5-point star above could be encoded hierarchically, as follows:
+                     <div class="p">In this approach a typical description of the motif <q>anchor in circle with
+                           5-point star above</q> could be encoded hierarchically, as follows:
                         <pre>&lt;motif type="basic"&gt;anchor
    &lt;motif type="supplemental"&gt;in circle&lt;/motif&gt;
    &lt;motif type="secondary"&gt;with star/5-point above&lt;/motif&gt;
@@ -1272,13 +1272,13 @@
                   </li><li><dfn>Chain or laid lines</dfn>: The most important feature of chain lines
                      is the spacing between them, which could be described by entering the element
                         <code>&lt;dim&gt;</code> and its sub element <code>&lt;height&gt;</code>. The following are
-                     recommendations from the Watermark Initiative: If the watermark is on the
+                     recommendations from the Watermark Initiative: <q>If the watermark is on the
                         chain line the spaces on either side of it should be given in parentheses:
                         28,25,(15,14),28,25. If the watermark is positioned between or across two
                         chain lines, the space between them should be given in parentheses:
-                        44,45,(50),47,43 (<a href="http://abacus.bates.edu/Faculty/wmarchive/FORM_ descriptions.html">http://abacus.bates.edu/Faculty/wmarchive/FORM_ descriptions.html</a>). An example of such description is provided as well: 04. Wire/Chain line
+                        44,45,(50),47,43</q> (<a href="http://abacus.bates.edu/Faculty/wmarchive/FORM_ descriptions.html">http://abacus.bates.edu/Faculty/wmarchive/FORM_ descriptions.html</a>). An example of such description is provided as well: <q>04. Wire/Chain line
                         description: Density of Wirelines: 26 mm. for 20 wirelines. (style: thin
-                        wirelines) Chain line Interval(s): / 50 mm.</li><li><dfn>Paper or parchment thickness</dfn>: The data on paper thickness could
+                        wirelines) Chain line Interval(s): / 50 mm.</q></li><li><dfn>Paper or parchment thickness</dfn>: The data on paper thickness could
                      be entered in the element <code>&lt;dim&gt;</code> with the <code>@type</code> attribute and a
                      thickness value. This value could be relative, e.g.: very thin, thin, medium
                      thin, medium, medium thick, thick, very thick; or, alternatively, it could be
@@ -1297,10 +1297,10 @@
                         encoder could further specify the justification for the dating. Possible
                         values could include: <ul><li>published watermark(s) cited in references</li><li>codex date given in scribal note</li><li>codex dated on palaeographical grounds</li><li>codex dated by comparison of papers</li><li>codex dated from other evidence</li><li>the paper associated with binding</li></ul></div>
                      <div class="p">The date range could be entered with the asterisk (*) as a wildcard, so
-                        that, for example, the expression 15** would mean the range from 1500
-                        to 1599, 156*, from 1560 to 1569, and 156*–157* - each year
+                        that, for example, the expression <q>15**</q> would mean the range from 1500
+                        to 1599, <q>156*</q>, from 1560 to 1569, and <q>156*–157*</q> - each year
                         from 1560 up to 1579.</div>
-                  </li><li>References: References are specified inside the elements
+                  </li><li><dfn>References</dfn>: References are specified inside the elements
                         <code>&lt;bibl&gt;</code> or <code>&lt;listBibl&gt;</code>.</li></ul>
             </div>
             <div>
@@ -1323,18 +1323,31 @@
       &lt;ref target="ERGB1689"&gt;(Moscow)&lt;/ref&gt;
 &lt;/extent&gt;
 </pre></div>
-               <div class="p">This shows the location of the folia in both repositories. The Codex Marianus consists of 2 ff. kept in Vienna and 171 in Moscow. The
+               <div class="p">This shows the location of the folia in both repositories. The <i>Codex Marianus</i> consists of 2 ff. kept in Vienna and 171 in Moscow. The
                   element <code>&lt;ref&gt;</code> adds a link to the corresponding part of the description
                      (<code>&lt;msIdentifier&gt;</code>or <code>&lt;altIdentifier&gt;</code>).</div>
-               <div class="p">An even more complicated example can be illustrated by the description of the Manuilev Apostle, which is now separated into six pieces
+               <div class="p">An even more complicated example can be illustrated by the description of the <i>Manuilev Apostle</i>, which is now separated into six pieces
                   housed in three different libraries:
-                  <pre>&lt;extent unit="folia"&gt;lacuna+ 1 &lt;ref target="#NBKM499"&gt;(f. 3, НБКМ 499)&lt;/ref&gt; + 1
-      &lt;ref target="#BAN4.5.23"&gt;(BAN 4.5.23)&lt;/ref&gt; + 9 lacuna + f. 4 + lacuna + f.
-   5 + lacuna + ff. 6-10 + lacuna + f.11-12&lt;ref target="#NBKM499"&gt;(NBKM 499)&lt;/ref&gt;
-   + lacuna + 1 &lt;ref target="#RSLGrig15.III"&gt;(Grig. 15.III, 1r/v)&lt;/ref&gt; + 
-   4 &lt;ref target="#BAN24.4.7"&gt;(BAN 24.4.7)&lt;/ref&gt; + 1 &lt;ref target="#RSLGrig15.III"&gt;(Grig. 15.III, 2r/v)&lt;/ref&gt; + 
-   lacuna + 1 &lt;ref target="#NBKM500"&gt;(NBKM 500)&lt;/ref&gt;+2 &lt;ref target="#NBKM499"&gt;(ff. 1-2, NBKM 499)&lt;/ref&gt; + 
-   1 &lt;ref target="#BAN4.5.24"&gt;(BAN 4.5.24)&lt;/ref&gt;&lt;/extent&gt;
+                  <pre>&lt;extent unit="folia"&gt;lacuna + 
+   1 &lt;ref target="#NBKM499"&gt;(f. 3, НБКМ 499)&lt;/ref&gt; + 
+   1 &lt;ref target="#BAN4.5.23"&gt;(BAN 4.5.23)&lt;/ref&gt; + 
+   9 lacuna + 
+   f. 4 + 
+   lacuna + 
+   f. 5 + 
+   lacuna + 
+   ff. 6-10 + 
+   lacuna + 
+   f. 11–12 &lt;ref target="#NBKM499"&gt;(NBKM 499)&lt;/ref&gt; + 
+   lacuna + 
+   1 &lt;ref target="#RSLGrig15.III"&gt;(Grig. 15.III, 1r/v)&lt;/ref&gt; + 
+   4 &lt;ref target="#BAN24.4.7"&gt;(BAN 24.4.7)&lt;/ref&gt; + 
+   1 &lt;ref target="#RSLGrig15.III"&gt;(Grig. 15.III, 2r/v)&lt;/ref&gt; + 
+   lacuna + 
+   1 &lt;ref target="#NBKM500"&gt;(NBKM 500)&lt;/ref&gt; +
+   2 &lt;ref target="#NBKM499"&gt;(ff. 1-2, NBKM 499)&lt;/ref&gt; + 
+   1 &lt;ref target="#BAN4.5.24"&gt;(BAN 4.5.24)&lt;/ref&gt;
+&lt;/extent&gt;
 </pre></div>
             </div>
             <div>
@@ -1509,7 +1522,8 @@
                      types of information. Here is an example from DUL MS Cosin V.II.17 Anseis de
                      Carthage, Ogier le Danois (in French) s. xiii2 (<a href="http://www.dur.ac.uk/library/asc/theme/medmss/apvii17/">http://www.dur.ac.uk/library/asc/theme/medmss/apvii17/</a>) encoded
                      in Repertorium model):
-                     <pre>&lt;pricking&gt;Pricking in outer margins only, probably through folded quires, from front to back.&lt;/pricking&gt;
+                     <pre>&lt;pricking&gt;Pricking in outer margins only, probably through folded quires, 
+   from front to back.&lt;/pricking&gt;
 </pre></div>
                   <div class="p">The following example is from the web-based electronic description of St.
                      Alban’s Psalter (<a href="http://www.abdn.ac.uk/~lib399/english/essays/codicology.shtml">http://www.abdn.ac.uk/~lib399/english/essays/codicology.shtml</a>),
@@ -1577,10 +1591,9 @@
                <ul><li>For miniatures:
                      <pre>&lt;decoDesc&gt;
    &lt;decoNote type="miniatures"&gt;
-      &lt;p&gt;Three miniatures of St. Mark, St. Luke, and St. John, crude drawings in
-            &lt;colour&gt;ink&lt;/colour&gt; and &lt;colour&gt;pink&lt;/colour&gt;, &lt;colour&gt;green&lt;/colour&gt;
-         or &lt;colour&gt;ocher&lt;/colour&gt;
-         &lt;term&gt;washes&lt;/term&gt;.&lt;/p&gt;
+      &lt;p&gt;Three miniatures of St. Mark, St. Luke, and St. John, crude 
+         drawings in &lt;colour&gt;ink&lt;/colour&gt; and &lt;colour&gt;pink&lt;/colour&gt;, 
+         &lt;colour&gt;green&lt;/colour&gt; or &lt;colour&gt;ocher&lt;/colour&gt; &lt;term&gt;washes&lt;/term&gt;.&lt;/p&gt;
       &lt;list&gt;
          &lt;item xml:id="StMark"&gt;&lt;locus&gt;F. 44r&lt;/locus&gt;, St. Mark in full length,
             under arch, holding the Gospel.&lt;/item&gt;
@@ -1608,9 +1621,11 @@
    &lt;decoNote type="initials"&gt;&lt;label&gt;Floral elements and interlaces&lt;/label&gt;
       &lt;list&gt;
          &lt;item&gt;&lt;locus&gt;f. 44v, beginning of St. Mark’s Gospel&lt;/locus&gt; initial 
-            &lt;c xml:lang="cu" rend="glag"&gt;З &lt;/c&gt; with floral elements and interlaces.&lt;/item&gt;
+            &lt;c xml:lang="cu" rend="glag"&gt;З &lt;/c&gt; with floral elements and 
+            interlaces.&lt;/item&gt;
          &lt;item&gt;&lt;locus&gt;f. 78r, beginning of St. Luke’s Gospel&lt;/locus&gt;initial 
-            &lt;c xml:lang="cu" rend="glag"&gt;П&lt;/c&gt; with floral elements and interlaces. 
+            &lt;c xml:lang="cu" rend="glag"&gt;П&lt;/c&gt; with floral elements and 
+            interlaces. 
             &lt;ref target="../images/CodexMarianus78r.jpg"&gt;Image&lt;/ref&gt;&lt;/item&gt;
       &lt;/list&gt;
    &lt;/decoNote&gt;
@@ -1651,11 +1666,12 @@
                      book-binding structure and decoration. For example:
                      <pre>&lt;bindingDesc&gt;
    &lt;binding contemporary="true"&gt;&lt;p&gt;Brocade on wooden boards, 
-      &lt;dimensions unit="mm" type="plate"&gt;&lt;width&gt;145&lt;/width&gt;&lt;height&gt;205&lt;/height&gt;&lt;/dimensions&gt;. Two clasps.
-         The paste-downs and first and last flyleaves are backed with mauve
-         cloth. Illumination and marginalia have suffered a little from
-         excessive trimming. The edges of the pages are gauffred and gilded.
-         Two metal bosses on the lower side of each cover.&lt;/p&gt;
+      &lt;dimensions unit="mm" type="plate"&gt;
+         &lt;width&gt;145&lt;/width&gt;&lt;height&gt;205&lt;/height&gt;
+      &lt;/dimensions&gt;. Two clasps. The paste-downs and first and last flyleaves 
+      are backed with mauve cloth. Illumination and marginalia have suffered a 
+      little from excessive trimming. The edges of the pages are gauffred and 
+      gilded.Two metal bosses on the lower side of each cover.&lt;/p&gt;
       &lt;condition&gt;Well preserved.&lt;/condition&gt;
    &lt;/binding&gt;
 &lt;/bindingDesc&gt; (from the description of British library Ms Egerton 3045 by
@@ -1881,8 +1897,8 @@ Dilyana Radoslavova)
                      model is called <code>&lt;crypto&gt;</code> and should be used in cases where encrypted
                      letters or passages of text occur. The additional attribute <code>@type</code>
                      might identify the method, e.g., simple substitution cipher:
-                     <pre>&lt;crypto type="simpleSubstitution"&gt;а = ѳ, в = и, г = з, д = ѕ, к = п, л = о, м =
-   ѯ, р = ц, с = ѡ, т = ѱ, у = х. The other letters are used without
+                     <pre>&lt;crypto type="simpleSubstitution"&gt;а = ѳ, в = и, г = з, д = ѕ, к = п, л = о, 
+   м = ѯ, р = ц, с = ѡ, т = ѱ, у = х. The other letters are used without
    substitution.&lt;/crypto&gt;
 </pre></div>
                </div>
@@ -1977,8 +1993,8 @@ Dilyana Radoslavova)
                            the element <code>&lt;orthNote&gt;</code> with the value <q>jotVowel</q> of the
                            attribute <code>@type</code>. For example:
                            <pre>&lt;orthography&gt;
-   &lt;orthNote type="jotVowel"&gt;The letters &lt;c xml:id="cu"&gt;є&lt;/c&gt; and &lt;c xml:id="cu"&gt;ѥ&lt;/c&gt; are both used in intervocalic
-      position.&lt;/orthNote&gt;
+   &lt;orthNote type="jotVowel"&gt;The letters &lt;c xml:id="cu"&gt;є&lt;/c&gt; and 
+      &lt;c xml:id="cu"&gt;ѥ&lt;/c&gt; are both used in intervocalic position.&lt;/orthNote&gt;
 &lt;/orthography&gt;
 </pre></div>
                      </div>
@@ -1997,28 +2013,34 @@ Dilyana Radoslavova)
                      units, but in this case, unlike with orthography, there may not be a standard
                      list of descriptive criteria, and the researcher has to introduce the structure
                      using the available means. Consider the following example from the electronic
-                     description of Codex Marianus by Margaret Dimitrova,
+                     description of <i>Codex Marianus</i> by Margaret Dimitrova,
                      Andrej Bojadžiev and Elisaveta Moussakova:
                      <pre>&lt;grammar&gt;
    &lt;list&gt;
-      &lt;item xml:id="phonology"&gt;Adjective forms prefer the archaic &lt;m xml:lang="cu"&gt;-сц-&lt;/m&gt; to &lt;m xml:lang="cu"&gt;-ст-&lt;/m&gt;. 
-         Cases with &lt;m xml:lang="cu"&gt;-ст-&lt;/m&gt; are rare. Uncontracted forms of pronominal adjectives and of verbs of the 
-         -je-conjugation in Ind. Praes. Act. and of verbs in Imperfect are much more frequent than contracted ones. Verbal 
-         forms(Ind. Praes. Act., p.3, -je-conjugation) with assimilation, such as &lt;w xml:lang="cu"&gt;бѣгаат&lt;/w&gt;, 
-         &lt;w xml:lang="cu"&gt;радоуоутъ&lt;/w&gt; are frequent. In Imperativus there is variation of forms with &lt;c xml:lang="cu"&gt;ѣ&lt;/c&gt; 
-         and with &lt;c xml:lang="cu"&gt;и&lt;/c&gt;, such as &lt;w xml:lang="cu"&gt;покажѣте&lt;/w&gt; 290.17, but also &lt;w lang="cu"&gt;покажите&lt;/w&gt; 
-         80.5.&lt;/item&gt;
-      &lt;item xml:id="verbs"&gt;The manuscript uses non-sigmatic Aoristus (e.g., &lt;w xml:lang="cu"&gt;вьнидъ&lt;/w&gt;, 
-         &lt;w xml:lang="cu"&gt;сънидъ &lt;/w&gt;, &lt;w xml:lang="cu"&gt;идомъ&lt;/w&gt;, &lt;w xml:lang="cu"&gt;отидѫ&lt;/w&gt;)and first sigmatic Aoristus of 
-         verbs with stems ending in a consonant (e.g., &lt;w xml:lang="cu"&gt;привѣс&lt;/w&gt;,&lt;w xml:lang="cu"&gt;въвѣсом&lt;/w&gt;, 
-         &lt;w xml:lang="cu"&gt;възнѣсѧ &lt;/w&gt;). Verbs with infinitive stems ending in a vowel often preserve the archaic ending 
-         &lt;m xml:lang="cu"&gt;-тъ&lt;/m&gt; in Ind. Aor. Act, p. 2 and 3, Sg., e.g., &lt;w xml:lang="cu"&gt;обитъ&lt;/w&gt;, &lt;w xml:lang="cu"&gt;оумрѣт&lt;/w&gt;. 
-         Three cases of omitted ending &lt;m xml:lang="cu"&gt;-тъ&lt;/m&gt; for Ind. Praes. Act., p. 3. Sg. are found (&lt;w xml:lang="cu"&gt;e&lt;/w&gt; 
-         instead of &lt;w xml:lang="cu"&gt;естъ&lt;/w&gt;, &lt;w xml:lang="cu"&gt;нѣ&lt;/w&gt; for &lt;w xml:lang="cu"&gt;нѣст&lt;/w&gt;, and &lt;w xml:lang="cu"&gt;бѫд&lt;/w&gt; 
-         for &lt;w xml:lang="cu"&gt;бѫдет&lt;/w&gt;).&lt;/item&gt;
-      &lt;item xml:id="nomina"&gt;The old suffix &lt;m xml:lang="cu"&gt;-нье&lt;/m&gt; is written frequently as &lt;m xml:lang="cu"&gt;-ние&lt;/m&gt;, e.g., 
-         &lt;w xml:lang="cu"&gt;знамение&lt;/w&gt;, but this orthography is not consistently followed. In other forms 
-         &lt;m xml:lang="cu"&gt;-ье&lt;/m&gt; is preferred (cf. &lt;w xml:lang="cu"&gt;абье&lt;/w&gt;, 24r.20).&lt;/item&gt;
+      &lt;item xml:id="phonology"&gt;Adjective forms prefer the archaic &lt;m xml:lang="cu"&gt;-сц-&lt;/m&gt; 
+         to &lt;m xml:lang="cu"&gt;-ст-&lt;/m&gt;. Cases with &lt;m xml:lang="cu"&gt;-ст-&lt;/m&gt; are rare. 
+         Uncontracted forms of pronominal adjectives and of verbs of the -je-conjugation in 
+         Ind. Praes. Act. and of verbs in Imperfect are much more frequent than contracted 
+         ones. Verbal forms(Ind. Praes. Act., p.3, -je-conjugation) with assimilation, such
+         as &lt;w xml:lang="cu"&gt;бѣгаат&lt;/w&gt;, &lt;w xml:lang="cu"&gt;радоуоутъ&lt;/w&gt; are frequent. In 
+         Imperativus there is variation of forms with &lt;c xml:lang="cu"&gt;ѣ&lt;/c&gt; and with 
+         &lt;c xml:lang="cu"&gt;и&lt;/c&gt;, such as &lt;w xml:lang="cu"&gt;покажѣте&lt;/w&gt; 290.17, but also 
+         &lt;w lang="cu"&gt;покажите&lt;/w&gt; 80.5.&lt;/item&gt;
+      &lt;item xml:id="verbs"&gt;The manuscript uses non-sigmatic Aoristus (e.g., 
+         &lt;w xml:lang="cu"&gt;вьнидъ&lt;/w&gt;, &lt;w xml:lang="cu"&gt;сънидъ &lt;/w&gt;, &lt;w xml:lang="cu"&gt;идомъ&lt;/w&gt;, 
+         &lt;w xml:lang="cu"&gt;отидѫ&lt;/w&gt;)and first sigmatic Aoristus of verbs with stems ending in a
+         consonant (e.g., &lt;w xml:lang="cu"&gt;привѣс&lt;/w&gt;,&lt;w xml:lang="cu"&gt;въвѣсом&lt;/w&gt;, 
+         &lt;w xml:lang="cu"&gt;възнѣсѧ &lt;/w&gt;). Verbs with infinitive stems ending in a vowel often 
+         preserve the archaic ending &lt;m xml:lang="cu"&gt;-тъ&lt;/m&gt; in Ind. Aor. Act, p. 2 and 3, Sg., 
+         e.g., &lt;w xml:lang="cu"&gt;обитъ&lt;/w&gt;, &lt;w xml:lang="cu"&gt;оумрѣт&lt;/w&gt;. Three cases of omitted 
+         ending &lt;m xml:lang="cu"&gt;-тъ&lt;/m&gt; for Ind. Praes. Act., p. 3. Sg. are found 
+         (&lt;w xml:lang="cu"&gt;e&lt;/w&gt; instead of &lt;w xml:lang="cu"&gt;естъ&lt;/w&gt;, &lt;w xml:lang="cu"&gt;нѣ&lt;/w&gt; 
+         for &lt;w xml:lang="cu"&gt;нѣст&lt;/w&gt;, and &lt;w xml:lang="cu"&gt;бѫд&lt;/w&gt; for 
+         &lt;w xml:lang="cu"&gt;бѫдет&lt;/w&gt;).&lt;/item&gt;
+      &lt;item xml:id="nomina"&gt;The old suffix &lt;m xml:lang="cu"&gt;-нье&lt;/m&gt; is written frequently as 
+         &lt;m xml:lang="cu"&gt;-ние&lt;/m&gt;, e.g., &lt;w xml:lang="cu"&gt;знамение&lt;/w&gt;, but this orthography 
+         is not consistently followed. In other forms &lt;m xml:lang="cu"&gt;-ье&lt;/m&gt; is preferred 
+         (cf. &lt;w xml:lang="cu"&gt;абье&lt;/w&gt;, 24r.20).&lt;/item&gt;
    &lt;/list&gt;
 &lt;/grammar&gt;
 </pre></div>
@@ -2027,14 +2049,17 @@ Dilyana Radoslavova)
                   <h4>6.3.4. Description of lexical features</h4>
                   <div class="p">Lexical features can be described similarly to grammatical ones. Whether this
                      takes the form of a list with items or of just one unit depends on the
-                     encoder’s vision and the length of the material:
+                     encoder’s vision and the length of the material, as in the following example
+                     from the electronic description of <cite>Codex Marianus</cite> by
+                     Margaret Dimitrova, Andrej Bojadžiev, and Elisaveta Moussakova:
                      <pre>&lt;lexis&gt;The manuscript uses lexis that is believed to be typical of the earliest
-   Gospel translation from Greek, cf. the use of the archaic lexemes &lt;foreign xml:lang="cu"&gt;баль, жаль, миса, шюи, 
-   братръ, небесьскъ, неприѣзнь, пропѧти, иночѧдъ, врътъ, искрьнъ, грѣсти&lt;/foreign&gt;could prove this hypothesis. 
-   Also, in word-formation the manuscript prefers the old suffix &lt;m xml:lang="cu" type="suffix"&gt;ице ѫ&lt;/m&gt; and not 
-   &lt;m xml:lang="cu" type="suffix"&gt;ждь&lt;/m&gt;. Still, the following forms are considered to be relatively later: 
-   &lt;foreign xml:lang="cu"&gt;благодать, написание, дрѧхлъ&lt;/foreign&gt;. &lt;/lexis&gt; Example from the electronic description
-   of Codex Marianus by Margaret Dimitrova, Andrej Bojadžiev and Elisaveta Moussakova
+   Gospel translation from Greek, cf. the use of the archaic lexemes 
+   &lt;foreign xml:lang="cu"&gt;баль, жаль, миса, шюи, братръ, небесьскъ, неприѣзнь, 
+      пропѧти, иночѧдъ, врътъ, искрьнъ, грѣсти&lt;/foreign&gt; could prove this hypothesis. 
+   Also, in word-formation the manuscript prefers the old suffix 
+   &lt;m xml:lang="cu" type="suffix"&gt;ице ѫ&lt;/m&gt; and not &lt;m xml:lang="cu" type="suffix"&gt;ждь&lt;/m&gt;. 
+   Still, the following forms are considered to be relatively later: 
+   &lt;foreign xml:lang="cu"&gt;благодать, написание, дрѧхлъ&lt;/foreign&gt;.&lt;/lexis&gt;
 </pre></div>
                </div>
             </div>
@@ -2170,7 +2195,9 @@ electronic description of BL Add. MSS 12069 by Dilyana Radoslavova
                   cases the element <code>&lt;note&gt;</code> could be useful to further refine the text
                   attribution of the whole codex and/or to provide bibliographic data:
                   <pre>&lt;note&gt;Sprostranov was the first to attribute the whole collection to the single
-   compiler &lt;bibl&gt;&lt;ref target="../bibliography/scyr.xml#Sprostanov1902"&gt;Sprostranov 1902: 52-56&lt;/ref&gt;&lt;/bibl&gt;&lt;/note&gt;
+   compiler &lt;bibl&gt;
+      &lt;ref target="../bibliography/scyr.xml#Sprostanov1902"&gt;Sprostranov 
+         1902: 52-56&lt;/ref&gt;&lt;/bibl&gt;&lt;/note&gt;
 </pre></div>
             </div>
             <div>
@@ -2214,7 +2241,9 @@ electronic description of BL Add. MSS 12069 by Dilyana Radoslavova
                   the place number of the text in order in the manuscript. A combination of all of
                   the important attributes of <code>&lt;msItemStruct&gt;</code> can be illustrated by this
                   hypothetical example:
-                  <pre>&lt;msItemStruct defective="false" type="compilation" style="non-narrative" xml:id="ACD1"&gt; … &lt;/msItemStruct&gt;
+                  <pre>&lt;msItemStruct defective="false" type="compilation" style="non-narrative" xml:id="ACD1"&gt;
+   … 
+&lt;/msItemStruct&gt;
 </pre></div>
             </div>
             <div>
@@ -2304,12 +2333,14 @@ electronic description of BL Add. MSS 12069 by Dilyana Radoslavova
 &lt;/note&gt; From the electronic description of the Codex Suprasliensis by Maya
 Petrova-Taneva 
 </pre></div>
-               <div class="p">Here we have all possible information about this date in the Codex
-                     Suprasliensis. The commemoration of St. John the Hesychast in this
-                  manuscript is on March 31, formalized as <code>03-31</code>. The date is used in
-                  the church calendar (<code>type="church"</code>), it is presented in the
-                  manuscript (internal, i.e., not supplied or conjectured by the encoder) and is
-                  part of the <dfn>fixed</dfn> (<dfn>non-movable</dfn>) feast days.</div>
+               <div class="p">Here we have all possible information about this date in the
+                  <cite>Codex
+                     Suprasliensis</cite>. The
+                  commemoration of St. John the Hesychast in this manuscript is on March 31,
+                  formalized as <code>03-31</code>. The date is used in the church calendar
+                     (<code>type="church"</code>), it is presented in the manuscript (internal,
+                  i.e., not supplied or conjectured by the encoder) and is part of the
+                     <dfn>fixed</dfn> (<dfn>non-movable</dfn>) feast days.</div>
             </div>
             <div>
                <h3>7.15. The language of the text</h3>
@@ -2352,8 +2383,8 @@ Petrova-Taneva
                      <q>protograph</q>, <q>antigraph</q>, <q>apograph</q>, and
                      <q>litRedaction</q>. These elements can provide a context for researching
                   the transmission of the text by situating it within the larger tradition. Here is
-                  an example from the electronic description of the Manuilev
-                     Apostle by Margaret Dimitrova, Andrej Bojadžiev, and Elisaveta Moussakova:
+                  an example from the electronic description of the <i>Manuilev
+                     Apostle</i> by Margaret Dimitrova, Andrej Bojadžiev, and Elisaveta Moussakova:
                   <pre>&lt;filiation type="litRedaction"&gt;The manuscript uses archaic lexis and is considered
    to belong to the archaic group of Apostoloi representing the Cyrillo-Methodian
    translation. See &lt;bibl&gt;&lt;ref&gt;Воскресенский 1879: 111-
@@ -2589,13 +2620,16 @@ Radoslavova
          &lt;incipit&gt;Начнѣмь рещи ѡ львѣ ц҃рѣ звѣремь. іеже какѡвь скоть іесть. ибо
             Іаковь бл҃влаше Іоудоу гл҃ааше. скѵмень львовь.&lt;/incipit&gt;
       &lt;/sampleText&gt;
-   &lt;/msItemStruct&gt; … &lt;/msItemStruct&gt;
+   &lt;/msItemStruct&gt;
+   … 
+&lt;/msItemStruct&gt;
 </pre></div>
-               <div class="p">In this example the main text is called „Physiologus" and it contains more than 40
-                  small stories. The first one is „About the lion". The numbers and identifiers are
-                  set in such a way that it is possible from their value to see the text hierarchy
-                  (cf. values ACD15 and ACD15.1). Every text could have its own standardized title,
-                  as given by the research tradition, along with its own incipit and/or explicit, as
+               <div class="p">In this example the main text is called <q>Physiologus</q> and
+                  it contains more than forty small stories. The first one is
+                  <q>About the lion</q>. The numbers and identifiers are set in
+                  such a way that it is possible from their value to see the text hierarchy (cf.
+                  values ACD15 and ACD15.1). Every text could have its own standardized title, as
+                  given by the research tradition, along with its own incipit and/or explicit, as
                   found in the manuscript (cf. also Стойкова 2011).</div>
             </div>
          </div>
@@ -2673,8 +2707,11 @@ Radoslavova
                   example from the electronic description of British Library Harley Ms 3519 by
                   Dilyana Radoslavova:
                   <pre>&lt;acquisition&gt;Purchased by &lt;persName&gt;Harley&lt;/persName&gt; from &lt;persName&gt;Richard
-      Jones&lt;/persName&gt;, bookseller, in 1715 &lt;bibl&gt;&lt;ref target="bibliography/w.xml#WrightCE1966"&gt;Wright
-   (1966)&lt;/ref&gt;&lt;/bibl&gt;&lt;/acquisition&gt;
+      Jones&lt;/persName&gt;, bookseller, in 1715 
+   &lt;bibl&gt;
+      &lt;ref target="bibliography/w.xml#WrightCE1966"&gt;Wright (1966)&lt;/ref&gt;
+   &lt;/bibl&gt;
+&lt;/acquisition&gt;
 </pre></div>
             </div>
          </div>
@@ -2993,42 +3030,64 @@ Radoslavova
 </pre></div>
                <div class="p">In this case we have separate <code>&lt;altIdentifier&gt;</code> elements following
                   immediately after the head:
-                  <pre>&lt;altIdentifier type="partial"&gt;&lt;country&gt;Egypt&lt;/country&gt;
+                  <pre>&lt;altIdentifier type="partial"&gt;
+   &lt;country&gt;Egypt&lt;/country&gt;
    &lt;geogName&gt;
-      &lt;geogFeat&gt; Mount&lt;/geogFeat&gt;&lt;name&gt;Sinai&lt;/name&gt;&lt;/geogName&gt;
-   &lt;repository&gt;Monastery “St. Catherine"&lt;/repository&gt;&lt;idno type="shelfmark"&gt;Sin
-      34&lt;/idno&gt;&lt;/altIdentifier&gt;
-&lt;altIdentifier type="partial"&gt;&lt;country&gt;Egypt &lt;/country&gt;
-   &lt;repository&gt;Monastery “St. Catherine" &lt;/repository&gt;&lt;idno type="shelfmark"&gt;Sin
-      18/N&lt;/idno&gt;&lt;/altIdentifier&gt;
-&lt;altIdentifier type="partial"&gt;&lt;country&gt;Russia&lt;/country&gt;
-   &lt;settlement&gt;Sankt Peterburg&lt;/settlement&gt;&lt;repository&gt;Russian National
-      Library&lt;/repository&gt;&lt;idno type="shelfmark"&gt;Gr. 70&lt;/idno&gt;&lt;/altIdentifier&gt;
-&lt;altIdentifier type="partial"&gt;&lt;country&gt;Russia&lt;/country&gt;
-   &lt;settlement&gt;Sankt Peterburg&lt;/settlement&gt;&lt;repository&gt;Russian National Library &lt;/repository&gt;
-   &lt;collection&gt;Osnovnoe sobranie&lt;/collection&gt;&lt;idno type="shelfmark"&gt;Q.p.I.63
-   &lt;/idno&gt;&lt;/altIdentifier&gt;
+      &lt;geogFeat&gt;Mount&lt;/geogFeat&gt;
+      &lt;name&gt;Sinai&lt;/name&gt;
+   &lt;/geogName&gt;
+   &lt;repository&gt;Monastery “St. Catherine"&lt;/repository&gt;
+   &lt;idno type="shelfmark"&gt;Sin 34&lt;/idno&gt;
+&lt;/altIdentifier&gt;
+&lt;altIdentifier type="partial"&gt;
+   &lt;country&gt;Egypt&lt;/country&gt;
+   &lt;repository&gt;Monastery “St. Catherine"&lt;/repository&gt;
+   &lt;idno type="shelfmark"&gt;Sin 18/N&lt;/idno&gt;
+&lt;/altIdentifier&gt;
 &lt;altIdentifier type="partial"&gt;
    &lt;country&gt;Russia&lt;/country&gt;
-   &lt;settlement&gt;Sankt Peterburg&lt;/settlement&gt;&lt;repository&gt;Russian National
-      Library&lt;/repository&gt;&lt;collection&gt;Osnovnoe sobranie&lt;/collection&gt;&lt;idno type="shelfmark"&gt;Q.p.I.64 &lt;/idno&gt;&lt;/altIdentifier&gt;
+   &lt;settlement&gt;Sankt Peterburg&lt;/settlement&gt;
+   &lt;repository&gt;Russian National Library&lt;/repository&gt;
+   &lt;idno type="shelfmark"&gt;Gr. 70&lt;/idno&gt;
+&lt;/altIdentifier&gt;
+&lt;altIdentifier type="partial"&gt;
+   &lt;country&gt;Russia&lt;/country&gt;
+   &lt;settlement&gt;Sankt Peterburg&lt;/settlement&gt;
+   &lt;repository&gt;Russian National Library&lt;/repository&gt;
+   &lt;collection&gt;Osnovnoe sobranie&lt;/collection&gt;
+   &lt;idno type="shelfmark"&gt;Q.p.I.63&lt;/idno&gt;
+&lt;/altIdentifier&gt;
+&lt;altIdentifier type="partial"&gt;
+   &lt;country&gt;Russia&lt;/country&gt;
+   &lt;settlement&gt;Sankt Peterburg&lt;/settlement&gt;
+   &lt;repository&gt;Russian National Library&lt;/repository&gt;
+   &lt;collection&gt;Osnovnoe sobranie&lt;/collection&gt;
+   &lt;idno type="shelfmark"&gt;Q.p.I.64&lt;/idno&gt;
+&lt;/altIdentifier&gt;
 </pre></div>
                <div class="p">This information is followed by physical characteristics, such as the number of
                   leaves, dimensions, and other layout properties that do not belong to any one
                   particular part, followed by a general overview about the manuscript condition.
                   These physical characteristics are followed by a description of each of the seven
                   scribes who wrote the upper layer of the text. Consider the following example:
-                  <pre>&lt;scribe n="E"&gt;&lt;locusGrp&gt;&lt;locus&gt;Q.п.I.63, 1r-3r&lt;/locus&gt;
-      &lt;locus&gt;Sin. 34, 63v-71v&lt;/locus&gt;&lt;locus&gt;Sin. 34, 77r-81r &lt;/locus&gt;&lt;/locusGrp&gt;
+                  <pre>&lt;scribe n="E"&gt;
+   &lt;locusGrp&gt;
+      &lt;locus&gt;Q.п.I.63, 1r-3r&lt;/locus&gt;
+      &lt;locus&gt;Sin. 34, 63v-71v&lt;/locus&gt;
+      &lt;locus&gt;Sin. 34, 77r-81r&lt;/locus&gt;
+   &lt;/locusGrp&gt;
    &lt;palaeoCharact script="cyrs"&gt;&lt;p&gt;Uncial&lt;/p&gt;&lt;/palaeoCharact&gt;
-   &lt;scribeLang&gt;&lt;summary&gt;Middle Bulgarian with Russian features&lt;/summary&gt;
+   &lt;scribeLang&gt;
+      &lt;summary&gt;Middle Bulgarian with Russian features&lt;/summary&gt;
       &lt;orthography&gt;
          &lt;orthNote type="jer" subtype="front"&gt;only &lt;c xml:lang="cu"&gt;ь&lt;/c&gt;&lt;/orthNote&gt;
-         &lt;orthNote type="jus" subtype="nonConsis"&gt;&lt;c xml:lang="cu"&gt;ѫ&lt;/c&gt; replaced by &lt;c xml:lang="cu"&gt;оу&lt;/c&gt;; 
+         &lt;orthNote type="jus" subtype="nonConsis"&gt;&lt;c xml:lang="cu"&gt;ѫ&lt;/c&gt; 
+            replaced by &lt;c xml:lang="cu"&gt;оу&lt;/c&gt;; 
             &lt;c xml:lang="cu"&gt;ѧ&lt;/c&gt; replaced by &lt;c xml:lang="cu"&gt;a&lt;/c&gt;;&lt;/orthNote&gt;
          &lt;orthNote type="otherLetters"&gt;&lt;c xml:lang="cu"&gt;ы&lt;/c&gt;; 
             &lt;c xml:lang="cu"&gt;ѥ&lt;/c&gt; and &lt;c xml:lang="cu"&gt;ѩ&lt;/c&gt;&lt;/orthNote&gt;
-      &lt;/orthography&gt; …
+      &lt;/orthography&gt;
+      …
    &lt;/scribeLang&gt;
 &lt;/scribe&gt;
 </pre></div>
@@ -3243,7 +3302,7 @@ Radoslavova
                   description or where such a description is otherwise unnecessary or undesirable. A
                   possible example might be paragraphs in the element <code>&lt;condition&gt;</code>, where
                   different types of damage or loss could be grouped together, as in this example
-                  from the description of Codex Suprasliensis:
+                  from the description of <cite>Codex Suprasliensis</cite>:
                   <pre>&lt;condition&gt;
    &lt;p xml:id="missedparts"&gt;The beginning and the end of Ljubljana part are
       missing. Two leaves have been lost from the middle of the Vita of St Paul
@@ -3312,9 +3371,9 @@ Radoslavova
                <li>Bojadžiev, Andrej, Anissava Miltenova and Dilyana Radoslavova 2003. A Unified
                   Model for the Description of Medieval Manuscripts? Computational Approaches to the
                   Study of Early and Modern Slavic Languages and Texts. Proceedings of the
-                  „Electronic Description and Edition of Slavic Sources” conference, 24-26 September
-                  2002, Pomorie, Bulgaria. Sofia: Boyan Penev Publishing Center, Institute of
-                  Literature. 113-135.</li>
+                     <i>Electronic Description and Edition of Slavic Sources</i>
+                  conference, 24-26 September 2002, Pomorie, Bulgaria. Sofia: Boyan Penev Publishing
+                  Center, Institute of Literature. 113-135.</li>
                <li>Boyadzhiev, Andrej. 2009. Constructing Repertorium 3.0. Scripta &amp; e-Scripta
                   7. 13–48.</li>
                <li>Bos, Bert, Håkon Wium Lie, Chris Lilley, Ian Jacobs (eds.). 2008. Cascading
@@ -3354,9 +3413,10 @@ Radoslavova
                <li>Cleminson, Ralph. 2003. A Good Servant but a Bad MASTER: Uses and Abuses of
                   Standards in Manuscript Description. In A. Miltenova, D. J. Birnbaum and S.
                   Slevinsky (eds.), Computational Approaches to the Study of Early and Modern Slavic
-                  Languages and Texts. Proceedings of the „Electronic Description and Edition of
-                  Slavic Sources” conference, 24-26 September 2002, Pomorie, Bulgaria. Sofia: Boyan
-                  Penev Publishing Center, Institute of Literature. 105-111.</li>
+                  Languages and Texts. Proceedings of the <i>Electronic Description and
+                     Edition of Slavic Sources</i> conference, 24-26 September 2002, Pomorie,
+                  Bulgaria. Sofia: Boyan Penev Publishing Center, Institute of Literature.
+                  105-111.</li>
                <li>Common Data Hub: ISO 3166 Country Codes: http://www.commondatahub.com/live/
                   geography/country/iso_3166_country_codes (12.02.2012).</li>
                <li>DeRose, Steven, Ron Daniel Jr., Eve Maler, and Jonathan Marsh (eds.). 2003.
@@ -3412,9 +3472,10 @@ Radoslavova
                   the Electronic Catalog of the Department of Manuscripts in the National Library of
                   Russia: Goals, Research Problems, and Prospects. In A. Miltenova. D. Birnbaum and
                   S. Slevinski (eds.), Computational Approaches to the Study of Early and Modern
-                  Slavic Languages and Texts. Proceedings of the „Electronic Description and Edition
-                  of Slavic Sources” conference, 24-26 September 2002, Pomorie, Bulgaria. Sofia:
-                  Boyan Penev Publishing Center, Institute of Literature. 157–188.</li>
+                  Slavic Languages and Texts. Proceedings of the <i>Electronic Description and
+                     Edition of Slavic Sources</i> conference, 24-26 September 2002, Pomorie,
+                  Bulgaria. Sofia: Boyan Penev Publishing Center, Institute of Literature.
+                  157–188.</li>
                <li>Leroy, J. 1976. Les types de réglure des manuscrits grecs. Paris: Institut de
                   recherche et d’histoire des textes (Bibliographie-Colloques-Travaux
                   préparatoires).</li>
@@ -3439,15 +3500,15 @@ Radoslavova
                   Perspectives. Sofia: Marin Drinov. 43-68.</li>
                <li>Miltenova, Anissava, David Birnbaum and Sarah Slevinski (eds.). 2003.
                   Computational Approaches to the Study of Early and Modern Slavic Languages and
-                  Texts. Proceedings of the „Electronic Description and Edition of Slavic Sources”
-                  conference, 24-26 September 2002, Pomorie, Bulgaria. Sofia: Boyan Penev Publishing
-                  Center, Institute of Literature.</li>
+                  Texts. Proceedings of the <i>Electronic Description and Edition of Slavic
+                     Sources</i> conference, 24-26 September 2002, Pomorie, Bulgaria. Sofia:
+                  Boyan Penev Publishing Center, Institute of Literature.</li>
                <li>Moussakova, Elissaveta. 2003. The Element “Decoration” in Electronic Manuscript
                   Catalogs. In A. Miltenova, D. J. Birnbaum and S. Slevinski (eds), Computational
                   Approaches to the Study of Early and Modern Slavic Languages and Texts.
-                  Proceedings of the „Electronic Description and Edition of Slavic Sources”
-                  conference, 24-26 September 2002, Pomorie, Bulgaria. Sofia: Boyan Penev Publishing
-                  Center, Institute of Literature. 137–156.</li>
+                  Proceedings of the <i>Electronic Description and Edition of Slavic
+                     Sources</i> conference, 24-26 September 2002, Pomorie, Bulgaria. Sofia:
+                  Boyan Penev Publishing Center, Institute of Literature. 137–156.</li>
                <li>PDF Reference: PDF Reference Sixth Edition. Adobe Portable Document Format 1.7
                   November 2006. Adobe Systems Incorporated. http://www.adobe.com/devnet/acrobat/
                   pdfs/pdf_reference_1-7.pdf/ (12.02.2012).</li>
@@ -3890,17 +3951,17 @@ Radoslavova
                <h3>Element <code>&lt;altIdentifier&gt;</code></h3>
                <pre>&lt;elementSpec ident="altIdentifier" module="msdescription" mode="change"&gt;
    &lt;content&gt;
-      &lt;!--
-  &lt;rng:zeroOrMore&gt;
-     &lt;rng:ref name="msName" /&gt;&lt;/rng:zeroOrMore&gt;
-     &lt;rng:zeroOrMore&gt;
-        &lt;rng:zeroOrMore&gt;
-           &lt;rng:ref name="model.placeNamePart_sequenceOptional"/&gt;
-        &lt;/rng:zeroOrMore&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name=”institution” /&gt;
-        &lt;/rng:optional&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name=”repository” /&gt;&lt;/rng:optional&gt;
-  --&gt;&lt;/content&gt;
+      &lt;sequence&gt;
+        &lt;elementRef key="msName" minOccurs="0" maxOccurs="unbounded"/&gt;
+        &lt;classRef key="model.placeNamePart" expand="sequenceOptionalRepeatable"/&gt;
+        &lt;elementRef key="institution" minOccurs="0" maxOccurs="1"/&gt;
+        &lt;elementRef key="repository" minOccurs="0" maxOccurs="1"/&gt;
+        &lt;elementRef key="collection" minOccurs="0" maxOccurs="1"/&gt;
+        &lt;elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/&gt;
+        &lt;elementRef key="note" minOccurs="0" maxOccurs="unbounded"/&gt;
+        &lt;elementRef key="altIdentifier" minOccurs="0" maxOccurs="unbounded"/&gt;
+      &lt;/sequence&gt;
+  &lt;/content&gt;
 &lt;/elementSpec&gt;
 </pre>
                <div class="p">1.Includes <code>&lt;msName&gt;</code> to allow naming a separate sections or parts of the
@@ -3913,16 +3974,12 @@ Radoslavova
                <h3>Element <code>&lt;binding&gt;</code></h3>
                <pre>&lt;elementSpec ident="binding" module="msdescription" mode="change"&gt;
    &lt;content&gt;
-      &lt;!--
-  &lt;rng:oneOrMore&gt;
-     &lt;rng:choice&gt;
-        &lt;rng:ref name=”model.pLike” /&gt;
-           &lt;rng:ref name=”bindingNote” /&gt;
-              &lt;rng:ref name=”condition” /&gt;
-                 &lt;rng:ref name=”decoNote” /&gt;
-     &lt;/rng:choice&gt;
-  &lt;/rng:oneOrMore&gt;
-  --&gt;
+      &lt;alternate minOccurs="1" maxOccurs="unbounded"&gt;
+         &lt;classRef key="model.pLike"/&gt;
+         &lt;elementRef key="bindingNote"/&gt;
+         &lt;elementRef key="condition"/&gt;
+         &lt;elementRef key="decoNote"/&gt;
+      &lt;/alternate&gt;
    &lt;/content&gt;
 &lt;/elementSpec&gt;
 </pre>
@@ -3936,16 +3993,18 @@ Radoslavova
                      <code>&lt;gregoryRule&gt;</code>, <code>&lt;ruling&gt;</code> and <code>&lt;pricking&gt;</code>.</div>
                <pre>&lt;elementSpec ident="collation" module="msdescription" mode="change"&gt;
    &lt;content&gt;
-      &lt;!--
-     &lt;rng:optional&gt;&lt;rng:ref name="p" /&gt;&lt;/rng:optional&gt;
-     &lt;rng:zeroOrMore&gt;&lt;rng:ref name="quire" /&gt;&lt;/rng:zeroOrMore&gt;
-     &lt;rng:optional&gt;&lt;rng:ref name="signatures" /&gt;&lt;/rng:optional&gt;
-     &lt;rng:optional&gt;&lt;rng:ref name="catchwords" /&gt;&lt;/rng:optional&gt;
-     &lt;rng:optional&gt;&lt;rng:ref name="gregoryRule" /&gt;&lt;/rng:optional&gt;
-     &lt;rng:optional&gt;&lt;rng:ref name="ruling" /&gt;&lt;/rng:optional&gt;
-     &lt;rng:optional&gt;&lt;rng:ref name="pricking" /&gt;
-     &lt;/rng:optional&gt;
-     --&gt;
+      &lt;alternate minOccurs="1" maxOccurs="1"&gt;
+         &lt;macroRef key="macro.specialPara"/&gt;
+         &lt;sequence minOccurs="1" maxOccurs="1"&gt;
+            &lt;elementRef key="summary" minOccurs="0" maxOccurs="1"/&gt;
+            &lt;elementRef key="quire" minOccurs="0" maxOccurs="unbounded"/&gt;
+            &lt;elementRef key="signatures" minOccurs="0" maxOccurs="1"/&gt;
+            &lt;elementRef key="catchwords" minOccurs="0" maxOccurs="1"/&gt;
+            &lt;elementRef key="gregoryRule" minOccurs="0" maxOccurs="1"/&gt;
+            &lt;elementRef key="ruling" minOccurs="0" maxOccurs="1"/&gt;
+            &lt;elementRef key="pricking" minOccurs="0" maxOccurs="1"/&gt;
+         &lt;/sequence&gt;
+      &lt;/alternate&gt;
    &lt;/content&gt;
 &lt;/elementSpec&gt;
 </pre>
@@ -3954,19 +4013,16 @@ Radoslavova
                <h3>Element <code>&lt;history&gt;</code></h3>
                <pre>&lt;elementSpec ident="history" module="msdescription" mode="change"&gt;
    &lt;content&gt;
-      &lt;!--
-     &lt;rng:choice&gt;
-        &lt;rng:oneOrMore&gt;&lt;rng:ref name="model.pLike" /&gt;
-        &lt;/rng:oneOrMore&gt;
-        &lt;rng:group&gt;
-           &lt;rng:optional&gt;&lt;rng:ref name="summary" /&gt;&lt;/rng:optional&gt;
-           &lt;rng:optional&gt;&lt;rng:ref name="origin" /&gt;&lt;/rng:optional&gt;
-           &lt;rng:optional&gt;&lt;rng:ref name="accMat" /&gt;&lt;/rng:optional&gt;
-           &lt;rng:zeroOrMore&gt;&lt;rng:ref name="provenance" /&gt;
-           &lt;/rng:zeroOrMore&gt;
-           &lt;rng:optional&gt;&lt;rng:ref name="acquisition" /&gt;&lt;/rng:optional&gt;
-        &lt;/rng:group&gt;&lt;/rng:choice&gt;
-        --&gt;
+      &lt;alternate&gt;
+         &lt;classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/&gt;
+         &lt;sequence&gt;
+            &lt;elementRef key="summary" minOccurs="0"/&gt;
+            &lt;elementRef key="origin" minOccurs="0"/&gt;
+            &lt;elementRef key="accMat" minOccurs="0" maxOccurs="unbounded"/&gt;
+            &lt;elementRef key="provenance" minOccurs="0" maxOccurs="unbounded"/&gt;
+            &lt;elementRef key="acquisition" minOccurs="0"/&gt;
+         &lt;/sequence&gt;
+      &lt;/alternate&gt;
    &lt;/content&gt;
 &lt;/elementSpec&gt;
 </pre>
@@ -3998,14 +4054,14 @@ Radoslavova
       &lt;memberOf key="att.global.change"/&gt;
       &lt;memberOf key="att.canonical"/&gt;
    &lt;/classes&gt;
-   &lt;attList&gt;&lt;attDef ident="usage"&gt;
+   &lt;attList&gt;
+      &lt;attDef ident="usage"&gt;
          &lt;desc&gt;describes the usage of the material&lt;/desc&gt;
          &lt;datatype&gt;
-            &lt;!--
-        &lt;rng:text /&gt;
-        --&gt;
+            &lt;dataRef key="teidata.word"/&gt;
          &lt;/datatype&gt;
-      &lt;/attDef&gt;&lt;/attList&gt;
+      &lt;/attDef&gt;
+   &lt;/attList&gt;
 &lt;/elementSpec&gt;
 </pre>
                <div class="p">Adds attribute <code>@usage</code> to allow a short characterization of material.</div>
@@ -4013,64 +4069,44 @@ Radoslavova
             <div>
                <h3>Element <code>&lt;msContents&gt;</code></h3>
                <pre>&lt;elementSpec ident="msContents" module="msdescription" mode="change"&gt;
-   &lt;!--
-  &lt;content&gt;
-     &lt;rng:choice&gt;
-        &lt;rng:oneOrMore&gt;&lt;rng:ref name="model.pLike" /&gt;
-        &lt;/rng:oneOrMore&gt;
-        &lt;rng:group&gt;
-           &lt;rng:group&gt;&lt;rng:optional&gt;
-              &lt;rng:ref name="summary" /&gt;
-           &lt;/rng:optional&gt;
-              &lt;rng:optional&gt;
-                 &lt;rng:ref name="titlePage" /&gt;
-              &lt;/rng:optional&gt;
-              &lt;rng:optional&gt;&lt;rng:ref name="title" /&gt;&lt;/rng:optional&gt;
-              &lt;rng:zeroOrMore&gt;&lt;rng:ref name="author" /&gt;&lt;/rng:zeroOrMore&gt;
-              &lt;rng:zeroOrMore&gt;&lt;rng:ref name="respStmt" /&gt;
-              &lt;/rng:zeroOrMore&gt;
-              &lt;rng:zeroOrMore&gt;&lt;rng:ref name="model.noteLike" /&gt;
-              &lt;/rng:zeroOrMore&gt;
-              &lt;rng:zeroOrMore&gt;&lt;rng:ref name="filiation" /&gt;
-              &lt;/rng:zeroOrMore&gt;
-              &lt;rng:optional&gt;
-                 &lt;rng:ref name="textLang" /&gt;&lt;/rng:optional&gt;&lt;rng:optional&gt;
-                    &lt;rng:ref name="decoNote" /&gt;&lt;/rng:optional&gt;
-              &lt;rng:optional&gt;
-                 &lt;rng:ref name="sampleText" /&gt;
-              &lt;/rng:optional&gt;
-              &lt;rng:optional&gt;
-                 &lt;rng:ref name="div" /&gt;
-              &lt;/rng:optional&gt;
-           &lt;/rng:group&gt;&lt;rng:zeroOrMore&gt;
-              &lt;rng:ref name="msItemStruct" /&gt;
-           &lt;/rng:zeroOrMore&gt;&lt;/rng:group&gt;
-     &lt;/rng:choice&gt;
-  &lt;/content&gt;
-  &lt;attList&gt;
-     &lt;attDef ident="type"&gt;
-        &lt;desc&gt;describes the type of the text&lt;/desc&gt;
-        &lt;datatype&gt;&lt;rng:text /&gt;
-        &lt;/datatype&gt;&lt;valList type="closed"&gt;
-           &lt;valItem ident="original"&gt;&lt;desc&gt;the text is
-              original&lt;/desc&gt;&lt;/valItem&gt;
-           &lt;valItem ident="compilation"&gt;
-              &lt;desc&gt;the text is compiled from variuos sources&lt;/desc&gt;
-           &lt;/valItem&gt;
-           &lt;valItem ident="translation"&gt;
-              &lt;desc&gt;the text is translated&lt;/desc&gt;
-           &lt;/valItem&gt;&lt;/valList&gt;&lt;/attDef&gt;
-     &lt;attDef ident="style"&gt;
-        &lt;desc&gt;describes the style of the text&lt;/desc&gt;
-        &lt;datatype&gt;&lt;rng:text /&gt;&lt;/datatype&gt;
-        &lt;valList type="closed"&gt;
-           &lt;valItem ident="narrative"&gt;
-              &lt;desc&gt;the text is narrative&lt;/desc&gt;&lt;/valItem&gt;
-           &lt;valItem ident="non-narrative"&gt;
-              &lt;desc&gt;the text is non-narrative, e.g., hymnography&lt;/desc&gt;
-           &lt;/valItem&gt;&lt;/valList&gt;&lt;/attDef&gt;
-  &lt;/attList&gt;
- &lt;/content&gt; --&gt;
+   &lt;content&gt;
+       &lt;alternate&gt;
+           &lt;classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/&gt;
+           &lt;sequence&gt;
+               &lt;elementRef key="summary" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="titlePage" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="title" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="author" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;classRef key="model.noteLike" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="filiation" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="textLang" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="decoNote" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="sampleText" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="div" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="msItemStruct" minOccurs="0" maxOccurs="unbounded"/&gt;
+           &lt;/sequence&gt;
+       &lt;/alternate&gt;
+   &lt;/content&gt;
+   &lt;attList&gt;
+       &lt;attDef ident="type" usage="opt"&gt;
+           &lt;desc&gt;describes the type of the text&lt;/desc&gt;
+           &lt;datatype&gt;
+               &lt;dataRef key="teidata.enumerated"/&gt;
+           &lt;/datatype&gt;
+           &lt;valList type="closed"&gt;
+               &lt;valItem ident="original"&gt;
+                   &lt;desc&gt;the text is original&lt;/desc&gt;
+               &lt;/valItem&gt;
+               &lt;valItem ident="compilation"&gt;
+                   &lt;desc&gt;the text is compiled from various sources&lt;/desc&gt;
+               &lt;/valItem&gt;
+               &lt;valItem ident="translation"&gt;
+                   &lt;desc&gt;the text is translated&lt;/desc&gt;
+               &lt;/valItem&gt;
+           &lt;/valList&gt;
+       &lt;/attDef&gt;
+   &lt;/attList&gt;
 &lt;/elementSpec&gt;
 </pre>
                <div class="p">1. Changes the order of elements in some places to reflect the tradition in
@@ -4085,21 +4121,21 @@ Radoslavova
                <h3>Element <code>&lt;msDesc&gt;</code></h3>
                <pre>&lt;elementSpec ident="msDesc" module="msdescription" mode="change"&gt;
    &lt;content&gt;
-      &lt;!--
-     &lt;rng:zeroOrMore&gt;&lt;rng:ref name="model.headLike" /&gt;
-     &lt;/rng:zeroOrMore&gt;
-     &lt;rng:ref name="msIdentifier" /&gt;
-     &lt;rng:choice&gt;&lt;rng:zeroOrMore&gt;&lt;rng:ref name="model.pLike" /&gt;
-     &lt;/rng:zeroOrMore&gt;
-        &lt;rng:group&gt;
-           &lt;rng:optional&gt;&lt;rng:ref name="physDesc" /&gt;&lt;/rng:optional&gt;
-           &lt;rng:optional&gt;&lt;rng:ref name="scribeDesc" /&gt;&lt;/rng:optional&gt;
-           &lt;rng:optional&gt;&lt;rng:ref name="msContents" /&gt;&lt;/rng:optional&gt;
-           &lt;rng:optional&gt;&lt;rng:ref name="history" /&gt;&lt;/rng:optional&gt;
-           &lt;rng:optional&gt;&lt;rng:ref name="additional" /&gt;&lt;/rng:optional&gt;
-           &lt;rng:zeroOrMore&gt;&lt;rng:ref name="msPart" /&gt;&lt;/rng:zeroOrMore&gt;
-        &lt;/rng:group&gt;&lt;/rng:choice&gt;
-        --&gt;
+      &lt;sequence&gt;
+      &lt;classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded"/&gt;
+      &lt;elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/&gt;
+      &lt;alternate&gt;
+         &lt;classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/&gt;
+         &lt;sequence&gt;
+            &lt;elementRef key="physDesc" minOccurs="0" maxOccurs="1"/&gt;
+            &lt;elementRef key="scribeDesc" minOccurs="0" maxOccurs="1"/&gt;
+            &lt;elementRef key="msContents" minOccurs="0" maxOccurs="1"/&gt;
+            &lt;elementRef key="history" minOccurs="0" maxOccurs="1"/&gt;
+            &lt;elementRef key="additional" minOccurs="0" maxOccurs="1"/&gt;
+            &lt;elementRef key="msPart" minOccurs="0" maxOccurs="unbounded"/&gt;
+         &lt;/sequence&gt;
+      &lt;/alternate&gt;
+      &lt;/sequence&gt;
    &lt;/content&gt;
 &lt;/elementSpec&gt;
 </pre>
@@ -4111,26 +4147,17 @@ Radoslavova
                <h3>Element <code>&lt;msIdentifier&gt;</code></h3>
                <pre>&lt;elementSpec ident="msIdentifier" module="msdescription" mode="change"&gt;
    &lt;content&gt;
-      &lt;!--
-     &lt;rng:zeroOrMore&gt;&lt;rng:ref name="msName" /&gt;
-     &lt;/rng:zeroOrMore&gt;
-     &lt;rng:zeroOrMore&gt;
-        &lt;rng:zeroOrMore&gt;&lt;rng:ref name="p" /&gt;&lt;/rng:zeroOrMore&gt;
-        &lt;rng:zeroOrMore&gt;
-           &lt;rng:ref name="model.placeNamePart_sequenceOptional"/&gt;
-        &lt;/rng:zeroOrMore&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="institution" /&gt;
-        &lt;/rng:optional&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="repository" /&gt;
-        &lt;/rng:optional&gt;
-        &lt;rng:zeroOrMore&gt;&lt;rng:ref name="collection" /&gt;
-        &lt;/rng:zeroOrMore&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="idno" /&gt;&lt;/rng:optional&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="note" /&gt;
-        &lt;/rng:optional&gt;&lt;/rng:zeroOrMore&gt;
-     &lt;rng:zeroOrMore&gt;&lt;rng:ref name="altIdentifier" /&gt;
-     &lt;/rng:zeroOrMore&gt;
-     --&gt;
+       &lt;sequence&gt;
+           &lt;elementRef key="msName" minOccurs="1" maxOccurs="unbounded"/&gt;
+           &lt;classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"/&gt;
+           &lt;classRef key="model.placeNamePart" expand="sequenceOptionalRepeatable"/&gt;
+           &lt;elementRef key="institution" minOccurs="0" maxOccurs="1"/&gt;
+           &lt;elementRef key="repository" minOccurs="0" maxOccurs="1"/&gt;
+           &lt;elementRef key="collection" minOccurs="0" maxOccurs="unbounded"/&gt;
+           &lt;elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/&gt;
+           &lt;elementRef key="note" minOccurs="0" maxOccurs="unbounded"/&gt;
+           &lt;elementRef key="altIdentifier" minOccurs="0" maxOccurs="unbounded"/&gt;
+       &lt;/sequence&gt;
    &lt;/content&gt;
 &lt;/elementSpec&gt;
 </pre>
@@ -4140,62 +4167,56 @@ Radoslavova
             </div>
             <div>
                <h3>Element <code>&lt;msItemStruct&gt;</code></h3>
-               <pre> &lt;elementSpec ident="msItemStruct" module="msdescription" mode="change"&gt;
-    &lt;content&gt;
-       &lt;!--
-   &lt;rng:group&gt;
-   &lt;rng:choice&gt;&lt;rng:optional&gt;&lt;rng:ref name="locus" /&gt;
-   &lt;/rng:optional&gt;
-      &lt;rng:optional&gt;&lt;rng:ref name="locusGrp" /&gt;
-      &lt;/rng:optional&gt;&lt;/rng:choice&gt;
-   &lt;rng:choice&gt;&lt;rng:oneOrMore&gt;&lt;rng:ref name="model.pLike" /&gt;
-   &lt;/rng:oneOrMore&gt;
-      &lt;rng:group&gt;&lt;rng:zeroOrMore&gt;
-         &lt;rng:ref name="title" /&gt;&lt;/rng:zeroOrMore&gt;
-         &lt;rng:zeroOrMore&gt;&lt;rng:ref name="author" /&gt;&lt;/rng:zeroOrMore&gt;
-         &lt;rng:zeroOrMore&gt;&lt;rng:ref name="respStmt" /&gt;
-         &lt;/rng:zeroOrMore&gt;
-         &lt;rng:zeroOrMore&gt;&lt;rng:ref name="model.noteLike" /&gt;
-         &lt;/rng:zeroOrMore&gt;
-         &lt;rng:zeroOrMore&gt;&lt;rng:ref name="filiation" /&gt;
-         &lt;/rng:zeroOrMore&gt;
-         &lt;rng:optional&gt;&lt;rng:ref name="textLang" /&gt;&lt;/rng:optional&gt;
-         &lt;rng:zeroOrMore&gt;&lt;rng:ref name="decoNote" /&gt;
-         &lt;/rng:zeroOrMore&gt;
-         &lt;rng:zeroOrMore&gt;&lt;rng:ref name="colophon" /&gt;
-         &lt;/rng:zeroOrMore&gt;
-         &lt;rng:optional&gt;&lt;rng:choice&gt;&lt;rng:ref name="sampleText" /&gt;
-            &lt;rng:ref name="div" /&gt;
-         &lt;/rng:choice&gt;&lt;/rng:optional&gt;
-         &lt;rng:zeroOrMore&gt;&lt;rng:ref name="msItemStruct" /&gt;
-         &lt;/rng:zeroOrMore&gt;
-         &lt;rng:zeroOrMore&gt;&lt;rng:ref name="listBibl" /&gt;
-         &lt;/rng:zeroOrMore&gt;
-         &lt;rng:zeroOrMore&gt;&lt;rng:ref name="bibl" /&gt;
-         &lt;/rng:zeroOrMore&gt;&lt;/rng:group&gt;
-   &lt;/rng:choice&gt;
-&lt;/content&gt;
-&lt;attList&gt;&lt;attDef ident="type"&gt;&lt;desc&gt;describes the type of
-   the text&lt;/desc&gt;
-   &lt;datatype&gt;&lt;rng:text /&gt;&lt;/datatype&gt;&lt;valList type="closed"&gt;
-      &lt;valItem ident="original"&gt;&lt;desc&gt;the text is
-         original&lt;desc&gt;&lt;/valItem&gt;
-      &lt;valItem ident="compilation"&gt;&lt;desc&gt;the text is compiled
-         from variuos
-         sources&lt;/desc&gt;&lt;/valItem&gt;&lt;valItem
-            ident="translation"&gt;&lt;desc&gt;the text is
-               translated&lt;/desc&gt;&lt;/valItem&gt;&lt;/valList&gt;&lt;/attDef&gt;
-   &lt;attDef ident="style"&gt;&lt;desc&gt;describes the style of the
-      text&lt;/desc&gt;&lt;datatype&gt;
-         &lt;rng:text /&gt;&lt;/datatype&gt;&lt;valList type="closed"&gt;&lt;valItem
-            ident="narrative"&gt;
-            &lt;desc&gt;the text is narrative&lt;/desc&gt;&lt;/valItem&gt;
-            &lt;valItem ident="non-narrative"&gt;
-               &lt;desc&gt;the text is non-narrative, e.g.,
-                  hymnography&lt;/desc&gt;&lt;/valItem&gt;&lt;/valList&gt;
-   &lt;/attDef&gt;&lt;/attList&gt;
-   --&gt;&lt;/content&gt;
- &lt;/elementSpec&gt;
+               <pre>&lt;elementSpec ident="msItemStruct" module="msdescription" mode="change"&gt;
+   &lt;content&gt;
+      &lt;sequence&gt;
+         &lt;alternate minOccurs="0" maxOccurs="1"&gt;
+            &lt;elementRef key="locus" minOccurs="1" maxOccurs="1"/&gt;
+            &lt;elementRef key="locusGrp" minOccurs="1" maxOccurs="1"/&gt;
+         &lt;/alternate&gt;
+         &lt;alternate&gt;
+            &lt;classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/&gt;
+            &lt;sequence&gt;
+               &lt;elementRef key="title" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="author" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="date" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;classRef key="model.noteLike" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="filiation" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="textLang" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="decoNote" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="colophon" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;alternate minOccurs="0" maxOccurs="1"&gt;
+                  &lt;elementRef key="sampleText" minOccurs="1" maxOccurs="1"/&gt;
+                  &lt;elementRef key="div" minOccurs="1" maxOccurs="1"/&gt;
+               &lt;/alternate&gt;
+               &lt;elementRef key="msItemStruct" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="listBibl" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="bibl" minOccurs="0" maxOccurs="unbounded"/&gt;
+            &lt;/sequence&gt;
+         &lt;/alternate&gt;
+      &lt;/sequence&gt;
+   &lt;/content&gt;
+   &lt;attList&gt;
+      &lt;attDef ident="type"&gt;
+         &lt;desc&gt;describes the type of the text&lt;/desc&gt;
+         &lt;datatype&gt;
+            &lt;dataRef key="teidata.enumerated"/&gt;
+         &lt;/datatype&gt;
+         &lt;valList type="closed"&gt;
+            &lt;valItem ident="original"&gt;
+               &lt;desc&gt;the text is original&lt;/desc&gt;
+            &lt;/valItem&gt;
+            &lt;valItem ident="compilation"&gt;
+               &lt;desc&gt;the text is compiled from variuos sources&lt;/desc&gt;
+            &lt;/valItem&gt;
+            &lt;valItem ident="translation"&gt;
+               &lt;desc&gt;the text is translated&lt;/desc&gt;
+            &lt;/valItem&gt;
+         &lt;/valList&gt;
+      &lt;/attDef&gt;
+   &lt;/attList&gt;
+&lt;/elementSpec&gt;
 </pre>
                <div class="p">1. The same changes as for the element <code>&lt;msContents&gt;</code>. 2. Adds the element
                      <code>&lt;locusGrp&gt;</code>.</div>
@@ -4203,30 +4224,30 @@ Radoslavova
             <div>
                <h3>Element <code>&lt;msPart&gt;</code></h3>
                <pre>&lt;elementSpec ident="msPart" module="msdescription" mode="change"&gt;
-   &lt;classes mode="change"&gt;&lt;memberOf key="att.typed" mode="add"/&gt;
+   &lt;classes mode="change"&gt;
+      &lt;memberOf key="att.typed" mode="add"/&gt;
    &lt;/classes&gt;
    &lt;content&gt;
-      &lt;!--
-  &lt;rng:group&gt;&lt;rng:group&gt;&lt;rng:choice&gt;&lt;rng:zeroOrMore&gt;
-     &lt;rng:optional&gt;&lt;rng:ref name="altIdentifier" /&gt;
-     &lt;/rng:optional&gt;
-     &lt;rng:optional&gt;&lt;rng:ref name="msIdentifier" /&gt; &lt;/rng:optional&gt;
-     &lt;rng:optional&gt;&lt;rng:ref name="locus" /&gt;&lt;/rng:optional&gt;
-     &lt;rng:optional&gt;&lt;rng:ref name="locusGrp" /&gt;&lt;/rng:optional&gt;
-  &lt;/rng:zeroOrMore&gt;&lt;/rng:choice&gt;
-  &lt;/rng:group&gt;&lt;rng:zeroOrMore&gt;&lt;rng:ref name="model.headLike"
-  /&gt;&lt;/rng:zeroOrMore&gt;&lt;rng:choice&gt;
-     &lt;rng:oneOrMore&gt;&lt;rng:ref name="model.pLike" /&gt;
-     &lt;/rng:oneOrMore&gt;
-     &lt;rng:group&gt;&lt;rng:optional&gt;&lt;rng:ref name="physDesc" /&gt;
-     &lt;/rng:optional&gt;&lt;rng:optional&gt;&lt;rng:ref name="scribeDesc" /&gt;
-     &lt;/rng:optional&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="msContents" /&gt;&lt;/rng:optional&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="history" /&gt;&lt;/rng:optional&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="additional" /&gt;&lt;/rng:optional&gt;
-        &lt;rng:zeroOrMore&gt;&lt;rng:ref name="msPart" /&gt;&lt;/rng:zeroOrMore&gt;
-     &lt;/rng:group&gt;&lt;/rng:choice&gt;&lt;/rng:group&gt;
-     --&gt;
+      &lt;sequence&gt;
+         &lt;alternate minOccurs="0" maxOccurs="unbounded"&gt;
+            &lt;elementRef key="altIdentifier"/&gt;
+            &lt;elementRef key="msIdentifier"/&gt;
+            &lt;elementRef key="locus"/&gt;
+            &lt;elementRef key="locusGrp"/&gt;
+         &lt;/alternate&gt;
+         &lt;classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded"/&gt;
+         &lt;alternate minOccurs="1" maxOccurs="1"&gt;
+            &lt;classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/&gt;
+            &lt;sequence&gt;
+               &lt;elementRef key="physDesc" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="scribeDesc" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="msContents" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="history" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="additional" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="msPart" minOccurs="0" maxOccurs="unbounded"/&gt;
+            &lt;/sequence&gt;
+         &lt;/alternate&gt;
+      &lt;/sequence&gt;
    &lt;/content&gt;
 &lt;/elementSpec&gt;
 </pre>
@@ -4237,13 +4258,10 @@ Radoslavova
             <div>
                <h3>Element <code>&lt;musicNotation&gt;</code></h3>
                <pre>&lt;elementSpec ident="musicNotation" module="msdescription" mode="change"&gt;
-   &lt;classes mode="replace"&gt;&lt;memberOf key="att.global"/&gt;
-      &lt;memberOf key="att.typed" mode="add"/&gt;&lt;/classes&gt;
-   &lt;content&gt;
-      &lt;!--
-  &lt;rng:ref name="macro.specialPara" /&gt;
-  --&gt;
-   &lt;/content&gt;
+   &lt;classes mode="replace"&gt;
+      &lt;memberOf key="att.global"/&gt;
+      &lt;memberOf key="att.typed" mode="add"/&gt;
+   &lt;/classes&gt;
 &lt;/elementSpec&gt;
 </pre>
                <div class="p">Adds attributes <code>@type</code> and <code>@subtype</code> to allow typologization of
@@ -4253,22 +4271,18 @@ Radoslavova
                <h3>Element <code>&lt;physDesc&gt;</code></h3>
                <pre>&lt;elementSpec ident="physDesc" mode="change" module="msdescription"&gt;
    &lt;content&gt;
-      &lt;!--  
-  &lt;rng:group&gt;
-     &lt;rng:zeroOrMore&gt;&lt;rng:ref name="model.pLike" /&gt;
-     &lt;/rng:zeroOrMore&gt;
-     &lt;rng:group&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="objectDesc" /&gt;
-        &lt;/rng:optional&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="ink" /&gt;&lt;/rng:optional&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="decoDesc" /&gt;
-        &lt;/rng:optional&gt;
-        &lt;rng:optional&gt;
-           &lt;rng:ref name="bindingDesc" /&gt;&lt;/rng:optional&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="sealDesc" /&gt;&lt;/rng:optional&gt;
-        &lt;rng:zeroOrMore&gt;&lt;rng:ref name="additions" /&gt;
-        &lt;/rng:zeroOrMore&gt;&lt;/rng:group&gt;&lt;/rng:group&gt;
-        --&gt;
+   &lt;alternate&gt;
+      &lt;classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/&gt;
+      &lt;sequence&gt;
+         &lt;elementRef key="summary" minOccurs="0" maxOccurs="1"/&gt;
+         &lt;elementRef key="objectDesc" minOccurs="0" maxOccurs="1"/&gt;
+         &lt;elementRef key="ink" minOccurs="0" maxOccurs="1"/&gt;
+         &lt;elementRef key="decoDesc" minOccurs="0" maxOccurs="1"/&gt;
+         &lt;elementRef key="bindingDesc" minOccurs="0" maxOccurs="1"/&gt;
+         &lt;elementRef key="sealDesc" minOccurs="0" maxOccurs="1"/&gt;
+         &lt;elementRef key="additions" minOccurs="0" maxOccurs="unbounded"/&gt;
+      &lt;/sequence&gt;
+   &lt;/alternate&gt;
    &lt;/content&gt;
 &lt;/elementSpec&gt;
 </pre>
@@ -4280,47 +4294,51 @@ Radoslavova
                <h3>Element <code>&lt;supportDesc&gt;</code></h3>
                <pre>&lt;elementSpec ident="supportDesc" module="msdescription" mode="change"&gt;
    &lt;content&gt;
-      &lt;!--
-     &lt;rng:choice&gt;&lt;rng:oneOrMore&gt;&lt;rng:ref name="model.
-     pLike" /&gt;&lt;/rng:oneOrMore&gt;&lt;rng:group&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="support" /&gt;
-        &lt;/rng:optional&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="extent" /&gt;
-        &lt;/rng:optional&gt;&lt;rng:zeroOrMore&gt;&lt;rng:choice&gt;
-           &lt;rng:ref name="foliation" /&gt;&lt;rng:ref name="pagination" /&gt;
-        &lt;/rng:choice&gt;&lt;/rng:zeroOrMore&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="collation" /&gt;&lt;/rng:optional&gt;
-        &lt;rng:optional&gt;&lt;rng:ref name="condition" /&gt;&lt;/rng:optional&gt;
-     &lt;/rng:group&gt;&lt;/rng:choice&gt;
-     --&gt;
-   &lt;/content&gt;&lt;/elementSpec&gt;
+       &lt;alternate&gt;
+           &lt;classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/&gt;
+           &lt;sequence&gt;
+               &lt;elementRef key="support" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="extent" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="foliation" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="pagination" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="collation" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="condition" minOccurs="0" maxOccurs="unbounded"/&gt;
+           &lt;/sequence&gt;
+       &lt;/alternate&gt;
+   &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
                <div class="p">The element <code>&lt;pagination&gt;</code> is added.</div>
             </div>
             <div>
                <h3>Element <code>&lt;watermark&gt;</code></h3>
-               <pre> &lt;elementSpec ident="watermark" module="msdescription" mode="change"&gt;
-    &lt;classes mode="change"&gt;
-       &lt;memberOf key="att.global"/&gt;
-       &lt;memberOf key="att.global.linking"/&gt;
-       &lt;memberOf key="att.global.analytic"/&gt;
-       &lt;memberOf key="att.global.facs"/&gt;
-       &lt;memberOf key="att.global.change"/&gt;
-       &lt;memberOf key="att.canonical"/&gt;&lt;/classes&gt;
-    &lt;!--
-&lt;content&gt;
-   &lt;rng:zeroOrMore&gt;&lt;rng:choice&gt;
-      &lt;rng:text /&gt;&lt;rng:ref name="model.phrase" /&gt;
-      &lt;rng:ref name="countermark" /&gt;
-      &lt;rng:ref name="motif" /&gt;&lt;/rng:choice&gt;&lt;/rng:zeroOrMore&gt;
-&lt;/content&gt;
-&lt;attList&gt;
-   &lt;attDef ident="tracing"&gt;
-      &lt;desc&gt;describes the methods of recording of some watermark.
-         Methods include: tracing, rubbing, etc. &lt;/desc&gt;&lt;datatype&gt;
-            &lt;rng:text /&gt;&lt;/datatype&gt;&lt;/attDef&gt;&lt;/attList&gt;
-            --&gt;
- &lt;/elementSpec&gt;
+               <pre>&lt;elementSpec ident="watermark" module="msdescription" mode="change"&gt;
+   &lt;classes mode="change"&gt;
+      &lt;memberOf key="att.global"/&gt;
+      &lt;memberOf key="att.global.linking"/&gt;
+      &lt;memberOf key="att.global.analytic"/&gt;
+      &lt;memberOf key="att.global.facs"/&gt;
+      &lt;memberOf key="att.global.change"/&gt;
+      &lt;memberOf key="att.canonical"/&gt;
+   &lt;/classes&gt;
+   &lt;content&gt;
+       &lt;alternate minOccurs="1" maxOccurs="unbounded"&gt;
+           &lt;textNode/&gt;
+           &lt;classRef key="model.phrase"/&gt;
+           &lt;elementRef key="motif"/&gt;
+           &lt;elementRef key="countermark"/&gt;
+       &lt;/alternate&gt;
+   &lt;/content&gt;
+   &lt;attList&gt;
+       &lt;attDef ident="tracing"&gt;
+           &lt;desc&gt;Describes the methods of recording of some watermark. Methods
+               include: tracing, rubbing, etc.&lt;/desc&gt;
+           &lt;datatype&gt;
+               &lt;dataRef key="teidata.word"/&gt;
+           &lt;/datatype&gt;
+       &lt;/attDef&gt;
+   &lt;/attList&gt;
+&lt;/elementSpec&gt;
 </pre>
                <div class="p">1. Adds attribute class <code>canonical</code> with to allow usage of
                      <code>@key</code> and <code>@ref</code>. 2. Adds new attribute <code>@tracing</code> to
@@ -4335,134 +4353,181 @@ Radoslavova
                schema.</div>
             <div>
                <h3>Element <code>&lt;bindingNote&gt;</code></h3>
-               <pre>&lt;elementSpec ident="bindingNote" module="msdescription" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
-   &lt;desc&gt;The element allows structured description of binding’s characteristics in
-      addition of decoration and condition. These features could apply but are not
-      limited to the binding’s parts: cover, plates, techniques. &lt;/desc&gt;
-   &lt;classes mode="change"&gt;&lt;memberOf key="att.global"/&gt;
-      &lt;memberOf key="att.typed"/&gt;
-      &lt;memberOf key="att.damaged"/&gt;&lt;/classes&gt;
-   &lt;content&gt;&lt;!--&lt;rng:zeroOrMore&gt;&lt;rng:choice&gt;&lt;rng:text /&gt;
-     &lt;rng:ref name="model.phrase" /&gt;&lt;rng:ref name="decoNote" /&gt;
-     &lt;rng:ref name="condition" /&gt;&lt;/rng:choice&gt;
-  &lt;/rng:zeroOrMore&gt;--&gt;&lt;/content&gt;&lt;/elementSpec&gt;
+               <pre>&lt;elementSpec ident="bindingNote" module="msdescription" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+   &lt;desc&gt;allows structured description of binding characteristics in addition
+       to decoration and condition&lt;/desc&gt;
+   &lt;classes mode="change"&gt;
+       &lt;memberOf key="att.global" mode="add"/&gt;
+       &lt;memberOf key="att.typed" mode="add"/&gt;
+       &lt;memberOf key="att.damaged" mode="add"/&gt;
+   &lt;/classes&gt;
+   &lt;content&gt;
+       &lt;alternate minOccurs="1" maxOccurs="unbounded"&gt;
+           &lt;textNode/&gt;
+           &lt;macroRef key="model.phrase"/&gt;
+           &lt;elementRef key="decoNote"/&gt;
+           &lt;elementRef key="condition"/&gt;
+       &lt;/alternate&gt;
+   &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;countermark&gt;</code></h3>
-               <pre>&lt;elementSpec ident="countermark" module="msdescription" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
-   &lt;desc&gt;Called also counter watermark. Allows a separate description of
-      countermark as part pf watermark element. &lt;/desc&gt;
-   &lt;classes mode="change"&gt;
-      &lt;memberOf key="att.global"/&gt;&lt;memberOf key="att.typed"/&gt;
-      &lt;memberOf key="att.damaged"/&gt;&lt;/classes&gt;
-   &lt;content&gt;&lt;!--
-  &lt;rng:zeroOrMore&gt;&lt;rng:choice&gt;&lt;rng:text /&gt;
-     &lt;rng:ref name="model.phrase" /&gt;&lt;rng:ref name="motif" /&gt;
-  &lt;/rng:choice&gt;&lt;/rng:zeroOrMore&gt;
-  --&gt;
-   &lt;/content&gt;&lt;/elementSpec&gt;
+               <pre>&lt;elementSpec ident="countermark" module="msdescription" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+   &lt;desc&gt;contains information about a second, subsidiary watermark&lt;/desc&gt;
+   &lt;content&gt;
+       &lt;alternate minOccurs="0" maxOccurs="unbounded"&gt;
+           &lt;textNode/&gt;
+           &lt;classRef key="model.phrase"/&gt;
+           &lt;elementRef key="motif"/&gt;
+       &lt;/alternate&gt;
+   &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;crypto&gt;</code></h3>
-               <pre>&lt;elementSpec ident="crypto" ns="http://www.ilit.bas.bg/reper-                  torium/ns/3.0" prefix="re" mode="add"&gt;
-   &lt;desc&gt;Provides opportunity to describe the cryptographical system(s) in the
-      MS&lt;/desc&gt;
-   &lt;classes mode="change"&gt;&lt;memberOf key="att.global"/&gt;
-      &lt;memberOf key="att.typed"/&gt;&lt;/classes&gt;&lt;content&gt;
+               <pre>&lt;elementSpec ident="crypto" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+   &lt;desc&gt;Provides opportunity to describe the cryptographical system(s) 
+      in the MS&lt;/desc&gt;
+   &lt;classes mode="change"&gt;
+      &lt;memberOf key="att.global"/&gt;
+      &lt;memberOf key="att.typed"/&gt;
+   &lt;/classes&gt;
+   &lt;content&gt;
       &lt;macroRef key="macro.paraContent"/&gt;
-   &lt;/content&gt;&lt;/elementSpec&gt;
+   &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;grammar&gt;</code></h3>
-               <pre>&lt;elementSpec ident="grammar" module="msdescription" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+               <pre>&lt;elementSpec ident="grammar" module="msdescription" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
    &lt;desc&gt;Describes grammatical features of the scribe’s language&lt;/desc&gt;
-   &lt;classes mode="replace"&gt;&lt;memberOf key="att.global"/&gt;
+   &lt;classes mode="replace"&gt;
+      &lt;memberOf key="att.global"/&gt;
    &lt;/classes&gt;
    &lt;content&gt;
-      &lt;macroRef key="macro.paraContent"/&gt;&lt;/content&gt;
+      &lt;macroRef key="macro.paraContent"/&gt;
+   &lt;/content&gt;
 &lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;gregoryRule&gt;</code></h3>
-               <pre>&lt;elementSpec ident="gregoryRule" module="msdescription" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+               <pre>&lt;elementSpec ident="gregoryRule" module="msdescription" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
    &lt;desc&gt;Description of order of parchment’s leaves in the quires in terms of
-      hair- or flesh-side arrangement. &lt;/desc&gt;
-   &lt;classes mode="change"&gt;&lt;memberOf key="att.global"/&gt;
+      hair- or flesh-side arrangement.&lt;/desc&gt;
+   &lt;classes mode="change"&gt;
+      &lt;memberOf key="att.global"/&gt;
       &lt;memberOf key="att.typed"/&gt;
-   &lt;/classes&gt;&lt;content&gt;&lt;macroRef key="macro.phraseSeq"/&gt;
-   &lt;/content&gt;&lt;/elementSpec&gt;
+   &lt;/classes&gt;
+   &lt;content&gt;
+      &lt;macroRef key="macro.phraseSeq"/&gt;
+   &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;ink&gt;</code></h3>
-               <pre>&lt;elementSpec ident="ink" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+               <pre>&lt;elementSpec ident="ink" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
    &lt;desc&gt;Description of ink(s)&lt;/desc&gt;
-   &lt;classes mode="change"&gt;&lt;memberOf key="att.global"/&gt;
-      &lt;memberOf key="att.measurement"/&gt;&lt;/classes&gt;
-   &lt;content&gt;&lt;macroRef key="macro.phraseSeq"/&gt;&lt;/content&gt;
+   &lt;classes mode="change"&gt;
+      &lt;memberOf key="att.global"/&gt;
+      &lt;memberOf key="att.measurement"/&gt;
+   &lt;/classes&gt;
+   &lt;content&gt;
+      &lt;macroRef key="macro.phraseSeq"/&gt;
+   &lt;/content&gt;
 &lt;/elementSpec&gt;
 </pre>
             </div>
 
             <div>
                <h3>Element <code>&lt;lexis&gt;</code></h3>
-               <pre>&lt;elementSpec ident="lexis" module="msdescription" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
-   &lt;desc&gt;Description lexical features. &lt;/desc&gt;
-   &lt;classes mode="replace"&gt;&lt;memberOf key="att.global"/&gt;
+               <pre>&lt;elementSpec ident="lexis" module="msdescription" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+   &lt;desc&gt;Description lexical features.&lt;/desc&gt;
+   &lt;classes mode="replace"&gt;
+      &lt;memberOf key="att.global"/&gt;
    &lt;/classes&gt;
-   &lt;content&gt;&lt;macroRef key="macro.specialPara"/&gt;
-   &lt;/content&gt;&lt;/elementSpec&gt;
+   &lt;content&gt;
+      &lt;macroRef key="macro.specialPara"/&gt;
+   &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;motif&gt;</code></h3>
-               <pre>&lt;elementSpec ident="motif" module="msdescription" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
-   &lt;desc&gt;Description of water- or countermark motif. &lt;/desc&gt;
-   &lt;classes mode="change"&gt;&lt;memberOf key="att.global"/&gt;
-      &lt;memberOf key="att.typed"/&gt;&lt;/classes&gt;
+               <pre>&lt;elementSpec ident="motif" module="msdescription" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+   &lt;desc&gt;Description of water- or countermark motif.&lt;/desc&gt;
+   &lt;classes mode="change"&gt;
+      &lt;memberOf key="att.global"/&gt;
+      &lt;memberOf key="att.typed"/&gt;
+   &lt;/classes&gt;
    &lt;content&gt;
-      &lt;!--
-  &lt;rng:zeroOrMore&gt;&lt;rng:choice&gt;&lt;rng:text /&gt;&lt;rng:ref
-     name="model.phrase" /&gt;&lt;rng:ref name="motif" /&gt;
-  &lt;/rng:choice&gt;&lt;/rng:zeroOrMore&gt;
-  --&gt;
-   &lt;/content&gt;&lt;/elementSpec&gt;
+      &lt;alternate minOccurs="0" maxOccurs="unbounded"&gt;
+         &lt;textNode/&gt;
+         &lt;classRef key="model.phrase"/&gt;
+         &lt;elementRef key="motif"/&gt;
+      &lt;/alternate&gt;
+   &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;orthNote&gt;</code></h3>
-               <pre>&lt;elementSpec ident="orthNote" module="msdescription" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+               <pre>&lt;elementSpec ident="orthNote" module="msdescription" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
    &lt;desc&gt;Description of individual rules for letters or other signs usage in the
-      manuscript. &lt;/desc&gt;
-   &lt;classes mode="replace"&gt;&lt;memberOf key="att.global"/&gt;&lt;memberOf key="att.typed"/&gt;&lt;memberOf key="att.naming"/&gt;
-      &lt;memberOf key="att.scoping"/&gt;&lt;/classes&gt;
-   &lt;content&gt;&lt;macroRef key="macro.specialPara"/&gt;
-   &lt;/content&gt;&lt;/elementSpec&gt;
+      manuscript.&lt;/desc&gt;
+   &lt;classes mode="replace"&gt;
+      &lt;memberOf key="att.global"/&gt;
+      &lt;memberOf key="att.typed"/&gt;
+      &lt;memberOf key="att.naming"/&gt;
+      &lt;memberOf key="att.scoping"/&gt;
+   &lt;/classes&gt;
+   &lt;content&gt;
+      &lt;macroRef key="macro.specialPara"/&gt;
+   &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;pagination&gt;</code></h3>
-               <pre>&lt;elementSpec ident="pagination" module="msdescription" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+               <pre>&lt;elementSpec ident="pagination" module="msdescription" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
    &lt;desc&gt;Describes pagination in some manuscript as opposite to the description of
       foliation. Pagination is used in later or Early Modern manuscripts.&lt;/desc&gt;
    &lt;classes mode="change"&gt;
       &lt;memberOf key="att.global"/&gt;
-      &lt;memberOf key="att.scoping"/&gt;&lt;/classes&gt;&lt;content&gt;
+      &lt;memberOf key="att.scoping"/&gt;
+   &lt;/classes&gt;
+   &lt;content&gt;
       &lt;macroRef key="macro.specialPara"/&gt;
-   &lt;/content&gt;&lt;/elementSpec&gt;
+   &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
+               
                <h3>Element <code>&lt;palaeoCharact&gt;</code></h3>
-               <pre> &lt;elementSpec ident="palaeoCharact" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+               <pre> &lt;elementSpec ident="palaeoCharact" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
     &lt;desc&gt;Palaeograpical characteristics&lt;/desc&gt;
-    &lt;classes mode="change"&gt;&lt;memberOf key="att.global"/&gt;
+    &lt;classes mode="change"&gt;
+       &lt;memberOf key="att.global"/&gt;
        &lt;memberOf key="att.typed"/&gt;
-       &lt;memberOf key="att.handfeatures"/&gt;&lt;/classes&gt;
+       &lt;memberOf key="att.handfeatures"/&gt;
+    &lt;/classes&gt;
     &lt;!--
 &lt;content&gt;
    &lt;rng:choice&gt;&lt;rng:oneOrMore&gt;
@@ -4483,7 +4548,9 @@ Radoslavova
             </div>
             <div>
                <h3>Element <code>&lt;palaeoNote&gt;</code></h3>
-               <pre>&lt;elementSpec ident="palaeoNote" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+               
+               <pre>&lt;elementSpec ident="palaeoNote" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
    &lt;desc&gt;Palaeographical description of some letter or sign&lt;/desc&gt;
    &lt;classes mode="change"&gt;
       &lt;memberOf key="att.global"/&gt;
@@ -4491,148 +4558,182 @@ Radoslavova
       &lt;memberOf key="att.handFeatures"/&gt;
    &lt;/classes&gt;&lt;content&gt;
       &lt;macroRef key="macro.phraseSeq"/&gt;
-   &lt;/content&gt;&lt;/elementSpec&gt;
+   &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;pricking&gt;</code></h3>
-               <pre>&lt;elementSpec ident="pricking" module="msdescription" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+               <pre>&lt;elementSpec ident="pricking" module="msdescription" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
    &lt;desc&gt;Description of pricking appearance and techniques applied&lt;/desc&gt;
-   &lt;classes mode="change"&gt;&lt;memberOf key="att.global"/&gt;
-      &lt;memberOf key="att.typed"/&gt;&lt;/classes&gt;
-   &lt;content&gt;&lt;macroRef key="macro.phraseSeq"/&gt;
+   &lt;classes mode="change"&gt;
+      &lt;memberOf key="att.global"/&gt;
+      &lt;memberOf key="att.typed"/&gt;
+   &lt;/classes&gt;
+   &lt;content&gt;
+      &lt;macroRef key="macro.phraseSeq"/&gt;
    &lt;/content&gt;
 &lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;ruling&gt;</code></h3>
-               <pre>&lt;elementSpec ident="ruling" module="msdescription" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
-   &lt;desc&gt;Ruling types and techniques goes here. &lt;/desc&gt;
-   &lt;classes mode="change"&gt;&lt;memberOf key="att.global"/&gt;
-      &lt;memberOf key="att.typed"/&gt;&lt;/classes&gt;
-   &lt;content&gt;&lt;macroRef key="macro.phraseSeq"/&gt;
-   &lt;/content&gt;&lt;/elementSpec&gt;
+               <pre>&lt;elementSpec ident="ruling" module="msdescription" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+   &lt;desc&gt;Ruling types and techniques go here.&lt;/desc&gt;
+   &lt;classes mode="change"&gt;
+      &lt;memberOf key="att.global"/&gt;
+      &lt;memberOf key="att.typed"/&gt;
+   &lt;/classes&gt;
+   &lt;content&gt;
+      &lt;macroRef key="macro.phraseSeq"/&gt;
+   &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;quire&gt;</code></h3>
-               <pre>&lt;elementSpec ident="quire" module="msdescription" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+               <pre>&lt;elementSpec ident="quire" module="msdescription" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
    &lt;desc&gt;Description of a separate quire&lt;/desc&gt;
-   &lt;classes mode="change"&gt;&lt;memberOf key="att.global"/&gt;
-      &lt;memberOf key="att.typed"/&gt;&lt;/classes&gt;
-   &lt;!--
-  &lt;content&gt;
-     &lt;rng:zeroOrMore&gt;&lt;rng:ref name="p" /&gt;&lt;/rng:zeroOrMore&gt;
-     &lt;rng:zeroOrMore&gt;
-        &lt;rng:choice&gt;&lt;rng:ref name="extent" /&gt;&lt;rng:ref
-           name="signatures" /&gt;&lt;rng:ref name="catchwords" /&gt;
-           &lt;rng:ref name="gregoryRule" /&gt;&lt;rng:ref name="ruling" /&gt;
-           &lt;rng:ref name="pricking" /&gt;&lt;/rng:choice&gt;
-     &lt;/rng:zeroOrMore&gt;&lt;/content&gt;
-  &lt;attList&gt;&lt;attDef ident="status"&gt;
-     &lt;desc&gt;describes the status of the quire or folia: original,
-        added, missing&lt;/desc&gt;
-     &lt;datatype&gt;&lt;rng:text /&gt;
-     &lt;/datatype&gt;&lt;/attDef&gt;&lt;/attList&gt;
-     --&gt;
+   &lt;classes mode="change"&gt;
+      &lt;memberOf key="att.global"/&gt;
+      &lt;memberOf key="att.typed"/&gt;
+   &lt;/classes&gt;
+   &lt;content&gt;
+      &lt;alternate&gt;
+           &lt;classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/&gt;
+           &lt;sequence&gt;
+               &lt;elementRef key="summary" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="locus" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="locusGrp" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="extent" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="formula" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="signatures" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="catchwords" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="gregoryRule" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="ruling" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="pricking" minOccurs="0" maxOccurs="1"/&gt;
+           &lt;/sequence&gt;
+       &lt;/alternate&gt;
+   &lt;/content&gt;
 &lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;ruling&gt;</code></h3>
-               <pre>&lt;elementSpec ident="ruling" module="msdescription" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
-   &lt;desc&gt;Ruling types and techniques goes here. &lt;/desc&gt;
-   &lt;classes mode="change"&gt;&lt;memberOf key="att.global"/&gt;
-      &lt;memberOf key="att.typed"/&gt;&lt;/classes&gt;
-   &lt;content&gt;&lt;macroRef key="macro.phraseSeq"/&gt;
-   &lt;/content&gt;&lt;/elementSpec&gt;
+               <pre>&lt;elementSpec ident="ruling" module="msdescription" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+   &lt;desc&gt;Ruling types and techniques go here.&lt;/desc&gt;
+   &lt;classes mode="change"&gt;
+      &lt;memberOf key="att.global"/&gt;
+      &lt;memberOf key="att.typed"/&gt;
+   &lt;/classes&gt;
+   &lt;content&gt;
+      &lt;macroRef key="macro.phraseSeq"/&gt;
+   &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;sampleText&gt;</code></h3>
-               <pre>&lt;elementSpec ident="sampleText" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+               <pre>&lt;elementSpec ident="sampleText" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
    &lt;desc&gt;Text sample including manuscript heading, incipit and/or explicit of the
       original text&lt;/desc&gt;
-   &lt;classes mode="change"&gt;&lt;memberOf key="att.divLike"/&gt;
-      &lt;memberOf key="att.declaring"/&gt;&lt;memberOf key="att.global"/&gt;&lt;memberOf key="att.typed"/&gt;&lt;/classes&gt;
-   &lt;!--
-  &lt;content xmlns="http://www.tei-c.org/ns/Examples"&gt;
-     &lt;rng:zeroOrMore&gt;&lt;rng:choice&gt;&lt;rng:ref name="head" /&gt;&lt;rng:ref
-        name="rubric" /&gt;&lt;rng:ref name="incipit" /&gt;&lt;/rng:choice&gt;
-     &lt;/rng:zeroOrMore&gt;
-     &lt;rng:zeroOrMore&gt;&lt;rng:choice&gt;&lt;rng:ref name="model.pLike"
-     /&gt;&lt;rng:ref name="div" /&gt;&lt;/rng:choice&gt;&lt;/rng:zeroOrMore&gt;
-     &lt;rng:zeroOrMore&gt;
-        &lt;rng:choice&gt;&lt;rng:ref name="explicit" /&gt;&lt;rng:ref
-           name="finalRubric" /&gt;&lt;/rng:choice&gt;
-     &lt;/rng:zeroOrMore&gt;&lt;/content&gt;
-  &lt;attList&gt;&lt;attDef ident="script" usage="opt"&gt;
-     &lt;datatype&gt;&lt;rng:text /&gt;&lt;/datatype&gt;&lt;/attDef&gt;&lt;/attList&gt;
-     --&gt;
+   &lt;classes mode="change"&gt;
+      &lt;memberOf key="att.divLike"/&gt;
+      &lt;memberOf key="att.declaring"/&gt;
+      &lt;memberOf key="att.global"/&gt;
+      &lt;memberOf key="att.typed"/&gt;
+   &lt;/classes&gt;
+   &lt;content&gt;
+       &lt;sequence minOccurs="0" maxOccurs="1"&gt;
+           &lt;alternate minOccurs="0" maxOccurs="unbounded"&gt;
+               &lt;elementRef key="head"/&gt;
+               &lt;elementRef key="rubric"/&gt;
+               &lt;elementRef key="incipit"/&gt;
+           &lt;/alternate&gt;
+           &lt;alternate minOccurs="0" maxOccurs="unbounded"&gt;
+               &lt;classRef key="model.pLike"/&gt;
+               &lt;elementRef key="div"/&gt;
+           &lt;/alternate&gt;
+           &lt;sequence minOccurs="0" maxOccurs="1"&gt;
+               &lt;elementRef key="explicit" minOccurs="0" maxOccurs="unbounded"/&gt;
+               &lt;elementRef key="finalRubric" minOccurs="0" maxOccurs="unbounded"/&gt;
+           &lt;/sequence&gt;
+       &lt;/sequence&gt;
+   &lt;/content&gt;
 &lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;scribe&gt;</code></h3>
-               <pre>&lt;elementSpec ident="scribe" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+               <pre>&lt;elementSpec ident="scribe" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
    &lt;desc&gt;Description of palaeography, orthography and language of particular
       scribe&lt;/desc&gt;
-   &lt;classes mode="change"&gt;&lt;memberOf key="att.global"/&gt;
-   &lt;/classes&gt;&lt;content&gt;
-      &lt;!--
-  &lt;rng:optional&gt; &lt;rng:choice&gt;&lt;rng:ref name="locus" /&gt;
-     &lt;rng:ref name="locusGrp" /&gt;&lt;/rng:choice&gt; &lt;/rng:optional&gt;
-  &lt;rng:optional&gt;&lt;rng:ref name="model.nameLike.agent" /&gt;
-  &lt;/rng:optional&gt;
-  &lt;rng:optional&gt;&lt;rng:ref name="palaeoCharact" /&gt;
-  &lt;/rng:optional&gt;&lt;rng:zeroOrMore&gt; &lt;rng:ref
-     name="scribeLang"/&gt; &lt;/rng:zeroOrMore&gt;&lt;rng:optional&gt;
-        &lt;rng:ref name="note"/&gt;&lt;/rng:optional&gt;
-  &lt;rng:zeroOrMore&gt;&lt;rng:ref name="respStmt" /&gt;
-  &lt;/rng:zeroOrMore&gt;
-  --&gt;
-   &lt;/content&gt;&lt;/elementSpec&gt;
+   &lt;classes mode="change"&gt;
+      &lt;memberOf key="att.global"/&gt;
+   &lt;/classes&gt;
+   &lt;content&gt;
+   &lt;alternate minOccurs="0" maxOccurs="1"&gt;
+      &lt;elementRef key="locus"/&gt;
+      &lt;elementRef key="locusGrp"/&gt;
+   &lt;/alternate&gt;
+   &lt;classRef key="model.nameLike.agent" minOccurs="0" maxOccurs="1"/&gt;
+   &lt;elementRef key="scriptDesc" minOccurs="0" maxOccurs="1"/&gt;
+   &lt;elementRef key="scribeLang" minOccurs="0" maxOccurs="1"/&gt;
+   &lt;elementRef key="bibl" minOccurs="0" maxOccurs="unbounded"/&gt;
+   &lt;elementRef key="note" minOccurs="0" maxOccurs="unbounded"/&gt;
+   &lt;elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/&gt;
+   &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;scribeDesc&gt;</code></h3>
-               <pre>&lt;elementSpec ident="scribeDesc" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+               <pre>&lt;elementSpec ident="scribeDesc" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
    &lt;desc&gt;Repertorium model description of various scribes: palaeography,
-      orthography and language. &lt;/desc&gt;
-   &lt;classes mode="change"&gt;&lt;memberOf key="att.global"/&gt;
+      orthography and language.&lt;/desc&gt;
+   &lt;classes mode="change"&gt;
+      &lt;memberOf key="att.global"/&gt;
    &lt;/classes&gt;
    &lt;content&gt;
-      &lt;!--
-  &lt;rng:choice&gt;&lt;rng:oneOrMore&gt;&lt;rng:ref name="model.pLike" /&gt;&lt;/
-     rng:oneOrMore&gt;
-     &lt;rng:group&gt;&lt;rng:optional&gt;&lt;rng:ref name="summary" /&gt;
-     &lt;/rng:optional&gt;
-        &lt;rng:oneOrMore&gt;&lt;rng:ref name="scribe" /&gt;&lt;/rng:oneOrMore&gt;
-     &lt;/rng:group&gt;&lt;/rng:choice&gt;
-     --&gt;
-   &lt;/content&gt;&lt;/elementSpec&gt;
+       &lt;alternate minOccurs="0" maxOccurs="1"&gt;
+           &lt;classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/&gt;
+           &lt;sequence&gt;
+               &lt;elementRef key="summary" minOccurs="0" maxOccurs="1"/&gt;
+               &lt;elementRef key="scribe" minOccurs="0" maxOccurs="unbounded"/&gt;
+           &lt;/sequence&gt;
+       &lt;/alternate&gt;
+   &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
             </div>
             <div>
                <h3>Element <code>&lt;scribeLang&gt;</code></h3>
-               <pre>&lt;elementSpec ident="scribeLang" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
-   &lt;desc&gt;The language of particular scribe. &lt;/desc&gt;
-   &lt;classes mode="change"&gt;&lt;memberOf key="att.global"/&gt;
-      &lt;memberOf key="att.typed"/&gt;&lt;/classes&gt;
-   &lt;content&gt;
-      &lt;!--
-  &lt;rng:choice&gt;
-  &lt;rng:oneOrMore&gt;&lt;rng:ref name="model.pLike" /&gt;
-  &lt;/rng:oneOrMore&gt;
-  &lt;rng:group&gt;&lt;rng:optional&gt;
-     &lt;rng:ref name="summary" /&gt;&lt;/rng:optional&gt;&lt;rng:optional&gt;
-        &lt;rng:ref name="orthography" /&gt;&lt;/rng:optional&gt;
-     &lt;rng:optional&gt;&lt;rng:ref name="grammar" /&gt;&lt;/rng:optional&gt;
-     &lt;rng:optional&gt;&lt;rng:ref name="lexis" /&gt;&lt;/rng:optional&gt;
-  &lt;/rng:group&gt;&lt;/rng:choice&gt;
-  --&gt;
-   &lt;/content&gt;&lt;/elementSpec&gt;
+               <pre>&lt;elementSpec ident="scribeLang" 
+  ns="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" mode="add"&gt;
+   &lt;desc&gt;The language of particular scribe.&lt;/desc&gt;
+   &lt;classes mode="change"&gt;
+      &lt;memberOf key="att.global"/&gt;
+      &lt;memberOf key="att.typed"/&gt;
+   &lt;/classes&gt;
+      &lt;content&gt;
+          &lt;alternate&gt;
+              &lt;classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"/&gt;
+              &lt;sequence&gt;
+                  &lt;elementRef key="summary" minOccurs="0" maxOccurs="1"/&gt;
+                  &lt;elementRef key="orthography" minOccurs="0" maxOccurs="1"/&gt;
+                  &lt;elementRef key="grammar" minOccurs="0" maxOccurs="1"/&gt;
+                  &lt;elementRef key="lexis" minOccurs="0" maxOccurs="1"/&gt;
+              &lt;/sequence&gt;
+          &lt;/alternate&gt;
+      &lt;/content&gt;
+&lt;/elementSpec&gt;
 </pre>
             </div>
          </div>
