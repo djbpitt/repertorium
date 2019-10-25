@@ -2467,11 +2467,12 @@
             <div>
                <head>A summary of the texts</head>
                <p>A summary should contain a brief phrase characterizing in some way the collection
-                  of texts in the manuscript, e.g.:
+                  of texts in the manuscript, as in this example from the electronic description of
+                  BL Add. MSS 12069 by Dilyana Radoslavova:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <summary>Contains DICTIONARIVM SLAVONICOLATINUM OPERI AMBROSII CALEPINI Servata
-                     Verborum integra. SERIE CONFORMATUM MOSCHOVIAE. Anno 1695.</summary> From the
-                  electronic description of BL Add. MSS 12069 by Dilyana Radoslavova</egXML></p>
+                     Verborum integra. SERIE CONFORMATUM MOSCHOVIAE. Anno 1695.</summary>
+                  </egXML></p>
                <p>This summary could also contain data about the quantity of the text in the
                   manuscript, e.g.:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -2539,9 +2540,11 @@
                   attribution of the whole codex and/or to provide bibliographic data:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <note>Sprostranov was the first to attribute the whole collection to the single
-                     compiler <bibl>
+                     compiler 
+                     <bibl>
                         <ref target="../bibliography/scyr.xml#Sprostanov1902">Sprostranov 
-                           1902: 52–56</ref></bibl></note>
+                           1902: 52–56</ref>
+                     </bibl></note>
                </egXML></p>
             </div>
             <div>
@@ -2641,7 +2644,9 @@
                      <filiation type="source" subtype="Greek"><bibl>Migne, PG 10, col.
                            952–53</bibl></filiation>
                      <filiation type="translation"><num>1?</num></filiation>
-                     <filiation type="protograph">Bulgarian</filiation> … </msItemStruct>
+                     <filiation type="protograph">Bulgarian</filiation>
+                     … 
+                  </msItemStruct>
                </egXML></p>
                <p>If the title were just transferred automatically from the original text of the
                   manuscript, the text would read “About the 12 Apostles. Where each of them
@@ -2705,8 +2710,7 @@
                   particular text.</p>
                <p>Consider the example:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <textLang>Only in this text we could find the older forms of the stemmatic
-                     Aoristus … </textLang>
+                  <textLang>Only in this text we could find the older forms of the stemmatic Aoristus … </textLang>
                </egXML></p>
                <p>This observation could lead to closer comparison of this text with other parts of
                   the contents, and may help determine whether its origin is different from
@@ -2731,7 +2735,9 @@
                   e.g., the number of the translation and the place. A question mark can be used to
                   indicate uncertainty, e.g.:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <filiation type="translation"><num>1?</num></filiation>
+                  <filiation type="translation">
+                     <num>1?</num>
+                  </filiation>
                </egXML></p>
             </div>
             <div>
@@ -2746,8 +2752,11 @@
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <filiation type="litRedaction">The manuscript uses archaic lexis and is considered
                      to belong to the archaic group of Apostoloi representing the Cyrillo-Methodian
-                     translation. See <bibl><ref>Воскресенский 1879: 111-
-                     112</ref></bibl></filiation></egXML></p>
+                     translation. See <bibl>
+                        <ref>Воскресенский 1879: 111–12</ref>
+                     </bibl>
+                  </filiation>
+                  </egXML></p>
                <p>A combination of several <gi>filiation</gi> elements with different values of
                      <att>type</att> can specify the exact place of a text copy, as in this example,
                   from the electronic description of MS Odessa, State Library 1/112 by Anisava
@@ -2775,14 +2784,18 @@
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msItemStruct xml:id="ACD1" type="translation">
                      <locus n="3">109r-110r</locus>
-                     <title>Calendologion</title> …</msItemStruct>
+                     <title>Calendologion</title>
+                     …
+                  </msItemStruct>
                </egXML></p>
                <p>The same text in the description of Slav Dujčev 17 has the same number in
                      <gi>locus</gi> but comes in the second place:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msItemStruct xml:id="ACD2" type="translation">
                      <locus n="3">3v-6v</locus>
-                     <title>Calendologion</title> … </msItemStruct>
+                     <title>Calendologion</title>
+                     … 
+                  </msItemStruct>
                </egXML></p>
                <p>One text is missing in MS NBKM 309 but it is present in Dujčev 17, where it bears
                   a designation number 2 (this example is from the electronic descriptions of MSS
@@ -2792,7 +2805,8 @@
                      <locus n="2">2r-3v</locus>
                      <title xml:lang="bg">Thunder book according to ascending and descending
                         moon</title>
-                     … </msItemStruct>
+                     … 
+                  </msItemStruct>
                   </egXML></p>
                <p>In both manuscripts the first item from the reconstructed cycle is missing, and
                   therefore an element <gi>locus</gi> with <code>n="1"</code> is absent as well.</p>
@@ -2843,8 +2857,10 @@
                         скончани мира. и слово о изгнани адамовѣ. и ѱалми избранїи. и слово о
                         чс҃тнѣмъ дрѣвѣ. и кꙋпї ю пет҆кѡ велковъ. да работи за еговꙋ дш҃ꙋ и за
                         родители его. велка и мт҃ри его не(д)ли. и приложи ю оу ст҃го арх҃аггла. оу
-                        махала сръбска ꙋ етрополе, бъ҃ да прости. </colophon>
-                  </msItemStruct> … <msItemStruct xml:id="ACD10" type="original" class="colophon">
+                        махала сръбска ꙋ етрополе, бъ҃ да прости.</colophon>
+                  </msItemStruct>
+                  … 
+                  <msItemStruct xml:id="ACD10" type="original" class="colophon">
                      <locus>f. 203r</locus>
                      <author>Daniil of Etropole</author>
                      <note><date evidence="internal">1640</date></note>
@@ -2869,7 +2885,9 @@
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <colophon>
                      <seg type="protocollo">+ Изволенїемъ оц҃а и поспѣшенїе(м) сн҄а и съвръшенїемь
-                        ст҃го дх҃а аминъ</seg> …</colophon>
+                        ст҃го дх҃а аминъ</seg>
+                     …
+                  </colophon>
                </egXML></p>
             </div>
             <div>
@@ -2984,8 +3002,7 @@
                      <sampleText xml:lang="cu">
                         <head>Начело ес҃ствословнику имѣѥ изьѡбличенїа скотѡмь животныимь</head>
                         <explicit>Тако вь неприлежанїи ходеще ниже мл҃твою. ниже бдѣнїемь
-                           вьспоминають чеда своꙗ. ѡбнемагающе б҃жїю помощь о грѣсѣх ихь.
-                        </explicit>
+                           вьспоминають чеда своꙗ. ѡбнемагающе б҃жїю помощь о грѣсѣх ихь.</explicit>
                      </sampleText>
                      <msItemStruct xml:id="ACD15.1">
                         <title xml:lang="bg">За лъва</title>
@@ -3061,7 +3078,9 @@
                               Rochefort</persName>, alias <persName>Dimitrij Adol’fovič</persName>,
                            indicating his relationship to the Oznobišin family and saying what the
                            MS is.</p>
-                     </accMat> … </history>
+                     </accMat>
+                     … 
+                  </history>
                </egXML></p>
             </div>
             <div>
@@ -3272,8 +3291,8 @@
                         <msContents> … </msContents>
                         <history>
                            <origin>
-                              <origDate/>
-                              <origPlace/>
+                              <origDate> … </origDate>
+                              <origPlace> … </origPlace>
                            </origin>
                         </history>
                         <additional> … </additional>
@@ -3286,10 +3305,10 @@
                         <msContents> … </msContents>
                         <history>
                            <origin>
-                              <origDate/>
-                              <origPlace/>
+                              <origDate> … </origDate>
+                              <origPlace> … </origPlace>
                            </origin>
-                           <additional/>
+                           <additional> … </additional>
                         </history>
                      </msPart>
                   </msDesc>
@@ -3310,8 +3329,8 @@
                   sequence of parts. For example:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msDesc>
-                     <msIdentifier> … Here comes the common information for all parts, e.g.,
-                        country, repository, shelfmark, etc. </msIdentifier>
+                     <msIdentifier>Information for all parts, e.g., 
+                        country, repository, shelfmark, etc.</msIdentifier>
                      <physDesc>
                         <objectDesc form="codex">
                            <supportDesc material="parchment">
@@ -3327,8 +3346,8 @@
                         <msContents> … </msContents>
                         <history>
                            <origin>
-                              <origDate/>
-                              <origPlace/>
+                              <origDate> … </origDate>
+                              <origPlace> … </origPlace>
                            </origin>
                         </history>
                         <additional> … </additional>
@@ -3340,10 +3359,10 @@
                         <msContents> … </msContents>
                         <history>
                            <origin>
-                              <origDate/>
-                              <origPlace/>
+                              <origDate> … </origDate>
+                              <origPlace> … </origPlace>
                            </origin>
-                           <additional/>
+                           <additional> … </additional>
                         </history>
                      </msPart>
                   </msDesc>
@@ -3369,10 +3388,12 @@
                      <msContents> … </msContents>
                      <history>
                         <origin>
-                           <origDate/>
-                           <origPlace/>
+                           <origDate> … </origDate>
+                           <origPlace> … </origPlace>
                         </origin>
-                     </history> … </msPart>
+                     </history>
+                     … 
+                  </msPart>
                </egXML></p>
                <p>Examples of such usage could include an additional note on a separate leaf, or
                   text from a later scribe.</p>
@@ -3418,12 +3439,12 @@
                            рая и кадие, та да не утече Еень паша. А той тръгне тогись на Бельградь
                            да отиде, а то дадохе аламанци, та превзехе Белиградь и опрехе до Нишь. И
                            Еень се запрѣхе на Нишь, а тие отидохе на Босне да прѣвьземать Босне. А
-                           Еень пусти мойске, та оплени Кипровець и изьгуби и пороби… </div>
+                           Еень пусти мойске, та оплени Кипровець и изьгуби и пороби.</div>
                      </msContents>
                      <additional>
                         <listBibl>
                            <bibl type="edition">Дринов 1882</bibl>
-                           <bibl type="edition">Цонев 1910: 447–448</bibl>
+                           <bibl type="edition">Цонев 1910: 447–48</bibl>
                         </listBibl>
                      </additional>
                   </msPart>
@@ -3437,7 +3458,9 @@
                   Glagolitic and Greek. The description begins with the heading:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msDesc>
-                     <head>Codex Sinaiticus, 12th c., the end-13 c., and 13 c.</head> … </msDesc>
+                     <head>Codex Sinaiticus, 12th c., the end-13 c., and 13 c.</head>
+                     … 
+                  </msDesc>
                </egXML></p>
                <p>In this case we have separate <gi>altIdentifier</gi> elements following
                   immediately after the head:
@@ -3485,11 +3508,13 @@
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <scribe n="E">
                      <locusGrp>
-                        <locus>Q.п.I.63, 1r-3r</locus>
-                        <locus>Sin. 34, 63v-71v</locus>
-                        <locus>Sin. 34, 77r-81r</locus>
+                        <locus>Q.п.I.63, 1r–3r</locus>
+                        <locus>Sin. 34, 63v–71v</locus>
+                        <locus>Sin. 34, 77r–81r</locus>
                      </locusGrp>
-                     <palaeoCharact script="cyrs"><p>Uncial</p></palaeoCharact>
+                     <palaeoCharact script="cyrs">
+                        <p>Uncial</p>
+                     </palaeoCharact>
                      <scribeLang>
                         <summary>Middle Bulgarian with Russian features</summary>
                         <orthography>
@@ -3511,7 +3536,9 @@
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msContents>
                      <filiation type="protograph">Middle Bulgarian</filiation>
-                     <filiation type="antigraph">Russian</filiation> … </msContents>
+                     <filiation type="antigraph">Russian</filiation>
+                     … 
+                  </msContents>
                </egXML></p>
                <p>Since the texts now are in different repositories, their sequence and locations
                   are especially important. Consider the following example:
@@ -3521,8 +3548,12 @@
                         <locus n="Sin.18N.1">Sin. 18/N, 1v–8v</locus>
                         <locus n="Gr.70.2">Gr. 70, 54r-98r (54, 59, 60, 57, 58, 55, 56,
                            61–98)</locus>
-                     </locusGrp> … <title xml:lang="la">Pandectae</title>
-                     <author xml:lang="la">Nicon monachus</author> … </msItemStruct>
+                     </locusGrp>
+                     … 
+                     <title xml:lang="la">Pandectae</title>
+                     <author xml:lang="la">Nicon monachus</author>
+                     … 
+                  </msItemStruct>
                </egXML></p>
                <p>The cataloguing information of the common part ends with data about the
                   manuscript’s origin, history and administrative information. Then begins a
@@ -3532,17 +3563,30 @@
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <msPart type="palimpsest" subtype="Glagolitic" corresp="QpI64">
                      <locus>ff. 1–8</locus>
-                     <physDesc><objectDesc><layoutDesc><layout>one
-                           column</layout></layoutDesc></objectDesc></physDesc>
-                     <scribeDesc><scribe><palaeoCharact script="glag">
+                     <physDesc>
+                        <objectDesc>
+                           <layoutDesc>
+                              <layout>one column</layout>
+                           </layoutDesc>
+                        </objectDesc>
+                     </physDesc>
+                     <scribeDesc>
+                        <scribe>
+                           <palaeoCharact script="glag">
                               <p>Round Glagolica</p>
-                           </palaeoCharact></scribe></scribeDesc>
+                           </palaeoCharact>
+                        </scribe>
+                     </scribeDesc>
                      <msContents>
                         <p>Office menaion or Troparia from Octoechos (1958)</p>
                      </msContents>
-                     <history><origin><origDate>11th c.</origDate></origin>
+                     <history>
+                        <origin>
+                           <origDate>11th c.</origDate>
+                        </origin>
                      </history>
-                  </msPart></egXML></p>
+                  </msPart>
+                  </egXML></p>
             </div>
          </div>
          <div>
@@ -3572,9 +3616,8 @@
                   <teiHeader>
                      <fileDesc>
                         <titleStmt>
-                           <title>Codex Suprasliensis: reading menaion for March,
-                           10th century</title>
-                           <author xml:id="MP">Maya Petrova- Taneva</author>
+                           <title>Codex Suprasliensis: reading menaion for March, 10th century</title>
+                           <author xml:id="MP">Maya Petrova-Taneva</author>
                            <editor xml:id="AM">Anisava Miltenova</editor>
                            <respStmt>
                               <name xml:id="AB">Andrej Bojadziev</name>
@@ -3636,8 +3679,10 @@
                   bibliographic reference could be:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <sourceDesc>
-                     <p><ref type="edition" target="../bibliography/zbib.xml#ZaimovJ_CapaldoM1982">
-                           Заимов, Капалдо 1982</ref></p>
+                     <p>
+                        <ref type="edition" target="../bibliography/zbib.xml#ZaimovJ_CapaldoM1982">
+                           Заимов, Капалдо 1982</ref>
+                     </p>
                   </sourceDesc>
                </egXML></p>
                <p>If, however, the description is to be accompanied by an edition of the manuscript
@@ -3646,9 +3691,13 @@
                   would constitute the body of the document:
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <TEI>
-                     <teiHeader> … <sourceDesc>
+                     <teiHeader>
+                        … 
+                        <sourceDesc>
                            <msDesc>…</msDesc>
-                        </sourceDesc> … </teiHeader>
+                        </sourceDesc>
+                        … 
+                     </teiHeader>
                      <text>
                         <body> … </body>
                      </text>

@@ -2145,10 +2145,10 @@
             <div>
                <h3 id="m7.3.">7.3. A summary of the texts</h3>
                <div class="p">A summary should contain a brief phrase characterizing in some way the collection
-                  of texts in the manuscript, e.g.:
+                  of texts in the manuscript, as in this example from the electronic description of
+                  BL Add. MSS 12069 by Dilyana Radoslavova:
                   <pre><span class="markup-highlight">&lt;summary&gt;</span>Contains DICTIONARIVM SLAVONICOLATINUM OPERI AMBROSII CALEPINI Servata
-    Verborum integra. SERIE CONFORMATUM MOSCHOVIAE. Anno 1695.<span class="markup-highlight">&lt;/summary&gt;</span> From the
- electronic description of BL Add. MSS 12069 by Dilyana Radoslavova
+    Verborum integra. SERIE CONFORMATUM MOSCHOVIAE. Anno 1695.<span class="markup-highlight">&lt;/summary&gt;</span>
 </pre></div>
                <div class="p">This summary could also contain data about the quantity of the text in the
                   manuscript, e.g.:
@@ -2212,9 +2212,11 @@
                   cases the element <code>&lt;note&gt;</code> could be useful to further refine the text
                   attribution of the whole codex and/or to provide bibliographic data:
                   <pre><span class="markup-highlight">&lt;note&gt;</span>Sprostranov was the first to attribute the whole collection to the single
-    compiler <span class="markup-highlight">&lt;bibl&gt;</span>
+    compiler 
+    <span class="markup-highlight">&lt;bibl&gt;</span>
        <span class="markup-highlight">&lt;ref target="../bibliography/scyr.xml#Sprostanov1902"&gt;</span>Sprostranov 
-          1902: 52–56<span class="markup-highlight">&lt;/ref&gt;</span><span class="markup-highlight">&lt;/bibl&gt;</span><span class="markup-highlight">&lt;/note&gt;</span>
+          1902: 52–56<span class="markup-highlight">&lt;/ref&gt;</span>
+    <span class="markup-highlight">&lt;/bibl&gt;</span><span class="markup-highlight">&lt;/note&gt;</span>
 </pre></div>
             </div>
             <div>
@@ -2302,7 +2304,9 @@
     <span class="markup-highlight">&lt;filiation type="source" subtype="Greek"&gt;</span><span class="markup-highlight">&lt;bibl&gt;</span>Migne, PG 10, col.
           952–53<span class="markup-highlight">&lt;/bibl&gt;</span><span class="markup-highlight">&lt;/filiation&gt;</span>
     <span class="markup-highlight">&lt;filiation type="translation"&gt;</span><span class="markup-highlight">&lt;num&gt;</span>1?<span class="markup-highlight">&lt;/num&gt;</span><span class="markup-highlight">&lt;/filiation&gt;</span>
-    <span class="markup-highlight">&lt;filiation type="protograph"&gt;</span>Bulgarian<span class="markup-highlight">&lt;/filiation&gt;</span> … <span class="markup-highlight">&lt;/msItemStruct&gt;</span>
+    <span class="markup-highlight">&lt;filiation type="protograph"&gt;</span>Bulgarian<span class="markup-highlight">&lt;/filiation&gt;</span>
+    … 
+<span class="markup-highlight">&lt;/msItemStruct&gt;</span>
 </pre></div>
                <div class="p">If the title were just transferred automatically from the original text of the
                   manuscript, the text would read “About the 12 Apostles. Where each of them
@@ -2363,8 +2367,7 @@
                   can provide material for the linguistic analysis of the textological features of a
                   particular text.</div>
                <div class="p">Consider the example:
-                  <pre><span class="markup-highlight">&lt;textLang&gt;</span>Only in this text we could find the older forms of the stemmatic
-    Aoristus … <span class="markup-highlight">&lt;/textLang&gt;</span>
+                  <pre><span class="markup-highlight">&lt;textLang&gt;</span>Only in this text we could find the older forms of the stemmatic Aoristus … <span class="markup-highlight">&lt;/textLang&gt;</span>
 </pre></div>
                <div class="p">This observation could lead to closer comparison of this text with other parts of
                   the contents, and may help determine whether its origin is different from
@@ -2387,7 +2390,9 @@
                      <q>translation</q> the encoder may enter information about the translation,
                   e.g., the number of the translation and the place. A question mark can be used to
                   indicate uncertainty, e.g.:
-                  <pre><span class="markup-highlight">&lt;filiation type="translation"&gt;</span><span class="markup-highlight">&lt;num&gt;</span>1?<span class="markup-highlight">&lt;/num&gt;</span><span class="markup-highlight">&lt;/filiation&gt;</span>
+                  <pre><span class="markup-highlight">&lt;filiation type="translation"&gt;</span>
+    <span class="markup-highlight">&lt;num&gt;</span>1?<span class="markup-highlight">&lt;/num&gt;</span>
+<span class="markup-highlight">&lt;/filiation&gt;</span>
 </pre></div>
             </div>
             <div>
@@ -2401,8 +2406,10 @@
                      Apostle</i> by Margaret Dimitrova, Andrej Bojadžiev, and Elisaveta Moussakova:
                   <pre><span class="markup-highlight">&lt;filiation type="litRedaction"&gt;</span>The manuscript uses archaic lexis and is considered
     to belong to the archaic group of Apostoloi representing the Cyrillo-Methodian
-    translation. See <span class="markup-highlight">&lt;bibl&gt;</span><span class="markup-highlight">&lt;ref&gt;</span>Воскресенский 1879: 111-
-    112<span class="markup-highlight">&lt;/ref&gt;</span><span class="markup-highlight">&lt;/bibl&gt;</span><span class="markup-highlight">&lt;/filiation&gt;</span>
+    translation. See <span class="markup-highlight">&lt;bibl&gt;</span>
+       <span class="markup-highlight">&lt;ref&gt;</span>Воскресенский 1879: 111–12<span class="markup-highlight">&lt;/ref&gt;</span>
+    <span class="markup-highlight">&lt;/bibl&gt;</span>
+<span class="markup-highlight">&lt;/filiation&gt;</span>
 </pre></div>
                <div class="p">A combination of several <code>&lt;filiation&gt;</code> elements with different values of
                      <code>@type</code> can specify the exact place of a text copy, as in this example,
@@ -2429,13 +2436,17 @@
                   NBKM 309 is:
                   <pre><span class="markup-highlight">&lt;msItemStruct xml:id="ACD1" type="translation"&gt;</span>
     <span class="markup-highlight">&lt;locus n="3"&gt;</span>109r-110r<span class="markup-highlight">&lt;/locus&gt;</span>
-    <span class="markup-highlight">&lt;title&gt;</span>Calendologion<span class="markup-highlight">&lt;/title&gt;</span> …<span class="markup-highlight">&lt;/msItemStruct&gt;</span>
+    <span class="markup-highlight">&lt;title&gt;</span>Calendologion<span class="markup-highlight">&lt;/title&gt;</span>
+    …
+<span class="markup-highlight">&lt;/msItemStruct&gt;</span>
 </pre></div>
                <div class="p">The same text in the description of Slav Dujčev 17 has the same number in
                      <code>&lt;locus&gt;</code> but comes in the second place:
                   <pre><span class="markup-highlight">&lt;msItemStruct xml:id="ACD2" type="translation"&gt;</span>
     <span class="markup-highlight">&lt;locus n="3"&gt;</span>3v-6v<span class="markup-highlight">&lt;/locus&gt;</span>
-    <span class="markup-highlight">&lt;title&gt;</span>Calendologion<span class="markup-highlight">&lt;/title&gt;</span> … <span class="markup-highlight">&lt;/msItemStruct&gt;</span>
+    <span class="markup-highlight">&lt;title&gt;</span>Calendologion<span class="markup-highlight">&lt;/title&gt;</span>
+    … 
+<span class="markup-highlight">&lt;/msItemStruct&gt;</span>
 </pre></div>
                <div class="p">One text is missing in MS NBKM 309 but it is present in Dujčev 17, where it bears
                   a designation number 2 (this example is from the electronic descriptions of MSS
@@ -2444,7 +2455,8 @@
     <span class="markup-highlight">&lt;locus n="2"&gt;</span>2r-3v<span class="markup-highlight">&lt;/locus&gt;</span>
     <span class="markup-highlight">&lt;title xml:lang="bg"&gt;</span>Thunder book according to ascending and descending
        moon<span class="markup-highlight">&lt;/title&gt;</span>
-    … <span class="markup-highlight">&lt;/msItemStruct&gt;</span>
+    … 
+<span class="markup-highlight">&lt;/msItemStruct&gt;</span>
 </pre></div>
                <div class="p">In both manuscripts the first item from the reconstructed cycle is missing, and
                   therefore an element <code>&lt;locus&gt;</code> with <code>n="1"</code> is absent as well.</div>
@@ -2493,8 +2505,10 @@
        скончани мира. и слово о изгнани адамовѣ. и ѱалми избранїи. и слово о
        чс҃тнѣмъ дрѣвѣ. и кꙋпї ю пет҆кѡ велковъ. да работи за еговꙋ дш҃ꙋ и за
        родители его. велка и мт҃ри его не(д)ли. и приложи ю оу ст҃го арх҃аггла. оу
-       махала сръбска ꙋ етрополе, бъ҃ да прости. <span class="markup-highlight">&lt;/colophon&gt;</span>
-<span class="markup-highlight">&lt;/msItemStruct&gt;</span> … <span class="markup-highlight">&lt;msItemStruct xml:id="ACD10" type="original" class="colophon"&gt;</span>
+       махала сръбска ꙋ етрополе, бъ҃ да прости.<span class="markup-highlight">&lt;/colophon&gt;</span>
+<span class="markup-highlight">&lt;/msItemStruct&gt;</span>
+ … 
+<span class="markup-highlight">&lt;msItemStruct xml:id="ACD10" type="original" class="colophon"&gt;</span>
     <span class="markup-highlight">&lt;locus&gt;</span>f. 203r<span class="markup-highlight">&lt;/locus&gt;</span>
     <span class="markup-highlight">&lt;author&gt;</span>Daniil of Etropole<span class="markup-highlight">&lt;/author&gt;</span>
     <span class="markup-highlight">&lt;note&gt;</span><span class="markup-highlight">&lt;date evidence="internal"&gt;</span>1640<span class="markup-highlight">&lt;/date&gt;</span><span class="markup-highlight">&lt;/note&gt;</span>
@@ -2517,7 +2531,9 @@
                      <code>&lt;seg&gt;</code> with a corresponding value of the attribute <code>@type</code>:
                   <pre><span class="markup-highlight">&lt;colophon&gt;</span>
     <span class="markup-highlight">&lt;seg type="protocollo"&gt;</span>+ Изволенїемъ оц҃а и поспѣшенїе(м) сн҄а и съвръшенїемь
-       ст҃го дх҃а аминъ<span class="markup-highlight">&lt;/seg&gt;</span> …<span class="markup-highlight">&lt;/colophon&gt;</span>
+       ст҃го дх҃а аминъ<span class="markup-highlight">&lt;/seg&gt;</span>
+    …
+<span class="markup-highlight">&lt;/colophon&gt;</span>
 </pre></div>
             </div>
             <div>
@@ -2625,8 +2641,7 @@
     <span class="markup-highlight">&lt;sampleText xml:lang="cu"&gt;</span>
        <span class="markup-highlight">&lt;head&gt;</span>Начело ес҃ствословнику имѣѥ изьѡбличенїа скотѡмь животныимь<span class="markup-highlight">&lt;/head&gt;</span>
        <span class="markup-highlight">&lt;explicit&gt;</span>Тако вь неприлежанїи ходеще ниже мл҃твою. ниже бдѣнїемь
-          вьспоминають чеда своꙗ. ѡбнемагающе б҃жїю помощь о грѣсѣх ихь.
-       <span class="markup-highlight">&lt;/explicit&gt;</span>
+          вьспоминають чеда своꙗ. ѡбнемагающе б҃жїю помощь о грѣсѣх ихь.<span class="markup-highlight">&lt;/explicit&gt;</span>
     <span class="markup-highlight">&lt;/sampleText&gt;</span>
     <span class="markup-highlight">&lt;msItemStruct xml:id="ACD15.1"&gt;</span>
        <span class="markup-highlight">&lt;title xml:lang="bg"&gt;</span>За лъва<span class="markup-highlight">&lt;/title&gt;</span>
@@ -2700,7 +2715,9 @@
              Rochefort<span class="markup-highlight">&lt;/persName&gt;</span>, alias <span class="markup-highlight">&lt;persName&gt;</span>Dimitrij Adol’fovič<span class="markup-highlight">&lt;/persName&gt;</span>,
           indicating his relationship to the Oznobišin family and saying what the
           MS is.<span class="markup-highlight">&lt;/p&gt;</span>
-    <span class="markup-highlight">&lt;/accMat&gt;</span> … <span class="markup-highlight">&lt;/history&gt;</span>
+    <span class="markup-highlight">&lt;/accMat&gt;</span>
+    … 
+<span class="markup-highlight">&lt;/history&gt;</span>
 </pre></div>
             </div>
             <div>
@@ -2891,8 +2908,8 @@
        <span class="markup-highlight">&lt;msContents&gt;</span> … <span class="markup-highlight">&lt;/msContents&gt;</span>
        <span class="markup-highlight">&lt;history&gt;</span>
           <span class="markup-highlight">&lt;origin&gt;</span>
-             <span class="markup-highlight">&lt;origDate/&gt;</span>
-             <span class="markup-highlight">&lt;origPlace/&gt;</span>
+             <span class="markup-highlight">&lt;origDate&gt;</span> … <span class="markup-highlight">&lt;/origDate&gt;</span>
+             <span class="markup-highlight">&lt;origPlace&gt;</span> … <span class="markup-highlight">&lt;/origPlace&gt;</span>
           <span class="markup-highlight">&lt;/origin&gt;</span>
        <span class="markup-highlight">&lt;/history&gt;</span>
        <span class="markup-highlight">&lt;additional&gt;</span> … <span class="markup-highlight">&lt;/additional&gt;</span>
@@ -2905,10 +2922,10 @@
        <span class="markup-highlight">&lt;msContents&gt;</span> … <span class="markup-highlight">&lt;/msContents&gt;</span>
        <span class="markup-highlight">&lt;history&gt;</span>
           <span class="markup-highlight">&lt;origin&gt;</span>
-             <span class="markup-highlight">&lt;origDate/&gt;</span>
-             <span class="markup-highlight">&lt;origPlace/&gt;</span>
+             <span class="markup-highlight">&lt;origDate&gt;</span> … <span class="markup-highlight">&lt;/origDate&gt;</span>
+             <span class="markup-highlight">&lt;origPlace&gt;</span> … <span class="markup-highlight">&lt;/origPlace&gt;</span>
           <span class="markup-highlight">&lt;/origin&gt;</span>
-          <span class="markup-highlight">&lt;additional/&gt;</span>
+          <span class="markup-highlight">&lt;additional&gt;</span> … <span class="markup-highlight">&lt;/additional&gt;</span>
        <span class="markup-highlight">&lt;/history&gt;</span>
     <span class="markup-highlight">&lt;/msPart&gt;</span>
 <span class="markup-highlight">&lt;/msDesc&gt;</span>
@@ -2928,8 +2945,8 @@
                   formed from paper and are defined not in terms of layers, but as a horizontal
                   sequence of parts. For example:
                   <pre><span class="markup-highlight">&lt;msDesc&gt;</span>
-    <span class="markup-highlight">&lt;msIdentifier&gt;</span> … Here comes the common information for all parts, e.g.,
-       country, repository, shelfmark, etc. <span class="markup-highlight">&lt;/msIdentifier&gt;</span>
+    <span class="markup-highlight">&lt;msIdentifier&gt;</span>Information for all parts, e.g., 
+       country, repository, shelfmark, etc.<span class="markup-highlight">&lt;/msIdentifier&gt;</span>
     <span class="markup-highlight">&lt;physDesc&gt;</span>
        <span class="markup-highlight">&lt;objectDesc form="codex"&gt;</span>
           <span class="markup-highlight">&lt;supportDesc material="parchment"&gt;</span>
@@ -2945,8 +2962,8 @@
        <span class="markup-highlight">&lt;msContents&gt;</span> … <span class="markup-highlight">&lt;/msContents&gt;</span>
        <span class="markup-highlight">&lt;history&gt;</span>
           <span class="markup-highlight">&lt;origin&gt;</span>
-             <span class="markup-highlight">&lt;origDate/&gt;</span>
-             <span class="markup-highlight">&lt;origPlace/&gt;</span>
+             <span class="markup-highlight">&lt;origDate&gt;</span> … <span class="markup-highlight">&lt;/origDate&gt;</span>
+             <span class="markup-highlight">&lt;origPlace&gt;</span> … <span class="markup-highlight">&lt;/origPlace&gt;</span>
           <span class="markup-highlight">&lt;/origin&gt;</span>
        <span class="markup-highlight">&lt;/history&gt;</span>
        <span class="markup-highlight">&lt;additional&gt;</span> … <span class="markup-highlight">&lt;/additional&gt;</span>
@@ -2958,10 +2975,10 @@
        <span class="markup-highlight">&lt;msContents&gt;</span> … <span class="markup-highlight">&lt;/msContents&gt;</span>
        <span class="markup-highlight">&lt;history&gt;</span>
           <span class="markup-highlight">&lt;origin&gt;</span>
-             <span class="markup-highlight">&lt;origDate/&gt;</span>
-             <span class="markup-highlight">&lt;origPlace/&gt;</span>
+             <span class="markup-highlight">&lt;origDate&gt;</span> … <span class="markup-highlight">&lt;/origDate&gt;</span>
+             <span class="markup-highlight">&lt;origPlace&gt;</span> … <span class="markup-highlight">&lt;/origPlace&gt;</span>
           <span class="markup-highlight">&lt;/origin&gt;</span>
-          <span class="markup-highlight">&lt;additional/&gt;</span>
+          <span class="markup-highlight">&lt;additional&gt;</span> … <span class="markup-highlight">&lt;/additional&gt;</span>
        <span class="markup-highlight">&lt;/history&gt;</span>
     <span class="markup-highlight">&lt;/msPart&gt;</span>
 <span class="markup-highlight">&lt;/msDesc&gt;</span>
@@ -2986,10 +3003,12 @@
     <span class="markup-highlight">&lt;msContents&gt;</span> … <span class="markup-highlight">&lt;/msContents&gt;</span>
     <span class="markup-highlight">&lt;history&gt;</span>
        <span class="markup-highlight">&lt;origin&gt;</span>
-          <span class="markup-highlight">&lt;origDate/&gt;</span>
-          <span class="markup-highlight">&lt;origPlace/&gt;</span>
+          <span class="markup-highlight">&lt;origDate&gt;</span> … <span class="markup-highlight">&lt;/origDate&gt;</span>
+          <span class="markup-highlight">&lt;origPlace&gt;</span> … <span class="markup-highlight">&lt;/origPlace&gt;</span>
        <span class="markup-highlight">&lt;/origin&gt;</span>
-    <span class="markup-highlight">&lt;/history&gt;</span> … <span class="markup-highlight">&lt;/msPart&gt;</span>
+    <span class="markup-highlight">&lt;/history&gt;</span>
+    … 
+<span class="markup-highlight">&lt;/msPart&gt;</span>
 </pre></div>
                <div class="p">Examples of such usage could include an additional note on a separate leaf, or
                   text from a later scribe.</div>
@@ -3034,12 +3053,12 @@
           рая и кадие, та да не утече Еень паша. А той тръгне тогись на Бельградь
           да отиде, а то дадохе аламанци, та превзехе Белиградь и опрехе до Нишь. И
           Еень се запрѣхе на Нишь, а тие отидохе на Босне да прѣвьземать Босне. А
-          Еень пусти мойске, та оплени Кипровець и изьгуби и пороби… <span class="markup-highlight">&lt;/div&gt;</span>
+          Еень пусти мойске, та оплени Кипровець и изьгуби и пороби.<span class="markup-highlight">&lt;/div&gt;</span>
     <span class="markup-highlight">&lt;/msContents&gt;</span>
     <span class="markup-highlight">&lt;additional&gt;</span>
        <span class="markup-highlight">&lt;listBibl&gt;</span>
           <span class="markup-highlight">&lt;bibl type="edition"&gt;</span>Дринов 1882<span class="markup-highlight">&lt;/bibl&gt;</span>
-          <span class="markup-highlight">&lt;bibl type="edition"&gt;</span>Цонев 1910: 447–448<span class="markup-highlight">&lt;/bibl&gt;</span>
+          <span class="markup-highlight">&lt;bibl type="edition"&gt;</span>Цонев 1910: 447–48<span class="markup-highlight">&lt;/bibl&gt;</span>
        <span class="markup-highlight">&lt;/listBibl&gt;</span>
     <span class="markup-highlight">&lt;/additional&gt;</span>
 <span class="markup-highlight">&lt;/msPart&gt;</span>
@@ -3052,7 +3071,9 @@
                   manuscript, written on parchment and paper, has palimpsest parts in Cyrillic,
                   Glagolitic and Greek. The description begins with the heading:
                   <pre><span class="markup-highlight">&lt;msDesc&gt;</span>
-    <span class="markup-highlight">&lt;head&gt;</span>Codex Sinaiticus, 12th c., the end-13 c., and 13 c.<span class="markup-highlight">&lt;/head&gt;</span> … <span class="markup-highlight">&lt;/msDesc&gt;</span>
+    <span class="markup-highlight">&lt;head&gt;</span>Codex Sinaiticus, 12th c., the end-13 c., and 13 c.<span class="markup-highlight">&lt;/head&gt;</span>
+    … 
+<span class="markup-highlight">&lt;/msDesc&gt;</span>
 </pre></div>
                <div class="p">In this case we have separate <code>&lt;altIdentifier&gt;</code> elements following
                   immediately after the head:
@@ -3098,11 +3119,13 @@
                   scribes who wrote the upper layer of the text. Consider the following example:
                   <pre><span class="markup-highlight">&lt;scribe n="E"&gt;</span>
     <span class="markup-highlight">&lt;locusGrp&gt;</span>
-       <span class="markup-highlight">&lt;locus&gt;</span>Q.п.I.63, 1r-3r<span class="markup-highlight">&lt;/locus&gt;</span>
-       <span class="markup-highlight">&lt;locus&gt;</span>Sin. 34, 63v-71v<span class="markup-highlight">&lt;/locus&gt;</span>
-       <span class="markup-highlight">&lt;locus&gt;</span>Sin. 34, 77r-81r<span class="markup-highlight">&lt;/locus&gt;</span>
+       <span class="markup-highlight">&lt;locus&gt;</span>Q.п.I.63, 1r–3r<span class="markup-highlight">&lt;/locus&gt;</span>
+       <span class="markup-highlight">&lt;locus&gt;</span>Sin. 34, 63v–71v<span class="markup-highlight">&lt;/locus&gt;</span>
+       <span class="markup-highlight">&lt;locus&gt;</span>Sin. 34, 77r–81r<span class="markup-highlight">&lt;/locus&gt;</span>
     <span class="markup-highlight">&lt;/locusGrp&gt;</span>
-    <span class="markup-highlight">&lt;palaeoCharact script="cyrs"&gt;</span><span class="markup-highlight">&lt;p&gt;</span>Uncial<span class="markup-highlight">&lt;/p&gt;</span><span class="markup-highlight">&lt;/palaeoCharact&gt;</span>
+    <span class="markup-highlight">&lt;palaeoCharact script="cyrs"&gt;</span>
+       <span class="markup-highlight">&lt;p&gt;</span>Uncial<span class="markup-highlight">&lt;/p&gt;</span>
+    <span class="markup-highlight">&lt;/palaeoCharact&gt;</span>
     <span class="markup-highlight">&lt;scribeLang&gt;</span>
        <span class="markup-highlight">&lt;summary&gt;</span>Middle Bulgarian with Russian features<span class="markup-highlight">&lt;/summary&gt;</span>
        <span class="markup-highlight">&lt;orthography&gt;</span>
@@ -3123,7 +3146,9 @@
                   general information about the origins of all of the texts:
                   <pre><span class="markup-highlight">&lt;msContents&gt;</span>
     <span class="markup-highlight">&lt;filiation type="protograph"&gt;</span>Middle Bulgarian<span class="markup-highlight">&lt;/filiation&gt;</span>
-    <span class="markup-highlight">&lt;filiation type="antigraph"&gt;</span>Russian<span class="markup-highlight">&lt;/filiation&gt;</span> … <span class="markup-highlight">&lt;/msContents&gt;</span>
+    <span class="markup-highlight">&lt;filiation type="antigraph"&gt;</span>Russian<span class="markup-highlight">&lt;/filiation&gt;</span>
+    … 
+<span class="markup-highlight">&lt;/msContents&gt;</span>
 </pre></div>
                <div class="p">Since the texts now are in different repositories, their sequence and locations
                   are especially important. Consider the following example:
@@ -3132,8 +3157,12 @@
        <span class="markup-highlight">&lt;locus n="Sin.18N.1"&gt;</span>Sin. 18/N, 1v–8v<span class="markup-highlight">&lt;/locus&gt;</span>
        <span class="markup-highlight">&lt;locus n="Gr.70.2"&gt;</span>Gr. 70, 54r-98r (54, 59, 60, 57, 58, 55, 56,
           61–98)<span class="markup-highlight">&lt;/locus&gt;</span>
-    <span class="markup-highlight">&lt;/locusGrp&gt;</span> … <span class="markup-highlight">&lt;title xml:lang="la"&gt;</span>Pandectae<span class="markup-highlight">&lt;/title&gt;</span>
-    <span class="markup-highlight">&lt;author xml:lang="la"&gt;</span>Nicon monachus<span class="markup-highlight">&lt;/author&gt;</span> … <span class="markup-highlight">&lt;/msItemStruct&gt;</span>
+    <span class="markup-highlight">&lt;/locusGrp&gt;</span>
+    … 
+    <span class="markup-highlight">&lt;title xml:lang="la"&gt;</span>Pandectae<span class="markup-highlight">&lt;/title&gt;</span>
+    <span class="markup-highlight">&lt;author xml:lang="la"&gt;</span>Nicon monachus<span class="markup-highlight">&lt;/author&gt;</span>
+    … 
+<span class="markup-highlight">&lt;/msItemStruct&gt;</span>
 </pre></div>
                <div class="p">The cataloguing information of the common part ends with data about the
                   manuscript’s origin, history and administrative information. Then begins a
@@ -3142,15 +3171,27 @@
                   Miltenov):
                   <pre><span class="markup-highlight">&lt;msPart type="palimpsest" subtype="Glagolitic" corresp="QpI64"&gt;</span>
     <span class="markup-highlight">&lt;locus&gt;</span>ff. 1–8<span class="markup-highlight">&lt;/locus&gt;</span>
-    <span class="markup-highlight">&lt;physDesc&gt;</span><span class="markup-highlight">&lt;objectDesc&gt;</span><span class="markup-highlight">&lt;layoutDesc&gt;</span><span class="markup-highlight">&lt;layout&gt;</span>one
-          column<span class="markup-highlight">&lt;/layout&gt;</span><span class="markup-highlight">&lt;/layoutDesc&gt;</span><span class="markup-highlight">&lt;/objectDesc&gt;</span><span class="markup-highlight">&lt;/physDesc&gt;</span>
-    <span class="markup-highlight">&lt;scribeDesc&gt;</span><span class="markup-highlight">&lt;scribe&gt;</span><span class="markup-highlight">&lt;palaeoCharact script="glag"&gt;</span>
+    <span class="markup-highlight">&lt;physDesc&gt;</span>
+       <span class="markup-highlight">&lt;objectDesc&gt;</span>
+          <span class="markup-highlight">&lt;layoutDesc&gt;</span>
+             <span class="markup-highlight">&lt;layout&gt;</span>one column<span class="markup-highlight">&lt;/layout&gt;</span>
+          <span class="markup-highlight">&lt;/layoutDesc&gt;</span>
+       <span class="markup-highlight">&lt;/objectDesc&gt;</span>
+    <span class="markup-highlight">&lt;/physDesc&gt;</span>
+    <span class="markup-highlight">&lt;scribeDesc&gt;</span>
+       <span class="markup-highlight">&lt;scribe&gt;</span>
+          <span class="markup-highlight">&lt;palaeoCharact script="glag"&gt;</span>
              <span class="markup-highlight">&lt;p&gt;</span>Round Glagolica<span class="markup-highlight">&lt;/p&gt;</span>
-          <span class="markup-highlight">&lt;/palaeoCharact&gt;</span><span class="markup-highlight">&lt;/scribe&gt;</span><span class="markup-highlight">&lt;/scribeDesc&gt;</span>
+          <span class="markup-highlight">&lt;/palaeoCharact&gt;</span>
+       <span class="markup-highlight">&lt;/scribe&gt;</span>
+    <span class="markup-highlight">&lt;/scribeDesc&gt;</span>
     <span class="markup-highlight">&lt;msContents&gt;</span>
        <span class="markup-highlight">&lt;p&gt;</span>Office menaion or Troparia from Octoechos (1958)<span class="markup-highlight">&lt;/p&gt;</span>
     <span class="markup-highlight">&lt;/msContents&gt;</span>
-    <span class="markup-highlight">&lt;history&gt;</span><span class="markup-highlight">&lt;origin&gt;</span><span class="markup-highlight">&lt;origDate&gt;</span>11th c.<span class="markup-highlight">&lt;/origDate&gt;</span><span class="markup-highlight">&lt;/origin&gt;</span>
+    <span class="markup-highlight">&lt;history&gt;</span>
+       <span class="markup-highlight">&lt;origin&gt;</span>
+          <span class="markup-highlight">&lt;origDate&gt;</span>11th c.<span class="markup-highlight">&lt;/origDate&gt;</span>
+       <span class="markup-highlight">&lt;/origin&gt;</span>
     <span class="markup-highlight">&lt;/history&gt;</span>
 <span class="markup-highlight">&lt;/msPart&gt;</span>
 </pre></div>
@@ -3171,9 +3212,8 @@
                   <pre><span class="markup-highlight">&lt;teiHeader&gt;</span>
     <span class="markup-highlight">&lt;fileDesc&gt;</span>
        <span class="markup-highlight">&lt;titleStmt&gt;</span>
-          <span class="markup-highlight">&lt;title&gt;</span>Codex Suprasliensis: reading menaion for March,
-          10th century<span class="markup-highlight">&lt;/title&gt;</span>
-          <span class="markup-highlight">&lt;author xml:id="MP"&gt;</span>Maya Petrova- Taneva<span class="markup-highlight">&lt;/author&gt;</span>
+          <span class="markup-highlight">&lt;title&gt;</span>Codex Suprasliensis: reading menaion for March, 10th century<span class="markup-highlight">&lt;/title&gt;</span>
+          <span class="markup-highlight">&lt;author xml:id="MP"&gt;</span>Maya Petrova-Taneva<span class="markup-highlight">&lt;/author&gt;</span>
           <span class="markup-highlight">&lt;editor xml:id="AM"&gt;</span>Anisava Miltenova<span class="markup-highlight">&lt;/editor&gt;</span>
           <span class="markup-highlight">&lt;respStmt&gt;</span>
              <span class="markup-highlight">&lt;name xml:id="AB"&gt;</span>Andrej Bojadziev<span class="markup-highlight">&lt;/name&gt;</span>
@@ -3229,8 +3269,10 @@
                   in the administrative part of the file (<code>&lt;adminInfo&gt;</code>). A short example of a
                   bibliographic reference could be:
                   <pre><span class="markup-highlight">&lt;sourceDesc&gt;</span>
-    <span class="markup-highlight">&lt;p&gt;</span><span class="markup-highlight">&lt;ref type="edition" target="../bibliography/zbib.xml#ZaimovJ_CapaldoM1982"&gt;</span>
-          Заимов, Капалдо 1982<span class="markup-highlight">&lt;/ref&gt;</span><span class="markup-highlight">&lt;/p&gt;</span>
+    <span class="markup-highlight">&lt;p&gt;</span>
+       <span class="markup-highlight">&lt;ref type="edition" target="../bibliography/zbib.xml#ZaimovJ_CapaldoM1982"&gt;</span>
+          Заимов, Капалдо 1982<span class="markup-highlight">&lt;/ref&gt;</span>
+    <span class="markup-highlight">&lt;/p&gt;</span>
 <span class="markup-highlight">&lt;/sourceDesc&gt;</span>
 </pre></div>
                <div class="p">If, however, the description is to be accompanied by an edition of the manuscript
@@ -3238,9 +3280,13 @@
                   beginning with the <code>&lt;msDesc&gt;</code>. In that case the edited text of the manuscript
                   would constitute the body of the document:
                   <pre><span class="markup-highlight">&lt;TEI&gt;</span>
-    <span class="markup-highlight">&lt;teiHeader&gt;</span> … <span class="markup-highlight">&lt;sourceDesc&gt;</span>
+    <span class="markup-highlight">&lt;teiHeader&gt;</span>
+       … 
+       <span class="markup-highlight">&lt;sourceDesc&gt;</span>
           <span class="markup-highlight">&lt;msDesc&gt;</span>…<span class="markup-highlight">&lt;/msDesc&gt;</span>
-       <span class="markup-highlight">&lt;/sourceDesc&gt;</span> … <span class="markup-highlight">&lt;/teiHeader&gt;</span>
+       <span class="markup-highlight">&lt;/sourceDesc&gt;</span>
+       … 
+    <span class="markup-highlight">&lt;/teiHeader&gt;</span>
     <span class="markup-highlight">&lt;text&gt;</span>
        <span class="markup-highlight">&lt;body&gt;</span> … <span class="markup-highlight">&lt;/body&gt;</span>
     <span class="markup-highlight">&lt;/text&gt;</span>
