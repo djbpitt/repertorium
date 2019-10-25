@@ -33,12 +33,21 @@
                     <xsl:value-of select="string-join($number, '.') || '.'"/>
                 </xsl:when>
                 <xsl:when test="$head_param/parent::div/parent::back">
-                    <xsl:text>Appendix</xsl:text>
+                    <xsl:text>Appendix </xsl:text>
                     <xsl:number select="$head_param/.." level="multiple" format="A."/>
+                </xsl:when>
+                <xsl:when test="$head_param/parent::div/parent::div/parent::back">
+                    <xsl:text>Appendix </xsl:text>
+                    <xsl:number select="$head_param/../.." format="A."/>
+                    <xsl:number select="$head_param/.."/>
+                    <xsl:text>.</xsl:text>
+                </xsl:when>
+                <xsl:when test="$head_param/ancestor::front">
+                    <xsl:value-of select="'Intro ' || string-join($number, '.') || '.'"/>
                 </xsl:when>
             </xsl:choose>
         </xsl:variable>
-        <xsl:sequence select="$results"/>
+        <xsl:sequence select="string-join($results)"/>
     </xsl:function>
 
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
@@ -138,8 +147,12 @@
     </xsl:template>
     <xsl:template match="head">
         <xsl:variable name="level" as="xs:integer" select="count(ancestor::div)"/>
+        <xsl:variable name="id" as="xs:string" select="re:number(.)"/>
         <xsl:element name="{concat('h', $level + 1)}">
-            <xsl:value-of select="re:number(.)"/>
+            <xsl:if test="$id">
+                <xsl:attribute name="id" select="translate(concat('m', $id), ' ', '')"/>
+            </xsl:if>
+            <xsl:value-of select="$id"/>
             <xsl:text> </xsl:text>
             <xsl:apply-templates/>
         </xsl:element>
@@ -341,8 +354,13 @@
     <!-- TOC mode: head -->
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
     <xsl:template match="head" mode="toc">
+        <xsl:variable name="number" as="xs:string" select="re:number(.)"/>
         <li>
-            <xsl:value-of select="."/>
+            <a href="{translate(concat('#m', $number), ' ', '')}">
+                <xsl:value-of select="$number"/>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="."/>
+            </a>
         </li>
     </xsl:template>
 </xsl:stylesheet>
