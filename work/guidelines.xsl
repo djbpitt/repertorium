@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns="http://www.w3.org/1999/xhtml"
-    xpath-default-namespace="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="xs math"
+    xpath-default-namespace="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="#all"
     version="3.0">
     <!--
         Transform the Repertorium guidlines from TEI P5 to XHTML.
@@ -208,7 +208,9 @@
         -->
         <xsl:variable name="lines" as="xs:string*"
             select="
-                ((serialize(node())) =>
+                ((serialize(.)) =>
+                replace('&lt;egXML xmlns=&quot;http://www.tei-c.org/ns/Examples&quot;&gt;', '') =>
+                replace('&lt;/egXML&gt;', '') =>
                 tokenize('\n+'))[string-length(normalize-space()) gt 0]"/>
         <xsl:variable name="minLpad" as="xs:integer"
             select="
@@ -219,8 +221,9 @@
             <xsl:value-of separator="" select="
                     for $line in $lines
                     return
-                        concat(substring($line, $minLpad + 1), '&#x0a;')"/>
+                        concat(substring(replace($line,'&amp;#xA;','&#x0a;'), $minLpad + 1), '&#x0a;')"/>
         </pre>
+        <!--<pre><xsl:sequence select="serialize(., $params)"/></pre>-->
     </xsl:template>
     <xsl:template match="eg">
         <pre><xsl:apply-templates/></pre>
