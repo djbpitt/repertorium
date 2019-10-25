@@ -49,6 +49,22 @@
         </xsl:variable>
         <xsl:sequence select="string-join($results)"/>
     </xsl:function>
+    <xsl:function name="re:highlight" as="item()*">
+        <xsl:param name="in" as="xs:string"/>
+        <xsl:variable name="results" as="item()*">
+            <xsl:analyze-string select="$in" regex="{'&lt;[^&gt;]+?&gt;'}">
+                <xsl:matching-substring>
+                    <span class="markup-highlight">
+                        <xsl:sequence select="."/>
+                    </span>
+                </xsl:matching-substring>
+                <xsl:non-matching-substring>
+                    <xsl:sequence select="."/>
+                </xsl:non-matching-substring>
+            </xsl:analyze-string>
+        </xsl:variable>
+        <xsl:sequence select="$results"/>
+    </xsl:function>
 
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
     <!-- Title page -->
@@ -258,7 +274,6 @@
             introduce LF before namespace declaration since serialize() won't retain an LF inside a long start-tag
             serialize entire <egXML> and then remove start and end tag because serializing just the children
                 winds up writing the stupid egXML namespace declaration into the output
-            TODO: highlight markup in example (e.g., bold for gis and blue for attribute names)
         -->
         <xsl:variable name="lines" as="xs:string*"
             select="
@@ -272,13 +287,13 @@
                 return
                     string-length($line) - string-length(replace($line, '^ +', '')))"/>
         <pre>
-            <xsl:value-of separator="" select="
+            <xsl:sequence select="
                     for $line in $lines
                     return
                         concat(substring($line =>
                         replace('&amp;#xA;', '&#x0a;') =>
                         replace('ns=&quot;http://www.ilit.bas.bg/repertorium/ns/3.0&quot;', '&#x0a;  ns=&quot;http://www.ilit.bas.bg/repertorium/ns/3.0&quot;'),
-                        $minLpad + 1), '&#x0a;')"/>
+                        $minLpad + 1), '&#x0a;') => re:highlight()"/>
         </pre>
     </xsl:template>
     <xsl:template match="eg">
