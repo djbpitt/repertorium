@@ -13,7 +13,11 @@
     -->
     <xsl:output method="xml" indent="no"/>
 
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
+    <!-- Functions -->
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
     <xsl:function name="re:number" as="xs:string*">
+        <!-- Create hierarchical section number-->
         <xsl:param name="head_param" as="element(head)"/>
         <xsl:variable name="level" as="xs:integer" select="$head_param/count(ancestor::div)"/>
         <xsl:variable name="number" as="xs:integer*">
