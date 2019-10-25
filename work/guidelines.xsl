@@ -30,11 +30,11 @@
         <xsl:variable name="results" as="xs:string*">
             <xsl:choose>
                 <xsl:when test="$head_param/ancestor::body">
-                    <xsl:value-of select="string-join($number, '.') || '. '"/>
+                    <xsl:value-of select="string-join($number, '.') || '.'"/>
                 </xsl:when>
                 <xsl:when test="$head_param/parent::div/parent::back">
                     <xsl:text>Appendix</xsl:text>
-                    <xsl:number select="$head_param/.." level="multiple" format="A. "/>
+                    <xsl:number select="$head_param/.." level="multiple" format="A."/>
                 </xsl:when>
             </xsl:choose>
         </xsl:variable>
@@ -48,7 +48,7 @@
         <xsl:apply-templates select="docTitle"/>
         <p>
             <xsl:value-of
-                select="'By ' || string-join(docAuthor[position() ne last()], ', ') || ', and ' || docAuthor[last()]"
+                select="'By ' || string-join(docAuthor[position() ne last()], ', ') || ', and ' || docAuthor[last()] || '.'"
             />
         </p>
         <xsl:apply-templates select="docImprint, /TEI/teiHeader//availability"/>
@@ -140,6 +140,7 @@
         <xsl:variable name="level" as="xs:integer" select="count(ancestor::div)"/>
         <xsl:element name="{concat('h', $level + 1)}">
             <xsl:value-of select="re:number(.)"/>
+            <xsl:text> </xsl:text>
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
