@@ -25,8 +25,10 @@ main {
     height: 100vh; /* must have height for section scrolling to work */
 }
 nav {
-    width: 20%;
+    transition: width 500ms ease;
+    width: 5%;
 }
+nav:hover {width: 20%;}
 nav > ul {
     list-style-type: none;
     padding: 0;
@@ -37,7 +39,7 @@ nav > ul > li {
     text-overflow: ellipsis;
 }
 main {
-    width: 80%;
+    flex: 1;
 }
 h3 {
     font-style: italic;
