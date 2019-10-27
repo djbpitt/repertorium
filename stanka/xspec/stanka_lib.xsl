@@ -135,11 +135,12 @@
             <xsl:attribute name="function">re:sort-gMonthDay</xsl:attribute>
             <x:param>
                <xsl:attribute name="name">in</xsl:attribute>
-               <xsl:attribute name="select">'--03-08', '--02-03', '--10-03'</xsl:attribute>
+               <xsl:attribute name="select">'--09-30', '--03-08', '--09-01', '--02-03', '--10-03'</xsl:attribute>
             </x:param>
          </x:call>
          <xsl:variable name="x:result" as="item()*">
-            <xsl:variable name="in" select="'--03-08', '--02-03', '--10-03'"/>
+            <xsl:variable name="in"
+                          select="'--09-30', '--03-08', '--09-01', '--02-03', '--10-03'"/>
             <xsl:sequence select="re:sort-gMonthDay($in)"/>
          </xsl:variable>
          <xsl:call-template name="test:report-sequence">
@@ -154,7 +155,8 @@
    <xsl:template name="x:d6e14">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>Sort gMonthDay by September calendar</xsl:message>
-      <xsl:variable name="impl:expected" select="'--10-03', '--02-03', '--03-08'"/>
+      <xsl:variable name="impl:expected"
+                    select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
       <xsl:variable name="impl:successful"
                     as="xs:boolean"
                     select="test:deep-equal($impl:expected, $x:result, '')"/>
@@ -313,6 +315,7 @@
          <x:label>Scenario for testing function gMonthDay-from-month-day</x:label>
          <xsl:call-template name="x:d6e29"/>
          <xsl:call-template name="x:d6e33"/>
+         <xsl:call-template name="x:d6e37"/>
       </x:scenario>
    </xsl:template>
    <xsl:template name="x:d6e29">
@@ -394,6 +397,49 @@
       </xsl:if>
       <x:test successful="{$impl:successful}">
          <x:label>Convert September to 9</x:label>
+         <xsl:call-template name="test:report-sequence">
+            <xsl:with-param name="sequence" select="$impl:expected"/>
+            <xsl:with-param name="wrapper-name" as="xs:string">x:expect</xsl:with-param>
+            <xsl:with-param name="test" as="attribute(test)?"/>
+         </xsl:call-template>
+      </x:test>
+   </xsl:template>
+   <xsl:template name="x:d6e37">
+      <xsl:message>..Month is October</xsl:message>
+      <x:scenario>
+         <x:label>Month is October</x:label>
+         <x:call>
+            <xsl:attribute name="function">re:gMonthDay-from-month-day</xsl:attribute>
+            <x:param>
+               <xsl:attribute name="name">in</xsl:attribute>
+               <xsl:attribute name="select">'October 3'</xsl:attribute>
+            </x:param>
+         </x:call>
+         <xsl:variable name="x:result" as="item()*">
+            <xsl:variable name="in" select="'October 3'"/>
+            <xsl:sequence select="re:gMonthDay-from-month-day($in)"/>
+         </xsl:variable>
+         <xsl:call-template name="test:report-sequence">
+            <xsl:with-param name="sequence" select="$x:result"/>
+            <xsl:with-param name="wrapper-name" as="xs:string">x:result</xsl:with-param>
+         </xsl:call-template>
+         <xsl:call-template name="x:d6e40">
+            <xsl:with-param name="x:result" select="$x:result"/>
+         </xsl:call-template>
+      </x:scenario>
+   </xsl:template>
+   <xsl:template name="x:d6e40">
+      <xsl:param name="x:result" required="yes"/>
+      <xsl:message>Convert October to 10</xsl:message>
+      <xsl:variable name="impl:expected" select="'--10-03'"/>
+      <xsl:variable name="impl:successful"
+                    as="xs:boolean"
+                    select="test:deep-equal($impl:expected, $x:result, '')"/>
+      <xsl:if test="not($impl:successful)">
+         <xsl:message>      FAILED</xsl:message>
+      </xsl:if>
+      <x:test successful="{$impl:successful}">
+         <x:label>Convert October to 10</x:label>
          <xsl:call-template name="test:report-sequence">
             <xsl:with-param name="sequence" select="$impl:expected"/>
             <xsl:with-param name="wrapper-name" as="xs:string">x:expect</xsl:with-param>

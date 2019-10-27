@@ -48,7 +48,7 @@
                                 select="
                                     re:month-day-from-gMonthDay(.) ||
                                     ' (' ||
-                                    re:gMonthDay-from-month-day(.) ||
+                                    . ||
                                     ')'"
                             />
                         </h2>

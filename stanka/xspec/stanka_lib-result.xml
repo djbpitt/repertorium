@@ -5,7 +5,7 @@
           xmlns:x="http://www.jenitennison.com/xslt/xspec"
           xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
           stylesheet="file:/Users/djb/repos/repertorium/stanka/stanka_lib.xsl"
-          date="2019-10-27T18:41:47.917+02:00"
+          date="2019-10-27T19:34:25.985+02:00"
           xspec="file:/Users/djb/repos/repertorium/stanka/stanka_lib.xspec">
    <x:scenario>
       <x:label>Scenario for testing function month-day-from-gMonthDay</x:label>
@@ -35,12 +35,13 @@
    <x:scenario>
       <x:label>Scenario for testing function sort-gMonthDay</x:label>
       <x:call function="re:sort-gMonthDay">
-         <x:param name="in" select="'--03-08', '--02-03', '--10-03'"/>
+         <x:param name="in"
+                  select="'--09-30', '--03-08', '--09-01', '--02-03', '--10-03'"/>
       </x:call>
-      <x:result select="'--10-03', '--02-03', '--03-08'"/>
-      <x:test successful="true">
+      <x:result select="'--09-30', '--09-01', '--10-03', '--02-03', '--03-08'"/>
+      <x:test successful="false">
          <x:label>Sort gMonthDay by September calendar</x:label>
-         <x:expect select="'--10-03', '--02-03', '--03-08'"/>
+         <x:expect select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
       </x:test>
    </x:scenario>
    <x:scenario>
@@ -101,6 +102,17 @@
          <x:test successful="true">
             <x:label>Convert September to 9</x:label>
             <x:expect select="'--09-03'"/>
+         </x:test>
+      </x:scenario>
+      <x:scenario>
+         <x:label>Month is October</x:label>
+         <x:call function="re:gMonthDay-from-month-day">
+            <x:param name="in" select="'October 3'"/>
+         </x:call>
+         <x:result select="'--10-03'"/>
+         <x:test successful="true">
+            <x:label>Convert October to 10</x:label>
+            <x:expect select="'--10-03'"/>
          </x:test>
       </x:scenario>
    </x:scenario>
