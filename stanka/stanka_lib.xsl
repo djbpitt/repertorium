@@ -6,6 +6,36 @@
     <xsl:output method="xml" indent="yes"/>
 
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
+    <!-- Variables used in multiple functions                           -->
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
+    <xsl:variable name="month-names" as="xs:string+"
+        select="
+            'January', 'February', 'March', 'April',
+            'May', 'June', 'July', 'August',
+            'September', 'October', 'November', 'December'"/>
+
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
+    <!-- re:gMonthDay-from-month-day()                                  -->
+    <!-- Convert from "February 3" format to gMonthDay                  -->
+    <!--                                                                -->
+    <!-- Input: Date in "February 3" format as xs:string                -->
+    <!-- Returns: Date in gMonthDay format as xs:string                 -->
+    <!-- Dependencies: none                                             -->
+    <!-- Note: unused; remove?                                          -->
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
+    <xsl:function name="re:gMonthDay-from-month-day" as="xs:string">
+        <xsl:param name="in" as="xs:string"/>
+        <xsl:variable name="dateParts" as="xs:string+" select="tokenize($in, '\s+')"/>
+        <xsl:sequence
+            select="
+                '--' ||
+                format-number(index-of($month-names, $dateParts[1]), '00') ||
+                '-' ||
+                format-number(xs:integer($dateParts[2]), '00')"
+        />
+    </xsl:function>
+
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
     <!-- re:month-day-from-gMonthDay()                                  -->
     <!-- Convert gMonthDay to "February 3" format                       -->
     <!--                                                                -->
@@ -15,11 +45,6 @@
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
     <xsl:function name="re:month-day-from-gMonthDay" as="xs:string">
         <xsl:param name="in" as="xs:string"/>
-        <xsl:variable name="month-names" as="xs:string+"
-            select="
-                'January', 'February', 'March', 'April',
-                'May', 'June', 'July', 'August',
-                'September', 'October', 'November', 'December'"/>
         <xsl:variable name="month-ordinal" as="xs:integer" select="xs:integer(substring($in, 3, 2))"/>
         <xsl:sequence
             select="string-join(($month-names[$month-ordinal], xs:integer(substring($in, 6))), ' ')"

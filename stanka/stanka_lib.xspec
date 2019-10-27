@@ -45,4 +45,19 @@
         </x:call>
         <x:expect label="Extract month from gMonthDay" select="'02'"/>
     </x:scenario>
+
+    <x:scenario label="Scenario for testing function gMonthDay-from-month-day">
+        <x:scenario label="Month is February">
+            <x:call function="re:gMonthDay-from-month-day">
+                <x:param name="in" select="'February 3'"/>
+            </x:call>
+            <x:expect label="Convert February to 2" select="'--02-03'"/>
+        </x:scenario>
+        <x:scenario label="Month is September">
+            <x:call function="re:gMonthDay-from-month-day">
+                <x:param name="in" select="'September 3'"/>
+            </x:call>
+            <x:expect label="Convert September to 9" select="'--09-03'"/>
+        </x:scenario>
+    </x:scenario>
 </x:description>
