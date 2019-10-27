@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="file:/Users/djb/repos/xspec/src/reporter/format-xspec-report.xsl"?>
+<x:report xmlns:test="http://www.jenitennison.com/xslt/unit-test"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          xmlns:x="http://www.jenitennison.com/xslt/xspec"
+          xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+          stylesheet="file:/Users/djb/repos/repertorium/stanka/stanka_lib.xsl"
+          date="2019-10-27T17:47:14.956+02:00"
+          xspec="file:/Users/djb/repos/repertorium/stanka/stanka_lib.xspec">
+   <x:scenario>
+      <x:label>Scenario for testing function month-day-from-gMonthDay</x:label>
+      <x:scenario>
+         <x:label>February 3 test</x:label>
+         <x:call function="re:month-day-from-gMonthDay">
+            <x:param name="in" select="'--02-03'"/>
+         </x:call>
+         <x:result select="'February 3'"/>
+         <x:test successful="true">
+            <x:label>Format --MM-DD as 'February 3'</x:label>
+            <x:expect select="'February 3'"/>
+         </x:test>
+      </x:scenario>
+      <x:scenario>
+         <x:label>November 3 test</x:label>
+         <x:call function="re:month-day-from-gMonthDay">
+            <x:param name="in" select="'--11-03'"/>
+         </x:call>
+         <x:result select="'November 3'"/>
+         <x:test successful="true">
+            <x:label>Format --MM-DD as 'February 3'</x:label>
+            <x:expect select="'November 3'"/>
+         </x:test>
+      </x:scenario>
+   </x:scenario>
+   <x:scenario>
+      <x:label>Scenario for testing function sort-gMonthDay</x:label>
+      <x:call function="re:sort-gMonthDay">
+         <x:param name="in" select="'--03-08', '--02-03', '--10-03'"/>
+      </x:call>
+      <x:result select="'--10-03', '--02-03', '--03-08'"/>
+      <x:test successful="true">
+         <x:label>Sort gMonthDay by September calendar</x:label>
+         <x:expect select="'--10-03', '--02-03', '--03-08'"/>
+      </x:test>
+   </x:scenario>
+   <x:scenario>
+      <x:label>Scenario for testing function septemberize</x:label>
+      <x:scenario>
+         <x:label>Month is February</x:label>
+         <x:call function="re:septemberize">
+            <x:param name="in" select="'--02-03'"/>
+         </x:call>
+         <x:result select="'14'"/>
+         <x:test successful="true">
+            <x:label>Add 1 to January through August</x:label>
+            <x:expect select="'14'"/>
+         </x:test>
+      </x:scenario>
+      <x:scenario>
+         <x:label>Month is October</x:label>
+         <x:call function="re:septemberize">
+            <x:param name="in" select="'--10-03'"/>
+         </x:call>
+         <x:result select="'10'"/>
+         <x:test successful="true">
+            <x:label>Don’t add 1 to October through December</x:label>
+            <x:expect select="'10'"/>
+         </x:test>
+      </x:scenario>
+   </x:scenario>
+   <x:scenario>
+      <x:label>Scenario for testing function getMonth</x:label>
+      <x:call function="re:getMonth">
+         <x:param name="in" select="'--02-03'"/>
+      </x:call>
+      <x:result select="'02'"/>
+      <x:test successful="true">
+         <x:label>Extract month from gMonthDay</x:label>
+         <x:expect select="'02'"/>
+      </x:test>
+   </x:scenario>
+</x:report>

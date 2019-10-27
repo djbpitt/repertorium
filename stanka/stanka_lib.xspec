@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" stylesheet="stanka_lib.xsl">
+    <x:scenario label="Scenario for testing function month-day-from-gMonthDay">
+        <x:scenario label="February 3 test">
+            <x:call function="re:month-day-from-gMonthDay">
+                <x:param name="in" select="'--02-03'"/>
+            </x:call>
+            <x:expect label="Format --MM-DD as 'February 3'" select="'February 3'"/>
+        </x:scenario>
+        <x:scenario label="November 3 test">
+            <x:call function="re:month-day-from-gMonthDay">
+                <x:param name="in" select="'--11-03'"/>
+            </x:call>
+            <x:expect label="Format --MM-DD as 'February 3'" select="'November 3'"/>
+        </x:scenario>
+    </x:scenario>
+
+    <x:scenario label="Scenario for testing function sort-gMonthDay">
+        <x:call function="re:sort-gMonthDay">
+            <x:param name="in" select="'--03-08', '--02-03', '--10-03'"/>
+        </x:call>
+        <x:expect label="Sort gMonthDay by September calendar"
+            select="'--10-03', '--02-03', '--03-08'"/>
+    </x:scenario>
+
+    <x:scenario label="Scenario for testing function septemberize">
+        <x:scenario label="Month is February">
+            <x:call function="re:septemberize">
+                <x:param name="in" select="'--02-03'"/>
+            </x:call>
+            <x:expect label="Add 1 to January through August" select="'14'"/>
+        </x:scenario>
+        <x:scenario label="Month is October">
+            <x:call function="re:septemberize">
+                <x:param name="in" select="'--10-03'"/>
+            </x:call>
+            <x:expect label="Don’t add 1 to October through December" select="'10'"/>
+        </x:scenario>
+    </x:scenario>
+
+    <x:scenario label="Scenario for testing function getMonth">
+        <x:call function="re:getMonth">
+            <x:param name="in" select="'--02-03'"/>
+        </x:call>
+        <x:expect label="Extract month from gMonthDay" select="'02'"/>
+    </x:scenario>
+</x:description>
