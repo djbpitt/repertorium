@@ -7,12 +7,13 @@ declare option output:method "xml";
 declare option output:media-type "application/xhtml+xml";
 declare option output:omit-xml-declaration "no";
 declare option output:indent "no";
+declare option output:doctype-system "about:legacy-compat";
 declare variable $title as xs:string := "Repertorium of Old Bulgarian Literature and Letters";
 declare variable $exist:root as xs:string := request:get-parameter("exist:root", ());
 declare variable $exist:prefix as xs:string := request:get-parameter("exist:prefix", ());
 declare variable $exist:controller as xs:string := request:get-parameter("exist:controller", ());
 (:declare variable $exist:path as xs:string := request:get-parameter("exist:path", ());:)
-(:declare variable $exist:resource as xs:string := request:get-parameter("exist:resource", ());:)
+declare variable $exist:resource as xs:string := request:get-parameter("exist:resource", ());
 (:declare variable $uri as xs:string := request:get-parameter("uri", ());:)
 declare variable $context as xs:string := request:get-parameter("context", ());
 declare variable $fqcontroller as xs:string := concat($context, $exist:prefix, $exist:controller, '/');
@@ -38,7 +39,9 @@ declare variable $fqcontroller as xs:string := concat($context, $exist:prefix, $
             '/includes/boilerplate.xql?title=',
             encode-for-uri($title),
             '&amp;fqcontroller=',
-            $fqcontroller
+            $fqcontroller,
+            '&amp;resource=',
+            $exist:resource
         )}"
     />
     <nav style="column-count: 3;">

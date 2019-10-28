@@ -1,4 +1,5 @@
 xquery version "3.1";
+declare namespace xi = "http://www.w3.org/2001/XInclude";
 declare variable $title external;
 declare variable $fqcontroller external;
 <head
@@ -15,4 +16,7 @@ declare variable $fqcontroller external;
     <link
         rel="shortcut icon"
         href="{concat($fqcontroller, 'resources/images/favicon.ico')}"/>
+    <script
+        type="text/javascript"
+        src="{concat($fqcontroller, 'resources/js/lgToggle.js')}"></script>
 </head>
