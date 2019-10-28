@@ -29,13 +29,13 @@
             <x:call function="re:septemberize">
                 <x:param name="in" select="'--02-03'"/>
             </x:call>
-            <x:expect label="Add 1 to January through August" select="'14'"/>
+            <x:expect label="Add 1 to January through August" select="'--14-03'"/>
         </x:scenario>
         <x:scenario label="Month is October">
             <x:call function="re:septemberize">
                 <x:param name="in" select="'--10-03'"/>
             </x:call>
-            <x:expect label="Don’t add 1 to October through December" select="'10'"/>
+            <x:expect label="Don’t add 1 to October through December" select="'--10-03'"/>
         </x:scenario>
     </x:scenario>
 

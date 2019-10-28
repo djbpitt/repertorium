@@ -5,7 +5,7 @@
           xmlns:x="http://www.jenitennison.com/xslt/xspec"
           xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
           stylesheet="file:/Users/djb/repos/repertorium/stanka/stanka_lib.xsl"
-          date="2019-10-27T19:34:25.985+02:00"
+          date="2019-10-28T10:00:14.59+02:00"
           xspec="file:/Users/djb/repos/repertorium/stanka/stanka_lib.xspec">
    <x:scenario>
       <x:label>Scenario for testing function month-day-from-gMonthDay</x:label>
@@ -38,8 +38,8 @@
          <x:param name="in"
                   select="'--09-30', '--03-08', '--09-01', '--02-03', '--10-03'"/>
       </x:call>
-      <x:result select="'--09-30', '--09-01', '--10-03', '--02-03', '--03-08'"/>
-      <x:test successful="false">
+      <x:result select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
+      <x:test successful="true">
          <x:label>Sort gMonthDay by September calendar</x:label>
          <x:expect select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
       </x:test>
@@ -51,10 +51,10 @@
          <x:call function="re:septemberize">
             <x:param name="in" select="'--02-03'"/>
          </x:call>
-         <x:result select="'14'"/>
+         <x:result select="'--14-03'"/>
          <x:test successful="true">
             <x:label>Add 1 to January through August</x:label>
-            <x:expect select="'14'"/>
+            <x:expect select="'--14-03'"/>
          </x:test>
       </x:scenario>
       <x:scenario>
@@ -62,10 +62,10 @@
          <x:call function="re:septemberize">
             <x:param name="in" select="'--10-03'"/>
          </x:call>
-         <x:result select="'10'"/>
+         <x:result select="'--10-03'"/>
          <x:test successful="true">
             <x:label>Don’t add 1 to October through December</x:label>
-            <x:expect select="'10'"/>
+            <x:expect select="'--10-03'"/>
          </x:test>
       </x:scenario>
    </x:scenario>

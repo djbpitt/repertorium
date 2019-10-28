@@ -75,8 +75,8 @@
     <!-- Adjust month number to sort by September calendar              -->
     <!--                                                                -->
     <!-- Input: Date in gMonthDay format as xs:string                   -->
-    <!-- Returns: Date in gMonthDay format as string, but with month    -->
-    <!--   adjusted to sort by September calendar                       -->
+    <!-- Returns: Date as string, adjusted to sort by                   -->
+    <!--   September calendar                                           -->
     <!-- Dependencies: re:getMonth                                      -->
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
     <xsl:function name="re:septemberize" as="xs:string">
@@ -84,10 +84,13 @@
         <xsl:variable name="month" as="xs:integer" select="xs:integer(re:getMonth($in))"/>
         <xsl:sequence
             select="
+                '--' ||
                 format-number(if ($month lt 9) then
                     $month + 12
                 else
-                    $month, '00')"
+                    $month, '00') ||
+                '-' ||
+                substring($in, 6)"
         />
     </xsl:function>
 

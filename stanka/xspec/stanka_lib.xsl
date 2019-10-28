@@ -207,7 +207,7 @@
    <xsl:template name="x:d6e19">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>Add 1 to January through August</xsl:message>
-      <xsl:variable name="impl:expected" select="'14'"/>
+      <xsl:variable name="impl:expected" select="'--14-03'"/>
       <xsl:variable name="impl:successful"
                     as="xs:boolean"
                     select="test:deep-equal($impl:expected, $x:result, '')"/>
@@ -250,7 +250,7 @@
    <xsl:template name="x:d6e23">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>Don’t add 1 to October through December</xsl:message>
-      <xsl:variable name="impl:expected" select="'10'"/>
+      <xsl:variable name="impl:expected" select="'--10-03'"/>
       <xsl:variable name="impl:successful"
                     as="xs:boolean"
                     select="test:deep-equal($impl:expected, $x:result, '')"/>
