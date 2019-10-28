@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="file:/Users/djb/repos/xspec/src/reporter/format-xspec-report.xsl"?>
-<x:report xmlns:test="http://www.jenitennison.com/xslt/unit-test"
+<?xml-stylesheet type="text/xsl" href="file:/Users/djb/Library/Preferences/com.oxygenxml/extensions/v21.1/frameworks/https___www.oxygenxml.com_InstData_Addons_community_updateSite.xml/xspec.support-1.2.1/src/compiler/format-xspec-report.xsl"?>
+<x:report xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          xmlns:test="http://www.jenitennison.com/xslt/unit-test"
           xmlns:x="http://www.jenitennison.com/xslt/xspec"
           xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
           stylesheet="file:/Users/djb/repos/repertorium/stanka/stanka_lib.xsl"
-          date="2019-10-28T10:08:32.397+02:00"
+          date="2019-10-28T11:54:44.413+02:00"
           xspec="file:/Users/djb/repos/repertorium/stanka/stanka_lib.xspec">
    <x:scenario>
       <x:label>Scenario for testing function month-day-from-gMonthDay</x:label>
@@ -40,10 +41,10 @@
             <x:param name="in"
                      select="'--03-08', '--02-03', '--10-03', '--09-30', '--09-01'"/>
          </x:call>
-         <x:result select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
+         <x:result select="('--09-01', '--09-30', '--10-03', '--02-03', '--03-08')"/>
          <x:test successful="true">
             <x:label>Sort gMonthDay by September calendar</x:label>
-            <x:expect select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
+            <x:expect select="('--09-01', '--09-30', '--10-03', '--02-03', '--03-08')"/>
          </x:test>
       </x:scenario>
       <x:scenario>
@@ -52,10 +53,10 @@
             <x:param name="in"
                      select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
          </x:call>
-         <x:result select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
+         <x:result select="('--09-01', '--09-30', '--10-03', '--02-03', '--03-08')"/>
          <x:test successful="true">
             <x:label>Sort gMonthDay by September calendar</x:label>
-            <x:expect select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
+            <x:expect select="('--09-01', '--09-30', '--10-03', '--02-03', '--03-08')"/>
          </x:test>
       </x:scenario>
    </x:scenario>

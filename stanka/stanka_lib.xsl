@@ -2,6 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="#all"
+    xmlns:tei="http://www.tei-c.org/ns/1.0" xpath-default-namespace="http://www.tei-c.org/ns/1.0"
     xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" version="3.0">
     <xsl:output method="xml" indent="yes"/>
 
@@ -13,6 +14,19 @@
             'January', 'February', 'March', 'April',
             'May', 'June', 'July', 'August',
             'September', 'October', 'November', 'December'"/>
+
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
+    <!-- re:getAllDates() .                                             -->
+    <!-- List of all dates in gMonthDay format from all mss             -->
+    <!--                                                                -->
+    <!-- Input: mss as document-node()+ .                               -->
+    <!-- Returns: Dates in gMonthDay format as xs:string+               -->
+    <!-- Dependencies: none                                             -->
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
+    <xsl:function name="re:getAllDates" as="xs:string+">
+        <xsl:param name="mss" as="document-node()+"/>
+        <xsl:sequence select="distinct-values($mss//msContents/msItemStruct/date/@when)"/>
+    </xsl:function>
 
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
     <!-- re:gMonthDay-from-month-day()                                  -->
@@ -68,6 +82,23 @@
             </xsl:for-each>
         </xsl:variable>
         <xsl:sequence select="$sorted"/>
+    </xsl:function>
+
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
+    <!-- re:getEntry()                                                  -->
+    <!-- Retrieve top-level <msItemStruct> for date in ms               -->
+    <!--                                                                -->
+    <!-- Input: $ms as document-node()                                  -->
+    <!--        $qdate (query date) as xs:string() in gMonthDate format -->
+    <!-- Returns: <msItemStruct> or ()                                  -->
+    <!-- Dependencies: none                                             -->
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
+    <xsl:function name="re:getEntry" as="element(msItemStruct)?">
+        <xsl:param name="ms" as="document-node()"/>
+        <xsl:param name="qdate" as="xs:string"/>
+        <xsl:variable name="results" as="element(msItemStruct)*"
+            select="$ms//msContents/msItemStruct[date/@when eq $qdate]"/>
+        <xsl:sequence select="($results)"/>
     </xsl:function>
 
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*_*  -->
