@@ -17,11 +17,20 @@
     </x:scenario>
 
     <x:scenario label="Scenario for testing function sort-gMonthDay">
-        <x:call function="re:sort-gMonthDay">
-            <x:param name="in" select="'--09-30', '--03-08', '--09-01', '--02-03', '--10-03'"/>
-        </x:call>
-        <x:expect label="Sort gMonthDay by September calendar"
-            select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
+        <x:scenario label="Dates start in reverse order">
+            <x:call function="re:sort-gMonthDay">
+                <x:param name="in" select="'--03-08', '--02-03', '--10-03', '--09-30', '--09-01'"/>
+            </x:call>
+            <x:expect label="Sort gMonthDay by September calendar"
+                select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
+        </x:scenario>
+        <x:scenario label="Dates start in correct order">
+            <x:call function="re:sort-gMonthDay">
+                <x:param name="in" select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
+            </x:call>
+            <x:expect label="Sort gMonthDay by September calendar"
+                select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
+        </x:scenario>
     </x:scenario>
 
     <x:scenario label="Scenario for testing function septemberize">

@@ -27,9 +27,9 @@
                    xspec="file:/Users/djb/repos/repertorium/stanka/stanka_lib.xspec">
             <xsl:call-template name="x:d6e2"/>
             <xsl:call-template name="x:d6e11"/>
-            <xsl:call-template name="x:d6e15"/>
-            <xsl:call-template name="x:d6e24"/>
-            <xsl:call-template name="x:d6e28"/>
+            <xsl:call-template name="x:d6e20"/>
+            <xsl:call-template name="x:d6e29"/>
+            <xsl:call-template name="x:d6e33"/>
          </x:report>
       </xsl:result-document>
    </xsl:template>
@@ -131,28 +131,36 @@
       <xsl:message>Scenario for testing function sort-gMonthDay</xsl:message>
       <x:scenario>
          <x:label>Scenario for testing function sort-gMonthDay</x:label>
+         <xsl:call-template name="x:d6e12"/>
+         <xsl:call-template name="x:d6e16"/>
+      </x:scenario>
+   </xsl:template>
+   <xsl:template name="x:d6e12">
+      <xsl:message>..Dates start in reverse order</xsl:message>
+      <x:scenario>
+         <x:label>Dates start in reverse order</x:label>
          <x:call>
             <xsl:attribute name="function">re:sort-gMonthDay</xsl:attribute>
             <x:param>
                <xsl:attribute name="name">in</xsl:attribute>
-               <xsl:attribute name="select">'--09-30', '--03-08', '--09-01', '--02-03', '--10-03'</xsl:attribute>
+               <xsl:attribute name="select">'--03-08', '--02-03', '--10-03', '--09-30', '--09-01'</xsl:attribute>
             </x:param>
          </x:call>
          <xsl:variable name="x:result" as="item()*">
             <xsl:variable name="in"
-                          select="'--09-30', '--03-08', '--09-01', '--02-03', '--10-03'"/>
+                          select="'--03-08', '--02-03', '--10-03', '--09-30', '--09-01'"/>
             <xsl:sequence select="re:sort-gMonthDay($in)"/>
          </xsl:variable>
          <xsl:call-template name="test:report-sequence">
             <xsl:with-param name="sequence" select="$x:result"/>
             <xsl:with-param name="wrapper-name" as="xs:string">x:result</xsl:with-param>
          </xsl:call-template>
-         <xsl:call-template name="x:d6e14">
+         <xsl:call-template name="x:d6e15">
             <xsl:with-param name="x:result" select="$x:result"/>
          </xsl:call-template>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d6e14">
+   <xsl:template name="x:d6e15">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>Sort gMonthDay by September calendar</xsl:message>
       <xsl:variable name="impl:expected"
@@ -172,15 +180,60 @@
          </xsl:call-template>
       </x:test>
    </xsl:template>
-   <xsl:template name="x:d6e15">
+   <xsl:template name="x:d6e16">
+      <xsl:message>..Dates start in correct order</xsl:message>
+      <x:scenario>
+         <x:label>Dates start in correct order</x:label>
+         <x:call>
+            <xsl:attribute name="function">re:sort-gMonthDay</xsl:attribute>
+            <x:param>
+               <xsl:attribute name="name">in</xsl:attribute>
+               <xsl:attribute name="select">'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'</xsl:attribute>
+            </x:param>
+         </x:call>
+         <xsl:variable name="x:result" as="item()*">
+            <xsl:variable name="in"
+                          select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
+            <xsl:sequence select="re:sort-gMonthDay($in)"/>
+         </xsl:variable>
+         <xsl:call-template name="test:report-sequence">
+            <xsl:with-param name="sequence" select="$x:result"/>
+            <xsl:with-param name="wrapper-name" as="xs:string">x:result</xsl:with-param>
+         </xsl:call-template>
+         <xsl:call-template name="x:d6e19">
+            <xsl:with-param name="x:result" select="$x:result"/>
+         </xsl:call-template>
+      </x:scenario>
+   </xsl:template>
+   <xsl:template name="x:d6e19">
+      <xsl:param name="x:result" required="yes"/>
+      <xsl:message>Sort gMonthDay by September calendar</xsl:message>
+      <xsl:variable name="impl:expected"
+                    select="'--09-01', '--09-30', '--10-03', '--02-03', '--03-08'"/>
+      <xsl:variable name="impl:successful"
+                    as="xs:boolean"
+                    select="test:deep-equal($impl:expected, $x:result, '')"/>
+      <xsl:if test="not($impl:successful)">
+         <xsl:message>      FAILED</xsl:message>
+      </xsl:if>
+      <x:test successful="{$impl:successful}">
+         <x:label>Sort gMonthDay by September calendar</x:label>
+         <xsl:call-template name="test:report-sequence">
+            <xsl:with-param name="sequence" select="$impl:expected"/>
+            <xsl:with-param name="wrapper-name" as="xs:string">x:expect</xsl:with-param>
+            <xsl:with-param name="test" as="attribute(test)?"/>
+         </xsl:call-template>
+      </x:test>
+   </xsl:template>
+   <xsl:template name="x:d6e20">
       <xsl:message>Scenario for testing function septemberize</xsl:message>
       <x:scenario>
          <x:label>Scenario for testing function septemberize</x:label>
-         <xsl:call-template name="x:d6e16"/>
-         <xsl:call-template name="x:d6e20"/>
+         <xsl:call-template name="x:d6e21"/>
+         <xsl:call-template name="x:d6e25"/>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d6e16">
+   <xsl:template name="x:d6e21">
       <xsl:message>..Month is February</xsl:message>
       <x:scenario>
          <x:label>Month is February</x:label>
@@ -199,12 +252,12 @@
             <xsl:with-param name="sequence" select="$x:result"/>
             <xsl:with-param name="wrapper-name" as="xs:string">x:result</xsl:with-param>
          </xsl:call-template>
-         <xsl:call-template name="x:d6e19">
+         <xsl:call-template name="x:d6e24">
             <xsl:with-param name="x:result" select="$x:result"/>
          </xsl:call-template>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d6e19">
+   <xsl:template name="x:d6e24">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>Add 1 to January through August</xsl:message>
       <xsl:variable name="impl:expected" select="'--14-03'"/>
@@ -223,7 +276,7 @@
          </xsl:call-template>
       </x:test>
    </xsl:template>
-   <xsl:template name="x:d6e20">
+   <xsl:template name="x:d6e25">
       <xsl:message>..Month is October</xsl:message>
       <x:scenario>
          <x:label>Month is October</x:label>
@@ -242,12 +295,12 @@
             <xsl:with-param name="sequence" select="$x:result"/>
             <xsl:with-param name="wrapper-name" as="xs:string">x:result</xsl:with-param>
          </xsl:call-template>
-         <xsl:call-template name="x:d6e23">
+         <xsl:call-template name="x:d6e28">
             <xsl:with-param name="x:result" select="$x:result"/>
          </xsl:call-template>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d6e23">
+   <xsl:template name="x:d6e28">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>Don’t add 1 to October through December</xsl:message>
       <xsl:variable name="impl:expected" select="'--10-03'"/>
@@ -266,7 +319,7 @@
          </xsl:call-template>
       </x:test>
    </xsl:template>
-   <xsl:template name="x:d6e24">
+   <xsl:template name="x:d6e29">
       <xsl:message>Scenario for testing function getMonth</xsl:message>
       <x:scenario>
          <x:label>Scenario for testing function getMonth</x:label>
@@ -285,12 +338,12 @@
             <xsl:with-param name="sequence" select="$x:result"/>
             <xsl:with-param name="wrapper-name" as="xs:string">x:result</xsl:with-param>
          </xsl:call-template>
-         <xsl:call-template name="x:d6e27">
+         <xsl:call-template name="x:d6e32">
             <xsl:with-param name="x:result" select="$x:result"/>
          </xsl:call-template>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d6e27">
+   <xsl:template name="x:d6e32">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>Extract month from gMonthDay</xsl:message>
       <xsl:variable name="impl:expected" select="'02'"/>
@@ -309,16 +362,16 @@
          </xsl:call-template>
       </x:test>
    </xsl:template>
-   <xsl:template name="x:d6e28">
+   <xsl:template name="x:d6e33">
       <xsl:message>Scenario for testing function gMonthDay-from-month-day</xsl:message>
       <x:scenario>
          <x:label>Scenario for testing function gMonthDay-from-month-day</x:label>
-         <xsl:call-template name="x:d6e29"/>
-         <xsl:call-template name="x:d6e33"/>
-         <xsl:call-template name="x:d6e37"/>
+         <xsl:call-template name="x:d6e34"/>
+         <xsl:call-template name="x:d6e38"/>
+         <xsl:call-template name="x:d6e42"/>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d6e29">
+   <xsl:template name="x:d6e34">
       <xsl:message>..Month is February</xsl:message>
       <x:scenario>
          <x:label>Month is February</x:label>
@@ -337,12 +390,12 @@
             <xsl:with-param name="sequence" select="$x:result"/>
             <xsl:with-param name="wrapper-name" as="xs:string">x:result</xsl:with-param>
          </xsl:call-template>
-         <xsl:call-template name="x:d6e32">
+         <xsl:call-template name="x:d6e37">
             <xsl:with-param name="x:result" select="$x:result"/>
          </xsl:call-template>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d6e32">
+   <xsl:template name="x:d6e37">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>Convert February to 2</xsl:message>
       <xsl:variable name="impl:expected" select="'--02-03'"/>
@@ -361,7 +414,7 @@
          </xsl:call-template>
       </x:test>
    </xsl:template>
-   <xsl:template name="x:d6e33">
+   <xsl:template name="x:d6e38">
       <xsl:message>..Month is September</xsl:message>
       <x:scenario>
          <x:label>Month is September</x:label>
@@ -380,12 +433,12 @@
             <xsl:with-param name="sequence" select="$x:result"/>
             <xsl:with-param name="wrapper-name" as="xs:string">x:result</xsl:with-param>
          </xsl:call-template>
-         <xsl:call-template name="x:d6e36">
+         <xsl:call-template name="x:d6e41">
             <xsl:with-param name="x:result" select="$x:result"/>
          </xsl:call-template>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d6e36">
+   <xsl:template name="x:d6e41">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>Convert September to 9</xsl:message>
       <xsl:variable name="impl:expected" select="'--09-03'"/>
@@ -404,7 +457,7 @@
          </xsl:call-template>
       </x:test>
    </xsl:template>
-   <xsl:template name="x:d6e37">
+   <xsl:template name="x:d6e42">
       <xsl:message>..Month is October</xsl:message>
       <x:scenario>
          <x:label>Month is October</x:label>
@@ -423,12 +476,12 @@
             <xsl:with-param name="sequence" select="$x:result"/>
             <xsl:with-param name="wrapper-name" as="xs:string">x:result</xsl:with-param>
          </xsl:call-template>
-         <xsl:call-template name="x:d6e40">
+         <xsl:call-template name="x:d6e45">
             <xsl:with-param name="x:result" select="$x:result"/>
          </xsl:call-template>
       </x:scenario>
    </xsl:template>
-   <xsl:template name="x:d6e40">
+   <xsl:template name="x:d6e45">
       <xsl:param name="x:result" required="yes"/>
       <xsl:message>Convert October to 10</xsl:message>
       <xsl:variable name="impl:expected" select="'--10-03'"/>
