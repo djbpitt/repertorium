@@ -44,13 +44,7 @@
                                     else
                                         'same')"/>
                         <h2>
-                            <xsl:value-of
-                                select="
-                                    re:month-day-from-gMonthDay(.) ||
-                                    ' (' ||
-                                    . ||
-                                    ')'"
-                            />
+                            <xsl:value-of select="re:month-day-from-gMonthDay(.)"/>
                         </h2>
                         <section class="mss">
                             <section class="ms">
