@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div data-template="templates:surround" data-template-with="templates/datatable.html" data-template-at="datatable">
+<br/>
+    <div class="card">
+        <div class="card-header" style="text-align:center;">
+            <h1>Дати<br/>
+            </h1>
+        </div>
+        <div class="card-body">
+            <table id="myTable" class="table table-striped table-sm table-hover">
+                <thead>
+                    <tr align="center" font-size="1.0em">
+                        <th>Дата</th>
+                        <th>Светец или събитие</th>
+                        <th>Документ</th>
+                    </tr>
+                </thead>
+                <tr data-template="app:churchCal"/>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="../resources/js/datatables.custom.js"/>
+</div>
