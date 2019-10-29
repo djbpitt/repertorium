@@ -81,7 +81,8 @@
                                 <xsl:otherwise>
                                     <section class="ms">
                                         <h3>[missing]</h3>
-                                    </section>> </xsl:otherwise>
+                                    </section>
+                                </xsl:otherwise>
                             </xsl:choose>
                             <hr/>
                             <xsl:choose>
