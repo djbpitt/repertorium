@@ -37,6 +37,8 @@
             <head>
                 <title>Hymnographica</title>
                 <link rel="stylesheet" type="text/css" href="http://www.obdurodon.org/css/style.css"/>
+                <link rel="stylesheet" type="text/css"
+                    href="http://repertorium.obdurodon.org/css/repertorium.css"/>
                 <link rel="stylesheet" type="text/css" href="compare.css"/>
             </head>
             <body>
@@ -70,12 +72,28 @@
                             <xsl:value-of select="re:month-day-from-gMonthDay(.)"/>
                         </h2>
                         <section class="mss">
-                            <xsl:for-each select="$dragEntry, $sinEntry">
-                                <xsl:sequence select="re:processEntry(.)"/>
-                                <xsl:if test="not(position() eq last())">
-                                    <hr/>
-                                </xsl:if>
-                            </xsl:for-each>
+                            <!--<xsl:message select="if ($dragEntry) then 'Yes D' else 'No D'"/>
+                            <xsl:message select="if ($sinTitle) then 'Yes S' else 'No S'"/>-->
+                            <xsl:choose>
+                                <xsl:when test="$dragEntry">
+                                    <xsl:sequence select="re:processEntry($dragEntry)"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <section class="ms">
+                                        <h3>[missing]</h3>
+                                    </section>> </xsl:otherwise>
+                            </xsl:choose>
+                            <hr/>
+                            <xsl:choose>
+                                <xsl:when test="$sinEntry">
+                                    <xsl:sequence select="re:processEntry($sinEntry)"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <section class="ms">
+                                        <h3>[missing]</h3>
+                                    </section>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </section>
                     </section>
                 </xsl:for-each>
