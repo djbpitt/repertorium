@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title data-template="config:app-title">App Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta data-template="config:app-meta"/>
+        <link rel="shortcut icon" href="$app-root/resources/img/favicon.ico"/>
+        <link rel="stylesheet" type="text/css" href="$app-root/resources/css/sandstone.min.css"/>
+        <link rel="stylesheet" type="text/css" href="$app-root/resources/css/style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
+       
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"/>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"/>
+<!--scroll to top start-->
+        <link rel="stylesheet" href="../resources/js/scroll-to-top/css/ap-scroll-top.min.css"/>
+        <script src="../resources/js/scroll-to-top/js/ap-scroll-top.min.js"/>
+        <!--scroll to top end -->
+        <script src="https://kit.fontawesome.com/1bbdae880b.js" crossorigin="anonymous"/>
+    </head>
+    <body id="body">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="./index.html">
+                <img src="$app-root/resources/img/monahos.png" alt="logo" class="rounded-circle"/>
+                </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"/>
+  </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown" id="about">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Начало</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                <a class="dropdown-item" href="index.html">Начало</a>
+                                <a class="dropdown-item" href="toc.html">Съдържание</a>
+                                <a class="dropdown-item" href="about.html">За тези страници</a>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Жанрови форми</a>
+                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="offices.html">Служби</a>
+                                <a class="dropdown-item" href="canons.html">Канони с ирмоси</a>
+                                <a class="dropdown-item" href="stichera.html">Стихири</a>
+                                <a class="dropdown-item" href="kontakia.html">Кондаци</a>
+                                <a class="dropdown-item" href="troparia.html">Тропари</a>
+                                <a class="dropdown-item" href="kathismata.html">Седални</a>
+                                <a class="dropdown-item" href="exaposteilaria.html">Светилни</a>
+                                <!--
+                                <a class="dropdown-item" href="#">Заглавия</a>                    
+                                -->
+                                </div>
+                    </li>
+                    
+                     <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Изследвания</a>
+                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="show.html?document=Proekt-Miney.xml&amp;directory=meta&amp;stylesheet=meta">Състояние на изследванията върху Минея ...   </a>                 
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Индекси</a>
+                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="dates.html">Дати</a>
+                                <a class="dropdown-item" href="persons.html">Светци</a>
+                                <!--
+                                <a class="dropdown-item" href="bibl.html">Литература</a>
+-->
+                        </div>
+                    </li>
+                   
+                </ul>
+               <form method="get" class="form-inline my-2 my-lg-0" action="ft_search.html" id="pageform">
+      <input class="form-control mr-sm-2" type="text" placeholder="Търсене"/>
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+                        <i class="fas fa-search"/>
+                    </button>
+    </form>
+            </div>
+        </nav>
+        <section class="main-content">
+            <div id="content" class="container"/>
+            <div id="loadModal"/>
+        </section>
+        <footer>
+           <div class="container">
+        <div class="row">
+        <div class="col-md-3">
+         <a class="poweredby" href="http://repertorium.obdurodon.org">
+                <img src="../resources/img/icon.png" alt="Repertorium Initiative"/>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a class="poweredby" href="http://exist-db.org">
+                <img src="../resources/img/existdb.png" alt="Powered by eXist-db"/>
+            </a>
+        </div>
+         <div class="col-md-3">
+            <a href="https://creativecommons.org/share-your-work/public-domain/freeworks" target="_blank">
+            <img src="https://creativecommons.org/wp-content/uploads/2013/09/seal.png" width="20%"/>
+                </a>
+        </div>
+        <div class="col-md-3">
+           <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+            <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" width="50%"/>
+                        </a>
+        </div>
+            </div>
+            </div>
+            <script>
+            $(document).ready(function(){
+            var trigger = $('.linkedEntity');
+            $(trigger).click(function(){
+                var dataKey = $( this ).data('key');
+                dataKey = dataKey.substring(1);
+                var url = "entity-info.html?entityID="+dataKey
+               console.log([url, dataKey]);
+               // console.log(url);
+            $('#loadModal').load(url, function(){
+            $('#myModal').modal('show');
+            });
+            });
+            });
+        </script>
+            <script type="text/javascript">
+            $(window).load(function(){
+            $('#myModal').modal('show');
+            });
+        </script>
+            <!-- scroll-up-bottom -->
+            <script type="text/javascript">
+                   // http://www.jqueryscript.net/animation/jQuery-Plugin-For-Fixed-Positioned-Scroll-To-Top-Button-ap-scroll-top.html
+                   // Setup plugin with default settings
+                   $.apScrollTop({
+                       'onInit': function(evt) {
+                              // console.log('apScrollTop: init');
+                           }
+                       });
+            </script>
+        <!-- scroll-up-bottom end -->
+        </footer>
+    </body>
+</html>
