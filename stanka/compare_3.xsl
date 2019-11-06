@@ -22,10 +22,16 @@
     <xsl:function name="re:processEntry" as="element(xhtml:section)">
         <!-- Top-level msItemStruct -->
         <xsl:param name="entry" as="element(msItemStruct)"/>
+        <xsl:param name="msId" as="xs:string"/>
         <section class="ms">
             <h3>
                 <xsl:value-of select="$entry/title"/>
             </h3>
+            <p>
+                <cite>
+                    <xsl:value-of select="$msId"/>
+                </cite>
+            </p>
             <xsl:apply-templates select="$entry/re:sampleText/head"/>
             <ul>
                 <xsl:apply-templates select="$entry/msItemStruct"/>
@@ -50,7 +56,8 @@
                     <span style="background-color: lightgreen;">Green: agreement of all
                     three</span>; <span style="background-color: yellow;">yellow: agreement of
                         two</span>; <span style="background-color: pink;">red: disagreement</span>;
-                    no color: at least one is missing <br/>
+                    no color: at least one is missing; <span class="divider">//</span> = separator
+                    between incipita<br/>
                     <xsl:value-of select="current-dateTime()"/></p>
                 <xsl:for-each select="$all-dates => re:sort-gMonthDay()">
                     <xsl:variable name="dragEntry" as="element(msItemStruct)?"
@@ -90,33 +97,45 @@
                             <xsl:message select="if ($sinTitle) then 'Yes S' else 'No S'"/>-->
                             <xsl:choose>
                                 <xsl:when test="$dragEntry">
-                                    <xsl:sequence select="re:processEntry($dragEntry)"/>
+                                    <xsl:sequence
+                                        select="re:processEntry($dragEntry, 'Draganov minei')"/>
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <section class="ms">
                                         <h3>[missing]</h3>
+                                        <p>
+                                            <cite>Draganov minei</cite>
+                                        </p>
                                     </section>
                                 </xsl:otherwise>
                             </xsl:choose>
                             <hr/>
                             <xsl:choose>
                                 <xsl:when test="$skopEntry">
-                                    <xsl:sequence select="re:processEntry($skopEntry)"/>
+                                    <xsl:sequence
+                                        select="re:processEntry($skopEntry, 'Skopski minei')"/>
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <section class="ms">
                                         <h3>[missing]</h3>
+                                        <p>
+                                            <cite>Skopski minei</cite>
+                                        </p>
                                     </section>
                                 </xsl:otherwise>
                             </xsl:choose>
                             <hr/>
                             <xsl:choose>
                                 <xsl:when test="$sinEntry">
-                                    <xsl:sequence select="re:processEntry($sinEntry)"/>
+                                    <xsl:sequence
+                                        select="re:processEntry($sinEntry, 'Sinajski minei 25')"/>
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <section class="ms">
                                         <h3>[missing]</h3>
+                                        <p>
+                                            <cite>Sinajski minei 25</cite>
+                                        </p>
                                     </section>
                                 </xsl:otherwise>
                             </xsl:choose>
@@ -172,6 +191,11 @@
         <span class="os">
             <xsl:apply-templates/>
         </span>
+        <xsl:if test="following-sibling::incipit">
+            <xsl:text> </xsl:text>
+            <span class="divider">//</span>
+            <xsl:text> </xsl:text>
+        </xsl:if>
     </xsl:template>
 
     <!-- Inline elements inside <sampleText> -->
