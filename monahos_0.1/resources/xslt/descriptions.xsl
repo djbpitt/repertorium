@@ -29,21 +29,22 @@
                                     <xsl:value-of select="//tei:msIdentifier/tei:msName[@type='general']"/>
                                     </td>
                                     </tr>
-                                    <tr>
-                                    <th>Individual name</th>
-                                    <td>
-                                    <xsl:for-each select="//tei:msIdentifier/tei:msName[@type='individual']">
-                                                <xsl:element name="abbr">
-                                                    <xsl:attribute name="title">
-                                                        <xsl:value-of select="name(.)"/>
-                                                    </xsl:attribute>
-                                                    <xsl:value-of select="."/>
-                                                    <xsl:text> | </xsl:text>
-                                                </xsl:element>
-                                            </xsl:for-each>
-                                    
-                                    </td>
-                                    </tr>
+                                    <xsl:if test="//tei:msName[@type='individual']">
+                                        <tr>
+                                            <th>Individual name</th>
+                                            <td>
+                                                <xsl:for-each select="//tei:msIdentifier/tei:msName[@type='individual']">
+                                                    <xsl:element name="abbr">
+                                                        <xsl:attribute name="title">
+                                                            <xsl:value-of select="name(.)"/>
+                                                        </xsl:attribute>
+                                                        <xsl:value-of select="."/>
+                                                        <xsl:text> | </xsl:text>
+                                                    </xsl:element>
+                                                </xsl:for-each>
+                                            </td>
+                                        </tr>
+                                    </xsl:if>
                                     <tr>
                                     <th>Country</th>
                                     <td>
@@ -64,33 +65,31 @@
                                     </mark>
                                     </td>
                                     </tr>
-                                    <tr>
-                                     <th>Former identifiers</th>
-                                    <td>
-                                    <xsl:if test="//tei:altIdentifier[@type='former']/tei:idno[@type='catalogue']">
-                                    <mark>Catalogue: </mark>
-                                    <xsl:value-of select="//tei:altIdentifier[@type='former']/tei:idno[@type='catalogue']"/>
+                                    <xsl:if test="//tei:altIdentifier">
+                                        <tr>
+                                            <th>Former identifiers</th>
+                                        <td>
+                                            <xsl:if test="//tei:altIdentifier[@type='former']/tei:idno[@type='catalogue']">
+                                                <mark>Catalogue: </mark>
+                                                <xsl:value-of select="//tei:altIdentifier[@type='former']/tei:idno[@type='catalogue']"/>
+                                            </xsl:if>
+                                        </td>
+                                        </tr>
                                     </xsl:if>
-                                    </td>
-                                    </tr>
                                     <tr>
                                         <th>Material</th>
                                         <td>
                                             <xsl:apply-templates select="//tei:support/tei:material"/>
                                         </td>
                                     </tr>
-                                     <tr>
+                                    <tr>
                                         <th>Extent</th>
                                         <td>
-                                        <p>
-                                        <mark>Folia:</mark>
-                                        <xsl:apply-templates select="//tei:measure[@unit='folia']"/>
-                                    </p>
-                                        <p>
-                                        <mark>Dimensions: </mark>
-                                        <xsl:apply-templates select="//tei:dimensions"/>
-                                    </p>
-                                         
+                                            <mark>Folia:</mark>
+                                            <xsl:apply-templates select="//tei:measure[@unit='folia']"/>
+                                            <br/>
+                                            <mark>Dimensions: </mark>
+                                            <xsl:apply-templates select="//tei:dimensions"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -105,36 +104,45 @@
                                             <xsl:apply-templates select="//re:ink"/>
                                         </td>
                                     </tr>
+                                    <xsl:if test="tei:decoDesc">
                                     <tr>
                                         <th>Decoration</th>
                                         <td>
                                             <xsl:apply-templates select="//tei:decoDesc"/>
                                         </td>
                                     </tr>
+                                    </xsl:if>
+                                    <xsl:if test="//tei:binding">
                                       <tr>
                                         <th>Binding</th>
                                         <td>
                                             <xsl:apply-templates select="//tei:binding"/>
                                         </td>
                                     </tr>
+                                    </xsl:if>
                                     <tr>
                                         <th>Condition</th>
                                         <td>
                                             <xsl:apply-templates select="//tei:supportDesc/tei:condition"/>
                                         </td>
                                     </tr>
+                                    <xsl:if test="//re:scribe">
                                      <tr>
                                         <th>Scribe</th>
                                         <td>
-                                        <p>
-                                        <mark>Folia: </mark>
-                                        <xsl:apply-templates select="//re:scribe/tei:locus"/>
-                                    </p>
-                                        <p>
-                                        <mark>Name: </mark>
+                                            <mark>Folia: </mark>
+                                            <xsl:apply-templates select="//re:scribe/tei:locus"/>
+                                            <br/>
+                                            <mark>Name: </mark>
                                             <xsl:apply-templates select="//re:scribe/tei:name"/>
-                                    </p>
                                         </td>
+                                    </tr>
+                                    </xsl:if>
+                                    <tr>
+                                        <th>Summary</th>
+                                        <td>
+                                    <xsl:apply-templates select="//tei:msContents/tei:summary"/>
+                                </td>
                                     </tr>
                                     <tr>
                                         <th>Content</th>
@@ -208,6 +216,14 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="tei:msContents">
+        <xsl:apply-templates select="* except tei:summary"/>
+    </xsl:template>
+    
+    <xsl:template match="tei:decoDesc/tei:p | tei:binding/tei:p">
+        <xsl:apply-templates/>
+    </xsl:template>
+    
      <xsl:template match="tei:div">
         <xsl:element name="div">
             <xsl:attribute name="class">body-div</xsl:attribute>
@@ -256,22 +272,22 @@
         <xsl:text>]</xsl:text>
     </xsl:template>
     
-     <xsl:template match="//re:sampleText">
-     <div class="sample">
-         <xsl:apply-templates/>
+    <xsl:template match="re:sampleText">
+        <div class="sample">
+            <xsl:apply-templates/>
         </div>
     </xsl:template>
     
-     <xsl:template match="//re:sampleText//tei:head">
-     <mark>Heading: </mark>
+    <xsl:template match="re:sampleText//tei:head">
+    <mark>Heading: </mark>
         <span lang="cu">
-         <xsl:apply-templates/>
+            <xsl:apply-templates/>
         </span>
     </xsl:template>
     
     <xsl:template match="tei:incipit">
         <li>
-        <mark>Incipit: </mark>
+            <mark>Incipit: </mark>
             <span lang="cu">
                 <xsl:apply-templates/>
             </span>
@@ -326,19 +342,23 @@
     </xsl:template>
     
     <xsl:template match="tei:msItemStruct">
-        <xsl:for-each select=".">
-            <p>
+        <li id="{@xml:id}">
+            <xsl:apply-templates select="* except (re:sampleText|tei:note)"/>
+            <ul>
+                <xsl:apply-templates select="re:sampleText"/>
+            </ul>
+        </li>
+    </xsl:template>
+    
+    <xsl:template match="tei:msItemStruct/tei:msItemStruct">
+        <ul>
+            <li id="{@xml:id}">
+                <xsl:apply-templates select="* except (re:sampleText|tei:note)"/>
                 <ul>
-                    <xsl:for-each select="./*">
-                        <li>
-                            <strong>
-                                <xsl:value-of select="name(.)"/>
-                            </strong>: <xsl:apply-templates select="."/>
-                        </li>
-                    </xsl:for-each>
+                    <xsl:apply-templates select="re:sampleText"/>
                 </ul>
-            </p>
-        </xsl:for-each>
+            </li>
+        </ul>
     </xsl:template>
     
      <xsl:template match="tei:dimensions">
@@ -413,10 +433,13 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template match="tei:locus">
-    <span class="locus">
-    <xsl:apply-templates/>
-    </span>
+    
+    <xsl:template match="tei:msItemStruct/tei:locus">
+        <span class="locus">
+            <xsl:text>(</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>) </xsl:text>
+        </span>
     </xsl:template>
     
     

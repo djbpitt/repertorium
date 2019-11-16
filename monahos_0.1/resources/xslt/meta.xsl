@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://www.tei-c.org/ns/Examples" exclude-result-prefixes="tei ns2" version="2.0"><!-- <xsl:strip-space elements="*"/>-->
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://www.tei-c.org/ns/Examples" exclude-result-prefixes="tei ns2" version="2.0"><!-- <xsl:strip-space elements="*"/>-->
     <xsl:param name="path2source"/>
     <!--
 ##################################
@@ -330,10 +330,11 @@
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
+    
     <xsl:template match="tei:bibl">
-        <xsl:element name="strong">
+        <li id="{@xml:id}">
             <xsl:apply-templates/>
-        </xsl:element>
+        </li>
     </xsl:template>
     
     <xsl:template match="tei:pb">
@@ -404,16 +405,6 @@
         </xsl:element>
     </xsl:template>
     
-    <xsl:template match="tei:origDate[@notBefore and @notAfter]">
-        <xsl:variable name="dates">
-            <xsl:value-of select="./@*" separator="-"/>
-        </xsl:variable>
-        <abbr title="{$dates}">
-            <xsl:value-of select="."/>
-        </abbr>
-    </xsl:template>
-    
-    
     <xsl:template match="tei:title">
         <strong>
             <xsl:apply-templates/>
@@ -421,11 +412,9 @@
     </xsl:template>
     
     <xsl:template match="tei:listBibl">
-        <xsl:for-each select=".//tei:bibl">
-            <li>
-                <xsl:apply-templates/>
-            </li>
-        </xsl:for-each>
+        <ul>
+            <xsl:apply-templates/>
+        </ul>
     </xsl:template>
     
     <xsl:template match="tei:ptr">
@@ -441,13 +430,31 @@
         </code>
     </xsl:template>
     
+    <!--
     <xsl:template match="ns2:egXML">
 <pre>
         <code>
             <xsl:apply-templates/>
         </code>
      </pre>       
+    </xsl:template>
+    -->
 
+    <xsl:template match="ns2:egXML">
+        <pre>
+            <xsl:apply-templates/>
+        </pre>       
+    </xsl:template>
+    
+    <xsl:template match="ns2:*">
+        <xsl:variable name="tag_color" as="xs:string" select="'#e83e8c'"/>
+        <code style="color: {$tag_color}">
+            <xsl:value-of select="string-join(('&lt;',              local-name(),              for $i in @* return concat(' ', $i/name(), '=', $i),             '&gt;'),'')"/>
+        </code>
+        <xsl:apply-templates/>
+        <code style="color: {$tag_color}">
+            <xsl:value-of select="concat('&lt;/', local-name(), '&gt;')"/>
+        </code>
     </xsl:template>
     
     <xsl:template match="tei:gi">
@@ -471,6 +478,7 @@
         </a>
     </xsl:template>
     
+    <!--
     <xsl:template match="tei:ref">
         <xsl:choose>
             <xsl:when test="@target[ends-with(.,'.xml')]">
@@ -492,6 +500,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    -->
     
     <xsl:template match="tei:list">
         <ul>
