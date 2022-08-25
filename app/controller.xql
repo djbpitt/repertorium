@@ -30,6 +30,8 @@ then
             <add-parameter name="exist:path" value="{$exist:path}"/>
             <add-parameter name="exist:controller" value="{$exist:controller}"/>
             <add-parameter name="exist:resource" value="{$exist:resource}"/>
+            <add-parameter name="context" value="{$context}"/>
+            <add-parameter name="fqcontroller" value="{$fqcontroller}"/>
         </forward>
         <view>
             (:transformation to html is different for different modules:)

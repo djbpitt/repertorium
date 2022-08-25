@@ -1,67 +1,278 @@
-@font-face {
-    font-family: 'Bukyvede_raised-pokrytie';
-    src: url('/css/fonts/Bukyvede-Regular_raised-pokrytie.eot'); /* IE9 Compat Modes */
-    src: url('/css/fonts/Bukyvede-Regular_raised-pokrytie.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ 
-url('/css/fonts/Bukyvede-Regular_raised-pokrytie.woff') format('woff'), /* Modern Browsers */ 
-url('/css/fonts/Bukyvede-Regular_raised-pokrytie.ttf') format('truetype'), /* Safari, Android, iOS */ 
-url('/css/fonts/Bukyvede-Regular_raised-pokrytie.svg#79df6eed989ab9ded1da8b07bf601a25') format('svg'); /* Legacy iOS */
 
-    font-style: normal;
-    font-weight: 400;
+/*
+  style.css
+  Author: David J. Birnbaum
+  Email: djbpitt@pitt.edu
+  Original version: 2007-08-02
+  Last revised: 2022-08-25
+  Partially based on:
+  http://ella.slis.indiana.edu/~jawalsh/share/css/tei2html.css
+  John Walsh, jawalsh@indiana.edu
+  Accessed: 2007-08-02
+ */
+/* 
+  * Custom properties (variables)
+  */
+:root {
+    --background-color: #f4eee2;
+    --color: black;
+    --line-height: 1.4em;
 }
-@font-face {
-    font-family: 'KlimentStdRegularWeb';
-    src: url('/css/fonts/kliment_std-webfont.eot');
-    src: url('/css/fonts/kliment_std-webfont.eot?#iefix') format('embedded-opentype'), 
-url('/css/fonts/kliment_std-webfont.woff') format('woff'), 
-url('/css/fonts/kliment_std-webfont.ttf') format('truetype'), 
-url('/css/fonts/kliment_std-webfont.svg#KlimentStdRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+dfn {
+    /* opera and safari don't style dfn at all;
+       other browsers may use italic instead of true oblique
+       (is this font-specific?) */
+    font-style: oblique;
 }
-@font-face {
-    font-family: 'BukyvedeWeb';
-    src: url('/css/fonts/bukyvede-regular-webfont.eot');
-    src: url('/css/fonts/bukyvede-regular-webfont.eot?#iefix') format('embedded-opentype'), 
-url('/css/fonts/bukyvede-regular-webfont.woff') format('woff'), 
-url('/css/fonts/bukyvede-regular-webfont.ttf') format('truetype'), 
-url('/css/fonts/bukyvede-regular-webfont.svg#BukyvedeRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+body {
+    font-family: cambria, "palatino linotype", times, serif;
+    /* georgia is missing the acute accent, so IErenders a box */
+    line-height: var(--line-height);
+    background-color: var(--background-color);
+    color: var(--color);
+    padding-left: 5px;
 }
-@font-face {
-    font-family: 'BukyvedeLightWeb';
-    src: url('/css/fonts/Bukyvede_Light.eot'); /* IE9 Compat Modes */
-    src: url('/css/fonts/Bukyvede_Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ 
-url('/css/fonts/Bukyvede_Light.woff') format('woff'), /* Modern Browsers */ 
-url('/css/fonts/Bukyvede_Light.ttf') format('truetype'), /* Safari, Android, iOS */ 
-url('/css/fonts/Bukyvede_Light.svg#1d6dadb2045bcf2c9fcbd3f4b1735ff4') format('svg'); /* Legacy iOS */
-
-    font-style: normal;
-    font-weight: 200;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Verdana, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
+    color: #351408;
+    line-height: 1.4em;
+    page-break-after: avoid;
+    position: relative;
+    /* otherwise IE cuts off top of H1 with increased line-height */
 }
-
-@font-face {
-    font-family: 'MenaionWeb';
-    src: url('/css/fonts/menaion_djb_5.1-webfont.eot');
-    src: url('/css/fonts/menaion_djb_5.1-webfont.eot?#iefix') format('embedded-opentype'), 
-url('/css/fonts/menaion_djb_5.1-webfont.woff') format('woff'), 
-url('/css/fonts/menaion_djb_5.1-webfont.ttf') format('truetype'), 
-url('/css/fonts/menaion_djb_5.1-webfont.svg#BukyvedeRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+pre {
+    font-family: "Andale Mono", "Courier New", monospace;
+    font-size: 95%;
+    line-height: 1.1em;
+    border: 1px dashed #990000;
+    /* background-color : aqua; */
+    background-color: #D3C8B4;
+    color: black;
+    margin: 1em;
+    padding: 1em;
 }
-@font-face {
-    font-family: 'LazovWeb';
-    src: url('/css/fonts/lazov05-webfont.eot');
-    src: url('/css/fonts/lazov05-webfont.eot?#iefix') format('embedded-opentype'), 
-url('/css/fonts/lazov05-webfont.woff') format('woff'), 
-url('/css/fonts/lazov05-webfont.ttf') format('truetype'), 
-url('/css/fonts/lazov05-webfont.svg#BukyvedeRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+.pre-highlight {
+    font-style: italic;
+    font-weight: bold;
+    color: #D7301F;
 }
-
+pre.bad_code {
+    background-color: #FFC0CB
+}
+.pre-colored { /* color non-pre stuff like pre */
+    border: 1px dashed #990000;
+    /* background-color : aqua; */
+    background-color: #D3C8B4;
+    color: black;
+    margin: 1em;
+    padding: 1em;
+}
+code {
+    font-family: "Andale Mono", "Courier New", monospace;
+    /*color : #870429;*/
+    color: #D7301F;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+sub,
+sup {
+    line-height: 0em;
+}
+ol li ol {
+    list-style-type: lower-alpha;
+}
+/* set main spacing at the h3 element instead of the ul
+    so that it will be present when the list is collapsed
+    but add a bit more at the ul level */
+#toc h2 {
+    margin-bottom: 0;
+    padding-bottom: 0.5em;
+    cursor: pointer; /* indicate clickability */
+}
+#toc h3 {
+    font-size: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0.1em;
+    margin-top: 0;
+    padding-top: 0.3em;
+    cursor: pointer; /* indicate clickability */
+}
+/* toc lists have no bullets and no top-level indentation 
+    they are also closer to the header above than below */
+#toc ul {
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0.5em;
+}
+#toc li > span {
+    list-style-type: none;
+    /* simulate a link */
+    color: blue;
+    cursor: pointer;
+}
+#toc li > span:hover {
+    text-decoration: underline;
+}
+a {
+    text-decoration: none; /* don't underline links */
+}
+a:link:hover,
+a:visited:hover {
+    text-decoration: underline;
+}
+li > p {
+    /* paragraphs are okay within list items, but:
+        need to suppress usual vertical spacing to avoid spacing between list items
+        need to tab non-initial paragraphs to make up for lack of vertical spacing */
+    margin: 0;
+    padding: 0;
+}
+li > p + p {
+    text-indent: 1.5em;
+}
+table {
+    border-collapse: collapse;
+}
+table,
+th,
+td {
+    border-color: gray;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+}
+.level2 {
+    /* indentation for nested list */
+    margin-left: 1em;
+}
+.level3 {
+    /* indentation for nested list */
+    margin-left: 2em;
+}
+.level4 {
+    /* indentation for nested list */
+    margin-left: 3em;
+}
+.level5 {
+    /* indentation for nested list */
+    margin-left: 4em;
+}
+/* floating divs for pseudo-frames*/
+#header {
+    padding: 0 0 0; /* top, right-left, bottom */
+    overflow: visible;
+    height: 200px;
+    white-space: nowrap;
+}
+.frame {
+    /* for toc and entries frames 
+    must specify top and bottom in order for scroll bars to work */
+    position: absolute;
+    top: 200px;
+    bottom: 0;
+    overflow: auto;
+    margin: 0 5px 10px; /* top, right-left, bottom */
+}
+#toc {
+    left: 5px;
+    width: 185px;
+    font-size: smaller;
+    line-height: 1.2em;
+}
+#entries {
+    left: 190px;
+    padding-left: 10px;
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+#entries h2 {
+    margin-top: 14px;
+}
+.boilerplate > span {
+    text-indent: -1em;
+    margin-left: 1em;
+    display: block;
+    font-size: smaller;
+    line-height: 1.2em;
+}
+.logo {
+    color: #A00000;
+}
+dt {
+    font-size: larger;
+    line-height: 1.2em;
+    margin-bottom: .2em;
+    margin-top: .7em;
+}
+dt > span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.arrow {
+    color: teal;
+}
+dl.normal > dt {
+    font-size: inherit;
+}
+dl.normal > dd {
+    font-size: inherit;
+}
+dd > span {
+    display: block;
+    text-indent: -1em;
+    margin-left: 1em;
+}
+.offline {
+    opacity: 0.4;
+}
+q {
+    quotes: '“' '”' '‘' '’';
+}
+.note {
+    font-size: smaller;
+}
+ul.two-column {
+    column-count: 3;
+    padding-left: 24px;
+}
+@media all and (max-width : 62.5em) {
+    ul.two-column {
+        column-count: 2;
+    }
+}
+ul.three-column {
+    column-count: 4;
+    padding-left: 24px;
+}
+@media all and (max-width : 70em) {
+    ul.three-column {
+        column-count: 3;
+    }
+}
+@media all and (max-width : 50em) {
+    ul.three-column {
+        column-count: 2;
+    }
+}
+ul.two-column > li,
+ul.three-column > li {
+    margin-left: 1em;
+}
+.folio {
+    max-width: 300px;
+    width: 40%;
+    float: right;
+    margin: 0 0 1em 1em;
+    border: none;
+}
 .os {
     font-family: BukyvedeWeb, KlimentStdRegularWeb, LazovWeb, MenaionWeb;
     font-weight: normal;
@@ -402,4 +613,15 @@ div.bibData > .scope:before {
 }
 .hide {
     display: none;
+}
+/*
+ * <Footer> holds credits and copyright information
+ * Only <hr> is at top of <footer>
+ */
+footer {
+    display: block;
+    font-size: smaller;
+}
+footer > p {
+    margin: 0;
 }
