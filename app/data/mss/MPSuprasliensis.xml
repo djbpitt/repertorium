@@ -1,0 +1,1178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-MPSuprasliensis">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Codex Suprasliensis: menologion for March, 10th century</title>
+                <author xml:id="MP">Maya Petrova</author>
+                <editor xml:id="AM">Anisava Miltenova</editor>
+                <editor xml:id="AB">Andrej Bojadžiev</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Institute of Literature</publisher>
+                <pubPlace>Sofia</pubPlace>
+                <date when="1998">1998</date>
+                <idno type="Repertorium">RC-MPSuprasliensis</idno>
+                <availability status="free">
+                    <p>The intellectual content of this file is copyrighted by the creators under
+                        the Creative Commons Attribution-No Derivative Works 3.0 under legislation
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
+                        information, but you are not allowed to alter, transform, or build upon the
+                        works on this section of the site. All reuse or distribution of this work
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <ref target="bib:Заимов1982">Заимов, Капалдо 1982</ref>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <date when="1998-12-19">19.12.1998</date>
+                <settlement>Sofia</settlement>
+            </creation>
+            <langUsage>
+                <language ident="cu">Old Slavic</language>
+                <language ident="bg">Bulgarian</language>
+                <language ident="en">English</language>
+                <language ident="ru">Russian</language>
+                <language ident="la">Latin</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="Repertorium">
+                    <list type="simple">
+                        <item>Reading menaion for March</item>
+                        <item>Vitae</item>
+                        <item>Homilies</item>
+                    </list>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
+                    <p>In the context of this project, private URIs with the prefix "bib" point to
+                        bibl elements in the project's bib.xml file.</p>
+                </prefixDef>
+            </listPrefixDef>
+        </encodingDesc>
+        <revisionDesc>
+            <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
+                element &lt;origDate&gt;</change>
+            <change who="#AB" when-iso="2010-07-10">Conversion to Repertorium 3.3. Included head
+                element and its content. Small edtorial changes. Rearanged revisionDesc: now the
+                last change come to the first place. </change>
+            <change who="#AM" when-iso="2010-03-13">Conversion to Repertorium 3.2</change>
+            <change who="#AB" when="2009-03-02">Conversion to Repertorium 3.0</change>
+            <change who="#AB" when="2009-04-17">Removed constructions
+                &lt;author&gt;anonumous&lt;/author&gt;</change>
+            <change who="#AB" when="2009-04-17">Added copyright statement</change>
+            <change who="#AB" when="2009-04-13">Added Repertorium Identifier</change>
+            <change who="#AB" when="2009-04-15">Corrections</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <msDesc>
+                <head>Menologion and Triodion Panegyrikon, 10th c., Southeastern Bulgaria</head>
+                <msIdentifier>
+                    <msName xml:lang="en" type="general">menologion</msName>
+                    <msName xml:lang="bg" type="individual">Супрасълски сборник</msName>
+                    <msName xml:lang="la" type="individual">Codex Suprasliensis</msName>
+                    <msName xml:lang="en" type="individual">Codex Suprasliensis</msName>
+                    <msName xml:lang="ru" type="individual">Супрасльская рукопись</msName>
+                    <p>Parts are:</p>
+                    <altIdentifier type="partial" n="1." xml:id="Kopitar2">
+                        <country>Slovenia</country>
+                        <settlement>Ljubljana</settlement>
+                        <repository>National and University library</repository>
+                        <idno type="shelfmark">Cod. Kopitrar 2</idno>
+                    </altIdentifier>
+                    <altIdentifier type="partial" n="2." xml:id="BO3201">
+                        <country>Poland</country>
+                        <settlement>Warszawa</settlement>
+                        <repository>Biblioteka Narodowa</repository>
+                        <collection>Zamojski's collection</collection>
+                        <idno type="shelfmark">BO 3.201</idno>
+                    </altIdentifier>
+                    <altIdentifier type="partial" n="3." xml:id="QpI72">
+                        <country>Russia</country>
+                        <settlement>Sankt Peterburg</settlement>
+                        <repository>Rossiiskaia natsional’naia biblioteka</repository>
+                        <collection>Osnovnoe sobranie</collection>
+                        <idno type="shelfmark">Q.p.I.72</idno>
+                    </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                    <objectDesc form="codex">
+                        <supportDesc material="parchment">
+                            <extent>
+                                <measure unit="folia">285</measure>
+                                <note>(<ref target="#Kopitar2">118 ff.</ref>, <ref target="#BO3201"
+                                        >151 ff.</ref>, <ref target="#QpI72">16 ff</ref>)</note>
+                                <dimensions unit="mm" corresp="Kopitar2" type="folia">
+                                    <height>310</height>
+                                    <width>213</width>
+                                </dimensions>
+                                <dimensions unit="mm" corresp="QpI72" type="folia">
+                                    <height>312</height>
+                                    <width>250</width>
+                                </dimensions>
+                            </extent>
+                            <collation>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">16</extent>
+                                </quire>
+                                <pricking xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                    >no;</pricking>
+                            </collation>
+                            <condition>
+                                <p>The beginning and the end of Ljubljana part is missing; f. 38
+                                    (containing part of the Vita of SS Terentius, Africanus and
+                                    Pompius) is bound at a wrong place and should be read after f.
+                                    88v. Two leaves have been lost from the middle of the Vita of St
+                                    Paul the Simple, after f. 86v. There are lacunae between
+                                    ff.78v-79r, 84v-85r.</p>
+                                <p>The edges of the folia in Ljubljana part were trimmed during the
+                                    restoration of this part of the MS, with the result that the
+                                    parts that are now in Saint Petersburg and Warsaw are slightly
+                                    larger (313x250)</p>
+                            </condition>
+                        </supportDesc>
+                        <layoutDesc>
+                            <layout columns="1" writtenLines="30"/>
+                        </layoutDesc>
+                    </objectDesc>
+                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Dark brown</ink>
+                    <decoDesc>
+                        <p>Small borders and initials in geometrical style, painted with the same
+                            ink as the main text, mark the beginnings of almost every chapter
+                                (<locus>ff. 8r, 12r-12v, 27v, 34v, 41v-42r, 50r, 61rr, 63v, 72v,
+                                73v,85v-86r, 88v, 93r, 105r, 107r-107v, 110v</locus>)</p>
+                    </decoDesc>
+                    <bindingDesc>
+                        <binding>
+                            <p>No orginal binding</p>
+                        </binding>
+                    </bindingDesc>
+                    <additions type="inscriptions">
+                        <locus>f. 260</locus>
+                        <quote xml:lang="cu">г(оспод)и помилоуи <persName full="yes"
+                                >ретъка</persName> амин</quote>
+                        <note>This marginal note reads: ‘Lord have mercy on Retŭko. Amen. Some
+                            researchers have suggested that Retŭko is the name of a scribe.</note>
+                    </additions>
+                </physDesc>
+                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                    <summary xmlns="http://www.tei-c.org/ns/1.0">Codex Suprasliensis shows careful
+                        Cyrillic writing and craftsmanship.</summary>
+                    <scribe n="1">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-118v</locus>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
+                            <p>Uncial of archic type</p>
+                        </scriptDesc>
+                        <scribeLang>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Two jers; four letters for
+                                    the nasals: back nasal, jotated back nasal and two signs for the
+                                    front nasal (one in postvocalic position, one in postconsonantal
+                                    position); mixing up of the jat' and jotated "a" in the same
+                                    position following soft consonants.</p>
+                            </orthography>
+                        </scribeLang>
+                        <note xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref type="bibl" target="bib:Велчева1980">Велчева 1980</ref>
+                        </note>
+                    </scribe>
+                    <scribe n="2">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">66r, line 30</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
+                            <name full="yes">M. Petrova</name>
+                            <resp>de visu</resp>
+                        </respStmt>
+                    </scribe>
+                    <scribe n="3">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">67r, line 9-20</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                    </scribe>
+                    <scribe n="4">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">109v, line 8-16</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                    </scribe>
+                </scribeDesc>
+                <msContents>
+                    <msItemStruct xml:id="ACD1">
+                        <locus n="1">1r-8r</locus>
+                        <title xml:lang="bg">Житие на св. Павел и Юлияния</title>
+                        <date type="churchCal" when="--03-04">4th of March</date>
+                        <note>Without beginning and title.</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <re:sampleText xml:lang="cu">
+                            <incipit defective="true">мꙑи҅хъ бо о҅тъ бога ѥ҅свѣ· твоѥи бо доуши
+                                погꙑбѣль҆ прѣо҅долѣ дожи и҆ до съмрь҆ти· не добрѣ мѫдровати на
+                                цѣломѫдрованиѥ къ богоу·</incipit>
+                            <explicit>и҅ їшедъше крь҆стиꙗ҅ни възꙙшꙙ тѣлесѣ ст꙯оую̑· и҅ погребошꙙ
+                                мирьнѣ съ радостиѭ̑· цѣсарь҆ствоуѭ̑штоу г꙯оу нашемоу їс꙯ хс꙯оу· сь
+                                н҄имь҆же о҅тⸯцоу слава· коупⸯно съ ст꙯ꙑи҅мь҆ д꙯хомⸯ нꙑнꙗ̑ и҅ присно
+                                и҅ вь вѣкꙑ вѣкомь҆ амін ⁘</explicit>
+                        </re:sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD2">
+                        <locus n="2">8r-12r</locus>
+                        <title xml:lang="bg">Житие на св. Василиск</title>
+                        <date type="churchCal" when="--03-05">5th of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Мѣсꙙца марта въ е꙯ день҆·
+                                мѫчениѥ ст꙯ааго василиска⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ то врѣмꙙ
+                                цѣсарь҆ствовавъшоу маѯимиꙗ҅ноу· приде прѣмѣнь҆никъ въ а҅сⸯклипиѡ̑да
+                                мѣсто· и҅нъ воѥ҅вода и҅менемь а҅грипа· и҅ пои҅де на въсточь҆нѫѭ̑
+                                странѫ привести крьстиꙗ҅нꙑ жрь҆ти и҅мъ велꙙ богомъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и҅ съзъда ѥ҅моу цръкъве
+                                маринъ кто крьстиꙗнъ въ команѣ· бꙑваѭ̑тъ же чоудеса многа на мѣстѣ
+                                томь· и҅ вьси наслаждаѭ̑штеи҅ сꙙ чоудесъ· славꙙтъ о҅тⸯца и҅ сн꙯а и҅
+                                ст꙯ааго дх꙯а· нꙑн҄ѣ и҅ присно и҅ вь вѣкꙑ вѣкомъ а҅ми꙯ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD3">
+                        <locus n="3">12r-27v</locus>
+                        <title xml:lang="bg">Житие на св. Конон Исаврийски</title>
+                        <date type="churchCal" when="--03-06">6th of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта вь ѕ꙯ дьнь҆
+                                чоудотворениꙗ ст꙯ааго конона и҅же въ исавриї ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Вь врѣменехъ ст꙯ꙑи҅хъ
+                                а҅постолъ· ѥ҅гда словоу божь҆сва и҅ въплъштениꙗ о̑усꙿмоштрениѥ
+                                чловѣкомъ проповѣдаꙿше сꙙ тъгда вь҆сел҄енѣи҆ проповѣдьникъ и҅
+                                а҅постолъ паулъ· походꙙ ѧ҅зꙑкꙑ· дои҅де и҅ къ странамъ и҅сауръскꙑ
+                                мъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">никꙿтоже можетъ
+                                и҅сповѣдати послоушъствоуѭ̑штоу о҅ томъ богоу· томоу бо хръстови и҅
+                                бо꙯у нашемоу· слава съ о҅тꙿцемъ <supplied>ь</supplied> и҅ съ
+                                ст꙯ꙑи҆мъ <supplied>ь</supplied> дх꙯омъ <supplied>ь</supplied> нꙑн҄ѣ
+                                и҅ присно и҅ вь҆ вѣкꙑ вѣкомъ а҅минъ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD4">
+                        <locus n="4">27v-34v</locus>
+                        <title xml:lang="bg">Житие на св. Теодор, Константин, Теофил, Калист, Васой и дружината им</title>
+                        <date type="churchCal" when="--03-07">7th of March, Vita of the 42 Martyrs
+                            of Amorion</date>
+                        <note xml:lang="bg">(Житие на 42-мата аморийски мъченици)</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта ·з꙯· мѫчениѥ
+                                ст꙯ꙑи҅хъ и҅ славънꙑхъ новоꙗ҅вь҆шиїхъ сꙙ мѫченикъ· ѳеѡ҄дора·
+                                ко҅стантина· ѳеѡ҄фила· калиста· васоꙗ· и҅ дроужинꙑ и҅хꙿ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">На мѫченичьскꙑѧ страсти
+                                рече· любꙙштиимъ мѫченикꙑ да прость҆ремъ сꙙ· благодѣти виземь҆ѭ҄ште
+                                о҅тъ н҄іхъ· новоꙗ҅вь҆шемъ сꙙ намъ мѫченикомъ· и҅дѣте о҄убо станѣте
+                                дь҆несь·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ничꙿсоже сѫпротивна
+                                приходꙙшта кꙿ намъ не възбои҅мъ сꙙ· владꙑкѫ хрь҆ста б꙯а нашего
+                                и҅стинь҆нааго въи҅нѫ и҅мѫште о҄упꙿваниѥ҆· молити насъ ради не
+                                прѣстаи҅те· да и҅ мꙑ полоучімъ вѣчь҆нѫѭ҄ жизнь҆ о҅ х꙯ѣ и҅сѣ г꙯и
+                                нашемъ· ѥ҅моуже слава съ о҅тꙿцемъ и҅ съ ст꙯ꙑи҅мъ дх꙯омь҆· нꙑнꙗ и҅
+                                присно и҅ вь҆ вѣкꙑ вѣкомъ· а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD5">
+                        <locus n="5">34v-42r</locus>
+                        <title xml:lang="bg">Житие на св. 40 мъченици от Севастия</title>
+                        <date type="churchCal" when="--03-09">9th of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта въ ѳ꙯ дьнь҆
+                                мѫчениѥ ст꙯ꙑи҅хъ мѫченикъ м꙯· и҅же въ севастии мѫчени бꙑшꙙ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Вь҆ лѣтѣхъ лик҄иниꙗ цр꙯а·
+                                бѣа҅ше гон҄ениѥ҅ на крь҆стиꙗ҅нꙑ· и҅ вь҆си благовѣрьнѣ живѫштиї о҅
+                                х꙯ѣ· ноуждаа҅хѫ сꙙ жръти богомъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">прѣдашꙙ же своѧ доушꙙ
+                                господеви· прѣжде з꙯ дьнь҆ марта· при лик҄инии҆ самовласть҆ци· нам
+                                же цѣсарь҆ствꙋѭ҄штоу го꙯у нашемоу и҅ б꙯оу и҅ сп꙯соу· и҅ владꙑцѣ
+                                нашемоу їс꙯ хс꙯оу· ѥ҅моуже ѥ҅стъ слава и҅ дръжава и҅ честь҆· нꙑн҄ѣ
+                                и҅ присно и҅ вь҆ вѣкꙑ вѣкомь· а҅минъ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD6">
+                        <locus n="6">42r-50r</locus>
+                        <title xml:lang="bg">Похвала за св. 40 мъченици от Василий Велики</title>
+                        <author>Basil the Great</author>
+                        <date type="churchCal" when="--03-09">9th of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ст꙯аа҅го васил҄ѣ а҅рꙿхие҅пп꙯а
+                                к҄есариѧ кападок҄иїскꙑѧ· похвала о҅ м꙯ мѫченицѣхъ·</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">О мѫченичи памꙙти· како
+                                сꙑтость бѫдетъ любꙙштиїмъ мѫченикꙑ· зан҄еже кь добрꙑимъ клеврѣтомъ·
+                                чь҆сть҆ и҅ о҄указаниѥ ѥ҅стъ приꙗзни·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">благовѣрь҆нꙑи҅мъ желаниѥ
+                                соугоубишꙙ· ѥ҅днѫ побѣдѫ вь҆си благѫѭ҄ вѣрѫ вьздвигошꙙ· ѥ҅дінѣмъ же
+                                и҅ вѣньцемъ· правдꙑ о҄украсишꙙ сꙙ· о҅ х꙯ѣ їс꙯ѣ г꙯꙯꙯и нашемъ· ѥ҅моуже
+                                слава и҅ дръжава· вь҆ вѣкꙑ вѣкомь а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD7">
+                        <locus n="7">50r-61r</locus>
+                        <title xml:lang="bg">Житие на св. Кодрат</title>
+                        <date type="churchCal" when="--03-10">10th of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта въ ї꙯ мѫка
+                                ст꙯ааго кодрата и҅ и҅же сь н҄имъ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Отъ многъ и҅ различенъ
+                                градъ· похꙑштеномъ бꙑвъшемъ крьстиꙗ҅номъ· вь҆ врѣмена дек҄иꙗ цр꙯а и҅
+                                о̑уа҅лериꙗ҅на· и҅ ведомомъ бꙑвъшемъ вь никомидиискꙑи градъ
+                                вуѳиниѧ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">коньча ѱалꙿмъ· и҅ на мнозѣ
+                                помоливъ сꙙ· и҅ благодарь҆ствивъ бога· прѣклонивъ колѣнѣ· и҅ вꙑѭ̑
+                                протꙙгъ· въ добрѣ и҅сповѣдании҆· о̑усѣченъ бꙑстъ· на славѫ и҅ хвалѫ
+                                и хс꙯оу богоу нашемоу· нꙑн҄ѣ и҅ присно и҅ въ вѣкꙑ вѣкомъ
+                                ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD8">
+                        <locus n="8">61r-63v</locus>
+                        <title xml:lang="bg">Житие на св. Григорий папа Римски</title>
+                        <date type="churchCal" when="--03-11">11th of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта въ а꙯ї· житиѥ
+                                григора папꙑ роумъскаꙿго·</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Блаженꙑи григории·
+                                поставь҆ѥ҅нъ бꙑстъ патриа҅рхъ· ст꙯ѣи бж꙯ии цръкви римь҆стѣи· а҅
+                                прѣжде патриа҅ршъства· цръноризъцъ бѣ въ манастꙑри· ст꙯ааго
+                                а҅постола а҅нь҆дреа·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">бѫди же вьсѣмъ намъ
+                                почитаѭ̑штии҅мъ же и҅ послоушаѭ̑штии҅мъ· о̑услꙑшати блаженꙑи тъ
+                                гласъ· и҅ вѣчь҆нꙑи҅хъ благꙑн҄ь· ѧ҅же о̑уготова богъ любꙙштии҅мъ и҆·
+                                да нꙑ съприи҅мникꙑ сътворитъ х꙯с б꙯гъ· прѣчистьіѧ ради матере ѥ҅го
+                                ст꙯ꙑѧ богородицꙙ· ꙗ҅ко томоу подобаатъ слава честь҆ и҅ покланꙗниѥ҆·
+                                нꙑнꙗ и҅ присно и҅ вь вѣкꙑ вѣкомъ· а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD9">
+                        <locus n="9">63v-72v</locus>
+                        <title xml:lang="bg">Житие на св. Пионий</title>
+                        <date type="churchCal" when="--03-12">12th of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта въ в꙯ї· мѫчениѥ
+                                ст꙯ааго пио҅нꙿна· презвутера змурнь҆ска града⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Памꙙть҆ ст꙯ꙑи҆мъ
+                                о҅бь҆штевати а҅постоломъ велитъ вѣдꙑ· ꙗ҅ко и҅же памꙙть҆ творитъ съ
+                                вьсѣмъ срь҆дь҆цемъ и҅ вѣроѭ· и҅ и҅нѣхъ о̑утроуждаѥ҅тъ· бол҄ь҆шꙙ
+                                хотꙙште подражати· пио҅ниꙗ҅ же мѫченика·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">мѫченъ же бꙑстъ ст꙯ꙑи҆
+                                пиѡ̑нии мѣсꙙца марта в꙯ї· дьнь҆ сѫбота часъ ї꙯· при нанѣ цр꙯и· о҅
+                                насъ же цр꙯ъствоуѭ̑штоу господоу нашемꙋ ї꙯с христосоу· ѥ҅моуже слава
+                                и҅ дръжава вь вѣкꙑ вѣкомъ· а҅мин⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD10">
+                        <locus n="10">72v-73v</locus>
+                        <title xml:lang="bg">Молитва на св. Пионий</title>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">молитва ст꙯аа҅го піѡ҄ниꙗ҆·
+                                и҅же сꙙ о҅брѣте въ и҅но писаниѥ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">И вь҆ сихъ кн҄игахъ чте сꙙ
+                                роумъскꙑ· пиѡ҄нии҅ самъ сꙙ и҅сповѣда крь҆стиꙗ҅на· сѫшта· живъ да сꙙ
+                                съжежетъ и҅ о҄угодъно бꙑстъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">вь҆лѣзе въ о҅гн҄ь и҅
+                                зинѫвъ прѣда доушѫ· и҅ съконьча сꙙ ст꙯ꙑи мѫченикъ бж꙯ии въ
+                                змурь҆нии· а҅зъ же власъ въ е҅фесѣ сꙑ· въ то врѣмꙙ о҄упразнивъ сꙙ
+                                о҅тъ дѣла цр꙯а· прѣписахъ протлъковавъ о҅тъ роумъска ѧ҅зꙑка
+                                    <supplied>ѧзꙑ</supplied> ка на гръческъ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD11">
+                        <locus n="11">73v-78v</locus>
+                        <title xml:lang="bg">Житие на св. Савин</title>
+                        <date type="churchCal" when="--03-13">13th of March</date>
+                        <note>The end are missing</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта въ г꙯і мѫчениѥ
+                                ст꙯ааго савина ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Цѣсарьствоуѭ҄штоу
+                                дио҅клитиꙗноу· заповѣдь посъла сꙙ по вь҆сеи вь҆сел҄енѣи҅· ꙗ҅коже
+                                вь҆сѣмъ не покорꙙштии҅мъ сꙙ заповѣди ѥ҅го· и҅ не жь҆рѫштии҆ богомъ·
+                                мѫчени бꙑваѭ҄ште зълѫ съмрь҆тиѭ҄ о҄умрѣти·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">Ги꙯ їс꙯оу хрь҆сте слава
+                                тебѣ ꙗ҅ко сътвори съ мноѭ· недостои҅нꙑи҅мъ свои҅мъ
+                                рабомъ·</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD12">
+                        <locus n="12">79r-84v</locus>
+                        <title xml:lang="bg">Житие на св. Александър</title>
+                        <date type="churchCal" when="--03-15">15th of March</date>
+                        <note>The beginning and the end are missing</note>
+                        <note>The beginning and the end of this text has been lost</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">и҅ мнози вѣровашꙙ кꙿ немоу·
+                                Слꙑшавъ же кнꙙзъ повелѣ привести и҆· пришь҆дъшоу же а҅леѯандроу
+                                глагола ѥ҅моу кꙿнꙙзъ· рьци ми тꙑ кто ѥ҅си ль҆стꙙи҆ многꙑѧ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и҅ и҅зиде и҅нъ львъ
+                                припаде· къ ногама ст꙯ааго· вьзираѧ на лице ѥ҅моу· и҅зидошꙙ
+                                же</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD13">
+                        <locus n="13">85r-85v</locus>
+                        <title xml:lang="bg">Слово за таксиота на светите отци</title>
+                        <note>The beginning and the end are missing</note>
+                        <note>The beginning of this text has been lost</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">хъ молити ꙗ· и҅звести мꙙ
+                                и҅з бѣдꙑ тоѧ҆· да бꙑхъ покаꙗ҅лъ сꙙ къ богоу· о҅на же о҅тъвѣштаста
+                                глагол҄ѫшта бездобь молиши сꙙ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">сътворивъ же четꙑри десꙙти
+                                дьнии о҅тиде чистъ къ господоу· проо҄увѣдѣвъ прѣжде трии дь҆нии·
+                                съконьчаниѥ своѥ· ходивъшии҆ же и҅ видѣвъшии҆ достои҅новѣрь҆нии҆
+                                о҅ть҆ци· ти съповѣдашꙙ намъ о҄успѣха ради· богоу же подобаатъ слава
+                                дръжава· и҅ покланꙗниѥ съ безначꙙльнꙑи҆мъ о҅ть҆цемъ· и҅ съ сꙑномъ и҅
+                                животворꙙштиимъ дх꙯омъ· нꙑн҄ѣ и҅ присно и҅ вь҆ вѣкꙑ вѣкомъ· Аминꙿ
+                                ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD14">
+                        <locus n="14">85v-88v</locus>
+                        <title xml:lang="bg">Житие на св. Павел Препрости</title>
+                        <note>Two folia are missing from the middle of the text after f. 86v</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Мѣсꙙца марта въ девꙙтꙑ на
+                                десꙙте· житиѥ прѣподобь҆нааго о҅тьца нашего· павъла прѣпростааго
+                                ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Повѣдаа҅ше же ст꙯ꙑи божии·
+                                и҅е҅раѯ· и҅ кронии҆· и҅ и҅ни мнози о҅тъ братиѧ
+                                    <supplied>и</supplied> о҅ н҄ихъже хъштѫ глаголати· ꙗ҅ко паулъ
+                                нѣкꙿто пол҄ьскꙑи҆ ратаи҆· и҅здрꙙдь безълобенъ и҅ простъ
+                                житиѥ҅мъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">сии҆ нарече сꙙ прѣпростꙑи
+                                вь҆сеѭ҄ братиѭ҄· ѥ҅гоже молитвами причꙙсть҆ници бѫдѣмъ цѣсарь҆ства
+                                небесъскаа҅го· нꙑн҄ѣ и҅ присно и҅ вь҆ вѣкꙑ вѣкомъ· амін ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD15">
+                        <locus n="15">88v, 38r-38v, 89r-93r</locus>
+                        <title xml:lang="bg">Житие на св. Терентий, Африкан и Помпий</title>
+                        <date type="churchCal" when="--03-20">20th of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта к꙯· мѫка
+                                свꙙтꙑихъ· терентиꙗ· африкана· и помпиꙗ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Цѣсарьствоуѭ҄҄҄штоу
+                                дек҄ию҄· римь҆стѣи власти· и҅ хотꙙштоу вь҆сꙙ на своѭ҄ вѣрѫ
+                                привлѣшти· о҅ть҆ца бо и҅мѣ диꙗ҅вола· посъла по вь҆семоу цѣсарьствоу
+                                своѥмоу·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">мѫчена же бꙑвъша свꙙтаꙗ·
+                                терентии и҅ а҅фриканъ· маѯимъ же и҅ помпии҆· и҅ дроужина и҅хъ при
+                                цр꙯оу и҅ томителю· декиа· и҅ о҄уа҅лериа· о҅ насъ же цѣсарьствоуѭ҄штꙋ
+                                господоу нашемоу їс꙯ хс꙯оу· ѥ҅моуже слава и҅ дръжа вь҆ вѣкꙑ вѣкомъ
+                                а҅минъ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD16">
+                        <locus n="16">93r-105r</locus>
+                        <title xml:lang="bg">Житие на св. Исакий</title>
+                        <date type="churchCal" when="--03-21">21st of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта к꙯а· житиѥ
+                                прѣподобънааго о҅ц꙯а нашего и҅саак҄и моностꙑра далматъскаꙿго
+                                ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">По поклон҄ении прѣст꙯ааго
+                                и҅ покланꙗѥ҅мааго кръста· г꙯а и҅ бога и҅ съпаса нашего їс꙯ хс꙯а·
+                                коумирослоужению̑ о̑уже о҅тъвръженꙋ бꙑвъшоу· вь҆са подънебесъскаꙗ·
+                                просвѣтишꙙ сꙙ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">Съконь҆ча же сꙙ свꙙтꙑи
+                                о҅ть҆ць҆ нашъ и҅ и҅сповѣдникъ и҅сак҄ии҆· мѣсꙙца марта· к꙯а·
+                                цѣсарь҆ствоуѭ̑штоу хрь҆столюбивоуо̑умоу цр꙯ю ѳеѡдосию̑· на славѫ
+                                господоу нашемоу їс꙯ хс꙯оу· ѥ҅моуже слава и҅ дръжава вь҆ вѣкꙑ вѣкомъ
+                                а҅минъ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD17">
+                        <locus n="17">105r-107r</locus>
+                        <title xml:lang="bg">Житие на св. Трофим и Евкарпион</title>
+                        <date type="churchCal" when="--03-22">22nd of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта к꙯в мѫчениѥ
+                                свꙙтоую҄· трофима и҅ е҅укарпиѡ҄на ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Мъногоу бꙑвъшоу плиштоу и҅
+                                мꙙтежоу любимаа братиѥ· и҅ горь҆цѣ прѣтꙙштоу цѣсароу на божиѧ҆ рабꙑ·
+                                люто же зъло дѣлаѭ҄штемъ по вьса мѣста кнꙙземъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и҅ съ пострадавъшии҅ми
+                                причътъша сꙙ· коупꙿно съ ст꙯ꙑи҅ми мѫченикъи· съподобиста сꙙ приѧти
+                                небесь҆скоѥ цѣсарь҆ство· съконь҆часта же сꙙ свꙙтаꙗ божиꙗ мѫченика·
+                                въ никомидии҅стѣ градѣ· о҅ христосѣ господі нашемъ· сь҆ н҄имъже
+                                о҅цо꙯у слава и҅ дръжава· съ свꙙтꙑи҅мъ доухомь· нꙑнꙗ и҅ присно и҅ вь
+                                вѣкꙑ вѣкомъ а҅минъ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD18">
+                        <locus n="18">107r-110v</locus>
+                        <title xml:lang="bg">Житие на св. Дометий</title>
+                        <date type="churchCal" when="--03-23">23rd of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Мѣсꙙца марта· к꙯г· мѫка
+                                ст꙯ааго дометиа и҅ ꙋ҄ченикъ ѥ҅го ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Іоу҆лиꙗ҅ноу тъгда
+                                пришедъшоу въ а҅нтио҅хии҅скꙑи градъ· не бо ѥ҅стъ цѣсаремъ того
+                                нарешти· довь҆лѣѥ҅тъ бо ѥ҅моу безаконникомъ и҅ прѣстѫпь҆никомъ
+                                зъвати и·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">чътомъ же ѥ҅стъ кънꙙзи·
+                                покланꙗѥ҅мъ же чистител҄и· и҅ доброчьстивꙑи҅мъ людемъ· и҅же и҅
+                                дръзновениѥ и҅матъ молитвовати къ богоу за нꙑ· ѥ҅моуже слава
+                                дръжава· коупь҆но о҅тьцоу и҅ ст꙯оуо҄умоу дх꙯оу· нꙑнꙗ и҅ присно и҅ вь
+                                вѣкꙑ вѣкомь҆ а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD19">
+                        <locus n="19">110v-118v</locus>
+                        <title xml:lang="bg">Житие на св. Артемий</title>
+                        <date type="churchCal" when="--03-24">24th of March</date>
+                        <note>The end is missing</note>
+                        <note>The end is missing. Ljubljana part is ending here.</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Мѣсꙙца марта к꙯д· страсть
+                                свꙙтааго чистител҄ѣ и҅ мѫченика· а҅ртемиа ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Вь҆ лѣто дводесꙙтъноѥ и҅
+                                четврь҆тоѥ҆· цѣсара диѡ҄клитиа҅на· мꙙтежь҆ бꙑстъ великъ· и҅
+                                вь҆зисканиѥ бѣсовъскоѥ҅ и҅ коумирь҆скоѥ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и҅ дастъ ѥ҅моу
+                                палестинъскꙑѧ странꙑ· нарече же мѣстоу томоу и҅мꙙ</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD20">
+                        <locus n="20">1r-4r [119r-122r]</locus>
+                        <title xml:lang="bg">Слово за Благовещение от Йоан Златоуст, 1</title>
+                        <author>John Chrysostom</author>
+                        <date type="churchCal" when="--03-25">25th of March</date>
+                        <note>The beginning is missing. St Petersburg part is beginning here.</note>
+                        <note>Without beginning and title.</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">жърьцемъ· и҅ мь҆нѣ бѫдетъ
+                                страдати подроужиꙗ и волꙙ своѥѧ· а҅ твоѭ̑ шиѭ̑ брадвиѭ̑ о҅тъсѣкнетъ·
+                                къ семоу на земи ми бесѣдоуѥши и҅ прѣдъ двьрьми клѣти
+                                моѥѧ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">господь҆ бо рече къ
+                                родꙙшто̑уоумоу сꙙ· сꙑнъ ми ѥ҅си а҅зъ дь҆несь҆ родихъ тꙙ· ꙗ҅ко томоу
+                                подобаатъ слава и҅ дръжава· чь҆сть҆ и҅ поклан҄ꙗниѥ· нꙑнꙗ· и҅ присно
+                                и҅ вь вѣкꙑ вѣкомъ а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD21">
+                        <locus n="21">4r-8r [122r-126r]</locus>
+                        <title xml:lang="bg">Слово за Благовещение от Йоан Златоуст, 2</title>
+                        <author>John Chrysostom</author>
+                        <date type="churchCal" when="--03-25">25th of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">ст꙯ааго їѡ̑ана златоо̑устаа҅го
+                                слово на благовѣштениѥ богородици·</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Пакꙑ радости благовѣштениѥ·
+                                пакꙑ свободѣ вь҆звѣштениѥ· пакꙑ възваниѥ҆ пакꙑ възвраштениѥ҆· пакꙑ
+                                веселиѥ· пакꙑ работꙑ и҅збавьѥниѥ҆·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">приде борѫштиимъ сь҆
+                                любь҆вь҆ѭ̑ крѣпъкъ покровъ· тъ бо ѥ҅стъ миръ нашъ ѥ҅моуже съподобимъ
+                                сꙙ· наслаждати сꙙ вь҆сегда· благодѣть҆ѭ̑ самого христоса· ѥ҅моуже
+                                слава и҅ дръжава· вь вѣкꙑ вѣкомъ а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD22">
+                        <locus n="22">8v-9v [126v-127v]</locus>
+                        <title xml:lang="bg">Житие на св. Ириней</title>
+                        <date type="churchCal" when="--03-26">26th of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта к꙯ѕ· мѫчениѥ
+                                ст꙯аа҅го и҅ринеа ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Егда нравъ благъ съ
+                                доброчь҆стиѥ҅мъ въздрастъ· бол҄ьшии҅хъ желаѧ страхъ божии прии҅метъ·
+                                тъгда вь҆се ѥ҅же вь҆ семь҆ житии прѣо҅бидѣвъ· къ о҅бѣштанꙑи҅хъ
+                                благꙑи҅хъ приѧтию̑ подвизаѥ҅тъ сꙙ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">се же сꙙ сътвори въ срѣмѣ·
+                                старѣи҅шинъствоуѭ̑штоу провоу· цѣсаръствоуѭ̑штоу же вь҆ вѣкꙑ и҅соу
+                                хръстоу господоу нашемоу· ѥ҅моуже слава нꙑн҄ѣ и҅ присно и҅ вь҆ вѣкꙑ
+                                вѣкомъ а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD23">
+                        <locus n="23">9v-16v, 1r-2v [127v-136v]</locus>
+                        <title xml:lang="bg">Житие на св. Йона и Варахисий</title>
+                        <date type="churchCal" when="--03-29">29th of March</date>
+                        <note>The Warszaw part begins.</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта к꙯ѳ· мѫчениѥ҆
+                                ст꙯ааго їѡ̑нꙑ· и҅ варахисиꙗ· и҅ дроужинꙑ ѥ҅го ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ лѣто осмонадесꙙтоѥ цр꙯ѣ
+                                персьска саворꙗ· гон҄ениѥ бꙑстъ на црь҆кви христосовꙑ· и҅ на
+                                чътѫштꙙѧ вь҆седръжителꙗ бо бога·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">потъшта сꙙ съ вь҆сѣкоѭ̑
+                                тврьдостиѭ̑ съписати· на възграждениѥ· и҅ о̑успѣхъ· и҅ съпасениѥ и҅
+                                о̑успѣхъ почитаѭ̑штии҅мъ· ꙗ҅коже и҅ и҅нѣмъ подражател҄емъ таковꙑѧ о҅
+                                х꙯ѣ благодѣти· ѥ҅моуже слава и҅ дръжава· вь҆ вѣкꙑ вѣкомъ а҅минъ
+                                ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD24">
+                        <locus n="24">2v-5v [136v-139v]</locus>
+                        <title xml:lang="bg">Житие на св. Йоан Схоластик Синайски</title>
+                        <date type="churchCal" when="--03-30">30th of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта л꙯ житиѥ
+                                прѣпрость҆· о҅тьца їѡ̑а҅на и҅гоумена ст꙯ꙑѧ горꙑ синеи҅скꙑ· ѥ҅моуже
+                                прирокъ с<supplied>л</supplied>холастикꙿ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Еже о̑убо которꙑи ѥ҅стъ
+                                родивꙑи· добь҆ꙗ҅го сего и҅ въскръмивꙑи҆· прѣжде чръноризъства да
+                                тако рекѫ чоудънꙑи҆ градъ земънꙑи ѥ҅стъ· нѣстъ же ми потрѣба
+                                глаголати о҅ н҄емъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">о҅тъ н҄егоже за памꙙть҆
+                                о̑умол҄енъ бꙑвъ съ горꙑ къ намъ новꙑи҆ сии боговидъцъ· синеи҅скꙑѧ
+                                помлꙑсломъ съшедъ· показа намъ и тъ· богомъ написанꙑ ѥго скрижали·
+                                и҅звънѫдоу о̑убо дѣи҅ствънꙑ· и҅звънѫтрь҆ же видьнꙑ· и҅мѫштꙙ
+                                о̑утврь҆ждениѥ глагол҄ѫштꙙ сице· богоу же нашемоу слава· нꙑнꙗ и҅
+                                присно и҅ вь вѣкꙑ вѣкомъ а҅минъ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD25">
+                        <locus n="25">5v-17v [139v-151v]</locus>
+                        <title xml:lang="bg">Житие на св. Йоан Мълчаливи</title>
+                        <date type="churchCal" when="--03-31">31st of March</date>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта л꙯а· житиѥ
+                                ст꙯ааго їѡ̑ана е҅пискоупа мль҆чаливааго· моностꙑра о҅тца нашего савꙑ
+                                ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Пръвоѥ прѣдъложѫ въ словеси
+                                о҅тьца їѡ̑ана мльчаливааго· и҅же въ моностꙑри блаженааго савꙑ·
+                                ꙗ҅коже и҅ лѣтꙑ и҅ житиѥ҅мъ свѣтъломъ· и҅нѣхъ вь҆сѣхъ старѣиша
+                                сѫшта·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">помолимъ же сꙙ и҅ мꙑ
+                                о̑убозии҆· да богъ ѥ҅ште паче и҅ паче възможьна сътворитъ ѥ҅го· и҅
+                                течениѥ ѥ҅го въ мироу съвръшитъ· ꙗ҅ко томоу подобаа҅тъ слава чь҆сть҆
+                                дръжава· и҅ покланꙗниѥ о҅ц꙯оу и҅ сн꙯оу и҅ свꙙтоуо̑умоу доухоу· нꙑнꙗ
+                                и҅ присно и҅ вь вѣкꙑ вѣкомь҆· а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD26">
+                        <locus n="26">18r-22v [152r-156r]</locus>
+                        <title xml:lang="bg">Слово за Четиридневния Лазар от Йоан Златоуст, 1</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">ст꙯аа҅го о҅ц꙯꙯а нашего їѡ̑а҅на
+                                златоо̑устаа҅го слово о҅ четврѣдь҆невь҆нѣѣ҅мь҆ лазарѣ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Дьнесь҆ о҅тъ мрътвꙑи҅хъ
+                                въстаѧ лазарь҆· многоу и҅ различъ гнѣвоу раздрѣшениѥ намъ даѥ҅тъ· не
+                                вѣдѣ бо како чь҆тениѥ҅ се и҅новѣрьникомъ да врѣдъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ꙗ҅ко лазаръ ѥ҅стъ и҅же
+                                и҅ми погребенъ· а҅ х꙯с ѥ҅стъ· ѥ҅же благовол҄ениѥ҅мъ о҅ть҆чемъ·
+                                пришъдъше· ѥ҅же жизни и҅ сь҆мрь҆ти власть҆ и҅матъ· семоу слава съ
+                                о҅тцемъ и҅ съ свꙙтꙑмъ дх꙯омъ· нꙑнꙗ и҅ присно и҅ вь вѣкꙑ вѣкомъ
+                                а҅минъ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD27">
+                        <locus n="27">-25v [156v-159v]</locus>
+                        <title xml:lang="bg">Слово за Четиридневния Лазар от Йоан Златоуст, 2</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">свꙙтааго о҅ц꙯а нашего їѡ̑а҅нна
+                                златоо̑устааго слово о҅ четврь҆тодь҆нь҆нѣѣ҅мь҆ лазари ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ꙗко се мати чꙙдолюба·
+                                подавъши съсъ младеньцоу· веселитъ сꙙ дѣтиштꙋ привлачꙙштоу мꙙкъкѫ
+                                пиштѫ млѣка· таже ѥ҅гда сꙙ сьсꙙде млѣко и҅ о҅сꙑрѣѥ҆· заградитъ пѫть҆
+                                сь҆соу· тьгда и҅ дѣтишть҆ плачетъ и҅ мати болитъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">тъжде бо гласъ вь҆сꙙ нꙑ
+                                въставитъ· ꙗ҅коже и҅ нѣкꙿде а҅постолъ глагол҄етъ· въстрѫбитъ бо и҅
+                                мрь҆твии҆ вь҆станѫтъ· безъ и҅стьлѣниꙗ· благодѣтиѭ̑ г꙯и нашего їсоуса
+                                христоса· ѥ҅моуже слава и҅ дръжава· нꙑнꙗ и҅ присно и҅ вь҆ вѣкꙑ
+                                вѣкомь҆ а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD28">
+                        <locus n="28">25v-32v [159v-166v]</locus>
+                        <title xml:lang="bg">Слово за Връбница от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">свꙙтааго о҅тца нашего їѡ̑а҅на
+                                златоо̑устааго· слово на врьбьницѫ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Отъ чоудесъ къ чоудесемь҆
+                                господь҆н҄емъ ходимъ братиꙗ· и҅ дои҅дѣмъ а҅кꙑ о҅тъ силꙑ на силѫ·
+                                ꙗ҅коже бо вь҆ веригахъ златахъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">҅А к томоу прѣклонитъ сꙙ
+                                ѥ҅моу вьсѣко колѣно небесънꙑи҅хъ и҅ земь҆нꙑи҆хъ· и҅
+                                прѣи҅сподь҆н҄иихъ· славѫ ѥ҅моу въздаѭ̑ште· нꙑнꙗ и҅ присно и҅ вь҆
+                                вѣкꙑ вѣкомь а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD29">
+                        <locus n="29">32v-37v [166v-171v]</locus>
+                        <title xml:lang="bg">Слово за Връбница от патриарх Фотий</title>
+                        <author>Photios</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">фотꙗ патриа҅рха конъстантинꙗ
+                                града слово на връбницѫ и҅ о҅ лазарѣ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Егда о҅трокꙑ ѡ̑санна въ
+                                вꙑшь҆н҄ии҅хъ вь҆пиѭ̑штꙙ цръкꙑ въстрѫбитъ· и҅ свѣтълꙑи҅ тъи҅
+                                боголѣпь҆нꙑи҆ гласъ къ себѣ привлѣкѫ· вꙑсокъ бѫдѫ потъштании҅мъ·
+                                зъло бо а҅ште радости прѣдолѣѥ҅тъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">твои҅ бо людиѥ҅ мꙑ и҅
+                                о҅вь҆цꙙ паствинꙑ твоѥ҅ѧ҆· и҅ тебѣ вь҆си въсланꙗѥ҅мꙿ сꙙ· и҅ тебѣ
+                                славѫ и҅ благодарениѥ҆ въздаѥ҅мъ· коупꙿно съ о҅ть҆цемъ и҅ съ
+                                свꙙтꙑимъ доухомь҆· ѥ҅дносѫштьнѣи҆ и҅ животворꙙштии҆· и҅ вседръжꙙштиї
+                                трои҅ци· нꙑн҄ѣ и҅ присно и҅ вь вѣкꙑ вѣкомь҆ а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD30">
+                        <locus n="30">38r-43v [172r-177v]</locus>
+                        <title xml:lang="bg">Слово за смокинята на Велики понеделник от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">їѡ̑а҅нна а҅рхие҅пискоупа
+                                костантинꙗ града златоо̑устааго слово· о҅ смокви вь҆ великꙑи҆ въ
+                                понедѣл҄ьникъ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Око о̑убо видꙙ и҅ли дѫбъ
+                                цвѣть҆чанъ· и҅ли и҅сточникъ силно текѫштъ· тѣмь҆ видѣнии҅мъ тамо сꙙ
+                                влѣчетъ· и҅ срь҆дь҆чь҆нꙑи҆ о̑умъ· прѣвраштаа҅тꙿ тамо· такожде и҅
+                                о̑ухо слꙑшꙙ словесꙑ дѣа҅ниꙗ и҅ повѣсти· къ тѣмъ мꙑсль҆ си
+                                прость҆ретъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и҅ диꙗ҅волъ трепештетъ·
+                                ѥ҅го а҅гг҄ели хвалꙙтꙿ· и҅ небеса благословꙙтъ· а҅постоли
+                                проповѣдаѭ̑тъ· и҅ црь҆кви поѭ̑тъ· на н҄емъ распь҆нъшааго сꙙ господа
+                                христоса· ѥ҅мꙋже слава и҅ дръжава нꙑн҄ѣ и҅ присно и҅ вь҆ ѣкꙑ вѣкомъ·
+                                а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD31">
+                        <locus n="31">43v-50v [177v-184v]</locus>
+                        <title xml:lang="bg">Слово за поста и за Йосиф от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">свꙙтааго їѡ҄а҅нна
+                                златоо҄устаа҅го· слово о҅ а҅лкании· ї ѡ҄ їѡ҄сифѣ· и҅ о҅
+                                    н<supplied>п</supplied>он<supplied>п</supplied>ѣ и҅ о҅ давꙑдѣ
+                                ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Вь҆сѣмъ намъ по рꙙдоу· на
+                                чꙙсти пѣснь҆ поѩ҆ о҅биде блаженꙑи҆ дауидъ· Исповѣмь҆ сꙙ тебѣ господи
+                                вь҆сѣмъ срь҆дь҆цемъ мои҅мъ· повѣмь҆ вь҆са чоудеса твоꙗ҆·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">лѣпо о҄убо намъ братиꙗ
+                                блаженаа҅го павла слово и҅звѣштати· любꙙштии҅мꙿ бога вь҆се спѣѥ҅тъ
+                                сꙙ на добро· томоу слава нꙑнꙗ и҅ присно и҅ вь҆ вѣкꙑ вѣкомь҆ а҅мин
+                                ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD32">
+                        <locus n="32">50v-58v [184v-192v]</locus>
+                        <title xml:lang="bg">Слово за десетте девици от Матеевото евангелие от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">того жде їѡ҄а҅нна
+                                златоо҄устааго слово· о҅тъ тлъкованиꙗ е҅уа҅гг҄елиѧ҆· ꙗ҅же о҅тъ
+                                матꙿѳеѧ о҅ десꙙти дѣвицъ· и҅ о҅ талантѣхъ глаголано ѥ҅стъ въ
+                                    св<supplied>ъ</supplied>ѧтꙑи҆ вь҆торникъ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Тъгда о҄уподобитъ сꙙ
+                                цѣсарь҆ствиѥ небе съноѥ десꙙти дѣвицъ· ѧ҅же вь҆зь҆мъшꙙ свѣтиль҆никꙑ
+                                и҅хъ· и҅зидошꙙ на сь҆рѣтениѥ зꙙти и҅ невѣстѣ· пꙙть҆ же о҅ть н҄ихъ
+                                бѣа҅ше мѫдръ· пꙙть҆ же ѫ҅родивъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">а҅ште и҅маши о҄устомъ
+                                х꙯совомъ о҄уста подобьна· въспрѣтиши бездь҆нѣ о҅гн҄ьнѣи҅· и҅ речеши
+                                о҄умль҆кни о҅брати сꙙ· и҅ съ мнозѣмъ пꙿвании҅мъ на небо вь҆зидеши·
+                                и҅ насꙑтиши сꙙ цѣсарь҆ства· ѥ҅гоже бѫди вь҆сѣмъ намъ полоучити·
+                                благодѣтиѭ҄ и҅ чловѣколюбиѥ҅мъ г꙯а нашего їс꙯а хс꙯а· с н҄имже
+                                о҅тꙿцоу слава коупꙿно съ свꙙтꙑи҅мъ дх꙯омь҆· вь҆ вѣкꙑ вѣкомь а҅мин
+                                ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD33">
+                        <locus n="33">58v-61v [192v-195r]</locus>
+                        <title xml:lang="bg">Слово за Велики вторник от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">їѡ҄а҅нꙿна а҅рхие҅п꙯па
+                                златоо҄устааго слово въ великꙑи҆ въторникъ· и҅ о҅ събрании҆ съборъ
+                                на г꙯а· и҅ г꙯лаахѫ что сътворимъ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Приподобꙙтъ сꙙ цръквьнии҆
+                                кръмьѥ҅ници· дѣтехъ и҅же млѣко по вь҆сꙙ дь҆ни· пишти себѣ о҅тъ
+                                матера съса съсѫтъ и҅ присно просꙙтъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">мꙑ же о҄убо о҄убѣжавъше
+                                сь҆мрь҆ти родителꙗ зависти· въставъше въславимъ надъ вь҆сѣми
+                                сѫштааго б꙯а· о҅ христосѣ їсоусѣ бога нашего· нꙑнꙗ и҅ присно и҅ вь҆
+                                вѣкꙑ вѣкомъ а҅минъ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD34">
+                        <locus n="34">61v-64r [195v-198r]</locus>
+                        <title xml:lang="bg">Слово за блудницата във Велика сряда от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">їѡ̑а҅нна а҅рхие҅пискоупа
+                                златоо̑устааго слово о҅ блѫдꙿници· вь҆ великѫѭ̑ срѣдѫ къ пастѣ
+                                ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">На вь҆сѣко врѣмꙙ добро и҅
+                                съпасно покаа҅ниѥ· дръжꙙштиимъ҆ сꙙ ѥ҅го· вь҆ сиѧ же паче а҅лчьбънꙑѧ
+                                дь҆ни· на о̑успѣхъ бꙑваатъ вь҆сѣмъ чловѣкомь·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">масломъ главꙑ ми не
+                                помаза· а҅ си муромь нозѣ ми помаза· ѥ҅гоже дѣлꙗ глагол҄ѫ ти·
+                                о҅тъпоуштаѭ̑тъ сꙙ грѣси ѥ҅и҆ мнозии҆· томоу богови нашемоу слава и҅
+                                дръжава съ о҅тꙿцемь и҅ съ свꙙтꙑ мъ доухомь҆· нꙑнꙗ и҅ присно и҅ вь҆
+                                вѣкꙑ вѣкомъ а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD35">
+                        <locus n="35">64r-68v [198r-203r]</locus>
+                        <title xml:lang="bg">Слово за завистта във Велика сряда от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">їѡ̑а҅нна а҅рхие҅п꙯па
+                                златоо̑устааго слово вь҆ великѫ срѣдѫ· о҅ зависти ѥ҅же въ
+                                е҅уа҅гг҄елии҆ речено· и҅злѣзъше фарисеи съвѣтъ сътворишꙙ на їс꙯а· да
+                                ѥ҅го и҅згоубꙙт ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Елико васꙿ илиини о̑ученици
+                                ѥ҅сте ѥ҅же о̑убогꙑѧ трепезꙑ въдовичꙙ не похоули· о̑у насъ витаи҅те·
+                                сица же бо и҅ о̑у насъ словесꙑ хоуда и҅ о̑уготовь҆ѥ҅на
+                                трепеза·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">о҅тиде и҅де и нѣстъ
+                                видѣти· бѣжа и҅жде завистъ не раждаѥ҅тъ сꙙ· о҅тиде кде любꙑ живетъ·
+                                и҅ сн꙯ъ и҅ о҅тьць и҅ свꙙтꙑи доухъ· томоу слава вь҆ вѣкꙑ вѣкомъ
+                                а҅минъ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD36">
+                        <locus n="36">69r-78v [203r-212v]</locus>
+                        <title xml:lang="bg">Слово за предателството на Юда във Велики четвъртък от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">їа҅на а҅рхие҅пискоупа
+                                костантинꙗ града златоо̑устааго слово въ свꙙтꙑи четвръть҆къ· о҅
+                                прѣдани-ї-ю̑дꙑ и҅ о҅ пастѣ· и҅ о҅ сь҆казании҆ свꙙтꙑи҅хъ таи҅нъ· и҅
+                                ѥ҅же не поминати зъла ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Мала ноужда дьнесь҆ къ
+                                вашеи любьви сьвѣштати· мала же ноужда сь҆вѣштати· не пон҄еже
+                                множь҆ство глагол҄емꙑи҅хъ вꙑ о҅тꙙжь҆чаваѥ҅те си· не бо ѥ҅стъ и҅ного
+                                града о҅брѣсти· сице любь҆знѣ· на послоушаниѥ доуховь҆нꙑи҅хъ словесъ
+                                приежꙙштъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">се вѣдѫште вь҆сь҆ гнѣвъ
+                                положимъ· о҅чиштаѭ̑ште своѧ сь҆вѣсти· и҅ съ кротостиѭ̑ и҅ тихотоѭ̑
+                                вь҆сеѭ̑· пристѫпаи҅мъ къ трепезѣ христосовѣ· с н҄имже о҅тцоу слава
+                                коупно съ ст꙯ꙑи҅мъ доухомь҆· нꙑнꙗ и҅ присно и҅ вь вѣкꙑ вѣкомъ·
+                                а҅минꙿ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD37">
+                        <locus n="37">78v-80r [212v-214r]</locus>
+                        <title xml:lang="bg">Слово за Велики четвъртък от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">їѡ̑а҅нна златоо̑устааго слово
+                                вь҆ великꙑ четврътъкꙿ·</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ и҅стинѫ тѫжѫ о̑ужастиѭ̑
+                                сꙑ о҅дръжимꙿ· како насꙑштѫ жꙙждѫ вашего любослꙑшаниꙗ· кѫѭ̑ прѣди
+                                поставь҆ѭ̑ словеси трепезѫ· чꙿто бѫдѫ люди селикꙑ гостꙙ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">а҅минъ глагол҄ѫ ти
+                                дь҆несь҆ съ мноѭ̑ бѫдеши въ раи҆· и҅стинно писаниѥ҆ ѥ҅же глагол҄етъ·
+                                ѥ҅ште глагол҄ѫштоу тебѣ рекѫ· се придохъ· томоу христосоу и҅ богоу
+                                нашемоу слава и҅ покланꙗниѥ· съ о҅тꙿцемъ и҅ съ ст꙯ꙑи҅мъ доухомь҆·
+                                нꙑнꙗ и҅ присно и҅ вь҆ вѣкꙑ вѣкомъ҆ ⁘ а҅минъ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD38">
+                        <locus n="38">80r-86r [214r-220r]</locus>
+                        <title xml:lang="bg">Слово за Велики петък от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">ст꙯аа҅го оц꙯а нашего їѡ̑а҅нна
+                                златоо̑устаа҅го· слово въ свꙙтꙑи пꙙтъкъ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Конь҆ча сꙙ о̑убо намъ
+                                а҅лчь҆бънꙑи троудъ· конь҆ча же сꙙ крь҆стомъ· кь҆де бо подоба
+                                о҅долѣниꙗ̑ конь҆цоу· развѣ на побѣдь҆ницѣ конь҆чавати сꙙ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">прѣбѫдѣмꙑ о̑убо бьдꙙште·
+                                не сьпꙙште· да глѫбокꙑи сънъ жидовь҆скъ видимъ· и҅ сь҆ небесь҆нꙑи҅ми
+                                вои҅нъствꙑ праздъноуѥ҅мъ· о҅ христосѣ їс꙯ѣ г꙯и нашемъ· ѥ҅моуже слава
+                                и҅ дръжава нꙑнꙗ и҅ присно и҅ вь҆ вѣкꙑ вѣкомь а҅минъ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD39">
+                        <locus n="39">86r-90r [220r-224r]</locus>
+                        <title xml:lang="bg">Слово върху Евангелието от Матей от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <note>Homily 89 on Matth. 27: 62–64</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">їа҅нна а҅рхие҅пискоупа
+                                костантинꙗ града златоо̑устаꙿго· о҅тъ съказаниꙗ е҅уагг҄ель҆скааго·
+                                ѥ҅же отъ матѳеѧ· на о̑утриꙗ ѥ҅стъ по пꙙть҆цѣ· събърашꙙ сꙙ
+                                а҅рхие҅реи҆ и҅ фарисеи къ пилатоу глагол҄ѫште· помꙙнѫхомъ ꙗ҅ко онъ
+                                ль҆сть҆ць҆ ѥ҅ште живъ сꙑ глагола ꙗ҅ко по трь҆хъ дь҆нехъ вь҆станѫ·
+                                повели о̑убо о̑утврь҆дити гробъ до третиꙗ҅го дь҆не· ѥ҅да како
+                                пришъдъше о̑ученици ѥ҅го ноштиѭ̑ о̑украдѫтꙑ и҆· и҅ рекѫтъ людемъ
+                                ꙗ҅ко въста и҅з мрътвꙑхъ· и҅ бѫдетъ послѣдь҆нꙗꙗ прѣль҆сть҆ горши
+                                прьвꙑѧ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въсѫдоу прѣль҆сть҆ сама сꙙ
+                                о҅слѣпь҆ꙗ҅ѥ҅тъ· и҅ не хотꙙшти и҅стинѣ помагаѥ҅тъ· съмотри же· подоба
+                                вѣровати ꙗ҅ко о̑умь҆рѣ· и҅ ꙗ҅ко погребенъ бꙑстъ· и҅ ꙗ҅ко въста· и҅
+                                то вь҆се врагъ дѣлꙗ бꙑваатъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">нъ мол҄ѫ то о҅тъложивъшꙙ·
+                                милость҆ прио҅брꙙштамꙑ· въводꙙштꙙѧ въ цѣсарь҆ство небесь҆ноѥ҆·
+                                ѥ҅гоже бѫди вь҆сѣмъ намъ полоучити· благодѣтиѭ̑ и҅ чловѣколюбии҅мъ
+                                г꙯а нашего їсоуса хс꙯а· ѥ҅моуже слава вь҆ вѣкꙑ вѣкомъ· а҅мин
+                                ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD40">
+                        <locus n="40">90r-102r [224r-236r]</locus>
+                        <title xml:lang="bg">Слово за погребение Христово от Епифаний Кипърски</title>
+                        <author>Epiphanios of Salamis</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">слово ст꙯ааго е҅пифаниꙗ
+                                а҅рхие҅пискоупа купрьска· о҅ погребении҆ тѣлес г꙯и нашего їсоу х꙯а·
+                                ї ѡ̑ їѡ̑сифѣ и҅же о҅тъ а҅римаѳеѧ· и҅ о҅ никодимѣ и҅ о҅ сь҆нитии г꙯и
+                                нашего· гробь҆нѣꙗмь҆· по <supplied>съпа</supplied>съпась҆нѣи҆ мѫцѣ
+                                дивъно бꙑвъшоу ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Что се дьнь҆сь мльчаниѥ
+                                много на земи· чꙿто се мльчаниѥ много· и҅ неплиштеваниѥ много·
+                                млъчаниѥ҆ много· ꙗ҅ко цѣсаръ съпитъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">вь҆скрь҆сѫ проповѣдаѭ̑штꙙ·
+                                тридневноѥ гн꙯е вь҆скрь҆сениѥ҆· ѥ҅же свѣтло прии҅мѣмъ· и҅ видимъ и҅
+                                о҅бь҆мѣмъ҆· съ а҅гг҄елꙑ ликоуѭ̑ште· съ а҅рхагг҄елꙑ праздъноуѭ̑ште·
+                                вь҆коупѣ и҅ славꙙште вь҆скрѣшь҆шааго нꙑ· о҅тъ и҅сть҆лѣниꙗ хс꙯а·
+                                ѥ҅моуже слава и҅ дрь҆жава· съ безначꙙлънꙑи҅мъ о҅ц꙯мъ· и҅
+                                прѣсвꙙтꙑи҅мъ и҅ животворꙙштиимъ дх꙯омь҆ нꙑнꙗ и҅ присно и҅ вь҆ вѣкꙑ
+                                вѣкомъ· ҅Амин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD41">
+                        <locus n="41">102r-106r [236r-240r]</locus>
+                        <title xml:lang="bg">Слово за Възкресение Христово от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">їѡ̑а҅на а҅рхие҅п꙯па костантинꙗ
+                                града златоо̑устааго на вь҆скрѣшениѥ христово· о҅тъ лоукꙑ
+                                е҅уагг҄елиста ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">И се дь҆ва бѣста о҅ть҆
+                                н҄ихъ и҅дѫшта пѫть҆мъ вь҆ ть҆ дьнь҆· въ вь҆сь҆ сѫштѫѭ̑ далече о҅тъ
+                                и҅е҅роусалима· шести десꙙтъ стадии҆· е҅и҅же и҅мꙙ
+                                е҅мꙿмао̑усъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">дд꙯ъ ѥ҅же о҅ въсхождении҆
+                                въ правꙿдѫ <supplied>правдѫ</supplied> провь҆стрѫби· възиде б꙯ъ
+                                въсклицань҆ѥ҅мъ· г꙯ь въ гласѣ трѫбь҆нѣ· томоу слава· и҅ тѣмь богоу
+                                и҅ о҅ц꙯оу· о҅ доусѣ свꙙ тѣѣ҆мь· ꙗ҅коже и҅спрь҆ва· нꙑнꙗ и҅ присно и҅
+                                вь҆ вѣкꙑ вѣкомъ а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD42">
+                        <locus n="42">106r-109r [240r-243v]</locus>
+                        <title xml:lang="bg">Слово за светата Пасха от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">їа҅нꙿна а҅рхие҅п꙯па костатинꙗ
+                                града златоо̑устааго слово на ст꙯ѫѭ пасхѫ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Радоуи҅те сꙙ о҅ г꙯и вьсегда
+                                вь҆злюбь҆ѥ҅наа брать҆ѥ· и҅ пакꙑ рекѫ радоуите сꙙ· г꙯ь близъ ничимже
+                                не пь҆цѣте сꙙ· г꙯ь и҅з мрьтвꙑи҅хъ въсталъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">о̑уже не сьмѣрена нъ
+                                славь҆на· сь҆ свѣтьлость҆ѭ̑ небесьскоѭ̑· съ свѣтълꙑи҅ми а҅гг҄елꙑ· съ
+                                трѫбоѭ̑· и҅ страхомъ и҅ радостиѭ̑· радостиѭ̑ же свꙙтꙑихъ и҅
+                                правь҆днꙑих ⁘ страхом же неправьдь҆нꙑихъ и҅ грѣшь҆нꙑи҅хъ· б꙯ъ же
+                                мира вь҆сѣх· да нꙑ съподобитъ· вь҆скрѣшению̑ ст꙯ꙑи҅хъ· дѣлꙑ благꙑ
+                                дешенꙑ· и҅ правоѭ̑ вѣроѭ̑· ꙗ҅ко томоу слава и дръжава вь҆ вѣкꙑ
+                                вѣкомь а҅минꙿ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD43">
+                        <locus n="43">109v-115v [243v-249v]</locus>
+                        <title xml:lang="bg">Слово за тридневното възкресение от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">свꙙтааго о҅ц꙯а нашего ї
+                                а҅рꙿхие҅п꙯па бꙑвꙿша костантин҄ѣ града· їѡ̑а҅нна златоо̑устаа҅го·
+                                слово на тридꙿневноѥ вьскрѣшеньѥ г꙯и нашего· въ понедѣлникъ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Добро ѥ҅стъ врѣмꙙ дь҆ньсь
+                                вьсѣмъ намъ вьзꙿпити· реченоѥ блаженꙑи҅мъ дд꙯омъ· кто възглагол҄етъ
+                                силꙑ г꙯нꙙ· о̑услꙑшанꙑ сътворитъ вьсꙙ хвалꙑ ѥ҅го·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и҅ вль҆нꙑ нꙑнꙗшнꙗаго
+                                житиꙗ҆ хранꙿно прѣплоути· и҅ неприꙗ҅знинъ сѣтии вꙑше бꙑвъше·
+                                вѣчь҆наа благаа о̑улоучити· благодѣтиѭ̑ и҅ чловѣколюбии҅мъ г꙯и
+                                нашего їу꙯ х꙯а· с н҄имже о҅ц꙯оу коупно сь҆ ст꙯ꙑимъ доухомь҆ слава
+                                чь҆сть҆ дръжава· нꙑнꙗ и҅ присно и҅ вь вѣкꙑ вѣкомь҆· ҅Амин
+                                ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD44">
+                        <locus n="44">115v-120v [249v-254v]</locus>
+                        <title xml:lang="bg">Слово за неверния Тома от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">ст꙯ааго о҅ц꙯а нашего їѡ̑а҅нна
+                                златоо̑устааго слово въ новѫѭ̑ недѣл҄ѫ· и҅ о҅ невѣрьствиї а҅по͡ла
+                                ѳомꙑ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Идѫ длъгъ вамъ о҅тъдатъ·
+                                длъгъ і мь҆нѣ даѭ̑што̑умоу на о̑успѣхъ и҅ вꙑ о҅богатꙙи҆· прідохъ
+                                пакꙑ съказатъ ѳомѫ· о҅тъпрь҆ва о̑убо не вѣроуѭ̑штоу господь҆ню
+                                вьскрь҆сенью̑·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и҅дѣте благословештении҆
+                                о҅тца моѥ҅го· прии҅мѣте о̑уготованоѥ҆ вамъ цѣсаръствиѥ· о҅тъ
+                                съложень҆ꙗ вь҆сего мира· ѥ҅гоже бꙑ вь҆сѣмъ намъ не погрѣшити· о҅ х꙯ѣ
+                                исоусѣ г꙯и нашемъ· ѥ҅моуже слава съ о҅тцемъ и҅ сь҆ свꙙтꙑи҅мь
+                                доухомь҆· вь҆ вѣкꙑ вѣкомъ· а҅мин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD45">
+                        <locus n="45">120v-123r [254v-257r]</locus>
+                        <title xml:lang="bg">Слово за апостол Тома и срещу арианите от Йоан Златоуст</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">свꙙтаа҅го о҅ц꙯а нашего їѡ̑а҅на
+                                а҅рꙿхие҅п꙯па костань҆тинꙗ града златоо̑устааго· о҅ свꙙтѣмь҆ ѳомѣ
+                                а҅постолѣ· и҅ на а҅риа҅нꙑ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Законоу о̑убо
+                                црь҆къвноуо̑умоу· покарѣѧ҅ сꙙ присꙙгохъ· ꙗ҅коже мошть҆но стѫпа ти·
+                                величьствиѥ҅мꙿ же о̑у<supplied>ъ</supplied>казань҆ꙗ· сьделѣва ѥ҅мъ·
+                                о̑укланꙗѭ̑ сꙙ страхꙑ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и҅ноѧ҅зꙑчь҆на о҅ставь҆ша·
+                                а҅риа҅ о҅тъгъ҆нана· цѣсара вѣнь҆чавь҆ша сꙙ· мира о҅бративъша сꙙ· х꙯а
+                                възвꙑсивъша сꙙ· и҅ о҅тъ вь҆сего въкоупѣ вь҆сел҄ении҆· слꙑшꙙште и҅
+                                глагол҄ѫште· г꙯ь мои и҅ б꙯ъ мои҆· томоу слава и҅ дръжава вь҆ вѣкꙑ
+                                вѣкомь҆ ҅Амин ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD46">
+                        <locus n="46">123r-132v [257r-266v]</locus>
+                        <title xml:lang="bg">Житие на св. Яков черноризец</title>
+                        <note>Without date of church calendar</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">житиѥ їꙗ҅кѡ̑ва чръноризьца·
+                                много и҅мꙑ о̑умил҄ень҆ѥ҆ ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Многꙑи҅хъ благꙑн҄ꙙ· и҅ дш꙯и
+                                полезь҆нꙑи҅хъ добродѣа҅нии҆· и҅ по заповѣдемь҆ съпасовомъ жити
+                                начинаѭ̑штии҅мъ· доброѥ҆ сь҆мѣрень҆ꙗ҆ прио҅брѣтень҆ѥ· ходатаи҆
+                                бꙑваатъ·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">на н҄емꙿже мѣстѣ до
+                                дь҆н҄ешь҆нꙗа҅го дь҆не цѣлꙿбꙑ многꙑ творꙙтъ сꙙ· вь҆сь же градъ· и҅
+                                о҅крѫгън҄ꙙѧ҆ ѥ҅го вь҆си· памꙙть҆ ѥ҅го по вь҆са лѣта творꙙште·
+                                праздь҆никъ великъ и҅мѫтъ· въ славѫ почь҆тъшааго и҆ чк꙯олюбивааго
+                                б꙯а· ѥ҅гоже и҅ мꙑ по о̑уставоу славимъ· благословествꙙште о҅ц꙯а и҅
+                                сн꙯а и҅ ст꙯ааго д<supplied>ꙋ</supplied>х꙯а· ѥ҅моуже слава и҅
+                                дръжава· нꙑн҄ꙗ и҅ присно· и҅ вь бесконечь҆нꙑѧ҆ вѣкꙑ вѣкомъ а҅минь҆
+                                ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD47">
+                        <locus n="">132v-138r [266v-272r]</locus>
+                        <title xml:lang="bg">Житие на св. Василей и Капитон Херсонски</title>
+                        <note>Without date of church calendar</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">марта въ з꙯ дꙿнь житиѥ и҅
+                                страсть҆ ст꙯ꙑи҅хъ о҅ц꙯ь· и҅ е҅пискоупъ бꙑвъшиїхъ· василѣа· капитона·
+                                мѫченꙑихъ вь҆ херꙿсон҄и ⁘</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Христосъ ми да начꙿнетъ
+                                слово· ѥ҅динꙑи҆ прѣмѫдрꙑи҆· и прѣмѫдрꙑи҅мъ и҅справител҄ь· въ рѫцѣ бо
+                                ѥ҅го и҅ а҅зъ и҅ словеса моꙗ҆· о҅ томь о҄убо живѫште и҅ движѫште сꙙ·
+                                о҄увѣштаи҅те сꙙ и҅же и҅мене моѥ҅го призъвании҆·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">да прѣславьнъ нꙑнꙗ
+                                херсонь҆скꙑи҆ градъ бꙑстъ· въ багъра мѣсто и҅ чрь҆вь҆ѥни· ст꙯ꙑи҅хъ
+                                о҅ц꙯ъ и҅ а҅рꙿхие҅п꙯пъ кръвь҆ѭ҄ о҄украсивъ сꙙ· сꙑнꙑ притворивъ
+                                о҅боѭ҄доу несѣкомааго камꙑка· на е҅ретикꙑ и҅ на рать҆нꙑѧ҆· ст꙯ꙑи҅хъ
+                                о҅ц꙯ъ ковь҆чегꙑ· стражꙙ крѣпꙑ на вь҆сꙙ сѫпротивь҆нꙑѧ и҅ мꙑтꙑѧ҆· нъ
+                                и҅ бѣсовь҆скꙑѧ҆ пль҆кꙑ· х꙯сомъ дѣи҅ствомъ врѣждаѭ҄тъ· к н҄имже
+                                вь҆пиѭ҄ште молимъ сꙙ· небебеснааго цѣсарьства сь҆причꙙстьници и҅мъ
+                                бꙑти· благодѣть҆ѭ҄ и҅ чловѣколюбии҅мъ х꙯са б꙯а нашего· ѥ҅моуже слава
+                                и҅ дръжава въ бесконьчь҆нꙑѧ҆ вѣкꙑ вѣкомь҆ ⁘</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD48">
+                        <locus n="48">138r-151v [272r-285v]</locus>
+                        <title xml:lang="bg">Житие на св. Анин чудотворец</title>
+                        <note>Without date of church calendar</note>
+                        <note>The end is missing.</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">житиѥ҆ и҅ дѣаниѥ
+                                прѣподобь҆наа҅го а҅нина ⁘ <supplied>і҃и днъ</supplied></head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Пришъдъ любь҆знѣ· къ
+                                просвѣштению твоѥ҅го розмꙑшлꙗꙗ҆· ѡ҄ б꙯олюбꙿче· просиꙗ҅вшии҅хъ
+                                подвигомъ· положихъ скоростиѭ҄ съконь҆чати· г꙯оу
+                                повелѣваѭ҄штоу·</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">б꙯ъ бо въ чловѣцѣхъ любимꙿ
+                                ѥ҅стъ· ꙗ҅коже рече блаженꙑи҆ іѡ҄а҅нъ· ꙗ҅ко и҅же брата видимааго не
+                                любꙙи҆· како можетъ б꙯а невидимаꙿго</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                </msContents>
+                <history>
+                    <origin evidence="de visu" resp="#AB">
+                        <origDate notBefore="0933" notAfter="0972">10th c., middle</origDate>
+                        <note>
+                            <ref type="overview" target="bib:Милтенова2008">Милтенова и др. 2008:
+                                68</ref>
+                        </note>
+                        <origPlace>North-eastern Bulgaria (most probably Preslav
+                            region).</origPlace>
+                    </origin>
+                    <provenance>In the second half of the 19th century the manuscript has been
+                        divided into parts. Two other part form the Cod. Suprasliensis are now
+                        preserved: 151 folia are in the National Library of Poland, Warsow,
+                        Zamojski's collection (BOZ. 201) and 16 folia are in the State Public
+                        library, St Petersburg (Q.n.I.72). The beginning of the manuscript has been
+                        lost.</provenance>
+                </history>
+                <additional>
+                    <adminInfo>
+                        <recordHist>
+                            <source>
+                                <p>Catalogued from the edition of the manuscript <ref type="bibl"
+                                        target="bib:Заимов1982">Заимов, Капалдо 1982</ref></p>
+                            </source>
+                        </recordHist>
+                    </adminInfo>
+                </additional>
+            </msDesc>
+        </body>
+    </text>
+</TEI>

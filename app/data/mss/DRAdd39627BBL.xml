@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-DRAdd39627BBL">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Tetraeuangelion, Add. MS 39627, The British Library, 1356</title>
+                <author xml:id="RC">Ralph Cleminson</author>
+                <author xml:id="EM">Elisaveta Mousakova</author>
+                <author xml:id="AB">Andrej Bojadžiev</author>
+                <author xml:id="DR">Dilyana Radoslavova</author>
+                <editor xml:id="AM">Anisava Miltenova</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Institute of Literature</publisher>
+                <pubPlace>Sofia</pubPlace>
+                <date when="2005-01">January 2005</date>
+                <idno type="Repertorium">RC-DRAdd39627BL</idno>
+                <availability status="free">
+                    <p>The intellectual content of this file is copyrighted by the creators under
+                        the Creative Commons Attribution-No Derivative Works 3.0 under legislation
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
+                        information, but you are not allowed to alter, transform, or build upon the
+                        works on this section of the site. All reuse or distribution of this work
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This description is based on <emph>de visu</emph> observations, on MS microform
+                    and on the published catalogue descriptions. <ref type="bibl"
+                        target="bib:Cleminson1988">Cleminson 1988: 121-123</ref>.</p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <date when="2005-02-21">21.01.2005</date>
+                <settlement>London</settlement>
+            </creation>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="bg">Bulgarian</language>
+                <language ident="cu">Old Slavic</language>
+                <language ident="el">Greek</language>
+                <language ident="ru">Russian</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="Repertorium">
+                    <list>
+                        <item>Gospel book</item>
+                        <item>Tetraeuangelion</item>
+                        <item>Gospel of Tsar John Alexander</item>
+                    </list>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
+                    <p>In the context of this project, private URIs with the prefix "bib" point to
+                        bibl elements in the project's bib.xml file.</p>
+                </prefixDef>
+            </listPrefixDef>
+        </encodingDesc>
+        <revisionDesc>
+            <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
+                element &lt;origDate&gt;</change>
+            <change who="#AB" when="2009-04-17">Removed constructions
+                &lt;author&gt;anonymous&lt;/author&gt;</change>
+            <change who="#AB" when="2009-04-17">Added copyright statement</change>
+            <change who="#AB" when="2009-04-15">Corrections</change>
+            <change who="#AB" when="2009-04-13">Added Repertorium Identifier</change>
+            <change who="#AB" when="2009-03-02">Conversion to Repertorium 3.0</change>
+            <change who="#AM" when="2010-09-02">Conversion to Repertorium 4</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <msDesc>
+                <msIdentifier>
+                    <msName type="general" xml:lang="en">gospel book</msName>
+                    <msName type="individual" xml:lang="en">Gospel of John Alexander</msName>
+                    <msName type="individual" xml:lang="bg">Евангелие на цар Иван
+                        Александър</msName>
+                    <msName type="individual" xml:lang="ru">Евангелие царя Ивана Александра</msName>
+                    <msName type="individual" xml:lang="en">London Gospel</msName>
+                    <msName type="individual" xml:lang="bg">Лондонско евангелие</msName>
+                    <msName type="individual" xml:lang="ru">Лондонское евангелие</msName>
+                    <country>United Kingdom</country>
+                    <settlement>London</settlement>
+                    <repository>British Library</repository>
+                    <idno type="shelfmark">Add. MS 39627</idno>
+                    <idno type="catalogue" corresp="CleminsonR1988">78</idno>
+                    <note>
+                        <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 121-123.</ref>
+                    </note>
+                </msIdentifier>
+                <physDesc>
+                    <objectDesc form="codex">
+                        <supportDesc material="parchment">
+                            <support>
+                                <material>Parchment of good quality</material>
+                            </support>
+                            <extent>
+                                <measure unit="folia">i+286</measure>
+                                <dimensions unit="mm" type="folia">
+                                    <height>330</height>
+                                    <width>230</width>
+                                </dimensions>
+                                <dimensions unit="mm" type="written">
+                                    <height>240</height>
+                                    <width>160</width>
+                                </dimensions>
+                            </extent>
+                            <foliation>(i), 1-283, (284-286).</foliation>
+                            <collation>
+                                <summary/>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">4</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="2-9">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="10">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8(-7)</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="11-14">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="15">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8(2)</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="16-34">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="35">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">10(-3)</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="36-37">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">4</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="38">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">4(-3)</extent>
+                                </quire>
+                                <signatures>I-XXXVII signed bottom l.h. corner, last verso, <foreign
+                                        xml:lang="cu">а҃-лз҃</foreign>. The signatures are in blue,
+                                    like the colour used in the miniatures. Traces of a different
+                                    sequience in the upper margin of the rectos on f. 45 ѕ҃, f. 92
+                                    в҃і, f. 100 г҃і , f. 131 з҃і.</signatures>
+                                <gregoryRule xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                    >Consistent: HF FH HF FH HF FH HF FH, except for gathering XXI,
+                                    where the first leaf (f. 155) was replaced: FH FH HF FH HF FH HF
+                                    FH, and gathering XXXV, in which an extra leaf (f. 273) was
+                                    inserted: HF FH HF FH HF FH HF HF FH.</gregoryRule>
+                                <ruling xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                    >Inconsistent and executed very carelessly. Presents several
+                                    types which do not correspond entirely to any of the types
+                                    described by Leroy.</ruling>
+                                <pricking xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Yes, the
+                                    systems vary.</pricking>
+                            </collation>
+                            <condition>
+                                <p>Generally excellent, but on some leaves, especially in St Mark,
+                                    the ink is badly faded. A few of the miniatures are similarly
+                                    affected. A little staining on ff. 264-276. Ff. 1-2, 4v-5v, 87v,
+                                    136v, 273, 275v, 279, 284-end are blank.</p>
+                            </condition>
+                        </supportDesc>
+                        <layoutDesc>
+                            <layout columns="1" writtenLines="22 25" ruledLines="22 25"/>
+                            <layout columns="1" writtenLines="22 25" ruledLines="31 33">
+                                <locus>ff. 276-283v</locus>
+                            </layout>
+                        </layoutDesc>
+                    </objectDesc>
+                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Black; gold for titles,
+                        initials and sectional numbers; it looks like some of the initials and the
+                        marginal notes, especially those in pale red and in carmine-like colour,
+                        were written with ink used in the miniatures. On ff. 2v-3, 5, red. On ff.
+                        276-283v, black, with red for titles and initials.</ink>
+                    <decoDesc>
+                        <decoNote type="overview">Luxurious, with miniatures, illustrative
+                            headpieces and initials; copied from the 11th-c. Par. Gr. 74 (B. Filov
+                                (<ref type="bibl" target="bib:Filow1927">Filow 1927/28</ref>, <ref
+                                type="bibl" target="bib:Филов1929">Филов 1929</ref>, <ref
+                                type="bibl" target="bib:Филов1934">Филов 1934</ref>) and S. Der
+                            Nersessian (<ref type="bibl" target="bib:DerNersessian1927">Der
+                                Nersessian 1927</ref>) suggest a lost model after which both Paris
+                            and London copies were made); ornament in neo-Byzantine style, developed
+                            on the floral-petal Byzantine style; gold, dark blue, dark and light
+                            green, bright red, orange, brown and white palette; colours evenly laid,
+                            golden shading on the draperies.</decoNote>
+                        <decoNote type="miniatures">Full-page, column-pictures and small miniatures
+                            inserted in the outer side of the text column; painted by three artists,
+                            difficult to distinguish.<list>
+                                <item>
+                                    <locus>f. 2v:</locus>Full-page; portrait of the Tsar’s son in
+                                    law Constantine and the Tsar’s daughters Kera Thamar, Keratsa
+                                    and Desislava.</item>
+                                <item>
+                                    <locus>f. 3:</locus>Full page; donor portrait of Tsar John
+                                    Alexander, Queen Theodora and their sons Ioan Shishman and Ioan
+                                    Asen.</item>
+                                <item>
+                                    <locus>f. 6v:</locus>Jacob and his generation.</item>
+                                <item>
+                                    <locus>f. 7:</locus>Judas and his generation; David; King
+                                    Solomon and the Hebrew Kings.</item>
+                                <item>
+                                    <locus>f. 7v:</locus>Christ and his predecessors.</item>
+                                <item>
+                                    <locus>f. 8v:</locus>The dream of Joseph.</item>
+                                <item>
+                                    <locus>f. 9:</locus>The wise men in Jerusalem.</item>
+                                <item>
+                                    <locus>f. 9v:</locus>Herod demanding the chief priests and the
+                                    scribes about Christ; Herod sending the wise men to
+                                    Bethlehem.</item>
+                                <item>
+                                    <locus>f. 10:</locus>Nativity; with the Adoration of the wise
+                                    men, the Annunciation of the shepherds and the wise men
+                                    departing home another way.</item>
+                                <item>
+                                    <locus>f. 10v:</locus>Flight to Egypt.</item>
+                                <item>
+                                    <locus>f. 11:</locus>The Massacre of the Innocents.</item>
+                                <item>
+                                    <locus>f. 11v:</locus>The dream of Joseph; Going to
+                                    Nazareth.</item>
+                                <item>
+                                    <locus>f. 12:</locus>John the Baptist baptizing people in
+                                    Jordan.</item>
+                                <item>
+                                    <locus>f. 13:</locus>Baptism.</item>
+                                <item>
+                                    <locus>f. 14:</locus>Jesus left by the devil in the desert; The
+                                    Angels coming to minister upon him.</item>
+                                <item>
+                                    <locus>f. 14v:</locus>John the Baptist lead to prison; Calling
+                                    of Simon, called Peter and Andrew.</item>
+                                <item>
+                                    <locus>f. 15:</locus>Calling of James and John, the sons of
+                                    Zebedee.</item>
+                                <item>
+                                    <locus>f. 15v:</locus>Healing of possessed people; The Sermon on
+                                    the mountain.</item>
+                                <item>
+                                    <locus>f. 17:</locus>The Sermon on the mountain (On the
+                                    blessed).</item>
+                                <item>
+                                    <locus>f. 20:</locus>The Sermon on the mountain (Lord’s
+                                    Prayer).</item>
+                                <item>
+                                    <locus>f. 21v:</locus>The Sermon on the mountain (Parable of the
+                                    fowls).</item>
+                                <item>
+                                    <locus>f. 23:</locus>The sermon of Jesus.</item>
+                                <item>
+                                    <locus>f. 24:</locus>Healing of the leper.</item>
+                                <item>
+                                    <locus>f. 25:</locus>Healing of the centurion’s servant in
+                                    Capernaum; Healing of Peter’s wife’s mother.</item>
+                                <item>
+                                    <locus>f. 25v:</locus>Healing of many possessed with devils and
+                                    other sick men.</item>
+                                <item>
+                                    <locus>f. 26:</locus>Jesus rebuking the winds and the
+                                    sea.</item>
+                                <item>
+                                    <locus>f. 27:</locus>Healing of the two men of Gergesenes
+                                    possessed with devils.</item>
+                                <item>
+                                    <locus>f. 27v:</locus>Healing of the sick of the palsy.</item>
+                                <item>
+                                    <locus>f. 28:</locus>Jesus sitting at meat in the house of the
+                                    publican Matthew.</item>
+                                <item>
+                                    <locus>f. 29:</locus>Healing of the woman with an issue of blood
+                                    / haemorrhagic woman; Healing of the ruler’s daughter; Healing
+                                    of the two blind men.</item>
+                                <item>
+                                    <locus>f. 31:</locus>Calling of the apostles.</item>
+                                <item>
+                                    <locus>f. 32:</locus>The apostles preaching to the
+                                    nations.</item>
+                                <item>
+                                    <locus>f. 32v:</locus>The apostles preaching to the
+                                    nations.</item>
+                                <item>
+                                    <locus>f. 36</locus>The Sermon on the Sabbath (the disciples
+                                    plucking and eating the ears of corn).</item>
+                                <item>
+                                    <locus>f. 36v:</locus>Healing of the man with the withered
+                                    hand.</item>
+                                <item>
+                                    <locus>f. 37:</locus>Healing of the possessed with a devil,
+                                    blind, and dumb.</item>
+                                <item>
+                                    <locus>f. 39:</locus>Jesus’ mother and his brethren coming to
+                                    him.</item>
+                                <item>
+                                    <locus>f. 41v:</locus>The parable of the grain of mustard
+                                    seed.</item>
+                                <item>
+                                    <locus>f. 44:</locus>The life of John the Baptist.</item>
+                                <item>
+                                    <locus>f. 45:</locus>The miracle with the five loaves and two
+                                    fishes; Jesus walking on the sea.</item>
+                                <item>
+                                    <locus>f. 46v:</locus>Jesus preaching on the defiling.</item>
+                                <item>
+                                    <locus>f. 48:</locus>Healing of the daughter of Canaan woman;
+                                    Healing of a multitude in Galilee.</item>
+                                <item>
+                                    <locus>f. 48v:</locus>The miracle with the seven loaves.</item>
+                                <item>
+                                    <locus>f. 51:</locus>Transfiguration.</item>
+                                <item>
+                                    <locus>f. 51v:</locus>Jesus telling His disciples about his
+                                    second coming.</item>
+                                <item>
+                                    <locus>f. 52:</locus>Healing of the lunatic.</item>
+                                <item>
+                                    <locus>f. 53:</locus>The miracle with the tribute money.</item>
+                                <item>
+                                    <locus>f. 53v:</locus>The parable of who is the greatest in the
+                                    kingdom of heaven.</item>
+                                <item>
+                                    <locus>f. 54v:</locus>The parable of the hundred sheep.</item>
+                                <item>
+                                    <locus>f. 56:</locus>The parable of the ten thousand
+                                    talents.</item>
+                                <item>
+                                    <locus>f. 57:</locus>Jesus blessing the children.</item>
+                                <item>
+                                    <locus>f. 58:</locus>The parable of the reach man.</item>
+                                <item>
+                                    <locus>f. 59:</locus>The parable of the labourers in the
+                                    vineyard.</item>
+                                <item>
+                                    <locus>f. 60v:</locus> Healing of the two blind men of
+                                    Jericho.</item>
+                                <item>
+                                    <locus>f. 61:</locus>Sending of the apostles to find the ass and
+                                    the colt.</item>
+                                <item>
+                                    <locus>f. 61v:</locus>Entry into Jerusalem.</item>
+                                <item>
+                                    <locus>f. 62:</locus>Healing of the blind and the lame in the
+                                    temple.</item>
+                                <item>
+                                    <locus>f. 62v:</locus>The parable of the withered
+                                    fig-tree.</item>
+                                <item>
+                                    <locus>f. 65v:</locus>The parable of Caesar’s tribute
+                                    money.</item>
+                                <item>
+                                    <locus>f. 67:</locus>Jesus denouncing the Pharisees.</item>
+                                <item>
+                                    <locus>f. 68v:</locus>Jesus denouncing the Pharisees.</item>
+                                <item>
+                                    <locus>f. 69:</locus>Jesus denouncing the Pharisees (scenes with
+                                    the of murders of Cain and prophet Zacharias).</item>
+                                <item>
+                                    <locus>f. 69v:</locus>Jesus predicting the desolation of
+                                    Jerusalem.</item>
+                                <item>
+                                    <locus>f. 72v:</locus>The Parable of the evil servant.</item>
+                                <item>
+                                    <locus>f. 73:</locus>The Parable of the ten wise and the ten
+                                    foolish virgins.</item>
+                                <item>
+                                    <locus>f. 74:</locus>The Parable of the servants and the
+                                    talents.</item>
+                                <item>
+                                    <locus>f. 75:</locus>The assembly of the chief priests and the
+                                    scribes at Caiaphas’.</item>
+                                <item>
+                                    <locus>f. 75v:</locus>Anointment of Christ; Judas proposing to
+                                    the chief priests to deliver Jesus to them.</item>
+                                <item>
+                                    <locus>f. 76v:</locus>The Last supper; Jesus and the apostles on
+                                    the mount of Olives.</item>
+                                <item>
+                                    <locus>f. 77:</locus>The Prayer in Gethsemane.</item>
+                                <item>
+                                    <locus>f. 77v:</locus>The third prayer in Gethsemane.</item>
+                                <item>
+                                    <locus>f. 78:</locus>The third prayer in Gethsemane.</item>
+                                <item>
+                                    <locus>f. 78v:</locus>Betrayal of Judas.</item>
+                                <item>
+                                    <locus>f. 79v:</locus>The humiliation of Jesus; Jesus at
+                                    Caiaphas’.</item>
+                                <item>
+                                    <locus>f. 80:</locus>The denial of Peter; Leading away of Jesus
+                                    to Pilate’s.</item>
+                                <item>
+                                    <locus>f. 80v:</locus>Judas hanging himself.</item>
+                                <item>
+                                    <locus>f. 81:</locus>Jesus at Pilates’.</item>
+                                <item>
+                                    <locus>f. 82:</locus>The judgment of Pilate and releasing of
+                                    Barabbas.</item>
+                                <item>
+                                    <locus>f. 82v:</locus>The way to Golgotha; Compelling Simon of
+                                    Cyrene to bear the cross.</item>
+                                <item>
+                                    <locus>f. 83:</locus>Crucifixion.</item>
+                                <item>
+                                    <locus>f. 84:</locus>Jesus dying on the cross.</item>
+                                <item>
+                                    <locus>f. 84v:</locus>Deposition; Entombment.</item>
+                                <item>
+                                    <locus>f. 85:</locus>Closing the tomb; Resurrection (Descending
+                                    to Hell).</item>
+                                <item>
+                                    <locus>f. 85v:</locus>The women at the tomb; The appearance of
+                                    Jesus to the women.</item>
+                                <item>
+                                    <locus>f. 86:</locus>The assembly of the chief priests.</item>
+                                <item>
+                                    <locus>f. 86v:</locus>The appearance of Jesus to the disciples;
+                                    Tsar John Alexander and St Matthew.</item>
+                                <item>
+                                    <locus>f. 88v:</locus>John the Baptist baptizing the
+                                    people.</item>
+                                <item>
+                                    <locus>f. 89:</locus>Baptism; The temptation of Jesus in the
+                                    wilderness.</item>
+                                <item>
+                                    <locus>f. 89v:</locus>John the Baptist in prison; Jesus
+                                    preaching in Galilee about the kingdom of heaven; Calling of
+                                    Simon and Andrew; The healing of the man with unclean spirit in
+                                    Capernaum.</item>
+                                <item>
+                                    <locus>f. 90v:</locus>Healing of Peter’s (Simon’s) wife’s
+                                    mother.</item>
+                                <item>
+                                    <locus>f. 91:</locus>Departing from Capernaum.</item>
+                                <item>
+                                    <locus>f. 91v:</locus>The healing of the leper.</item>
+                                <item>
+                                    <locus>f. 92:</locus>Healing of the man sick of the
+                                    palsy.</item>
+                                <item>
+                                    <locus>f. 92v:</locus>Jesus sitting at meat in the house of the
+                                    publican Matthew.</item>
+                                <item>
+                                    <locus>f. 94:</locus>Healing of the man with the withered
+                                    hand.</item>
+                                <item>
+                                    <locus>f. 94v:</locus>Calling of the apostles.</item>
+                                <item>
+                                    <locus>f. 95v:</locus>Jesus’ mother and his brethren coming to
+                                    him.</item>
+                                <item>
+                                    <locus>f. 96:</locus>The parable of the sower.</item>
+                                <item>
+                                    <locus>f. 97v:</locus>The parable of the grain of mustard
+                                    seed.</item>
+                                <item>
+                                    <locus>f. 98:</locus>Jesus rebuking the winds and the
+                                    sea.</item>
+                                <item>
+                                    <locus>f. 99:</locus>Healing of the man with unclean spirit in
+                                    Gadarenes.</item>
+                                <item>
+                                    <locus>f. 100:</locus>Healing of the woman with issue of
+                                    blood.</item>
+                                <item>
+                                    <locus>f. 101:</locus>Healing of the ruler of synagogue’s
+                                    daughter.</item>
+                                <item>
+                                    <locus>f. 101v:</locus>Sending forth the apostles.</item>
+                                <item>
+                                    <locus>f. 102v:</locus>Laying hold upon St John the Baptist and
+                                    bounding him to prison.</item>
+                                <item>
+                                    <locus>f. 103:</locus>Salome and Herodias; The supper of Herod;
+                                    The decapitating of John the Baptist; Entombment of John the
+                                    Baptist.</item>
+                                <item>
+                                    <locus>f. 104:</locus>The miracle of the five loaves and two
+                                    fishes.</item>
+                                <item>
+                                    <locus>f. 104v:</locus>Jesus walking on the sea.</item>
+                                <item>
+                                    <locus>f. 105:</locus>Healing of the sick in Gennesaret.</item>
+                                <item>
+                                    <locus>f. 106v:</locus>Healing of the Syrophenician’s
+                                    daughter.</item>
+                                <item>
+                                    <locus>f. 107:</locus>Healing of the deaf and stammering /having
+                                    an impediment in his speech.</item>
+                                <item>
+                                    <locus>f. 108:</locus>The miracle of the seven loaves and two
+                                    fishes.</item>
+                                <item>
+                                    <locus>f. 108v:</locus>Healing of the blind man in
+                                    Bethsaida.</item>
+                                <item>
+                                    <locus>f. 109v:</locus>Jesus asking his disciples in Caesarea
+                                    Philippi.</item>
+                                <item>
+                                    <locus>f. 110v:</locus>Transfiguration.</item>
+                                <item>
+                                    <locus>f. 112v:</locus>Jesus preaching in Capernaum.</item>
+                                <item>
+                                    <locus>f. 113v:</locus>Jesus blessing the children.</item>
+                                <item>
+                                    <locus>f. 114v:</locus>Jesus and the reach man.</item>
+                                <item>
+                                    <locus>f. 116:</locus>Jesus answering to the sons of
+                                    Zebedee.</item>
+                                <item>
+                                    <locus>f. 116v:</locus>Healing of Bartimaeus.</item>
+                                <item>
+                                    <locus>f. 117:</locus>Entry to Jerusalem.</item>
+                                <item>
+                                    <locus>f. 118:</locus>The parable of the withered
+                                    fig-tree.</item>
+                                <item>
+                                    <locus>f. 119v:</locus>The parable of the husbandmen in the
+                                    vineyard.</item>
+                                <item>
+                                    <locus>f. 120v:</locus>Jesus answering the questions of the
+                                    Pharisees.</item>
+                                <item>
+                                    <locus>f. 122:</locus>The widow’s mites.</item>
+                                <item>
+                                    <locus>f. 123:</locus>Jesus prophesying his second
+                                    coming.</item>
+                                <item>
+                                    <locus>f. 124:</locus>The Last Judgment (Tsar John Alexander
+                                    depicted in the Garden of Eden).</item>
+                                <item>
+                                    <locus>f. 125:</locus>The supper at Simon the leper and the
+                                    anointment of Jesus.</item>
+                                <item>
+                                    <locus>f. 126:</locus>The Last Supper.</item>
+                                <item>
+                                    <locus>f. 126v:</locus>Going out into the mount of
+                                    Olives.</item>
+                                <item>
+                                    <locus>f. 127:</locus>The prayer in Gethsemane; Jesus finding
+                                    his disciples asleep.</item>
+                                <item>
+                                    <locus>f. 127v:</locus>Jesus finding his disciples asleep for
+                                    the third time.</item>
+                                <item>
+                                    <locus>f. 128:</locus>Betrayal of Judas.</item>
+                                <item>
+                                    <locus>f. 129:</locus>Leading Jesus away to the high
+                                    priest.</item>
+                                <item>
+                                    <locus>f. 129v:</locus>Denial of Peter; Jesus delivered to
+                                    Pilate.</item>
+                                <item>
+                                    <locus>f. 131:</locus>The judgment of Pilate; Mocking of Jesus;
+                                    Crucifixion. </item>
+                                <item>
+                                    <locus>f. 131v:</locus>Parting the garments of Jesus.</item>
+                                <item>
+                                    <locus>f. 132:</locus>Jesus dying on the cross.</item>
+                                <item>
+                                    <locus>f. 133:</locus>Deposition of the body; Entombment;
+                                    Ressurection.</item>
+                                <item>
+                                    <locus>f. 133v:</locus>The women at the tomb.</item>
+                                <item>
+                                    <locus>f. 134:</locus>Jesus appearing to Mary Magdalene.</item>
+                                <item>
+                                    <locus>f. 134v:</locus>Ascension; Tsar John Alexander and St
+                                    Mark.</item>
+                                <item>
+                                    <locus>f. 138v:</locus>The annunciation of Zacharias.</item>
+                                <item>
+                                    <locus>f. 139v:</locus>The annunciation of Mary at the well; The
+                                    salutation of Mary to Elisabeth.</item>
+                                <item>
+                                    <locus>f. 140:</locus>The birth of John the Baptist.</item>
+                                <item>
+                                    <locus>f. 140v:</locus>Zacharias giving name to his son.</item>
+                                <item>
+                                    <locus>f. 141:</locus>The prophecy of Zacharias.</item>
+                                <item>
+                                    <locus>f. 141v:</locus>John the Baptist lead by the angel in the
+                                    deserts; Going to Bethlehem.</item>
+                                <item>
+                                    <locus>f. 142:</locus>Nativity; The annunciation of the
+                                    shepherds.</item>
+                                <item>
+                                    <locus>f. 142v:</locus>The annunciation of the shepherds.</item>
+                                <item>
+                                    <locus>f. 143v:</locus>The presentation in the temple.</item>
+                                <item>
+                                    <locus>f. 144v:</locus>Jesus in the temple with the
+                                    doctors.</item>
+                                <item>
+                                    <locus>f. 145:</locus>John the Baptist in the wilderness.</item>
+                                <item>
+                                    <locus>f. 145v:</locus>John the Baptist preaching and baptizing
+                                    the people. </item>
+                                <item>
+                                    <locus>f. 146:</locus>John the Baptist in prison;
+                                    Baptism.</item>
+                                <item>
+                                    <locus>f. 147:</locus>The ancestry of Jesus.</item>
+                                <item>
+                                    <locus>f. 148:</locus>Jesus reading in the synagogue in
+                                    Nazareth.</item>
+                                <item>
+                                    <locus>f. 149:</locus>Healing of the man with the spirit of an
+                                    unclean devil.</item>
+                                <item>
+                                    <locus>f. 149v:</locus>Healing of Peter’s (Simon’s) wife’s
+                                    mother; Healing of many people sick with diverse
+                                    diseases.</item>
+                                <item>
+                                    <locus>f. 150v:</locus>The miraculous draught.</item>
+                                <item>
+                                    <locus>f. 151:</locus>Healing of the leper.</item>
+                                <item>
+                                    <locus>f. 151v:</locus>Healing of the man sick of the
+                                    palsy.</item>
+                                <item>
+                                    <locus>f. 152v:</locus>The feast at Levi the publican.</item>
+                                <item>
+                                    <locus>f. 154:</locus>Healing of a multitude of diseased.</item>
+                                <item>
+                                    <locus>f. 154v:</locus>Jesus preaching.</item>
+                                <item>
+                                    <locus>f. 156:</locus>Jesus preaching.</item>
+                                <item>
+                                    <locus>f. 156v:</locus>The elders of the Jews beseeching Jesus
+                                    to heal the centurion’s servant.</item>
+                                <item>
+                                    <locus>f. 157:</locus>Healing of the centurion’s servant.</item>
+                                <item>
+                                    <locus>f. 157v:</locus>Jesus raising from the dead the widow of
+                                    Nain’s son.</item>
+                                <item>
+                                    <locus>f. 158:</locus>John the Baptist sending his disciples to
+                                    Jesus.</item>
+                                <item>
+                                    <locus>f. 159:</locus>Anointment of Jesus in the Pharisee’s
+                                    house.</item>
+                                <item>
+                                    <locus>f. 160:</locus>Jesus with the twelve apostles.</item>
+                                <item>
+                                    <locus>f. 161:</locus>Jesus preaching, his mother and his
+                                    brethren coming to see him.</item>
+                                <item>
+                                    <locus>f. 161v:</locus>Jesus rebuking the wind and the
+                                    water.</item>
+                                <item>
+                                    <locus>f. 162v:</locus>Healing of the man with unclean spirit in
+                                    Gadarenes. </item>
+                                <item>
+                                    <locus>f. 163:</locus>People receiving Jesus on his
+                                    return.</item>
+                                <item>
+                                    <locus>f. 164:</locus>Healing of the woman having an issue of
+                                    blood; Healing of the ruler of the synagogue’s daughter.</item>
+                                <item>
+                                    <locus>f. 165:</locus>The miracle of the five loaves and two
+                                    fishes.</item>
+                                <item>
+                                    <locus>f. 166v:</locus>Transfiguration.</item>
+                                <item>
+                                    <locus>f. 167v:</locus>Jesus preaching who is the greatest in
+                                    the kingdom of heaven.</item>
+                                <item>
+                                    <locus>f. 169:</locus>Jesus appointing the 70 apostles.</item>
+                                <item>
+                                    <locus>f. 169v:</locus>Jesus giving the power to the 70
+                                    apostles.</item>
+                                <item>
+                                    <locus>f. 170:</locus>Jesus answering to the lawyer.</item>
+                                <item>
+                                    <locus>f. 171:</locus>The parable of the good Samaritan; Jesus
+                                    in the house of Martha and Mary.</item>
+                                <item>
+                                    <locus>f. 172v:</locus>Healing of the dumb possessed by a
+                                    devil.</item>
+                                <item>
+                                    <locus>f. 173:</locus>Jesus preaching and a woman from the
+                                    company raising her voice.</item>
+                                <item>
+                                    <locus>f. 175v:</locus>Jesus exposing the hypocrisy of the
+                                    Pharisees.</item>
+                                <item>
+                                    <locus>f. 176:</locus>Jesus preaching about those who confess
+                                    and who deny him.</item>
+                                <item>
+                                    <locus>f. 176v:</locus>The parable of the ground of a certain
+                                    rich man.</item>
+                                <item>
+                                    <locus>f. 177v:</locus>The parable of the ground (the ravens and
+                                    fowls fed by God).</item>
+                                <item>
+                                    <locus>f. 178v:</locus>Jesus proclaiming his mission.</item>
+                                <item>
+                                    <locus>f. 179v:</locus>The parable of the fruitless fig-tree in
+                                    the vineyard.</item>
+                                <item>
+                                    <locus>f. 180:</locus>Healing of the bowed together
+                                    woman.</item>
+                                <item>
+                                    <locus>f. 180v:</locus>The parable of the grain of mustard
+                                    seed.</item>
+                                <item>
+                                    <locus>f. 181v:</locus>Healing of the man with the
+                                    dropsy.</item>
+                                <item>
+                                    <locus>f. 183:</locus>The parable of the bidden to
+                                    supper.</item>
+                                <item>
+                                    <locus>f. 183v:</locus>Jesus preaching who are his
+                                    disciples.</item>
+                                <item>
+                                    <locus>f. 184:</locus>The parable of the hundred sheep.</item>
+                                <item>
+                                    <locus>f. 184v:</locus>The parable of the lost piece of
+                                    silver.</item>
+                                <item>
+                                    <locus>f. 185:</locus>The parable of the prodigal son.</item>
+                                <item>
+                                    <locus>f. 185v:</locus>The parable of the prodigal son (two
+                                    illustrations).</item>
+                                <item>
+                                    <locus>f. 188:</locus>The parable of the rich and the beggar
+                                    Lazarus.</item>
+                                <item>
+                                    <locus>f. 189v:</locus>Healing of the ten lepers.</item>
+                                <item>
+                                    <locus>f. 190:</locus>The parable of Lot and his wife.</item>
+                                <item>
+                                    <locus>f. 191v:</locus>The parable of the publican and the
+                                    Pharisee.</item>
+                                <item>
+                                    <locus>f. 193:</locus>Healing of the blind man in
+                                    Jericho.</item>
+                                <item>
+                                    <locus>f. 193v:</locus>Jesus and Zacchaeus.</item>
+                                <item>
+                                    <locus>f. 195v:</locus>Entry in Jerusalem.</item>
+                                <item>
+                                    <locus>f. 196v:</locus>The parable of the vineyard and the
+                                    husbandmen.</item>
+                                <item>
+                                    <locus>f. 197v:</locus>The parable of the Caesar’s penny ?
+                                    Caesar’s tribute money?.</item>
+                                <item>
+                                    <locus>f. 198v:</locus>Jesus asking the Pharisees.</item>
+                                <item>
+                                    <locus>f. 199:</locus>The widow’s mites.</item>
+                                <item>
+                                    <locus>f. 200:</locus>Jesus revealing the signs of his second
+                                    coming.</item>
+                                <item>
+                                    <locus>f. 201v:</locus>The Last supper.</item>
+                                <item>
+                                    <locus>f. 202:</locus>The Communion of the apostles.</item>
+                                <item>
+                                    <locus>f. 202v:</locus>The Last supper and the argument who is
+                                    the greatest in the kingdom of heaven God.</item>
+                                <item>
+                                    <locus>f. 203:</locus>Jesus prophesying Peter’s denial.</item>
+                                <item>
+                                    <locus>f. 203v:</locus>The prayer in Gethsemane; Jesus finding
+                                    his disciples fallen asleep.</item>
+                                <item>
+                                    <locus>f. 204v:</locus>The betrayal of Judas; Peter’s
+                                    denial.</item>
+                                <item>
+                                    <locus>f. 205:</locus>Peter’s repentance; Mocking Jesus.</item>
+                                <item>
+                                    <locus>f. 205v:</locus>Jesus at Pilate.</item>
+                                <item>
+                                    <locus>f. 206v:</locus>Herod sending Jesus back to
+                                    Pilate.</item>
+                                <item>
+                                    <locus>f. 207:</locus>Pilate giving sentence to crucify
+                                    Jesus.</item>
+                                <item>
+                                    <locus>f. 207v:</locus>The way to Golgotha; Crucifixion.</item>
+                                <item>
+                                    <locus>f. 208v:</locus>Crucifixion, Jesus dying on the
+                                    cross.</item>
+                                <item>
+                                    <locus>f. 209:</locus>Deposition; Entombment.</item>
+                                <item>
+                                    <locus>f. 210:</locus>The apostles and the women at the
+                                    tomb.</item>
+                                <item>
+                                    <locus>f. 211v:</locus>Jesus appearing to Cleopas and another
+                                    apostle.</item>
+                                <item>
+                                    <locus>f. 212:</locus>Ascension.</item>
+                                <item>
+                                    <locus>f. 212v:</locus>Tsar John Alexander and St Luke.</item>
+                                <item>
+                                    <locus>f. 213v:</locus>John the Baptist witnessing of the
+                                    Light.</item>
+                                <item>
+                                    <locus>f. 214:</locus>John the Baptist witnessing of the one,
+                                    coming after him.</item>
+                                <item>
+                                    <locus>f. 214v:</locus>John the Baptist confessing that he is
+                                    not the Christ; John the Baptist baptizing in Bethabara.</item>
+                                <item>
+                                    <locus>f. 215:</locus>John the Baptist recognizing the Lamb of
+                                    God.</item>
+                                <item>
+                                    <locus>f. 215v:</locus>Baptism; The disciples of John the
+                                    Baptist following Jesus.</item>
+                                <item>
+                                    <locus>f. 216:</locus>Simon Peter following Jesus.</item>
+                                <item>
+                                    <locus>f. 216v:</locus>Philip and Nathanael following
+                                    Jesus.</item>
+                                <item>
+                                    <locus>f. 217v:</locus>The Marriage in Cana of Galilee; Jesus
+                                    expelling the merchants from the temple.</item>
+                                <item>
+                                    <locus>f. 219:</locus>Jesus teaching Nicodemus.</item>
+                                <item>
+                                    <locus>f. 219v:</locus>Jesus baptizing the people in
+                                    Judæa.</item>
+                                <item>
+                                    <locus>f. 220:</locus>John the Baptist baptizing the people in
+                                    Ænon; John the Baptist answering the question about
+                                    purifying.</item>
+                                <item>
+                                    <locus>f. 221:</locus>Jesus and the woman of Samaria.</item>
+                                <item>
+                                    <locus>f. 222v:</locus>Jesus teaching the woman of
+                                    Samaria.</item>
+                                <item>
+                                    <locus>f. 224:</locus>Healing of the nobleman’s son at
+                                    Capernaum.</item>
+                                <item>
+                                    <locus>f. 225:</locus>Healing of the sick with infirmity in
+                                    Bethesda.</item>
+                                <item>
+                                    <locus>f. 227:</locus>Jesus teaching about belief in God.</item>
+                                <item>
+                                    <locus>f. 228:</locus>The miracle with the five loaves.</item>
+                                <item>
+                                    <locus>f. 228v:</locus>Jesus walking on the sea.</item>
+                                <item>
+                                    <locus>f. 229v:</locus>Jesus teaching about the bread of
+                                    God.</item>
+                                <item>
+                                    <locus>f. 230:</locus>Jesus answering to the Jews about their
+                                    doubts in him.</item>
+                                <item>
+                                    <locus>f. 231v:</locus>Many of the disciples going back from
+                                    Jesus.</item>
+                                <item>
+                                    <locus>f. 233v:</locus>Jesus teaching in the temple at the midst
+                                    of the feast; The Pharisees and the chief priests sending
+                                    officers to take Jesus.</item>
+                                <item> f. 234:Jesus preaching in the last day of the feast.</item>
+                                <item>
+                                    <locus>f. 234v:</locus>Christ enthroned.</item>
+                                <item>
+                                    <locus>f. 235:</locus>The officers coming back to the Pharisees
+                                    and the chief priests.</item>
+                                <item>
+                                    <locus>f. 236v:</locus>Jesus teaching in the treasury.</item>
+                                <item>
+                                    <locus>f. 238:</locus>Jesus teaching in the treasury.</item>
+                                <item>
+                                    <locus>f. 238v:</locus>The Jews casting stones at Jesus.</item>
+                                <item>
+                                    <locus>f. 239:</locus>Healing of the blind from his
+                                    birth.</item>
+                                <item>
+                                    <locus>f. 239v:</locus>The blind and the Pharisees.</item>
+                                <item>
+                                    <locus>f. 240v:</locus>The Pharisees inquiring at the blind man
+                                    and his parents about the miracle.</item>
+                                <item>
+                                    <locus>f. 241:</locus>The blind man worshiping Jesus.</item>
+                                <item>
+                                    <locus>f. 241v:</locus>Jesus teaching about his judgment.</item>
+                                <item>
+                                    <locus>f. 242v:</locus>Jesus teaching about the good
+                                    shepherd.</item>
+                                <item>
+                                    <locus>f. 243:</locus>The Jews casting stones at Jesus.</item>
+                                <item>
+                                    <locus>f. 244:</locus>Jesus hearing about the sickness of
+                                    Lazarus.</item>
+                                <item>
+                                    <locus>f. 245:</locus>The Jews comforting Martha and
+                                    Mary.</item>
+                                <item>
+                                    <locus>f. 245v:</locus>Mary coming unto Jesus.</item>
+                                <item>
+                                    <locus>f. 246v:</locus>The resurrection of Lazarus.</item>
+                                <item>
+                                    <locus>f. 247:</locus>The council of Caiaphas.</item>
+                                <item>
+                                    <locus>f. 248:</locus>The supper in the house of Martha and
+                                    Mary.</item>
+                                <item>
+                                    <locus>f. 248v:</locus>Entry in Jerusalem.</item>
+                                <item>
+                                    <locus>f. 249:</locus>The Greeks wanting to see Jesus.</item>
+                                <item>
+                                    <locus>f. 250v:</locus>The Last supper.</item>
+                                <item>
+                                    <locus>f. 251:</locus>Washing the feet.</item>
+                                <item>
+                                    <locus>f. 252v:</locus>Judas receiving the sop.</item>
+                                <item>
+                                    <locus>f. 253v:</locus>Jesus giving his disciples the command of
+                                    love.</item>
+                                <item>
+                                    <locus>f. 255:</locus>Jesus and the apostles going hence.</item>
+                                <item>
+                                    <locus>f. 257:</locus>The last commandments of Jesus to the
+                                    apostles.</item>
+                                <item>
+                                    <locus>f. 259v:</locus>Jesus’ prayer to God; The
+                                    apostles.</item>
+                                <item>
+                                    <locus>f. 260v:</locus>The betrayal of Judas.</item>
+                                <item>
+                                    <locus>f. 261v:</locus>Leading Jesus to Annas and
+                                    Caiaphas.</item>
+                                <item>
+                                    <locus>f. 262:</locus>The woman keeping the door letting Peter
+                                    in; The officer of Caiaphas striking Jesus with the palm of his
+                                    hand.</item>
+                                <item>
+                                    <locus>f. 262v:</locus>Jesus at Caiaphas; Peter’s denial.</item>
+                                <item>
+                                    <locus>f. 263:</locus>Leading Jesus from Caiaphas to the hall of
+                                    judgment; Jesus at Pilate.</item>
+                                <item>
+                                    <locus>f. 263v:</locus>The trial of Pilate.</item>
+                                <item>
+                                    <locus>f. 264:</locus>The trial of Pilate; Scourging of
+                                    Jesus.</item>
+                                <item>
+                                    <locus>f. 264v:</locus>Pilate interrogating Jesus.</item>
+                                <item>
+                                    <locus>f. 265:</locus>The way to Golgotha.</item>
+                                <item>
+                                    <locus>f. 265v:</locus>Crucifixion.</item>
+                                <item>
+                                    <locus>f. 266:</locus>Parting the garments of Jesus; Jesus
+                                    speaking to his mother from the cross.</item>
+                                <item>
+                                    <locus>f. 266v:</locus>Jesus dying on the cross.</item>
+                                <item>
+                                    <locus>f. 267:</locus>Joseph of Arimathæa obtaining the Jesus’
+                                    body from Pilate.</item>
+                                <item>
+                                    <locus>f. 267v:</locus>Deposition; Entombment.</item>
+                                <item>
+                                    <locus>f. 268:</locus>Mary Magdalene at the tomb.</item>
+                                <item>
+                                    <locus>f. 268v:</locus>Mary Magdalene and the apostles at the
+                                    tomb.</item>
+                                <item>
+                                    <locus>f. 269:</locus>Mary Magdalene at the tomb; Jesus showing
+                                    to Mary Magdalene.</item>
+                                <item>
+                                    <locus>f. 269v:</locus>Jesus showing to the apostles.</item>
+                                <item>
+                                    <locus>f. 270:</locus>Incredulity of Thomas.</item>
+                                <item>
+                                    <locus>f. 270v:</locus>Jesus showing to his disciples at the sea
+                                    of Tiberias.</item>
+                                <item>
+                                    <locus>f. 271:</locus>Simon Peter casting himself into the
+                                    sea.</item>
+                                <item>
+                                    <locus>f. 271v:</locus>Jesus giving his disciples bread and
+                                    fish.</item>
+                                <item>
+                                    <locus>f. 272v:</locus>The apostles; Tsar John Alexander with St
+                                    John.</item>
+                            </list>
+                        </decoNote>
+                        <decoNote type="headpieces">
+                            <p>Four big headpieces at the Gospels, with miniatures surrounded by
+                                rich ornament.</p>
+                            <list>
+                                <item>
+                                    <locus>f. 6:</locus>A panel, round medallion in the middle with
+                                    the image of St Matthew writing; four smaller medallions around
+                                    it with the images of Abraham and Isaac below and seraphim and
+                                    cherubim above; a fifth medallion on top with Christ Ancient of
+                                    Days; vegetal frame around the medallions of a stem coiling into
+                                    circle and heart-shaped patterns containing floral motifs,
+                                    varieties of the Sassanian palmette.</item>
+                                <item>
+                                    <locus>f. 88:</locus>A panel, round medallion in the middle with
+                                    the image of St Luke writing and three smaller ones above it,
+                                    with the images of St John the Baptist on the left, the prophet
+                                    Isaiah on the right and Christ Emmanuel on top; vegetal frame of
+                                    a stem coiling into a pattern of two bigger and several smaller
+                                    medallions containing various floral motifs.</item>
+                                <item>
+                                    <locus>f. 137:</locus>A panel, big round medallion in the middle
+                                    with the image of St Luke writing; two smaller medallions with
+                                    the images of prophet Zachariah below and Christ Pantokrator
+                                    above; vegetal frame of a geometric carpet-like pattern.</item>
+                                <item>
+                                    <locus>f. 213:</locus>A panel, big round medallion with the
+                                    image of St John writing; three smaller medallions beneath it
+                                    wiht the images of Christ Ancient of Days in the middle, Christ
+                                    Pantokrator on the left and Christ Emmanuel on the right;
+                                    vegetal frame of a stem coiling into a pattern of bigger and
+                                    smaller circles each filled in with a floral-petal motif.</item>
+                            </list>
+                        </decoNote>
+                        <decoNote type="initials">Initials may project into the margin.</decoNote>
+                        <decoNote type="table">
+                            <locus>f. 273v:</locus> a letter-labyrinth, squire <dimensions unit="mm"
+                                type="table">
+                                <height>165</height>
+                                <width>165</width>
+                            </dimensions> reading <foreign xml:lang="cu">іѡ алеѯандра царѣ
+                                тетраваггел</foreign>
+                        </decoNote>
+                    </decoDesc>
+                    <bindingDesc>
+                        <p>Ornamented red (rather pink) leather on thick wooden boards, <dimensions
+                                unit="mm" type="binding">
+                                <height>325</height>
+                                <width> 240</width>
+                            </dimensions>mm; rounded spine, two peg-and-strap fastenings, now
+                            missing; blind tooling; both covers bear similar compositions; on the
+                            upper cover borders framing the inner rectangle field lined into
+                            triangle net with small circles stamped at the intersections; the outer
+                            border stamped with a pattern of two alternative palmettes in
+                            heart-shaped medallions, the stamp in the inner border comprising three
+                            palmette trefoils in heart-shaped medallions; at the short sides of the
+                            inner field two borders of a round stamp with a dragon, d15mm; on the
+                            lower cover the inner border is composed entirely by the dragon-stamp,
+                            while the palmette trefoils stamp the short borders; in the empty spaces
+                            two kinds of small stamps: a trefoil with elongated middle leaf and a
+                            round trefoil in a heart-shaped medallion. Numerous nail holes suggest
+                            of a metal cover or other incrustation over the leather which confirms
+                            the description of the binding in the colophon on f. 274v stating that
+                            the Tsar <foreign xml:lang="cu">златыми дъсками покова</foreign>. No
+                            pastedowns. The binding demonstrates exceptional similarity to that of
+                            the <ref target="BL_Addms27442.xml">Add MS 27442</ref>, so there is no
+                            doubt that both MSS were bound in one and the same workshop.</p>
+                    </bindingDesc>
+                    <additions type="inscriptions">
+                        <list>
+                            <item>
+                                <locus>f. 5</locus>
+                                <quote xml:lang="cu">+ сн҃ь стефа<seg rend="sup">н</seg> воеводе
+                                    <lb/> + іѡань алеѯанд<seg rend="sup">р</seg>ь въ хс҃а ба҃ вѣрны.
+                                    воевода и г<seg rend="sup">с</seg>нь . въсеи земли мльдоѵскои
+                                    ѿкоупи сы, тетроегль. що е быль ꙋ залоге. бь҃ да га прости, и да
+                                    моу дарꙋе живо<seg rend="sup">т</seg> вѣчны. и зде мно<seg
+                                        rend="sup">г</seg>лѣтны живо<seg rend="sup">т</seg>
+                                </quote>
+                            </item>
+                            <item>
+                                <locus>f. 275</locus>
+                                <quote xml:lang="cu">с҃ ѯ҃ ѕ҃ лѣ<seg rend="sup">т</seg>
+                                </quote>
+                            </item>
+                            <item>
+                                <locus>f. (286)</locus>
+                                <quote xml:lang="cu">+ Сир' сам еꙋ гаврил: еродікос':
+                                        <unclear>...</unclear> цари рꙋена сиь фи'дь ачара агеіие
+                                    паꙋел <unclear>...</unclear> чинева созикодом
+                                        <unclear>...</unclear>
+                                </quote>
+                            </item>
+                            <item>
+                                <locus>f. (286)v</locus>
+                                <quote xml:lang="el">ο παρον ευαγγελιον αγιοπαυλιτικο δια χιλιαδας
+                                    εικοσι εξ</quote>
+                            </item>
+                        </list>
+                    </additions>
+                </physDesc>
+                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                    <scribe n="1">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1-275</locus>
+                        <persName xmlns="http://www.tei-c.org/ns/1.0">Simon the Monk</persName>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
+                            <p>A formal high uncial, <dimensions unit="mm" type="letters">
+                                    <height>6</height>
+                                </dimensions> mm high (<dimensions unit="mm" type="line">
+                                    <height>13</height>
+                                </dimensions> mm between lines).</p>
+                        </scriptDesc>
+                        <scribeLang>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Old Church Slavonic.</p>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Two-<emph>jer</emph>,
+                                        two-<emph>jus</emph> orthography.</p>
+                            </orthography>
+                        </scribeLang>
+                    </scribe>
+                    <scribe n="2">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 276-279</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0">Anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <p>Semiuncial, a smaller (ca<dimensions unit="mm" type="letters">
+                                    <height>3</height>
+                                </dimensions> mm high, <dimensions unit="mm" type="line">
+                                    <height>9</height>
+                                </dimensions> mm between lines), much less formal and possibly
+                                later, 14th/15th-c.? hand.</p>
+                        </scriptDesc>
+                        <scribeLang>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Old Church Slavonic.</p>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Two-<emph>jer</emph>,
+                                        two-<emph>jus</emph> orthography.</p>
+                            </orthography>
+                        </scribeLang>
+                    </scribe>
+                    <scribe n="3">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 280-283v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0">Anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <p>Semiuncial, another small (ca<dimensions unit="mm" type="letters">
+                                    <height>3</height>
+                                </dimensions> mm high, <dimensions unit="mm" type="line">
+                                    <height>8-9</height>
+                                </dimensions> mm between lines), much less formal and possibly
+                                later, 14th/15th-c.? hand.</p>
+                        </scriptDesc>
+                        <scribeLang>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Old Church Slavonic.</p>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Two-<emph>jer</emph>,
+                                        two-<emph>jus</emph> orthography.</p>
+                            </orthography>
+                        </scribeLang>
+                    </scribe>
+                </scribeDesc>
+                <msContents>
+                    <summary>The Four Gospels. Each is preceded by a list of contents, which, except
+                        for that to St Luke, is incomplete (though curiously the miniature
+                        immediately preceding that one, on f. 134v, is also incomplete); that to St
+                        Matthew has numbers for only half its length; that to St Mark has no numbers
+                        and its headpiece is unfinished; and the numbers in that to St John are
+                        probably later additions. Sectional numbers are provided in the margin. .
+                        The Synaxarion and the Menology at the end of the MS are most likely later
+                        additions.</summary>
+                    <msItemStruct xml:id="ACD1" type="translation">
+                        <locus n="1">3v-4</locus>
+                        <title xml:lang="bg">Съдържание на Евангелието от Матей</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">главы ѥ҆у<seg rend="sup"
+                                    >г҇</seg>лїа и̋же ѿ матѳе́а</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD2" type="translation">
+                        <locus n="2">6-86v</locus>
+                        <title xml:lang="bg">Евангелие от Матей</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Е҆ѴАГГЕ́ЛЇЕ сТ҃ОЕ Ѿ МА<seg
+                                    rend="sup">т҇</seg>Ѳе́а</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD3" type="translation">
+                        <locus n="3">87</locus>
+                        <title xml:lang="bg">Съдържание на Евангелието от Марко</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">ГЛАВЫ ЕѴ<seg rend="sup"
+                                    >г҇</seg>ЛЇА Е҆ЖЕ Ѿ МАРКА</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD4" type="translation">
+                        <locus n="4">88-134v</locus>
+                        <title xml:lang="bg">Евангелие от Марко</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Е҆ѴАГГЕ́ЛЇЕ сТ҃ОЕ Ѿ
+                                МАРКА</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD5" type="translation">
+                        <locus n="5">135-136</locus>
+                        <title xml:lang="bg">Съдържание на Евангелието от Лука</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">главы е҆вагге́лїю е҆же ѿ
+                                лѹкы</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD6" type="translation">
+                        <locus n="6">137-212</locus>
+                        <title xml:lang="bg">Евангелие от Лука</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Е҆ВАГГЕ́ЛИЕ СТ҃ОЕ Ѿ
+                                ЛꙊКЫ</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD7" type="translation">
+                        <locus n="7">212v</locus>
+                        <title xml:lang="bg">Съдържание на Евангелието от Йоан</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">главы е҆вагге́лїа е҆же ѿ
+                                і҆ѡ҃а́нна</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD8" type="translation">
+                        <locus n="8">213-272v</locus>
+                        <title xml:lang="bg">Евангелие от Йоан</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Е҆ВАГГе́ЛЇЕ сТ҃ОЕ Ѿ
+                                Їѡ҃А́ННА</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD9">
+                        <locus n="9">274-275</locus>
+                        <title xml:lang="bg">Колофон</title>
+                        <note>A very long colophon, stating that the book was written and bound for
+                            the Tsar.</note>
+                        <colophon>
+                            <p><milestone unit="page" n="247r"/> Слава въ тр<seg rend="sup"
+                                >о҇</seg>ици, славимомоу бо҃у . съвръ<lb/> шаѫщомоу вьсѣко начинание
+                                бл҃го .<lb/> ꙗ҆же ѡ҆ немь начинаѥмомоу . и҆ да<lb/>ѫщомоу, по начѧлѣ
+                                и҆ конецъ:<lb/> Писа сѧ сии животочныи и҆сточникъ<lb/> новыѫ бл҃гдти
+                                . прѣсла<seg rend="sup">д҇</seg>го оу҆ченїа х<seg rend="sup"
+                                    >с҇</seg>ва,<lb/> и҆ того бж<seg rend="sup">с҇</seg>твныхъ
+                                самовидецъ, оу҆че<lb/>ник же, и҆ а҆п<seg rend="sup">с҇</seg>лъ .
+                                гл҃емыи четвероблг҃о<lb/>вѣствникъ. не вьнѣшьнимь тькмо<lb/> шаромъ
+                                . и҆ли златомъ. и҆ли ви́сомъ прѣ<lb/>соуканнымь, и҆ли каменїемь и҆
+                                би́<lb/>сромь оу҆крашаѥмь, нѫ вьнѧтръни<lb/>мъ бж<seg rend="sup"
+                                    >с҇</seg>твнаго слова, и҆злианїемъ и҆ <lb/> таинъствнаго
+                                съмотренїа и҆сплъне<lb/>ниѥ ꙗ҆же вь немь вл<seg rend="sup"
+                                >д҇</seg>чнѣго и҆ бж<seg rend="sup">с҇</seg>твна<lb/>го вьчлч҃енїа.
+                                и҆ чюдодѣиства. ꙗ҆же<lb/> съвръши на<seg rend="sup">с҇</seg> ради.
+                                    мл<seg rend="sup">с҇</seg>рдїа же, и҆ мл<seg rend="sup"
+                                >с҇</seg>ти.<lb/> даже до кр<seg rend="sup">с҇</seg>та и҆
+                                погребенїа. и҆ славнаго<lb/> трид҃невнаго вьск҃рсенїа. и҆
+                                вьзнесе<lb/>нїа. и҆ кто доволенъ по рѧдоу и҆ с чьсти<lb/> и҆ли
+                                и҆згл҃ати ꙗ҆же вь немъ вьѻ҅браже<lb/>
+                                <pb n="247v"/>ние дѣиствъ х<seg rend="sup">с҇</seg>вѣхъ. по и̋стинѣ
+                                ꙗ҆коже и҆<lb/>сточникоу ꙗ҆вльшоу сѧ вь земли безво<lb/>днѣи, и҆
+                                жѫждѫ и кто пиеть ѿ него, не <lb/> вьжѫж<seg rend="sup">д҇</seg>ет
+                                сѧ к томоу . точить бо строуѫ, <lb/> и҆ наслаждаѥть дш҃ѫ . веселить
+                                    ср<seg rend="sup">д҇</seg>це, въ<lb/> коупѣ и҆ помышленїа. и҆ли
+                                ꙗ҆коже скро<lb/> вищоу съкръвеноу, на селѣ ср<seg rend="sup"
+                                    >д҇</seg>чномъ.<lb/> Сие̏ възыскавъ ѡ҆брѣте, бл҃говѣрныи,<lb/> и
+                                    х<seg rend="sup">с҇</seg>толюбивыи. прѣвысѡкыи, и҆
+                                б҃говѣ<lb/>нчанныи самодръжецъ і҆ѡ҃а́нъ а҆ле́ѯан<seg rend="sup"
+                                    >д҇</seg>рь<lb/> цр҃ъ. ꙗ҆коже свѣтилникоу положеноу въ <lb/>
+                                темнѣ мѣстѣ. и҆ забьвеноу и҆ вь нераде<lb/> ние положеноу древними
+                                цр҃и. Є҆гоже<lb/> бж<seg rend="sup">с҇</seg>твнымь желаниемь
+                                и҆зъѡбрѣте<lb/> съи хр<seg rend="sup">с҇</seg>толюбивыи цр҃ь. і҆ѡ҃ .
+                                а҆леѯандрь. и҆ и҆<lb/> зложивъ прѣписа. и҆зь є҆ллиньскых
+                                сло<lb/>весь, вь нашѫ словѣнскѫѧ слогнѫ, и҆ въ<lb/> ꙗ҆вление положи.
+                                сего и҆зьвьноу зла<lb/> тыми дьсками покова, и҆ вьнѧтръ<lb/> ѧ҆доу,
+                                животворными ѡ҆бразы вл<seg rend="sup">д҇</seg>чны<lb/> ми, и҆ того
+                                славныхъ оу҆ченикъ. шары<lb/>
+                                <pb n="275r"/> свѣтлыми и҆ златомъ. живописцы хѫдо<lb/> жиѣ
+                                оу҆красивь. на ꙋтвръждение своемоу<lb/> цр<seg rend="sup"
+                                >с҇</seg>твоу. ꙗ҆коже и҆ великыи вь ст҃хъ кѡнста<lb/>ндинь цр҃ь сь
+                                мтр҃иѫ є҆леноѫ, и҆знесъ<lb/> и҆з <sic>боукоу</sic> земною
+                                животворивыи кръ<lb/>стъ гн҃ь, си́це и҆ съ̏, сего
+                                четвероблг҃овѣстника:<lb/> Съдръжѫщоу тогда ски́птра
+                                блъгарска<lb/>го, и҆ гръчьскаго цр<seg rend="sup">с҇</seg>тва. съ
+                                блговѣ<lb/> рноѫ и҆ бг҃овѣнчанноѫ и҆ новопросв<seg rend="sup"
+                                    >щ҇</seg>ѣ<lb/>ноѫ цр҃цеѫ своеѧ кира ѳе<seg rend="sup"
+                                >д҇</seg>ороѫ. тьзои҆<lb/>метноѫ бж҃иѥмоу дароу. и҆ сь присны<lb/>
+                                имъ и҆ прѣ́вьзлюбленымь сн҃омь сво<lb/>имъ і҆ѡ҃а́номъ шишманомь
+                                цр҃емъ:<lb/> вь славѫ творцоу всѣ<seg rend="sup">х҇</seg>, и҆ того
+                                    блг҃овѣсть<lb/>никѡ<seg rend="sup">м҇</seg>. матѳе́ю. ма́ркоу.
+                                лоуцѣ . и҆ <lb/> і҆ѡ҃а́ноу. и҆хже молитвами. побѣдѫ <lb/> да
+                                    прїиме<seg rend="sup">т҇</seg> ѿ ба҃, на врагы ратоуѫщихъ<lb/>
+                                того. и҆ главы ихъ съкрꙋши<seg rend="sup">т҇</seg> по<seg rend="sup"
+                                    >д҇</seg> ноꙃѣ сво<seg rend="sup">и҇</seg>, а҅ми<seg rend="sup"
+                                    >н҇</seg>+<lb/> Лѣтоу текѫщоу, <date>҂ѕ҃ ѿ҇ѯ҇д҃. и̋нді҆кта ѳ҃
+                                    :⁓</date>:-<lb/> + раб же гн҃а моего цр҃ѣ, писавыи сиѫ кни<lb/>
+                                гѫ, сїмѡнъ мни<seg rend="sup">х҇</seg> нарицаєт сѧ :⁓</p>
+                        </colophon>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD10" type="translation">
+                        <locus n="10">276-279</locus>
+                        <title xml:lang="bg">Календар</title>
+                        <note>Contans selected dates.</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ЦА
+                                СЕПТЕВРЇА</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD11" type="translation">
+                        <locus n="10">280-283v</locus>
+                        <title xml:lang="bg">Месецослов</title>
+                        <note>Contans selected dates.</note>
+                    </msItemStruct>
+                </msContents>
+                <history>
+                    <origin evidence="de visu" resp="#RC">
+                        <origDate evidence="internal" notBefore="1356" notAfter="1356"
+                            >1356</origDate>
+                        <origPlace>Bulgaria, most likely in Tŭrnovo</origPlace>
+                    </origin>
+                    <provenance>Given to <persName>Robert Curzon</persName> by the
+                            <placeName>Monastery of St Paul</placeName>on Athos.<ref type="bibl"
+                            target="bib:Curzon1849">Curzon, 1849: 422-424</ref></provenance>
+                </history>
+                <additional>
+                    <adminInfo>
+                        <recordHist>
+                            <source>Directly catalogued from the original manuscript using the
+                                printed catalogue <ref type="bibl" target="bib:Cleminson1988"
+                                    >Cleminson 1988: 121-123.</ref>
+                            </source>
+                        </recordHist>
+                    </adminInfo>
+                    <surrogates>
+                        <p>Microform: Central Library of BAS, MF-11,</p>
+                        <p>Digital images of ff. 184, 188, 200, 213, 259v, 10v, 2v, 6v, 84, 6, 13,
+                            59, 76v, 78v, 85, 86v, 118, 123, 133, 163v, 166, 171, 183 (files:
+                            C5246-07, C5247-07, C5250-07, C5254-01, C5256-06, C7885-01, C7885-02,
+                            C7885-03, C2180-08, C5202-03, C5204-01, C5215-05, C5219-08, C5220-04,
+                            C5222-01, C5222-04, C5230-03, C5231-05, C5234-01, C5241-06, C5242-03,
+                            C5243-05, C52446-05).</p>
+                    </surrogates>
+                    <listBibl>
+                        <bibl>
+                            <ref type="bibl" target="bib:Джурова1977">Джурова и Дуйчев 1977: no. 4,
+                                pls. X-XV.</ref>
+                        </bibl>
+                        <bibl>
+                            <ref type="bibl" target="bib:Живкова1980">Живкова 1980.</ref>
+                        </bibl>
+                        <bibl>
+                            <ref type="bibl" target="bib:DerNersessian1927">Der Nersessian
+                                1927</ref>
+                        </bibl>
+                        <bibl>
+                            <ref type="bibl" target="bib:Filow1927">Filow 1927/28.</ref>
+                        </bibl>
+                        <bibl>
+                            <ref type="bibl" target="bib:Филов1929">Филов 1929.</ref>
+                        </bibl>
+                        <bibl>
+                            <ref type="bibl" target="bib:Филов1934">Филов 1934.</ref>
+                        </bibl>
+                        <bibl>
+                            <ref type="bibl" target="bib:Dimitrova1994">Dimitrova 1994</ref>
+                        </bibl>
+                    </listBibl>
+                </additional>
+            </msDesc>
+        </body>
+    </text>
+</TEI>

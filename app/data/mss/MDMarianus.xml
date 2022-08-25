@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-MDMarianus">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Codex Marianus, 10th c, middle</title>
+                <author xml:id="MD">Margaret Dimitrova</author>
+                <author xml:id="AB">Andrej Bojadžiev</author>
+                <author xml:id="EM">Elisaveta Mousakova</author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Institute of Literature, BAS</publisher>
+                <pubPlace>Sofia</pubPlace>
+                <idno type="Repertorium">RC-MDMarianus</idno>
+                <availability status="free">
+                    <p>The intellectual content of this file is copyrighted by its creator(s) under
+                        the Creative Commons Attribution-No Derivative Works 3.0 License under
+                        legislation in <ref
+                            target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
+                        information, but you are not allowed to alter, transform, or build upon the
+                        works on this section of the site. All reuse or distribution of this work
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This electronic description is based on the following published materials:
+                        <label>Descriptions:</label>
+                    <ref type="bibl" target="bib:Тихомиров1962">Тихомиров 1962: 144-148</ref>
+                    <ref type="bibl" target="bib:Шмидт1984">Шмидт 1984: 54-59</ref>
+                    <ref type="bibl" target="bib:Birkfellner1975">Birkfellner 1975: 67-68</ref>
+                    <label>Edition: </label>
+                    <ref type="bibl" target="bib:Ягич1883">Ягич 1883</ref>
+                    <label>Article in an encyclopaedia: </label>
+                    <ref type="bibl" target="bib:Мострова1995">Мострова 1995: 617-625</ref></p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="bg">Bulgarian</language>
+                <language ident="en">English</language>
+                <language ident="cu">Old Slavic</language>
+                <language ident="ru">Russian</language>
+                <language ident="la">Latin</language>
+            </langUsage>
+        </profileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
+                    <p>In the context of this project, private URIs with the prefix "bib" point to
+                        bibl elements in the project's bib.xml file.</p>
+                </prefixDef>
+            </listPrefixDef>
+        </encodingDesc>
+        <revisionDesc>
+            <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
+                element &lt;origDate&gt;</change>
+            <change who="#AB" when="2009-04-17">Added copyright statement</change>
+            <change who="#AB" when="2009-04-17">Corrections</change>
+            <change who="#AB" when="2009-04-17">Added Repertorium Identifier</change>
+            <change who="#AB" when="2009-03-11">Conversion to Repertorium 3.0</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <msDesc>
+                <msIdentifier>
+                    <msName type="general" xml:lang="en">gospel book</msName>
+                    <msName type="individual" xml:lang="bg" select="whole">Мариинско
+                        евангелие</msName>
+                    <msName type="individual" xml:lang="la" select="whole">Codex Marianus</msName>
+                    <msName type="individual" xml:lang="en" select="whole">Codex Marianus</msName>
+                    <msName type="individual" xml:lang="ru" select="whole">Мариинское
+                        евангелие</msName>
+                    <p>The manuscript is kept now in two libraries:</p>
+                    <altIdentifier select="171ff" xml:id="Grig6" type="partial">
+                        <msName type="individual" xml:lang="en">Grigorovič Gospel Book</msName>
+                        <msName type="individual" xml:lang="bg">Григоровичово
+                            четвероевангелие</msName>
+                        <msName type="individual" xml:lang="ru">Четвероевангелие
+                            Григоровича</msName>
+                        <msName type="individual" xml:lang="en">Athonite Gospel Book</msName>
+                        <msName type="individual" xml:lang="bg" select="whole">Атонско
+                            четвероевангелие</msName>
+                        <msName type="individual" xml:lang="ru" select="whole">Афонское
+                            четвероевангелие</msName>
+                        <country>Russia</country>
+                        <settlement>Moscow</settlement>
+                        <repository>Russian State Library</repository>
+                        <collection>В. Григорович</collection>
+                        <idno type="shelfmark">6</idno>
+                    </altIdentifier>
+                    <altIdentifier corresp="Grig6">
+                        <idno type="shelfmark">M. 1689</idno>
+                    </altIdentifier>
+                    <altIdentifier corresp="Grig6">
+                        <idno type="catalogue">14</idno>
+                        <note place="inline">
+                            <ref target="bib:Шмидт1984" type="bibl">Шмидт 1984: 54-59</ref></note>
+                    </altIdentifier>
+                    <altIdentifier select="1-2ff" type="partial" xml:id="OENB146">
+                        <msName type="individual" xml:lang="bg">Листове на Миханович</msName>
+                        <msName type="individual" xml:lang="en">Mihanović folia</msName>
+                        <msName type="individual" xml:lang="ru">Листки Михановича</msName>
+                        <country>Austria</country>
+                        <settlement>Vienna</settlement>
+                        <repository>Vienna National Library</repository>
+                        <idno type="shelfmark">Cod. Slav. 146</idno>
+                        <idno type="catalogue">I/15</idno>
+                        <note>
+                            <ref type="bibl" target="bib:Birkfellner1975">Birkfellner 1975:
+                                67-68.</ref></note>
+                    </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                    <objectDesc rend="ff.1-133, 135-172">
+                        <supportDesc>
+                            <support>
+                                <material>Parchment</material> Rough and uneven.</support>
+                            <extent>
+                                <measure unit="folia">2<ref target="OENB146">(Vienna)</ref>+171 (
+                                    f.134 is a later insertion) <ref target="RGB1689">(Moscow)</ref>
+                                </measure>
+                                <dimensions type="folia" unit="mm">
+                                    <height>212-215</height>
+                                    <width>172-180</width>
+                                </dimensions>
+                            </extent>
+                            <foliation>
+                                <date>in 19th-century</date>. The latter foliation of the Moscow
+                                part was made by <name type="commisioner">A. E. Viktorov</name>n the
+                                    <date>20th century</date> with Arabic numerals and finishes with
+                                #172; the folio after #166 is numerated with both #167 and
+                                #168.</foliation>
+                            <collation>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="I">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">2 ff. <formula>8
+                                            (-1-2-3-4-5-6)</formula>
+                                    </extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="II-XXI">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8 ff.</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="XXII">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">7 ff. <formula>7
+                                            (-7)</formula>
+                                    </extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="XXIII">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">2 ff. <formula>6
+                                            (-1-2-3-4)</formula>
+                                    </extent>
+                                </quire>
+                                <signatures>The quires were numerated with Glagolitic letters under
+                                        <emph>titlo</emph> together with a small floral ornament in
+                                    the upper right corner of the first quire folio. The markings
+                                    are not preserved on the following quires: I, II,
+                                    XVII.</signatures>
+                            </collation>
+                            <condition>The beginning and the end of the manuscript are missing. The
+                                original f. 134 was lost and was replaced later with a 14th-century
+                                one written with Cyrillic. Now it is the sixth folio of quire XVIII.
+                                The folio after #166 is missing and the text is interrupted. Some
+                                portions of the text on ff. 1r, 33r, 88v, 168v, 171v are hardly
+                                readable due to the parchment damages. On the upper margin of f. 100
+                                an imprint of a Glagolitic text has been noticed: for a detailed
+                                survey of manuscript damages and restorations, see <ref type="bibl"
+                                    target="bib:Тихомиров1962">Тихомиров 1962</ref>, <ref
+                                    type="bibl" target="bib:Шмидт1984">Шмидт 1984:
+                                54-55</ref>.</condition>
+                        </supportDesc>
+                        <layoutDesc>
+                            <layout columns="1" writtenLines="31"/>
+                        </layoutDesc>
+                    </objectDesc>
+                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Brown ink for the text. </ink>
+                    <decoDesc>
+                        <decoNote type="miniatures">
+                            <p>Three miniatures of St. Mark, St. Luke, and St. John, crude drawings
+                                in ink and <term type="colour">pink</term>, <term type="colour"
+                                    >green</term> or <term type="colour">ocher</term>
+                                <term>washes</term>.</p>
+                            <list type="simple">
+                                <item xml:id="StMark">
+                                    <locus>F. 44r</locus>, St. Mark in full length, under arch,
+                                    holding the Gospel.</item>
+                                <item xml:id="StLuke">
+                                    <locus>F. 77v</locus>, St. Luke in full length, under ornamented
+                                    arch.</item>
+                                <item xml:id="StJohn">
+                                    <locus>F. 133v</locus>, St. John in full length, under arch. The
+                                    image is stylisticly different from the others.</item>
+                            </list>
+                        </decoNote>
+                        <decoNote type="headpieces">
+                            <list type="simple">
+                                <item>
+                                    <locus>f. 43, the Chapters of St. Mark's Gospel,</locus> an
+                                    interlaced headband with floral endings at the corners and the
+                                    short sides of the band.</item>
+                                <item>
+                                    <locus>f. 44v, the beginning of St. Mark's Gospel</locus>, an
+                                    interlaced headband with floral endings at the corners and a
+                                    central motif on the upper rim.</item>
+                            </list>
+                        </decoNote>
+                        <decoNote type="initials">
+                            <label>Floral elements and interlaces</label>
+                            <list type="simple">
+                                <item>
+                                    <locus>f. 44v, beginning of St. Mark's Gospel</locus>initial
+                                        <foreign xml:lang="cu" rend="glag">З </foreign> with floral
+                                    elements and interlaces. </item>
+                                <item>
+                                    <locus>f.78r, beginning of St. Luke's Gospel</locus>initial
+                                        <foreign xml:lang="cu" rend="glag">П</foreign> with floral
+                                    elements and interlaces. <ref
+                                        target="../images/CodexMarianus78r.jpg">Image</ref>
+                                </item>
+                            </list>
+                        </decoNote>
+                    </decoDesc>
+                    <bindingDesc>
+                        <binding>
+                            <p>Not preserved.</p>
+                        </binding>
+                    </bindingDesc>
+                    <additions type="inscriptions">
+                        <note>There are numerous marginal notes, Glagolitic and Cyrillic; the
+                            Cyrillic marginal notes date from different periods. They include a
+                                <label xml:id="GermanNote">note</label> by a certain <persName>
+                                <ref target="german">German</ref>
+                            </persName> (late 14th century) on f. 133v mentioning the Skete of St.
+                            Theotokos. <ref target="bib:Jagic1883" type="bibl">V. Jagic 1883:
+                                411-413</ref> supposes that the same German wrote the text on the
+                            inserted f. 134 while <ref target="bib:Тихомиров1962" type="bibl"
+                                >Тихомиров 1962</ref> does not share his opinion. Other notes are
+                            from different periods and they were written in cinnabar and black ink.
+                            They contain information on the days of lections, titles of the
+                            chapters, and some other liturgical notes. The Glagolitic and Cyrillic
+                            notes are published by Jagic in his <ref target="bib:Jagic1883"
+                                type="bibl">edition</ref> of the <emph>Codex Marianus</emph>.</note>
+                    </additions>
+                </physDesc>
+                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                    <scribe xml:id="Glagolitic" n="1">
+                        <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
+                            <locus>1r-133v</locus>
+                            <locus>135r-173v</locus>
+                        </locusGrp>
+                        <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="glag"
+                            type="Glagolitic">
+                            <p>Glagolitic alphabet for the main text: classical round Glagolitic
+                                script of the second half of the 10th century.</p>
+                        </scriptDesc>
+                        <scribeLang>
+                            <orthography>
+                                <orthNote type="jer" subtype="irregular">Тhere many examples of
+                                    writing of back jer for front one, and <emph
+                                        xmlns="http://www.tei-c.org/ns/1.0">vice versa</emph>, and
+                                    of lowering of front jer and back jer into<foreign
+                                        xmlns="http://www.tei-c.org/ns/1.0"/>
+                                    <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
+                                        >e</foreign> and <foreign
+                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
+                                        >o</foreign>, respectively, both in roots and affixes. There
+                                    are cases of missing weak jers. Following the letters for old
+                                    palatal consonants, back jer is often written for the
+                                    etymological front jer in weak positions, e.g. <foreign
+                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
+                                        >отрочиштъ</foreign>, <foreign
+                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
+                                        >повѣждъ</foreign>, <foreign
+                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
+                                        >мѫжъ</foreign>. </orthNote>
+                                <orthNote type="jus" subtype="etymReg">Four letters for nasal vowels
+                                    are used. Cases of writing of <foreign
+                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
+                                        >оу</foreign> and <foreign
+                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
+                                        >o</foreign> for the letter for the back nasal are attested.
+                                    In a few occurances, the sign for the "fifth" nasal appears:
+                                        <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
+                                        >свѣтильникъ горꙙ </foreign>
+                                    <bibl xmlns="http://www.tei-c.org/ns/1.0" type="NT">Jn
+                                        5:35</bibl>, <foreign xmlns="http://www.tei-c.org/ns/1.0"
+                                        xml:lang="cu">ѣдꙙи хлѣбъ </foreign>
+                                    <bibl xmlns="http://www.tei-c.org/ns/1.0">Jn 6:58</bibl>,
+                                        <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
+                                        >грꙙдꙙши </foreign>
+                                    <bibl xmlns="http://www.tei-c.org/ns/1.0">Jn 12:12</bibl>. The
+                                    digraph for the front nasal is written only in word-initial
+                                    position and after the letters for vowels. </orthNote>
+                                <orthNote>
+                                    <list xmlns="http://www.tei-c.org/ns/1.0" type="simple">
+                                        <item>There are attestations of writing of <foreign
+                                                xml:lang="cu">и</foreign> for <foreign xml:lang="cu"
+                                                >ьі </foreign>.</item>
+                                        <item>In some cases <foreign xml:lang="cu">оу</foreign> is
+                                            written for <foreign xml:lang="cu">в</foreign> in
+                                            word-initial position. Following letters for old palatal
+                                            consonants, the letter <foreign xml:lang="cu"
+                                                >ю</foreign> is usually written and not <foreign
+                                                xml:lang="cu">оу</foreign> (e.g. <foreign
+                                                xml:lang="cu"> шюица</foreign>, <foreign
+                                                xml:lang="cu">чюетъ</foreign>). </item>
+                                        <item>The <term>l-epentheticum </term> is written
+                                            inconsistently.</item>
+                                        <item>The letter for [dz] everywhere is replaced by <foreign
+                                                xml:lang="cu">з</foreign>. </item>
+                                        <item>The continuant of the Proto-Slavic <emph>*tj</emph> is
+                                            rendered more often with digraph <foreign xml:lang="cu"
+                                                >шт</foreign>. The usual reflex of <emph>*dj</emph>
+                                            is <foreign xml:lang="cu">жд</foreign> but there are a
+                                            couple of examples with <foreign xml:lang="cu"
+                                                >з</foreign>, such as <foreign xml:lang="cu"
+                                                >розьства </foreign> (48.20), and <foreign
+                                                xml:lang="cu">визжь</foreign> (399.17). </item>
+                                    </list>
+                                </orthNote>
+                            </orthography>
+                            <grammar>
+                                <list xmlns="http://www.tei-c.org/ns/1.0" xml:id="phonology">
+                                    <item>The adjective forms preffer the archaic <foreign
+                                            xml:lang="cu">-сц-</foreign> to <foreign xml:lang="cu"
+                                            >-ст-</foreign>. Cases with <foreign xml:lang="cu"
+                                            >-ст-</foreign> are rare. The uncontracted forms of
+                                        pronominal adjectives and of verbs of the -je-conjugation in
+                                        Ind. Praes. Act. and of verbs in Imperfect are much more
+                                        frequent than the contracted ones. Verbal forms (Ind. Praes.
+                                        Act., p.3, -je-conjugation) with assimilation, such as
+                                            <foreign xml:lang="cu">бѣгаатъ</foreign>, <foreign
+                                            xml:lang="cu">радоуоутъ</foreign> are frequent. In
+                                        Imperativus there is variation of forms with <foreign
+                                            xml:lang="cu">ѣ</foreign> and with <foreign
+                                            xml:lang="cu">и</foreign>, such as <foreign
+                                            xml:lang="cu">покажѣте</foreign> 290.17, but also
+                                            <foreign xml:lang="cu">покажите</foreign> 80.5.</item>
+                                </list>
+                                <list xmlns="http://www.tei-c.org/ns/1.0" xml:id="morphology">
+                                    <item xml:id="verbs">The manuscript uses non-sigmatic Aoristus
+                                        (e.g. <foreign xml:lang="cu">вьнидъ</foreign>, <foreign
+                                            xml:lang="cu">сънидъ</foreign>, <foreign xml:lang="cu"
+                                            >идомъ</foreign>, <foreign xml:lang="cu"
+                                        >отидѫ</foreign>) and first sigmatic Aoristus of verbs with
+                                        stems ending in a consonant (e.g. <foreign xml:lang="cu"
+                                            >привѣсъ</foreign>, <foreign xml:lang="cu"
+                                            >въвѣсомъ</foreign>, <foreign xml:lang="cu"
+                                            >възнѣсѧ</foreign>). Verbs with infinitive stems ending
+                                        in a vowel often preserve the archaic ending <foreign
+                                            xml:lang="cu">-тъ</foreign> in Ind. Aor. Act, p. 2 and
+                                        3, Sg., e.g. <foreign xml:lang="cu">обитъ</foreign>,
+                                            <foreign xml:lang="cu">оумрѣтъ</foreign>. Three cases of
+                                        ommited ending <foreign xml:lang="cu">-тъ</foreign> for Ind.
+                                        Praes. Act., p. 3. Sg. are found (<foreign xml:lang="cu"
+                                            >e</foreign> instead of <foreign xml:lang="cu"
+                                            >естъ</foreign>, <foreign xml:lang="cu">нѣ</foreign> for
+                                            <foreign xml:lang="cu">нѣстъ</foreign>, and <foreign
+                                            xml:lang="cu">бѫде</foreign> for <foreign xml:lang="cu"
+                                            >бѫдетъ</foreign>). </item>
+                                    <item xml:id="nomina">The old suffix <foreign xml:lang="cu"
+                                            >-нье</foreign> is written frequently as <foreign
+                                            xml:lang="cu">-ние</foreign>, e.g. <foreign
+                                            xml:lang="cu">знамение</foreign>, but this orthography
+                                        is not consistently followed. In other forms <foreign
+                                            xml:lang="cu">-ье</foreign> is preffered (cf. <foreign
+                                            xml:lang="cu">абье</foreign>, 24r.20). </item>
+                                </list>
+                            </grammar>
+                            <lexis>
+                                <list xmlns="http://www.tei-c.org/ns/1.0" xml:id="lexis">
+                                    <item>The manuscript uses lexis which is believed to be typical
+                                        of the earliest Gospel translation from Greek, cf. the use
+                                        of the archaic lexemes <foreign xml:lang="cu"
+                                        >баль</foreign>, <foreign xml:lang="cu">жаль</foreign>,
+                                            <foreign xml:lang="cu">миса</foreign>, <foreign
+                                            xml:lang="cu">шюи</foreign>, <foreign xml:lang="cu"
+                                            >братръ</foreign>, <foreign xml:lang="cu"
+                                            >небесьскъ</foreign>, <foreign xml:lang="cu"
+                                            >неприѣзнь</foreign>, <foreign xml:lang="cu"
+                                            >пропѧти</foreign>, <foreign xml:lang="cu"
+                                            >иночѧдъ</foreign>, <foreign xml:lang="cu"
+                                            >врътъ</foreign>, <foreign xml:lang="cu"
+                                            >искрьнъ</foreign>, <foreign xml:lang="cu"
+                                            >грѧсти</foreign> could prove this hypothesis.</item>
+                                    <item>Also, in word-formation the manuscript prefers the old
+                                        suffix - <foreign xml:lang="cu">ицеѫ</foreign> and not
+                                            <foreign xml:lang="cu">-ждьі</foreign>. Still, the
+                                        following forms are considered to be relatively later:
+                                            <foreign xml:lang="cu">благодать</foreign>, <foreign
+                                            xml:lang="cu">написание</foreign>, <foreign
+                                            xml:lang="cu">дрѧхлъ</foreign>. </item>
+                                </list>
+                            </lexis>
+                        </scribeLang>
+                    </scribe>
+                    <scribe xml:id="Cyrillic" n="2">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">The later inserted f. 134 of
+                            quire XVIII. It is written with Cyrillic letters.</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" xml:id="german" full="yes">German
+                                <certainty locus="value" cert="low"/>
+                        </name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <p>Cyrillic alphabet for later notes and on the inserted f. 134.</p>
+                        </scriptDesc>
+                        <scribeLang>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">According to Jagic, the
+                                    orthography is Serbian whatever it means?</p>
+                            </orthography>
+                        </scribeLang>
+                        <note xmlns="http://www.tei-c.org/ns/1.0">Jagic was first to suppose that
+                            the name of the scribe is <ref target="GermanNote">German.</ref></note>
+                    </scribe>
+                </scribeDesc>
+                <msContents>
+                    <summary>
+                        <rs>Mt 5:23-6:16</rs> (on the Mihanovic folia); Mt 6:17-Jo 18:13; Jo
+                        18:30-Jo 21:17. The text is divided according to Eusebius Canon Tables and
+                        Ammonian Chapters written with Glagolitic letters on the margins. Also, thе
+                        names of the Euangelists, the titles of the chapters and the notes informing
+                        which lection on which church feast is read are written with Glagolitic
+                        letters.</summary>
+                    <msItemStruct xml:id="ACD1">
+                        <locus n="1">1r1 - 43r18</locus>
+                        <title xml:lang="bg">Евангелие от Матей</title>
+                        <note type="damage">The beginning is missing (up to Mt 5:23). The two folia
+                            kept in Vienna (ÖNB) contain Mt. 5:23- 6:16</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">то на тѧ .
+                                    <foreign rend="sup">24</foreign> остави тоу даръ твои прѣдъ
+                                олътаремъ</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и се азъ съ вами есмъ вьсѧ
+                                дьни до съконьчаниѣ вѣка аминь. к<foreign rend="sup"
+                                >ц</foreign>.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD2">
+                        <locus n="2">43r15-44r6</locus>
+                        <title xml:lang="bg">Съдържание на Евангелието от Марко</title>
+                        <note>The content is divided into 26 chapters.</note>
+                        <decoNote>Before the text there is a miniature of <ref target="#StMark">St.
+                                Mark</ref>
+                        </decoNote>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Отъ МАРЪКА. ГЛА<foreign
+                                    rend="sup">в</foreign> евъ<foreign rend="sup">гх</foreign>ълиѣ
+                                отъ маръка</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">а҃. О
+                                бѣсъноуѭштиимъ</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">к҃ꙁ О въпрошении тѣлесе
+                                гн҃ѣ</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD3">
+                        <locus n="3">44v7-76r4</locus>
+                        <title xml:lang="bg">Евангелие от Марко</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">ЕВАНЬГЕЛИЕ ОТЪ МАРЪКА</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Зачѧло еваньгелиѣ ис҃хва
+                                сн҃а бж҃иѣ</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD4">
+                        <locus n="4">76r5-77r31</locus>
+                        <title xml:lang="bg">Съдържание на Евангелието от Лука</title>
+                        <note>The content is divided into 72 chapters.</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">ОТЪ ЛОУКЪИ. ГЛАВЪИ ЕЖЕ ОТЪ
+                                ЛОУКЪИ</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">а҃· О написании.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ов҃. О клеопѣ</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD5">
+                        <locus n="5">78r1-132v21</locus>
+                        <title xml:lang="bg">Евангелие от Лука</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">ЕВАНЬГЕЛИЕ ОТЪ ЛОУКЪ·</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Понеже оубо мъноꙁи начѧшѧ
+                                чинити повѣсть о ізвѣстованъіхъ въ насъ вештехъ.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD6">
+                        <locus n="6">133v22-133r19</locus>
+                        <title xml:lang="bg">Съдържание на Евангелието от Йоан</title>
+                        <note>The content is divided into 18 chapters.</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                            type="nonnormative" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">ОТЪ ИОАНА. ГЛАВЪИ ЕВАНГЛИѢ ОТЪ
+                                ІОАНА. ГЛАВЪІ ЕВАНГЛИѢ ЕЖЕ ОТЪ ОТЪ ІОАНА</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">а҃. О брацѣ бъівъшиимъ въ
+                                кана галилѣи.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ꙁі. О испрошении тѣлесе
+                                гн҃ѣ.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD7">
+                        <locus n="7">135r-172v30</locus>
+                        <title xml:lang="bg">Евангелие от Йоан</title>
+                        <note>Without title and beginning. The text starts with Jo 1:23. Without
+                            end. The text breaks on Jo. 21:17 at the beginning of the verse. There
+                            is also a missing text in the middle (Jn 18:14-29).</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                            type="nonnormative" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">
+                                <unclear>гла</unclear>съ въпиѭштааго въ поустъіни. ісправите поѧ
+                                гн҃ь</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">гл҃а емоу
+                                третиици</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                </msContents>
+                <history>
+                    <origin evidence="de visu">
+                        <origDate extent="main part" notBefore="0930" notAfter="0970">Main corpus,
+                            Glagolitic: 10th century, middle</origDate>
+                        <origDate extent="f. 134" notBefore="1301" notAfter="1399">The inserted f.
+                            134, Cyrillic: 14th century</origDate>
+                        <origPlace>Main corpus, Glagolitic: probably writen in Southwestern
+                            Bulgarian territories</origPlace>
+                        <origPlace>The inserted f. 134, Cyrillic: according to Jagic Mount
+                            Athos</origPlace>
+                    </origin>
+                    <provenance>
+                        <p>Antun Mihanović who was the Austrian consul in Constantinople took the
+                            first extant 2 folia. Then these leaves became known to Fr. Miklosich
+                            who studied them in Vienna. Miklosich later gave this part of the
+                            manuscript to August Leskien. The main part of the codex was found by V.
+                            Grigorović on Mount Athos and was taken by him to Russia.</p>
+                    </provenance>
+                </history>
+                <additional>
+                    <adminInfo>
+                        <recordHist>
+                            <source>
+                                <p>This description is based on available descriptions of <ref
+                                        type="bibl" target="bib:Тихомиров1962">Тихомиров 1962:
+                                        144-148</ref>, <ref type="bibl" target="bib:Шмидт1984">Шмидт
+                                        1984: 54-59</ref>, <ref type="bibl"
+                                        target="bib:Birkfellner1975">Birkfellner 1975: 67-68</ref>,
+                                    the edition of Jagic (<ref type="bibl" target="bib:Ягич1883"
+                                        >Ягич 1883</ref>) and the article of <ref type="bibl"
+                                        target="bib:Мострова1995">Мострова 1995: 617-625</ref>.</p>
+                            </source>
+                        </recordHist>
+                    </adminInfo>
+                </additional>
+            </msDesc>
+        </body>
+    </text>
+</TEI>

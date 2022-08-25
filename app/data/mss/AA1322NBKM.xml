@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AA1322NBKM">
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-AA1322NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -17,11 +20,13 @@
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -54,7 +59,8 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
@@ -96,7 +102,8 @@
                             <support>
                                 <material>Paper</material>
                                 <watermark>
-                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Lion</motif>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                        >Lion</motif>
                                 </watermark>
                             </support>
                             <extent>
@@ -107,8 +114,7 @@
                                 </dimensions>
                             </extent>
                             <foliation>with letters from <foreign xml:lang="cu">а҃</foreign> to
-                                    <foreign xml:lang="cu">ві҃</foreign>
-                            </foliation>
+                                    <foreign xml:lang="cu">ві҃</foreign></foliation>
                             <collation>
                                 <summary>No data</summary>
                             </collation>
@@ -126,13 +132,15 @@
                     <scribe>
                         <locus xmlns="http://www.tei-c.org/ns/1.0">4r-35v</locus>
                         <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="semiuncial" script="Cyrs">
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="semiuncial"
+                            script="Cyrs">
                             <p>Small new semiuncial with ligatures and diacritics</p>
                         </scriptDesc>
                         <scribeLang>
                             <p xmlns="http://www.tei-c.org/ns/1.0">Church Slavonic; two jers, nasal
-                                vowel <foreign xml:lang="cu">ѧ</foreign> in the places of <foreign xml:lang="cu">ꙗ</foreign>, presence of <foreign xml:lang="cu">ѣ</foreign>
-                            </p>
+                                vowel <foreign xml:lang="cu">ѧ</foreign> in the places of <foreign
+                                    xml:lang="cu">ꙗ</foreign>, presence of <foreign xml:lang="cu"
+                                    >ѣ</foreign></p>
                         </scribeLang>
                         <respStmt xmlns="http://www.tei-c.org/ns/1.0">
                             <name full="yes">A. Angusheva</name>
@@ -201,8 +209,8 @@
                             Slavic names of the months are represented here together with the Latin
                             ones (i.e. <phr xml:lang="cu">Октѡмврьі рекомьй листопадъ</phr>). The
                             predictions by the thunder coincide with the text of the Thunderbook by
-                            means of the months from <soCalled>Loveški Sbornik</soCalled> of <name type="personal" full="yes">Paxomios</name>
-                        </note>
+                            means of the months from <soCalled>Loveški Sbornik</soCalled> of <name
+                                type="personal" full="yes">Paxomios</name></note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -224,7 +232,8 @@
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Сеи Календарь</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще бꙋдетъ Р҃ж<seg rend="sup">д</seg>ство Хр҃тово въ неделю</incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще бꙋдетъ Р҃ж<seg
+                                    rend="sup">д</seg>ство Хр҃тово въ неделю</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и запаленіе многѡ и лѣто
                                 градомъ віемо велми, жита на мѣста. Конець календарѧ</explicit>
                         </sampleText>
@@ -241,8 +250,8 @@
                         <recordHist>
                             <source>
                                 <p>Directly catalogued from the original manuscript using the
-                                    printed catalogue from <ref type="decription" target="bib:Stojanov1971">Стоянов, Кодов 1971</ref>
-                                </p>
+                                    printed catalogue from <ref type="decription"
+                                        target="bib:Stojanov1971">Стоянов, Кодов 1971</ref></p>
                             </source>
                         </recordHist>
                     </adminInfo>

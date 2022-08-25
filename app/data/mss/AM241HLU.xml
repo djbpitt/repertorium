@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-AM241HLU">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Hludov sbornik N 241, GIM, Moscow</title>
+                <author xml:id="AM">Anisava Miltenova</author>
+                <editor xml:id="DB">David J. Birnbaum</editor>
+                <editor xml:id="AB">Andrej Bojadžiev</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Institute of Literature, BAS</publisher>
+                <pubPlace>Sofia</pubPlace>
+                <idno type="Repertorium">RC-AM241HLU</idno>
+                <availability status="free">
+                    <p>The intellectual content of this file is copyrighted by its creator(s) under
+                        the Creative Commons Attribution-No Derivative Works 3.0 License under
+                        legislation in <ref
+                            target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>.</p>
+                </availability>
+                <publisher>Institute of Literature BAS</publisher>
+                <pubPlace>Sofia</pubPlace>
+                <date when="1995-12-01">1 December 1995</date>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This electronic description is based on the following published materials: <bibl
+                        xml:lang="ru" type="described">
+                        <ref type="bibl" target="bib:Яцимирский1913">Яцимирский 1913: 93-97</ref>
+                    </bibl></p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="bg">Bulgarian</language>
+                <language ident="ru">Russian</language>
+                <language ident="en">English</language>
+                <language ident="cu">Old Slavic</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="Repertorium">
+                    <list type="simple">
+                        <item>Apocryphal miscellany</item>
+                        <item>Miscellany with mixed content</item>
+                    </list>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
+                    <p>In the context of this project, private URIs with the prefix "bib" point to
+                        bibl elements in the project's bib.xml file.</p>
+                </prefixDef>
+            </listPrefixDef>
+        </encodingDesc>
+        <revisionDesc>
+            <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
+                element &lt;origDate&gt;</change>
+            <change who="#DB" when="2016-07-07">Fixed Unicode code points and &lt;sup&gt;
+                element</change>
+            <change who="#DB" when="2016-07-02">Removed empty &lt;editor&gt; element</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <msDesc>
+                <msIdentifier>
+                    <msName type="general" xml:lang="en">miscellany</msName>
+                    <msName type="specific" xml:lang="en">apocryphal miscellany</msName>
+                    <msName type="specific" xml:lang="en">mixed-content miscellany</msName>
+                    <country>Russia</country>
+                    <settlement>Moscow</settlement>
+                    <repository>State Historical Museum</repository>
+                    <idno type="shelfmark">241</idno>
+                    <note>
+                        <bibl xml:lang="ru" type="described">
+                            <ref type="bibl" target="Яцимирский1913">Яцимирский 1913: 93-97</ref>
+                            <author>Jacimirskij, A. I.</author>
+                            <title>Iz istorii lozhnыx molitv v juzhnoslavjanskoj
+                                pis6mennosti.</title>
+                            <edition>Izvestija II-go otdelenija Imperatorskoj akademii
+                                nauk</edition>
+                            <num>4</num>
+                            <pubPlace>Moskva</pubPlace>
+                            <date>1913</date>
+                            <extent>93-97</extent>
+                        </bibl></note>
+                </msIdentifier>
+                <physDesc>
+                    <objectDesc form="codex">
+                        <supportDesc material="paper">
+                            <support>
+                                <material>Paper</material>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                        >scissors</motif>
+                                    <term>(15th c.)</term>
+                                </watermark>
+                            </support>
+                            <extent>
+                                <measure unit="folia">155</measure>
+                                <dimensions unit="mm" type="folia">
+                                    <height>210</height>
+                                    <width>115</width>
+                                </dimensions>
+                            </extent>
+                            <collation>
+                                <summary>19 quires</summary>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1-19">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <signatures>Original</signatures>
+                            </collation>
+                            <condition>Without beginning and end; many folia appear to be missing;
+                                folia 118-119 was taken from the other manuscript.</condition>
+                        </supportDesc>
+                        <layoutDesc>
+                            <layout columns="1"/>
+                        </layoutDesc>
+                    </objectDesc>
+                    <decoDesc>
+                        <decoNote type="initial">
+                            <locus>58v</locus>big initial V like a dragon</decoNote>
+                        <decoNote type="capitals">small red capitals and titles</decoNote>
+                    </decoDesc>
+                </physDesc>
+                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                    <scribe>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
+                            type="semiuncial">
+                            <p>Semiuncial</p>
+                        </scriptDesc>
+                        <scribeLang>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">without juses, with two jers,
+                                predominated small jer; traces from mixing of the juses.</p>
+                        </scribeLang>
+                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
+                            <resp>description</resp>
+                            <name full="yes">Jacimirskij, A. I.</name>
+                        </respStmt>
+                    </scribe>
+                </scribeDesc>
+                <msContents>
+                    <summary>The manuscript contains 23 texts</summary>
+                    <filiation type="protograph">Bulgarian</filiation>
+                    <filiation type="antigraph">Middle Bulgarian</filiation>
+                    <msItemStruct xml:id="ACD1" type="translation">
+                        <locus n="1">1r-1v</locus>
+                        <title xml:lang="bg">Житие на св. Алексий Римски</title>
+                        <author>anonymous</author>
+                        <note>Without beginning and title.</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">даваите
+                                емоу ѿ моѥ трапезе, иже бе рѣкль. присно. м҃ти же. его именующи.
+                                сетованїе. и плаче не излазе ѿ ложнице своѥ. а сньха прѣ<seg
+                                    rend="sup">д҇</seg>ставши и р<seg rend="sup">ч҇</seg>е. не ѿидоу
+                                ѿ соу<seg rend="sup">д҇</seg> до с҃мрти моѥ ноу грьлице оупо<seg
+                                    rend="sup">д҇</seg>блю се.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD2" type="translation">
+                        <locus n="2">2r-2v</locus>
+                        <title xml:lang="bg">Епистолия за Неделята</title>
+                        <author>anonymous</author>
+                        <note>Without beginning and end</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">вь Іер<seg
+                                    rend="sup">с҇</seg>лме м҃ти г<seg rend="sup">с҇</seg>нꙗ сь
+                                    ап<seg rend="sup">с҇</seg>ли быше же знамѣнїа и чюдеса.
+                                множьство мужїе и жени и дети. сьбравше се вьпиющи г҃лаху. прѣс҃та
+                                б҃це нѣ забоуди рабь свои<seg rend="sup">х҇</seg>.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD3" type="translation">
+                        <locusGrp>
+                            <locus n="3">3r-7v</locus>
+                            <locus>9v</locus>
+                        </locusGrp>
+                        <title xml:lang="bg">Слизане на Богородица в ада</title>
+                        <author>anonymous</author>
+                        <note>This fragment coincides with the text , included in MS N 12,
+                            Troice-Sergieva lavra, RGB - Moskow, 12th-13th c. (Tihonravov, N.
+                            Pamjatniki otrechennoj russkoj literaturы, 23-30); see also N 29 Savina
+                            Monastery, 14th c.</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">и с҃на и
+                                с҃таго д҃ха. да сьниде<seg rend="sup">т҇</seg> кь мне архг҃гль
+                                Михаиль и да повѣ<seg rend="sup">с҇</seg> ми земльны<seg rend="sup"
+                                    >х҇</seg>. и нб<seg rend="sup">с҇</seg>ни и абїе сьнидѣ вь ть
+                                    ча<seg rend="sup">с҇</seg> архг҃гль Михаиль. и сь ни<seg
+                                    rend="sup">м҇</seg> .д҃. са<seg rend="sup">н҇</seg> анг҃гль. ѿ
+                                вьстока. .р҃. ѿ запа<seg rend="sup">д҇</seg> .р. ѿ полуд҃нѣ. .р҃ѿ
+                                їюга .р҃.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD4" type="translation">
+                        <locusGrp n="4">
+                            <locus>9r</locus>
+                            <locus>8r-8v</locus>
+                            <locus>10r-11v</locus>
+                        </locusGrp>
+                        <title xml:lang="bg">Житие на св. Николай Мирликийски</title>
+                        <author>anonymous</author>
+                        <note>Without beginning and end; many folia appear to be missing</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD5" type="translation">
+                        <locus n="5">12r-15v</locus>
+                        <title xml:lang="bg">Чудеса на св. Николай Мирликийски. Чудо за сина на Агрипа</title>
+                        <author>anonymous</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Сло<seg rend="sup">в҇</seg>
+                                с҃тго ѡ҃ца нше<seg rend="sup">г҇</seg> Николи чоудотворца.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Агрикь. нѣкто. именемь.
+                                живѣше вь граде. анѳиѡхисце<seg rend="sup">м</seg>.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD6" type="translation">
+                        <locusGrp n="6">
+                            <locus>15v</locus>
+                            <locus>18r-20v</locus>
+                        </locusGrp>
+                        <title xml:lang="bg">Чудеса на св. Николай Мирликийски. Чудо за Димитрий</title>
+                        <author>anonymous</author>
+                        <note>Without end</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чюдо .в҃. с҃тго Николи.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ч҃лвкь некто живѣше. вь
+                                Кстадине граде. вь месте рѣкомемь Елетерїа.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD7" type="translation">
+                        <locusGrp n="7">
+                            <locus>17r-17v</locus>
+                            <locus>16r-16v</locus>
+                        </locusGrp>
+                        <title xml:lang="bg">Таблици пасхални</title>
+                        <author>anonymous</author>
+                        <note>Jacimirskij pointed out that MSS was written over 1451 year, which is
+                            fixed in the Paschalija.</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">А се вь меси<seg rend="sup"
+                                    >ц҇</seg>. лѣ<seg rend="sup">т҇</seg> и кроугове.</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD8" type="translation">
+                        <locus n="8">20v-22v</locus>
+                        <title xml:lang="bg">Чудеса на св. Николай Мирликийски. Чудо за поп Христофор</title>
+                        <author>anonymous</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Третие чюдо с҃тго Николи ѿче
+                                бл҃сви.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Любимци да исповѣмь вьсемъ
+                                не лените се нь послушаите бра<seg rend="sup">т҇</seg>їе п҃пь некто
+                                имѣнемь Кр<seg rend="sup">с҇</seg>тофорь.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD9" type="translation">
+                        <locus n="9">22v-23v</locus>
+                        <title xml:lang="bg">Разказ за пренасяне на мощите на св. Николай Мирликийски</title>
+                        <author>anonymous</author>
+                        <note>Without end</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чюдо прѣнесениѥмь мощи с҃таго
+                                Николи архїереа х<seg rend="sup">с҇</seg>ва оче бл<seg rend="sup"
+                                    >с҇</seg>ви.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Вь тисоущноѥ лѣто и вь .ѡ҃.
+                                ѿ в<seg rend="sup">ъ҇</seg>пь<seg rend="sup">л҇</seg>щенїа г҃а
+                                н҃шего І<seg rend="sup">с҇</seg>ѵ х҃а. ꙗвленїе г҃а нашего самого .
+                                    бѣхо<seg rend="sup">у</seg> некы вѣрни пришь<seg rend="sup"
+                                    >д҇</seg> сь трьми корабьми.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">тако и б҃оу прославльшомоу
+                                своѥго оугодника. великаго ѡ҃ца н҃шего Николи. б҃оу же н҃шему.
+                                    сла<seg rend="sup">в҇</seg> в' вѣки. ам<seg rend="sup"
+                                >н҇</seg>ь.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD10" type="original">
+                        <locus n="10">23v-27r</locus>
+                        <title xml:lang="bg">Разказ за Антихриста</title>
+                        <note>Original Bulgarian work; other copies: N 29 Savina Monastery, 14th c.;
+                            N 492 (273) Belgrade, 17th c. <listBibl>
+                                <bibl xml:lang="bg">
+                                    <ref type="bibl" target="bib:Милтенова1993">Милтенова 1993</ref>
+                                </bibl>
+                            </listBibl></note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Слов<seg rend="sup">о</seg> ѡ
+                                аньтихристѣ ѡ<seg rend="sup">ч҇</seg> бл<seg rend="sup"
+                                >с҇</seg>ви.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Какьвь ѥ<seg rend="sup"
+                                    >с҇</seg> ег<seg rend="sup">д҇</seg>а поставить стльпь
+                                мраморень. накраи землѥ. и р<seg rend="sup">ч҇</seg>е ми вь слѣ<seg
+                                    rend="sup">д҇</seg> мои идете. и тоу морски. раи влече<seg
+                                    rend="sup">т҇</seg> вь пещероу.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">аще ли не покаѥт' се то
+                                начела и коньць не имать. потѡ<seg rend="sup">м҇</seg> ни покаати
+                                се. ни с҃псти се ти же кь моукоу. скрозе широкаа вра<seg rend="sup"
+                                    >т҇</seg> вьнидоу<seg rend="sup">т҇</seg>. а <sic>тескнаа</sic>
+                                    вра<seg rend="sup">т҇</seg> кь б҃оу ведоу<seg rend="sup"
+                                    >т҇</seg>. б҃оу же н҃шем<seg rend="sup">о</seg>у сла<seg
+                                    rend="sup">в҇</seg> в' вѣки. ами<seg rend="sup"
+                                >н҇</seg>ь.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD11" type="translation">
+                        <locus n="11">27r-31v</locus>
+                        <title xml:lang="bg">Житие на св. Петка Римска</title>
+                        <author>anonymous</author>
+                        <note>Without end; Slavic compilation?</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Житїѥ с҃тѥ мн҃цѣ Пе<seg
+                                    rend="sup">т҇</seg>кы.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Начетькь исцѣленію
+                                дарованиѥмь х҃вемь блажен'наго житїа м<seg rend="sup">ч҇</seg>нице
+                                Петькы. се же ѿць ею нарицаеть се Агатѡ<seg rend="sup">н҇</seg>. и
+                                м҃ти ею Политїа.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD12" type="translation">
+                        <locus n="12">32r-37v</locus>
+                        <title xml:lang="bg">Житие на св. Димитър Солунски</title>
+                        <author>anonymous</author>
+                        <note>Without beginning and title</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">вь ть
+                                    ча<seg rend="sup">с҇</seg> ꙗви се има аг҃гль г<seg rend="sup"
+                                    >с҇</seg>нь и г҃ла сице.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD13">
+                        <locus n="13">38r-46r</locus>
+                        <title xml:lang="bg">Цикъл разкази за кръстното дърво от презвитер Йеремия. Разказ как Господ сътвори братство с Пров</title>
+                        <author>anonymous</author>
+                        <note>Part of pop Jeremia's work "Story concerning Holy Tree"</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Сло<seg rend="sup">в҇</seg>
+                                    как<seg rend="sup">о҇</seg> сътворі б҃ь бра<seg rend="sup"
+                                    >т҇</seg>ство ѡ<seg rend="sup">ч҇</seg>е бл<seg rend="sup"
+                                    >с҇</seg>ви.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Вь нека врѣмена беше ц҃рь
+                                Селевкїе и люблꙗше р<seg rend="sup">ч҇</seg>е ѡ х҃е
+                                слишати.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD14" type="translation">
+                        <locus n="14">38r-46r</locus>
+                        <title xml:lang="bg">Апокалипсис на Йоан Богослов</title>
+                        <author>anonymous</author>
+                        <note>The copy coincides with the text in MS N 34 from "St. Catherine"
+                            Monastery on Mt. Sinai; see also N 309 NBKM - Sofia</note>
+                        <filiation type="translation">
+                            <num>1</num>
+                        </filiation>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Сло<seg rend="sup">в҇</seg>
+                                    Іѡа<seg rend="sup">н</seg> б҃госло<seg rend="sup">в҇</seg>ца
+                                    ѥѵ<seg rend="sup">г҇</seg>листа ѡ пришьстви г<seg rend="sup"
+                                    >с҇</seg>ни како хоще<seg rend="sup">т҇</seg> прити на землю
+                                соудити миру всемоу ѡ<seg rend="sup">ч҇</seg> бл<seg rend="sup"
+                                    >с҇</seg>.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">По вьзнесени г҃а н҃шего І҃с
+                                х҃а азь Іѡань вьзида<seg rend="sup">х</seg> на гороу
+                                таворьскоую.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD15" type="translation">
+                        <locus n="15">46r-51r</locus>
+                        <title xml:lang="bg">Разказ за прекрасния Йосиф</title>
+                        <author>anonymous</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Сло<seg rend="sup">в҇</seg>
+                                прѣкраснаго Іѡсифа како продаше ꙗго братїа коупце<seg rend="sup"
+                                    >м҇</seg> бл<seg rend="sup">с҇</seg>ви ѡ<seg rend="sup"
+                                >ч҇</seg>.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Беше Іаковь имаше с҃новь
+                                в҃і. Іѡсифь и Вениаминь. беста мьньша ѿ вьсѣ<seg rend="sup">х҇</seg>
+                                братїе.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD16" type="translation">
+                        <locus n="16">51r-58v</locus>
+                        <title xml:lang="bg">Слово за Успение Богородично</title>
+                        <author>anonymous</author>
+                        <note>This text is included in Homiliar of Mihanovich, last quarter of 13th
+                            c. (N III.C.19, JAZU - Zagreb; see also N 29 of Savina Monastery); it is
+                            not concordant with a text named Story about the Assumption (the Holy
+                            Panagia)</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">С҃лво ѡ успени прѣславнїе и
+                                    прѣч<seg rend="sup">с҇</seg>тїе пр<seg rend="sup">с҇</seg>нодви
+                                б҃це Марїе ѡ<seg rend="sup">ч҇</seg> бл<seg rend="sup"
+                                >с҇</seg>ви.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">С҃таа и прѣславна б҃ца
+                                    пр<seg rend="sup">с҇</seg>нод҃ва Марїа по ѡбичаю ходещи на с҃ти
+                                грѡбь г҃а б҃а.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD17" type="translation">
+                        <locus n="17">58v-69v</locus>
+                        <title xml:lang="bg">Житие на св. Георги</title>
+                        <author>anonymous</author>
+                        <note>Without end. <date when="--04-23">23 April</date></note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с҇</seg>ца
+                                априліа. к҃г. д҃нь. сказанїе ѡ рож<seg rend="sup">д҇</seg>ьстве его
+                                и ѡ м<seg rend="sup">ч҇</seg>ни его с҃тго м<seg rend="sup"
+                                >ч҇</seg>ника Геѡ<seg rend="sup">р</seg>гїа бл<seg rend="sup"
+                                    >с҇</seg>ви ѡ<seg rend="sup">ч҇</seg>е.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Вь врѣмѣна та беше чл҃вкь
+                                    нект<seg rend="sup">о҇</seg> имѣнемь Героньта. вь Кападокыи
+                                живоуща. и жена ѥго имѣнемь <sic>Полихраніа</sic>.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD18" type="translation">
+                        <locus n="18">70r-73v</locus>
+                        <title xml:lang="bg">Цикъл разкази за Авраам. Разказ за смъртта на Авраам</title>
+                        <author>anonymous</author>
+                        <note>Without title and beginning. The copy is concordant with second
+                            redaction of the text; see N 109 of "St. Paul" Monastery on Mont Athos
+                            (Lavrov, P.A. Apokrificheskie tekstы. - SORJAS, 67, 1899, 70-81).</note>
+                        <filiation type="translation">
+                            <num>1</num>
+                        </filiation>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">нааше кто
+                                    грѣдеть<unclear>....</unclear>и вьнидоше вь домь Авраамовь и
+                                посла Авраамь</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и дасть ѥмоу .г҃. ꙗбльке.
+                                и виде Авраамь и вьзлюби техь и прострь рукоу свою да приме<seg
+                                    rend="sup">т҇</seg> ꙗбльке. и прѣда д҃хь свои в руку г҃вы своѥму
+                                б҃оу н҃шемоу слава вь вѣки аминь. аминь. аминь.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD19" type="translation">
+                        <locus n="19">73v-80v</locus>
+                        <title xml:lang="bg">Евангелие Никодимово. Послание на Пилат до Тиберий</title>
+                        <author>anonymous</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Сл<seg rend="sup">о</seg>в<seg
+                                    rend="sup">о</seg> на вьскресенїе х҃во. бл<seg rend="sup"
+                                    >с҇</seg>ви ѡ҃че.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Веледрьжавномоу и ѕело
+                                    ч<seg rend="sup">с҇</seg>тному и <sic>мн<seg rend="sup"
+                                    >о</seg>гостроиною</sic> Тиверію кесару азь Пилать
+                                    <sic>понитьски</sic> вьсточнїе страни і ѡбласть.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD20" type="translation">
+                        <locus n="20">80v-88v</locus>
+                        <title xml:lang="bg">Слизане на св. Йоан Предтеча в ада</title>
+                        <author>Eusebios of Alexandria (Pseudo)</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Сло<seg rend="sup">в҇</seg>
+                                Іѡана с҃тго <sic>предитече</sic>.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Вьзлюблѥнии. добро ѥ<seg
+                                    rend="sup">с҇</seg> рещи каково ѥ<seg rend="sup">с҇</seg>
+                                б҃лговещенїе пр<seg rend="sup">д҇</seg>тчво вь аде.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD21" type="translation">
+                        <locus n="21">88v-92v</locus>
+                        <title xml:lang="bg">Чудо на св. Теодор Тирон</title>
+                        <author>anonymous</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чюдо бывшѣе при
+                                    Костань<unclear>тинѣ</unclear> ц҃рь с҃тго м<seg rend="sup"
+                                    >ч҇</seg>ника х<seg rend="sup">с҇</seg>ва Ѳеѡ<seg rend="sup"
+                                    >д҇</seg>ра.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Вь д҃ни же ѡни. при
+                                Костаньтине ц҃ры ѡбрѣте се воинь добрь и лѣпь видѣнїемь моужь. и вь
+                                храбрьствѣ нестрашливь.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD22">
+                        <locus n="22">92r-117v</locus>
+                        <title xml:lang="bg">Правила епитимийни</title>
+                        <author>anonymous</author>
+                        <note>The copy is concordant with the type of texts "Xudыe nomokanuncы" (see
+                            Tixonravov, Pamjatniki...). Without beginning and title. Folia 118-119
+                            are from the other manuscript.</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD23" type="translation">
+                        <locus n="23">131r-132v</locus>
+                        <title xml:lang="bg">Евангелие Никодимово. Разказ как Марта осъди Пилат</title>
+                        <author>anonymous</author>
+                        <note>Without title and beginning</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">вь Римь. и
+                                логѵнь вь кошули сп҃совѣ бьі<seg rend="sup">с҇</seg> ѡблѣчень. що
+                                бѣше м҃ты б҃жїа сътворыла своима рукама с҃ноу своѥму. бѣше бо таи
+                                кошулю т'канна ꙗко мрѣжа. и не могоше ю раздѣлитьі. на распетїе
+                                іс҃во.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD24" type="translation">
+                        <locus n="24">132r-135v</locus>
+                        <title xml:lang="bg">Видение на пророк Даниил</title>
+                        <author>anonymous</author>
+                        <note>Without title. <listBibl>
+                                <bibl xml:lang="bg">
+                                    <ref type="bibl" target="bib:Тъпкова-Заимова1990"
+                                        >Тъпкова-Заимова и Милтенова 1990</ref>
+                                </bibl>
+                            </listBibl></note>
+                        <filiation type="translation">
+                            <num>3</num>
+                            <date>13th c.</date>
+                        </filiation>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <filiation type="redaction">1</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Тако г҃лѥ г҃ь вьседрьжитель
+                                горе тебе землѥ. ег<seg rend="sup">д҇</seg>а аг҃гльскоѥ скыпьтро вь
+                                тебѣ цр<seg rend="sup">с҇</seg>твоуеть. тог<seg rend="sup">д҇</seg>а
+                                    заповѣ<seg rend="sup">д҇</seg> г҃ь вьседрьжытель. единому ѿ
+                                аг҃гль своихь сьниди и вьз'мы истиноу и мирь ѿ землѥ.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">а грѣшныци изгоними
+                                    боу<seg rend="sup">д҇</seg>ть праведнїицыже наслѣдеть раи.
+                                грѣшницы же моукоу вѣчноую. ееже намь избавиты се. поклаанꙗющим <seg
+                                    rend="sup">с҇</seg>е ѡ҃цоу и с҃ноу и с҃тому д҃ху н҃нꙗ и пр҃сно и
+                                вь вѣкы вѣкѡ<seg rend="sup">м҇</seg>.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD25" type="translation">
+                        <locus n="25">136r-153v</locus>
+                        <title xml:lang="bg">Видение на Анастасия Черноризица</title>
+                        <author>anonymous</author>
+                        <note>The copy coinsides first redaction; the text is without title.</note>
+                        <filiation type="source">Greek text edited by Homburg</filiation>
+                        <filiation type="translation">
+                            <num>1</num>
+                            <date>12th-13th c.</date>
+                        </filiation>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <filiation type="redaction">1</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Слышите братыѥ б҃жїа
+                                ч҃лвколюбиїа. мл<seg rend="sup">с҇</seg>рдыꙗ иже намь недо<seg
+                                    rend="sup">с҇</seg>инимь твоимь рабомь. малу и велика. иже
+                                поусти кь <unclear>н</unclear>мь. мл<seg rend="sup">с҇</seg>рдь
+                                г҃ь.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">по<seg rend="sup"
+                                >д҇</seg>визаите <seg rend="sup">с҇</seg>е и ви братїе. да не
+                                вьнидете въ моукы сїе. иже прѣ<seg rend="sup">д҇</seg>зрѣхомь. и да
+                                избавит ны г҃ь б҃ь н҃шь. ему же по<seg rend="sup">д҇</seg>баеть.
+                                вьсака слава ч<seg rend="sup">с҇</seg> и покланꙗнїе. ѡ҃цу и с҃ноу и
+                                с҃тому д҃ху. и н҃нꙗ и пр<seg rend="sup">с҇</seg>но и вь вѣкы
+                                вѣкомь.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD26" type="translation">
+                        <locus n="26">153v-154v</locus>
+                        <title xml:lang="bg">Чудо на св. Мина</title>
+                        <author>anonymous</author>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чоудо с҃тго м<seg rend="sup"
+                                    >ч҇</seg>ника Мина.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Бѣше жена ѿ земли
+                                        <sic>Фиситин<seg rend="sup">с҇</seg>кую</sic>. имаше злато и
+                                сребро многоукрашена ѿ рода своѥго.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD27" type="translation">
+                        <locus n="27">154v-155v</locus>
+                        <title xml:lang="bg">Въпросите на св. Йоан Богослов към Авраам</title>
+                        <author>anonymous</author>
+                        <filiation type="translation">1</filiation>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Сказанїе. <add xml:lang="cu"
+                                    place="margin" status="unremarkable">ѿ впро<seg rend="sup"
+                                        >с҇</seg>
+                                </add></head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Вьзиде б҃ь на гороу
+                                    ѥлѥонь<seg rend="sup">с҇</seg>коую. с оучениками своимы. и г҃ла
+                                имь азь вьсхожоу на н҃бо ѿ ва<seg rend="sup">с҇</seg>.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                </msContents>
+                <history>
+                    <origin resp="#AM" evidence="de visu">
+                        <origDate notBefore="1430" notAfter="1370">15th c., middle</origDate>
+                        <origPlace>unknown</origPlace>
+                        <note>
+                            <ref type="bibl" target="bib:Яцимирский1913">Яцимирский 1913:
+                                93-97</ref></note>
+                    </origin>
+                </history>
+            </msDesc>
+        </body>
+    </text>
+</TEI>

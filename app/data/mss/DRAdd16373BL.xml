@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-DRAdd16373BL">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Archieratikon, Add. MS 16373, The British Library, 1706</title>
+                <author xml:id="DR">Dilyana Radoslavova</author>
+                <editor xml:id="AM">Anisava Miltenova</editor>
+                <editor xml:id="AB">Andrej Bojadžiev</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Istitute of Literature</publisher>
+                <pubPlace>Sofia, Bulgaria</pubPlace>
+                <date when="2003-11">11.2003</date>
+                <idno type="Repertorium">RC-DRAdd16373BL</idno>
+                <availability status="free">
+                    <p>The intellectual content of this file is copyrighted by the creators under
+                        the Creative Commons Attribution-No Derivative Works 3.0 under legislation
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
+                        information, but you are not allowed to alter, transform, or build upon the
+                        works on this section of the site. All reuse or distribution of this work
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This description is based on <emph>de visu</emph> observations and on the
+                    published catalogue descriptions <ref type="bibl" target="bib:Cleminson1988"
+                        >Cleminson 1988: 70-72</ref>. <ref type="bibl" target="bib:Стефановић1984"
+                        >Стефановић 1984-85: 60-62</ref></p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="bg">Bulgarian</language>
+                <language ident="sr">Serbian</language>
+                <language ident="cu">Old Slavic</language>
+                <language ident="ru">Russian</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="Repertorium">
+                    <list type="simple">
+                        <item>Euchologia</item>
+                        <item>Prayers</item>
+                        <item>Sacraments</item>
+                    </list>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
+                    <p>In the context of this project, private URIs with the prefix "bib" point to
+                        bibl elements in the project's bib.xml file.</p>
+                </prefixDef>
+            </listPrefixDef>
+        </encodingDesc>
+        <revisionDesc>
+            <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
+                element &lt;origDate&gt;</change>
+            <change who="#DR" when="2009-10-07">Removed entities for the basic Old Slavic
+                characters</change>
+            <change who="#DR" when="2009-10-08">Transformation to Repertorium4 scheme </change>
+            <change who="#DR" when="2010-09-14">The description of notes moved into
+                "additions"</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <msDesc>
+                <msIdentifier>
+                    <msName type="general" xml:lang="en">euchologion</msName>
+                    <msName xml:lang="en" type="specific">archieratikon</msName>
+                    <!-- 2022-08-24 djb
+                        These entries are invalid. They must have a @type, if the
+                        @type is specific they must be in English, and if the @type
+                        is specific it must be in all three languages:
+                        <msName xml:lang="bg">архиерейски чиновник</msName>
+                        <msName xml:lang="ru">архиерейский чиновник</msName>
+                    -->
+                    <country>United Kingdom</country>
+                    <settlement>London</settlement>
+                    <repository>British Library</repository>
+                    <collection>Additional Manuscripts</collection>
+                    <idno type="shelfmark">Add. MS 16373</idno>
+                    <altIdentifier type="catalgue">
+                        <idno type="catalogue">55</idno>
+                        <note>
+                            <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 70-72</ref>
+                        </note>
+                    </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                    <objectDesc form="codex">
+                        <supportDesc material="paper">
+                            <support>
+                                <material>Paper, thick and highly glazed; the last gathering appears
+                                    to be of a different though similar paper</material>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Three
+                                        crescents</motif>
+                                    <countermark xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                                        <motif>Letters CC</motif>
+                                    </countermark>
+                                    <term>unidentified</term>
+                                </watermark>
+                            </support>
+                            <extent>
+                                <measure unit="folia">i+169+ii</measure>
+                                <dimensions unit="mm" type="folia">
+                                    <height>215</height>
+                                    <width>150</width>
+                                </dimensions>
+                                <dimensions type="written" unit="mm">
+                                    <height>160</height>
+                                    <width>105</width>
+                                </dimensions>
+                            </extent>
+                            <foliation>
+                                <date>Modern</date>
+                                <signatures>(i-ii), 1-2, 2*, 3-167, (168-169)</signatures>
+                            </foliation>
+                            <collation>
+                                <summary>38 quires</summary>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">2(2+1)</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="2-7">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="8">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8(8+1)</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="9-20">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="21">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">4</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="22">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">6(6+3)</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="23-34">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="35">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">10(-3)</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="36-37">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">4</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="38">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">4(-3)</extent>
+                                </quire>
+                                <signatures>Gatherings II-XXI are signed in the middle of the lower
+                                    margin, first recto and last verso, with Cyrillic letters
+                                        <foreign>а҃-к҃</foreign></signatures>
+                            </collation>
+                        </supportDesc>
+                        <layoutDesc>
+                            <layout columns="1" writtenLines="18"/>
+                        </layoutDesc>
+                    </objectDesc>
+                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Black; red, and
+                        occasionally (<locus xmlns="http://www.tei-c.org/ns/1.0">f. 1v</locus>)
+                        green, for titles, initials and rubrics. Blue, yellow and gold are used for
+                        the decoration</ink>
+                    <decoDesc>
+                        <decoNote type="overview">Rich, with full-page miniatures and ornamented
+                            headpieces and initials; gold, yellow, silver, blue, red and grey
+                            palette</decoNote>
+                        <decoNote type="miniatures">Of mediocre quality, characteristic for the late
+                            South Slavonic illumination; the linear drawings are coloured by evenly
+                            laid paint</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>F. 2v:</locus>St. John Chrysostomos, in full length, under an
+                            arch, blessing, with a codex in his left hand. The image is copied from
+                            the Liturgicon of Michail Sljozka, printed in Lviv in 1646 (<ref
+                                type="bibl" target="bib:Петковић2002">Петковић 2002: 404</ref>). The
+                            arch is decorated with floral and animal patterns. In blue, red, yellow
+                            and gold. Within a simple red frame (<dimensions unit="mm">
+                                <height>160</height>
+                                <width>95</width>
+                            </dimensions>), with floral motifs in the inner side of each of the
+                            bottom corners. </decoNote>
+                        <decoNote type="miniatures">
+                            <locus>f. 57v</locus>: A full-page miniature of St. John Chrysostomos
+                            being ordained by St. Flavian in Antiocheia. The images are copied from
+                            the Lectures on the Acts, printed in the Kievo-Pechorska Lavra in 1642
+                                (<ref type="bibl" target="bib:Петковић2002">Петковић 2002: 404, fig.
+                                3, 4</ref>). The composition is framed, with small floral and
+                            foliate motifs at the corners. In blue, red, yellow and gold. Within a
+                            simple flame (<dimensions>
+                                <height>150mm</height>
+                                <width>95mm</width>
+                            </dimensions>) with floral motifs in the inner side of each corner.
+                            Inscribed: <foreign>ст҃ы̏ флавїа<seg rend="sup">н<seg rend="sup">ч</seg>
+                                </seg> рꙋко по҆лага́етъ, стаго і҆ѡа́на зл<seg rend="sup">а҇</seg>
+                                <seg rend="sup">а҇</seg>́то ѹ̋ста́го . въ антио́хїи ⁘</foreign>
+                        </decoNote>
+                        <decoNote type="miniatures">
+                            <locus>F. 74:</locus> the Proscomidy (Picture of the Holy Gifts) and the
+                            Chalice with Christ in it, blood running from His wounds. The miniature
+                            occupies the upper part of the frame surrounding both the text column
+                            and the image</decoNote>
+                        <decoNote type="miniatures">
+                            <locus>F. 133:</locus> Picture of the Holy Plate (diskos) in the lower
+                            half of page. </decoNote>
+                        <decoNote type="headpieces">Bands and bars, representing varieties of the
+                            Balkan interlaced style</decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 1:</locus> A band, <dimensions>
+                                <height>36mm</height>
+                                <width>80mm</width>
+                            </dimensions> for the whole field; the pattern is composed of three
+                            intersecting “Sassanian” circles; the endings of the stems are foliate,
+                            the upper two being very large; between them is centered the Cross with
+                            the inscription <foreign xml:lang="cu">I҆С҃‚ Х҃Ъ</foreign>. </decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 2*:</locus> a bandof interlaced pattern, <dimensions>
+                                <height>48mm</height>
+                                <width>88mm</width>
+                            </dimensions>, with an interlaced Cross with the inscription <foreign
+                                xml:lang="cu">I҆С҃‚ Х҃Ъ</foreign> centred on the upper line. </decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 7v:</locus> a bar, of parallel stems with rosette-like
+                            widenings and repeated half-leave pattern on the upper line. In orange,
+                            blye and red, <dimensions>
+                                <height>12mm</height>
+                                <width>88mm</width>
+                            </dimensions>
+                        </decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 11:</locus> Coloured plaited headpiece, similar to the one on
+                            f. 2*; in yellow, golden, grey, <dimensions>
+                                <height>43mm</height>
+                                <width>84mm</width>
+                            </dimensions>
+                        </decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 17:</locus> A band, composed of half-circle loops, with
+                            foliate endings. In blue, golden, yellow, and red, <dimensions>
+                                <height>14mm</height>
+                                <width>97mm</width>
+                            </dimensions>
+                        </decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 21:</locus> A band (<dimensions>
+                                <height>14mm </height>
+                                <width>97mm</width>
+                            </dimensions>) of the same kind as that on <locus>f. 17</locus>
+                        </decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 25v:</locus> A band, of the same kind as that on <locus>f.
+                                17</locus>, <dimensions>
+                                <height>14mm</height>
+                                <width>98mm</width>
+                            </dimensions>
+                        </decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 30v:</locus> A band (<dimensions>
+                                <height>14mm</height>
+                                <width>105mm</width>
+                            </dimensions>) of the same kind as that on <locus>f. 17</locus>
+                        </decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 39:</locus> A framed band, <dimensions>
+                                <height>53mm</height>
+                                <width>98mm</width>
+                            </dimensions>, with a pattern of a centered human face (“mask”) and
+                            interlaced stems. In blue, red, and silver</decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 50:</locus> A band of interlaced pattern, <dimensions>
+                                <height>45mm</height>
+                                <width>88mm</width>
+                            </dimensions>, with vertically turned endings of the stems; an
+                            interlaced Cross centred on the upper line. In blue, golden, and
+                            red</decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 51v:</locus> A band, of the same kind as that on <locus>f.
+                                17</locus>. In blue, golden and yellow, with red contour, <dimensions>
+                                <height>18mm</height>
+                                <width>105mm</width>
+                            </dimensions>
+                        </decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 56:</locus> A band, <dimensions>
+                                <height>23mm</height>
+                                <width>105mm</width>
+                            </dimensions>, of stems composing fret-pattern, with rosette-like
+                            widenings; repeated motif of a half-leave on the upper line, the endings
+                            are foliate</decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 58:</locus> An arch, with the Cross centred on the upper line, <dimensions>
+                                <height>45mm</height>
+                                <width>88mm</width>
+                            </dimensions>
+                        </decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 84:</locus> A band in silver, blue, yellow, red, simmilar to
+                            the one on <locus>f. 50</locus>, <dimensions>
+                                <height>37mm</height>
+                                <width>88mm</width>
+                            </dimensions>
+                        </decoNote>
+                        <decoNote type="headpieces">
+                            <locus>F. 148v:</locus> A band, <dimensions>
+                                <height>25mm</height>
+                                <width>105mm</width>
+                            </dimensions>, of stems composing a fret-pattern, similar to that on
+                                <locus>f. 56</locus>, only the upper-line stems with the half-leave
+                            motif make loops; in blue and red. </decoNote>
+                        <decoNote type="tailpieces">
+                            <locus>F. 38v:</locus> A hand holding a bunch of leaves. </decoNote>
+                        <decoNote type="initials">Numerous, of geometric type, <dim>25 to 52
+                                mm</dim>, painted in red and decorated with foliate branch patterns;
+                            in some the decoration is particularly rich, arranged at the basis of
+                            the letter; some letters <foreign xml:lang="cu">В</foreign> are
+                            enlivened with an eye in the upper bow; some initials have outlined
+                            stems, in some the foliate patterns are also coloured with gold and
+                            blue</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 8v:</locus> Large initial of neo-Byzantine geometrical style
+                            with floral motifs. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 10v:</locus> Large initial of neo-Byzantine geometrical style
+                            in red and blue with floral motifs</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 11v:</locus> Large initial of neo-Byzantine geometrical style
+                            with floral motifs in red and blue</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 13:</locus> Large initial of neo-Byzantine geometrical style
+                            with floral motifs</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 16:</locus> Large initial of neo-Byzantine geometrical style
+                            with floral motifs</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 35v:</locus> Large initial of neo-Byzantine geometrical style
+                            with vegetal motifs</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 49v:</locus> Large initial of neo-Byzantine geometrical style
+                            with vegetal motifs</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 50v:</locus> Large initial of neo-Byzantine geometrical style
+                            with vegetal motifs and and eye</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 52v:</locus> Large initial of neo-Byzantine geometrical style
+                            with vegetal motifs</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 120v:</locus> Large initial of neo-Byzantine geometrical style
+                            with vegetal motifs</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 130v:</locus> Large initial of neo-Byzantine geometrical style
+                            with a rich vegetal motif and an eye motif</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 145:</locus> Large initial of neo-Byzantine geometrical style
+                            with a rich vegetal motif</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 154:</locus> Large initial of neo-Byzantine geometrical style
+                            with vegetal motifs</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 1:</locus> Initial of neo-Byzantine geometrical style with
+                            floral motifs</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 4v:</locus> Initial of neo-Byzantine geometrical style in red,
+                            blue and gold with floral motifs. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 5:</locus> Initial of neo-Byzantine geometrical style with
+                            floral motifs</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 6v:</locus> Initial of neo-Byzantine geometrical style with
+                            floral motifs</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 21:</locus> Initial of neo-Byzantine geometrical style with an
+                            eye</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 26v:</locus> Initial of neo-Byzantine geometrical style in
+                            red, blue and gold</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 33:</locus> Initial of neo-Byzantine geometrical style,
+                            similar to the one on <locus>f. 26v</locus>. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 41v:</locus> Initial of neo-Byzantine geometrical style,
+                            richly ornamented</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 42:</locus> Initial of neo-Byzantine geometrical style, richly
+                            ornamented</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 54:</locus> Initial of neo-Byzantine geometrical style in red
+                            blue</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 58:</locus> Initial of neo-Byzantine geometrical style in red
+                            blue</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 59:</locus> Initial of neo-Byzantine geometrical
+                            style</decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 60:</locus> Initial of neo-Byzantine geometrical style. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 60v:</locus> Initial of neo-Byzantine geometrical style. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 63:</locus> Initial of neo-Byzantine geometrical style an eye
+                            motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 65:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 69v:</locus> Initial of neo-Byzantine geometrical style in red
+                            blue, richly ornameted. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 71:</locus> Initial of neo-Byzantine geometrical style in red
+                            blue. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 78:</locus> Initial of neo-Byzantine geometrical style with
+                            rich vegetal motifq richly ornamented. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 79v:</locus> Initial of neo-Byzantine geometrical style. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 81:</locus>Initial of neo-Byzantine geometrical style with an
+                            eye motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 86:</locus>Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 87:</locus>Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 88v:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motif, richly ornamented. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 97v:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal and motif motif, richly ornamented. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 102:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 103:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 104v:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 106v:</locus>Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 113v:</locus>Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 115v:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 119:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 124:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 124v:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motif, masive stem. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 128:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 129v:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 137:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 143:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motif. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 148v:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motifs. </decoNote>
+                        <decoNote type="initials">
+                            <locus>F. 158:</locus> Initial of neo-Byzantine geometrical style with
+                            vegetal motifs. </decoNote>
+                        <decoNote type="marg">Numerous of marginal signs depicting blessing hands
+                                (<locus
+                                target="../images/BL_Addms16373/MF 10 - MF 10  Add 16373_page_0132.jpg"
+                                >f. 123</locus>), hands holding a cross (ff. <locus>4</locus>,
+                                <locus>12v</locus>, <locus>23</locus>, <locus>23v</locus>,
+                                <locus>53</locus>), a candlestick (ff. <locus>89</locus>,
+                                <locus>99v</locus>, <locus>143v</locus>), a book (<locus>f.
+                                92</locus>), or a crown (ff. <locus>5</locus>, <locus>8v</locus>,
+                                <locus>33</locus>, <locus>41</locus>, <locus>116v</locus>,
+                                <locus>122v</locus>, <locus>131v</locus>). Pictures of the Sun and
+                            the Moon in the tables in the end of the MS</decoNote>
+                    </decoDesc>
+                    <bindingDesc>
+                        <p>Ornamented leather on beveled wooden boards, <dim>230mm x 160 mm</dim>;
+                            raised cords on the spine; two clasps. Golden tooling. The central piece
+                            on the upper cover is a large medallion with the Crucifixion, the corner
+                            stamps bear the images of the Evangelists with Greek captions. Small,
+                            single rosettes fill in the empty fields. On the lower cover the leather
+                            is stamped by a central piece bearing the image of an eagle in foliate
+                            frame; the corner stamps are angel’s heads, the rosettes fill in the
+                            empty fields. The whole pattern is characteristic for Russian and
+                            Ukrainian Gospel bindings of the late 17th and 18th centuries.
+                            Obviously, the binding was not intended for this manuscript.</p>
+                    </bindingDesc>
+                    <additions type="inscriptions">
+                        <list type="simple">
+                            <item>
+                                <locus>f. i</locus>
+                                <quote xml:lang="en">Purchased of <persName type="owner" full="yes"
+                                        >Jos. Lilly</persName> 14 Nov. 1846.</quote>
+                            </item>
+                            <item xml:lang="en">
+                                <locus>f. i verso</locus>
+                                <quote xml:lang="en">Written in Bosnia, in the Servian dialect, A.
+                                    D. 1706 </quote>
+                            </item>
+                        </list>
+                    </additions>
+                </physDesc>
+                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                    <scribe n="1">
+                        <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
+                            <locus>ff. 1-167</locus>
+                        </locusGrp>
+                        <persName xmlns="http://www.tei-c.org/ns/1.0" type="scribe" full="yes"
+                            >Lazarus the Bulgarian</persName>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
+                            type="semiuncial">
+                            <p>Semiuncial - a vigorous and clear (4mm line; 5mm interline space)
+                                one, with a slight foreword slope, longish, but not extended
+                                ascendersand descenders); titles are in simple 'vjaz' (<dim>10-12
+                                    mm</dim> high). each page has a framed with double red lines
+                                written area (<dim>165x105mm</dim>)</p>
+                        </scriptDesc>
+                        <scribeLang>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Resavian orthography; regular
+                                    diacritics</p>
+                            </orthography>
+                        </scribeLang>
+                    </scribe>
+                </scribeDesc>
+                <msContents>
+                    <summary>The book is an archbishop's euchologion containing the text of John
+                        Chrysostom's liturgy and services for ordination of clergymen, some of
+                        which, like those of an exorcist, church-janitor, candleholder etc., are
+                        relatively rare. Contains 19 texts</summary>
+                    <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                        <head xmlns="http://www.tei-c.org/ns/1.0">
+                            <foreign xml:lang="cu">б҃же<seg rend="sup">с҇</seg>въ́наа, литѹрь́гїа,
+                                и̋же въ с҃ты<seg rend="sup">х</seg> ѡц҃а на́ше҅го с҃тѣишаго
+                                и҆бл҃женнаго а҆рхие҆п<seg rend="sup">с҇</seg>кпа константина гра́да
+                                нова́го ры́ма и҆вьселѥ́ньскаго па҆трїа́р'ха, і҆ѡан'на
+                                злато́ꙋстаго⸫</foreign>
+                        </head>
+                    </sampleText>
+                    <msItemStruct xml:id="ACD1" type="translation">
+                        <locus n="1">2*-7v</locus>
+                        <title xml:lang="bg">Чинопоследование за благославяне на клирик</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чи̋нь бл<seg rend="sup"
+                                    >с҇</seg>ви́ти клїри́ка си́ рѣ́чь . причъ́тника въпръво<seg
+                                    rend="sup">м</seg> по<seg rend="sup">с҇</seg>трыже́нїи
+                                    вла́сѡ<seg rend="sup">в</seg></head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD2" type="translation">
+                        <locus n="2">7v-11</locus>
+                        <title xml:lang="bg">Чин за ръкополагане на църковен вратар</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чинь и̋ бл<seg rend="sup"
+                                    >с҇</seg>ве́нїе и҆рꙋкоположе́нїе ц҃ръко́вънаго врата́ра:</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD3" type="translation">
+                        <locus n="3">11-17</locus>
+                        <title xml:lang="bg">Чинопоследование за ръкополагане на екзорсист</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чы́нъ и̋ рꙋ̋коположенїе
+                                е҆ѯаки́сти си̏ рѣ́чь заклина́телꙗ</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD4" type="translation">
+                        <locus n="4">17-21</locus>
+                        <title xml:lang="bg">Чинопоследование за ръкополагане на свещоносец</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чы́нь рѹ̋коположе́нїе
+                                свѣ҅щено́сца</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD5" type="translation">
+                        <locus n="5">21-25v</locus>
+                        <title xml:lang="bg">Чинопоследование за ръкополагане на църковен четец и псалт</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чы́н на поставлѥ́нїе чът'ца.
+                                и҆ пѣвца</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD6" type="translation">
+                        <locus n="6">25v-30v</locus>
+                        <title xml:lang="bg">Чинопоследование за ръкополагане на иподякон</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чы́нь бывае́мыи на по<seg
+                                    rend="sup">с҇</seg>тавлѥ́нїе і҆ по<seg rend="sup">с҇</seg>
+                                дїа́кона</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD7" type="translation">
+                        <locus n="7">30v-38v</locus>
+                        <title xml:lang="bg">Чинопоследование за ръкополагане на дякон</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чы́нь напоставле́нїе
+                                    дїа́коны<seg rend="sup">х</seg></head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD8" type="translation">
+                        <locus n="8">39-50</locus>
+                        <title xml:lang="bg">Чинопоследование за ръкополагане на свещеник</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чы́нь и̋ рѹкоположе́нїе на
+                                презви́тѣрьство</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD9" type="translation">
+                        <locus n="9">50-51</locus>
+                        <title xml:lang="bg">Чинопоследование за ръкополагане на протойерей</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чы́нь на поставлѥ́нїе
+                                протопо́па. и҆ли про́тодїа́кона . и҆ли а҆рхидїа́кона</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD10" type="translation">
+                        <locus n="10">51v-55v</locus>
+                        <title xml:lang="bg">Чинопоследование за ръкополагане на архимандрит</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чы́нь на произ'веде́нїе
+                                а҆рхима́н'дрита</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD11" type="translation">
+                        <locus n="11">56-56v</locus>
+                        <title xml:lang="bg">Чинопоследование за ръкополагане на игумен</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чы́нь на поставлѥ́нїе
+                                и҆гꙋме́на</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD12" type="translation">
+                        <locus n="12">58-84</locus>
+                        <title xml:lang="bg">Чин на литургията</title>
+                        <note>Archbishops taxis</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чы́нь сщ҃е<seg rend="sup"
+                                    >н҇</seg>ные и б҃жестъ́вны́е литръ́гїе быва́ѥмые си́це. въ
+                                вели́цеи ц҃ркви и҆ въ вьсѣ́хь предѣ́лѣхь е̋ѥ ⸬</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD13" type="translation">
+                        <locus n="13">84-148v</locus>
+                        <title xml:lang="bg">Литургия на Йоан Златоуст</title>
+                        <note/>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Бжествь́на<seg rend="sup"
+                                    >а҇</seg> лїтѹръгїа и̋же въ с҃ты ѡ҆ц҃а на́шего і҆ѡ҆а̋нна
+                                зла҆то́ꙋстаго</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD14" type="translation">
+                        <locus n="14">148v-153v</locus>
+                        <title xml:lang="bg">Указания за вземане на свето причастие</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <rubric xmlns="http://www.tei-c.org/ns/1.0">Подоба́е<seg rend="sup"
+                                    >т҇</seg> же и҆ ѡ се<seg rend="sup">м҇</seg> знати.</rubric>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">По б҃же<seg rend="sup"
+                                    >с҇</seg>тъ<seg rend="sup">в҇</seg>ны<seg rend="sup">м҇</seg> же
+                                причеще́нїи</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD15" type="translation">
+                        <locus n="15">153v-157v</locus>
+                        <title xml:lang="bg">Молитви разрешителни, четени от архиерей или духовен отец. Молитва разрешителна, 1</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Мл҃тва прощен'на за въса
+                                прѣгрѣше́нїа вол'наа и҆ нево́лнаа ю̋же чъ<seg rend="sup">т҇</seg>е
+                                а҆рхїереи:</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Г҃и і҆се҃ х҃е б҃е на́шь.
+                                с҃не и҆ сло́ве б҃а жїваго</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD16" type="translation">
+                        <locus n="16">158-158v</locus>
+                        <title xml:lang="bg">Молитви разрешителни, четени от архиерей или духовен отец. Молитва разрешителна, 2</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Мл҃тва втора томѹ̋ж<seg
+                                    rend="sup">д҇</seg>е.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Г҃ь премл<seg rend="sup"
+                                    >с҇</seg>, да ѹ҆ще<seg rend="sup">д҇</seg>ри́тъте, г҃ь і҆с҃ х҃с
+                                въса́ка проше́нїа бл҃гаа дада́сть тебѣ</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD17" type="translation">
+                        <locus n="17">159v</locus>
+                        <title xml:lang="bg">Таблица с четивата и гласовете за съботите след Възкресение</title>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD18" type="translation">
+                        <locus n="18">160-165v</locus>
+                        <title xml:lang="bg">Месецослов за цялата година</title>
+                        <note>Gives both fixed and movable feasts from March to February; includes
+                            the feastdays of St. John of Rila (19 Oct.), St. Paraskeve (Petka) (14
+                            Oct.), St. Stephen of Dečani (11 Nov.), St. Simeon of Serbia (13 Feb.),
+                            and St. Cyril the Apostle of Slavs (14 Feb.)</note>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD19" type="translation">
+                        <locus n="19">166-167v</locus>
+                        <title xml:lang="bg">Таблици пасхални</title>
+                        <note>From 1706 to 1776</note>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD20">
+                        <locus>f. 1r</locus>
+                        <title xml:lang="bg">Колофон</title>
+                        <author>Lazar the Bulgarian</author>
+                        <date when="1706">1706</date>
+                        <note>States that the MS was copied in the monastery of Žitomislić</note>
+                        <colophon>
+                            <p>б҃же<seg rend="sup">с҇</seg>твъ́наа, литѹрь́гїа, и̋же въ с҃ты<seg
+                                    rend="sup">х҇</seg> ѡц҃а на́ше҅го с҃тѣишаго̏ и҆ бл҃женнаго
+                                    а҆рхие҆п<seg rend="sup">с҇</seg>кпа константина гра́да нова́го
+                                ри́ма и҆ вьселѥ́ньскаго па҆трїа́р'ха, і҆ѡанꙿна злато́ꙋстаго ⸫
+                                написа́ се въ с҃тою о҆бы́те<seg rend="sup">л҇</seg> мо҆на́стирь
+                                    жи҆томи<seg rend="sup">с҇</seg>лићь хра<seg rend="sup">м҇</seg>
+                                бл҃гове҆щѣ́нїе пр<seg rend="sup">с҇</seg>ты́е б҃це, на рѣ́це
+                                не҆рѣ́тве ⸫ въ л<seg rend="sup">т҇</seg>е ҂з҃сд҃і : а҆ ѿ рож<seg
+                                    rend="sup">д҇</seg>ство х<seg rend="sup">с҇</seg>во ҂а҃ѱѕ</p>
+                        </colophon>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD21">
+                        <locus>f. 1v</locus>
+                        <title xml:lang="bg">Колофон</title>
+                        <author>Lazar the Bulgarian</author>
+                        <date when="1706">1706</date>
+                        <note>States that the MS was copied for and belonged to <persName
+                                type="owner" full="yes">Visarion the mitropolitain of
+                                Bosnia</persName> and that the book was written by <persName
+                                type="scribe" full="yes">Lazar the Bulgarian</persName> in the
+                            monastery of Žitomislić during the time of the hegumenos <persName
+                                type="hegumenos" full="yes">hieromonk Arsenij</persName> and
+                                <persName type="mitropolitain" full="yes">Gerasim, mitropolitain of
+                                Zahumlje</persName></note>
+                        <colophon>
+                            <p>Сїа́ с҃та́а и҆ б҃ж<seg rend="sup">с҇</seg>твь́наа литꙋ<seg rend="sup"
+                                    >р҇</seg>гїа въсео̋сщ҃е́номꙋ, митро́политꙋ, кѵ̈рїю кѵ̈<seg
+                                    rend="sup">р҇</seg> Висари́онꙋ. да҆бъ<seg rend="sup"
+                                >р҇</seg>ско́мꙋ и҆ въсеи̏ бо҆сне . съписа́ се въ мона́стирь
+                                    жи҆томисли<seg rend="sup">ћ҇</seg>' при и҆гѹ̋мена кѵ̈ <seg
+                                    rend="sup">р҇</seg> а҆рсенїю̏ і҆е҆рмона́ха . и҆ при митро́полита
+                                за҆хлъми́скаго. кѵ<seg rend="sup">р҇</seg> ге҆раси́ма : въ лѣ́то ѿ
+                                бы́тїа: ҂з҃сд҃і . ѿ ро<seg rend="sup">ж҇</seg> ҂аѱ҃ѕ:- и҆ндикто,
+                                д҃і. клю́чь слова в҃ . крꙋгь сл'нцꙋ, и҃і : а҆лꙋны̏ г҃і : е̋пахта
+                                лѣ́тꙋ. а҃: потрꙋди́х се о̋ се́мъ а҆зь мно́го <sic>гѣ́шны̏</sic> и҆
+                                маньши въ чл҃це́хъ ла҆за́ръ бѹ҆гари́нъ ⁘</p>
+                        </colophon>
+                    </msItemStruct>
+                </msContents>
+                <history>
+                    <origin evidence="de visu" resp="#DR">
+                        <origDate notBefore="1706" notAfter="1706">1706</origDate>
+                        <p>The book was copied in 1706 in Žitomislić Monastery by <persName
+                                type="scribe" full="yes">Lazar the Bulgarian</persName> for
+                                <persName type="owner" full="yes">Visarion, the mitropolitain of
+                                Debar and of the whole Bosnia</persName></p>
+                    </origin>
+                    <provenance>Purchased from <persName type="owner" full="yes">J.
+                        Lilly</persName></provenance>
+                    <acquisition>14th November 1846.</acquisition>
+                </history>
+                <additional>
+                    <adminInfo>
+                        <recordHist>
+                            <source>
+                                <p>Directly catalogued from the original manuscript using the
+                                    printed catalogue <ref type="bibl" target="bib:Cleminson1988"
+                                        >Cleminson 1988: 64</ref></p>
+                            </source>
+                        </recordHist>
+                    </adminInfo>
+                    <surrogates>
+                        <p>Microform: Central Library of BAS, MF-10</p>
+                    </surrogates>
+                    <listBibl>
+                        <bibl>
+                            <ref type="bibl" target="bib:Стефановић1984">Стефановић 1984-85:
+                                60-62</ref>
+                        </bibl>
+                        <bibl>
+                            <ref type="bibl" target="bib:Петковић2002">Петковић 2002</ref>
+                        </bibl>
+                    </listBibl>
+                </additional>
+            </msDesc>
+        </body>
+    </text>
+</TEI>
