@@ -11,6 +11,7 @@ declare variable $mss as element(tei:TEI)+ := collection(concat($path-to-data, '
 declare variable $genres as element(genre)+ := doc(concat($path-to-data, '/aux/genres.xml'))/genres/genre;
 declare variable $lg := request:get-parameter('lg', 'bg');
 <m:results>{
+(: get msName value in three languages :)
 for $ms in $mss
 let $bg-title-individual as element(tei:msName)* :=
     $ms/descendant::tei:msIdentifier/tei:msName[@xml:lang eq 'bg' and @type eq 'individual']
@@ -39,31 +40,28 @@ let $ru-title-general as element(ru)* :=
 let $ru-title as xs:string := 
     ($ru-title-individual, $ru-title-specific, $ru-title-general)[1]
     ! normalize-space()
-
-(: let $en-title as xs:string := (
-$ms/descendant::tei:msIdentifier/tei:msName[@xml:lang eq 'en' and @type eq 'individual'],
-$ms/descendant::tei:msIdentifier/tei:msName[@xml:lang eq 'en' and @type eq 'specific'],
-$ms/descendant::tei:msIdentifier/tei:msName[@xml:lang eq 'en' and @type eq 'general'])[1] ! normalize-space() :)
-(: let $ru-title as xs:string := (
-$ms/descendant::tei:msIdentifier/tei:msName[@xml:lang eq 'ru' and @type eq 'individual'],
-$genres/en[. = $ms/descendant::tei:msIdentifier/tei:msName[@tpe eq 'specific']]/../ru,
-$genres/en[. = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']]/../ru)[1] ! normalize-space() :)
-(:let $country := $ms//tei:msIdentifier/tei:country
-let $settlement := $ms//tei:msIdentifier/tei:settlement
-let $repository := $ms//tei:msIdentifier/tei:repository
-let $idno := $ms//tei:msIdentifier/tei:idno[@type = "shelfmark"][not(@rend = 'old')]
-let $origDate := $ms//tei:origDate
-let $uri := tokenize(base-uri($ms), '/')[last()]
-let $availability := $ms//tei:adminInfo/tei:availability
-    order by $country[1],
-        $settlement[1],
-        $repository[1],
-        $idno[1]:)
+let $country as element(tei:country)? := $ms/descendant::tei:msIdentifier/tei:country
+let $settlement as element(tei:settlement)* := $ms/descendant::tei:msIdentifier/tei:settlement
+let $repository as element(tei:repository)* := $ms/descendant::tei:msIdentifier/tei:repository
+let $idno as element (tei:idno)? := $ms/descendant::tei:msIdentifier/tei:idno
+    [@type = "shelfmark"][not(@rend = 'old')]
+let $orig-date as element(tei:origDate)* := $ms/descendant::tei:origDate
+let $id as attribute(xml:id) := $ms/@xml:id
+order by $country[1],
+    $settlement[1],
+    $repository[1],
+    $idno[1]
 return 
 <m:ms>
-    <m:bg-title>{$bg-title}</m:bg-title>
-    <m:en-title>{$en-title}</m:en-title>
-    <m:ru-title>{$ru-title}</m:ru-title>
+    <m:country>{$country ! normalize-space()}</m:country>
+    <m:settlement>{$settlement ! normalize-space()}</m:settlement>
+    <m:repository>{$repository ! normalize-space()}</m:repository>
+    <m:idno>{$idno ! normalize-space()}</m:idno>
+    <m:orig-date>{$orig-date ! normalize-space()}</m:orig-date>
+    <m:id>{$id ! string()}</m:id>
+    <m:bg-title>{$bg-title ! string()}</m:bg-title>
+    <m:en-title>{$en-title ! string()}</m:en-title>
+    <m:ru-title>{$ru-title ! string()}</m:ru-title>
 </m:ms>
 }</m:results>
 (:return
