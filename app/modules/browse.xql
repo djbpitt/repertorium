@@ -1,46 +1,54 @@
 xquery version "3.1";
-declare default function namespace "http://www.w3.org/2005/xpath-functions";
-declare default element namespace "http://www.w3.org/1999/xhtml";
-declare namespace xi = "http://www.w3.org/2001/XInclude";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
 import module namespace re = 'http://www.ilit.bas.bg/repertorium/ns/3.0' at "re-lib.xqm";
-declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
-declare option output:method "xml";
-declare option output:media-type "application/xhtml+xml";
-declare option output:omit-xml-declaration "no";
-declare option output:doctype-system "about:legacy-compat";
-declare option output:indent "no";
+declare namespace m ="http://www.obdurodon.org/model";
 declare variable $title as xs:string := "Browse the collection";
-declare variable $exist:root as xs:string := request:get-parameter("exist:root", ());
-declare variable $exist:prefix as xs:string := request:get-parameter("exist:prefix", ());
-declare variable $exist:controller as xs:string := request:get-parameter("exist:controller", ());
-declare variable $exist:path as xs:string := request:get-parameter("exist:path", ());
-declare variable $exist:resource as xs:string := request:get-parameter("exist:resource", ());
-declare variable $uri as xs:string := request:get-parameter("uri", ());
-declare variable $context as xs:string := request:get-parameter("context", ());
-declare variable $fqcontroller as xs:string := concat($context, $exist:prefix, $exist:controller, '/');
+declare variable $exist:root as xs:string := request:get-parameter("exist:root", "xmldb:exist:///db/apps");
+declare variable $exist:controller as xs:string := request:get-parameter("exist:controller", "/repertorium");
+declare variable $path-to-data as xs:string := concat($exist:root, $exist:controller, '/data');
 
-declare variable $mss := collection(concat($exist:root, $exist:controller, '/mss'))[ends-with(base-uri(.), 'xml')];
-declare variable $genres := doc(concat($exist:root, $exist:controller, '/aux/genres.xml'))//Q{}genre;
+declare variable $mss as element(tei:TEI)+ := collection(concat($path-to-data, '/mss'))/*;
+declare variable $genres as element(genre)+ := doc(concat($path-to-data, '/aux/genres.xml'))/genres/genre;
 declare variable $lg := request:get-parameter('lg', 'bg');
-
-let $query :=
+<m:results>{
 for $ms in $mss
-let $bgTitle := (
-$ms//tei:msIdentifier/tei:msName[@xml:lang eq 'bg' and @type eq 'individual'],
-$genres[Q{}en = $ms//tei:msIdentifier/tei:msName[@type eq 'specific']]/Q{}bg,
-$genres[Q{}en = $ms//tei:msIdentifier/tei:msName[@type eq 'general']]/Q{}bg)[1]
-let $enTitle := (
-$ms//tei:msIdentifier/tei:msName[@xml:lang eq 'en' and @type eq 'individual'],
-for $i in $ms//tei:msIdentifier/tei:msName[@xml:lang eq 'en' and @type eq 'specific'][1]
-return
-    $i,
-$ms//tei:msIdentifier/tei:msName[@xml:lang eq 'en' and @type eq 'general'])[1]
-let $ruTitle := (
-$ms//tei:msIdentifier/tei:msName[@xml:lang eq 'ru' and @type eq 'individual'],
-$genres[en = $ms//tei:msIdentifier/tei:msName[@tpe eq 'specific']]/ru,
-$genres[en = $ms//tei:msIdentifier/tei:msName[@type eq 'general']]/ru)[1]
-let $country := $ms//tei:msIdentifier/tei:country
+let $bg-title-individual as element(tei:msName)* :=
+    $ms/descendant::tei:msIdentifier/tei:msName[@xml:lang eq 'bg' and @type eq 'individual']
+let $bg-title-specific as element(bg)* :=
+    $genres/en[. = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']]/../bg
+let $bg-title-general as element(bg)* :=
+    $genres/en[. = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']]/../bg
+let $bg-title as xs:string := 
+    ($bg-title-individual, $bg-title-specific, $bg-title-general)[1]
+    ! normalize-space()
+let $en-title-individual as element(tei:msName)* :=
+    $ms/descendant::tei:msIdentifier/tei:msName[@xml:lang eq 'en' and @type eq 'individual']
+let $en-title-specific as element(en)* :=
+    $genres/en[. = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']]
+let $en-title-general as element(en)* :=
+    $genres/en[. = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']]
+let $en-title as xs:string := 
+    ($en-title-individual, $en-title-specific, $en-title-general)[1]
+    ! normalize-space()
+let $ru-title-individual as element(tei:msName)* :=
+    $ms/descendant::tei:msIdentifier/tei:msName[@xml:lang eq 'ru' and @type eq 'individual']
+let $ru-title-specific as element(ru)* :=
+    $genres/en[. = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']]/../ru
+let $ru-title-general as element(ru)* :=
+    $genres/en[. = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']]/../ru
+let $ru-title as xs:string := 
+    ($ru-title-individual, $ru-title-specific, $ru-title-general)[1]
+    ! normalize-space()
+
+(: let $en-title as xs:string := (
+$ms/descendant::tei:msIdentifier/tei:msName[@xml:lang eq 'en' and @type eq 'individual'],
+$ms/descendant::tei:msIdentifier/tei:msName[@xml:lang eq 'en' and @type eq 'specific'],
+$ms/descendant::tei:msIdentifier/tei:msName[@xml:lang eq 'en' and @type eq 'general'])[1] ! normalize-space() :)
+(: let $ru-title as xs:string := (
+$ms/descendant::tei:msIdentifier/tei:msName[@xml:lang eq 'ru' and @type eq 'individual'],
+$genres/en[. = $ms/descendant::tei:msIdentifier/tei:msName[@tpe eq 'specific']]/../ru,
+$genres/en[. = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']]/../ru)[1] ! normalize-space() :)
+(:let $country := $ms//tei:msIdentifier/tei:country
 let $settlement := $ms//tei:msIdentifier/tei:settlement
 let $repository := $ms//tei:msIdentifier/tei:repository
 let $idno := $ms//tei:msIdentifier/tei:idno[@type = "shelfmark"][not(@rend = 'old')]
@@ -50,8 +58,15 @@ let $availability := $ms//tei:adminInfo/tei:availability
     order by $country[1],
         $settlement[1],
         $repository[1],
-        $idno[1]
-return
+        $idno[1]:)
+return 
+<m:ms>
+    <m:bg-title>{$bg-title}</m:bg-title>
+    <m:en-title>{$en-title}</m:en-title>
+    <m:ru-title>{$ru-title}</m:ru-title>
+</m:ms>
+}</m:results>
+(:return
     <li>
         <input
             type="checkbox"
@@ -146,8 +161,8 @@ return
                 href="{concat($exist:root, $exist:controller, '/resources/images/texts.svg')}"/></a>
         <a><xi:include
                 href="{concat($exist:root, $exist:controller, '/resources/images/xml.svg')}"/></a>
-    </li>
-return
+    </li>:)
+(:return
     <html>
         <xi:include
             href="{
@@ -186,4 +201,4 @@ return
                     }"
             />
             <ul>{$query}</ul></body>
-    </html>
+    </html>:)
