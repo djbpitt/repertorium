@@ -17,7 +17,7 @@
                 <link rel="stylesheet" type="text/css" href="resources/css/repertorium.css"/>
                 <link rel="stylesheet" type="text/css" href="resources/fonts/font.css"/>
                 <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
-                <!--<script type="text/javascript" src="resources/js/lgToggle.js"/>-->
+                <script type="text/javascript" src="resources/js/lgToggle.js"/>
             </head>
             <body class="{$xslt.lg}">
                 <header>
@@ -29,7 +29,6 @@
                                 id="plectogram_image" height="16" width="16"
                                 title="Generate plectogram" alt="[Generate plectogram]"/>
                         </span>
-
                         <span id="browse">
                             <a title="Browse the collection" href="/browse-checkbox.php">
                                 <img src="resources/images/browse.png" alt="[Browse]"/>

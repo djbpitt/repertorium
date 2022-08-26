@@ -9,7 +9,6 @@ declare variable $path-to-data as xs:string := concat($exist:root, $exist:contro
 
 declare variable $mss as element(tei:TEI)+ := collection(concat($path-to-data, '/mss'))/*;
 declare variable $genres as element(genre)+ := doc(concat($path-to-data, '/aux/genres.xml'))/genres/genre;
-declare variable $lg := request:get-parameter('lg', 'bg');
 <m:results>{
 (: get msName value in three languages :)
 for $ms in $mss
