@@ -18,6 +18,18 @@
     --line-height: 1.4em;
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px gray solid;
+}
+#flags {
+    white-space: nowrap;
+    margin-left: 1em;
+    margin-right: 1em;
+}
 dfn {
     /* opera and safari don't style dfn at all;
        other browsers may use italic instead of true oblique
@@ -128,14 +140,14 @@ ol li ol {
     padding-bottom: 0.5em;
 }
 
-#toc li>span {
+#toc li > span {
     list-style-type: none;
     /* simulate a link */
     color: blue;
     cursor: pointer;
 }
 
-#toc li>span:hover {
+#toc li > span:hover {
     text-decoration: underline;
 }
 
@@ -149,7 +161,7 @@ a:visited:hover {
     text-decoration: underline;
 }
 
-li>p {
+li > p {
     /* paragraphs are okay within list items, but:
         need to suppress usual vertical spacing to avoid spacing between list items
         need to tab non-initial paragraphs to make up for lack of vertical spacing */
@@ -157,7 +169,7 @@ li>p {
     padding: 0;
 }
 
-li>p+p {
+li > p + p {
     text-indent: 1.5em;
 }
 
@@ -232,7 +244,7 @@ td {
     margin-top: 14px;
 }
 
-.boilerplate>span {
+.boilerplate > span {
     text-indent: -1em;
     margin-left: 1em;
     display: block;
@@ -251,7 +263,7 @@ dt {
     margin-top: .7em;
 }
 
-dt>span:hover {
+dt > span:hover {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -260,15 +272,15 @@ dt>span:hover {
     color: teal;
 }
 
-dl.normal>dt {
+dl.normal > dt {
     font-size: inherit;
 }
 
-dl.normal>dd {
+dl.normal > dd {
     font-size: inherit;
 }
 
-dd>span {
+dd > span {
     display: block;
     text-indent: -1em;
     margin-left: 1em;
@@ -279,7 +291,7 @@ dd>span {
 }
 
 q {
-    quotes: '“''”''‘''’';
+    quotes: '“' '”' '‘' '’';
 }
 
 .note {
@@ -314,8 +326,8 @@ ul.three-column {
     }
 }
 
-ul.two-column>li,
-ul.three-column>li {
+ul.two-column > li,
+ul.three-column > li {
     margin-left: 1em;
 }
 
@@ -424,7 +436,7 @@ span.colophon:before {
     position: relative;
 }
 
-.boilerplate>span.text {
+.boilerplate > span.text {
     text-indent: -1em;
     margin-left: 1em;
     display: block;
@@ -432,13 +444,7 @@ span.colophon:before {
     line-height: 1.2em;
 }
 
-.flags {
-    position: absolute;
-    right: 1em;
-    top: 0;
-}
-
-.flags>span {
+#flags > span {
     padding: 0 0.15em;
 }
 
@@ -482,7 +488,7 @@ a {
 }
 
 #msDescTable,
-msDescTable>* {
+msDescTable > * {
     border: 1px lightgray solid;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -504,11 +510,11 @@ th {
     counter-reset: l1
 }
 
-#msDescContents>div.text {
+#msDescContents > div.text {
     counter-reset: l2
 }
 
-#msDescContents>div.text::before {
+#msDescContents > div.text::before {
     counter-increment: l1;
     content: counter(l1) '.';
     display: inline-block;
@@ -517,30 +523,30 @@ th {
     text-align: right;
 }
 
-#msDescContents>div.text>div.text {
+#msDescContents > div.text > div.text {
     counter-reset: l3;
     padding-left: 2em;
 }
 
-#msDescContents>div.text>div.text::before {
+#msDescContents > div.text > div.text::before {
     counter-increment: l2;
     content: counter(l1) '.' counter(l2) '.';
     display: inline-block;
     padding-right: .5em;
 }
 
-#msDescContents>div.text>div.text>div.text {
+#msDescContents > div.text > div.text > div.text {
     padding-left: 2em;
 }
 
-#msDescContents>div.text>div.text>div.text::before {
+#msDescContents > div.text > div.text > div.text::before {
     counter-increment: l3;
     content: counter(l1) '.' counter(l2) '.' counter(l3) '. ';
     display: inline-block;
     padding-right: .5em;
 }
 
-#msDescContents div.text>div.samples {
+#msDescContents div.text > div.samples {
     padding-left: 2em;
     margin-top: 0;
     margin-bottom: 0;
@@ -570,33 +576,33 @@ li .lozenge:after {
     content: " "
 }
 
-.flags .lozenge {
+#flags .lozenge {
     margin-bottom: 0;
 }
 
 /* SVG rendering */
-#main_svg>g {
+#main_svg > g {
     fill: yellow;
     stroke: black;
     stroke-width: 1px;
 }
 
-#main_svg>g>rect {
+#main_svg > g > rect {
     width: 60px;
     height: 17px;
 }
 
-#main_svg>g>a>text {
+#main_svg > g > a > text {
     font-size: 90%;
     fill: black;
     stroke: black;
 }
 
-#main_svg>line {
+#main_svg > line {
     stroke-width: 0.5px;
 }
 
-.additions>ul {
+.additions > ul {
     margin: 0;
     padding-left: 2em;
 }
@@ -655,7 +661,7 @@ div.bibData {
     border: 1px solid firebrick;
 }
 
-div.bibl:hover>div.bibData {
+div.bibl:hover > div.bibData {
     display: block;
     margin-top: 1em;
     animation-name: animate_opacity;
@@ -666,77 +672,77 @@ div.bibl:hover>div.bibData {
     animation-fill-mode: forwards;
 }
 
-div.bibData>* {
+div.bibData > * {
     /* except part of biblScope; see below */
     display: block;
     text-indent: -1em;
 }
 
-div.bibData>.author:before {
+div.bibData > .author:before {
     content: 'Author: ';
     font-weight: bolder;
 }
 
-div.bibData>.articleTitle:before {
+div.bibData > .articleTitle:before {
     content: 'Article title: ';
     font-weight: bolder;
 }
 
-div.bibData>.monographTitle {
+div.bibData > .monographTitle {
     font-style: italic;
 }
 
-div.bibData>.monographTitle:before {
+div.bibData > .monographTitle:before {
     content: 'Volume title: ';
     font-weight: bolder;
     font-style: normal;
 }
 
-div.bibData>.journalTitle {
+div.bibData > .journalTitle {
     font-style: italic;
 }
 
-div.bibData>.journalTitle:before {
+div.bibData > .journalTitle:before {
     content: 'Journal title: ';
     font-weight: bolder;
     font-style: normal;
 }
 
-div.bibData>.seriesTitle:before {
+div.bibData > .seriesTitle:before {
     content: 'Series title: ';
     font-weight: bolder;
 }
 
-div.bibData>.publication:before {
+div.bibData > .publication:before {
     content: 'Published: ';
     font-weight: bolder;
 }
 
-div.bibData>.date:before {
+div.bibData > .date:before {
     content: 'Date: ';
     font-weight: bolder;
 }
 
-div.bibData>.scope:before {
+div.bibData > .scope:before {
     content: 'Scope: ';
     font-weight: bolder;
 }
 
-.scope>* {
+.scope > * {
     display: inline;
 }
 
-.scope>.volume:before {
+.scope > .volume:before {
     content: 'Volume: ';
     color: gray;
 }
 
-.scope>.issue:before {
+.scope > .issue:before {
     content: 'Issue: ';
     color: gray;
 }
 
-.scope>.pages:before {
+.scope > .pages:before {
     content: 'Pages: ';
     color: gray;
 }
@@ -768,6 +774,6 @@ footer {
     font-size: smaller;
 }
 
-footer>p {
+footer > p {
     margin: 0;
 }

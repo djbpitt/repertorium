@@ -59,9 +59,9 @@ return
     <m:idno>{$idno ! normalize-space()}</m:idno>
     <m:orig-date>{$orig-date ! normalize-space()}</m:orig-date>
     <m:id>{$id ! string()}</m:id>
-    <m:bg-title>{$bg-title ! string()}</m:bg-title>
-    <m:en-title>{$en-title ! string()}</m:en-title>
-    <m:ru-title>{$ru-title ! string()}</m:ru-title>
+    <m:title xml:lang="bg">{$bg-title ! string()}</m:title>
+    <m:title xml:lang="en">{$en-title ! string()}</m:title>
+    <m:title xml:lang="ru">{$ru-title ! string()}</m:title>
 </m:ms>
 }</m:results>
 (:return

@@ -52,7 +52,7 @@
           returns bibliographic records containing any of those words.</p>
         <ul>
           <li><a href="bibl">Browse</a> the bibliography (<a href="bibl"><img
-                src="resources/images/xml-link.svg" alt="[XML]"/></a>)</li>
+                src="resources/images/xml.svg" alt="[XML]"/></a>)</li>
           <li>Search the bibliography <ul>
               <li><label>Any field <input id="input" type="text" size="25"
                     placeholder="press [enter] to search"/></label>
@@ -98,14 +98,14 @@
             </ul></li>
           <li>Authority files<ul>
               <li><a href="">Text titles in Bulgarian, English, and Russian</a> (<a
-                  href="data/aux/titles_cyrillic.xml"><img src="resources/images/xml-link.svg"
+                  href="data/aux/titles_cyrillic.xml"><img src="resources/images/xml.svg"
                     alt="[XML]"/></a>)</li>
               <li><a href="resources/pdf/hagio_ind.pdf">Standard English spelling of saints and
                   other hagiographic terms <img src="resources/images/pdf.gif" alt="[pdf]"
                 /></a></li>
               <li><a href="">XML table of general and specific genres for use in
                     <code>&lt;msName&gt;</code></a>(<a href="data/aux/genres.xml"><img
-                    src="resources/images/xml-link.svg" alt="[XML]"/></a>)</li>
+                    src="resources/images/xml.svg" alt="[XML]"/></a>)</li>
             </ul></li>
           <li>Data dumps<ul class="three-column">
               <li><a href="http://obdurodon.org:8080/exist/rest/db/repertorium/xquery/additions.xql"
@@ -223,7 +223,7 @@
       </a>
       <xsl:text> (</xsl:text>
       <a href="{string-join(('data', uri), '/')}">
-        <img src="resources/images/xml-link.svg"/>
+        <img src="resources/images/xml.svg"/>
       </a>
       <xsl:text>)</xsl:text>
     </li>
