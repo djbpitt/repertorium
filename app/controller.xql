@@ -13,6 +13,7 @@ Variables used to construct path to CSS for jetty
 ========== :)
 declare variable $context as xs:string := request:get-context-path();
 declare variable $fqcontroller as xs:string := concat($context, $exist:prefix, $exist:controller, '/');
+declare variable $lg as xs:string := request:get-parameter('lg', 'bg');
 
 if ($exist:resource eq '') 
 then
@@ -39,12 +40,14 @@ then
                 <set-attribute name="xslt.input" value="model"/>
                 <set-attribute name="xslt.stylesheet" value="{concat($exist:root, $exist:controller, '/views/', $exist:path, '-to-html.xsl')}"/>
                 <set-attribute name="xslt.fqcontroller" value="{$fqcontroller}"/>
+                <set-attribute name="xslt.lg" value="{$lg}"/>
             </forward>
             {if (starts-with($exist:resource, 'ajax')) then () else
             <forward servlet="XSLTServlet">
                 <clear-attribute name="xslt.input"/>
                 <set-attribute name="xslt.stylesheet" value="{concat($exist:root, $exist:controller, '/views/wrapper.xsl')}"/>
                 <set-attribute name="xslt.fqcontroller" value="{$fqcontroller}"/>
+                <set-attribute name="xslt.lg" value="{$lg}"/>
             </forward>}
         </view>
         <cache-control cache="no"/>
