@@ -1,6 +1,7 @@
 xquery version "3.1";
 module namespace re = "http://www.ilit.bas.bg/repertorium/ns/3.0";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
+declare namespace m = "http://www.obdurodon.org/model";
 
 (: Contents
  : re:addPeriod : adds a period if the string does not already end in one
@@ -55,4 +56,13 @@ declare function re:unit($unit as xs:string) as xs:string {
                 "f."
         default return
             $unit
+};
+
+declare function re:serialize-facets($input as map(*)) as element()* {
+    for $key in map:keys($input)
+    let $value as xs:integer := $input($key)
+        order by lower-case($key)
+    return
+        <m:item
+            key="{$key}">{$value}</m:item>
 };

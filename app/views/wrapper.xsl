@@ -7,6 +7,7 @@
     <xsl:output method="xhtml" html-version="5" omit-xml-declaration="no" include-content-type="no"
         indent="yes" byte-order-mark="no"/>
     <xsl:param name="xslt.fqcontroller" required="yes"/>
+    <xsl:param name="xslt.resource" required="yes"/>
     <xsl:param name="xslt.lg" required="yes"/>
     <xsl:template match="/">
         <html>
@@ -54,7 +55,7 @@
                         </span>
                     </div>
                 </header>
-                <main>
+                <main id="{$xslt.resource}">
                     <xsl:copy-of select="descendant::section[not(ancestor::section)]/node()"/>
                 </main>
                 <footer>

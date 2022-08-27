@@ -23,9 +23,10 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px gray solid;
+    border-bottom: 1px lightgray solid;
 }
 #flags {
+    display: flex;
     white-space: nowrap;
     margin-left: 1em;
     margin-right: 1em;
@@ -51,6 +52,37 @@ body {
 
 main {
     flex: 1;
+}
+
+#search {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+#search > aside {
+    border-right: 1px lightgray solid;
+    padding-right: 1em;
+}
+
+fieldset {
+    margin: .5em 0;
+}
+
+fieldset > ul {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 1em;
+    text-indent: -1.5em;
+}
+
+#mss {
+    display: flex;
+    flex-direction: column;
+}
+
+#mss > ul {
+    margin-top: 0;
 }
 
 h1,

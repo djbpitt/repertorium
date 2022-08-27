@@ -6,7 +6,11 @@
             <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
             <analyzer id="ws" class="org.apache.lucene.analysis.core.WhitespaceAnalyzer"/>
             <analyzer id="kw" class="org.apache.lucene.analysis.core.KeywordAnalyzer"/>
-            <text qname="tei:TEI"/>
+            <text qname="tei:TEI">
+                <facet dimension="country" expression="descendant::tei:msDesc/tei:msIdentifier/tei:country"/>
+                <facet dimension="settlement" expression="descendant::tei:msDesc/tei:msIdentifier/tei:settlement"/>
+                <facet dimension="repository" expression="descendant::tei:msDesc/tei:msIdentifier/tei:repository"/>
+            </text>
         </lucene>
         <range>
             <create qname="en" type="xs:string"/>
