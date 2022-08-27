@@ -171,9 +171,9 @@
               <li><a
                   href="http://kb.osu.edu/dspace/bitstream/handle/1811/51969/HIL_POLATA_17-18_GEURTS_ETAL.pdf?sequence=3"
                     ><q>Codicography and computer,</q>
-                  <img src="resources/images/pdf.gif" alt="[pdf]"/></a>
-                (Geurts, A. J., A. Gruijs, J. van Krieken, and W. R. Veder, <cite>Polata
-                  knigopisnaia</cite> 17–18 (December 1987): 4–29)</li>
+                  <img src="resources/images/pdf.gif" alt="[pdf]"/></a> (Geurts, A. J., A. Gruijs,
+                J. van Krieken, and W. R. Veder, <cite>Polata knigopisnaia</cite> 17–18 (December
+                1987): 4–29)</li>
               <li><a href="http://repertorium.cl.bas.bg/descriptions/MSLIST.html"><cite>Cyrillic
                     manuscripts at the British Library: Electronic descriptions and digital
                     collection</cite></a> (authentication required)</li>
@@ -182,6 +182,8 @@
             </ul>
           </li>
         </ul>
+      </section>
+      <section>
         <h2>The Repertorium toolkit</h2>
         <p>The Repetorium Initiative uses the following tools and resources:</p>
         <ul class="two-column">

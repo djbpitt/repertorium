@@ -38,12 +38,19 @@ dfn {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: cambria, "palatino linotype", times, serif;
     /* georgia is missing the acute accent, so IErenders a box */
     line-height: var(--line-height);
     background-color: var(--background-color);
     color: var(--color);
     padding-left: 5px;
+    height: 98vh;
+}
+
+main {
+    flex: 1;
 }
 
 h1,
