@@ -12,7 +12,7 @@
       <img class="folio" title="Codex Zographensis" alt="[Codex Zographensis]"
         src="resources/images/zog.jpg"/>
       <section>
-        <h2>About the project</h2>
+        <h2>About the Repertorium</h2>
         <p>The Repertorium of Old Bulgarian Literature and Letters was conceived as an archival
           repository capable of encoding and preserving in SGML (and, subsequently, XML) format
           archeographic, paleographic, codicological, textological, and literary-historical data
@@ -23,52 +23,25 @@
           Andrej Bojadžiev, Anisava Miltenova, and Diljana Radoslavova.</p>
       </section>
       <section>
-        <h2>Manuscripts</h2>
+        <h2>Repertorium resources</h2>
         <ul>
           <li>
-            <a href="browse">Browse the collection</a>
+            <a href="search">Explore the manuscripts</a>
           </li>
-          <li>Search the collection <ul>
-              <li><a href="search">By location, full text of title, etc.</a></li>
-              <li><label for="searchTitlesFree">Case-insensitive substring search in text title </label>
-                <input id="searchTitlesFree" type="text" size="25"
-                  placeholder="press [enter] to search"/></li>
-            </ul>
+          <li>
+            <a href="">Explore the secondary reference bibliography</a>
           </li>
-          <li>Dendrogram overviews of the corpus (<a href="dendrogram?type=complete">complete</a>,
-              <a href="dendrogram?type=ward">Ward’s</a>, and <a
-              href="http://repertorium.obdurodon.org/dendrogram?type=colored">Ward’s with color
-              coding</a> linkage)</li>
         </ul>
-        <p>Manuscript descriptions from the related Slovo-ASO project can be found at <a
-            href="http://aso.obdurodon.org">http://aso.obdurodon.org</a>.</p>
       </section>
       <section>
-        <h2>Bibliography</h2>
-        <p>Bibliographic references in the manuscript descriptions are maintained in a separate
-          bibliographic database file, which can be browsed or searched. It is under development and
-          does not yet contain all bibliographic references that appear in the full description
-          files. The search field takes one or more complete words (it is not case-sensitive) and
-          returns bibliographic records containing any of those words.</p>
+        <h2>Related projects</h2>
         <ul>
-          <li><a href="bibl">Browse</a> the bibliography (<a href="bibl"><img
-                src="resources/images/xml.svg" alt="[XML]"/></a>)</li>
-          <li>Search the bibliography <ul>
-              <li><label>Any field <input id="input" type="text" size="25"
-                    placeholder="press [enter] to search"/></label>
-              </li>
-              <li><label>Keyword <input id="keyword" type="text" size="25"
-                    placeholder="press [enter] to search"/></label>
-              </li>
-              <li><label>Surname <input id="surname" type="text" size="25"
-                    placeholder="press [enter] to search"/></label>
-              </li>
-              <li><label>Publication place<input id="pubPlace" type="text" size="25"
-                    placeholder="press [enter] to search"/></label>
-              </li>
-            </ul></li>
+          <li>
+            <a href="http://aso.obdurodon.org">Slovo-ASO</a>
+          </li>
         </ul>
       </section>
+      <hr/>
       <section>
         <h2>For developers</h2>
         <ul>
