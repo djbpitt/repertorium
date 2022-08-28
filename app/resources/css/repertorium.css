@@ -17,7 +17,9 @@
     --color: black;
     --line-height: 1.4em;
 }
-
+/* 
+ * Header holds h1 title and action icons
+ */
 header {
     display: flex;
     flex-direction: row;
@@ -31,13 +33,18 @@ header {
     margin-left: 1em;
     margin-right: 1em;
 }
-dfn {
-    /* opera and safari don't style dfn at all;
-       other browsers may use italic instead of true oblique
-       (is this font-specific?) */
-    font-style: oblique;
+/*
+ * Footer holds credits and copyright information
+ * Only <hr> is at top of <footer>
+ */
+footer {
+    display: block;
+    font-size: smaller;
 }
 
+footer > p {
+    margin: 0;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -54,22 +61,48 @@ main {
     flex: 1;
 }
 
+/* 
+ * Search-specific
+ */
+
 #search {
+    margin-top: .5em;
+}
+
+#search > form {
+    display: flex;
+    flex-direction: column;
+}
+
+#search aside {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px lightgray solid;
+    padding-right: 1em;
+}
+
+#text-query-and-submit {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 1em;
 }
 
-#search > aside {
-    border-right: 1px lightgray solid;
-    padding-right: 1em;
+#article-title {
+    width: 100%;
+}
+
+#checkboxes-and-mss {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
 }
 
 fieldset {
     margin: .5em 0;
 }
 
-fieldset > ul {
+#search ul {
     margin: 0;
     list-style-type: none;
     padding-left: 1em;
@@ -785,6 +818,15 @@ div.bibData > .scope:before {
     content: 'Pages: ';
     color: gray;
 }
+/* 
+ * Global
+ */
+dfn {
+    /* opera and safari don't style dfn at all;
+       other browsers may use italic instead of true oblique
+       (is this font-specific?) */
+    font-style: oblique;
+}
 
 /*
  * Language toggling
@@ -802,17 +844,4 @@ body.en :lang(bg) {
 body.ru :lang(en),
 body.ru :lang(bg) {
     display: none;
-}
-
-/*
- * <Footer> holds credits and copyright information
- * Only <hr> is at top of <footer>
- */
-footer {
-    display: block;
-    font-size: smaller;
-}
-
-footer > p {
-    margin: 0;
 }

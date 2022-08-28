@@ -11,9 +11,9 @@ declare variable $mss as document-node()+ := collection(concat($path-to-data, '/
 declare variable $genres as element(genre)+ := doc(concat($path-to-data, '/aux/genres.xml'))/genres/genre;
 declare variable $titles as element(title)+ := doc(concat($path-to-data, '/aux/titles_cyrillic.xml'))/descendant::title;
 
-declare variable $countries as xs:string* := request:get-parameter('countries[]', ());
-declare variable $settlements as xs:string* := request:get-parameter('settlements[]', ());
-declare variable $repositories as xs:string* := request:get-parameter('repositories[]', ());
+declare variable $country as xs:string? := request:get-parameter('country', ());
+declare variable $settlement as xs:string? := request:get-parameter('settlement', ());
+declare variable $repository as xs:string? := request:get-parameter('repository', ());
 
 declare variable $texts := distinct-values($mss/descendant::tei:msItemStruct/tei:title[@xml:lang = 'bg']);
 declare variable $authors := distinct-values($mss/descendant::tei:msItemStruct/tei:author[. ne 'anonymous']);
@@ -21,9 +21,9 @@ declare variable $authors := distinct-values($mss/descendant::tei:msItemStruct/t
 declare variable $query-options as map(*) :=
 map {
     "facets": map {
-        "country": $countries,
-        "settlement": $settlements,
-        "repository": $repositories
+        "country": $country,
+        "settlement": $settlement,
+        "repository": $repository
     }
 };
 
@@ -33,9 +33,9 @@ declare variable $settlement-facets as map(*) := ft:facets($hits, "settlement");
 declare variable $repository-facets as map(*) := ft:facets($hits, "repository");
 
 <m:results>
-    <m:countries>{re:serialize-facets($country-facets)}</m:countries>
-    <m:settlements>{re:serialize-facets($settlement-facets)}</m:settlements>
-    <m:repositories>{re:serialize-facets($repository-facets)}</m:repositories>
+    <m:countries>{re:serialize-facets($country-facets, $country)}</m:countries>
+    <m:settlements>{re:serialize-facets($settlement-facets, $settlement)}</m:settlements>
+    <m:repositories>{re:serialize-facets($repository-facets, $repository)}</m:repositories>
     <m:mss>{
             for $ms in $hits
             let $bg-title-individual as element(tei:msName)* :=
@@ -93,160 +93,3 @@ declare variable $repository-facets as map(*) := ft:facets($hits, "repository");
                 </m:ms>
         }</m:mss>
 </m:results>
-(:let $query :=
-(<hr/>,
-<h3>Find manuscripts</h3>,
-<form
-    action="runSearch-checkbox.php"
-    method="get">
-    <p><label
-            for="country">Country</label>
-        <select
-            id="country"
-            name="country">{
-                <option
-                    value="all">All countries ({count($countries)})</option>,
-                for $country in $countries
-                    order by $country
-                return
-                    <option
-                        value="{$country}">{$country} ({count($mss//tei:msIdentifier[tei:country = $country])})</option>
-            }</select>
-    </p>
-    <p>
-        <label
-            for="settlement">Settlement</label>
-        <select
-            id="settlement"
-            name="settlement">{
-                <option
-                    value="all">All settlements ({count($settlements)})</option>,
-                for $settlement in $settlements
-                    order by $settlement
-                return
-                    <option
-                        value="{$settlement}">{$settlement} ({count($mss//tei:msIdentifier[tei:settlement = $settlement])})</option>
-            }</select>
-    </p>
-    <p>
-        <label
-            for="repository">Repository</label>
-        <select
-            id="repository"
-            name="repository">{
-                <option
-                    value="all">All repositories ({count($repositories)})</option>,
-                for $repository in $repositories
-                    order by $repository
-                return
-                    <option
-                        value="{$repository}">{$repository} ({count($mss//tei:msIdentifier[tei:repository = $repository])})</option>
-            }</select>
-    </p>
-    <p>
-        <label
-            for="author">Authors</label>
-        <select
-            id="author"
-            name="author">{
-                <option
-                    value="all">All authors ({count($authors)})</option>,
-                for $author in $authors
-                    order by $author
-                return
-                    <option
-                        value="{$author}">{$author} ({count($mss//tei:msItemStruct[tei:author = $author])})</option>
-            }</select>
-    </p>
-    <p
-        class="select bg {if ($lg eq 'bg') then ' lg' else ' hide'}">
-        <label
-            for="bgTexts">Texts</label>
-        <select
-            id="bgTexts"
-            name="bgTexts">{
-                <option
-                    value="all">Всички текстове ({$realTextCount})</option>,
-                for $text in $bgTexts
-                    order by lower-case($text)
-                return
-                    <option
-                        value="{$text}">{$text} ({count($mss//tei:msItemStruct[tei:title = $text])})</option>
-            }</select>
-    </p>
-    <p
-        class="select en {if ($lg eq 'en') then ' lg' else ' hide'}">
-        <label
-            for="enTexts">Texts</label>
-        <select
-            id="enTexts"
-            name="enTexts">{
-                <option
-                    value="all">All texts ({$realTextCount})</option>,
-                for $enText in $enTexts
-                (\: $bgEquiv is faster than a nested predicate :\)
-                let $bgEquiv := $enText/preceding-sibling::Q{}bg
-                    order by lower-case($enText)
-                return
-                    <option
-                        value="{$bgEquiv}">{$enText} ({count($mss//tei:msItemStruct[tei:title = $bgEquiv])})</option>
-            }</select>
-    </p>
-    <p
-        class="select ru {if ($lg eq 'ru') then ' lg' else ' hide'}">
-        <label
-            for="ruTexts">Texts</label>
-        <select
-            id="ruTexts"
-            name="ruTexts">{
-                <option
-                    value="all">Все тексты ({$realTextCount})</option>,
-                for $ruText in $ruTexts
-                let $bgEquiv := $ruText/preceding-sibling::bg
-                    order by lower-case($ruText)
-                return
-                    <option
-                        value="{$bgEquiv}">{$ruText} ({count($mss//tei:msItemStruct[tei:title = $bgEquiv])})</option>
-            }</select>
-    </p>
-    <p><input
-            type="submit"
-            value="Submit"
-            id="submit"/></p>
-</form>
-)
-return:)
-(:    <html>
-        <xi:include
-            href="{
-                    concat(
-                    $exist:root,
-                    $exist:controller,
-                    '/includes/header.xql?title=',
-                    encode-for-uri($title),
-                    '&amp;fqcontroller=',
-                    $fqcontroller
-                    )
-                }"/>
-        
-        <body>
-            <style
-                type="text/css">
-                label {{padding-right: 0.25em;}}
-                svg {{display: inline-block; padding: 0 .1em;}}</style>
-            <xi:include
-                href="{
-                        concat(
-                        $exist:root,
-                        $exist:controller,
-                        '/includes/boilerplate.xql?title=',
-                        encode-for-uri($title),
-                        '&amp;fqcontroller=',
-                        $fqcontroller,
-                        '&amp;resource=',
-                        $exist:resource
-                        )
-                    }"
-            />
-            {$query}</body>
-    </html>:)

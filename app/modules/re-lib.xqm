@@ -58,11 +58,16 @@ declare function re:unit($unit as xs:string) as xs:string {
             $unit
 };
 
-declare function re:serialize-facets($input as map(*)) as element()* {
+declare function re:serialize-facets($input as map(*), $checked as xs:string*) as element()* {
     for $key in map:keys($input)
     let $value as xs:integer := $input($key)
         order by lower-case($key)
     return
         <m:item
-            key="{$key}">{$value}</m:item>
+            key="{$key}">{
+                if ($key = $checked) then
+                    attribute checked {"checked"}
+                else
+                    ()
+            }{$value}</m:item>
 };

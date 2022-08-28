@@ -10,10 +10,20 @@
   <!-- ================================================================== -->
   <xsl:import href="functions.xsl"/>
   <!-- ================================================================== -->
+  <!-- Variables                                                          -->
+  <!-- ================================================================== -->
+  <xsl:variable name="facet-labels" as="map(*)" select="
+      map {
+        'countries': 'country',
+        'settlements': 'settlement',
+        'repositories': 'repository'
+      }"/>
+  <!-- ================================================================== -->
   <!-- Main                                                               -->
   <!-- ================================================================== -->
   <xsl:template match="/">
     <section>
+      <script src="resources/js/search.js"/>
       <xsl:apply-templates/>
     </section>
   </xsl:template>
@@ -22,12 +32,18 @@
     <!-- All descriptions have country, settlement, repository except     -->
     <!--   convolutes                                                     -->
     <!-- ================================================================ -->
-    <aside>
-      <form action="search" method="get">
-        <xsl:apply-templates select="countries, settlements, repositories"/>
-      </form>
-    </aside>
-    <xsl:apply-templates select="mss"/>
+    <form action="search" method="get" id="search">
+      <div id="text-query-and-submit">
+        <input type="text" id="article-title" name="article-title"/>
+        <input type="submit" id="submit" name="submit"/>
+      </div>
+      <div id="checkboxes-and-mss">
+        <aside id="fieldsets">
+          <xsl:apply-templates select="countries, settlements, repositories"/>
+        </aside>
+        <xsl:apply-templates select="mss"/>
+      </div>
+    </form>
   </xsl:template>
   <!-- ================================================================== -->
   <!-- Query facets                                                       -->
@@ -45,7 +61,11 @@
   <xsl:template match="item">
     <li>
       <label>
-        <input type="checkbox" name="countries[]" id="countries[]"/>
+        <input type="checkbox" name="{$facet-labels(.. ! local-name())}" value="{@key}">
+          <xsl:if test="@checked">
+            <xsl:attribute name="checked" select="'checked'"/>
+          </xsl:if>
+        </input>
         <xsl:text> </xsl:text>
         <xsl:value-of select="concat(@key, ' (', ., ')')"/>
       </label>
@@ -69,6 +89,10 @@
   </xsl:template>
   <xsl:template match="ms">
     <li>
+      <label>
+        <input type="checkbox" name="mss[]" value="{id}"/>
+        <xsl:text> </xsl:text>
+      </label>
       <xsl:choose>
         <xsl:when test="country[node()]">
           <a href="search">
