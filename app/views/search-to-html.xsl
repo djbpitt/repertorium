@@ -34,7 +34,8 @@
     <!-- ================================================================ -->
     <form action="search" method="get" id="search">
       <div id="text-query-and-submit">
-        <input type="text" id="article-title" name="article-title"/>
+        <input type="text" id="query-string" name="query-string"/>
+        <datalist id="titles"/>
         <input type="submit" id="submit" name="submit"/>
       </div>
       <div id="checkboxes-and-mss">

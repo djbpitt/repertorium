@@ -11,10 +11,17 @@
                 <facet dimension="settlement" expression="descendant::tei:msDesc/tei:msIdentifier/tei:settlement"/>
                 <facet dimension="repository" expression="descendant::tei:msDesc/tei:msIdentifier/tei:repository"/>
             </text>
+            <text qname="tei:title" analyzer="kw">
+                <facet dimension="title" expression="."/>
+            </text>
         </lucene>
         <range>
+            <create qname="bg" type="xs:string"/>
             <create qname="en" type="xs:string"/>
+            <create qname="ru" type="xs:string"/>
         </range>
-        <!-- <ngram qname="@fqname"/> -->
+        <ngram qname="en"/>
+        <ngram qname="bg"/>
+        <ngram qname="ru"/>
     </index>
 </collection>
