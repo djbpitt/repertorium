@@ -34,8 +34,13 @@
     <!-- ================================================================ -->
     <form action="search" method="get" id="search">
       <div id="text-query-and-submit">
-        <input type="text" id="query-string" name="query-string"/>
-        <datalist id="titles"/>
+        <input type="text" 
+          id="query-string" name="query-string" 
+          list="titles" autocomplete="off" 
+          placeholder="[Enter partial article title in active language]"
+          value="{/descendant::m:query-string ! string()}"/>
+        <datalist id="titles">
+        </datalist>
         <input type="submit" id="submit" name="submit"/>
       </div>
       <div id="checkboxes-and-mss">
