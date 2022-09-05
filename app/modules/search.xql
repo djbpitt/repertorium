@@ -1,35 +1,40 @@
 xquery version "3.1";
+(: Import functions :)
 import module namespace re = 'http://www.ilit.bas.bg/repertorium/ns/3.0' at "re-lib.xqm";
+(: Declare namespaces :)
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
 declare namespace m = "http://www.obdurodon.org/model";
+(: Constant :)
 declare variable $title as xs:string := "Browse the collection";
+(: Controller variables and derived paths :)
 declare variable $exist:root as xs:string := request:get-parameter("exist:root", "xmldb:exist:///db/apps");
 declare variable $exist:controller as xs:string := request:get-parameter("exist:controller", "/repertorium");
 declare variable $path-to-data as xs:string := concat($exist:root, $exist:controller, '/data');
-declare variable $query-string as xs:string? := request:get-parameter('query-string', ());
-declare variable $lg-cookie as xs:string? := request:get-cookie-value('lg');
-declare variable $all-titles as document-node() := doc($path-to-data || '/aux/titles_cyrillic.xml');
-declare variable $titles-to-check as element()+ :=
-    switch ($lg-cookie)
-        case "en"
-            return
-                $all-titles/descendant::en
-        case "ru"
-            return
-                $all-titles/descendant::ru
-        default return
-            $all-titles/descendant::bg;
-
 declare variable $mss as document-node()+ := collection(concat($path-to-data, '/mss'));
 declare variable $genres as element(genre)+ := doc(concat($path-to-data, '/aux/genres.xml'))/genres/genre;
 declare variable $titles as element(title)+ := doc(concat($path-to-data, '/aux/titles_cyrillic.xml'))/descendant::title;
-
+(: Input parameters :)
 declare variable $country as xs:string? := request:get-parameter('country', ());
 declare variable $settlement as xs:string? := request:get-parameter('settlement', ());
 declare variable $repository as xs:string? := request:get-parameter('repository', ());
+declare variable $query-string as xs:string? := request:get-parameter('query-string', ());
+declare variable $lg-cookie as xs:string? := request:get-cookie-value('lg');
+(: Find titles to search in correct language, based on $lg-cookie:)
+declare variable $all-titles as document-node() := doc($path-to-data || '/aux/titles_cyrillic.xml');
+declare variable $titles-to-check as element()+ :=
+switch ($lg-cookie)
+    case "en"
+        return
+            $all-titles/descendant::en
+    case "ru"
+        return
+            $all-titles/descendant::ru
+    default return
+        $all-titles/descendant::bg;
 
-declare variable $texts := distinct-values($mss/descendant::tei:msItemStruct/tei:title[@xml:lang = 'bg']);
-declare variable $authors := distinct-values($mss/descendant::tei:msItemStruct/tei:author[. ne 'anonymous']);
+(: The following variables appear not to be used; delete after verification :)
+(:declare variable $texts := distinct-values($mss/descendant::tei:msItemStruct/tei:title[lang('bg')]);
+declare variable $authors := distinct-values($mss/descendant::tei:msItemStruct/tei:author[. ne 'anonymous']);:)
 
 declare variable $query-options as map(*) :=
 map {
@@ -40,13 +45,13 @@ map {
     }
 };
 
-declare variable $hits as element(tei:TEI)* := 
-    $mss/tei:TEI[ft:query(., (), $query-options)];
+declare variable $hits as element(tei:TEI)* :=
+$mss/tei:TEI[ft:query(., (), $query-options)];
 
 declare variable $bg-query-value as element(query) :=
-    <query>
-        <term>{$titles-to-check[. eq replace($query-string, ' \(\d+\)', '')]/../bg ! string()}</term>
-    </query>;
+<query>
+    <term>{$titles-to-check[. eq replace($query-string, ' \(\d+\)', '')]/../bg ! string()}</term>
+</query>;
 declare variable $bg-title-hits as element(tei:TEI)* := $mss/descendant::tei:title[ft:query(., $bg-query-value)]/ancestor::tei:TEI;
 
 declare variable $country-facets as map(*) := ft:facets($hits, "country");
