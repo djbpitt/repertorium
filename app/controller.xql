@@ -40,7 +40,7 @@ then
                 <set-attribute name="xslt.input" value="model"/>
                 <set-attribute name="xslt.stylesheet" value="{concat($exist:root, $exist:controller, '/views/', $exist:path, '-to-html.xsl')}"/>
                 <set-attribute name="xslt.fqcontroller" value="{$fqcontroller}"/>
-                <set-attribute name="xslt.lg" value="{$lg}"/>
+                <set-attribute name="xslt.lg" value="{($lg, 'bg')[1]}"/>
             </forward>
             {if (starts-with($exist:resource, 'ajax')) then () else
             <forward servlet="XSLTServlet">

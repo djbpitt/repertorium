@@ -25,34 +25,17 @@
                     <h1><a class="logo" href="index"><span>&lt;rep&gt;</span></a> Repertorium of Old
                         Bulgarian Literature and Letters</h1>
                     <div id="flags">
-                        <span id="plectogram">
-                            <input type="image" src="resources/images/ico_compare.png"
-                                id="plectogram_image" height="16" width="16"
-                                title="Generate plectogram" alt="[Generate plectogram]"/>
-                        </span>
-                        <span id="browse">
-                            <a title="Browse the collection" href="/browse-checkbox.php">
-                                <img src="resources/images/browse.png" alt="[Browse]"/>
-                            </a>
-                        </span>
-                        <span id="search">
-                            <a title="Search the collection" href="/search.php">
-                                <img src="resources/images/search.png" alt="[Search]"/>
-                            </a>
-                        </span>
+                        <img src="resources/images/compare.svg" id="plectogram_image" height="16"
+                            width="16" title="Generate plectogram" alt="[Generate plectogram]"/>
+                        <img src="resources/images/magnifying-glass-search-svgrepo-com.svg"
+                            alt="[Search]"/>
                         <xsl:text>&#xa0;&#xa0;</xsl:text>
-                        <span class="flag" id="bg">
-                            <img title="Use Bulgarian titles" src="resources/images/bg.png"
-                                alt="[Bulgarian]"/>
-                        </span>
-                        <span class="flag" id="en">
-                            <img title="Use English titles" src="resources/images/us.png"
-                                alt="[Englist]"/>
-                        </span>
-                        <span class="flag" id="ru">
-                            <img title="Use Russian titles" src="resources/images/ru.png"
-                                alt="[Russian]"/>
-                        </span>
+                        <img title="Use Bulgarian titles" src="resources/images/bg.png" id="bg"
+                            alt="[Bulgarian]" class="flag"/>
+                        <img title="Use English titles" src="resources/images/us.png" id="en"
+                            alt="[Englist]" class="flag"/>
+                        <img title="Use Russian titles" src="resources/images/ru.png" id="ru"
+                            alt="[Russian]" class="flag"/>
                     </div>
                 </header>
                 <main id="{$xslt.resource}">
