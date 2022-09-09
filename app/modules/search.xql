@@ -48,10 +48,13 @@ map {
 declare variable $hits as element(tei:TEI)* :=
 $mss/tei:TEI[ft:query(., (), $query-options)];
 
-declare variable $bg-query-value as element(query) :=
-<query>
-    <term>{$titles-to-check[. eq replace($query-string, ' \(\d+\)', '')]/../bg ! string()}</term>
-</query>;
+declare variable $bg-query-value as element(query)? :=
+if ($query-string ne '') then
+    <query>
+        <term>{$titles-to-check[. eq replace($query-string, ' \(\d+\)', '')]/../bg ! string()}</term>
+    </query>
+else
+    ();
 declare variable $bg-title-hits as element(tei:TEI)* := $mss/descendant::tei:title[ft:query(., $bg-query-value)]/ancestor::tei:TEI;
 
 declare variable $country-facets as map(*) := ft:facets($hits, "country");
