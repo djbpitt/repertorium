@@ -15,7 +15,7 @@ declare variable $genres as element(genre)+ := doc(concat($path-to-data, '/aux/g
 declare variable $titles as element(title)+ := doc(concat($path-to-data, '/aux/titles_cyrillic.xml'))/descendant::title;
 (: Input parameters :)
 declare variable $country as xs:string? := request:get-parameter('country', ());
-declare variable $settlement as xs:string? := request:get-parameter('settlement', ());
+declare variable $settlement as xs:string* := request:get-parameter('settlement', ());
 declare variable $repository as xs:string? := request:get-parameter('repository', ());
 declare variable $query-string as xs:string? := request:get-parameter('query-string', ());
 declare variable $lg-cookie as xs:string? := request:get-cookie-value('lg');
@@ -45,9 +45,6 @@ map {
     }
 };
 
-declare variable $hits as element(tei:TEI)* :=
-$mss/tei:TEI[ft:query(., (), $query-options)];
-
 declare variable $bg-query-value as element(query)? :=
 if ($query-string ne '') then
     <query>
@@ -55,21 +52,24 @@ if ($query-string ne '') then
     </query>
 else
     ();
-declare variable $bg-title-hits as element(tei:TEI)* := $mss/descendant::tei:title[ft:query(., $bg-query-value)]/ancestor::tei:TEI;
+declare variable $bg-title-hits as element(tei:title)* := $mss/descendant::tei:title[ft:query(., $bg-query-value, $query-options)];
+declare variable $bg-title-mss as element(tei:TEI)* := $bg-title-hits/ancestor::tei:TEI;
 
-declare variable $country-facets as map(*) := ft:facets($hits, "country");
-declare variable $settlement-facets as map(*) := ft:facets($hits, "settlement");
-declare variable $repository-facets as map(*) := ft:facets($hits, "repository");
+declare variable $country-facets as map(*) := ft:facets($bg-title-hits, "country");
+declare variable $settlement-facets as map(*) := ft:facets($bg-title-hits, "settlement");
+declare variable $repository-facets as map(*) := ft:facets($bg-title-hits, "repository");
 
 <m:results>
+    <m:lg-cookie>{$lg-cookie}</m:lg-cookie>
     <m:query-string>{$query-string}</m:query-string>
     <m:bg-query-value>{$bg-query-value}</m:bg-query-value>
-    <m:bg-hits>{$bg-title-hits => count()}</m:bg-hits>
+    <m:bg-title-hits>{$bg-title-hits => count()}</m:bg-title-hits>
+    <m:bg-mss>{$bg-title-mss => count()}</m:bg-mss>
     <m:countries>{re:serialize-facets($country-facets, $country)}</m:countries>
     <m:settlements>{re:serialize-facets($settlement-facets, $settlement)}</m:settlements>
     <m:repositories>{re:serialize-facets($repository-facets, $repository)}</m:repositories>
     <m:mss>{
-            for $ms in $hits intersect $bg-title-hits
+            for $ms in $bg-title-mss
             let $bg-title-individual as element(tei:msName)* :=
             $ms/descendant::tei:msIdentifier/tei:msName[@xml:lang eq 'bg' and @type eq 'individual']
             let $bg-title-specific as element(bg)* :=

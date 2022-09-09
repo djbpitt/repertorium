@@ -6,12 +6,10 @@
             <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
             <analyzer id="ws" class="org.apache.lucene.analysis.core.WhitespaceAnalyzer"/>
             <analyzer id="kw" class="org.apache.lucene.analysis.core.KeywordAnalyzer"/>
-            <text qname="tei:TEI">
-                <facet dimension="country" expression="descendant::tei:msDesc/tei:msIdentifier/tei:country"/>
-                <facet dimension="settlement" expression="descendant::tei:msDesc/tei:msIdentifier/tei:settlement"/>
-                <facet dimension="repository" expression="descendant::tei:msDesc/tei:msIdentifier/tei:repository"/>
-            </text>
             <text qname="tei:title" analyzer="kw">
+                <facet dimension="country" expression="ancestor::tei:TEI/descendant::tei:msDesc/tei:msIdentifier/tei:country"/>
+                <facet dimension="settlement" expression="ancestor::tei:TEI/descendant::tei:msDesc/tei:msIdentifier/tei:settlement"/>
+                <facet dimension="repository" expression="ancestor::tei:TEI/descendant::tei:msDesc/tei:msIdentifier/tei:repository"/>
                 <facet dimension="title" expression="."/>
             </text>
         </lucene>
