@@ -15,6 +15,7 @@
 :root {
     --background-color: #f4eee2;
     --color: black;
+    --logo-color: #A00000;
     --line-height: 1.4em;
 }
 /* 
@@ -33,7 +34,11 @@ header {
     margin-left: 1em;
     margin-right: 1em;
     align-items: center;
-    gap: .25em;
+    gap: .35em;
+}
+.flag.highlight {
+    outline: 2px var(--logo-color) solid;
+    outline-offset: 2px;
 }
 
 /*
@@ -328,7 +333,7 @@ td {
 }
 
 .logo {
-    color: #A00000;
+    color: var(--logo-color);
 }
 
 dt {
