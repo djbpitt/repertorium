@@ -10,6 +10,10 @@
   <!-- ================================================================== -->
   <xsl:import href="functions.xsl"/>
   <!-- ================================================================== -->
+  <!-- Parameters (from controller)                                       -->
+  <!-- ================================================================== -->
+  <xsl:param name="xslt.lg" required="yes"/>
+  <!-- ================================================================== -->
   <!-- Variables                                                          -->
   <!-- ================================================================== -->
   <xsl:variable name="facet-labels" as="map(*)" select="
@@ -17,6 +21,12 @@
         'countries': 'country',
         'settlements': 'settlement',
         'repositories': 'repository'
+      }"/>
+  <xsl:variable name="languages" as="map(*)" select="
+      map {
+        'bg': 'Bulgarian',
+        'en': 'English',
+        'ru': 'Russian'
       }"/>
   <!-- ================================================================== -->
   <!-- Main                                                               -->
@@ -34,13 +44,10 @@
     <!-- ================================================================ -->
     <form action="search" method="get" id="search">
       <div id="text-query-and-submit">
-        <input type="text" 
-          id="query-string" name="query-string" 
-          list="titles" autocomplete="off" 
-          placeholder="[Enter partial article title in active language]"
+        <input type="text" id="query-string" name="query-string" list="titles" autocomplete="off"
+          placeholder="[Enter partial article title in {$languages($xslt.lg)} or change language]"
           value="{/descendant::m:query-string ! string()}"/>
-        <datalist id="titles">
-        </datalist>
+        <datalist id="titles"> </datalist>
         <input type="submit" id="submit" name="submit"/>
       </div>
       <div id="checkboxes-and-mss">
