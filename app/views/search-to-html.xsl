@@ -101,15 +101,15 @@
       </label>
       <xsl:choose>
         <xsl:when test="country[node()]">
-          <a href="search">
+          <a href="search?country={country}">
             <xsl:value-of select="country"/>
           </a>
           <xsl:text>, </xsl:text>
-          <a href="search">
+          <a href="search?settlement={settlement}">
             <xsl:value-of select="settlement"/>
           </a>
           <xsl:text>, </xsl:text>
-          <a href="search">
+          <a href="search?repository={repository}">
             <xsl:value-of select="repository"/>
           </a>
           <xsl:text>, </xsl:text>

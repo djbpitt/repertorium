@@ -17,7 +17,7 @@ declare variable $titles as element(title)+ := doc(concat($path-to-data, '/aux/t
 declare variable $country as xs:string? := request:get-parameter('country', ());
 declare variable $settlement as xs:string* := request:get-parameter('settlement', ());
 declare variable $repository as xs:string? := request:get-parameter('repository', ());
-declare variable $query-string as xs:string? := request:get-parameter('query-string', ());
+declare variable $query-string as xs:string := request:get-parameter('query-string', '');
 declare variable $lg-cookie as xs:string? := request:get-cookie-value('lg');
 (: Find titles to search in correct language, based on $lg-cookie:)
 declare variable $all-titles as document-node() := doc($path-to-data || '/aux/titles_cyrillic.xml');
@@ -32,10 +32,6 @@ switch ($lg-cookie)
     default return
         $all-titles/descendant::bg;
 
-(: The following variables appear not to be used; delete after verification :)
-(:declare variable $texts := distinct-values($mss/descendant::tei:msItemStruct/tei:title[lang('bg')]);
-declare variable $authors := distinct-values($mss/descendant::tei:msItemStruct/tei:author[. ne 'anonymous']);:)
-
 declare variable $query-options as map(*) :=
 map {
     "facets": map {
@@ -45,26 +41,33 @@ map {
     }
 };
 
-declare variable $bg-query-value as element(query)? :=
-if ($query-string ne '') then
+declare variable $bg-query-value as element(query)? := (: null and empty string should be () :)
+if (string-length($query-string) ne 0) then
     <query>
         <term>{$titles-to-check[. eq replace($query-string, ' \(\d+\)', '')]/../bg ! string()}</term>
     </query>
 else
     ();
-declare variable $bg-title-hits as element(tei:title)* := $mss/descendant::tei:title[ft:query(., $bg-query-value, $query-options)];
-declare variable $bg-title-mss as element(tei:TEI)* := $bg-title-hits/ancestor::tei:TEI;
+declare variable $bg-title-hits as element(tei:title)* :=
+$mss/descendant::tei:title[ft:query(., $bg-query-value)];
+(: If no hits, return facets for all mss :)
+declare variable $bg-title-mss as element(tei:TEI)* :=
+$bg-title-hits/ancestor::tei:TEI[ft:query(., (), $query-options)];
 
-declare variable $country-facets as map(*) := ft:facets($bg-title-hits, "country");
-declare variable $settlement-facets as map(*) := ft:facets($bg-title-hits, "settlement");
-declare variable $repository-facets as map(*) := ft:facets($bg-title-hits, "repository");
+declare variable $country-facets as map(*) := ft:facets($bg-title-mss, "country");
+declare variable $settlement-facets as map(*) := ft:facets($bg-title-mss, "settlement");
+declare variable $repository-facets as map(*) := ft:facets($bg-title-mss, "repository");
 
 <m:results>
     <m:lg-cookie>{$lg-cookie}</m:lg-cookie>
     <m:query-string>{$query-string}</m:query-string>
     <m:bg-query-value>{$bg-query-value}</m:bg-query-value>
     <m:bg-title-hits>{$bg-title-hits => count()}</m:bg-title-hits>
-    <m:bg-mss>{$bg-title-mss => count()}</m:bg-mss>
+    <m:bg-title-mss>{$bg-title-mss => count()}</m:bg-title-mss>
+    <m:country>{$country}</m:country>
+    <m:settlement>{$settlement}</m:settlement>
+    <m:repository>{$repository}</m:repository>
+    <m:query-options>{serialize($query-options, map {"method": "json"})}</m:query-options>
     <m:countries>{re:serialize-facets($country-facets, $country)}</m:countries>
     <m:settlements>{re:serialize-facets($settlement-facets, $settlement)}</m:settlements>
     <m:repositories>{re:serialize-facets($repository-facets, $repository)}</m:repositories>
