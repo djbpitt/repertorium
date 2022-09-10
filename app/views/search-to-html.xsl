@@ -49,6 +49,7 @@
           value="{/descendant::m:query-string ! string()}"/>
         <datalist id="titles"> </datalist>
         <input type="submit" id="submit" name="submit"/>
+        <button type="reset" id="reset">Clear</button>
       </div>
       <div id="checkboxes-and-mss">
         <aside id="fieldsets">

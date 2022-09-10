@@ -4,12 +4,13 @@ window.addEventListener('DOMContentLoaded', (e) => {
         checkbox.addEventListener('click', runSearch, false);
     })
     document.getElementById("query-string").addEventListener("keyup", debounceForData, false);
+    document.getElementById("reset").addEventListener("click", reset, false);
 },
 false);
 
 function runSearch() {
     document.getElementById('submit').click();
-};
+}
 
 // Debounce code from https://dev.to/sbrshkappa/what-is-debouncing-a-javascript-implementation-3aoh
 // AJAX code from https://blog.openreplay.com/ajax-battle-xmlhttprequest-vs-the-fetch-api
@@ -42,6 +43,7 @@ const getSuggestions = (e) => {
         xhr.send();
     }
 }
+
 const debounce = function (fn, d) {
     let timer;
     return function () {
@@ -53,4 +55,9 @@ const debounce = function (fn, d) {
         d)
     }
 }
+
 const debounceForData = debounce(getSuggestions, 250);
+
+function reset() {
+    window.location.href = 'search';
+}
