@@ -44,7 +44,7 @@ map {
 declare variable $bg-query-value as element(query)? := (: null and empty string should be () :)
 if (string-length($query-string) ne 0) then
     <query>
-        <term>{$titles-to-check[. eq replace($query-string, ' \(\d+\)', '')]/../bg ! string()}</term>
+        <term>{$titles-to-check[. eq replace($query-string, ' \(\d+\)$', '')]/../bg ! string()}</term>
     </query>
 else
     ();
