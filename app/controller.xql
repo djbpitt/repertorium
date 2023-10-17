@@ -62,15 +62,7 @@ if (local:get-extension($exist:resource) eq "") then
             "modules/", 
             $exist:resource, 
             ".xql"
-        )}">
-            <add-parameter name="exist:root" value="{$exist:root}"/>
-            <add-parameter name="exist:prefix" value="{$exist:prefix}"/>
-            <add-parameter name="exist:controller" value="{$exist:controller}"/>
-            <add-parameter name="exist:path" value="{$exist:path}"/>
-            <add-parameter name="exist:resource" value="{$exist:resource}"/>
-            <add-parameter name="uri" value="{$uri}"/>
-            <add-parameter name="context" value="{$context}"/>
-        </forward>
+        )}"/>            
     </dispatch>
 (: Anything else, pass through: :)
     else

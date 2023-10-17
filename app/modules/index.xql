@@ -9,13 +9,13 @@ declare option output:omit-xml-declaration "no";
 declare option output:indent "no";
 declare option output:doctype-system "about:legacy-compat";
 declare variable $title as xs:string := "Repertorium of Old Bulgarian Literature and Letters";
-declare variable $exist:root as xs:string := request:get-parameter("exist:root", ());
-declare variable $exist:prefix as xs:string := request:get-parameter("exist:prefix", ());
-declare variable $exist:controller as xs:string := request:get-parameter("exist:controller", ());
+declare variable $exist:root as xs:string := request:get-attribute("$exist:root");
+declare variable $exist:prefix as xs:string := request:get-attribute("$exist:prefix");
+declare variable $exist:controller as xs:string := request:get-attribute("$exist:controller");
+declare variable $context as xs:string := request:get-context-path();
 (:declare variable $exist:path as xs:string := request:get-parameter("exist:path", ());:)
 (:declare variable $exist:resource as xs:string := request:get-parameter("exist:resource", ());:)
 (:declare variable $uri as xs:string := request:get-parameter("uri", ());:)
-declare variable $context as xs:string := request:get-parameter("context", ());
 declare variable $fqcontroller as xs:string := concat($context, $exist:prefix, $exist:controller, '/');
 
 <html
@@ -56,7 +56,7 @@ declare variable $fqcontroller as xs:string := concat($context, $exist:prefix, $
                 </a>
             </span>
             <span>
-                <strong>Last modified:</strong>
+                <strong>Last modified: </strong>
                 {current-dateTime()}</span>
         </p>
         <hr/>
@@ -290,54 +290,28 @@ declare variable $fqcontroller as xs:string := concat($context, $exist:prefix, $
         </ul>
         <h2>The Repertorium toolkit</h2>
         <p>The Repetorium Initiative uses the following tools and resources:</p>
-        <ul
-            class="two-column">
-            <li><a
-                    href="http://eXist-db.org">eXist-db</a> XML database</li>
-            <li><a
-                    href="http://www.oxygen.com">&lt;oXygen/&gt;</a> XML editor and IDE</li>
-            <li><a
-                    href="https://sourceforge.net/projects/saxon/files/Saxon-HE/">Saxon</a> XSLT and
-                XQuery processor</li>
-            <li><a
-                    href="http://www.xmlsh.org/">xmlsh</a> command-line shell for XML</li>
-            <li><a
-                    href="http://xmlstar.sourceforge.net/">XMLStarlet</a> command-line XML
-                utilities</li>
-            <li><a
-                    href="https://www.jetbrains.com/phpstorm/">PhpStorm</a> web technologies editor
-                and IDE</li>
-            <li><a
-                    href="https://www.continuum.io/downloads">Anaconda</a> Python 3 platform</li>
-            <li><a
-                    href="https://www.jetbrains.com/pycharm/">PyCharm</a> Python editor and IDE</li>
-            <li><a
-                    href="https://www.r-project.org/">R</a> project for statistical computing</li>
-            <li><a
-                    href="https://www.rstudio.com/">RStudio</a> R IDE</li>
-            <li><a
-                    href="http://kodeks.uni-bamberg.de/aksl/schrift/BukyVede.htm">Bukyvede</a> Slavic
-                Cyrillic font from <a
-                    href="http://www.maccampus.de/">MacCampus</a>
-                (production)</li>
-            <li><a
-                    href="http://www.quivira-font.com/index.php">Quivera</a> broad-spectrum Unicode
+        <ul class="two-column">
+            <li><a href="http://eXist-db.org">eXist-db</a> XML document database and application server</li>
+            <li><a href="https://github.com/eXist-db/xst">XST</a> command-line interface for eXist-db</li>
+            <li><a href="http://www.oxygen.com">&lt;oXygen/&gt;</a> XML editor and IDE</li>
+            <li><a href="https://code.visualstudio.com/">Visual Studio Code</a> programming editor and IDE</li>
+            <li><a href="https://marketplace.visualstudio.com/items?itemName=eXist-db.existdb-vscode">existdb-vscode</a>
+                Visual Studio Code extension for eXist-db</li>
+            <li><a href="https://basex.org/">BaseX</a> XQuery database and devlopment environment</li>
+            <li><a href="https://saxonica.com">Saxon</a> XSLT and XQuery processor</li>
+            <li>Saxon <a href="https://www.saxonica.com/documentation12/index.html#!gizmo">Gizmo</a> utility
+            for command-line interaction with XML documents</li>
+            <li><a href="http://kodeks.uni-bamberg.de/aksl/schrift/BukyVede.htm">Bukyvede</a> Slavic
+                Cyrillic font from <a href="http://www.maccampus.de/">MacCampus</a> (production)</li>
+            <li><a href="http://www.quivira-font.com/index.php">Quivera</a> broad-spectrum Unicode
                 font (development)</li>
-            <li><a
-                    href="https://fontforge.github.io/en-US/">FontForge</a> font editor</li>
-            <li><a
-                    href="https://github.com/briangonzalez/fontprep">FontPrep</a> web-font
-                generator</li>
-            <li><a
-                    href="http://earthlingsoft.net/UnicodeChecker/index.html">UnicodeChecker</a> to
-                explore and convert Unicode</li>
-            <li><a
-                    href="http://r12a.github.io/apps/conversion/">Unicode code converter</a> online
+            <li><a href="https://github.com/matthewgonzalez/fontplop">FontPlop</a> webfont converter</li>
+            <li><a href="http://earthlingsoft.net/UnicodeChecker/index.html">UnicodeChecker</a> to
+                explore Unicode</li>
+            <li><a href="https://r12a.github.io/app-conversion/">Unicode code converter</a> online
                 utility</li>
-            <li><a
-                    href="http://r12a.github.io/uniview/">UniView</a> online utility</li>
-            <li><a
-                    href=" https://cloudconvert.com">Cloudconvert</a> online <q>convert anything</q>
+            <li><a href="http://r12a.github.io/uniview/">UniView</a> online utility</li>
+            <li><a href=" https://cloudconvert.com">Cloudconvert</a> online <q>convert anything</q>
                 utility</li>
         </ul>
     </body>
