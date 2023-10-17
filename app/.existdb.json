@@ -1,0 +1,24 @@
+{
+  "servers": {
+    "localhost": {
+      "server": "http://localhost:8080/exist",
+      "user": "admin",
+      "password": "",
+      "root": "/db/apps/repertorium"
+    }
+  },
+  "sync": {
+    "server": "localhost",
+    "active": true,
+    "ignore": [
+      ".existdb.json",
+      ".git/**",
+      ".github/**",
+      "build/**",
+      ".vscode/**",
+      "README.md",
+      "*.code-workspace",
+      ".DS_Store"
+    ]
+  }
+}
