@@ -28,9 +28,30 @@
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
+  <xsl:template match="svg">
+    <!-- ================================================================ -->
+    <!-- Links to SVG documents move up and over into images directory    -->
+    <!-- XML declaration is ignored automatically (not part of sequence)  -->
+    <!-- ================================================================ -->
+    <xsl:sequence select="doc(concat('../', string(@src)))/*"/>
+  </xsl:template>
+  <xsl:template match="a">
+    <a href="{@url}">
+      <xsl:apply-templates/>
+    </a>
+  </xsl:template>
+  <xsl:template match="ul">
+    <xsl:element name="{local-name()}">
+      <xsl:copy-of select="@class"/>
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
   <xsl:template match="*">
     <xsl:element name="{local-name()}">
       <xsl:apply-templates/>
     </xsl:element>
+  </xsl:template>
+  <xsl:template match="@*">
+    <xsl:copy-of select="."/>
   </xsl:template>
 </xsl:stylesheet>
