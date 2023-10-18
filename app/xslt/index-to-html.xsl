@@ -21,10 +21,11 @@
   <xsl:template match="title">
     <!-- ================================================================ -->
     <!-- Section title                                                    -->
-    <!-- Assumes no more than four levels of sections                     -->
-    <!--   (hero is h1, page is h2)                                       -->
+    <!-- Assumes no more than five levels of sections                     -->
+    <!--   (hero is h1, index doesn’t have a page title, so               -->
+    <!--   the subsections are next)                                      -->
     <!-- ================================================================ -->
-    <xsl:element name="{concat('h', count(ancestor::section) + 2)}">
+    <xsl:element name="{concat('h', count(ancestor::section) + 1)}">
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
