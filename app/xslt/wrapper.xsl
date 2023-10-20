@@ -13,7 +13,15 @@
         <html>
             <head>
                 <title>
-                    <xsl:value-of select="descendant::h2"/>
+                    <xsl:choose>
+                        <!-- ============================================ -->
+                        <!-- Main page headers are all <h2>               -->
+                        <!-- ============================================ -->
+                        <xsl:when test="main/h2[1] eq 'Repertorium'">Repertorium</xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="descendant::h2"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </title>
                 <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
                 <link rel="stylesheet" type="text/css" href="resources/css/repertorium.css"/>
@@ -25,6 +33,18 @@
                         Bulgarian Literature and Letters</h1>
                 </header>
                 <xsl:apply-templates select="main"/>
+                <xsl:if test="main/h2 ne 'Repertorium'">
+                    <!-- ================================================ -->
+                    <!-- Omit controls from main page (only)              -->
+                    <!-- ================================================ -->
+                    <!-- <div id="controls">
+                        <p>Menu</p>
+                        <ul>
+                            <
+                        </ul>
+                    </div>
+                    -->
+                </xsl:if>
                 <footer>
                     <hr/>
                     <p>Maintained by David J. Birnbaum. Results generated
