@@ -1,58 +1,54 @@
 xquery version "3.1";
-declare default function namespace "http://www.w3.org/2005/xpath-functions";
-declare default element namespace "http://www.w3.org/1999/xhtml";
-declare namespace xi = "http://www.w3.org/2001/XInclude";
+
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
+declare namespace m="http://repertorium.obdurodon.org/model";
+
 import module namespace re = 'http://www.ilit.bas.bg/repertorium/ns/3.0' at "re-lib.xqm";
 declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 declare option output:method "xml";
-declare option output:media-type "application/xhtml+xml";
-declare option output:omit-xml-declaration "no";
-declare option output:doctype-system "about:legacy-compat";
 declare option output:indent "no";
-declare variable $title as xs:string := "Browse the collection";
-declare variable $exist:root as xs:string := request:get-parameter("exist:root", ());
-declare variable $exist:prefix as xs:string := request:get-parameter("exist:prefix", ());
-declare variable $exist:controller as xs:string := request:get-parameter("exist:controller", ());
-declare variable $exist:path as xs:string := request:get-parameter("exist:path", ());
-declare variable $exist:resource as xs:string := request:get-parameter("exist:resource", ());
-declare variable $uri as xs:string := request:get-parameter("uri", ());
-declare variable $context as xs:string := request:get-parameter("context", ());
-declare variable $fqcontroller as xs:string := concat($context, $exist:prefix, $exist:controller, '/');
+declare variable $exist:root as xs:string := 
+    request:get-parameter("exist:root", "xmldb:exist:///db/apps");
+declare variable $exist:controller as xs:string := 
+    request:get-parameter("exist:controller", "/repertorium");
 
-declare variable $mss := collection(concat($exist:root, $exist:controller, '/mss'))[ends-with(base-uri(.), 'xml')];
-declare variable $genres := doc(concat($exist:root, $exist:controller, '/aux/genres.xml'))//Q{}genre;
-declare variable $lg := request:get-parameter('lg', 'bg');
-
-let $query :=
+declare variable $mss as document-node()+ := 
+    collection(concat($exist:root, $exist:controller, '/mss'))[ends-with(base-uri(.), 'xml')];
+declare variable $genres as element(genre)+ := 
+    doc(concat($exist:root, $exist:controller, '/aux/genres.xml'))/descendant::genre;
+declare variable $lg as xs:string := request:get-parameter('lg', 'bg');
+<m:main>
+<m:h2>Browse the collection</m:h2>
+<m:ul>{
 for $ms in $mss
-let $bgTitle := (
-$ms//tei:msIdentifier/tei:msName[@xml:lang eq 'bg' and @type eq 'individual'],
-$genres[Q{}en = $ms//tei:msIdentifier/tei:msName[@type eq 'specific']]/Q{}bg,
-$genres[Q{}en = $ms//tei:msIdentifier/tei:msName[@type eq 'general']]/Q{}bg)[1]
-let $enTitle := (
-$ms//tei:msIdentifier/tei:msName[@xml:lang eq 'en' and @type eq 'individual'],
-for $i in $ms//tei:msIdentifier/tei:msName[@xml:lang eq 'en' and @type eq 'specific'][1]
-return
-    $i,
-$ms//tei:msIdentifier/tei:msName[@xml:lang eq 'en' and @type eq 'general'])[1]
-let $ruTitle := (
-$ms//tei:msIdentifier/tei:msName[@xml:lang eq 'ru' and @type eq 'individual'],
-$genres[en = $ms//tei:msIdentifier/tei:msName[@tpe eq 'specific']]/ru,
-$genres[en = $ms//tei:msIdentifier/tei:msName[@type eq 'general']]/ru)[1]
-let $country := $ms//tei:msIdentifier/tei:country
-let $settlement := $ms//tei:msIdentifier/tei:settlement
-let $repository := $ms//tei:msIdentifier/tei:repository
-let $idno := $ms//tei:msIdentifier/tei:idno[@type = "shelfmark"][not(@rend = 'old')]
-let $origDate := $ms//tei:origDate
-let $uri := tokenize(base-uri($ms), '/')[last()]
-let $availability := $ms//tei:adminInfo/tei:availability
+(: bg and ru titles can be bg, ru, or tei:msName :)
+let $bgTitle as element() := (
+    $ms/descendant::tei:msIdentifier/tei:msName[lang('bg') and @type eq 'individual'],  
+    $genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']]/bg,
+    $genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']]/bg)[1]
+let $enTitle as element(tei:msName) := (
+    $ms/descendant::tei:msIdentifier/tei:msName[lang('en') and @type eq 'individual'],
+    $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific'],
+    $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general'])[1]
+let $ruTitle as element() := (
+    $ms/descendant::tei:msIdentifier/tei:msName[lang('ru') and @type eq 'individual'],
+    $genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@tpe eq 'specific']]/ru,
+    $genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']]/ru)[1]
+(: Fragmented mss don’t have a principal country:)
+let $country as element(tei:country)? := $ms/descendant::tei:msIdentifier/tei:country
+let $settlement as element(tei:settlement)* := $ms/descendant::tei:msIdentifier/tei:settlement
+let $repository as element(tei:repository)* := $ms/descendant::tei:msIdentifier/tei:repository
+let $idno as element(tei:idno)? := $ms/descendant::tei:msIdentifier/tei:idno[@type = "shelfmark"][not(@rend = 'old')]
+let $origDate as element(tei:origDate)* := $ms/descendant::tei:origDate
+let $uri as xs:string := tokenize(base-uri($ms), '/')[last()] ! substring-before(., ".xml")
+let $availability as element(tei:availability)? := $ms/descendant::tei:adminInfo/tei:availability
     order by $country[1],
         $settlement[1],
         $repository[1],
         $idno[1]
 return
-    <li>
+(:
+    <m:li>
         <input
             type="checkbox"
             name="mss[]"
@@ -146,7 +142,7 @@ return
                 href="{concat($exist:root, $exist:controller, '/resources/images/texts.svg')}"/></a>
         <a><xi:include
                 href="{concat($exist:root, $exist:controller, '/resources/images/xml.svg')}"/></a>
-    </li>
+    </m:li>
 return
     <html>
         <xi:include
@@ -187,3 +183,19 @@ return
             />
             <ul>{$query}</ul></body>
     </html>
+    :)
+<m:li>
+    <m:country>{$country ! normalize-space()}</m:country>
+    {$settlement ! <m:settlement>{normalize-space(.)}</m:settlement>}
+    <m:repository>{$repository ! normalize-space()}</m:repository>
+    <m:idno>{$idno ! normalize-space()}</m:idno>
+    <m:origDate>{$origDate ! normalize-space(.)}</m:origDate>
+    <m:bg>{$bgTitle ! normalize-space() ! re:titleCase(.)}</m:bg>
+    <m:en>{$enTitle ! normalize-space() ! re:titleCase(.)}</m:en>
+    <m:ru>{$ruTitle ! normalize-space() ! re:titleCase(.)}</m:ru>
+    <m:uri>{$uri}</m:uri>
+    {$availability ! <m:availability>{normalize-space(.)}</m:availability>}
+</m:li>
+}</m:ul>
+<m:lg>{$lg}</m:lg>
+</m:main>
