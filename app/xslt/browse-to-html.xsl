@@ -5,7 +5,7 @@
   xpath-default-namespace="http://repertorium.obdurodon.org/model"
   xmlns="http://www.w3.org/1999/xhtml" exclude-result-prefixes="#all" version="3.0">
   <xsl:variable name="lg" select="/main/lg"/>
-  <xsl:template match="/">
+  <xsl:template match="main">
     <main id="index">
       <xsl:apply-templates select="* except lg"/>
     </main>
@@ -31,10 +31,8 @@
     </xsl:choose>
   </xsl:template>
   <xsl:template match="settlement | repository">
-    <xsl:if test="exists(./node())">
-        <a href="search?{local-name()}={encode-for-uri(.)}"><xsl:apply-templates/></a>
-        <xsl:text>, </xsl:text>
-    </xsl:if>
+      <a href="search?{local-name()}={encode-for-uri(.)}"><xsl:apply-templates/></a>
+      <xsl:text>, </xsl:text>
   </xsl:template>
   <xsl:template match="idno">
     <xsl:text> </xsl:text>

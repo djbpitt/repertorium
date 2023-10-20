@@ -185,9 +185,10 @@ return
     </html>
     :)
 <m:li>
+    { (: Allow empty country to support special handling of fragmented mss :) }
     <m:country>{$country ! normalize-space()}</m:country>
     {$settlement ! <m:settlement>{normalize-space(.)}</m:settlement>}
-    <m:repository>{$repository ! normalize-space()}</m:repository>
+    {$repository ! <m:repository>{normalize-space(.)}</m:repository>}
     <m:idno>{$idno ! normalize-space()}</m:idno>
     <m:origDate>{$origDate ! normalize-space(.)}</m:origDate>
     <m:bg>{$bgTitle ! normalize-space() ! re:titleCase(.)}</m:bg>
