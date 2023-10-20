@@ -6,7 +6,7 @@ declare namespace output="http://www.w3.org/2010/xslt-xquery-serialization";
 declare option output:method "xml";
 declare option output:indent "no";
 
-<m:index>
+<m:main>
     <m:header>
         <m:title>Repertorium</m:title>
         <m:image url="resources/images/zog.jpg"/>
@@ -186,7 +186,6 @@ declare option output:indent "no";
   <m:li><m:a url=" https://cloudconvert.com">Cloudconvert</m:a> online <m:q>convert anything</m:q>
     utility</m:li>
         </m:ul>
-
         </m:section>
     </m:body>
-</m:index>
+</m:main>

@@ -2,10 +2,12 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:math="http://www.w3.org/2005/xpath-functions/math"
+  xmlns:svg="http://www.w3.org/2000/svg"
   xpath-default-namespace="http://repertorium.obdurodon.org/model"
-  xmlns="http://www.w3.org/1999/xhtml" exclude-result-prefixes="#all" version="3.0">
-  <xsl:template match="index">
-    <main>
+  xmlns="http://www.w3.org/1999/xhtml" 
+  exclude-result-prefixes="#all" version="3.0">
+  <xsl:template match="main">
+    <main id="index">
       <h2>
         <xsl:value-of select="header/title"/>
         <img class="folio" title="Codex Zographensis" alt="[Codex Zographensis]"
@@ -14,9 +16,13 @@
       <xsl:apply-templates select="body/node()"/>
     </main>
   </xsl:template>
-  <xsl:template match="section[preceding-sibling::section]">
-    <hr/>
-    <xsl:apply-templates/>
+  <xsl:template match="section">
+    <section>
+      <xsl:if test="preceding-sibling::section">
+        <hr/>
+      </xsl:if>
+      <xsl:apply-templates/>
+    </section>
   </xsl:template>
   <xsl:template match="title">
     <!-- ================================================================ -->
@@ -54,5 +60,8 @@
   </xsl:template>
   <xsl:template match="@*">
     <xsl:copy-of select="."/>
+  </xsl:template>
+  <xsl:template match="svg">
+    <xsl:copy-of select="doc('../' || @src)"/>
   </xsl:template>
 </xsl:stylesheet>

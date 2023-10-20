@@ -2,12 +2,13 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math"
-    xpath-default-namespace="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xpath-default-namespace="http://www.w3.org/1999/xhtml" 
+    xmlns="http://www.w3.org/1999/xhtml"
     exclude-result-prefixes="#all" version="3.0">
     <xsl:output method="xhtml" html-version="5" omit-xml-declaration="no" include-content-type="no"
         indent="no" byte-order-mark="no"/>
     <xsl:param name="xslt.fqcontroller" required="yes"/>
-    <xsl:mode on-no-match="shallow-copy"/>
     <xsl:template match="/">
         <html>
             <head>
@@ -23,9 +24,7 @@
                     <h1><a class="logo" href="index"><span>&lt;rep&gt;</span></a> Repertorium of Old
                         Bulgarian Literature and Letters</h1>
                 </header>
-                <main>
-                    <xsl:apply-templates select="descendant::main/node()"/>
-                </main>
+                <xsl:apply-templates select="main"/>
                 <footer>
                     <hr/>
                     <p>Maintained by David J. Birnbaum. Results generated
@@ -41,11 +40,34 @@
             </body>
         </html>
     </xsl:template>
+    <xsl:template match="h2">
+        <h2>
+            <xsl:apply-templates/>
+        </h2>
+    </xsl:template>
     <xsl:template match="h2[. eq 'Repertorium']">
         <!-- ============================================================ -->
         <!-- Suppress textual value of <h2> for main page (only)          -->
         <!-- (<h2> is needed because it's also used for <title>)          -->
         <!-- ============================================================ -->
         <xsl:apply-templates select="img"/>
+    </xsl:template>
+    <xsl:template match="main">
+        <main>
+            <xsl:copy-of select="@id"/>
+            <xsl:apply-templates/>
+        </main>
+    </xsl:template>
+    <xsl:template match="svg:svg">
+        <!-- ============================================================ -->
+        <!-- Retain namespace only for SVG (others are in m:)             -->
+        <!-- ============================================================ -->
+        <xsl:copy-of select="."/>
+    </xsl:template>
+    <xsl:template match="*">
+        <xsl:element name="{local-name()}">
+            <xsl:copy-of select="@*"/>
+            <xsl:apply-templates/>
+        </xsl:element>
     </xsl:template>
 </xsl:stylesheet>
