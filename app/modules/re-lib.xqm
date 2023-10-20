@@ -37,12 +37,8 @@ declare function re:formatBib($bib as xs:string, $bibliog as node()) {
 };
 
 
-declare function re:titleCase($text as xs:string*) as xs:string* {
-    string-join(for $item in $text
-    let $first := upper-case(substring($item, 1, 1))
-    let $rest := substring($item, 2)
-    return
-        concat($first, $rest), '; ')
+declare function re:titleCase($text as xs:string) as xs:string {
+    upper-case(substring($text, 1, 1)) || substring($text, 2)
 };
 
 declare function re:unit($unit as xs:string) as xs:string {
