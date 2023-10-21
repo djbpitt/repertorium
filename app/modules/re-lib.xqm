@@ -22,21 +22,21 @@ declare function re:bgMsName($ms as document-node()) as xs:string {
     ($ms/descendant::tei:msIdentifier/tei:msName[lang('bg') and @type eq 'individual'],  
     $re:genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']]/bg,
     $re:genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']]/bg)[1]
-    => string()
+    ! normalize-space(.) ! re:titleCase(.)
 };
 
 declare function re:enMsName($ms as document-node()) as xs:string {
     ($ms/descendant::tei:msIdentifier/tei:msName[lang('en') and @type eq 'individual'],
     $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific'],
     $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general'])[1]
-    => string()
+    ! normalize-space(.) ! re:titleCase(.)
 };
 
 declare function re:ruMsName($ms as document-node()) as xs:string {
     ($ms/descendant::tei:msIdentifier/tei:msName[lang('ru') and @type eq 'individual'],
-    $re:genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@tpe eq 'specific']]/ru,
+    $re:genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']]/ru,
     $re:genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']]/ru)[1]
-    => string()
+    ! normalize-space(.) ! re:titleCase(.)
 };
 
 declare function re:addPeriod($text as xs:string) as xs:string {
