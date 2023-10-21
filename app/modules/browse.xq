@@ -16,7 +16,7 @@ declare variable $mss as document-node()+ :=
     collection(concat($exist:root, $exist:controller, '/mss'))[ends-with(base-uri(.), 'xml')];
 declare variable $genres as element(genre)+ := 
     doc(concat($exist:root, $exist:controller, '/aux/genres.xml'))/descendant::genre;
-declare variable $lg as xs:string := request:get-parameter('lg', 'bg');
+declare variable $lg as xs:string := request:get-cookie-value('lg', 'hi');
 <m:main>
 <m:h2>Browse the collection</m:h2>
 <m:ul>{
