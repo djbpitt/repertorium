@@ -10,6 +10,9 @@
         <!-- En title is main, Bg invokes Ru as sibling                   -->
         <!-- ============================================================ -->
         <xsl:apply-templates select="enMsName, bgMsName"/>
+        <table id="msDescTable">
+            <tr><td>Placeholder</td><td>Other placeholder</td></tr>
+        </table>
     </main>
   </xsl:template>
   <xsl:template match="enMsName">
