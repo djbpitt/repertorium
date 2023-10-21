@@ -1,7 +1,7 @@
 /*
 Filename: lgToggle.js
 Author: David J. Birnbaum
-Date: 2013-08-09
+Date: 2013-08-09, revised 2023-10-21
 Copyright: Creative Commons BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 Project home page: http://repertorium.obdurodon.org
 Project director: David J. Birnbaum (djbpitt@gmail.com)
@@ -12,7 +12,7 @@ Synopsis: Toggles language of Repertorium project pages
 function createCookie(name, value, days) {
     if (days) {
         var date = new Date();
-        date.setTime(date.getTime() +(days * 24 * 60 * 60 * 1000));
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         var expires = "; expires=" + date.toGMTString();
     } else var expires = "";
     document.cookie = name + "=" + value + expires + "; path=/";
@@ -42,21 +42,21 @@ function lg_init() {
     for (i = 0, length = flags.length; i < length; i++) {
         flags[i].addEventListener('click', changeLang, false);
     }
-    
+
     var lang = readCookie('lg');
-    if ([ 'bg', 'en', 'ru'].indexOf(lang) == -1) {
+    if (['bg', 'en', 'ru'].indexOf(lang) == -1) {
         // default to bg if no value has been selected
         lang = 'bg;'
     }
     createCookie('lg', lang, 30);
     changeLang();
-    
+
     var links = document.getElementsByTagName('a')
     for (i = 0, length = links.length; i < length; i++) {
         links[i].addEventListener('click', languageCookie, false);
     }
 }
-function languageCookie () {
+function languageCookie() {
     var current_href = this.getAttribute('href');
     if (current_href.indexOf("?") > -1) {
         // there's already a query string, so add to it
@@ -101,64 +101,64 @@ function changeLang() {
     }
     switch (id) {
         case 'bg':
-        for (var i = 0; i < bgsLength; i++) {
-            // bgs[i].style.display = 'inline';
-            bgs[i].classList.add('lg');
-            bgs[i].classList.remove('hide');
-            bgs[i].removeAttribute('style');
-        }
-        for (var i = 0; i < ensLength; i++) {
-            // ens[i].style.display = 'none';
-            ens[i].classList.remove('lg');
-            ens[i].classList.add('hide');
-            ens[i].removeAttribute('style');
-        }
-        for (var i = 0; i < rusLength; i++) {
-            // rus[i].style.display = 'none';
-            rus[i].classList.remove('lg');
-            rus[i].classList.add('hide');
-            rus[i].removeAttribute('style');
-        }
-        break;
+            for (var i = 0; i < bgsLength; i++) {
+                // bgs[i].style.display = 'inline';
+                bgs[i].classList.add('lg');
+                bgs[i].classList.remove('hide');
+                bgs[i].removeAttribute('style');
+            }
+            for (var i = 0; i < ensLength; i++) {
+                // ens[i].style.display = 'none';
+                ens[i].classList.remove('lg');
+                ens[i].classList.add('hide');
+                ens[i].removeAttribute('style');
+            }
+            for (var i = 0; i < rusLength; i++) {
+                // rus[i].style.display = 'none';
+                rus[i].classList.remove('lg');
+                rus[i].classList.add('hide');
+                rus[i].removeAttribute('style');
+            }
+            break;
         case 'en':
-        for (var i = 0; i < bgsLength; i++) {
-            // bgs[i].style.display = 'none';
-            bgs[i].classList.remove('lg');
-            bgs[i].classList.add('hide');
-            bgs[i].removeAttribute('style');
-        }
-        for (var i = 0; i < ensLength; i++) {
-            // ens[i].style.display = 'inline';
-            ens[i].classList.add('lg');
-            ens[i].classList.remove('hide');
-            ens[i].removeAttribute('style');
-        }
-        for (var i = 0; i < rusLength; i++) {
-            // rus[i].style.display = 'none';
-            rus[i].classList.remove('lg');
-            rus[i].classList.add('hide');
-            rus[i].removeAttribute('style');
-        }
-        break;
+            for (var i = 0; i < bgsLength; i++) {
+                // bgs[i].style.display = 'none';
+                bgs[i].classList.remove('lg');
+                bgs[i].classList.add('hide');
+                bgs[i].removeAttribute('style');
+            }
+            for (var i = 0; i < ensLength; i++) {
+                // ens[i].style.display = 'inline';
+                ens[i].classList.add('lg');
+                ens[i].classList.remove('hide');
+                ens[i].removeAttribute('style');
+            }
+            for (var i = 0; i < rusLength; i++) {
+                // rus[i].style.display = 'none';
+                rus[i].classList.remove('lg');
+                rus[i].classList.add('hide');
+                rus[i].removeAttribute('style');
+            }
+            break;
         case 'ru':
-        for (var i = 0; i < bgsLength; i++) {
-            // bgs[i].style.display = 'none';
-            bgs[i].classList.remove('lg');
-            bgs[i].classList.add('hide');
-            bgs[i].removeAttribute('style');
-        }
-        for (var i = 0; i < ensLength; i++) {
-            // ens[i].style.display = 'none';
-            ens[i].classList.remove('lg');
-            ens[i].classList.add('hide');
-            ens[i].removeAttribute('style');
-        }
-        for (var i = 0; i < rusLength; i++) {
-            // rus[i].style.display = 'inline';
-            rus[i].classList.add('lg');
-            rus[i].classList.remove('hide');
-            rus[i].removeAttribute('style');
-        }
+            for (var i = 0; i < bgsLength; i++) {
+                // bgs[i].style.display = 'none';
+                bgs[i].classList.remove('lg');
+                bgs[i].classList.add('hide');
+                bgs[i].removeAttribute('style');
+            }
+            for (var i = 0; i < ensLength; i++) {
+                // ens[i].style.display = 'none';
+                ens[i].classList.remove('lg');
+                ens[i].classList.add('hide');
+                ens[i].removeAttribute('style');
+            }
+            for (var i = 0; i < rusLength; i++) {
+                // rus[i].style.display = 'inline';
+                rus[i].classList.add('lg');
+                rus[i].classList.remove('hide');
+                rus[i].removeAttribute('style');
+            }
     }
 }
 /*
