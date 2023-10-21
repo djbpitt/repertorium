@@ -17,7 +17,7 @@
                         <!-- ============================================ -->
                         <!-- Main page headers are all <h2>               -->
                         <!-- ============================================ -->
-                        <xsl:when test="main/h2[1] eq 'Repertorium'">Repertorium</xsl:when>
+                        <xsl:when test="descendant::main/@id eq 'index'">Repertorium</xsl:when>
                         <xsl:otherwise>
                             <xsl:value-of select="descendant::h2"/>
                         </xsl:otherwise>
