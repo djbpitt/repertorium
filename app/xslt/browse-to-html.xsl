@@ -19,7 +19,7 @@
       <xsl:apply-templates select="bg, en, ru"/>
       <a href="msDesc?filename={uri}.xml"><xsl:sequence select="doc('../resources/images/codicology.svg')"/></a>
       <a href="readFile?filename={uri}.xml"><xsl:sequence select="doc('../resources/images/texts.svg')"/></a>
-      <a href="rawFile?filename={uri}.xml"><xsl:sequence select="doc('../resources/images/xml.svg')"/></a>
+      <a href="mss/{uri}.xml"><xsl:sequence select="doc('../resources/images/xml.svg')"/></a>
     </li>
   </xsl:template>
   <xsl:template match="country">
