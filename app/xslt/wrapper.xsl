@@ -26,6 +26,7 @@
                 <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
                 <link rel="stylesheet" type="text/css" href="resources/css/repertorium.css"/>
                 <link rel="icon" href="resources/images/favicon.ico" type="image/svg+xml"/>
+                <script src="resources/js/lgToggle.js"></script>
             </head>
             <body>
                 <header>
@@ -33,18 +34,12 @@
                         Bulgarian Literature and Letters</h1>
                 </header>
                 <xsl:apply-templates select="main"/>
-                <xsl:if test="main/h2 ne 'Repertorium'">
-                    <!-- ================================================ -->
-                    <!-- Omit controls from main page (only)              -->
-                    <!-- ================================================ -->
-                    <!-- <div id="controls">
-                        <p>Menu</p>
-                        <ul>
-                            <
-                        </ul>
-                    </div>
-                    -->
-                </xsl:if>
+                <!--
+                <span id="plectogram"><input type="image" src="../resources/images/ico_compare.png" id="plectogram_image" height="16" width="16" title="Generate plectogram" alt="[Generate plectogram]"/></span>
+                <span id="browse"><a title="Browse the collection" href="browse"><img src="../resources/images/browse.png" alt="[Browse]"/></a></span>
+                <span id="search"><a title="Search the collection" href="search"><img src="../resources/images/search.png" alt="[Search]"/></a></span>
+                -->
+
                 <footer>
                     <hr/>
                     <p>Maintained by David J. Birnbaum. Results generated
@@ -60,9 +55,38 @@
             </body>
         </html>
     </xsl:template>
+    <xsl:template match="h2[not(ancestor::main/@id eq 'index')]" priority="10">
+        <!-- Surround title with rule on all pages except main -->
+        <hr/>
+        <xsl:next-match/>
+        <hr/>
+    </xsl:template>
     <xsl:template match="h2">
         <h2>
             <xsl:apply-templates/>
+            <xsl:if test="../@id ne 'index'">
+                <span id="widgets">
+                    <span class="flags">
+                        <!--
+                            Slider: plectogram.php, plectogram-dev-checkbox.php
+                            Codicology: readFile.php
+                            Texts: msDesc.php
+                            XML: readFile.php, msDesc.php
+                            Plectogram (ico_compare.png): browse.php, 
+                                browse-checkbox.php, 
+                                runSearch.php, 
+                                runSearch-checkbox.php, 
+                                searchTitlesFree.php, 
+                                worksByAuthor.php
+                            Browse, search, lg flags: All
+                        -->
+                        <span>&#xa0;&#xa0;</span>
+                        <span class="flag" id="bg"><img title="Use Bulgarian titles" src="resources/images/bg.svg" alt="[Bulgarian]"/></span>
+                        <span class="flag" id="en"><img title="Use English titles" src="resources/images/us.svg" alt="[Englist]"/></span>
+                        <span class="flag" id="ru"><img title="Use Russian titles" src="resources/images/ru.svg" alt="[Russian]"/></span>
+                    </span>
+                </span>
+            </xsl:if>
         </h2>
     </xsl:template>
     <xsl:template match="h2[. eq 'Repertorium']">
