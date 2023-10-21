@@ -6,17 +6,20 @@
   xmlns="http://www.w3.org/1999/xhtml" exclude-result-prefixes="#all" version="3.0">
   <xsl:variable name="lg" select="/main/lg"/>
   <xsl:template match="main">
-    <main id="index">
+    <main id="browse">
       <xsl:apply-templates select="* except lg"/>
     </main>
   </xsl:template>
   <xsl:template match="li">
     <li>
-      <input type="checkbox" name="mss[]" value="{descendant::uri}"/>
+      <input type="checkbox" name="mss[]" value="{uri}"/>
       <xsl:text> </xsl:text>
       <xsl:apply-templates select="country, settlement, repository, idno, origDate, uri, availability"/>
       <br/>
       <xsl:apply-templates select="bg, en, ru"/>
+      <a href="msDesc?filename={uri}.xml"><xsl:sequence select="doc('../resources/images/codicology.svg')"/></a>
+      <a href="readFile?filename={uri}.xml"><xsl:sequence select="doc('../resources/images/texts.svg')"/></a>
+      <a href="rawFile?filename={uri}.xml"><xsl:sequence select="doc('../resources/images/xml.svg')"/></a>
     </li>
   </xsl:template>
   <xsl:template match="country">
@@ -58,6 +61,9 @@
     <xsl:variable name="id" as="xs:string" select="substring(name(), 1, 2)"/>
     <xsl:variable name="status" as="xs:string?" select="'hide'[$id ne $lg]"/>
     <span class="{string-join(($id, $status), ' ')}"><xsl:apply-templates/></span>
+  </xsl:template>
+    <xsl:template match="svg">
+    <xsl:copy-of select="doc('../' || @src)"/>
   </xsl:template>
   <xsl:template match="*">
     <xsl:element name="{local-name()}">
