@@ -22,18 +22,9 @@ declare variable $lg as xs:string := (request:get-cookie-value('lg'), 'bg')[1];
 <m:ul>{
 for $ms in $mss
 (: bg and ru titles can be bg, ru, or tei:msName :)
-let $bgTitle as element() := (
-    $ms/descendant::tei:msIdentifier/tei:msName[lang('bg') and @type eq 'individual'],  
-    $genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']]/bg,
-    $genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']]/bg)[1]
-let $enTitle as element(tei:msName) := (
-    $ms/descendant::tei:msIdentifier/tei:msName[lang('en') and @type eq 'individual'],
-    $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific'],
-    $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general'])[1]
-let $ruTitle as element() := (
-    $ms/descendant::tei:msIdentifier/tei:msName[lang('ru') and @type eq 'individual'],
-    $genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@tpe eq 'specific']]/ru,
-    $genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']]/ru)[1]
+let $bgTitle as xs:string := re:bgMsName($ms)
+let $enTitle as xs:string := re:enMsName($ms)
+let $ruTitle as xs:string := re:ruMsName($ms)
 (: Fragmented mss don’t have a principal country:)
 let $country as element(tei:country)? := $ms/descendant::tei:msIdentifier/tei:country
 let $settlement as element(tei:settlement)* := $ms/descendant::tei:msIdentifier/tei:settlement
