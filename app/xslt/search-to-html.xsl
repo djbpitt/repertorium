@@ -6,10 +6,45 @@
   xmlns="http://www.w3.org/1999/xhtml" exclude-result-prefixes="#all" version="3.0">
   <xsl:variable name="lg" select="/main/lg"/>
   <xsl:template match="main">
-    <main id="browse">
-      <xsl:apply-templates select="* except lg"/>
+    <main id="search">
+        <xsl:apply-templates select="h2"/>
+        <section id="contents">
+            <section id="searchControls">
+                <form action="search" method="get">
+                    <h3>Filter by …</h3>
+                    <label>
+                        <xsl:value-of select="'Country&#xa0;'"/>
+                        <select name="country" id="country">
+                            <option value="">Choose or leave blank for all</option>
+                            <xsl:apply-templates select="facets/countries/country"/>
+                        </select>
+                    </label>
+                    <p>Settlement</p>
+                    <p>Repository</p>
+                    <p>Contains work</p>
+                    <p>Contains author</p>
+                </form>
+            </section>
+            <section id="mss">
+                <h3>
+                    <xsl:text>Results (</xsl:text>
+                    <xsl:value-of select="count(/main/ul/li)"/>
+                    <xsl:text>)</xsl:text>
+                </h3>
+                <xsl:apply-templates select="ul"/>
+            </section>
+        </section>
     </main>
   </xsl:template>
+  <!-- ================================================================== -->
+  <!-- Widgets                                                            -->
+  <!-- ================================================================== -->
+  <xsl:template match="countries/country">
+    <option value="{label}"><xsl:value-of select="concat(label, ' (', count, ')')"/></option>
+  </xsl:template>
+  <!-- ================================================================== -->
+  <!-- Manuscripts list                                                   -->
+  <!-- ================================================================== -->
   <xsl:template match="li">
     <li>
       <input type="checkbox" name="mss[]" value="{uri}"/>
@@ -61,6 +96,9 @@
     <xsl:variable name="id" as="xs:string" select="substring(name(), 1, 2)"/>
     <xsl:variable name="status" as="xs:string?" select="'hide'[$id ne $lg]"/>
     <span class="{string-join(($id, $status), ' ')}"><xsl:apply-templates/></span>
+  <!-- ================================================================== -->
+  <!-- General                                                            -->
+  <!-- ================================================================== -->
   </xsl:template>
     <xsl:template match="svg">
     <xsl:copy-of select="doc('../' || @src)"/>

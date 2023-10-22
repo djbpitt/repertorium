@@ -13,8 +13,11 @@ declare variable $exist:controller as xs:string :=
     (request:get-attribute("$exist:controller"), "/repertorium")[1];
 declare variable $pathToMss as xs:string := 
     concat($exist:root, $exist:controller, '/mss');
-declare variable $mss as document-node()+ := 
+declare variable $all-mss as document-node()+ := 
     collection($pathToMss)[ends-with(base-uri(.), 'xml')];
+declare variable $mss as element(tei:TEI)* :=
+    $all-mss/tei:TEI[ft:query(., ())];
+declare variable $country-facets as map(*) := ft:facets($mss, "country");
 declare variable $genres as element(genre)+ := 
     doc(concat($exist:root, $exist:controller, '/aux/genres.xml'))/descendant::genre;
 declare variable $lg as xs:string := (request:get-cookie-value('lg'), 'bg')[1];
@@ -53,5 +56,18 @@ return
     {$availability ! <m:availability>{normalize-space(.)}</m:availability>}
 </m:li>
 }</m:ul>
+<m:facets>
+    <m:countries>{
+        let $country-elements :=
+            map:for-each($country-facets, function($label, $count) {
+                    <m:country>
+                        <m:label>{$label}</m:label>
+                        <m:count>{$count}</m:count>
+                </m:country>})
+        for $country-element in $country-elements
+        order by $country-element/m:label
+         return $country-element
+    }</m:countries>
+</m:facets>
 <m:lg>{$lg}</m:lg>
 </m:main>
