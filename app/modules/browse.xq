@@ -8,9 +8,9 @@ declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 declare option output:method "xml";
 declare option output:indent "no";
 declare variable $exist:root as xs:string := 
-    request:get-parameter("exist:root", "xmldb:exist:///db/apps");
+    (request:get-attribute("$exist:root"), "xmldb:exist:///db/apps")[1];
 declare variable $exist:controller as xs:string := 
-    request:get-parameter("exist:controller", "/repertorium");
+    (request:get-attribute("$exist:controller"), "/repertorium")[1];
 declare variable $pathToMss as xs:string := 
     concat($exist:root, $exist:controller, '/mss');
 declare variable $mss as document-node()+ := 
