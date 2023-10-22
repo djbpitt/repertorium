@@ -2,9 +2,13 @@ xquery version "3.1";
 module namespace re = "http://www.ilit.bas.bg/repertorium/ns/3.0";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
 
-(: TODO: Update documentation, esp. contents list:)
+(: TODO: Update documentation, esp. contents list :)
 
 (: Contents
+ :
+ : get-attribute() functions have defaults for standard location for use
+ :   during development
+ :
  : re:addPeriod : adds a period if the string does not already end in one
  : re:fileName : returns immediate filename from base-uri()
  : re:formatBib : returns basic bibliographic information from <biblStruct> element
@@ -12,11 +16,12 @@ declare namespace tei = "http://www.tei-c.org/ns/1.0";
  : re:unit : converts "folia" to "ff", etc.
 :)
 
+declare variable $re:root as xs:string := (request:get-attribute("$exist:root"), "xmldb:exist:///db/apps")[1];
+declare variable $re:controller as xs:string := (request:get-attribute("$exist:controller"), "/repertorium")[1];
+
 (: Compute msName to display (individual, specific, general) in three languages :)
 declare variable $re:genres as element(genre)+ := 
-    doc(concat(request:get-attribute('$exist:root'), 
-        request:get-attribute('$exist:controller'), 
-        '/aux/genres.xml'))/descendant::genre;
+    doc(concat($re:root, $re:controller, '/aux/genres.xml'))/descendant::genre;
 
 declare function re:bgMsName($ms as document-node()) as xs:string {
     (: eXist-db can optimize FLWOR but not monolithic XPath :)
