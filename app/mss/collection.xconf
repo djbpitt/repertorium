@@ -10,7 +10,11 @@
       <text qname="tei:repository" analyzer="ws"/>
       <text qname="tei:idno" analyzer="ws"/>
       <text qname="tei:availability" analyzer="ws"/>
-      <text qname="tei:TEI" analyzer="ws"/>
+      <text qname="tei:TEI" analyzer="ws">
+          <facet 
+              dimension="country" 
+              expression="descendant::tei:msIdentifier/tei:country | descendant::tei:altIdentifier[@type eq 'partial']/tei:country"/>
+      </text>
     </lucene>
     <!-- Range indexes -->
     <create qname="tei:title" type="xs:string"/>
