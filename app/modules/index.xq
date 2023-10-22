@@ -27,13 +27,7 @@ declare option output:indent "no";
             <m:title>Manuscripts</m:title>
             <m:ul>
                 <m:li><m:a url="browse">Browse</m:a> the collection</m:li>
-                <m:li>Search the collection
-                    <m:ul>
-                        <m:li><m:a url="search">By location, full text of title, etc.</m:a></m:li>
-                        <m:li>Case-insensitive substring search in text 
-                        title <input id="searchTitlesFree" type="text" size="25" placeholder="press [enter] to search" /></m:li>
-                    </m:ul>
-                </m:li>
+                <m:li><m:a url="search">Search</m:a> the collection</m:li>
                 <m:li><m:a url="dendrogram">Dendrogram</m:a> overview of corpus</m:li>
             </m:ul>
             <m:p>Manuscript descriptions from the related Slovo-ASO project can be found at <m:a url="http://aso.obdurodon.org">http://aso.obdurodon.org</m:a>.</m:p>
