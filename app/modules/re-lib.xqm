@@ -23,7 +23,7 @@ declare variable $re:controller as xs:string := (request:get-attribute("$exist:c
 declare variable $re:genres as element(genre)+ := 
     doc(concat($re:root, $re:controller, '/aux/genres.xml'))/descendant::genre;
 
-declare function re:bgMsName($ms as document-node()) as xs:string {
+declare function re:bgMsName($ms as element(tei:TEI)) as xs:string {
     (: eXist-db can optimize FLWOR but not monolithic XPath :)
     let $individual as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[lang('bg')][@type eq 'individual']  
     let $specific as element(bg)* :=
@@ -37,14 +37,14 @@ declare function re:bgMsName($ms as document-node()) as xs:string {
     return ($individual, $specific, $general)[1] ! normalize-space(.) ! re:titleCase(.)
 };
 
-declare function re:enMsName($ms as document-node()) as xs:string {
+declare function re:enMsName($ms as element(tei:TEI)) as xs:string {
     let $individual as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[lang('en')][@type eq 'individual']
     let $specific as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']
     let $general as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']
     return ($individual, $specific, $general)[1] ! normalize-space(.) ! re:titleCase(.)
 };
 
-declare function re:ruMsName($ms as document-node()) as xs:string {
+declare function re:ruMsName($ms as element(tei:TEI)) as xs:string {
     let $individual as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[lang('ru')][@type eq 'individual']
     let $specific as element(ru)* := 
         let $specificNames as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']
