@@ -26,7 +26,6 @@ declare option output:indent "no";
         <m:section>
             <m:title>Manuscripts</m:title>
             <m:ul>
-                <m:li><m:a url="browse">Browse</m:a> the collection</m:li>
                 <m:li><m:a url="search">Search</m:a> the collection</m:li>
                 <m:li><m:a url="dendrogram">Dendrogram</m:a> overview of corpus</m:li>
             </m:ul>
