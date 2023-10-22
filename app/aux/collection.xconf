@@ -5,6 +5,7 @@
     <lucene>
       <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
       <analyzer id="ws" class="org.apache.lucene.analysis.core.WhitespaceAnalyzer"/>
+      <module uri="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" at="modules/re-lib.xqm"/>
       <text qname="bg" analyzer="ws"/>
       <text qname="en" analyzer="ws"/>
       <text qname="ru" analyzer="ws"/>
@@ -14,14 +15,19 @@
       <text qname="tei:term"/>
     </lucene>
     <!-- Range indexes -->
-    <create qname="bg" type="xs:string"/>
-    <create qname="en" type="xs:string"/>
-    <create qname="ru" type="xs:string"/>
-    <create qname="@xml:id" type="xs:string"/>
-    <create qname="tei:ref" type="xs:string"/>
-    <create qname="djb:position" type="xs:string"/>
-    <create qname="djb:value" type="xs:string"/>
-    <create qname="tei:term" type="xs:string"/>
+    <range>
+      <create qname="bg" type="xs:string" case="no"/>
+      <create qname="en" type="xs:string" case="no"/>
+      <create qname="ru" type="xs:string" case="no"/>
+      <create qname="tei:msName" type="xs:string"/>
+      <create qname="@xml:id" type="xs:string"/>
+      <create qname="@xml:lang" type="xs:string"/>
+      <create qname="@type" type="xs:string"/>
+      <create qname="tei:ref" type="xs:string"/>
+      <create qname="djb:position" type="xs:string"/>
+      <create qname="djb:value" type="xs:string"/>
+      <create qname="tei:term" type="xs:string"/>
+    </range>
     <!-- ngram indexes -->
     <ngram qname="bg"/>
     <ngram qname="en"/>
