@@ -19,24 +19,37 @@ declare variable $re:genres as element(genre)+ :=
         '/aux/genres.xml'))/descendant::genre;
 
 declare function re:bgMsName($ms as document-node()) as xs:string {
-    ($ms/descendant::tei:msIdentifier/tei:msName[lang('bg') and @type eq 'individual'],  
-    $re:genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']]/bg,
-    $re:genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']]/bg)[1]
-    ! normalize-space(.) ! re:titleCase(.)
+    (: eXist-db can optimize FLWOR but not monolithic XPath :)
+    let $individual as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[lang('bg')][@type eq 'individual']  
+    let $specific as element(bg)* :=
+        let $specificNames as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']
+        let $en as element(en)* := $re:genres/en[. = $specificNames]
+        return $en/../bg
+    let $general as element(bg)* :=
+        let $generalNames as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']
+        let $en as element(en)* := $re:genres/en[. = $generalNames]
+        return $en/../bg
+    return ($individual, $specific, $general)[1] ! normalize-space(.) ! re:titleCase(.)
 };
 
 declare function re:enMsName($ms as document-node()) as xs:string {
-    ($ms/descendant::tei:msIdentifier/tei:msName[lang('en') and @type eq 'individual'],
-    $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific'],
-    $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general'])[1]
-    ! normalize-space(.) ! re:titleCase(.)
+    let $individual as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[lang('en')][@type eq 'individual']
+    let $specific as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']
+    let $general as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']
+    return ($individual, $specific, $general)[1] ! normalize-space(.) ! re:titleCase(.)
 };
 
 declare function re:ruMsName($ms as document-node()) as xs:string {
-    ($ms/descendant::tei:msIdentifier/tei:msName[lang('ru') and @type eq 'individual'],
-    $re:genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']]/ru,
-    $re:genres[en = $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']]/ru)[1]
-    ! normalize-space(.) ! re:titleCase(.)
+    let $individual as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[lang('ru')][@type eq 'individual']
+    let $specific as element(ru)* := 
+        let $specificNames as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']
+        let $en as element(en)* := $re:genres/en[. = $specificNames]
+        return $en/../ru
+    let $general as element (ru)* := 
+        let $generalNames as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'general']
+        let $en as element(en)* := $re:genres/en[. = $generalNames]
+        return $en/../ru
+    return($individual, $specific, $general)[1] ! normalize-space(.) ! re:titleCase(.)
 };
 
 declare function re:addPeriod($text as xs:string) as xs:string {
