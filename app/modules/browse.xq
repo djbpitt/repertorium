@@ -11,9 +11,10 @@ declare variable $exist:root as xs:string :=
     request:get-parameter("exist:root", "xmldb:exist:///db/apps");
 declare variable $exist:controller as xs:string := 
     request:get-parameter("exist:controller", "/repertorium");
-
+declare variable $pathToMss as xs:string := 
+    concat($exist:root, $exist:controller, '/mss');
 declare variable $mss as document-node()+ := 
-    collection(concat($exist:root, $exist:controller, '/mss'))[ends-with(base-uri(.), 'xml')];
+    collection($pathToMss)[ends-with(base-uri(.), 'xml')];
 declare variable $genres as element(genre)+ := 
     doc(concat($exist:root, $exist:controller, '/aux/genres.xml'))/descendant::genre;
 declare variable $lg as xs:string := (request:get-cookie-value('lg'), 'bg')[1];
