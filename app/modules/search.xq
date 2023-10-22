@@ -18,9 +18,25 @@ declare variable $all-mss as document-node()+ :=
 declare variable $mss as element(tei:TEI)* :=
     $all-mss/tei:TEI[ft:query(., ())];
 declare variable $country-facets as map(*) := ft:facets($mss, "country");
+declare variable $settlement-facets as map(*) := ft:facets($mss, "settlement");
+declare variable $repository-facets as map(*) := ft:facets($mss, "repository");
 declare variable $genres as element(genre)+ := 
     doc(concat($exist:root, $exist:controller, '/aux/genres.xml'))/descendant::genre;
 declare variable $lg as xs:string := (request:get-cookie-value('lg'), 'bg')[1];
+declare function local:facets-to-xml($name as xs:string, $input as map(*)) {
+    element {concat('m:', $name, '-facets')} {
+        let $elements :=
+            map:for-each($input, function($label, $count) {
+                element {concat('m:', $name)} {
+                    <m:label>{$label}</m:label>,
+                    <m:count>{$count}</m:count>
+                }
+            })
+        for $element in $elements
+        order by $element/m:label
+        return $element
+    }
+};
 <m:main>
 <m:h2>Search the collection</m:h2>
 <m:ul>{
@@ -56,18 +72,10 @@ return
     {$availability ! <m:availability>{normalize-space(.)}</m:availability>}
 </m:li>
 }</m:ul>
-<m:facets>
-    <m:countries>{
-        let $country-elements :=
-            map:for-each($country-facets, function($label, $count) {
-                    <m:country>
-                        <m:label>{$label}</m:label>
-                        <m:count>{$count}</m:count>
-                </m:country>})
-        for $country-element in $country-elements
-        order by $country-element/m:label
-         return $country-element
-    }</m:countries>
-</m:facets>
+<m:facets>{
+    local:facets-to-xml("country", $country-facets),
+    local:facets-to-xml("settlement", $settlement-facets),
+    local:facets-to-xml("repository", $repository-facets)
+}</m:facets>
 <m:lg>{$lg}</m:lg>
 </m:main>

@@ -11,18 +11,50 @@
         <section id="contents">
             <section id="searchControls">
                 <form action="search" method="get">
-                    <h3>Filter by …</h3>
-                    <label>
-                        <xsl:value-of select="'Country&#xa0;'"/>
-                        <select name="country" id="country">
-                            <option value="">Choose or leave blank for all</option>
-                            <xsl:apply-templates select="facets/countries/country"/>
-                        </select>
-                    </label>
-                    <p>Settlement</p>
-                    <p>Repository</p>
-                    <p>Contains work</p>
-                    <p>Contains author</p>
+                    <fieldset>
+                        <legend>Filter by</legend>
+                        <ul>
+                            <li>
+                                <label>
+                                    <xsl:value-of select="'Country&#xa0;'"/>
+                                    <select name="country" id="country">
+                                        <option value="">All (default)</option>
+                                        <xsl:apply-templates select="facets/country-facets/country"/>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <xsl:value-of select="'Settlement&#xa0;'"/>
+                                    <select name="settlement" id="settlement">
+                                        <option value="">All (default)</option>
+                                        <xsl:apply-templates select="facets/settlement-facets/settlement"/>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <xsl:value-of select="'Repository&#xa0;'"/>
+                                    <select name="repository" id="repository">
+                                        <option value="">All (default)</option>
+                                        <xsl:apply-templates select="facets/repository-facets/repository"/>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <xsl:value-of select="'Article title words&#xa0;'"/>
+                                    <input type="text" size="40"/>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <xsl:value-of select="'Article author words&#xa0;'"/>
+                                    <input type="text" size="38"/>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
                 </form>
             </section>
             <section id="mss">
@@ -39,7 +71,7 @@
   <!-- ================================================================== -->
   <!-- Widgets                                                            -->
   <!-- ================================================================== -->
-  <xsl:template match="countries/country">
+  <xsl:template match="facets/*/*">
     <option value="{label}"><xsl:value-of select="concat(label, ' (', count, ')')"/></option>
   </xsl:template>
   <!-- ================================================================== -->
