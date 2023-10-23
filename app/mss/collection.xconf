@@ -13,13 +13,13 @@
       <text qname="tei:TEI" analyzer="ws">
           <facet 
               dimension="country" 
-              expression="descendant::tei:msIdentifier/tei:country | descendant::tei:altIdentifier[@type eq 'partial']/tei:country"/>
+              expression="descendant::tei:msIdentifier/tei:country"/>
           <facet 
               dimension="settlement" 
-              expression="descendant::tei:msIdentifier/tei:settlement | descendant::tei:altIdentifier[@type eq 'partial']/tei:settlement"/>
+              expression="descendant::tei:msIdentifier/tei:settlement"/>
           <facet 
               dimension="repository" 
-              expression="descendant::tei:msIdentifier/tei:repository | descendant::tei:altIdentifier[@type eq 'partial']/tei:repository"/>
+              expression="descendant::tei:msIdentifier/tei:repository"/>
       </text>
     </lucene>
     <!-- Range indexes -->
