@@ -35,6 +35,7 @@
                                 <option value="">All (default)</option>
                                 <xsl:apply-templates select="facets/repository-facets/repository"/>
                             </select>
+                            <hr/>
                             <label for="titleWords">
                                 <xsl:value-of select="'Title words&#xa0;'"/>
                             </label>
