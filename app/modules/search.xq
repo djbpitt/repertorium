@@ -7,16 +7,33 @@ import module namespace re = 'http://www.ilit.bas.bg/repertorium/ns/3.0' at "re-
 declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 declare option output:method "xml";
 declare option output:indent "no";
+
+(: Housekeeping :)
 declare variable $exist:root as xs:string := 
     (request:get-attribute("$exist:root"), "xmldb:exist:///db/apps")[1];
 declare variable $exist:controller as xs:string := 
     (request:get-attribute("$exist:controller"), "/repertorium")[1];
 declare variable $pathToMss as xs:string := 
     concat($exist:root, $exist:controller, '/mss');
+
+(: Query parameters :)
+
+declare variable $country-input := request:get-parameter("country", ());
+declare variable $settlement-input := request:get-parameter("settlement", ());
+declare variable $repository-input := request:get-parameter("repository", ());
+declare variable $options as map(*) :=
+    map {
+        "facets": map:merge ((
+            map:entry("country", $country-input),
+            map:entry("settlement", $settlement-input),
+            map:entry("repository", $repository-input)
+        ))
+    };
+(: Retrieve mss and facet values :)
 declare variable $all-mss as document-node()+ := 
     collection($pathToMss)[ends-with(base-uri(.), 'xml')];
 declare variable $mss as element(tei:TEI)* :=
-    $all-mss/tei:TEI[ft:query(., ())];
+    $all-mss/tei:TEI[ft:query(., (), $options)];
 declare variable $country-facets as map(*) := ft:facets($mss, "country");
 declare variable $settlement-facets as map(*) := ft:facets($mss, "settlement");
 declare variable $repository-facets as map(*) := ft:facets($mss, "repository");

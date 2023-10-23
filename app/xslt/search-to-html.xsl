@@ -44,6 +44,11 @@
                                 <xsl:value-of select="'Author words&#xa0;'"/>
                             </label>
                             <input type="text" size="38" id="authorWords" name="authorWords"/>
+                            <hr/>
+                        </div>
+                        <div>
+                          <input id="submit" type="submit" value="Submit" />
+                          <button id="clear-form" type="reset">Clear</button>
                         </div>
                     </fieldset>
                 </form>
