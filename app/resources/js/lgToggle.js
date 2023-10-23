@@ -1,7 +1,9 @@
 /*
 Filename: lgToggle.js
 Author: David J. Birnbaum
-Date: 2013-08-09, revised 2023-10-21
+History:
+  2013-08-09: First version
+  2023-10-23: Remove href manipulation (now using cookie for state)
 Copyright: Creative Commons BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 Project home page: http://repertorium.obdurodon.org
 Project director: David J. Birnbaum (djbpitt@gmail.com)
@@ -50,22 +52,6 @@ function lg_init() {
     }
     createCookie('lg', lang, 30);
     changeLang();
-
-    var links = document.getElementsByTagName('a')
-    for (i = 0, length = links.length; i < length; i++) {
-        links[i].addEventListener('click', languageCookie, false);
-    }
-}
-function languageCookie() {
-    var current_href = this.getAttribute('href');
-    if (current_href.indexOf("?") > -1) {
-        // there's already a query string, so add to it
-        // this will break if there's a '#' in the url, which isn't an issue for us
-        this.setAttribute('href', current_href + '&lg=' + readCookie('lg'));
-    } else {
-        // there isn't, so create one
-        this.setAttribute('href', current_href + '?lg=' + readCookie('lg'));
-    }
 }
 /*
  * Called from init and when a lg flag is clicked;
