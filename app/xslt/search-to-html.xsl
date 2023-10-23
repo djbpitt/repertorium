@@ -13,47 +13,37 @@
                 <form action="search" method="get">
                     <fieldset>
                         <legend>Filter by</legend>
-                        <ul>
-                            <li>
-                                <label>
-                                    <xsl:value-of select="'Country&#xa0;'"/>
-                                    <select name="country" id="country">
-                                        <option value="">All (default)</option>
-                                        <xsl:apply-templates select="facets/country-facets/country"/>
-                                    </select>
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <xsl:value-of select="'Settlement&#xa0;'"/>
-                                    <select name="settlement" id="settlement">
-                                        <option value="">All (default)</option>
-                                        <xsl:apply-templates select="facets/settlement-facets/settlement"/>
-                                    </select>
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <xsl:value-of select="'Repository&#xa0;'"/>
-                                    <select name="repository" id="repository">
-                                        <option value="">All (default)</option>
-                                        <xsl:apply-templates select="facets/repository-facets/repository"/>
-                                    </select>
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <xsl:value-of select="'Article title words&#xa0;'"/>
-                                    <input type="text" size="40"/>
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <xsl:value-of select="'Article author words&#xa0;'"/>
-                                    <input type="text" size="38"/>
-                                </label>
-                            </li>
-                        </ul>
+                        <div>
+                            <label for="country">
+                                <xsl:value-of select="'Country&#xa0;'"/>
+                            </label>
+                            <select name="country" id="country">
+                                <option value="">All (default)</option>
+                                <xsl:apply-templates select="facets/country-facets/country"/>
+                            </select>
+                            <label for="settlement">
+                                <xsl:value-of select="'Settlement&#xa0;'"/>
+                            </label>
+                            <select name="settlement" id="settlement">
+                                <option value="">All (default)</option>
+                                <xsl:apply-templates select="facets/settlement-facets/settlement"/>
+                            </select>
+                            <label for="repository">
+                                <xsl:value-of select="'Repository&#xa0;'"/>
+                            </label>
+                            <select name="repository" id="repository">
+                                <option value="">All (default)</option>
+                                <xsl:apply-templates select="facets/repository-facets/repository"/>
+                            </select>
+                            <label for="titleWords">
+                                <xsl:value-of select="'Title words&#xa0;'"/>
+                            </label>
+                            <input type="text" size="40" id="titleWords" name="titleWords"/>
+                            <label for="authorWords">
+                                <xsl:value-of select="'Author words&#xa0;'"/>
+                            </label>
+                            <input type="text" size="38" id="authorWords" name="authorWords"/>
+                        </div>
                     </fieldset>
                 </form>
             </section>

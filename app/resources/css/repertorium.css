@@ -418,16 +418,14 @@ div.bibData > .scope:before {
     padding-right: 1em;
     border-right: 1px lightgray solid;
 }
-#searchControls ul {
-    text-indent: -2.5em;
-    list-style-type: none;
+#searchControls fieldset > div {
+    /* https://stackoverflow.com/questions/58906591/aligning-form-labels-in-a-css-grid */
+    display: inline-grid;
+    grid-template-columns: auto 1fr;
+    gap: .3em;
 }
-searchControls select {
-    width: 100em;
-}
-#searchControls li {
+label {
     white-space: nowrap;
-    margin-bottom: .3em;
 }
 #contents {
     flex: 1;
