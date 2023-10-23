@@ -22,3 +22,17 @@ function process_dropdown_change() {
 function clear_form() {
     window.location.href = window.location.pathname;
 }
+function remove_null_params() {
+    let params = new URLSearchParams(window.location.search);
+    console.log("Before: " + params.toString());
+    let keysForDel = [];
+    params.forEach((value, key) => {
+        if (value === "") {
+            keysForDel.push(key)
+        }
+    });
+    keysForDel.forEach(key => {
+        params.delete(key);
+    });
+    console.log("After: " + params.toString());
+}
