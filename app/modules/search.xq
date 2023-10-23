@@ -94,5 +94,14 @@ return
     local:facets-to-xml("settlement", $settlement-facets),
     local:facets-to-xml("repository", $repository-facets)
 }</m:facets>
+<m:inputs>{
+let $m as map(*) := map {
+    "country" : $country-input,
+    "settlement" : $settlement-input,
+    "repository": $repository-input
+}
+return map:for-each($m, function 
+    ($k, $v) {if ($v) then <m:input k="{$k}">{$v}</m:input> else ()}
+)}</m:inputs>
 <m:lg>{$lg}</m:lg>
 </m:main>

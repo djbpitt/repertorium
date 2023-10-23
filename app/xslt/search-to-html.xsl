@@ -18,21 +18,21 @@
                                 <xsl:value-of select="'Country&#xa0;'"/>
                             </label>
                             <select name="country" id="country">
-                                <option value="">All (default)</option>
+                                <option value="">[All]</option>
                                 <xsl:apply-templates select="facets/country-facets/country"/>
                             </select>
                             <label for="settlement">
                                 <xsl:value-of select="'Settlement&#xa0;'"/>
                             </label>
                             <select name="settlement" id="settlement">
-                                <option value="">All (default)</option>
+                                <option value="">[All]</option>
                                 <xsl:apply-templates select="facets/settlement-facets/settlement"/>
                             </select>
                             <label for="repository">
                                 <xsl:value-of select="'Repository&#xa0;'"/>
                             </label>
                             <select name="repository" id="repository">
-                                <option value="">All (default)</option>
+                                <option value="">[All]</option>
                                 <xsl:apply-templates select="facets/repository-facets/repository"/>
                             </select>
                             <hr/>
@@ -68,7 +68,12 @@
   <!-- Widgets                                                            -->
   <!-- ================================================================== -->
   <xsl:template match="facets/*/*">
-    <option value="{label}"><xsl:value-of select="concat(label, ' (', count, ')')"/></option>
+    <option value="{label}">
+      <xsl:if test="/descendant::input[@k eq current()/local-name() and . eq current()/label]">
+        <xsl:attribute name="selected" select="'yes'"/>
+      </xsl:if>
+      <xsl:value-of select="concat(label, ' (', count, ')')"/>
+    </option>
   </xsl:template>
   <!-- ================================================================== -->
   <!-- Manuscripts list                                                   -->
