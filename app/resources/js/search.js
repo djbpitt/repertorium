@@ -11,28 +11,25 @@ document.addEventListener('DOMContentLoaded', (e) => {
     for (var i = 0, length = dropdowns.length; i < length; i++) {
         dropdowns[i].addEventListener('change', process_dropdown_change, false);
     }
+    document.getElementById('submit').addEventListener('click', remove_null_params, false);
     document.getElementById('clear-form').addEventListener('click', clear_form, false);
 });
 /*
  * Resubmit form on every dropdown change
  */
 function process_dropdown_change() {
+    console.log("Processing");
+    remove_null_params();
+    console.log("Processed");
     document.getElementById('submit').click();
 }
 function clear_form() {
     window.location.href = window.location.pathname;
 }
 function remove_null_params() {
-    let params = new URLSearchParams(window.location.search);
-    console.log("Before: " + params.toString());
-    let keysForDel = [];
-    params.forEach((value, key) => {
-        if (value === "") {
-            keysForDel.push(key)
-        }
-    });
-    keysForDel.forEach(key => {
-        params.delete(key);
-    });
-    console.log("After: " + params.toString());
+    let form = document.getElementsByTagName("form")[0];
+    let elements = form.elements;
+    for (var i = 0, len = elements.length; i < len; i++) {
+        if (elements[i].value === "") elements[i].disabled = true;
+    }
 }

@@ -47,7 +47,7 @@
                             <hr/>
                         </div>
                         <div>
-                          <input id="submit" type="submit" value="Submit" />
+                          <input id="submit" type="submit" value="Submit"/>
                           <button id="clear-form" type="reset">Clear</button>
                         </div>
                     </fieldset>

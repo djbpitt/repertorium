@@ -16,8 +16,7 @@ declare variable $exist:controller as xs:string :=
 declare variable $pathToMss as xs:string := 
     concat($exist:root, $exist:controller, '/mss');
 
-(: Query parameters :)
-
+(: Receive and pre-process query parameters :)
 declare variable $country-input := request:get-parameter("country", ());
 declare variable $settlement-input := request:get-parameter("settlement", ());
 declare variable $repository-input := request:get-parameter("repository", ());
@@ -29,11 +28,17 @@ declare variable $options as map(*) :=
             map:entry("repository", $repository-input)
         ))
     };
+declare variable $titleWords := request:get-parameter("titleWords", ());
+declare variable $authorWords := request:get-parameter("authorWords", ());
+(: Parameter is always submitted so no value is empty string, not empty sequence
+Use effective Boolean value to return empty sequence if no query words :)
+declare variable $allWords := normalize-space(string-join(($titleWords, $authorWords), " "))[.];
+
 (: Retrieve mss and facet values :)
 declare variable $all-mss as document-node()+ := 
     collection($pathToMss)[ends-with(base-uri(.), 'xml')];
 declare variable $mss as element(tei:TEI)* :=
-    $all-mss/tei:TEI[ft:query(., (), $options)];
+    $all-mss/tei:TEI[ft:query(., $allWords, $options)];
 declare variable $country-facets as map(*) := ft:facets($mss, "country");
 declare variable $settlement-facets as map(*) := ft:facets($mss, "settlement");
 declare variable $repository-facets as map(*) := ft:facets($mss, "repository");
@@ -56,6 +61,9 @@ declare function local:facets-to-xml($name as xs:string, $input as map(*)) {
 };
 <m:main>
 <m:h2>Search the collection</m:h2>
+<m:titleWords>{$titleWords}</m:titleWords>
+<m:authorWords>{$titleWords}</m:authorWords>
+<m:both>{string-join(($titleWords, $authorWords), " ")}</m:both>
 <m:ul>{
 for $ms in $mss
 (: bg and ru titles can be bg, ru, or tei:msName :)
