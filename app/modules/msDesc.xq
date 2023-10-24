@@ -13,8 +13,8 @@ declare variable $exist:controller as xs:string :=
     request:get-parameter("exist:controller", "/repertorium");
 declare variable $filename as xs:string? :=
     request:get-parameter('filename', 'AM100MCB.xml');
-declare variable $ms as document-node() :=
-    doc(concat($exist:root, $exist:controller, '/mss/',$filename));
+declare variable $ms as element(tei:TEI):=
+    doc(concat($exist:root, $exist:controller, '/mss/',$filename))/*;
 declare variable $lg as xs:string := (request:get-cookie-value('lg'), 'bg')[1];
 <m:main>
 <m:uri>{substring-before($filename, '.xml')}</m:uri>
