@@ -122,20 +122,20 @@ declare function local:useModelNamespace($node as node()) as item()* {
         }
         default return "ERROR"
 };
-(:declare function local:process_layoutDesc($layoutDesc as element(tei:layoutDesc)) as element(m:layout)+ {
+declare function local:process_layoutDesc($layoutDesc as element(tei:layoutDesc)) as element(m:layout)+ {
     (: Ruled and written lines contains either one number or, for a range, two:)
-    for $layout in tei:layout
+    for $layout in $layoutDesc/tei:layout
         let $columns := $layout/@columns
         let $ruledLines := $layout/@ruledLines
         let $writtenLines := $layout/@writtenLines
     return
         <m:layout>{string-join((
         $columns ! concat($columns, ' column', if ($columns ne '1') then 's' else ()),
-        $ruledLines ! concat(translate($ruledLines, '–'), ' ruled line',if ($ruledLines ne '1') then 's' else ()),
-        $writtenLines ! concat(translate($writtenLines, '–'), ' written line',if ($writtenLines ne '1') then 's' else ()),
-        if (string-length(normalize-space($layout)) gt 0) then concat(' ',$layout) else ()),', ')
+        $ruledLines ! concat(translate($ruledLines, ' ', '–'), ' ruled line',if ($ruledLines ne '1') then 's' else ()),
+        $writtenLines ! concat(translate($writtenLines, ' ', '–'), ' written line',if ($writtenLines ne '1') then 's' else ()),
+        if (string-length(normalize-space($layout)) gt 0) then $layout else ()), ', ') || "."
         }</m:layout>
-};:)
+};
 
 <m:main>
 <m:bgMsName>{re:bgMsName($ms)}</m:bgMsName>
@@ -160,8 +160,8 @@ declare function local:useModelNamespace($node as node()) as item()* {
 {$ms/descendant::tei:foliation ! <m:foliation>{.}</m:foliation>}
 <!-- Collation currently processes <quire> elements if present; may be removed from schema -->
 {$ms/descendant::tei:collation ! <m:collation>{local:process_collation(.)}</m:collation>}
-<!--{$ms/descendant::tei:layoutDesc ! <m:layout>{local:process_layoutDesc(.)}</m:layout>}-->
-{$ms/descendant::tei:binding ! <m:binding>string(.)</m:binding>}
+{$ms/descendant::tei:layoutDesc ! <m:layout>{local:process_layoutDesc(.)}</m:layout>}
+{$ms/descendant::tei:binding ! <m:binding>{string(.)}</m:binding>}
 {$ms/descendant::tei:condition ! <m:condition>{re:titleCase(.)}</m:condition>}
 <!-- Change namespace of msItemStruct recursively to m: -->
 {$ms/descendant::tei:msContents ! local:useModelNamespace(.)}
