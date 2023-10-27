@@ -91,6 +91,7 @@ span.incipit,
 span.explicit,
 span.head,
 span.rubric,
+span.finalRubric,
 span.colophon,
 span.sampleText,
 p.sampleText {
@@ -131,6 +132,11 @@ span.rubric:before {
     font-weight: bold;
     font-family: serif;
 }
+span.finalRubric:before {
+    content: 'Final rubric: ';
+    font-weight: bold;
+    font-family: serif;
+};
 span.sampleText:before,
 p.sampleText:before {
     content: 'Sample: ';
@@ -205,6 +211,9 @@ tr,
 td,
 th {
     border: 1px solid lightgray;
+}
+th {
+    vertical-align: top;
 }
 #msDescContents {
     counter-reset: l1

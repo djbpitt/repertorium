@@ -64,6 +64,10 @@ declare function re:addPeriod($text as xs:string) as xs:string {
         '.')
 };
 
+declare function re:pluralize($input as xs:string) as xs:string {
+    (: Assumes, simplistically, that all plurals are formed by adding only "s" :)
+    concat($input, "s")
+};
 declare function re:fileName($descriptionFile as document-node()) as xs:string {
     tokenize(base-uri($descriptionFile), '/')[last()]
 };
@@ -98,4 +102,8 @@ declare function re:unit($unit as xs:string) as xs:string {
                 "f."
         default return
             $unit
+};
+
+declare function re:roman($in as xs:double) as xs:string {
+    format-integer($in cast as xs:integer,"I")
 };
