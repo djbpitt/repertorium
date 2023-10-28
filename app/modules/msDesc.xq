@@ -81,7 +81,7 @@ declare function local:process_collation($collation as element(tei:collation)) a
     if ($collation/re:quire) then
         let $formula-parts :=
             for $quire in $collation/re:quire
-                let $parts := tokenize($quire/@n, "-")
+                let $parts := tokenize($quire/@n, "[-–]")
                 let $preceding := tokenize($quire/preceding-sibling::re:quire[1]/@n, "-")[last()]
                 let $extent := $quire/tei:extent ! string()
                 return (

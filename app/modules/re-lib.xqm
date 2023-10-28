@@ -2,29 +2,15 @@ xquery version "3.1";
 module namespace re = "http://www.ilit.bas.bg/repertorium/ns/3.0";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
 
-(: TODO: Update documentation, esp. contents list :)
-
-(: Contents
- :
- : get-attribute() functions have defaults for standard location for use
- :   during development
- :
- : re:addPeriod : adds a period if the string does not already end in one
- : re:fileName : returns immediate filename from base-uri()
- : re:formatBib : returns basic bibliographic information from <biblStruct> element
- : re:titleCase : capitalizes first word of input string
- : re:unit : converts "folia" to "ff", etc.
-:)
-
-declare variable $re:root as xs:string := (request:get-attribute("$exist:root"), "xmldb:exist:///db/apps")[1];
-declare variable $re:controller as xs:string := (request:get-attribute("$exist:controller"), "/repertorium")[1];
-
 (: Compute msName to display (individual, specific, general) in three languages :)
-declare variable $re:genres as element(genre)+ := 
-    doc(concat($re:root, $re:controller, '/aux/genres.xml'))/descendant::genre;
+(: declare variable $re:genres as element(genre)+ := 
+    doc('/db/apps/repertorium/aux/genres.xml')/descendant::genre; :)
 
 declare function re:bgMsName($ms as element(tei:TEI)) as xs:string {
     (: eXist-db can optimize FLWOR but not monolithic XPath :)
+    let $re:genres as element(genre)+ := doc(concat(
+        request:get-attribute("$exist:root"), request:get-attribute("$exist:controller"), "/aux/genres.xml"
+    ))/descendant::genre
     let $individual as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[lang('bg')][@type eq 'individual']  
     let $specific as element(bg)* :=
         let $specificNames as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']
@@ -45,6 +31,10 @@ declare function re:enMsName($ms as element(tei:TEI)) as xs:string {
 };
 
 declare function re:ruMsName($ms as element(tei:TEI)) as xs:string {
+    let $re:genres as element(genre)+ := doc(concat(
+        request:get-attribute("$exist:root"), request:get-attribute("$exist:controller"), "/aux/genres.xml"
+    ))/descendant::genre
+    let $re:genres as element(genre)+ := doc("/db/apps/repertorium/aux/genres.xml")/descendant::genre
     let $individual as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[lang('ru')][@type eq 'individual']
     let $specific as element(ru)* := 
         let $specificNames as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']
@@ -105,5 +95,5 @@ declare function re:unit($unit as xs:string) as xs:string {
 };
 
 declare function re:roman($in as xs:double) as xs:string {
-    format-integer($in cast as xs:integer,"I")
+    fn:format-integer($in cast as xs:integer,"I")
 };

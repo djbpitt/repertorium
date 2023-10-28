@@ -3,29 +3,30 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:math="http://www.w3.org/2005/xpath-functions/math"
   xpath-default-namespace="http://repertorium.obdurodon.org/model"
-  xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-  xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns="http://www.w3.org/1999/xhtml" exclude-result-prefixes="#all" version="3.0">
+  <xsl:output indent="yes"/>
   <xsl:import href="re-lib.xsl"/>
   <xsl:template match="main">
     <!-- ================================================================ -->
     <!-- Main                                                             -->
     <!-- ================================================================ -->
     <main id="msDesc">
-        <!-- ============================================================ -->
-        <!-- En title is main, Bg invokes Ru as sibling                   -->
-        <!-- ============================================================ -->
-        <xsl:apply-templates select="enMsName, bgMsName"/>
-        <table id="msDescTable">
-            <xsl:apply-templates select="(
-              location, date, material, extent, foliation, collation, watermarks, 
-              layout, binding, condition, msContents
+      <!-- ============================================================ -->
+      <!-- En title is main, Bg invokes Ru as sibling                   -->
+      <!-- ============================================================ -->
+      <xsl:apply-templates select="enMsName, bgMsName"/>
+      <table id="msDescTable">
+        <xsl:apply-templates select="
+            (
+            location, date, material, extent, foliation, collation, watermarks,
+            layout, binding, condition, msContents
             )"/>
-        </table>
-        <hr/>
-        <footer>
-          <xsl:apply-templates select="id, authors, editors, genres"/>
-        </footer>
+      </table>
+      <hr/>
+      <footer>
+        <xsl:apply-templates select="id, authors, editors, genres"/>
+      </footer>
     </main>
   </xsl:template>
   <!-- ================================================================== -->
@@ -33,16 +34,16 @@
   <!-- ================================================================== -->
   <xsl:template match="enMsName">
     <h2>
-        <xsl:apply-templates/>
+      <xsl:apply-templates/>
     </h2>
   </xsl:template>
   <xsl:template match="bgMsName">
     <p>
-        <span class="label">Bg: </span>
-        <xsl:value-of select="."/>
-        <xsl:value-of select="'; '"/>
-        <span class="label">Ru: </span>
-        <xsl:value-of select="../ruMsName"/>
+      <span class="label">Bg: </span>
+      <xsl:value-of select="."/>
+      <xsl:value-of select="'; '"/>
+      <span class="label">Ru: </span>
+      <xsl:value-of select="../ruMsName"/>
     </p>
   </xsl:template>
   <!-- ================================================================== -->
@@ -52,7 +53,8 @@
     <tr>
       <th>Location</th>
       <td>
-        <xsl:variable name="locationParts" as="xs:string+" select="country, settlement, repository, collection"/>
+        <xsl:variable name="locationParts" as="xs:string+"
+          select="country, settlement, repository, collection"/>
         <xsl:value-of select="string-join(($locationParts), ', ')"/>
         <xsl:if test="not(ends-with($locationParts[last()], '.'))">
           <xsl:text>. </xsl:text>
@@ -64,7 +66,9 @@
   </xsl:template>
   <xsl:template match="watermarks">
     <th>Watermarks</th>
-    <td><xsl:apply-templates/></td>
+    <td>
+      <xsl:apply-templates/>
+    </td>
   </xsl:template>
   <xsl:template match="watermark">
     <xsl:apply-templates/>
@@ -75,14 +79,18 @@
   <xsl:template match="collation">
     <tr>
       <th>Collation</th>
-      <td><xsl:apply-templates/></td>
+      <td>
+        <xsl:apply-templates/>
+      </td>
     </tr>
   </xsl:template>
   <xsl:template match="sup">
     <!-- ================================================================ -->
-    <!-- Used in collation formulae                                       -->
+    <!-- Used in collation formulae and sampleText                        -->
     <!-- ================================================================ -->
-    <xsl:element name="{local-name()}"><xsl:apply-templates/></xsl:element>
+    <xsl:element name="{local-name()}">
+      <xsl:apply-templates/>
+    </xsl:element>
   </xsl:template>
   <!-- ================================================================== -->
   <!-- Parts of collation description                                     -->
@@ -91,10 +99,14 @@
     <xsl:variable name="outName" as="xs:string">
       <xsl:choose>
         <xsl:when test="local-name() eq 'gregoryRule'">Gregory rule</xsl:when>
-        <xsl:otherwise><xsl:value-of select="local-name()"/></xsl:otherwise>
+        <xsl:otherwise>
+          <xsl:value-of select="local-name()"/>
+        </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <span class="label"><xsl:value-of select="re:titleCase($outName) || ': '"/></span>
+    <span class="label">
+      <xsl:value-of select="re:titleCase($outName) || ': '"/>
+    </span>
     <xsl:apply-templates/>
   </xsl:template>
   <!-- ================================================================== -->
@@ -102,8 +114,12 @@
   <!-- ================================================================== -->
   <xsl:template match="*">
     <tr>
-      <th><xsl:value-of select="re:titleCase(local-name())"/></th>
-      <td><xsl:value-of select="."/></td>
+      <th>
+        <xsl:value-of select="re:titleCase(local-name())"/>
+      </th>
+      <td>
+        <xsl:value-of select="."/>
+      </td>
     </tr>
   </xsl:template>
   <!-- ================================================================== -->
@@ -152,13 +168,25 @@
   <xsl:template match="head | rubric | incipit | sampleText/p | explicit | finalRubric">
     <xsl:variable name="outName" as="xs:string">
       <xsl:choose>
-        <xsl:when test="self::p and parent::sampleText">Sample</xsl:when>
+        <xsl:when test="self::p and parent::sampleText">sample</xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="local-name() ! re:titleCase(.)"/>
+          <xsl:value-of select="local-name(), ' os'"/>
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <span class="{$outName}"><xsl:apply-templates/></span>
+    <span class="{$outName}">
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+  <xsl:template match="note">
+    <span class="note">
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+  <xsl:template match="seg[@rend eq 'sup']">
+    <sup>
+      <xsl:apply-templates/>
+    </sup>
   </xsl:template>
   <!-- ================================================================== -->
   <!-- Elements for footer                                                -->
@@ -177,7 +205,7 @@
     <span class="label">Editor: </span>
     <xsl:value-of select="string-join(editor, ', ')"/>
     <xsl:value-of select="'; '"/>
-</xsl:template>
+  </xsl:template>
   <xsl:template match="genres">
     <span class="label"> Genre: </span>
     <xsl:value-of select="string-join(genre, ', ')"/>
