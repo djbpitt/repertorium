@@ -107,7 +107,7 @@ span.finalRubric:before {
     font-weight: bold;
     font-family: serif;
     color:gray;
-};
+}
 span.sample::before {
     content: 'Sample: ';
     font-weight: bold;
@@ -157,6 +157,14 @@ span.note:before {
     content: " [sic]";
     font-family: serif;
 }
+span.bibl:before {
+  /* Distinguish from div.bibl */
+  content: " (";
+}
+span.bibl:after {
+  /*  Distinguish from div.bibl */
+  content: ") ";
+}
 span.unclear:before,
 span.supplied:before {
     content: "[";
@@ -164,6 +172,12 @@ span.supplied:before {
 span.unclear:after,
 span.supplied:after {
     content: "]";
+}
+span.gap:before {
+  content: " <";
+}
+span.gap:after {
+  content: "> ";
 }
 span.add {
     color: green;

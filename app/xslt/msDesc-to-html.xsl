@@ -7,6 +7,7 @@
   xmlns="http://www.w3.org/1999/xhtml" exclude-result-prefixes="#all" version="3.0">
   <xsl:output indent="yes"/>
   <xsl:import href="re-lib.xsl"/>
+  <xsl:strip-space elements="bibl"/>
   <xsl:template match="main">
     <!-- ================================================================ -->
     <!-- Main                                                             -->
@@ -147,7 +148,7 @@
     <!-- <locus> is processed as part of <title>                          -->
     <!-- ================================================================ -->
     <div class="text">
-      <xsl:apply-templates select="title, sampleText, note, msItemStruct"/>
+      <xsl:apply-templates select="title, sampleText, msItemStruct"/>
     </div>
   </xsl:template>
   <xsl:template match="locus">
@@ -163,6 +164,7 @@
   <xsl:template match="sampleText">
     <div class="samples">
       <xsl:apply-templates/>
+      <xsl:apply-templates select="../note"/>
     </div>
   </xsl:template>
   <xsl:template match="head | rubric | incipit | sampleText/p | explicit | finalRubric">
@@ -187,6 +189,68 @@
     <sup>
       <xsl:apply-templates/>
     </sup>
+  </xsl:template>
+  <xsl:template match="ref">
+    <!-- TODO: Create hover reference -->
+    <ref>
+      <xsl:apply-templates/>
+    </ref>
+  </xsl:template>
+  <xsl:template match="bibl">
+    <span class="bibl">
+      <xsl:choose>
+        <xsl:when test="*">
+          <xsl:apply-templates mode="bibl_inline"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:apply-templates/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </span>
+  </xsl:template>
+  <xsl:template match="ref[@type eq 'bibl']">
+    <span class="bibl">
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+  <xsl:template match="sic | unclear | add | del | supplied">
+    <span class="{local-name()}">
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+  <xsl:template match="foreign[@xml:lang eq 'cu']">
+    <span class="os">
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+  <xsl:template match="gap">
+    <span class="gap">
+      <xsl:if test="empty(node())">
+        <xsl:text>…</xsl:text>
+      </xsl:if>
+    </span>
+  </xsl:template>
+  <xsl:template match="damage">
+    <xsl:apply-templates/>
+  </xsl:template>
+  <xsl:template match="foreign">
+    <!-- Temporary workaround: default to os for <foreign> elements that lack @xml:lang -->
+    <span class="{(@xml:lang, 'os')[1]}">
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+
+  <!-- ================================================================== -->
+  <!-- Mode bibl_inline: structured <bibl> inside msItemStruct            -->
+  <!-- ================================================================== -->
+  <xsl:template match="bibl" mode="bibl_inline">
+    <xsl:apply-templates mode="bibl_inline"/>
+  </xsl:template>
+  <xsl:template match="bibl/*" mode="bibl_inline">
+    <xsl:apply-templates mode="bibl_inline"/>
+    <xsl:if test="following-sibling::*">
+      <xsl:text>, </xsl:text>
+    </xsl:if>
   </xsl:template>
   <!-- ================================================================== -->
   <!-- Elements for footer                                                -->

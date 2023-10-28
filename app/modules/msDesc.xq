@@ -23,26 +23,43 @@ declare function local:unit($unit as xs:string) as xs:string {
         case "folio" return "f."
         default return $unit
 };
-declare function local:computeExtent($ms as element(tei:TEI)) as xs:string {
+declare function local:computeExtent($ms as element(tei:TEI)) as element(m:extent) {
+    (: May contain, in addition to <note>:
+        1) Just plain text (e.g., just a number or a collation formula as plain text)
+        2) <measure> (with just a number) plus one or more <dimensions>. <measure> may
+            have a @unit (e.g., folia); which means the count of the number of folios. 
+            In this case:
+
+        a) <dimensions> has a @unit (e.g., mm for millimeters) and a @type (written, folia),
+            plus <height> and <width> children.
+        b) <dimension> may have an @extent attribute (e.g., ff.1–10, also allowed is "all")
+            and may repeat (e.g., different written dimensions on different folios)
+        
+        Dimensions are conventionally width x height, that is, width first
+    :)
     let $extent := $ms/descendant::tei:supportDesc/tei:extent
     let $measure := $extent/tei:measure
-    let $folio_dimensions := $extent/tei:dimensions[@type='folia']
-    let $written_dimensions := $extent/tei:dimensions[@type='written']
-    let $unit := local:unit($measure/@unit)
-    return 
-        (concat($measure,' ',$unit),
-        if ($folio_dimensions)
-            then concat($folio_dimensions/tei:height, ' x ', $folio_dimensions/tei:width, ' ',
-                $folio_dimensions/@unit, ' (folia)')
-            else (),
-        if ($written_dimensions)
-            then 
-                string-join(for $wd in $written_dimensions
-                return concat($wd/tei:height,' x ', $wd/tei:width, ' (written',
-                    if ($wd/@scope)
-                        then concat (' ',$wd/@scope,')')
-                        else ')'),', ')
-            else()) => string-join(" ")
+    let $dimensions := $extent/tei:dimensions
+    return
+        <m:extent>{
+            if (not($dimensions | $extent)) then 
+                <m:folioCount>{$extent ! string()} folio{if (number($extent) ne 1) then "s" else ()}.</m:folioCount>
+            else
+                (<m:folioCount>{$measure ! string()} folios. </m:folioCount>,
+                for $d in $dimensions
+                return
+                    <m:dimensions>{
+                        concat(if ($d/@type eq "folia") then "Folio" else re:titleCase($d/@type), 
+                        " dimensions: ", 
+                        $d/tei:width, 
+                        " x ", 
+                        $d/tei:height, 
+                        " ",
+                        $d/@unit,
+                        concat($d/@extent, "."))
+                    }</m:dimensions>
+                )
+        }</m:extent>
 };
 declare function local:process_watermark($watermark as element(tei:watermark)) as xs:string+ {
     if (not($watermark/*)) then re:titleCase(string($watermark)) else
