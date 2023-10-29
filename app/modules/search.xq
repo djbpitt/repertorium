@@ -106,7 +106,10 @@ return
 let $m as map(*) := map {
     "country" : $country-input,
     "settlement" : $settlement-input,
-    "repository": $repository-input
+    "repository": $repository-input,
+    "titleWords": $titleWords,
+    "authorWords": $authorWords,
+    "allWords" : $allWords
 }
 return map:for-each($m, function 
     ($k, $v) {if ($v) then <m:input k="{$k}">{$v}</m:input> else ()}
