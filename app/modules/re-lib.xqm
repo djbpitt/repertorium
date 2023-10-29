@@ -2,15 +2,24 @@ xquery version "3.1";
 module namespace re = "http://www.ilit.bas.bg/repertorium/ns/3.0";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
 
+(: Awaiting fix of https://github.com/eXist-db/exist/issues/5103 
+   Currently using let declarations inside functions instead of 
+     prolog variable :)
+(: declare %private variable $re:root-collection as xs:string := 
+    replace(system:get-module-load-path(), "xmldb:exist://embedded-eXist-server/", "/")
+    ! substring-before(., "/modules");
+declare %private variable $re:genres as element(genre)+ :=
+    doc(concat($re:root-collection, "/aux/genres.xml"))/descendant::genre; :)
 (: Compute msName to display (individual, specific, general) in three languages :)
 (: declare variable $re:genres as element(genre)+ := 
     doc('/db/apps/repertorium/aux/genres.xml')/descendant::genre; :)
-
 declare function re:bgMsName($ms as element(tei:TEI)) as xs:string {
     (: eXist-db can optimize FLWOR but not monolithic XPath :)
-    let $re:genres as element(genre)+ := doc(concat(
+    (: let $re:genres as element(genre)+ := doc(concat(
         request:get-attribute("$exist:root"), request:get-attribute("$exist:controller"), "/aux/genres.xml"
-    ))/descendant::genre
+    ))/descendant::genre :)
+    let $re:genres as element(genre)+ := 
+        doc("/db/apps/repertorium/aux/genres.xml")/descendant::genre
     let $individual as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[lang('bg')][@type eq 'individual']  
     let $specific as element(bg)* :=
         let $specificNames as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']
@@ -31,10 +40,11 @@ declare function re:enMsName($ms as element(tei:TEI)) as xs:string {
 };
 
 declare function re:ruMsName($ms as element(tei:TEI)) as xs:string {
-    let $re:genres as element(genre)+ := doc(concat(
+    (: let $re:genres as element(genre)+ := doc(concat(
         request:get-attribute("$exist:root"), request:get-attribute("$exist:controller"), "/aux/genres.xml"
-    ))/descendant::genre
-    let $re:genres as element(genre)+ := doc("/db/apps/repertorium/aux/genres.xml")/descendant::genre
+    ))/descendant::genre :)
+    let $re:genres as element(genre)+ := 
+        doc("/db/apps/repertorium/aux/genres.xml")/descendant::genre
     let $individual as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[lang('ru')][@type eq 'individual']
     let $specific as element(ru)* := 
         let $specificNames as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[@type eq 'specific']
