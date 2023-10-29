@@ -1,6 +1,7 @@
 xquery version "3.1";
 module namespace re = "http://www.ilit.bas.bg/repertorium/ns/3.0";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
+declare namespace m = "http://repertorium.obdurodon.org/model";
 
 (: Awaiting fix of https://github.com/eXist-db/exist/issues/5103 
    Currently using let declarations inside functions instead of 
@@ -106,4 +107,16 @@ declare function re:unit($unit as xs:string) as xs:string {
 
 declare function re:roman($in as xs:double) as xs:string {
     fn:format-integer($in cast as xs:integer,"I")
+};
+
+declare function re:useModelNamespace($node as node()) as item()* {
+    (: Change all namespaces to m: but retain local name 
+       Complex content is more easily managed with XSLT :)
+    typeswitch($node)
+        case text() return $node
+        case element() return element { "m:" || local-name($node)} {
+            $node/@*,
+            for $child in $node/node() return re:useModelNamespace($child)
+        }
+        default return "ERROR"
 };

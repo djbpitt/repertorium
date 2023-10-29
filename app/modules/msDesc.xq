@@ -128,17 +128,6 @@ declare function local:process_collation($collation as element(tei:collation)) a
         $collation/re:gregoryRule ! re:titleCase(.) ! re:addPeriod(.), ' ')}</m:gregoryRule>
     else ()
 };
-declare function local:useModelNamespace($node as node()) as item()* {
-    (: Change all namespaces to m: but retain local name 
-       Complex content is more easily managed with XSLT :)
-    typeswitch($node)
-        case text() return $node
-        case element() return element { "m:" || local-name($node)} {
-            $node/@*,
-            for $child in $node/node() return local:useModelNamespace($child)
-        }
-        default return "ERROR"
-};
 declare function local:process_layoutDesc($layoutDesc as element(tei:layoutDesc)) as element(m:layout)+ {
     (: Ruled and written lines contains either one number or, for a range, two:)
     for $layout in $layoutDesc/tei:layout
@@ -181,7 +170,7 @@ declare function local:process_layoutDesc($layoutDesc as element(tei:layoutDesc)
 {$ms/descendant::tei:binding ! <m:binding>{string(.)}</m:binding>}
 {$ms/descendant::tei:condition ! <m:condition>{re:titleCase(.)}</m:condition>}
 <!-- Change namespace of msItemStruct recursively to m: -->
-{$ms/descendant::tei:msContents ! local:useModelNamespace(.)}
+{$ms/descendant::tei:msContents ! re:useModelNamespace(.)}
 <m:bibliography>Bibliography will go here</m:bibliography>
 <m:history>History will go here</m:history>
 <m:id>{$ms/@xml:id ! string()}</m:id>
