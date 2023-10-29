@@ -53,6 +53,9 @@ before the app is built, and if new content is added, the app is rebuilt and rei
 4.  Use the keyword analyzer ("kw") to look up the full and exact Bulgarian titles 
     in the primary corpus files.
 
+Alternatively, skip the Lucene keyword analyzer and use a range index with an
+equality check to match full and exact titles.
+
 **Disadvantage and work-around:** No keyword highlighting because 1) the lookup in
 the primary corpus documents is by Bulgarian title even when the user might have 
 entered English or Russian words, and 2) that lookup is by the keyword analyzer, 
