@@ -185,8 +185,8 @@ declare function local:process_layoutDesc($layoutDesc as element(tei:layoutDesc)
 <m:bibliography>Bibliography will go here</m:bibliography>
 <m:history>History will go here</m:history>
 <m:id>{$ms/@xml:id ! string()}</m:id>
-<m:authors>Authors will go here</m:authors>
-<m:editors>Editors will go here</m:editors>
+<m:authors>{$ms/descendant::tei:titleStmt/tei:author ! <m:author>{string(.)}</m:author>}</m:authors>
+<m:editors>{$ms/descendant::tei:titleStmt/tei:editor ! <m:editor>{string(.)}</m:editor>}</m:editors>
 <m:genres>{$ms/descendant::tei:msName[@type ne "individual"] ! string() ! <m:genre>{.}</m:genre>}</m:genres>
 <m:uri>{substring-before($filename, '.xml')}</m:uri>
 <m:lg>{$lg}</m:lg>
