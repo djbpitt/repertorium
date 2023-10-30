@@ -19,13 +19,9 @@
       <h2>
         <xsl:apply-templates select="enMsName, bgMsName, ruMsName"/>
       </h2>
-      <!--<ul id="msDescTable">
-        <xsl:apply-templates select="
-            (
-            location, date, material, extent, foliation, collation, watermarks,
-            layout, binding, condition, msContents
-            )"/>
-      </ul>-->
+      <h3>
+        <xsl:apply-templates select="location"/>
+      </h3>
       <hr/>
       <footer>
         <xsl:apply-templates select="id, authors, editors, genres"/>
@@ -46,43 +42,28 @@
     </span>
   </xsl:template>
   <!-- ================================================================== -->
-  <!-- Contents of table (except msContents; see below)                   -->
+  <!-- Location elements                                                  -->
   <!-- ================================================================== -->
   <xsl:template match="location">
-    <tr>
-      <th>Location</th>
-      <td>
-        <xsl:variable name="locationParts" as="xs:string+"
-          select="country, settlement, repository, collection"/>
-        <xsl:value-of select="string-join(($locationParts), ', ')"/>
-        <xsl:if test="not(ends-with($locationParts[last()], '.'))">
-          <xsl:text>. </xsl:text>
-        </xsl:if>
-        <span class="label"> Shelfmark: </span>
-        <xsl:value-of select="shelfmark"/>
-      </td>
-    </tr>
-  </xsl:template>
-  <xsl:template match="watermarks">
-    <th>Watermarks</th>
-    <td>
+    <h3>
       <xsl:apply-templates/>
-    </td>
+    </h3>
   </xsl:template>
-  <xsl:template match="watermark">
-    <xsl:apply-templates/>
-    <xsl:if test="following-sibling::watermark">
-      <br/>
+  <xsl:template match="country | settlement | repository">
+    <a href="search?{local-name()}={.}">
+      <xsl:value-of select="."/>
+    </a>
+    <xsl:if test="following-sibling::*">
+      <xsl:text>, </xsl:text>
     </xsl:if>
   </xsl:template>
-  <xsl:template match="collation">
-    <tr>
-      <th>Collation</th>
-      <td>
-        <xsl:apply-templates/>
-      </td>
-    </tr>
+  <xsl:template match="collection | shelfmark">
+    <xsl:value-of select="."/>
+    <xsl:if test="following-sibling::*">
+      <xsl:text>, </xsl:text>
+    </xsl:if>
   </xsl:template>
+
   <xsl:template match="sup">
     <!-- ================================================================ -->
     <!-- Used in collation formulae and sampleText                        -->
