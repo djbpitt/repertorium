@@ -31,8 +31,8 @@ declare variable $lg as xs:string := (request:get-cookie-value('lg'), 'bg')[1];
 </m:location>
 {$ms/descendant::tei:msContents ! re:useModelNamespace(.)}
 <m:id>{$ms/@xml:id ! string()}</m:id>
-<m:authors>{$ms/descendant::tei:titleStmt/tei:author => string-join(", ")}</m:authors>
-<m:editors>{$ms/descendant::tei:titleStmt/tei:editor => string-join(", ")}</m:editors>
+<m:authors>{$ms/descendant::tei:titleStmt/tei:author ! <m:author>{string(.)}</m:author>}</m:authors>
+<m:editors>{$ms/descendant::tei:titleStmt/tei:editor ! <m:editor>{string(.)}</m:editor>}</m:editors>
 <m:genres>{$ms/descendant::tei:msName[@type ne "individual"] ! string() ! <m:genre>{.}</m:genre>}</m:genres>
 <m:uri>{substring-before($filename, '.xml')}</m:uri>
 <m:lg>{$lg}</m:lg>
