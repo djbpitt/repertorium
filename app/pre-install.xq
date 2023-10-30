@@ -1,14 +1,17 @@
-xquery version "3.0";
+xquery version "3.1";
 
 import module namespace xdb="http://exist-db.org/xquery/xmldb";
 
 (: The following external variables are set by the repo:deploy function :)
 
-(: file path pointing to the exist installation directory :)
+(: file path pointing to the exist installation directory,
+    e.g., /Applications/eXist-db.app/Contents/Resources :)
 declare variable $home external;
-(: path to the directory containing the unpacked .xar package :)
+(: path to the directory containing the unpacked .xar package,
+    e.g., /Users/djb/Library/Application Support/org.exist/expathrepo/Repertorium-0.1 :)
 declare variable $dir external;
-(: the target collection into which the app is deployed :)
+(: the target collection into which the app is deployed,
+    e.g., /db/apps/repertorium:)
 declare variable $target external;
 
 declare function local:mkcol-recursive($collection, $components) {
