@@ -29,6 +29,7 @@ declare variable $lg as xs:string := (request:get-cookie-value('lg'), 'bg')[1];
     {$ms/descendant::tei:msIdentifier/tei:collection ! <m:collection>{string(.)}</m:collection>}
     {$ms/descendant::tei:msIdentifier/tei:idno[@type eq "shelfmark"] ! <m:shelfmark>{string(.)}</m:shelfmark>}
 </m:location>
+{$ms/descendant::tei:msContents ! re:useModelNamespace(.)}
 <m:id>{$ms/@xml:id ! string()}</m:id>
 <m:authors>{$ms/descendant::tei:titleStmt/tei:author => string-join(", ")}</m:authors>
 <m:editors>{$ms/descendant::tei:titleStmt/tei:editor => string-join(", ")}</m:editors>

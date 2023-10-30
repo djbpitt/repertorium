@@ -18,6 +18,7 @@
                         <!-- Main page headers are all <h2>               -->
                         <!-- ============================================ -->
                         <xsl:when test="descendant::main/@id eq 'index'">Repertorium</xsl:when>
+                        <xsl:when test="descendant::main/@id eq 'titles'">Article titles</xsl:when>
                         <xsl:otherwise>
                             <xsl:value-of select="descendant::h2"/>
                         </xsl:otherwise>
@@ -58,8 +59,8 @@
             </body>
         </html>
     </xsl:template>
-    <xsl:template match="h2[not(ancestor::main/@id eq 'index')]" priority="10">
-        <!-- Surround title with rule on all pages except main -->
+    <xsl:template match="h2[not(ancestor::main/@id = ('titles', 'index'))]" priority="10">
+        <!-- Surround title with rule on all pages except main and titles -->
         <hr/>
         <xsl:next-match/>
         <hr/>
@@ -67,7 +68,7 @@
     <xsl:template match="h2">
         <h2>
             <xsl:apply-templates/>
-            <xsl:if test="../@id ne 'index'">
+            <xsl:if test="../@id ne 'index' and not(following-sibling::*[1][self::h2])">
                 <span id="widgets">
                     <span class="flags">
                         <!--
