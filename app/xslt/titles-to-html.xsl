@@ -22,6 +22,7 @@
       <h3>
         <xsl:apply-templates select="location"/>
       </h3>
+      <xsl:apply-templates select="msContents"/>
       <hr/>
       <footer>
         <xsl:apply-templates select="id, authors, editors, genres"/>
@@ -66,41 +67,11 @@
 
   <xsl:template match="sup">
     <!-- ================================================================ -->
-    <!-- Used in collation formulae and sampleText                        -->
+    <!-- Used in sampleText                                               -->
     <!-- ================================================================ -->
     <xsl:element name="{local-name()}">
       <xsl:apply-templates/>
     </xsl:element>
-  </xsl:template>
-  <!-- ================================================================== -->
-  <!-- Parts of collation description                                     -->
-  <!-- ================================================================== -->
-  <xsl:template match="pricking | formula | gregoryRule | ruling | signatures | catchwords">
-    <xsl:variable name="outName" as="xs:string">
-      <xsl:choose>
-        <xsl:when test="local-name() eq 'gregoryRule'">Gregory rule</xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="local-name()"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <span class="label">
-      <xsl:value-of select="re:titleCase($outName) || ': '"/>
-    </span>
-    <xsl:apply-templates/>
-  </xsl:template>
-  <!-- ================================================================== -->
-  <!-- For most table rows just label and copy text                       -->
-  <!-- ================================================================== -->
-  <xsl:template match="*">
-    <tr>
-      <th>
-        <xsl:value-of select="re:titleCase(local-name())"/>
-      </th>
-      <td>
-        <xsl:value-of select="."/>
-      </td>
-    </tr>
   </xsl:template>
   <!-- ================================================================== -->
   <!-- Elements for msContents (all in m: namespace)                      -->
@@ -114,20 +85,18 @@
   <!-- unclear                                                            -->
   <!-- ================================================================== -->
   <xsl:template match="msContents">
-    <tr>
-      <th>Contents</th>
-      <td id="msDescContents">
-        <xsl:apply-templates select="msItemStruct"/>
-      </td>
-    </tr>
+    <h4>Contents</h4>
+    <div id="titlesWrapper">
+      <xsl:apply-templates select="msItemStruct"/>
+    </div>
   </xsl:template>
   <xsl:template match="msItemStruct">
     <!-- ================================================================ -->
-    <!-- Control order to put notes last                                  -->
     <!-- <locus> is processed as part of <title>                          -->
     <!-- ================================================================ -->
     <div class="text">
-      <xsl:apply-templates select="title, sampleText, msItemStruct"/>
+      <xsl:apply-templates select="title, sampleText"/>
+      <xsl:apply-templates select="msItemStruct"/>
     </div>
   </xsl:template>
   <xsl:template match="locus">
@@ -143,7 +112,6 @@
   <xsl:template match="sampleText">
     <div class="samples">
       <xsl:apply-templates/>
-      <xsl:apply-templates select="../note"/>
     </div>
   </xsl:template>
   <xsl:template match="head | rubric | incipit | sampleText/p | explicit | finalRubric">
