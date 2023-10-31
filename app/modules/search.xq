@@ -30,15 +30,18 @@ declare variable $options as map(*) :=
     };
 declare variable $titleWords := request:get-parameter("titleWords", ());
 declare variable $authorWords := request:get-parameter("authorWords", ());
-(: Parameter is always submitted so no value is empty string, not empty sequence
+declare variable $exactTitle := request:get-parameter("exactTitle", ());
+(: Parameter is always submitted so no value means empty string, not empty sequence
 Use effective Boolean value to return empty sequence if no query words :)
 declare variable $allWords := normalize-space(string-join(($titleWords, $authorWords), " "))[.];
 
 (: Retrieve mss and facet values :)
 declare variable $all-mss as document-node()+ := 
     collection($pathToMss)[ends-with(base-uri(.), 'xml')];
+declare variable $exactTitleMss as document-node()* := 
+  if ($exactTitle) then $all-mss[descendant::tei:msItemStruct/tei:title = $exactTitle] else $all-mss;
 declare variable $mss as element(tei:TEI)* :=
-    $all-mss/tei:TEI[ft:query(., $allWords, $options)];
+    $exactTitleMss/tei:TEI[ft:query(., $allWords, $options)];
 declare variable $country-facets as map(*) := ft:facets($mss, "country");
 declare variable $settlement-facets as map(*) := ft:facets($mss, "settlement");
 declare variable $repository-facets as map(*) := ft:facets($mss, "repository");

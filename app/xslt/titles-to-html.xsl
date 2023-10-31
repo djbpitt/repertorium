@@ -91,28 +91,29 @@
     </div>
   </xsl:template>
   <xsl:template match="msItemStruct">
-    <!-- ================================================================ -->
-    <!-- <locus> is processed as part of <title>                          -->
-    <!-- ================================================================ -->
     <div class="text">
       <xsl:apply-templates select="title, sampleText"/>
       <xsl:apply-templates select="msItemStruct"/>
     </div>
   </xsl:template>
   <xsl:template match="locus">
-    <xsl:text>(</xsl:text>
+    <xsl:text> [</xsl:text>
     <xsl:apply-templates/>
-    <xsl:text>) </xsl:text>
+    <xsl:text>] </xsl:text>
   </xsl:template>
   <xsl:template match="title">
-    <xsl:apply-templates select="preceding-sibling::locus"/>
     <span>
       <xsl:attribute name="class">
-        <xsl:text>bg</xsl:text>
+        <xsl:value-of select="@xml:lang"/>
+        <xsl:if test="@xml:lang ne /main/lg">
+          <xsl:value-of select="hide"/>
+        </xsl:if>
       </xsl:attribute>
       <xsl:apply-templates/>
     </span>
-    <br/>
+    <xsl:if test="not(following-sibling::title)">
+      <xsl:apply-templates select="../locus"/>
+    </xsl:if>
   </xsl:template>
   <xsl:template match="sampleText">
     <div class="samples">
@@ -191,7 +192,6 @@
       <xsl:apply-templates/>
     </span>
   </xsl:template>
-
   <!-- ================================================================== -->
   <!-- Mode bibl_inline: structured <bibl> inside msItemStruct            -->
   <!-- ================================================================== -->

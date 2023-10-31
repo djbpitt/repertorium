@@ -14,36 +14,28 @@
                     <fieldset>
                         <legend>Filter by</legend>
                         <div>
-                            <label for="country">
-                                <xsl:value-of select="'Country&#xa0;'"/>
-                            </label>
+                            <label for="country">Country&#xa0;</label>
                             <select name="country" id="country">
                                 <option value="">[All]</option>
                                 <xsl:apply-templates select="facets/country-facets/country"/>
                             </select>
-                            <label for="settlement">
-                                <xsl:value-of select="'Settlement&#xa0;'"/>
-                            </label>
+                            <label for="settlement">Settlement&#xa0;</label>
                             <select name="settlement" id="settlement">
                                 <option value="">[All]</option>
                                 <xsl:apply-templates select="facets/settlement-facets/settlement"/>
                             </select>
-                            <label for="repository">
-                                <xsl:value-of select="'Repository&#xa0;'"/>
-                            </label>
+                            <label for="repository">Repository&#xa0;</label>
                             <select name="repository" id="repository">
                                 <option value="">[All]</option>
                                 <xsl:apply-templates select="facets/repository-facets/repository"/>
                             </select>
                             <hr/>
-                            <label for="titleWords">
-                                <xsl:value-of select="'Title words&#xa0;'"/>
-                            </label>
+                            <label for="titleWords">Title words&#xa0;</label>
                             <input type="text" size="40" id="titleWords" name="titleWords"/>
-                            <label for="authorWords">
-                                <xsl:value-of select="'Author words&#xa0;'"/>
-                            </label>
+                            <label for="authorWords">Author words&#xa0;</label>
                             <input type="text" size="38" id="authorWords" name="authorWords"/>
+                            <label for="exactTitle">Exact title&#xa0;</label>
+                            <input type="text" size="38" id="exactTitle" name="exactTitle"/>
                             <hr/>
                         </div>
                         <div>
