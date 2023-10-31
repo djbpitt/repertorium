@@ -8,7 +8,7 @@
     exclude-result-prefixes="#all" version="3.0">
     <xsl:output method="xhtml" html-version="5" omit-xml-declaration="no" include-content-type="no"
         indent="no" byte-order-mark="no"/>
-    <xsl:param name="xslt.fqcontroller" required="yes"/>
+    <xsl:param name="xslt.fqcontroller" required="no"/>
     <xsl:template match="/">
         <html>
             <head>

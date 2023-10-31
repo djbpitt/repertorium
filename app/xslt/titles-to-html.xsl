@@ -106,7 +106,12 @@
   </xsl:template>
   <xsl:template match="title">
     <xsl:apply-templates select="preceding-sibling::locus"/>
-    <xsl:apply-templates/>
+    <span>
+      <xsl:attribute name="class">
+        <xsl:text>bg</xsl:text>
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </span>
     <br/>
   </xsl:template>
   <xsl:template match="sampleText">
