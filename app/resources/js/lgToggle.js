@@ -80,11 +80,6 @@ function changeLang() {
             flagImgs[i].style.boxShadow = 'none';
         }
     }
-    // The form action needs to hold the current cookie value
-    if (document.getElementById('lg_hidden')) {
-        lg_hidden = document.getElementById('lg_hidden');
-        lg_hidden.setAttribute('value', id);
-    }
     switch (id) {
         case 'bg':
             for (var i = 0; i < bgsLength; i++) {
