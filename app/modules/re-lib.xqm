@@ -110,12 +110,14 @@ declare function re:roman($in as xs:double) as xs:string {
     fn:format-integer($in cast as xs:integer,"I")
 };
 
-declare function re:count-matches($node as element(tei:title)) {
+declare function re:count-matches($node as element(tei:msItemStruct)) {
   (: Count mss that contain matching title :)
   let $mss-path as xs:string := 
     replace(system:get-module-load-path(), "xmldb:exist://embedded-eXist-server/", "/")
     ! substring-before(., "/modules") || "/mss"
-  let $count as xs:integer := collection($mss-path)/*[descendant::tei:msItemStruct/tei:title = $node] => count()
+  let $mss as element()+ := collection($mss-path)/*
+  let $titleToMatch as element(tei:title) := $node/tei:title[lang("bg")]
+  let $count as xs:integer := $mss[descendant::tei:msItemStruct/tei:title = $titleToMatch] => count()
   return $count
 };
 
@@ -128,7 +130,7 @@ declare function re:useModelNamespace($node as node()) as item()* {
         case element() return element { "m:" || local-name($node)} {
             $node/@*,
             for $child in $node/node() return re:useModelNamespace($child),
-            if ($node[self::tei:title and parent::tei:msItemStruct]) 
+            if ($node[self::tei:msItemStruct]) 
               then <m:articleCount>{re:count-matches($node)}</m:articleCount>
               else ()
         }

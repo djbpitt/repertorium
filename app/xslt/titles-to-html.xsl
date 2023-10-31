@@ -108,17 +108,19 @@
   </xsl:template>
   <xsl:template match="title">
     <span>
-      <xsl:attribute name="class">
-        <xsl:value-of select="@xml:lang"/>
-        <xsl:if test="@xml:lang ne /main/lg">
-          <xsl:value-of select="hide"/>
-        </xsl:if>
-      </xsl:attribute>
-      <xsl:apply-templates/>
+      <a href="search?exactTitle={encode-for-uri(.)}">
+        <xsl:attribute name="class">
+          <xsl:value-of select="@xml:lang"/>
+          <xsl:if test="@xml:lang ne /main/lg">
+            <xsl:value-of select="hide"/>
+          </xsl:if>
+        </xsl:attribute>
+        <xsl:apply-templates/>
+      </a>
     </span>
     <xsl:if test="not(following-sibling::title)">
       <xsl:apply-templates select="../locus"/>
-      <xsl:apply-templates select="articleCount"/>
+      <xsl:apply-templates select="../articleCount"/>
     </xsl:if>
   </xsl:template>
   <xsl:template match="sampleText">

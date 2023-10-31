@@ -155,6 +155,11 @@
     <xsl:apply-templates/>
     <xsl:text>) </xsl:text>
   </xsl:template>
+  <xsl:template match="articleCount">
+    <xsl:text> (</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>)</xsl:text>
+  </xsl:template>
   <xsl:template match="title">
     <span>
       <xsl:attribute name="class">
@@ -166,6 +171,7 @@
       <xsl:apply-templates/>
     </span>
     <xsl:if test="not(following-sibling::title)">
+      <xsl:apply-templates select="../articleCount"/>
       <br/>
     </xsl:if>
   </xsl:template>
