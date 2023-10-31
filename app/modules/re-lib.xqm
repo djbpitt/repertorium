@@ -6,14 +6,15 @@ declare namespace m = "http://repertorium.obdurodon.org/model";
 (: Awaiting fix of https://github.com/eXist-db/exist/issues/5103 
    Currently using let declarations inside functions instead of 
      prolog variable :)
-(: declare %private variable $re:root-collection as xs:string := 
+(:declare %private variable $re:root-collection as xs:string := 
     replace(system:get-module-load-path(), "xmldb:exist://embedded-eXist-server/", "/")
-    ! substring-before(., "/modules");
-declare %private variable $re:genres as element(genre)+ :=
+    ! substring-before(., "/modules");:)
+(: declare %private variable $re:genres as element(genre)+ :=
     doc(concat($re:root-collection, "/aux/genres.xml"))/descendant::genre; :)
 (: Compute msName to display (individual, specific, general) in three languages :)
 (: declare variable $re:genres as element(genre)+ := 
     doc('/db/apps/repertorium/aux/genres.xml')/descendant::genre; :)
+(:declare variable $re:root-collection-mss as element()+ := collection(concat($re:root-collection, "/mss"))/*;:)
 declare function re:bgMsName($ms as element(tei:TEI)) as xs:string {
     (: eXist-db can optimize FLWOR but not monolithic XPath :)
     (: let $re:genres as element(genre)+ := doc(concat(
@@ -109,14 +110,27 @@ declare function re:roman($in as xs:double) as xs:string {
     fn:format-integer($in cast as xs:integer,"I")
 };
 
+declare function re:count-matches($node as element(tei:title)) {
+  (: Count mss that contain matching title :)
+  let $mss-path as xs:string := 
+    replace(system:get-module-load-path(), "xmldb:exist://embedded-eXist-server/", "/")
+    ! substring-before(., "/modules") || "/mss"
+  let $count as xs:integer := collection($mss-path)/*[descendant::tei:msItemStruct/tei:title = $node] => count()
+  return $count
+};
+
 declare function re:useModelNamespace($node as node()) as item()* {
-    (: Change all namespaces to m: but retain local name 
+    (: Change all namespaces to m: but retain local name
+       Add count of each article title in corpus
        Complex content is more easily managed with XSLT :)
     typeswitch($node)
         case text() return $node
         case element() return element { "m:" || local-name($node)} {
             $node/@*,
-            for $child in $node/node() return re:useModelNamespace($child)
+            for $child in $node/node() return re:useModelNamespace($child),
+            if ($node[self::tei:title and parent::tei:msItemStruct]) 
+              then <m:articleCount>{re:count-matches($node)}</m:articleCount>
+              else ()
         }
         default return "ERROR"
 };
