@@ -145,10 +145,9 @@
   <xsl:template match="msItemStruct">
     <!-- ================================================================ -->
     <!-- Control order to put notes last                                  -->
-    <!-- <locus> is processed as part of <title>                          -->
     <!-- ================================================================ -->
     <div class="text">
-      <xsl:apply-templates select="title, sampleText, msItemStruct"/>
+      <xsl:apply-templates select="locus, title, sampleText, msItemStruct"/>
     </div>
   </xsl:template>
   <xsl:template match="locus">
@@ -157,9 +156,18 @@
     <xsl:text>) </xsl:text>
   </xsl:template>
   <xsl:template match="title">
-    <xsl:apply-templates select="preceding-sibling::locus"/>
-    <xsl:apply-templates/>
-    <br/>
+    <span>
+      <xsl:attribute name="class">
+        <xsl:value-of select="@xml:lang"/>
+        <xsl:if test="@xml:lang ne /main/lang">
+          <xsl:value-of select="hide"/>
+        </xsl:if>
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </span>
+    <xsl:if test="not(following-sibling::title)">
+      <br/>
+    </xsl:if>
   </xsl:template>
   <xsl:template match="sampleText">
     <div class="samples">
