@@ -8,6 +8,67 @@
         indent="no" byte-order-mark="no"/>
     <xsl:param name="xslt.fqcontroller" required="no"/>
     <xsl:param name="xslt.query-filename" required="no"/>
+    <!-- ================================================================ -->
+    <!-- Page-top widgets                                                 -->
+    <!-- ================================================================ -->
+    <xsl:variable name="titles" as="element(span)">
+        <span class="flag" id="titles">
+            <a href="titles?filename={$xslt.query-filename}">
+                <img title="Explore contents" src="resources/images/texts.svg"
+                    alt="[Explore contents]"/>
+            </a>
+        </span>
+    </xsl:variable>
+    <xsl:variable name="codicology" as="element(span)">
+        <span class="flag" id="msDesc">
+            <a href="msDesc?filename={$xslt.query-filename}">
+                <img title="Read codicological description" src="resources/images/codicology.svg"
+                    alt="[Read codicological description]"/>
+            </a>
+        </span>
+    </xsl:variable>
+    <xsl:variable name="xml" as="element(span)">
+        <span class="flag" id="xml">
+            <a href="mss/{$xslt.query-filename}">
+                <img title="View XML source" src="resources/images/xml.svg" alt="[View XML source]"
+                />
+            </a>
+        </span>
+    </xsl:variable>
+    <xsl:variable name="search" as="element(span)">
+        <span class="flag" id="search">
+            <a href="search">
+                <img title="Search manuscripts" src="resources/images/eye-monitoring-icon.svg"
+                    alt="[Search manuscripts]"/>
+            </a>
+        </span>
+    </xsl:variable>
+    <xsl:variable name="plectogram" as="element(span)">
+        <span class="flag" id="plectogram">
+            <a href="plectogram">
+                <img title="Create plectogram" src="resources/images/plectogram.svg"
+                    alt="[Create plectogram]"/>
+            </a>
+        </span>
+    </xsl:variable>
+    <xsl:variable name="slider" as="element(span)">
+        <span>SLIDER</span>
+    </xsl:variable>
+    <xsl:variable name="flags" as="element(span)+">
+        <span class="flag" id="bg">
+            <img title="Use Bulgarian titles" src="resources/images/bg.svg" alt="[Bulgarian]"/>
+        </span>
+        <span class="flag" id="en">
+            <img title="Use English titles" src="resources/images/us.svg" alt="[Englist]"/>
+        </span>
+        <span class="flag" id="ru">
+            <img title="Use Russian titles" src="resources/images/ru.svg" alt="[Russian]"/>
+        </span>
+    </xsl:variable>
+
+    <!-- ================================================================ -->
+    <!-- Main                                                             -->
+    <!-- ================================================================ -->
     <xsl:template match="/">
         <html>
             <head>
@@ -66,72 +127,39 @@
                 <!-- ==================================================== -->
                 <!-- Widget allocations                                   -->
                 <!--                                                      -->
-                <!-- Widget order: titles/codicology, xml, plectogram,    -->
-                <!--   search, flags                                      -->
+                <!-- Widgets in order, with pages:                        -->
+                <!--   titles: codicology                                 -->
+                <!--   codicology: titles                                 -->
+                <!--   xml: codicology, titles                            -->
+                <!--   plectogram: search, titles                         -->
+                <!--   search: titles, codicology, plectogram             -->
+                <!--   flags: search, titles, plectogram                  -->
                 <!--                                                      -->
-                <!-- index, bibliography: none                            -->
-                <!-- search: plectogram, flags                            -->
-                <!-- codicology: titles, xml, plectogram, search flags    -->
-                <!-- titles: codicology, xml, search                      -->
-                <!-- plectogram: slider, search, flags                    -->
+                <!-- Pages and their widgets, in order:                   -->
+                <!--   index: none                                        -->
+                <!--   bibliography: none                                 -->
+                <!--   search: plectogram, flags                          -->
+                <!--   codicology: titles, xml, plectogram, search        -->
+                <!--   titles: codicology, xml, search                    -->
+                <!--   plectogram: slider, search, flags                  -->
                 <!-- ==================================================== -->
-                <xsl:if test="../@id = ('msDesc', 'titles')">
-                    <!-- ================================================ -->
-                    <!-- Search widget in codicology and titles           -->
-                    <!-- Both link to XML and to each other, but not to   -->
-                    <!--   themselves                                     -->
-                    <!-- ================================================ -->
-                    <xsl:choose>
-                        <xsl:when test="../@id eq 'msDesc'">
-                            <span class="flag" id="codicology">
-                                <a href="titles?filename={$xslt.query-filename}">
-                                    <img title="View codicological description"
-                                        src="resources/images/texts.svg"
-                                        alt="[View codicological description]"/>
-                                </a>
-                            </span>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <span class="flag" id="texts">
-                                <a href="msDesc?filename={$xslt.query-filename}">
-                                    <img title="View list of contents"
-                                        src="resources/images/codicology.svg"
-                                        alt="[View list of contents]"/>
-                                </a>
-                            </span>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <span>&#xa0;</span>
-                    <span class="flag" id="xml">
-                        <a href="mss/{$xslt.query-filename}">
-                            <img title="View XML source" src="resources/images/xml.svg"
-                                alt="[View XML source]"/>
-                        </a>
-                    </span>
-                    <span>&#xa0;</span>
-                    <xsl:if test="../@id eq 'titles'">
-                        <span class="flag" id="plectogram">
-                            <a href="x">
-                                <img title="Create plectogram" src="resources/images/plectogram.svg"
-                                    alt="[Create plectogram]"/>
-                            </a>
-                        </span>
-                    </xsl:if>
-                    <span>&#xa0;</span>
-                    <span class="flag" id="search">
-                        <a href="search">
-                            <img title="Search manuscripts"
-                                src="resources/images/eye-monitoring-icon.svg"
-                                alt="[Search manuscripts]"/>
-                        </a>
-                    </span>
-                </xsl:if>
+                <xsl:choose>
+                    <xsl:when test="../@id eq 'search'">
+                        <xsl:sequence select="$plectogram, $flags"/>
+                    </xsl:when>
+                    <xsl:when test="../@id eq 'msDesc'">
+                        <xsl:sequence select="$titles, $xml, $plectogram, $search"/>
+                    </xsl:when>
+                    <xsl:when test="../@id eq 'titles'"> </xsl:when>
+                    <xsl:when test="./@id eq 'plectogram'">
+                        <xsl:sequence select="$slider, $search, $flags"/>
+                    </xsl:when>
+                </xsl:choose>
                 <xsl:if test="../@id eq 'search'">
                     <!-- ================================================ -->
                     <!-- Lg widgets everywhere except index               -->
                     <!-- ================================================ -->
-                    <span class="flags">
-                        <!--
+                    <!--
                             Slider: plectogram.php, plectogram-dev-checkbox.php
                             Codicology: readFile.php
                             Texts: msDesc.php
@@ -144,20 +172,6 @@
                                 worksByAuthor.php
                             Browse, search, lg flags: All
                         -->
-                        <span>&#xa0;</span>
-                        <span class="flag" id="bg">
-                            <img title="Use Bulgarian titles" src="resources/images/bg.svg"
-                                alt="[Bulgarian]"/>
-                        </span>
-                        <span class="flag" id="en">
-                            <img title="Use English titles" src="resources/images/us.svg"
-                                alt="[Englist]"/>
-                        </span>
-                        <span class="flag" id="ru">
-                            <img title="Use Russian titles" src="resources/images/ru.svg"
-                                alt="[Russian]"/>
-                        </span>
-                    </span>
                 </xsl:if>
             </span>
         </h2>
