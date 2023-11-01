@@ -427,19 +427,25 @@ div.bibData > .scope:before {
 /* Search page */
 #contents {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 #searchControls {
   padding-right: 1em;
   border-right: 1px lightgray solid;
 }
-#searchControls fieldset > div:first-of-type {
+#searchWidgets {
   /* https://stackoverflow.com/questions/58906591/aligning-form-labels-in-a-css-grid */
   display: inline-grid;
   grid-template-columns: auto 1fr;
-  gap: .3em;
-  margin-bottom: .5em;
+  gap: .5em;
   min-width: 450px;
+  margin-bottom: .3em;
+  width: 100%;
+}
+#searchWidgets > div {
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  gap: .3em;
 }
 #searchControls select {
   background-color: white; /* Firefox defaults to gray */
@@ -447,7 +453,7 @@ div.bibData > .scope:before {
 #searchControls fieldset button {
   margin-left: .3em;
 }
-#searchControls fieldset > div > hr {
+#searchControls fieldset hr {
   grid-column: 1/3;
   width: 95%;
 }
