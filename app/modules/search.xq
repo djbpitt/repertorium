@@ -68,9 +68,6 @@ declare function local:facets-to-xml($name as xs:string, $input as map(*)) {
 };
 <m:main>
   <m:h2>Search the collection</m:h2>
-  <m:titleWords>{$titleWords}</m:titleWords>
-  <m:authorWords>{$titleWords}</m:authorWords>
-  <m:both>{string-join(($titleWords, $authorWords), " ")}</m:both>
   <m:ul>{
       for $ms in $mss
       (: bg and ru titles can be bg, ru, or tei:msName :)

@@ -33,11 +33,17 @@
                 </div>
                 <div id="textBoxes">
                   <label for="titleWords">Title words&#xa0;</label>
-                  <input type="text" id="titleWords" name="titleWords"/>
+                  <input type="text" id="titleWords" name="titleWords">
+                    <xsl:attribute name="value" select="/main/inputs/input[@k eq 'titleWords']"/>
+                  </input>
                   <label for="authorWords">Author words&#xa0;</label>
-                  <input type="text" id="authorWords" name="authorWords"/>
+                  <input type="text" id="authorWords" name="authorWords">
+                    <xsl:attribute name="value" select="/main/inputs/input[@k eq 'authorWords']"/>
+                  </input>
                   <label for="exactTitle">Exact title&#xa0;</label>
-                  <input type="text" id="exactTitle" name="exactTitle"/>
+                  <input type="text" id="exactTitle" name="exactTitle">
+                    <xsl:attribute name="value" select="/main/inputs/input[@k eq 'exactTitle']"/>
+                  </input>
                 </div>
               </div>
               <hr/>
