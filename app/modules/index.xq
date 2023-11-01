@@ -24,21 +24,11 @@ declare option output:indent "no";
             Bojadžiev, Anisava Miltenova, and Diljana Radoslavova.</m:p>
         </m:section>
         <m:section>
-            <m:title>Manuscripts</m:title>
+            <m:title>For users</m:title>
             <m:ul>
-                <m:li><m:a url="search">Search</m:a> the collection</m:li>
-                <m:li><m:a url="dendrogram">Dendrogram</m:a> overview of corpus</m:li>
-            </m:ul>
-            <m:p>Manuscript descriptions from the related Slovo-ASO project can be found at <m:a url="http://aso.obdurodon.org">http://aso.obdurodon.org</m:a>.</m:p>
-        </m:section>
-        <m:section>
-            <m:title>Bibliography</m:title>
-            <m:p>Bibliographic references in the manuscript descriptions are maintained in a 
-            separate bibliographic database file, which can be browsed or searched.</m:p>
-            <m:ul>
-                <m:li><m:a url="bib-browse">Browse</m:a> the bibliography 
-                (<m:a url="aux/bib.xml"><m:svg src="resources/images/xml.svg"/></m:a>)</m:li>
-                <m:li><m:a url="bib-search">Search</m:a> the bibliography</m:li>
+                <m:li><m:a url="search">Explore the manuscripts</m:a></m:li>
+                <!--<m:li><m:a url="dendrogram">Dendrogram</m:a> overview of corpus</m:li>-->
+                <m:li><m:a url="bib-search">Explore the bibliography</m:a></m:li>
             </m:ul>
         </m:section>
         <m:section>
