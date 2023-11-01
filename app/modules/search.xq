@@ -36,16 +36,20 @@ Use effective Boolean value to return empty sequence if no query words :)
 
 (: Retrieve mss and facet values :)
 declare variable $all-mss as document-node()+ :=
-collection($pathToMss)[ends-with(base-uri(.), 'xml')];
+  collection($pathToMss)[ends-with(base-uri(.), 'xml')];
 declare variable $exactTitleMss as document-node()* :=
-if ($exactTitle) then
-  $all-mss[descendant::tei:msItemStruct/tei:title = $exactTitle]
-else
-  $all-mss;
+  if ($exactTitle) then
+    $all-mss[descendant::tei:msItemStruct/tei:title = $exactTitle]
+  else
+    $all-mss;
 declare variable $wordMss as node()* :=
-  $exactTitleMss/descendant::tei:msItemStruct/tei:author[ft:query(., $authorWords)]/ancestor::document-node()
-  intersect
-  $exactTitleMss/descendant::tei:msItemStruct/tei:title[ft:query(., $titleWords)]/ancestor::document-node();
+  if ($titleWords or $authorWords) 
+  then
+    $exactTitleMss/descendant::tei:msItemStruct/tei:author[ft:query(., $authorWords)]/ancestor::document-node()
+    intersect
+    $exactTitleMss/descendant::tei:msItemStruct/tei:title[ft:query(., $titleWords)]/ancestor::document-node()
+  else
+    $exactTitleMss;
 declare variable $mss as element(tei:TEI)* :=
   $wordMss/tei:TEI[ft:query(., (), $options)];
 declare variable $country-facets as map(*) := ft:facets($mss, "country");

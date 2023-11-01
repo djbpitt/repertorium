@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:math="http://www.w3.org/2005/xpath-functions/math"
-    xmlns:svg="http://www.w3.org/2000/svg"
-    xpath-default-namespace="http://www.w3.org/1999/xhtml" 
-    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:math="http://www.w3.org/2005/xpath-functions/math" xmlns:svg="http://www.w3.org/2000/svg"
+    xpath-default-namespace="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml"
     exclude-result-prefixes="#all" version="3.0">
     <xsl:output method="xhtml" html-version="5" omit-xml-declaration="no" include-content-type="no"
         indent="no" byte-order-mark="no"/>
@@ -27,9 +25,9 @@
                 <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
                 <link rel="stylesheet" type="text/css" href="resources/css/repertorium.css"/>
                 <link rel="icon" href="resources/images/favicon.ico" type="image/svg+xml"/>
-                <script src="resources/js/lgToggle.js"></script>
+                <script src="resources/js/lgToggle.js"/>
                 <xsl:if test="descendant::main/@id eq 'search'">
-                    <script src="resources/js/search.js"></script>
+                    <script src="resources/js/search.js"/>
                 </xsl:if>
             </head>
             <body>
@@ -46,8 +44,7 @@
 
                 <footer>
                     <hr/>
-                    <p>Maintained by David J. Birnbaum. Results generated
-                            <xsl:value-of select="
+                    <p>Maintained by David J. Birnbaum. Results generated <xsl:value-of select="
                                 current-dateTime() =>
                                 format-dateTime('[Y0001]-[M01]-[D01] at [H01]:[m01]:[s01] [z,6-6]')
                                 "/>. <a
@@ -68,8 +65,15 @@
     <xsl:template match="h2">
         <h2>
             <xsl:apply-templates/>
-            <xsl:if test="../@id ne 'index' and not(following-sibling::*[1][self::h2])">
-                <span id="widgets">
+            <span id="widgets">
+                <xsl:if test="../@id = 'msDesc'">
+                    <span class="flag" id="search">
+                        <img title="Search manuscripts"
+                            src="resources/images/eye-monitoring-icon.svg"
+                            alt="[Search manuscripts]"/>
+                    </span>
+                </xsl:if>
+                <xsl:if test="../@id ne 'index' and not(following-sibling::*[1][self::h2])">
                     <span class="flags">
                         <!--
                             Slider: plectogram.php, plectogram-dev-checkbox.php
@@ -85,12 +89,21 @@
                             Browse, search, lg flags: All
                         -->
                         <span>&#xa0;&#xa0;</span>
-                        <span class="flag" id="bg"><img title="Use Bulgarian titles" src="resources/images/bg.svg" alt="[Bulgarian]"/></span>
-                        <span class="flag" id="en"><img title="Use English titles" src="resources/images/us.svg" alt="[Englist]"/></span>
-                        <span class="flag" id="ru"><img title="Use Russian titles" src="resources/images/ru.svg" alt="[Russian]"/></span>
+                        <span class="flag" id="bg">
+                            <img title="Use Bulgarian titles" src="resources/images/bg.svg"
+                                alt="[Bulgarian]"/>
+                        </span>
+                        <span class="flag" id="en">
+                            <img title="Use English titles" src="resources/images/us.svg"
+                                alt="[Englist]"/>
+                        </span>
+                        <span class="flag" id="ru">
+                            <img title="Use Russian titles" src="resources/images/ru.svg"
+                                alt="[Russian]"/>
+                        </span>
                     </span>
-                </span>
-            </xsl:if>
+                </xsl:if>
+            </span>
         </h2>
     </xsl:template>
     <xsl:template match="h2[. eq 'Repertorium']">
