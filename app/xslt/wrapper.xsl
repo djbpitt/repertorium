@@ -37,12 +37,6 @@
                         Bulgarian Literature and Letters</h1>
                 </header>
                 <xsl:apply-templates select="main"/>
-                <!--
-                <span id="plectogram"><input type="image" src="../resources/images/ico_compare.png" id="plectogram_image" height="16" width="16" title="Generate plectogram" alt="[Generate plectogram]"/></span>
-                <span id="browse"><a title="Browse the collection" href="browse"><img src="../resources/images/browse.png" alt="[Browse]"/></a></span>
-                <span id="search"><a title="Search the collection" href="search"><img src="../resources/images/search.png" alt="[Search]"/></a></span>
-                -->
-
                 <footer>
                     <hr/>
                     <p>Maintained by David J. Birnbaum. Results generated <xsl:value-of select="
@@ -58,7 +52,9 @@
         </html>
     </xsl:template>
     <xsl:template match="h2[not(ancestor::main/@id = ('index'))]" priority="10">
-        <!-- Surround title with rule on all pages except main and titles -->
+        <!-- ============================================================ -->
+        <!-- Surround title with rule on all pages except main            -->
+        <!-- ============================================================ -->
         <hr/>
         <xsl:next-match/>
         <hr/>
@@ -67,6 +63,18 @@
         <h2>
             <xsl:apply-templates/>
             <span id="widgets">
+                <!-- ==================================================== -->
+                <!-- Widget allocations                                   -->
+                <!--                                                      -->
+                <!-- Widget order: titles/codicology, xml, plectogram,    -->
+                <!--   search, flags                                      -->
+                <!--                                                      -->
+                <!-- index, bibliography: none                            -->
+                <!-- search: plectogram, flags                            -->
+                <!-- codicology: titles, xml, plectogram, search flags    -->
+                <!-- titles: codicology, xml, search                      -->
+                <!-- plectogram: slider, search, flags                    -->
+                <!-- ==================================================== -->
                 <xsl:if test="../@id = ('msDesc', 'titles')">
                     <!-- ================================================ -->
                     <!-- Search widget in codicology and titles           -->
@@ -95,11 +103,20 @@
                     </xsl:choose>
                     <span>&#xa0;</span>
                     <span class="flag" id="xml">
-                        <a href="../modules/{'filename.xml'}">
+                        <a href="mss/{$xslt.query-filename}">
                             <img title="View XML source" src="resources/images/xml.svg"
                                 alt="[View XML source]"/>
                         </a>
                     </span>
+                    <span>&#xa0;</span>
+                    <xsl:if test="../@id eq 'titles'">
+                        <span class="flag" id="plectogram">
+                            <a href="x">
+                                <img title="Create plectogram" src="resources/images/plectogram.svg"
+                                    alt="[Create plectogram]"/>
+                            </a>
+                        </span>
+                    </xsl:if>
                     <span>&#xa0;</span>
                     <span class="flag" id="search">
                         <a href="search">
@@ -109,7 +126,7 @@
                         </a>
                     </span>
                 </xsl:if>
-                <xsl:if test="../@id ne 'index' and not(following-sibling::*[1][self::h2])">
+                <xsl:if test="../@id eq 'search'">
                     <!-- ================================================ -->
                     <!-- Lg widgets everywhere except index               -->
                     <!-- ================================================ -->
