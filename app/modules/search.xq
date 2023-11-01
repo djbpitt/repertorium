@@ -33,7 +33,6 @@ declare variable $authorWords := request:get-parameter("authorWords", ());
 declare variable $exactTitle := request:get-parameter("exactTitle", ());
 (: Parameter is always submitted so no value means empty string, not empty sequence
 Use effective Boolean value to return empty sequence if no query words :)
-declare variable $allWords := normalize-space(string-join(($titleWords, $authorWords), " "))[.];
 
 (: Retrieve mss and facet values :)
 declare variable $all-mss as document-node()+ :=
@@ -43,8 +42,12 @@ if ($exactTitle) then
   $all-mss[descendant::tei:msItemStruct/tei:title = $exactTitle]
 else
   $all-mss;
+declare variable $wordMss as node()* :=
+  $exactTitleMss/descendant::tei:msItemStruct/tei:author[ft:query(., $authorWords)]/ancestor::document-node()
+  intersect
+  $exactTitleMss/descendant::tei:msItemStruct/tei:title[ft:query(., $titleWords)]/ancestor::document-node();
 declare variable $mss as element(tei:TEI)* :=
-$exactTitleMss/tei:TEI[ft:query(., $allWords, $options)];
+  $wordMss/tei:TEI[ft:query(., (), $options)];
 declare variable $country-facets as map(*) := ft:facets($mss, "country");
 declare variable $settlement-facets as map(*) := ft:facets($mss, "settlement");
 declare variable $repository-facets as map(*) := ft:facets($mss, "repository");
@@ -113,7 +116,6 @@ declare function local:facets-to-xml($name as xs:string, $input as map(*)) {
         "repository": $repository-input,
         "titleWords": $titleWords,
         "authorWords": $authorWords,
-        "allWords": $allWords,
         "exactTitle": $exactTitle
       }
       return

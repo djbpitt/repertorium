@@ -4,15 +4,8 @@
     <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
     <analyzer id="ws" class="org.apache.lucene.analysis.core.WhitespaceAnalyzer"/>
     <lucene>
-      <text qname="tei:title">
-        <facet dimension="country"
-          expression="ancestor::tei:TEI/descendant::tei:msIdentifier/tei:country | ancestor::tei:TEI/descendant::tei:altIdentifier[@type eq 'partial']/tei:country"/>
-        <facet dimension="settlement"
-          expression="ancestor::tei:TEI/descendant::tei:msIdentifier/tei:settlement | ancestor::tei:TEI/descendant::tei:altIdentifier[@type eq 'partial']/tei:settlement"/>
-        <facet dimension="repository"
-          expression="ancestor::tei:TEI/descendant::tei:msIdentifier/tei:repository | ancestor::tei:TEI/descendant::tei:altIdentifier[@type eq 'partial']/tei:repository"
-        />
-      </text>
+      <text qname="tei:title"/>
+      <text qname="tei:author"/>      
       <text qname="tei:country"/>
       <text qname="tei:settlement"/>
       <text qname="tei:repository"/>
