@@ -56,7 +56,7 @@
             </body>
         </html>
     </xsl:template>
-    <xsl:template match="h2[not(ancestor::main/@id = ('titles', 'index'))]" priority="10">
+    <xsl:template match="h2[not(ancestor::main/@id = ('index'))]" priority="10">
         <!-- Surround title with rule on all pages except main and titles -->
         <hr/>
         <xsl:next-match/>
@@ -66,11 +66,13 @@
         <h2>
             <xsl:apply-templates/>
             <span id="widgets">
-                <xsl:if test="../@id = 'msDesc'">
+                <xsl:if test="../@id = ('msDesc', 'titles')">
                     <span class="flag" id="search">
-                        <img title="Search manuscripts"
-                            src="resources/images/eye-monitoring-icon.svg"
-                            alt="[Search manuscripts]"/>
+                        <a href="search">
+                            <img title="Search manuscripts"
+                                src="resources/images/eye-monitoring-icon.svg"
+                                alt="[Search manuscripts]"/>
+                        </a>
                     </span>
                 </xsl:if>
                 <xsl:if test="../@id ne 'index' and not(following-sibling::*[1][self::h2])">
