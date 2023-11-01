@@ -7,6 +7,7 @@
     <xsl:output method="xhtml" html-version="5" omit-xml-declaration="no" include-content-type="no"
         indent="no" byte-order-mark="no"/>
     <xsl:param name="xslt.fqcontroller" required="no"/>
+    <xsl:param name="xslt.query-filename" required="no"/>
     <xsl:template match="/">
         <html>
             <head>
@@ -67,6 +68,39 @@
             <xsl:apply-templates/>
             <span id="widgets">
                 <xsl:if test="../@id = ('msDesc', 'titles')">
+                    <!-- ================================================ -->
+                    <!-- Search widget in codicology and titles           -->
+                    <!-- Both link to XML and to each other, but not to   -->
+                    <!--   themselves                                     -->
+                    <!-- ================================================ -->
+                    <xsl:choose>
+                        <xsl:when test="../@id eq 'msDesc'">
+                            <span class="flag" id="codicology">
+                                <a href="titles?filename={$xslt.query-filename}">
+                                    <img title="View codicological description"
+                                        src="resources/images/texts.svg"
+                                        alt="[View codicological description]"/>
+                                </a>
+                            </span>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <span class="flag" id="texts">
+                                <a href="msDesc?filename={$xslt.query-filename}">
+                                    <img title="View list of contents"
+                                        src="resources/images/codicology.svg"
+                                        alt="[View list of contents]"/>
+                                </a>
+                            </span>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <span>&#xa0;</span>
+                    <span class="flag" id="xml">
+                        <a href="../modules/{'filename.xml'}">
+                            <img title="View XML source" src="resources/images/xml.svg"
+                                alt="[View XML source]"/>
+                        </a>
+                    </span>
+                    <span>&#xa0;</span>
                     <span class="flag" id="search">
                         <a href="search">
                             <img title="Search manuscripts"
@@ -76,6 +110,9 @@
                     </span>
                 </xsl:if>
                 <xsl:if test="../@id ne 'index' and not(following-sibling::*[1][self::h2])">
+                    <!-- ================================================ -->
+                    <!-- Lg widgets everywhere except index               -->
+                    <!-- ================================================ -->
                     <span class="flags">
                         <!--
                             Slider: plectogram.php, plectogram-dev-checkbox.php
@@ -90,7 +127,7 @@
                                 worksByAuthor.php
                             Browse, search, lg flags: All
                         -->
-                        <span>&#xa0;&#xa0;</span>
+                        <span>&#xa0;</span>
                         <span class="flag" id="bg">
                             <img title="Use Bulgarian titles" src="resources/images/bg.svg"
                                 alt="[Bulgarian]"/>

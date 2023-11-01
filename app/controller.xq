@@ -10,6 +10,7 @@ declare variable $exist:resource external;
 declare variable $uri as xs:anyURI := request:get-uri();
 declare variable $context as xs:string := request:get-context-path();
 declare variable $fqcontroller as xs:string := concat($context, $exist:prefix, $exist:controller, '/');
+declare variable $query-filename as xs:string? := request:get-parameter("filename", ());
 
 if ($exist:resource eq '') then
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
@@ -32,6 +33,7 @@ else
                 <clear-attribute name="xslt.input"/>
                 <set-attribute name="xslt.stylesheet" value="{concat($exist:root, $exist:controller, '/xslt/wrapper.xsl')}"/>
                 <set-attribute name="xslt.fqcontroller" value="{$fqcontroller}"/>
+                <set-attribute name="xslt.query-filename" value="{$query-filename}"/>
             </forward>}
         </view>
             <cache-control cache="no"/>
