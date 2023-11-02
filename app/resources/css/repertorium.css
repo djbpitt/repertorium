@@ -56,10 +56,80 @@ footer {
   font-size: smaller;
 }
 /* ======================================================================= */
-/* Body, all pages                                                         */
+/* Body                                                                    */
 /* ======================================================================= */
 body {
   overflow-x: hidden;
+}
+/* ======================================================================= */
+/* Global                                                                  */
+/* ======================================================================= */
+a {
+  color: blue;
+}
+/* ======================================================================= */
+/* Search page                                                             */
+/* ======================================================================= */
+#contents {
+  display: flex;
+  flex-direction: column;
+}
+#searchControls {
+  padding-right: 1em;
+  border-right: 1px lightgray solid;
+}
+#searchWidgets {
+  /* https://stackoverflow.com/questions/58906591/aligning-form-labels-in-a-css-grid */
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  gap: .5em;
+  min-width: 450px;
+  margin-bottom: .3em;
+  width: 100%;
+}
+#searchWidgets > div {
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  gap: .3em;
+}
+#searchControls select,
+#searchControls input{
+  /* Firefox defaults to gray */
+  background-color: white;
+  border: 1px solid black;
+}
+#searchControls *:disabled {
+  /* We disable unpopulated search widgets on submit to avoid cluttering the URL
+   * These settings suppress the flash of default disabled styling */
+  color: initial;
+  opacity: initial;
+  border-color: initial;
+  border: 1px black solid;
+  background-color: white;
+}
+#searchControls fieldset button {
+  margin-left: .3em;
+}
+#searchControls fieldset hr {
+  grid-column: 1/3;
+  width: 95%;
+}
+#dropDowns > select {
+  width: 25em;
+}
+label {
+  white-space: nowrap;
+}
+#contents {
+  flex: 1;
+}
+#mss > h3,
+#searchControls > h3 {
+  text-align: center;
+}
+#mss ul {
+  text-indent: -1.5em;
+  list-style-type: none;
 }
 /* ======================================================================= */
 /* sampleText subsections .                                                */
@@ -142,12 +212,18 @@ span.note:before {
   font-family: serif;
   color: gray;
 }
-
 /* ======================================================================= */
 /* sampleText inline elements                                              */
 /* ======================================================================= */
 sup {
   line-height: 0;
+}
+.sic {
+  color: red;
+}
+.sic:after {
+  content: " [sic]";
+  font-family: serif;
 }
 /* ======================================================================= */
 /* Subsections of codicology (other than contents)                         */
@@ -155,11 +231,8 @@ sup {
 .additions {
   font-size: 80%;
 }
-div.archeaography {
-  text-indent: 2em;
-}
 /* ======================================================================= */
-/* Navigation widgets (except inline with titles)                          */
+/* Navigation widgets (except inline links to codicology and titles)       */
 /* ======================================================================= */
 #widgets {
   position: absolute;
@@ -183,21 +256,9 @@ div.archeaography {
   padding-bottom: .2em;
 }
 /* ======================================================================= */
-/* Inline language flag icons                                              */
+/* Bibliography                                                            */
 /* ======================================================================= */
-.small {
-  font-size: smaller;
-}
-.archeography {
-  display: inline !important;
-}
-.sic {
-  color: red;
-}
-.sic:after {
-  content: " [sic]";
-  font-family: serif;
-}
+
 span.bibl:before {
   /* Distinguish from div.bibl */
   content: " (";
@@ -222,9 +283,6 @@ span.gap:after {
 }
 span.add {
   color: green;
-}
-a {
-  color: blue;
 }
 .label {
   color: gray;
@@ -309,12 +367,6 @@ th {
 /* in-line SVG in manuscript listings*/
 li .lozenge {
   height: 13px;
-}
-#search li > a > svg {
-  padding: 0 0.15em;
-}
-#search.flag img {
-  border: none;
 }
 .flags .lozenge {
   margin-bottom: 0;
