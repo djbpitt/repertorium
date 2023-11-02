@@ -12,12 +12,12 @@
     <!-- ================================================================ -->
     <!-- Main                                                             -->
     <!-- ================================================================ -->
-    <main id="msDesc">
+    <main id="codicology">
       <!-- ============================================================ -->
       <!-- En title is main, Bg invokes Ru as sibling                   -->
       <!-- ============================================================ -->
       <xsl:apply-templates select="enMsName, bgMsName"/>
-      <table id="msDescTable">
+      <table id="codicologyTable">
         <xsl:apply-templates select="
             (
             location, date, material, extent, foliation, collation, watermarks,
@@ -137,7 +137,7 @@
   <xsl:template match="msContents">
     <tr>
       <th>Contents</th>
-      <td id="msDescContents">
+      <td id="codicologyontents">
         <xsl:apply-templates select="msItemStruct"/>
       </td>
     </tr>

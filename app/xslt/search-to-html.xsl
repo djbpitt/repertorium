@@ -87,7 +87,7 @@
         select="country, settlement, repository, idno, origDate, uri, availability"/>
       <br/>
       <xsl:apply-templates select="bg, en, ru"/>
-      <a href="msDesc?filename={uri}.xml">
+      <a href="codicology?filename={uri}.xml">
         <xsl:sequence select="doc('../resources/images/codicology.svg')"/>
       </a>
       <a href="titles?filename={uri}.xml">

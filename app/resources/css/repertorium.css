@@ -1,3 +1,6 @@
+/* ======================================================================= */
+/* Fonts                                                                   */
+/* ======================================================================= */
 @font-face {
   font-family: "Bukyvede";
   src: 
@@ -17,7 +20,6 @@ url('fonts/Bukyvede_Light.svg#1d6dadb2045bcf2c9fcbd3f4b1735ff4') format('svg'); 
   font-style: normal;
   font-weight: 200;
 }
-
 @font-face {
   font-family: "Old Standard Regular";
   src: url("fonts/OldStandard-Regular.woff2") format("woff2"), 
@@ -27,7 +29,9 @@ url("fonts/OldStandard-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
-
+/* ======================================================================= */
+/* Global font stacks                                                      */
+/* ======================================================================= */
 .os {
   font-family: "Old Standard Regular", BukyvedeLightWeb;
   font-weight: normal;
@@ -35,29 +39,39 @@ url("fonts/OldStandard-Regular.ttf") format("truetype");
 .gk {
   font-family: "Old Standard Regular", Palatino;
 }
-/* in folio view, text on left, image on right, scale image */
-body {
-  overflow-x: hidden;
-}
-footer {
-  font-size: smaller;
-}
+/* ======================================================================= */
+/* Header (contains link to home and site title                            */
+/* ======================================================================= */
 h1 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-sup {
-  line-height: 0;
+/* ======================================================================= */
+/* Footers:                                                                */
+/*   Copyright colophon on all pages                                       */
+/*   Ms colophon on titles and codicology pages                            */
+/* ======================================================================= */
+footer {
+  font-size: smaller;
 }
-/* Components of sampleText: rubric, head, incipit, explicit, p, div */
-span.incipit,
-span.explicit,
+/* ======================================================================= */
+/* Body, all pages                                                         */
+/* ======================================================================= */
+body {
+  overflow-x: hidden;
+}
+/* ======================================================================= */
+/* sampleText subsections .                                                */
+/* <note> is regular font, otherwise all are formatted identically         */
+/* ======================================================================= */
 span.head,
 span.rubric,
+span.incipit,
+span.sample,
+span.explicit,
 span.finalRubric,
 span.colophon,
-span.sample,
 span.note {
   display: block;
   margin-top: 0;
@@ -65,25 +79,29 @@ span.note {
   text-indent: 0;
   font-size: 90%;
 }
-span.incipit,
-span.explicit,
 span.head,
 span.rubric,
+span.incipit,
+span.sample,
+span.explicit,
 span.finalRubric,
-span.colophon,
-span.sample {
+span.colophon
+{
   font-family: "Old Standard Regular", BukyvedeLightWeb;
   /* <note> uses regular font*/
 }
-
-.additions {
-  font-size: 80%;
-}
-div.archeaography {
-  text-indent: 2em;
+span.rubric {
+  color: red;
+  font-weight: bold;
 }
 span.head:before {
   content: 'Head: ';
+  font-weight: bold;
+  font-family: serif;
+  color: gray;
+}
+span.rubric:before {
+  content: 'Rubric: ';
   font-weight: bold;
   font-family: serif;
   color: gray;
@@ -94,30 +112,20 @@ span.incipit:before {
   font-family: serif;
   color: gray;
 }
+span.sample::before {
+  content: 'Sample: ';
+  font-weight: bold;
+  font-family: serif;
+  color: gray;
+}
 span.explicit:before {
   content: 'Explicit: ';
   font-weight: bold;
   font-family: serif;
   color: gray;
 }
-span.rubric {
-  color: red;
-  font-weight: bold;
-}
-span.rubric:before {
-  content: 'Rubric: ';
-  font-weight: bold;
-  font-family: serif;
-  color: gray;
-}
 span.finalRubric:before {
   content: 'Final rubric: ';
-  font-weight: bold;
-  font-family: serif;
-  color: gray;
-}
-span.sample::before {
-  content: 'Sample: ';
   font-weight: bold;
   font-family: serif;
   color: gray;
@@ -134,24 +142,49 @@ span.note:before {
   font-family: serif;
   color: gray;
 }
-.boilerplate {
-  margin: 1em 0;
-  position: relative;
+
+/* ======================================================================= */
+/* sampleText inline elements                                              */
+/* ======================================================================= */
+sup {
+  line-height: 0;
 }
-.boilerplate > span.text {
-  text-indent: -1em;
-  margin-left: 1em;
-  display: block;
-  font-size: smaller;
-  line-height: 1.2em;
+/* ======================================================================= */
+/* Subsections of codicology (other than contents)                         */
+/* ======================================================================= */
+.additions {
+  font-size: 80%;
+}
+div.archeaography {
+  text-indent: 2em;
+}
+/* ======================================================================= */
+/* Navigation widgets (except inline with titles)                          */
+/* ======================================================================= */
+#widgets {
+  position: absolute;
+  right: 1em;
+  display: flex;
+  gap: .25em;
+  align-items: center;
+  top: 0;
 }
 .flag img {
   width: 1em;
   border: 1px brown solid;
 }
-.flags > span {
-  padding: 0 0.15em;
+.view img {
+  width: 2em;
 }
+.nav img {
+  width: 1em;
+}
+.flag {
+  padding-bottom: .2em;
+}
+/* ======================================================================= */
+/* Inline language flag icons                                              */
+/* ======================================================================= */
 .small {
   font-size: smaller;
 }
@@ -196,14 +229,14 @@ a {
 .label {
   color: gray;
 }
-#msDescTable,
-msDescTable > * {
+#codicologyTable,
+codicologyTable > * {
   border: 1px lightgray solid;
   padding-top: 2px;
   padding-bottom: 2px;
 }
 /* Right-aligned numbering from http://jsfiddle.net/zgMYu/10/ */
-#msDescTable > tr > th {
+#codicologyTable > tr > th {
   text-align: left;
 }
 table,
@@ -215,15 +248,15 @@ th {
 th {
   vertical-align: top;
 }
-#msDescContents,
+#codicologyContents,
 #titlesWrapper {
   counter-reset: l1
 }
-#msDescContents > div.text,
+#codicologyContents > div.text,
 #titlesWrapper > div.text {
   counter-reset: l2
 }
-#msDescContents > div.text::before,
+#codicologyContents > div.text::before,
 #titlesWrapper > div.text::before {
   counter-increment: l1;
   content: counter(l1) '.';
@@ -232,30 +265,30 @@ th {
   width: 1.5em;
   text-align: right;
 }
-#msDescContents > div.text > div.text,
+#codicologyContents > div.text > div.text,
 #titlesWrapper > div.text > div.text {
   counter-reset: l3;
   padding-left: 2em;
 }
-#msDescContents > div.text > div.text::before,
+#codicologyContents > div.text > div.text::before,
 #titlesWrapper > div.text > div.text::before {
   counter-increment: l2;
   content: counter(l1) '.' counter(l2) '.';
   display: inline-block;
   padding-right: .5em;
 }
-#msDescContents > div.text > div.text > div.text,
+#codicologyContents > div.text > div.text > div.text,
 #titlesWrapper > div.text > div.text > div.text {
   padding-left: 2em;
 }
-#msDescContents > div.text > div.text > div.text::before,
+#codicologyContents > div.text > div.text > div.text::before,
 #titlesWrapper > div.text > div.text > div.text::before {
   counter-increment: l3;
   content: counter(l1) '.' counter(l2) '.' counter(l3) '. ';
   display: inline-block;
   padding-right: .5em;
 }
-#msDescContents div.text > div.samples,
+#codicologyContents div.text > div.samples,
 #titlesWrapper div.text > div.samples {
   padding-left: 2.2em;
   margin-top: 0;
@@ -280,25 +313,11 @@ li .lozenge {
 #search li > a > svg {
   padding: 0 0.15em;
 }
-#widgets {
-  position: absolute;
-  right: 1em;
-  display: flex;
-  align-items: center;
-  top: 0;
-}
 #search.flag img {
   border: none;
 }
 .flags .lozenge {
   margin-bottom: 0;
-}
-#xml img,
-#texts img,
-#codicology img {
-  width: 2em;
-  padding: 0 0 .1em 0;
-  border: none;
 }
 #titles ul {
   list-style-type: none;

@@ -10,9 +10,13 @@
     <xsl:param name="xslt.query-filename" required="no"/>
     <!-- ================================================================ -->
     <!-- Page-top widgets                                                 -->
+    <!-- Classes:                                                         -->
+    <!--   view: codicology, titles, xml                                  -->
+    <!--   nav: search, plectogram, bibliography                          -->
+    <!--   flag: languages                                                -->
     <!-- ================================================================ -->
     <xsl:variable name="titles" as="element(span)">
-        <span class="flag" id="titles">
+        <span class="view" id="titles">
             <a href="titles?filename={$xslt.query-filename}">
                 <img title="Explore contents" src="resources/images/texts.svg"
                     alt="[Explore contents]"/>
@@ -20,15 +24,15 @@
         </span>
     </xsl:variable>
     <xsl:variable name="codicology" as="element(span)">
-        <span class="flag" id="msDesc">
-            <a href="msDesc?filename={$xslt.query-filename}">
+        <span class="view" id="codicology">
+            <a href="codicology?filename={$xslt.query-filename}">
                 <img title="Read codicological description" src="resources/images/codicology.svg"
                     alt="[Read codicological description]"/>
             </a>
         </span>
     </xsl:variable>
     <xsl:variable name="xml" as="element(span)">
-        <span class="flag" id="xml">
+        <span class="view" id="xml">
             <a href="mss/{$xslt.query-filename}">
                 <img title="View XML source" src="resources/images/xml.svg" alt="[View XML source]"
                 />
@@ -36,15 +40,24 @@
         </span>
     </xsl:variable>
     <xsl:variable name="search" as="element(span)">
-        <span class="flag" id="search">
+        <span class="nav" id="search">
             <a href="search">
                 <img title="Search manuscripts" src="resources/images/eye-monitoring-icon.svg"
                     alt="[Search manuscripts]"/>
             </a>
         </span>
     </xsl:variable>
+    <xsl:variable name="bibliography" as="element(span)">
+        <span class="nav" id="bibliography">
+            <a href="bibliography">
+                <img title="Explore bibliography"
+                    src="resources/images/books-stack-of-three-svgrepo-com.svg"
+                    alt="[Explore bibliography]"/>
+            </a>
+        </span>
+    </xsl:variable>
     <xsl:variable name="plectogram" as="element(span)">
-        <span class="flag" id="plectogram">
+        <span class="nav" id="plectogram">
             <a href="plectogram">
                 <img title="Create plectogram" src="resources/images/plectogram.svg"
                     alt="[Create plectogram]"/>
@@ -52,7 +65,7 @@
         </span>
     </xsl:variable>
     <xsl:variable name="slider" as="element(span)">
-        <span>SLIDER</span>
+        <span class="nav" id="slider">SLIDER</span>
     </xsl:variable>
     <xsl:variable name="flags" as="element(span)+">
         <span class="flag" id="bg">
@@ -124,55 +137,20 @@
         <h2>
             <xsl:apply-templates/>
             <span id="widgets">
-                <!-- ==================================================== -->
-                <!-- Widget allocations                                   -->
-                <!--                                                      -->
-                <!-- Widgets in order, with pages:                        -->
-                <!--   titles: codicology                                 -->
-                <!--   codicology: titles                                 -->
-                <!--   xml: codicology, titles                            -->
-                <!--   plectogram: search, titles                         -->
-                <!--   search: titles, codicology, plectogram             -->
-                <!--   flags: search, titles, plectogram                  -->
-                <!--                                                      -->
-                <!-- Pages and their widgets, in order:                   -->
-                <!--   index: none                                        -->
-                <!--   bibliography: none                                 -->
-                <!--   search: plectogram, flags                          -->
-                <!--   codicology: titles, xml, plectogram, search        -->
-                <!--   titles: codicology, xml, search                    -->
-                <!--   plectogram: slider, search, flags                  -->
-                <!-- ==================================================== -->
                 <xsl:choose>
                     <xsl:when test="../@id eq 'search'">
-                        <xsl:sequence select="$plectogram, $flags"/>
+                        <xsl:sequence select="$plectogram, $bibliography, $flags"/>
                     </xsl:when>
-                    <xsl:when test="../@id eq 'msDesc'">
-                        <xsl:sequence select="$titles, $xml, $plectogram, $search"/>
+                    <xsl:when test="../@id eq 'codicology'">
+                        <xsl:sequence select="$titles, $xml, $plectogram, $search, $bibliography"/>
                     </xsl:when>
-                    <xsl:when test="../@id eq 'titles'"> </xsl:when>
+                    <xsl:when test="../@id eq 'titles'">
+                        <xsl:sequence select="$codicology, $xml, $search, $bibliography, $flags"/>
+                    </xsl:when>
                     <xsl:when test="./@id eq 'plectogram'">
-                        <xsl:sequence select="$slider, $search, $flags"/>
+                        <xsl:sequence select="$slider, $search, $bibliography, $flags"/>
                     </xsl:when>
                 </xsl:choose>
-                <xsl:if test="../@id eq 'search'">
-                    <!-- ================================================ -->
-                    <!-- Lg widgets everywhere except index               -->
-                    <!-- ================================================ -->
-                    <!--
-                            Slider: plectogram.php, plectogram-dev-checkbox.php
-                            Codicology: readFile.php
-                            Texts: msDesc.php
-                            XML: readFile.php, msDesc.php
-                            Plectogram (ico_compare.png): browse.php, 
-                                browse-checkbox.php, 
-                                runSearch.php, 
-                                runSearch-checkbox.php, 
-                                searchTitlesFree.php, 
-                                worksByAuthor.php
-                            Browse, search, lg flags: All
-                        -->
-                </xsl:if>
             </span>
         </h2>
     </xsl:template>
