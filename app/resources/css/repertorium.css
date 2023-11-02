@@ -55,6 +55,9 @@ h1 {
 footer {
   font-size: smaller;
 }
+.label {
+  color: gray;
+}
 /* ======================================================================= */
 /* Body                                                                    */
 /* ======================================================================= */
@@ -70,8 +73,42 @@ main {
 /* ======================================================================= */
 /* Global                                                                  */
 /* ======================================================================= */
+table,
+tr,
+td,
+th { /* Overwrites style.css regular gray */
+  border: 1px solid lightgray;
+  border-collapse: collapse;
+}
 a {
   color: blue;
+}
+.hide {
+  display: none;
+}
+/* ======================================================================= */
+/* Navigation widgets (except inline links to codicology and titles)       */
+/* ======================================================================= */
+#widgets {
+  position: absolute;
+  right: 1em;
+  display: flex;
+  gap: .25em;
+  align-items: center;
+  top: 0;
+}
+.flag img {
+  width: 1em;
+  border: 1px brown solid;
+}
+.view img {
+  width: 2em;
+}
+.nav img {
+  width: 1em;
+}
+.flag {
+  padding-bottom: .2em;
 }
 /* ======================================================================= */
 /* Search page                                                             */
@@ -99,7 +136,7 @@ a {
   gap: .3em;
 }
 #searchControls select,
-#searchControls input{
+#searchControls input {
   /* Firefox defaults to gray */
   background-color: white;
   border: 1px solid black;
@@ -123,7 +160,7 @@ a {
 #dropDowns > select {
   width: 25em;
 }
-label {
+label { /* labels form widget */
   white-space: nowrap;
 }
 #contents {
@@ -231,48 +268,6 @@ sup {
   content: " [sic]";
   font-family: serif;
 }
-/* ======================================================================= */
-/* Subsections of codicology (other than contents)                         */
-/* ======================================================================= */
-.additions {
-  font-size: 80%;
-}
-/* ======================================================================= */
-/* Navigation widgets (except inline links to codicology and titles)       */
-/* ======================================================================= */
-#widgets {
-  position: absolute;
-  right: 1em;
-  display: flex;
-  gap: .25em;
-  align-items: center;
-  top: 0;
-}
-.flag img {
-  width: 1em;
-  border: 1px brown solid;
-}
-.view img {
-  width: 2em;
-}
-.nav img {
-  width: 1em;
-}
-.flag {
-  padding-bottom: .2em;
-}
-/* ======================================================================= */
-/* Bibliography                                                            */
-/* ======================================================================= */
-
-span.bibl:before {
-  /* Distinguish from div.bibl */
-  content: " (";
-}
-span.bibl:after {
-  /*  Distinguish from div.bibl */
-  content: ") ";
-}
 span.unclear:before,
 span.supplied:before {
   content: "[";
@@ -290,26 +285,12 @@ span.gap:after {
 span.add {
   color: green;
 }
-.label {
-  color: gray;
-}
-#codicologyTable,
-codicologyTable > * {
-  border: 1px lightgray solid;
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
+/* ======================================================================= */
+/* Codicology table                                                        */
+/* ======================================================================= */
 /* Right-aligned numbering from http://jsfiddle.net/zgMYu/10/ */
 #codicologyTable > tr > th {
   text-align: left;
-}
-table,
-tr,
-td,
-th {
-  border: 1px solid lightgray;
-}
-th {
   vertical-align: top;
 }
 #codicologyContents,
@@ -358,14 +339,16 @@ th {
   margin-top: 0;
   margin-bottom: 0;
 }
-.samples *.head,
-.samples *.incipit,
-.samples *.explicit,
-.samples *.rubric,
-.samples *.sampleText,
-.samples *.finalRubric,
-.samples *.colophon {
-  font-family: "Old Standard Regular", BukyvedeLightWeb;
+/* ======================================================================= */
+/* Bibliography subsection of codicology contents                          */
+/* ======================================================================= */
+span.bibl:before {
+  /* Distinguish from div.bibl, which is the overlay */
+  content: " (";
+}
+span.bibl:after {
+  /*  Distinguish from div.bibl */
+  content: ") ";
 }
 .lozenge {
   margin-bottom: -2px;
@@ -380,32 +363,6 @@ li .lozenge {
 #titles ul {
   list-style-type: none;
 }
-/* SVG rendering */
-#main_svg > g {
-  fill: yellow;
-  stroke: black;
-  stroke-width: 1px;
-}
-#main_svg > g > rect {
-  width: 60px;
-  height: 17px;
-}
-#main_svg > g > a > text {
-  font-size: 90%;
-  fill: black;
-  stroke: black;
-}
-#main_svg > line {
-  stroke-width: 0.5px;
-}
-.additions > ul {
-  margin: 0;
-  padding-left: 2em;
-}
-.additions .os {
-  font-family: "Old Standard Regular", BukyvedeLightWeb;
-}
-
 /* pop-up bibliography information is in <div class="bibData">
     wavy underline from http://stackoverflow.com/questions/28152175/a-wavy-underline-in-css
 */
@@ -497,6 +454,38 @@ div.bibData > .scope:before {
   content: 'Scope: ';
   font-weight: bolder;
 }
+/* ======================================================================= */
+/* Codicology subsections (other than contents and bibliography)           */
+/* ======================================================================= */
+.additions {
+  font-size: 80%;
+}
+.additions > ul {
+  margin: 0;
+  padding-left: 2em;
+}
+/* ======================================================================= */
+/* Plectogram                                                              */
+/* ======================================================================= */
+#main_svg > g {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 1px;
+}
+#main_svg > g > rect {
+  width: 60px;
+  height: 17px;
+}
+#main_svg > g > a > text {
+  font-size: 90%;
+  fill: black;
+  stroke: black;
+}
+#main_svg > line {
+  stroke-width: 0.5px;
+}
+
+
 .scope > * {
   display: inline;
 }
@@ -514,9 +503,6 @@ div.bibData > .scope:before {
 }
 .lg {
   display: inline;
-}
-.hide {
-  display: none;
 }
 #index > ul {
   text-indent: -1.5em;
@@ -545,27 +531,4 @@ div.bibData > .scope:before {
   grid-template-columns: auto 1fr;
   gap: .3em;
 }
-#searchControls select {
-  background-color: white; /* Firefox defaults to gray */
-}
-#searchControls fieldset button {
-  margin-left: .3em;
-}
-#searchControls fieldset hr {
-  grid-column: 1/3;
-  width: 95%;
-}
-label {
-  white-space: nowrap;
-}
-#contents {
-  flex: 1;
-}
-#mss > h3,
-#searchControls > h3 {
-  text-align: center;
-}
-#mss ul {
-  text-indent: -1.5em;
-  list-style-type: none;
-}
+
