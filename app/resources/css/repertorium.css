@@ -1,4 +1,21 @@
 /* ======================================================================= */
+/* Contents:                                                               */
+/*   Fonts                                                                 */
+/*   Global                                                                */
+/*   Header                                                                */
+/*   Footers                                                               */
+/*   Body                                                                  */
+/*   Navigation widgets                                                    */
+/*   Search page                                                           */
+/*   sampleText subsections                                                */
+/*   sampleText inline elements                                            */
+/*   Codicology table                                                      */
+/*   Bibliographic section of codicology table                             */
+/*   Codicology subsections (other than contents and bibliography)         */
+/*   Plectogram                                                            */
+/* ======================================================================= */
+
+/* ======================================================================= */
 /* Fonts                                                                   */
 /* ======================================================================= */
 @font-face {
@@ -30,8 +47,21 @@ url("fonts/OldStandard-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 /* ======================================================================= */
-/* Global font stacks                                                      */
+/* Global                                                                  */
 /* ======================================================================= */
+table,
+tr,
+td,
+th { /* Overwrites style.css regular gray */
+  border: 1px solid lightgray;
+  border-collapse: collapse;
+}
+a {
+  color: blue;
+}
+.hide {
+  display: none;
+}
 .os {
   font-family: "Old Standard Regular", BukyvedeLightWeb;
   font-weight: normal;
@@ -69,22 +99,6 @@ body {
 }
 main {
   flex: 1;
-}
-/* ======================================================================= */
-/* Global                                                                  */
-/* ======================================================================= */
-table,
-tr,
-td,
-th { /* Overwrites style.css regular gray */
-  border: 1px solid lightgray;
-  border-collapse: collapse;
-}
-a {
-  color: blue;
-}
-.hide {
-  display: none;
 }
 /* ======================================================================= */
 /* Navigation widgets (except inline links to codicology and titles)       */
@@ -454,6 +468,21 @@ div.bibData > .scope:before {
   content: 'Scope: ';
   font-weight: bolder;
 }
+.scope > * {
+  display: inline;
+}
+.scope > .volume:before {
+  content: 'Volume: ';
+  color: gray;
+}
+.scope > .issue:before {
+  content: 'Issue: ';
+  color: gray;
+}
+.scope > .pages:before {
+  content: 'Pages: ';
+  color: gray;
+}
 /* ======================================================================= */
 /* Codicology subsections (other than contents and bibliography)           */
 /* ======================================================================= */
@@ -483,52 +512,5 @@ div.bibData > .scope:before {
 }
 #main_svg > line {
   stroke-width: 0.5px;
-}
-
-
-.scope > * {
-  display: inline;
-}
-.scope > .volume:before {
-  content: 'Volume: ';
-  color: gray;
-}
-.scope > .issue:before {
-  content: 'Issue: ';
-  color: gray;
-}
-.scope > .pages:before {
-  content: 'Pages: ';
-  color: gray;
-}
-.lg {
-  display: inline;
-}
-#index > ul {
-  text-indent: -1.5em;
-  list-style-type: none;
-}
-/* Search page */
-#contents {
-  display: flex;
-  flex-direction: column;
-}
-#searchControls {
-  padding-right: 1em;
-  border-right: 1px lightgray solid;
-}
-#searchWidgets {
-  /* https://stackoverflow.com/questions/58906591/aligning-form-labels-in-a-css-grid */
-  display: inline-grid;
-  grid-template-columns: auto 1fr;
-  gap: .5em;
-  min-width: 450px;
-  margin-bottom: .3em;
-  width: 100%;
-}
-#searchWidgets > div {
-  display: inline-grid;
-  grid-template-columns: auto 1fr;
-  gap: .3em;
 }
 
