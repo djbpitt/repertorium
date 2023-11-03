@@ -1,9 +1,11 @@
 xquery version "3.1";
 (: ======================================================================= :)
 (: Development notes 2023-11-03                                            :)
-(:   Earlier version sorted mss by similarity according to dendrogram;     :)
-(:     This version currently sorts by filename (arbitrarily, but the      :)
-(:       is to ensure reproducible results                                 :)
+(:                                                                         :)
+(: Returns SVG inside <main> because better suited to XQuery than to XSLT  :)
+(: Earlier version sorted mss by similarity according to dendrogram;       :)
+(:     This version currently sorts by filename (arbitrarily, but ensures  :)
+(:       reproducible results                                              :)
 (: ======================================================================= :)
 (: Housekeeping                                                            :)
 (: ======================================================================= :)
@@ -26,6 +28,8 @@ collection(concat($root-collection, "/mss"))[ends-with(base-uri(.), ".xml")];
 (: ======================================================================= :)
 (: Plectogram constants                                                    :)
 (: ======================================================================= :)
+declare variable $xShift := 129; (: shift whole plectogram right:)
+declare variable $yShift := 45;
 declare variable $columnSpacing as xs:integer := 129;
 declare variable $boxWidth as xs:integer := 60;
 declare variable $boxHeight as xs:integer := 17;
@@ -38,13 +42,38 @@ declare variable $ms-ids as xs:string* :=
 request:get-parameter("items[]", ());
 declare variable $id-query as xs:string := "id:(" || $ms-ids => string-join(" OR ") || ")";
 (: ======================================================================= :)
-(: Model data                                                              :)
-(: ======================================================================= :)
-declare variable $mss as element(tei:TEI)* := $all-mss/tei:TEI[ft:query(., $id-query)];
-(: ======================================================================= :)
 (: Main                                                                    :)
 (: ======================================================================= :)
-<svg xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <circle r="50" cx="100" cy="100" fill="red"/>
-</svg>
-
+declare variable $mss as element(tei:TEI)* := $all-mss/tei:TEI[ft:query(., $id-query)];
+declare variable $width as xs:integer := count($mss) * $columnSpacing;
+declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msItemStruct => count()) + 1;
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="{$width}"
+  viewBox="0 0 {$width} {($max-cell-count + 3) * $boxHeight}">
+  <g id="main_svg" transform="translate(-100)">
+    <g>{
+        for $ms at $pos in $mss
+        let $filename as xs:string := base-uri($ms) ! tokenize(., "/")[last()]
+        return
+          <g
+            id="{$filename}"
+            class="draggable"
+            transform="translate({($pos - 1) * $columnSpacing + $xShift})">
+            <image
+              x="{($boxWidth - 25) div 2}"
+              y="0"
+              height="20"
+              width="20"
+              xlink:href="../resources/images/drag-icon-djb-dev.svg"/>
+            <text
+              x="{$boxWidth div 2}"
+              y="45"
+              text-anchor="middle">
+              <a
+                xlink:href="search?filename={$filename}">{$filename}</a></text>
+          
+          </g>
+      }</g>
+  </g></svg>
