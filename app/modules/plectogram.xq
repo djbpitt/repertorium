@@ -8,7 +8,8 @@ xquery version "3.1";
 (: Housekeeping                                                            :)
 (: ======================================================================= :)
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
-(:import module namespace re = "http://www.ilit.bas.bg/repertorium/ns/3.0" at 're-lib.xqm';:)
+declare namespace svg = "http://www.w3.org/2000/svg";
+import module namespace re = "http://www.ilit.bas.bg/repertorium/ns/3.0" at 're-lib.xqm';
 declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 declare option output:method "xml";
 declare option output:indent "no";
@@ -35,12 +36,15 @@ declare variable $textYShift as xs:integer := 14;
 (: ======================================================================= :)
 declare variable $ms-ids as xs:string* :=
 request:get-parameter("items[]", ());
-declare variable $mss as document-node()* := $all-mss[substring-after(tei:TEI/@xml:id, "RC-") = $ms-ids];
+declare variable $id-query as xs:string := "id:(" || $ms-ids => string-join(" OR ") || ")";
+(: ======================================================================= :)
+(: Model data                                                              :)
+(: ======================================================================= :)
+declare variable $mss as element(tei:TEI)* := $all-mss/tei:TEI[ft:query(., $id-query)];
 (: ======================================================================= :)
 (: Main                                                                    :)
 (: ======================================================================= :)
-<items>{
-    for $ms in $mss
-    return
-      <item>{$ms ! base-uri(.)}</item>
-  }</items>
+<svg xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <circle r="50" cx="100" cy="100" fill="red"/>
+</svg>
+
