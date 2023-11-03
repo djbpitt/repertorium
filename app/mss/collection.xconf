@@ -12,6 +12,8 @@
       <text qname="tei:idno"/>
       <text qname="tei:availability"/>
       <text qname="tei:TEI" analyzer="ws">
+        <!-- @xml:id apparently is not cast to string automatically -->
+        <field name="id" expression="substring-after(string(@xml:id), 'RC-')"/>
         <facet dimension="country"
           expression="descendant::tei:msIdentifier/tei:country | descendant::tei:altIdentifier[@type eq 'partial']/tei:country"/>
         <facet dimension="settlement"
