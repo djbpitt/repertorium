@@ -8,7 +8,8 @@
       <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
       <analyzer id="ws" class="org.apache.lucene.analysis.core.WhitespaceAnalyzer"/>
       <text qname="bg">
-        <field name="hex-ref" expression="count(../preceding-sibling::title)"/>
+        <field name="hex-ref" expression="count(../preceding-sibling::title) 
+          => re:decimal-to-hex() => re:left-pad(4, '0')"/>
       </text>
       <text qname="en" analyzer="ws"/>
       <text qname="ru" analyzer="ws"/>
