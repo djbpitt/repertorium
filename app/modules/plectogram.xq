@@ -19,12 +19,16 @@ declare %private variable $root-collection as xs:string :=
 replace(system:get-module-load-path(), "xmldb:exist://embedded-eXist-server/", "/")
 ! substring-before(., "/modules");
 (: ======================================================================= :)
-(: Database resources: $all-mss, $all-titles                               :)
+(: Database resources: $all-mss, $all-bg-titles, hex-ref field in titles   :)
 (: ======================================================================= :)
-declare variable $all-titles as element(title)+ :=
-doc(concat($root-collection, "/aux/titles.xml"))/descendant::title;
+declare variable $all-bg-titles as element(bg)+ :=
+doc(concat($root-collection, "/aux/titles.xml"))/descendant::bg;
 declare variable $all-mss as document-node()+ :=
 collection(concat($root-collection, "/mss"))[ends-with(base-uri(.), ".xml")];
+declare variable $hex-ref-field as map(*) :=
+map {
+  "fields": "hex-ref"
+};
 (: ======================================================================= :)
 (: Plectogram constants                                                    :)
 (: ======================================================================= :)
@@ -57,7 +61,7 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
     xmlns="http://www.w3.org/1999/xhtml"
     rel="stylesheet"
     href="../resources/css/style.css"
-    type="text/css"/> 
+    type="text/css"/>
   <link
     xmlns="http://www.w3.org/1999/xhtml"
     rel="stylesheet"
@@ -69,18 +73,12 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
     <g>{
         for $ms at $pos in $mss
         let $filename as xs:string := base-uri($ms) ! tokenize(., "/")[last()]
-        let $ms-texts as xs:string+ :=
-        $ms/descendant::tei:msItemStruct/tei:title[lang("bg")] ! string()
+        let $ms-texts as element(tei:msItemStruct)+ :=
+        $ms/descendant::tei:msItemStruct
         let $previous-ms-pos as xs:integer := $pos - 1
-        let $previous-ms as element(tei:TEI)? := if ($previous-ms-pos > 0) then
-          $mss[$previous-ms-pos]
-        else
-          ()
-        let $previous-ms-texts as xs:string* :=
-        if ($previous-ms) then
-          $previous-ms/descendant::tei:msItemStruct/tei:title[lang("bg")] ! string()
-        else
-          ()
+        (: will be empty if no previous ms :)
+        let $previous-ms as element(tei:TEI)? := $mss[$previous-ms-pos]
+        let $previous-ms-texts as element(tei:msItemStruct)* := $previous-ms/descendant::tei:msItemStruct
         return
           <g
             id="{$filename}"
@@ -101,22 +99,29 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
             <g
               transform="translate(0,{$yShift})">{
                 for $ms-text at $text-pos in $ms-texts
-                let $box-label := $all-titles/Q{}bg[. eq $ms-text]/../Q{}en
+                let $ms-bg-title as element(tei:title) := $ms-text/tei:title[@xml:lang eq "bg"]
+                let $matching-bg-title as element(Q{}bg) := $all-bg-titles[. eq $ms-bg-title]
+                let $box-label := $matching-bg-title/parent::Q{}title
+                /preceding-sibling::*
+                => count()
+                => re:decimal-to-hex() => re:left-pad(4, '0')
                 return
-                  <g
-                    class="cx">
+                  (<g
+                    class="c{$box-label}">
                     <rect
-                      class="cx)"
+                      class="c{$box-label})"
                       x="0"
                       y="{$text-pos * $boxHeight}"
                       width="{$boxWidth}"
                       height="{$boxHeight}"
-                      title="Placeholder">
-                      <text
-                        x="{$textXShift}"
-                        y="{$text-pos * $boxHeight + $textYShift}">{$box-label}</text>
+                      title="{$box-label}">
                     </rect>
-                  </g>
+                    <text
+                      x="{$textXShift}"
+                      y="{$text-pos * $boxHeight + $textYShift}">{$box-label}</text>
+                  </g>,
+                  for $hit at $pos in $previous-ms-texts/tei:title[@xml:lang eq "bg"][. eq $ms-bg-title]
+                  return <line/>)
               }</g>
           </g>
       }</g>
