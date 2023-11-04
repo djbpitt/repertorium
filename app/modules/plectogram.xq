@@ -21,9 +21,9 @@ replace(system:get-module-load-path(), "xmldb:exist://embedded-eXist-server/", "
 (: ======================================================================= :)
 (: Database resources: $all-mss, $all-titles                               :)
 (: ======================================================================= :)
-declare %private variable $all-titles as element(title)+ :=
+declare variable $all-titles as element(title)+ :=
 doc(concat($root-collection, "/aux/titles.xml"))/descendant::title;
-declare %private variable $all-mss as document-node()+ :=
+declare variable $all-mss as document-node()+ :=
 collection(concat($root-collection, "/mss"))[ends-with(base-uri(.), ".xml")];
 (: ======================================================================= :)
 (: Plectogram constants                                                    :)
@@ -52,10 +52,35 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
   xmlns:xlink="http://www.w3.org/1999/xlink"
   width="{$width}"
   viewBox="0 0 {$width} {($max-cell-count + 3) * $boxHeight}">
-  <g id="main_svg" transform="translate(-100)">
+  <!-- Links are temporary, for viewing without HTML wrapper -->
+  <link
+    xmlns="http://www.w3.org/1999/xhtml"
+    rel="stylesheet"
+    href="../resources/css/style.css"
+    type="text/css"/> 
+  <link
+    xmlns="http://www.w3.org/1999/xhtml"
+    rel="stylesheet"
+    href="../resources/css/repertorium.css"
+    type="text/css"/>
+  <g
+    id="main_svg"
+    transform="translate(-100)">
     <g>{
         for $ms at $pos in $mss
         let $filename as xs:string := base-uri($ms) ! tokenize(., "/")[last()]
+        let $ms-texts as xs:string+ :=
+        $ms/descendant::tei:msItemStruct/tei:title[lang("bg")] ! string()
+        let $previous-ms-pos as xs:integer := $pos - 1
+        let $previous-ms as element(tei:TEI)? := if ($previous-ms-pos > 0) then
+          $mss[$previous-ms-pos]
+        else
+          ()
+        let $previous-ms-texts as xs:string* :=
+        if ($previous-ms) then
+          $previous-ms/descendant::tei:msItemStruct/tei:title[lang("bg")] ! string()
+        else
+          ()
         return
           <g
             id="{$filename}"
@@ -73,7 +98,26 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
               text-anchor="middle">
               <a
                 xlink:href="search?filename={$filename}">{$filename}</a></text>
-          
+            <g
+              transform="translate(0,{$yShift})">{
+                for $ms-text at $text-pos in $ms-texts
+                let $box-label := $all-titles/Q{}bg[. eq $ms-text]/../Q{}en
+                return
+                  <g
+                    class="cx">
+                    <rect
+                      class="cx)"
+                      x="0"
+                      y="{$text-pos * $boxHeight}"
+                      width="{$boxWidth}"
+                      height="{$boxHeight}"
+                      title="Placeholder">
+                      <text
+                        x="{$textXShift}"
+                        y="{$text-pos * $boxHeight + $textYShift}">{$box-label}</text>
+                    </rect>
+                  </g>
+              }</g>
           </g>
       }</g>
   </g></svg>
