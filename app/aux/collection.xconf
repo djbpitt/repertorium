@@ -3,10 +3,13 @@
   <index xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:djb="http://www.obdurodon.org">
     <!-- New full text index based on Lucene -->
     <lucene>
-      <!--<module uri="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" at="../modules/re-lib.xqm"/>-->
+      <!-- Temporary copy of library because eXist-db cannot navigate upward in location hint -->
+      <module uri="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" at="re-lib-aux.xqm"/>
       <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
       <analyzer id="ws" class="org.apache.lucene.analysis.core.WhitespaceAnalyzer"/>
-      <text qname="bg" analyzer="ws"/>              
+      <text qname="bg">
+        <field name="hex-ref" expression="count(../preceding-sibling::title)"/>
+      </text>
       <text qname="en" analyzer="ws"/>
       <text qname="ru" analyzer="ws"/>
       <text qname="tei:biblStruct"/>
