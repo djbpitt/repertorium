@@ -14,7 +14,7 @@ declare namespace svg = "http://www.w3.org/2000/svg";
 import module namespace re = "http://www.ilit.bas.bg/repertorium/ns/3.0" at 're-lib.xqm';
 declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 declare option output:method "xml";
-declare option output:indent "no";
+declare option output:indent "yes";
 declare %private variable $root-collection as xs:string :=
 replace(system:get-module-load-path(), "xmldb:exist://embedded-eXist-server/", "/")
 ! substring-before(., "/modules");
@@ -56,26 +56,16 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
   xmlns:xlink="http://www.w3.org/1999/xlink"
   width="{$width}"
   viewBox="0 0 {$width} {($max-cell-count + 3) * $boxHeight}">
-  <!-- Links are temporary, for viewing without HTML wrapper -->
-  <link
-    xmlns="http://www.w3.org/1999/xhtml"
-    rel="stylesheet"
-    href="../resources/css/style.css"
-    type="text/css"/>
-  <link
-    xmlns="http://www.w3.org/1999/xhtml"
-    rel="stylesheet"
-    href="../resources/css/repertorium.css"
-    type="text/css"/>
   <g
     id="main_svg"
     transform="translate(-100)">
-    <g>{
-        for $ms at $pos in $mss
+    <g
+      id="columns">{
+        for $ms at $ms-pos in $mss
         let $filename as xs:string := base-uri($ms) ! tokenize(., "/")[last()]
         let $ms-texts as element(tei:msItemStruct)+ :=
         $ms/descendant::tei:msItemStruct
-        let $previous-ms-pos as xs:integer := $pos - 1
+        let $previous-ms-pos as xs:integer := $ms-pos - 1
         (: will be empty if no previous ms :)
         let $previous-ms as element(tei:TEI)? := $mss[$previous-ms-pos]
         let $previous-ms-texts as element(tei:msItemStruct)* := $previous-ms/descendant::tei:msItemStruct
@@ -83,19 +73,20 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
           <g
             id="{$filename}"
             class="draggable"
-            transform="translate({($pos - 1) * $columnSpacing + $xShift})">
+            transform="translate({($ms-pos - 1) * $columnSpacing + $xShift})">
             <image
               x="{($boxWidth - 25) div 2}"
               y="0"
               height="20"
               width="20"
-              xlink:href="../resources/images/drag-icon-djb-dev.svg"/>
-            <text
-              x="{$boxWidth div 2}"
-              y="45"
-              text-anchor="middle">
-              <a
-                xlink:href="search?filename={$filename}">{$filename}</a></text>
+              xlink:href="resources/images/drag-icon-djb-dev.svg"/>
+            <a
+              xlink:href="titles?filename={$filename}">
+              <text
+                x="{$boxWidth div 2}"
+                y="45"
+                text-anchor="middle">{$filename}</text>
+            </a>
             <g
               transform="translate(0,{$yShift})">{
                 for $ms-text at $text-pos in $ms-texts
@@ -120,8 +111,16 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
                       x="{$textXShift}"
                       y="{$text-pos * $boxHeight + $textYShift}">{$box-label}</text>
                   </g>,
-                  for $hit at $pos in $previous-ms-texts/tei:title[@xml:lang eq "bg"][. eq $ms-bg-title]
-                  return <line/>)
+                  for $hit at $prev-pos in $previous-ms-texts/tei:title[@xml:lang eq "bg"][. eq $ms-bg-title]
+                  let $prevYpos := count($hit/(preceding::tei:msItemStruct | ancestor::tei:msItemStruct)) + 1
+                  return
+                    <line
+                      class="c{$box-label}"
+                      x1="{($ms-pos - 1) * $columnSpacing + $xShift}"
+                      y1="{$boxHeight * ($prev-pos + 0.5) + $yShift}"
+                      x2="{($ms-pos - 2) * $columnSpacing + $boxWidth + $xShift}"
+                      y2="{($prevYpos - 0.5) * $boxHeight + $yShift}"
+                    />)
               }</g>
           </g>
       }</g>
