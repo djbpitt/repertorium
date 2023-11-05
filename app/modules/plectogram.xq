@@ -101,7 +101,7 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
                   (<g
                     class="c{$box-label}">
                     <rect
-                      class="c{$box-label})"
+                      class="c{$box-label}"
                       x="0"
                       y="{$text-pos * $boxHeight}"
                       width="{$boxWidth}"
