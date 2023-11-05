@@ -79,6 +79,13 @@
   <!-- ================================================================== -->
   <!-- Manuscripts list                                                   -->
   <!-- ================================================================== -->
+  <xsl:template match="ul">
+    <form method="get" action="plectogram" id="plectogram-form">
+      <ul>
+        <xsl:apply-templates/>
+      </ul>
+    </form>
+  </xsl:template>
   <xsl:template match="li">
     <li>
       <input type="checkbox" name="mss[]" value="{uri}"/>

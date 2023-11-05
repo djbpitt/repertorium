@@ -43,8 +43,8 @@ declare variable $textYShift as xs:integer := 14;
 (: Form inputs                                                             :)
 (: ======================================================================= :)
 declare variable $ms-ids as xs:string* :=
-request:get-parameter("items[]", ());
-declare variable $id-query as xs:string := "id:(" || $ms-ids => string-join(" OR ") || ")";
+request:get-parameter("mss[]", ());
+declare variable $id-query as xs:string := "id:(" || ($ms-ids => string-join(" OR ")) || ")";
 (: ======================================================================= :)
 (: Main                                                                    :)
 (: ======================================================================= :)
