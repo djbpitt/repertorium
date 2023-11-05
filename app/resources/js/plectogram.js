@@ -3,16 +3,16 @@
  *   so modify display properties explicitly instead
  */
 function plectogram_mouseover() {
-  let currentClass = this.classList.baseVal;
+  let currentClass = this.className.baseVal;
   let hits = document.querySelectorAll("." + currentClass);
   for (var i = 0, len = hits.length; i < len; i++) {
-    hits[i].style.fill = "fucshia";
-    hits[i].style.stroke = "fucshia";
+    hits[i].style.fill = "fuchsia";
+    hits[i].style.stroke = "fuchsia";
     hits[i].style.strokeWidth = "1.5";
   }
 }
 function plectogram_mouseout() {
-  let currentClass = this.classList.baseVal;
+  let currentClass = this.className.baseVal;
   let hits = document.querySelectorAll("." + currentClass);
   for (var i = 0, len = hits.length; i < len; i++) {
     hits[i].style.fill = "yellow";
