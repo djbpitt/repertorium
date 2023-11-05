@@ -55,7 +55,8 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   width="{$width}"
-  viewBox="0 0 {$width} {($max-cell-count + 3) * $boxHeight}">
+  viewBox="0 0 {$width} {($max-cell-count + 3) * $boxHeight}"
+  id="plectogram_svg">
   <g
     id="main_svg"
     transform="translate(-100)">

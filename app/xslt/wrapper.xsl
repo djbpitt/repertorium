@@ -107,6 +107,9 @@
                 <link rel="stylesheet" type="text/css" href="resources/css/repertorium.css"/>
                 <link rel="icon" href="resources/images/favicon.ico" type="image/svg+xml"/>
                 <script src="resources/js/lgToggle.js"/>
+                <xsl:if test="descendant::main/@id eq 'main_svg'">
+                    <script src="resources/js/plectogram.js"></script>
+                </xsl:if>
                 <xsl:if test="descendant::main/@id eq 'search'">
                     <script src="resources/js/search.js"/>
                 </xsl:if>
