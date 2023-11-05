@@ -69,7 +69,9 @@
         </button>
     </xsl:variable>
     <xsl:variable name="slider" as="element(span)">
-        <span class="nav" id="slider">SLIDER</span>
+        <span id="slider">
+            <input id="slider1" type="range" value="1" min="0.1" max="2" step="0.01"/>
+        </span>
     </xsl:variable>
     <xsl:variable name="flags" as="element(span)+">
         <span class="flag" id="bg">
@@ -151,7 +153,7 @@
                     <xsl:when test="../@id eq 'titles'">
                         <xsl:sequence select="$codicology, $xml, $search, $bibliography, $flags"/>
                     </xsl:when>
-                    <xsl:when test="./@id eq 'plectogram'">
+                    <xsl:when test="../@id eq 'main_svg'">
                         <xsl:sequence select="$slider, $search, $bibliography, $flags"/>
                     </xsl:when>
                 </xsl:choose>

@@ -8,7 +8,7 @@
         </xsl:copy>
     </xsl:template>
     <xsl:template match="/">
-        <main xmlns="http://www.w3.org/1999/xhtml" xml:id="main_svg">
+        <main xmlns="http://www.w3.org/1999/xhtml" id="main_svg">
             <h2>Visualize textual relationships</h2>
             <xsl:apply-templates/>
         </main>
