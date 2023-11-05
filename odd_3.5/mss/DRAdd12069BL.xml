@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DRAdd12069BL">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Dictionary, Add. MS 12069, The British Library, 1695</title>
+                <author xml:id="DR">Dilyana Radoslavova</author>
+                <editor xml:id="AM">Anisava Miltenova</editor>
+                <editor xml:id="AB">Andrej Bojadžiev</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Istitute of Literature</publisher>
+                <pubPlace>Sofia, Bulgaria</pubPlace>
+                <date when="2004-11">11.2004</date>
+                <idno type="Repertorium">RC-DRAdd12069BL</idno>
+                <availability status="free">
+                    <p>The intellectual content of this file is copyrighted by the creators under
+                        the Creative Commons Attribution-No Derivative Works 3.0 under legislation
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        information, but you are not allowed to alter, transform, or build upon the
+                        works on this section of the site. All reuse or distribution of this work
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This description is based on <emph>de visu</emph> observations and on the
+                    published catalogue descriptions <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 67-68</ref>.</p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="cu">Old Slavic</language>
+                <language ident="la">Latin</language>
+                <language ident="bg">Bulgarian</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="Repertorium">
+                    <list>
+                        <item>Dictionary</item>
+                    </list>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                    <p>In the context of this project, private URIs with the prefix "bib" point to
+                        bibl elements in the project's bib.xml file.</p>
+                </prefixDef>
+            </listPrefixDef>
+        </encodingDesc>
+        <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
+            <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
+                element &lt;origDate&gt;</change>
+            <change who="#AB" when="2016-07-07">Editorial changes. Replace lat value with la. Fixed
+                sampleText to la not to cu</change>
+            <change who="#DR" when="2009-10-07">Removed entities for the basic Old Slavic characters </change>
+            <change who="#DR" when="2009-10-08">Transformation to Repertorium4 scheme </change>
+            <change who="#DR" when="2009-10-08">Checked against the MS </change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <msDesc>
+                <msIdentifier>
+                    <msName xml:lang="en" type="general">dictionary</msName>
+                    <country>United Kingdom</country>
+                    <settlement>London</settlement>
+                    <repository>British Library</repository>
+                    <collection>Additional Manuscripts</collection>
+                    <idno type="shelfmark">Add. MS 12069</idno>
+                    <altIdentifier>
+                        <idno type="catalogue">53</idno>
+                        <note>
+                            <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 67–68.</ref>
+                        </note>
+                    </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                    <objectDesc form="codex">
+                        <supportDesc material="paper">
+                            <support>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Horn</motif>
+                                    <countermark xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                                        <motif>Initials CC</motif>
+                                    </countermark>
+                                    <term>type</term>
+                                    <ref type="bib" target="bib:Heawood1950">
+                                        <num>2667</num>
+                                        <date>c. 1683</date>
+                                    </ref>
+                                </watermark>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Seven
+                                        Provinces</motif>
+                                    <countermark xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                                        <motif>initials HG</motif>
+                                        <term xmlns="http://www.tei-c.org/ns/1.0">unidentified</term>
+                                    </countermark>
+                                </watermark>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">A
+                                        garland </motif>
+                                    <term>unidentified</term>
+                                </watermark>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Arms of
+                                        Saxony (swords impaled with crancelin)</motif>
+                                    <term>unidentified</term>
+                                </watermark>
+                            </support>
+                            <extent>
+                                <measure unit="folia">ii+361</measure>
+                                <dimensions unit="mm" type="folia">
+                                    <height>200</height>
+                                    <width>150</width>
+                                </dimensions>
+                                <dimensions type="written" unit="mm">
+                                    <height>155</height>
+                                    <width>105</width>
+                                </dimensions>
+                            </extent>
+                            <foliation>
+                                <date>Modern and original</date>
+                                <signatures>(i–ii), 1–339, (340–361) above erazed one: (i–iii),
+                                    1–214; 214–337, (338–359). Original foliation on ff. 3–339,
+                                        <foreign xml:lang="cu">а҃–тл҃з</foreign></signatures>
+                            </foliation>
+                            <collation>
+                                <summary>30 quires</summary>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">14</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="2-17">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">12</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="18">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">14</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="19-29">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">12</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="30">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">12(-12)</extent>
+                                </quire>
+                                <signatures>Gatherings II-XXVIII signed, mid lower margin, first
+                                    recto, <foreign xml:lang="cu">в҃-к҃и</foreign></signatures>
+                                <ruling xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">17 single
+                                    rulled ll./p. </ruling>
+                            </collation>
+                            <condition>The MS is in good condition</condition>
+                        </supportDesc>
+                        <layoutDesc>
+                            <layout columns="1" writtenLines="17" ruledLines="17"/>
+                        </layoutDesc>
+                    </objectDesc>
+                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Black</ink>
+                    <decoDesc>
+                        <decoNote type="overview">None</decoNote>
+                    </decoDesc>
+                    <bindingDesc>
+                       <binding> <summary>Dark brown leather on boards, blind stamped front and back, <dimensions unit="mm" type="plates">
+                                <height>215</height>
+                                <width>155</width>
+                            </dimensions></summary>
+                           <condition>Remains of two clasps</condition>
+                       </binding>
+                    </bindingDesc>
+                    <additions type="inscriptions">
+                        <list>
+                            <item>
+                                <locus>f. iv:</locus>
+                                <quote xml:lang="en">
+                                    <date>12 May 1770</date>, <persName>Griffin S<seg rend="sup">t</seg></persName>:
+                                    <placeName>Edmund Hall Oxon</placeName> May 12th 1770<seg rend="sup">at</seg>
+                                </quote>
+                                <note>The author is evidently Dr <persName>Philip Griffin</persName>, see <ref type="bibl" target="bib:Foster1891">Foster 1891–92.</ref></note>
+                            </item>
+                        </list>
+                    </additions>
+                </physDesc>
+                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                    <scribe n="1">
+                        <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
+                            <locus>ff. 2–339.</locus>
+                        </locusGrp>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous.</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="cursive">Russian <hi>skoropis' </hi><dimensions type="char" unit="mm"><height>3</height></dimensions> <dim>3mm</dim>, <dimensions type="line-space" unit="mm"><height>7</height></dimensions></scriptNote>
+                            <scriptNote script="Latn" style="cursive"/>
+                        </scriptDesc>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0"><ref target="bib:Cleminson1988">Cleminson 1988: 67–68.</ref></bibl>
+                    </scribe>
+                </scribeDesc>
+                <msContents>
+                    <summary>Contains Slavonic-Latin Dictionary; Ff. i–ii, 1, 339v–end are
+                        blank.</summary>
+                    <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="la">
+                        <head xmlns="http://www.tei-c.org/ns/1.0">
+                            <hi>DICTIONARIVM <lb/> SCLAVONICOLATINUM, <lb/> OPERI AMBROSII CALEPINI
+                                <lb/> Servata Verborum integra. <lb/> SERIE, <lb/> CONFORMATUM <lb/>
+                                MOSCHOVIAE. <lb/> Anno, 1695.</hi>
+                        </head>
+                    </sampleText>
+                    <msItemStruct xml:id="ACD1" type="translation">
+                        <locus n="1">2–338v</locus>
+                        <title xml:lang="bg">Славяно-латински речник</title>
+                        <note>Slavonic and Latin dictionary. The Slavonic adheres fundamentally to
+                            the norms of Russian Church Slavonic, avoiding pleophonic forms where
+                            metathesized ones are available, etc., though vernacular words are not
+                            entirely excluded, e.g. <foreign xml:lang="cu">чрепаха</foreign> beside
+                                <foreign xml:lang="cu">зелвъ</foreign>. Ukrainian influence is
+                            evident in certain lexical items (e.g. <foreign xml:lang="cu">довтѣб</foreign>, <foreign xml:lang="cu">похибныи</foreign>) and in
+                            the confusion of <foreign xml:lang="cu">и</foreign>and <foreign xml:lang="cu">ы</foreign>. The writer appears to have been fully
+                            competent in both Church Slavonic and Latin</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="la">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">DICTIONARIVM <lb/> SCLAVONICO,
+                                LATINUM, <lb/> OPERI AMBROSII CALEPINI <lb/> Servata Verborum
+                                integra. <lb/> SERIE, <lb/> CONFORMATUM <lb/> MOSCHOVIAE. <lb/>
+                                Anno, 1695.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">А҆ гласъ
+                                сѣтованиѧ</incipit>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">А҆. гласъ
+                                сѣтованиѧ,</ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ah, heu, hei</ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">Абїе.</ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">Statim, confestim mox</ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">Et sic prout quis.. operator
+                                dig<lb/>nus mercede sua, operanti de<lb/>mentiae Divinae,
+                                inconcessu, inci<lb/>pere et finire Libellum humc<lb/>ad dignum
+                                cultum, dignissimo <lb/> operi eius, sit pro mercede, <lb/> a me
+                                scabellino pulvere: par<lb/>ticipe papiri, atramenti et <lb/> calami
+                                in praedicto opere, <lb/>gloria sempiterna, digni<lb/>tas et
+                                adoratis. <lb/> in aevum aevi</ab>
+                        </sampleText>
+                    </msItemStruct>
+                </msContents>
+                <history>
+                    <origin evidence="internal" resp="#DR">
+                        <origDate notBefore="1695" notAfter="1695">1695</origDate>
+                    </origin>
+                    <provenance>The stamp inside the front and back covers, 'E Bibliotheca
+                        Butleriana', shows that the MS came from the collection of Dr
+                            <persName>Samuel Butler </persName>(1774–1839), Bishop of
+                        Lichfield.</provenance>
+                    <acquisition>Purchased by the British Museum in 1841.</acquisition>
+                </history>
+                <additional>
+                    <adminInfo>
+                        <recordHist>
+                            <source>
+                                <p>Directly catalogued from the original manuscript using the
+                                    printed catalogue <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 67–68.</ref></p>
+                            </source>
+                        </recordHist>
+                    </adminInfo>
+                    <surrogates>
+                        <p>Digital image of f. 2 (file: <idno>C7936-01</idno>).</p>
+                    </surrogates>
+                </additional>
+            </msDesc>
+        </body>
+    </text>
+</TEI>
