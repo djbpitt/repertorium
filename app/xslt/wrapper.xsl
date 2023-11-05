@@ -56,13 +56,17 @@
             </a>
         </span>
     </xsl:variable>
-    <xsl:variable name="plectogram" as="element(span)">
-        <span class="nav" id="plectogram">
+    <xsl:variable name="plectogram" as="element(button)">
+        <!--        <span class="nav" id="plectogram">
             <a href="plectogram">
                 <img title="Create plectogram" src="resources/images/plectogram.svg"
                     alt="[Create plectogram]"/>
             </a>
-        </span>
+        </span>-->
+        <button type="submit" form="plectogram-form">
+            <img title="Create plectogram" src="resources/images/plectogram.svg"
+                alt="[Create plectogram]"/>
+        </button>
     </xsl:variable>
     <xsl:variable name="slider" as="element(span)">
         <span class="nav" id="slider">SLIDER</span>
