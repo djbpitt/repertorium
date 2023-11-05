@@ -114,13 +114,14 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
                   for $hit at $prev-pos in $previous-ms-texts/tei:title[@xml:lang eq "bg"][. eq $ms-bg-title]
                   let $prevYpos := count($hit/(preceding::tei:msItemStruct | ancestor::tei:msItemStruct)) + 1
                   return
-                    <line
+                    (<line
+                      (: 1 is right, 2 is left :)
                       class="c{$box-label}"
                       x1="{($ms-pos - 1) * $columnSpacing + $xShift}"
-                      y1="{$boxHeight * ($prev-pos + 0.5) + $yShift}"
+                      y1="{($text-pos + 0.5) * $boxHeight  + $yShift}"
                       x2="{($ms-pos - 2) * $columnSpacing + $boxWidth + $xShift}"
                       y2="{($prevYpos - 0.5) * $boxHeight + $yShift}"
-                    />)
+                    />,util:log("info", concat("PLECTOGRAM: prev-pos: ", $prev-pos, "; preYpos: ", $prevYpos, "; text-pos: ", $text-pos))))
               }</g>
           </g>
       }</g>
