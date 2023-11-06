@@ -1,5 +1,4 @@
 xquery version "3.1";
-declare namespace m="http://menology.obdurodon.org/model";
 
 declare variable $exist:root external;
 declare variable $exist:prefix external;
