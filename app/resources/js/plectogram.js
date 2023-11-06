@@ -25,7 +25,7 @@ function scale_plectogram() {
   svg.setAttribute('width', (readCookie('initialSvgWidth') * this.value));
 }
 function assign_mouseover_listener() {
-  let plectogram_cells = document.querySelectorAll('rect');
+  let plectogram_cells = document.querySelectorAll('#columns > g > g');
   for (var i = 0, len = plectogram_cells.length; i < len; i++) {
     plectogram_cells[i].addEventListener('mouseover', plectogram_mouseover, 'false');
     plectogram_cells[i].addEventListener('mouseout', plectogram_mouseout, 'false');
