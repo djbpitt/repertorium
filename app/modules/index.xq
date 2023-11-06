@@ -202,6 +202,8 @@ declare option output:indent "no";
           Cyrillic font from <m:a
             url="http://www.maccampus.de/">MacCampus</m:a> (production)</m:li>
         <m:li><m:a
+            url="https://gitlab.com/ralessi/oldstandard">Old Standard</m:a> broad-spectrum Unicode font (production)</m:li>
+        <m:li><m:a
             url="http://www.quivira-font.com/index.php">Quivira</m:a> broad-spectrum Unicode
           font (development)</m:li>
         <m:li><m:a
