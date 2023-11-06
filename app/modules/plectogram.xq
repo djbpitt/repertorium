@@ -108,9 +108,11 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
                       height="{$boxHeight}"
                       title="{$box-label}">
                     </rect>
-                    <text
+                    <a xlink:href="search?exactTitle={$ms-bg-title}">
+                      <text
                       x="{$textXShift}"
                       y="{$text-pos * $boxHeight + $textYShift}">{$box-label}</text>
+                      </a>
                   </g>,
                   for $hit in ($previous-ms-texts)[tei:title eq $ms-bg-title]
                   let $prev-y-pos as xs:integer := sum(
