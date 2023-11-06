@@ -26,6 +26,7 @@ url("fonts/BukyVede-Regular.woff") format("woff"),
 url("fonts/BukyVede-Regular.otf") format("opentype");
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
   font-family: 'BukyvedeLightWeb';
@@ -36,6 +37,7 @@ url('fonts/Bukyvede_Light.ttf') format('truetype'), /* Safari, Android, iOS */
 url('fonts/Bukyvede_Light.svg#1d6dadb2045bcf2c9fcbd3f4b1735ff4') format('svg'); /* Legacy iOS */
   font-style: normal;
   font-weight: 200;
+  font-display: swap;
 }
 @font-face {
   font-family: "Old Standard Regular";
@@ -45,6 +47,7 @@ url("fonts/OldStandard-Regular.otf") format("opentype"),
 url("fonts/OldStandard-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
 }
 /* ======================================================================= */
 /* Global                                                                  */
@@ -63,7 +66,7 @@ a {
   display: none;
 }
 .os {
-  font-family: BukyvedeLightWeb;
+  font-family: BukyvedeLightWeb, "Old Standard Regular";
   font-weight: normal;
 }
 .gk {
@@ -224,7 +227,7 @@ span.explicit,
 span.finalRubric,
 span.colophon
 {
-  font-family: BukyvedeLightWeb;
+  font-family: BukyvedeLightWeb, "Old Standard Regular";
   /* <note> uses regular font*/
 }
 span.rubric {
