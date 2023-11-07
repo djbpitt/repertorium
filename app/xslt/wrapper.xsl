@@ -110,6 +110,7 @@
                 <xsl:if test="descendant::main/@id eq 'main_svg'">
                     <script src="resources/js/plectogram.js"></script>
                     <script src="resources/js/plectogram_drag.js"></script>
+                    <script src="resources/js/tooltip_plectogram_title.js"></script>
                 </xsl:if>
                 <xsl:if test="descendant::main/@id eq 'search'">
                     <script src="resources/js/search.js"/>

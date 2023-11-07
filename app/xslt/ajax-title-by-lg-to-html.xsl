@@ -4,9 +4,8 @@
   xmlns:math="http://www.w3.org/2005/xpath-functions/math"
   exclude-result-prefixes="xs math"
   version="3.0">
-  <xsl:template match="@*|node()">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
+  <xsl:output method="text"/>
+  <xsl:template match="/">
+   <xsl:value-of select="."/>
   </xsl:template>
 </xsl:stylesheet>
