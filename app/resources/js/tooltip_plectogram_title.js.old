@@ -25,7 +25,6 @@ var delay = function (elem, callback) {
 
 set_tooltip = function (context, xPos, yPos) {
     // relies on first class value always being cXXXX
-    // set on <rect>, but probably should be set on containing <g> instead
     let input_text = context.getElementsByTagName('rect')[0].classList[0].substring(1);
     let offset = parseInt(input_text, 16);
     // readCookie() is loaded in lgToggle.js
@@ -49,7 +48,7 @@ set_tooltip = function (context, xPos, yPos) {
             for (var i = 0, length = overlays.length; i < length; i++) {
                 document.body.removeChild(overlays[i]);
             }
-            document.body.appendChild(overlay);
+            document.getElementById("main_svg").appendChild(overlay);
             setTimeout(function () {
                 if (document.getElementById(popupId)) {
                     document.body.removeChild(document.getElementById(popupId))
