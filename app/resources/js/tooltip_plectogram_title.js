@@ -1,4 +1,3 @@
-"use strict";
 function tooltip_lang_init() {
     var tooltips = document.querySelectorAll('#columns rect');
     for (var i = 0, length = tooltips.length; i < length; i++) {
@@ -6,7 +5,7 @@ function tooltip_lang_init() {
     }
 }
 
-let delay = function (elem, callback) {
+var delay = function (elem, callback) {
     // http://stackoverflow.com/questions/6231052/how-to-have-a-mouseover-event-fire-only-if-the-mouse-is-hovered-over-an-element
     var timeout = null;
     elem.onmouseover = function (event) {
@@ -24,7 +23,7 @@ let delay = function (elem, callback) {
     };
 };
 
-let set_tooltip = function (context, xPos, yPos) {
+var set_tooltip = function (context, xPos, yPos) {
     var input_text = context.getElementsByTagName('rect')[0].getAttributeNS('http://www.obdurodon.org', 'title')
     // readCookie() is loaded in lgToggle.js
     var lg = readCookie('lg');
