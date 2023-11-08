@@ -134,5 +134,4 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
           </g>
       }</g>
   </g>
-  <text id="tooltip" x="100" y="100" visibility="hidden">Tooltip</text>
 </svg>

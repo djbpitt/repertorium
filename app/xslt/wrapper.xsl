@@ -107,7 +107,7 @@
                 <link rel="stylesheet" type="text/css" href="resources/css/repertorium.css"/>
                 <link rel="icon" href="resources/images/favicon.ico" type="image/svg+xml"/>
                 <script src="resources/js/lgToggle.js"/>
-                <xsl:if test="descendant::main/@id eq 'main_svg'">
+                <xsl:if test="descendant::main/@id eq 'plectogram'">
                     <script src="resources/js/plectogram.js"></script>
                     <script src="resources/js/plectogram_drag.js"></script>
                     <script src="resources/js/tooltip_plectogram_title.js"></script>
@@ -158,7 +158,7 @@
                     <xsl:when test="../@id eq 'titles'">
                         <xsl:sequence select="$codicology, $xml, $search, $bibliography, $flags"/>
                     </xsl:when>
-                    <xsl:when test="../@id eq 'main_svg'">
+                    <xsl:when test="../@id eq 'plectogram'">
                         <xsl:sequence select="$slider, $search, $bibliography, $flags"/>
                     </xsl:when>
                 </xsl:choose>
