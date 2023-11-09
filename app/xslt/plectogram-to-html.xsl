@@ -11,6 +11,7 @@
         <main xmlns="http://www.w3.org/1999/xhtml" id="plectogram">
             <h2>Visualize textual relationships</h2>
             <xsl:apply-templates/>
+            <div id="overlay" class="overlay"/>
         </main>
     </xsl:template>
     <xsl:template match="g[@id eq 'main_svg']">

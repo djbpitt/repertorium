@@ -517,7 +517,10 @@ div.bibData > .scope:before {
   stroke: black;
   stroke-width: 0.5;
 }
-#main_svg > g > rect {
+#plectogram {
+  position: relative;
+}
+#plectogram > g > rect {
   width: 60px;
   height: 17px;
 }
@@ -531,14 +534,22 @@ div.bibData > .scope:before {
   fill: blue;
   stroke: blue;
 }
-#main_svg line {
+#plectogram line {
   stroke: black;
   stroke-width: 0.5px;
 }
 rect {
   cursor: pointer;
 }
-div.overlay {
+#overlay {
+  position:absolute;
+  left: -200px; /* Hide off-screen */
   background-color: aqua;
+  max-width: 150px;
+  font-size: smaller; 
+  z-index: 10; 
+  border: 2px solid black;
+  padding: .1em .5em; 
+  margin: 0;
 }
 
