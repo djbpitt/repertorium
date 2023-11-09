@@ -93,10 +93,8 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
                 for $ms-text at $text-pos in $ms-texts
                 let $ms-bg-title as element(tei:title) := $ms-text/tei:title[@xml:lang eq "bg"]
                 let $matching-bg-title as element(Q{}bg) := $all-bg-titles[. eq $ms-bg-title]
-                let $box-label := $matching-bg-title/parent::Q{}title
-                /preceding-sibling::*
-                => count()
-                => re:decimal-to-hex() => re:left-pad(4, '0')
+                let $matching-bg-title-pos as xs:integer := ($matching-bg-title/../preceding-sibling::* => count()) + 1
+                let $box-label as xs:string := $matching-bg-title-pos => re:decimal-to-hex() => re:left-pad(4, '0')
                 return
                   (<g
                     class="c{$box-label}">

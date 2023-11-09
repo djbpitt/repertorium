@@ -2,6 +2,7 @@ function tooltip_lang_init() {
   var tooltips = document.querySelectorAll('#columns rect');
   for (var i = 0, length = tooltips.length; i < length; i++) {
     delay(tooltips[i].parentNode, set_tooltip);
+    tooltips[i].addEventListener("mouseout", hide_tooltip, false);
   }
 }
 
@@ -32,17 +33,20 @@ var set_tooltip = function (context, xPos, yPos) {
     xPos = windowWidth - 155;
   };
   var popupId = "n" + Math.random();
-  // overlay.setAttribute("onmouseout", "document.body.removeChild(document.getElementById('" + popupId + "'))");
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       let overlay = document.getElementById("overlay");
       overlay.innerHTML = xhttp.responseText;
       overlay.style.left = xPos + "px";
-      overlay.style.top = yPos + "px";
+      overlay.style.top = (yPos - 70) + "px";
     }
   };
   xhttp.open("GET", "ajax-title-by-lg?offset=" + offset, true);
   xhttp.send();
+}
+
+var hide_tooltip = function() {
+  document.getElementById("overlay").style.left = "-200px";
 }
 window.addEventListener('DOMContentLoaded', tooltip_lang_init, false);
