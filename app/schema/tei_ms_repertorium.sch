@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt3"
     xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0/"
     xml:lang="en">
+    <sch:title>Schematron rules for Repertorium</sch:title>
+    <sch:p>Basic rules shared with Zograph project. See also supplementary Repertorium-only rules at <sch:emph>tei_ms_repertorium_supplement.sch</sch:emph></sch:p>
+    
     <sch:ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/>
     <sch:ns uri="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re"/>
     <xsl:key name="bgTitles" match="bg" use="."/>
@@ -31,7 +34,7 @@
     <sch:pattern id="article-title-rules">
         <sch:rule context="tei:msItemStruct/tei:title">
             <sch:let name="titles"
-                value="doc('http://repertorium.obdurodon.org/titles_cyrillic.xml')"/>
+                value="doc('../aux/titles.xml')"/>
             <sch:assert test="normalize-space(.) eq ." sqf:fix="normalize-space">You have entered a
                 title with extra white space</sch:assert>
             <sqf:fix id="normalize-space">
