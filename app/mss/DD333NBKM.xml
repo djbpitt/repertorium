@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DD333NBKM">
     <teiHeader>
         <fileDesc>
@@ -20,13 +24,12 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <bibl>
-                    <ref target="bib:Цонев1910">Цонев 1910: 333-335</ref>
+                    <ref target="bib:Цонев1910">Цонев 1910: 333–335</ref>
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -55,6 +58,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-29">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -73,9 +77,6 @@
                     <repository>National Library</repository>
                     <idno type="shelfmark">333</idno>
                     <idno type="catalogue">333</idno>
-                    <note>
-                        <name type="relatedPerson" full="yes">Xristo Markov</name>
-                    </note>
                     <altIdentifier type="former">
                         <idno type="shelfmark">117</idno>
                     </altIdentifier>
@@ -84,8 +85,7 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">234</measure>
@@ -95,7 +95,7 @@
                                 </dimensions>
                             </extent>
                             <foliation>There are new pagination by folia and original pagination by
-                                folia from f. 216 to f. 230 (<foreign xml:lang="cu">в҃ -
+                                folia from f. 216 to f. 230 (<foreign xml:lang="cu">в҃ –
                                     ѕі҃</foreign>)</foliation>
                             <collation>
                                 <summary>23 quires of 8 ff.; some quires contain 20 or 16
@@ -103,7 +103,7 @@
                             </collation>
                             <condition>6 folia in the beginning of the codex, which are not
                                 paginnated, are blanks; there are many others blanks in the codex,
-                                too: ff. 110-115, 138-147 and ff. 185-215</condition>
+                                too: ff. 110–115, 138–147 and ff. 185–215</condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" writtenLines="19"/>
@@ -122,30 +122,26 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding contemporary="true">
-                            <p>Original binding - wooden panels covered with ornamented leather</p>
+                            <summary>Original binding – wooden panels covered with ornamented leather</summary>
                         </binding>
                     </bindingDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-                    <summary xmlns="http://www.tei-c.org/ns/1.0">West-Bulgarian dialect
-                        features</summary>
                     <scribe n="1">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-109v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial"/>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–109v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"/>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Church Slavonic</p>
-                            </orthography>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">West-Bulgarian dialect
+                                features</summary>
+                            <langNote key="orthography">Church Slavonic</langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Dimitrinka Dimitrova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                     <scribe n="2">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">112r-234v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">112r–234v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -155,10 +151,10 @@
                     <filiation type="protograph">Russian incunabular MS</filiation>
                     <filiation type="antigraph">MS 688, National Library, Sofia</filiation>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1-106r</locus>
+                        <locus n="1">1–106r</locus>
                         <title xml:lang="bg">Страсти Христови</title>
                         <author>anonymous</author>
-                        <note>The text is compiled in Russia in the 17th-18th c.</note>
+                        <note>The text is compiled in Russia in the 17th–18th c.</note>
                         <filiation type="protograph">Russian or Russian incunabular</filiation>
                         <filiation type="antigraph">MS 688, National Library, Sofia</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -167,10 +163,10 @@
                                 спаса нашего Іис҃а Хр<seg rend="sup">с</seg>та како волеѡ нашегѡ
                                 ради со҃сніѧ страстъ восприѧлъ.</head>
                             <rubric xmlns="http://www.tei-c.org/ns/1.0">Н҃нѣ всѣхъ пр<seg rend="sup">о</seg>ркъ пр<seg rend="sup">о</seg>рчествіѧ збисѧ</rubric>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Мі же верніи хр<seg rend="sup">с</seg>тіане слишавше ѡ страданіи і ро<seg rend="sup">с</seg>пѧтіи і погребені і воскр<seg rend="sup">с</seg>ніи Г<seg rend="sup">с</seg>дни оусердно Г<seg rend="sup">с</seg>да Б҃га
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">Мі же верніи хр<seg rend="sup">с</seg>тіане слишавше ѡ страданіи і ро<seg rend="sup">с</seg>пѧтіи і погребені і воскр<seg rend="sup">с</seg>ніи Г<seg rend="sup">с</seg>дни оусердно Г<seg rend="sup">с</seg>да Б҃га
                                 прославимъ иже толікое члвеколюбіе спсение прч<seg rend="sup">с</seg>тою своею плотію толіка страсти претерпе заплеваніе і
                                 поруганіе і за ланіту удареніе і конечней ко кр<seg rend="sup">с</seg>ту прррігвожденіе ѡцта и жечи напооеніее іскупый насъ
-                                своею кровйи ѿ насіліиѧ діаволѧ и ізбави насъ ѿ вѣчнаꙗ мукій</p>
+                                своею кровйи ѿ насіліиѧ діаволѧ и ізбави насъ ѿ вѣчнаꙗ мукій</ab>
                         </sampleText>
                         <msItemStruct xml:id="ACD1.1">
                             <title xml:lang="bg">Страсти Христови. За възкресението на Лазар</title>
@@ -346,8 +342,7 @@
                             <title xml:lang="bg">Страсти Христови. За присъдата на Пилат Понтийски</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ прівезѧніи г<seg rend="sup">с</seg>да нашего Іи҃са Хр<seg rend="sup">с</seg>та ка стопу і ѡ біеніи егѡ жідовскімі воініи і ѡ
-                                        поса<seg rend="sup">ж</seg>дені в темніце<seg rend="sup">х</seg>
-                                </head>
+                                        поса<seg rend="sup">ж</seg>дені в темніце<seg rend="sup">х</seg></head>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0">Тогда Пилатъ Понискіи
                                     повшлѣ г<seg rend="sup">с</seg>да нашегѡ Іи҃са Хр<seg rend="sup">с</seg>та прівѧзати ко столпу посрѣде двора своего и битии
                                     немилостиво жиліемъ суховатимъ</incipit>
@@ -571,15 +566,14 @@
                         <locus n="6">148r</locus>
                         <title xml:lang="bg">Житие на св. Харалампий</title>
                         <author>anonymous</author>
-                        <date type="churchCal" when="--02-10">10 February - St. Charalampius</date>
+                        <date type="churchCal" when="--02-10">10 February – St. Charalampius</date>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                         <filiation type="antigraph">MS 688, National Library, Sofia</filiation>
                         <filiation type="apograph">no</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Страданиꙗ ст҃агѡ
                                 свешхенномученика Харалампиꙗ еп<seg rend="sup">с</seg>копа града і
-                                иже са ни<seg rend="sup">м</seg> пострадавши<seg rend="sup">х</seg>
-                            </head>
+                                иже са ни<seg rend="sup">м</seg> пострадавши<seg rend="sup">х</seg></head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Цр<seg rend="sup">с</seg>твующу Г<seg rend="sup">с</seg>ду нашему Іи҃су Хр<seg rend="sup">с</seg>ту скончвашесѧ творимаѧ бѣсомъ служба и
                                 разорѧше се идолопоклоненіе</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">Пострада м<seg rend="sup">с</seg>ца февруаріа в десеѧтіи день всѧческіи же предстоитъ ѡ
@@ -630,7 +624,6 @@
                         <date type="churchCal" when="--12-04">4 December</date>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                         <filiation type="antigraph">MS 688, National Library, Sofia</filiation>
-                        <filiation type="apograph">no</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                 декевріа .д.҃ д҃нъ Ст҃та вѣлико мч҃ніца Варвара</head>
@@ -650,7 +643,7 @@
                         <locus n="10">173v</locus>
                         <title xml:lang="bg">Слово за Успение Богородично</title>
                         <author>Damaskenos Stoudites</author>
-                        <date type="churchCal" when="--08-15">15 August - Dormition of the
+                        <date type="churchCal" when="--08-15">15 August – Dormition of the
                             Theotokos</date>
                         <note>without end</note>
                         <filiation type="protograph">Middle Bulgarian</filiation>
@@ -673,11 +666,11 @@
                             Nikitas and Eustathius Great Martyrs.</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <p xmlns="http://www.tei-c.org/ns/1.0">силою ч<seg rend="sup">с</seg>тнагѡ и животворѧсттагѡ кр<seg rend="sup">с</seg>та Г<seg rend="sup">с</seg>днѧ молитвами преч<seg rend="sup">с</seg>тиѧ
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">силою ч<seg rend="sup">с</seg>тнагѡ и животворѧсттагѡ кр<seg rend="sup">с</seg>та Г<seg rend="sup">с</seg>днѧ молитвами преч<seg rend="sup">с</seg>тиѧ
                                     Б<seg rend="sup">д</seg>ци и с҃тихъ аг҃глъ и с҃тихъ аплъ и стагѡ
                                 великагѡ Николаѧ чудотворца и с҃тагѡ пр<seg rend="sup">о</seg>рка
                                 Илии и с҃тихъ великомч҃никъ Никиити и Евстатиѧ и пр<seg rend="sup">д</seg>бнихъ о҃цъ и стиихъ с҃тателеи и мч҃нкъ и мч҃нцъ и всехъ
-                                стихъ нб҃нихъ силъ аминъ</p>
+                                стихъ нб҃нихъ силъ аминъ</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation" style="non-narrative">
@@ -686,12 +679,12 @@
                         <note>The text is without title</note>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Ѡ велики Архаг҃гле Михаиле помози
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ѡ велики Архаг҃гле Михаиле помози
                                 мне грешнному рабу твоему им <seg rend="sup">р</seg>кы избавимѧ ѿ
                                 труса и потопа ѿ огнѧ и мшча и ѿ напраснѧ смерти и ѿ всѧкагѡ зла и ѿ
                                 врагъ льстиваго и ѿ бури наносимиѧ и ѿ лукавагѡ избавимѧ велики
                                 Михаиле Архаг҃гле г<seg rend="sup">с</seg>днъ всег<seg rend="sup">д</seg>а н҃не и пр<seg rend="sup">с</seg>но и во веки вековъ
-                                аминъ</p>
+                                аминъ</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
@@ -747,17 +740,12 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu">
-                        <origDate notBefore="1880" notAfter="1910">19th-20th c.</origDate>
-                        <origPlace>unkonwn, probably West Bulgaria (Rila monastery?)</origPlace>
-                        <note>
-                            <bibl>
-                                <respStmt>
-                                    <name full="yes">Dimitrova, D.</name>
-                                    <resp>de visu</resp>
-                                </respStmt>
-                            </bibl>B. Conev discribed MS as a written in West - North Bulgaria and
-                            dated in the frames of 19th-20th c.</note>
+                    <origin evidence="conjecture">
+                        <origDate notBefore="1880" notAfter="1910">19th–20th c.</origDate>
+                        <origPlace cert="low">unknown, probably West Bulgaria (Rila monastery)</origPlace>
+                        <ref target="bib:Цонев1910">Цонев 1910: 333–335</ref>
+                        <note>B. Conev discribed MS as a written in West-North Bulgaria and
+                            dated in the frames of 19th–20th c.</note>
                     </origin>
                 </history>
             </msDesc>

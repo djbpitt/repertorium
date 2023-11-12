@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AA325NBKM">
     <teiHeader>
         <fileDesc>
@@ -12,7 +16,7 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>30.08.1995</date>
+                <date when="1995-08-30">30.08.1995</date>
                 <idno type="Repertorium">RC-AA325NBKM</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -20,14 +24,11 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Цонев1910">Цонев 1910:311-314</ref>
-                </p>
+                <p><ref type="bibl" target="bib:Цонев1910">Цонев 1910:311–314</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -55,6 +56,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when="2009-04-17">Removed constructions
@@ -76,7 +78,7 @@
                     <repository>National Library</repository>
                     <idno type="shelfmark">325</idno>
                     <note>
-                        <ref type="bibl" target="bib:Цонев1910">Цонев 1910: 311-314</ref>
+                        <ref type="bibl" target="bib:Цонев1910">Цонев 1910: 311–314</ref>
                     </note>
                     <altIdentifier type="former">
                         <idno type="shelfmark">518</idno>
@@ -86,8 +88,7 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">86</measure>
@@ -96,9 +97,6 @@
                                     <width>125</width>
                                 </dimensions>
                             </extent>
-                            <collation>
-                                <summary>no data</summary>
-                            </collation>
                             <condition>ff. 2, 4, 5, 58, 59 are missing according to the original
                                 pagination</condition>
                         </supportDesc>
@@ -108,22 +106,22 @@
                     </objectDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Leather</p>
+                            <summary>Leather</summary>
                         </binding>
                     </bindingDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-91v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Nikifor from Rila
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–91v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">The monk Nikifor from Rila
                                 Monastery<certainty locus="value" cert="low"/>
                         </name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Semiuncial with Western Bulgarian peculiarities</p>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Western Bulgarian peculiarities</scriptNote>    
                         </scriptDesc>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Цонев1910">Цонев 1910:311-314</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Цонев1910">Цонев 1910:311–314</ref>
+                        </bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -131,7 +129,7 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1r-v</locus>
+                        <locus n="1">1r–v</locus>
                         <title xml:lang="bg">Поучение за християнското житие</title>
                         <note>There is only one page of this text. The beginning and the end are
                             missing.</note>
@@ -153,11 +151,11 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">како
                                 ѹгодиша б҃гѹ</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">щедры и милостивыи тогѡ
-                                ради пославиты бг҃ь и на <gap hand="AA"/> аминь</explicit>
+                                ради пославиты бг҃ь и на <gap/> аминь</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3">
-                        <locus n="3">8v-14v</locus>
+                        <locus n="3">8v–14v</locus>
                         <title xml:lang="bg">Поучение за покаянието</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -168,11 +166,11 @@
                                     апо<seg rend="sup">с</seg>толи и са<seg rend="sup">с</seg> ст҃ое
                                 еѵ҃г҃лїе. нелие намь срамота</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">полѹчити ѡ х҃р<seg rend="sup">с</seg>те ии<seg rend="sup">с</seg>се г҃демь нашимь
-                                томѹ <gap hand="AA"/> аминъ</explicit>
+                                томѹ <gap/> аминъ</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">14v-18v</locus>
+                        <locus n="4">14v–18v</locus>
                         <title xml:lang="bg">Поучение за любовта към ближните от Антиохий</title>
                         <author cert="medium">Antiochos Strategos (Pseudo)</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -186,7 +184,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">18v-20r</locus>
+                        <locus n="5">18v–20r</locus>
                         <title xml:lang="bg">Поучение за нашите ненавистници от Йоан Златоуст</title>
                         <author cert="medium">John Chrysostom (Pseudo)</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -198,11 +196,11 @@
                                 б҃гѹ ради ненави<seg rend="sup">с</seg>тницы наши които мрьзать на
                                 насъ и ненавидать нась</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">равно ги любить хр҃с҃тосъ
-                                емѹже <gap hand="AA"/> аминь</explicit>
+                                емѹже <gap/> аминь</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6">
-                        <locus n="6">20v-24v</locus>
+                        <locus n="6">20v–24v</locus>
                         <title xml:lang="bg">Поучение за милостинята</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -210,11 +208,11 @@
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѕ҃ ра<seg rend="sup">д</seg> милостинѧ</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Чл҃вече тебе даде г҃с҃дь
                                 богатство. не рече ти да го посвоиши,</incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и къ немѹ идеши. томѹ <gap hand=""/> аминъ</explicit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и къ немѹ идеши. томѹ <gap/> аминъ</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">24v-32r</locus>
+                        <locus n="7">24v–32r</locus>
                         <title xml:lang="bg">Поучение за милостинята и Божието въздаяние</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -228,7 +226,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="8">32r-34r</locus>
+                        <locus n="8">32r–34r</locus>
                         <title xml:lang="bg">Поучение за страноприемството от Григорий, папа Римски</title>
                         <author>Gregory the Dialogist</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -239,11 +237,11 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Беше некой богати и
                                 доброумны чл҃къ и бехѹ се заговориле са<seg rend="sup">с</seg> своѧ
                                 стѹпаница</incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ꙗда прїимѹ ва<seg rend="sup">с</seg> в неизречена красота. в цс҃ртво нбс҃ное <gap hand="AA"/>аминь</explicit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ꙗда прїимѹ ва<seg rend="sup">с</seg> в неизречена красота. в цс҃ртво нбс҃ное <gap/>аминь</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="9">34r-37r</locus>
+                        <locus n="9">34r–37r</locus>
                         <title xml:lang="bg">Поучение за Йов</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -252,12 +250,12 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Послѹшаите б҃лгословены
                                 х҃ртїаны что рече писанїе ради праведнаго и богатого їѡва</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">бѹдем'се и цс҃ртво нбс҃ное
-                                сподобиты ѡ хрс҃те іи҃се гд҃с҃емь нашемъ емѹ же <gap hand="AA"/>
+                                сподобиты ѡ хрс҃те іи҃се гд҃с҃емь нашемъ емѹ же <gap/>
                                 вѣкѡвъ.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="10">37r-40v</locus>
+                        <locus n="10">37r–40v</locus>
                         <title xml:lang="bg">Разказ за немилостивия Петър</title>
                         <note>from the patericon</note>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -269,11 +267,11 @@
                                 просїацы на ѹлица и помина Петарь покрай ныхь и питаха се единь
                                 дрѹгаго</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">како прославлѧеть свои
-                                ѹгодницы емѹ же <gap hand="AA"/>аминъ</explicit>
+                                ѹгодницы емѹ же <gap/>аминъ</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="11">41r-48r</locus>
+                        <locus n="11">41r–48r</locus>
                         <title xml:lang="bg">Разказ за девицата, която избяга в пустинята</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -284,11 +282,11 @@
                                 сказа намъ како бббешххе некоѧ девица въ іерѹсалимь смирена и
                                 благоговѣйна</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и слѹги мои да бѹдѹть,
-                                томѹ <gap hand="AA"/>аминь</explicit>
+                                томѹ <gap/>аминь</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation">
-                        <locus n="12">48r-62v</locus>
+                        <locus n="12">48r–62v</locus>
                         <title xml:lang="bg">Поучение за самовилите, бродниците и магьосниците</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -299,11 +297,11 @@
                                 ѡбаѧлници есѹ ан'тихристови ѹченицы и които ходать на ныхь. врагѹ
                                 покланѧютсе</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">ѿвѣщаты праведномѹ сѹдїю.
-                                емѹже <gap hand="AA"/>аминь.</explicit>
+                                емѹже <gap/>аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
-                        <locus n="13">62v-73v</locus>
+                        <locus n="13">62v–73v</locus>
                         <title xml:lang="bg">Поучение за магьосниците, събрано от различни книги</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -317,7 +315,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="translation">
-                        <locus n="14">73v-78r</locus>
+                        <locus n="14">73v–78r</locus>
                         <title xml:lang="bg">Поучение за магьосници, самовили и бродници за омагьосването и баенето</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -332,7 +330,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15" type="translation">
-                        <locus n="15">78r-81r</locus>
+                        <locus n="15">78r–81r</locus>
                         <title xml:lang="bg">Поучение за злите жени</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -341,11 +339,11 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">ПОмыслихъ да седа да
                                 напишем колики враговщины творѹтъ жени ради чародеѧнїе</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">многѹтрьпеливомѹ б҃гѹ
-                                нашемѹ слава <gap hand="AA"/> аминъ</explicit>
+                                нашемѹ слава <gap/> аминъ</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16" type="translation">
-                        <locus n="16">81r-85v</locus>
+                        <locus n="16">81r–85v</locus>
                         <title xml:lang="bg">Поучение за добрите жени</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -355,11 +353,11 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Вчера многѹ ѹкорихме ѕлите
                                 жены, понеже тако есть прилично,ѕлотѹ да се ѹкореватъ</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">бгѹѹгодно да живеемь. да
-                                    сподоби<seg rend="sup">м</seg> се и вѣчны животь полѹчиты <gap hand="AA"/>аминь</explicit>
+                                    сподоби<seg rend="sup">м</seg> се и вѣчны животь полѹчиты <gap/>аминь</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17" type="translation">
-                        <locus n="17">86r-91v</locus>
+                        <locus n="17">86r–91v</locus>
                         <title xml:lang="bg">Поучение за украсата на девиците и жените</title>
                         <date type="churchCal" when="--07-26">July, 26</date>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -375,7 +373,7 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#AA">
+                    <origin evidence="conjecture" resp="#AA">
                         <origDate notBefore="1700" notAfter="1799">18th c.</origDate>
                     </origin>
                 </history>
@@ -384,8 +382,7 @@
                         <recordHist>
                             <source>
                                 <p>Directly catalogued from the original manuscript using the
-                                    printed catalogue from <ref type="bibl" target="bib:Цонев1910">Цонев 1910:311-314</ref>
-                                </p>
+                                    printed catalogue from <ref type="bibl" target="bib:Цонев1910">Цонев 1910:311–314</ref></p>
                             </source>
                         </recordHist>
                     </adminInfo>

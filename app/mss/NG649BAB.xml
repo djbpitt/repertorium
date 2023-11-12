@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-NG649BAB">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Хроника на Константин Манасий и други съчинения</title>
+                <title>Хроника на Константин Манасий и други съчинения</title>
                 <author xml:id="NG">Nina Gagova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -12,7 +16,7 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>January 2005</date>
+                <date when="2005-01">January 2005</date>
                 <idno type="Repertorium">RC-NG649BAB</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -20,16 +24,14 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Яцимирский1905">Яцимирский 1905: 839-842</ref>
-                    <ref type="bibl" target="bib:Дуйчев1988">Дуйчев и др. 1988: 72-77</ref>
-                    <ref type="bibl" target="bib:Bogdan1895">Bogdan 1895</ref>
-                </p>
+                <listBibl>
+                    <bibl><ref target="bib:Яцимирский1905">Яцимирский 1905: 839–842</ref></bibl>
+                    <bibl><ref target="bib:Дуйчев1988">Дуйчев и др. 1988: 72–77</ref></bibl>
+                    <bibl><ref target="bib:Bogdan1895">Bogdan 1895</ref></bibl></listBibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -42,7 +44,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Miscellany with mixed content</item>
                         <item>King Ivan Alexander</item>
                         <item>Chronicle</item>
@@ -59,10 +61,9 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-
+            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
-
             <change who="#AM" when="2011-10-07">Removed old elements</change>
             <change who="#AM" when="2011-10-07">Editorial work, checked MS and added
                 information</change>
@@ -86,33 +87,36 @@
                 </msIdentifier>
                 <physDesc>
                     <summary>The manuscript is a copy of Chronicle of Constantine
-                        Manasses.</summary>
+                        Manasses.</summary> 
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
                                 <material>Paper of good quality</material>
+                                <!--
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Hand
                                         with star opposite middle finger</motif>
                                     <ref type="bibl" target="bib:Briquet1907">
-                                        <num>325, 326</num>
-                                        <date>1514-1515</date>
+                                        <num>325</num>
+                                        <num>326</num>
+                                        <date>1514–1515</date>
                                     </ref>
                                 </watermark>
+                                -->
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Balance
                                         in circle with star</motif>
                                     <term>similar to</term>
                                     <ref type="bibl" target="bib:Briquet1907">
-                                        <num>2586</num>
+                                        <num><ref target="https://briquet-online.at/2586">2586</ref></num>
                                         <date>1505</date>
                                     </ref>
                                 </watermark>
                                 <watermark>
-                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Cross</motif>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Cross of Lorraine</motif>
                                     <term>similar to</term>
                                     <ref type="bibl" target="bib:Briquet1907">
-                                        <num>5755</num>
+                                        <num><ref target="https://briquet-online.at/5755">5755</ref></num>
                                         <date>1516</date>
                                     </ref>
                                 </watermark>
@@ -128,8 +132,8 @@
                             <collation>
                                 <summary>no data</summary>
                             </collation>
-                            <condition>The MS is convolute by two parts: I - f.3r-f.36r
-                                (f.3r-f30v+f.31-36v); II - f.37r-f.246v (f.37-f.47-f.2-f.48-f.246).
+                            <condition>The MS is convolute  of two parts: I – f.3r–f.36r
+                                (f.3r–f30v+f.31–36v); II – f.37r–f.246v (f.37–f.47–f.2–f.48–f.246).
                                 Without incipit; the first folio is f.3; the correctly place of f.2
                                 is between f.47 and f.48.; without end.</condition>
                         </supportDesc>
@@ -154,16 +158,16 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Wooden panel covered with ornamented leather</p>
+                            <summary>Wooden panel covered with ornamented leather</summary>
                         </binding>
                     </bindingDesc>
-                    <additions type="inscriptions">
-                        <list type="simple">
+                    <additions>
+                        <list>
                             <item>
                                 <locus>inside front cover</locus>
-                                <quote xml:lang="bg">№ 86. Отъ книгитѣ на Манчо Н. Джуджовъ, кой тоя
-                                    остава привременно въ Тулчанското българско читалище. Тулчинско
-                                    читалище. Съгласїе.</quote>
+                                <quote xml:lang="bg">№ 86. Отъ книгитѣ на <persName>Манчо Н. Джуджовъ</persName>, кой тоя
+                                    остава привременно въ Тулчанското българско читалище. <placeName>Тулчинско
+                                    читалище. Съгласїе</placeName>.</quote>
                             </item>
                             <item>
                                 <locus>f. 30v</locus>
@@ -178,7 +182,7 @@
                             </item>
                             <item>
                                 <locus>ff. 36r–36v</locus>
-                                <quote>Азъ Манчо Н. Джуджовъ роденъ сѧмъ около 1832-1835 годинѧ
+                                <quote>Азъ Манчо Н. Джуджовъ роденъ сѧмъ около 1832–1835 годинѧ
                                     добре не сѧ знае защото баща ми не записалъ, а венчях ся съ
                                     супругата си Анна 1856 годинѧ 14-й октомврїи. Въ 1857 година 6-и
                                     августа роди ни сѧ момиче крьстихме го Дона. Въ 1858 г.
@@ -206,43 +210,37 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
-                            <locus>2 -36v</locus>
-                            <locus>37 -46</locus>
+                            <locus>2r–36v</locus>
+                            <locus>37r–46r</locus>
                         </locusGrp>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Semiuntial with cursive elemennts</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Semiuntial with cursive elemennts</scriptNote>
                         </scriptDesc>
                         <scribeLang>
                             <summary xmlns="http://www.tei-c.org/ns/1.0">Middle Bulgarian; Tŭrnovo
                                 school, Moldavian origin</summary>
-                            <orthography>
-                                <orthNote type="jers" subtype="etymReg">Two jers</orthNote>
-                                <orthNote type="juses" subtype="etymReg">Two juses</orthNote>
-                            </orthography>
+                                <langNote key="orthography" type="jers" subtype="etymReg">Two jers</langNote>
+                            <langNote key="orthography" type="juses" subtype="etymReg">Two juses</langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Дуйчев1988">Дуйчев и др. 1988:
-                            91</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Дуйчев1988">Дуйчев и др. 1988:
+                            91</ref></bibl>
                     </scribe>
                     <scribe n="2">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">48 -246v</locus>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Semiuntial with cursive elemennts</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">48–246v</locus>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  script="Cyrs" style="semiuncial">Semiuntial with cursive elemennts</scriptNote>
                         </scriptDesc>
                         <scribeLang>
                             <summary xmlns="http://www.tei-c.org/ns/1.0">Middle Bulgarian; Tŭrnovo
                                 school, Moldavian origin</summary>
-                            <orthography>
-                                <orthNote type="jers" subtype="etymReg">Two jers</orthNote>
-                                <orthNote type="juses" subtype="etymReg">two juses</orthNote>
-                            </orthography>
+                            <langNote key="orthography" type="jers" subtype="etymReg">Two jers</langNote>
+                            <langNote key="orthography" type="juses" subtype="etymReg">Two juses</langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Дуйчев1988">Дуйчев и др. 1988:
-                            91</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Дуйчев1988">Дуйчев и др. 1988:
+                            91</ref></bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -250,7 +248,7 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="15">37r-41r</locus>
+                        <locus n="15">37r–41r</locus>
                         <title xml:lang="bg">Поучение за преходността на човешкия живот от Василий Велики</title>
                         <author>Basil the Great</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -281,7 +279,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="17">41v-46v</locus>
+                        <locus n="17">41v–46v</locus>
                         <title xml:lang="bg">Сказание от книгите (извадка от Патерика)</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Сказание ѡт҃ книгь</head>
@@ -292,7 +290,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="18">46v-47v + 2r</locus>
+                        <locus n="18">46v–47v + 2r</locus>
                         <title xml:lang="bg">Слово за Успение Богородично</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ въз<seg rend="sup">д</seg>вижени прѣст҃ѫѫ бцѫ҃</head>
@@ -303,7 +301,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="1">2r-2v</locus>
+                        <locus n="1">2r–2v</locus>
                         <title xml:lang="bg">Въпроси и отговори на Атанасий Александрийски, извлечение</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Аѳанасиево ѿ въпросъ.</head>
@@ -313,7 +311,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="2">3r-3v</locus>
+                        <locus n="2">3r–3v</locus>
                         <title xml:lang="bg">Въпроси и отговори. Разумник-Указ</title>
                         <note>Without beginning and title</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -323,7 +321,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="4">3v-18v</locus>
+                        <locus n="4">3v–18v</locus>
                         <title xml:lang="bg">Прение на Панагиот Философ с Азимит</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Съпрѣнїе Панагиѡта философа съ
@@ -336,7 +334,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="4">18v-19v</locus>
+                        <locus n="4">18v–19v</locus>
                         <title xml:lang="bg">Разказ за пророк Самуил</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово Данїила прорѡка. ѡ
@@ -348,13 +346,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="5">19v-23v</locus>
+                        <locus n="5">19v–23v</locus>
                         <title xml:lang="bg">Цикъл разкази за кръстното дърво, приписван на Григорий Богослов</title>
                         <author>Gregory of Nazianzos (Pseudo)</author>
                         <note>The copy represents first redaction of the text.<bibl xml:lang="bg" type="published">
                                 <ref type="bibl" target="bib:Милтенова1982b">Милтенова 1982</ref>
-                            </bibl>
-                        </note>
+                            </bibl></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово Григориа Богослова. ѡ
                                 кръстѣ ч<seg rend="sup">с</seg>тно<seg rend="sup">м'</seg>. га҃
@@ -364,14 +361,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="6">24r-24v</locus>
+                        <locus n="6">24r–24v</locus>
                         <title xml:lang="bg">Цикъл разкази за кръстното дърво. Разказ за Адамовата глава</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ главѣ адамовѣ.</head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="7">25r-25v</locus>
+                        <locus n="7">25r–25v</locus>
                         <title xml:lang="bg">Цикъл разкази за кръстното дърво. Разказ за двамата разбойници</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ два
@@ -381,13 +378,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation">
-                        <locus n="8">25v-26r</locus>
+                        <locus n="8">25v–26r</locus>
                         <title xml:lang="bg">Разказ за Псалтира как беше в морето</title>
                         <note>This copy contains second variant of the text like a separate article;
                             earliest variant is combined with apocryphal story about David; (first
-                            variant of the text like a separate article is included in N 677 NBKM -
-                            Sofia, 15th c. etc.). Other copies: N 433 NBKM - Sofia, N 149 NB - Wien,
-                            N 100 MSPC (Gruig2) - Belgrade etc.</note>
+                            variant of the text like a separate article is included in N 677 NBKM –
+                            Sofia, 15th c. etc.). Other copies: N 433 NBKM – Sofia, N 149 NB – Wien,
+                            N 100 MSPC (Gruig2) – Belgrade etc.</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Оуказь ѱалтирю како бысть въ
                                 мори.</head>
@@ -398,7 +395,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
-                        <locus n="9">26r-26v</locus>
+                        <locus n="9">26r–26v</locus>
                         <title xml:lang="bg">Разказ как се написа Евангелието</title>
                         <note>This is the second variant of the article. Text corresponds with
                             second variant of Story how Psalter was in the sea.</note>
@@ -410,7 +407,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="translation">
-                        <locus n="10">26v-28r</locus>
+                        <locus n="10">26v–28r</locus>
                         <title xml:lang="bg">Разказ за Успение на Богородица</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ап<seg rend="sup">с</seg>ла Ѳомѫ. како въз<seg rend="sup">д</seg>виже
@@ -421,9 +418,9 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15" type="translation">
-                        <locus n="11">28r-28v</locus>
+                        <locus n="11">28r–28v</locus>
                         <title xml:lang="bg">Правила за живота през 12-те месеца</title>
-                        <note>The text is like the one in N 677 HBKM (Tikveški sbornik), f. 1-1v,
+                        <note>The text is like the one in N 677 HBKM (Tikveški sbornik), f. 1–1v,
                             with traces of Slavic origin; the earliest copy of an article about
                             rules of life is in the Izbornik 1073 (translation from Greek).</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -432,14 +429,13 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Въкоушаи млѣко на гладнѫ
                                 ꙗтробѫ</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">то въсѧ съблю<seg rend="sup">д</seg> члче҃ не бои сѧ никое ѧзы<seg rend="sup">к</seg>
-                                <seg rend="sup">сиц!</seg>
-                            </explicit>
+                                <seg rend="sup">сиц!</seg></explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16" type="translation">
                         <locus n="12">28v</locus>
                         <title xml:lang="bg">Правила за да бъде човек здрав</title>
-                        <note>The text is like a text in N 677 HBKM (Tikveški sbornik), f. 1-1v,
+                        <note>The text is like a text in N 677 HBKM (Tikveški sbornik), f. 1–1v,
                             with traces of Slavic origin; earliest copy of an article about rules of
                             life is in the Izbornik 1073 (translation from Greek).</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -452,18 +448,17 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17" type="translation">
-                        <locus n="13">28v-30v</locus>
+                        <locus n="13">28v–30v</locus>
                         <title xml:lang="bg">Гръмник</title>
                         <note>Without title.</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще ли възгръмит. въ
-                                іислоѡвиее <seg rend="sup">сиц!</seg> ѿ въстѡка тлѣнїе каже<seg rend="sup">т</seg>
-                            </incipit>
+                                іислоѡвиее <seg rend="sup">сиц!</seg> ѿ въстѡка тлѣнїе каже<seg rend="sup">т</seg></incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">аще ли трѫ<seg rend="sup">с</seg> съмѫщенїе бѫде<seg rend="sup">т</seg>.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18" type="translation">
-                        <locus n="14">31r-36v</locus>
+                        <locus n="14">31r–36v</locus>
                         <title xml:lang="bg">Въпроси и отговори. Тълкувание за Новия завет</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Въпрос' ѿ еѵгл҃їахъ.</head>
@@ -474,7 +469,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD19" type="translation">
-                        <locus n="19">48r-63v</locus>
+                        <locus n="19">48r–63v</locus>
                         <title xml:lang="bg">Тълкувания за светата Троица и за вярата, извадки</title>
                         <author>Cyril of Alexandria</author>
                         <author>John the Philosopher</author>
@@ -495,23 +490,22 @@
                                 неи же о свтѣи҃ троици и о вѣрѣ и прочиихъ многых'.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Прѣжде въсѣх' и съ въсѣми и
                                 ради въсѣх' подбаеть҃ истинномоу христианиноу вѣдѣти что е<seg rend="sup">с</seg> Бъ҃.</incipit>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Стго҃ ѡца҃ наше<seg rend="sup">г</seg> Кирїла архїп<seg rend="sup">с</seg>кпа Алеѯа<seg rend="sup">н</seg>дръска. въпроси и ѿвѣты ѡ стѣ҃ тр<seg rend="sup">о</seg>ци.</p>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Изложенїе въ кратцѣ о правовѣрнѣи
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">Стго҃ ѡца҃ наше<seg rend="sup">г</seg> Кирїла архїп<seg rend="sup">с</seg>кпа Алеѯа<seg rend="sup">н</seg>дръска. въпроси и ѿвѣты ѡ стѣ҃ тр<seg rend="sup">о</seg>ци.</ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">Изложенїе въ кратцѣ о правовѣрнѣи
                                 вѣрѣ. Іѡ<seg rend="sup">а</seg>на Фїлософа къ нѣкоемоу просившоу оу
-                                него.</p>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Ѡ еже колико дѣль сътвори бъ҃ въ
-                                    шести<seg rend="sup">х</seg> дне<seg rend="sup">х</seg>
-                            </p>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Стго ѡца нашего Епифанїа ѡ
-                                томжде.</p>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Севирїана еп<seg rend="sup">с</seg>кпа Гавалу. сказанїе ѿ пръвааго слова Шестоднь҃ника.</p>
+                                него.</ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ѡ еже колико дѣль сътвори бъ҃ въ
+                                    шести<seg rend="sup">х</seg> дне<seg rend="sup">х</seg></ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">Стго ѡца нашего Епифанїа ѡ
+                                томжде.</ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">Севирїана еп<seg rend="sup">с</seg>кпа Гавалу. сказанїе ѿ пръвааго слова Шестоднь҃ника.</ab>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">бу҃ же благодѣть
                                 съдѣавшомоу въсѣ и дѣѫщомоу въ наше спсе҃нїе въ вѣкы
                                 амїнь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD20" type="translation">
-                        <locus n="20">64r-79v</locus>
+                        <locus n="20">64r–79v</locus>
                         <title xml:lang="bg">Откровение на Псевдо-Методий Патарски</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -523,11 +517,11 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Егда изыдоста из раꙗ
                                     Ада<seg rend="sup">м</seg> и Евва</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">изгнани бывше блг<seg rend="sup">д</seg>тиѫ и члко҃бїимь нше<seg rend="sup">г</seg>
-                                Іѵ҃. Ха҃. съ ним же оцу҃ <gap hand="NG"/> вѣко<seg rend="sup">м</seg>. амїнь.</explicit>
+                                Іѵ҃. Ха҃. съ ним же оцу҃ <gap/> вѣко<seg rend="sup">м</seg>. амїнь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD21" type="translation">
-                        <locus n="21">80r-102v</locus>
+                        <locus n="21">80r–102v</locus>
                         <title xml:lang="bg">Житие на св. Андрей Юродиви, извлечение</title>
                         <author>anonymous</author>
                         <note>An excerpt includes questions of Epiphanius and answeres of st.
@@ -538,18 +532,17 @@
                             <head xmlns="http://www.tei-c.org/ns/1.0">Избранїе мало ѿ житїа стго҃
                                 ѡца҃ нашего Ан<seg rend="sup">д</seg>реа ѧродиваго Х<seg rend="sup">с</seg>а ради. имѣѫщее въпроси Епифанїа съ ѿвѣтми стго҃ Андреа.
                                 полезно ѕѣло.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Добро оубѡ и до<seg rend="sup">с</seg>хвално е<seg rend="sup">с</seg>
-                            </incipit>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">
-                                <gap hand="NG"/>неприкосновень славы бж<seg rend="sup">с</seg>тва
-                                его съзръцати ннѣ и въ бесконечныѧ вѣкы вѣкомь.</p>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Добро оубѡ и до<seg rend="sup">с</seg>хвално е<seg rend="sup">с</seg></incipit>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">
+                                <gap/>неприкосновень славы бж<seg rend="sup">с</seg>тва
+                                его съзръцати ннѣ и въ бесконечныѧ вѣкы вѣкомь.</ab>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">тъкмо сам' позна сѧ стмоу҃
                                 Епифанїю. бывшоуму послѣди патрїархоу въ Константинѣ
                                 градѣ.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD22" type="translation">
-                        <locus n="22">103r-235v</locus>
+                        <locus n="22">103r–235v</locus>
                         <title xml:lang="bg">Хроника на Константин Манасий</title>
                         <author>Constantine Manasses</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -565,18 +558,17 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD23" type="translation">
-                        <locus n="23">236r-237r</locus>
+                        <locus n="23">236r–237r</locus>
                         <title xml:lang="bg">Хронограф, извлечение. За ерусалимските царе</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Ерслмстїи҃ црїе҃ иже цр<seg rend="sup">с</seg>твовашѧ въ Ісли҃.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ пръвыи Сау<seg rend="sup">л</seg> цр<seg rend="sup">с</seg>твова .м҃. лѣ<seg rend="sup">т</seg>
-                            </incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ пръвыи Сау<seg rend="sup">л</seg> цр<seg rend="sup">с</seg>твова .м҃. лѣ<seg rend="sup">т</seg></incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и ѧзами ѡбложивъ Вавилон
                                 ѿпусти.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD24" type="translation">
-                        <locus n="24">237v-246v</locus>
+                        <locus n="24">237v–246v</locus>
                         <title xml:lang="bg">Летопис. От кога започна Молдавската земя</title>
                         <author>anonymous</author>
                         <note>Without end. Folia appear to be missing.</note>
@@ -592,7 +584,7 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="catalogue" resp="#NG">
+                    <origin evidence="conjecture" resp="#NG">
                         <origDate notBefore="1500" notAfter="1599">16th c.</origDate>
                         <origPlace>Moldavia</origPlace>
                     </origin>

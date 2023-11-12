@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AS9H10MP">
     <teiHeader>
         <fileDesc>
@@ -20,15 +24,12 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Vašica1957">Vašica &amp; Vajs 1957:
-                    314-317</ref>
-                </p>
+                <p><ref type="bibl" target="bib:Vašica1957">Vašica &amp; Vajs 1957:
+                    314-317</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -41,7 +42,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Prayerbook</item>
                         <item>Kathechismus</item>
                     </list>
@@ -57,6 +58,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -70,19 +72,18 @@
                     <settlement>Prague</settlement>
                     <repository>National Museum</repository>
                     <idno type="shelfmark">IX H 10</idno>
-                    <altIdentifier type="former">
-                        <idno type="shelfmark">S VIII</idno>
-                    </altIdentifier>
                     <altIdentifier>
                         <idno type="catalogue">146</idno>
+                    </altIdentifier>
+                    <altIdentifier type="former">
+                        <idno type="shelfmark">S VIII</idno>
                     </altIdentifier>
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">V+55</measure>
@@ -93,7 +94,7 @@
                             </extent>
                             <pagination xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">not
                                 original</pagination>
-                            <condition>first 5 ff. are blank, f.40v blank, ff. 51r-55v blank; all of
+                            <condition>first 5 ff. are blank, f.40v blank, ff. 51r–55v blank; all of
                                 them are not original</condition>
                         </supportDesc>
                         <layoutDesc>
@@ -102,13 +103,13 @@
                     </objectDesc>
                     <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Dark brown</ink>
                     <decoDesc>
-                        <p>red titles ans initials</p>
+                        <p>Red titles and initials</p>
                     </decoDesc>
                     <additions type="inscriptions">
-                        <list type="simple">
+                        <list>
                             <item>
                                 <locus>f. 53v</locus>
-                                <quote xml:lang="cu">И сіѧже изъ Моихъ кнігъ<name type="scribe" full="yes">Панаіѡтъ</name> х<seg rend="sup">н</seg>.д<seg rend="sup">н</seg>.</quote>
+                                <quote xml:lang="cu">И сіѧже изъ Моихъ кнігъ <persName>Панаіѡтъ</persName> х<seg rend="sup">н</seg>.д<seg rend="sup">н</seg>.</quote>
                             </item>
                             <item>
                                 <note>Note with instructions on cryptocraphy in Cyrillic and Greek
@@ -119,20 +120,20 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-50v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>f.1r-40v; ff.41r-50v with cursive elements</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–50v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">
+                                <locusGrp><locus>f.1r–40v</locus> <locus>ff.41r–50v</locus></locusGrp> with cursive elements
+                            </scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Small jus, two jers</p>
-                            </orthography>
+                            <langNote key="orthography">Small jus, two jers
+                            </langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Vašica1957">Vašica &amp; Vajs 1957:
-                                314-317</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Vašica1957">Vašica &amp; Vajs 1957: 314–317</ref>
+                        </bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -141,7 +142,7 @@
                         <ref type="bibl" target="bib:Аргиров1894">Аргиров 1894</ref>
                     </note>
                     <msItemStruct xml:id="ACD1" xml:lang="cu" type="original">
-                        <locus n="1">ір-30в</locus>
+                        <locus n="1">ір–30в</locus>
                         <title xml:lang="bg">Въпроси и отговори. Кратък катехизис</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -159,7 +160,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="original">
-                        <locus n="2">31r-38r</locus>
+                        <locus n="2">31r–38r</locus>
                         <title xml:lang="bg">Поучение на Исус Христос към Апостолите</title>
                         <author>anonymous</author>
                         <note>Without the title</note>
@@ -176,7 +177,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">38v-39r</locus>
+                        <locus n="3">38v–39r</locus>
                         <title xml:lang="bg">Молитва при тръгване на път</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -189,7 +190,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">41r-46r</locus>
+                        <locus n="4">41r–46r</locus>
                         <title xml:lang="bg">Молитви против оскверняване</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -206,7 +207,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">41r-46r</locus>
+                        <locus n="5">41r–46r</locus>
                         <title xml:lang="bg">Молитва към Богородица от Акатиста</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -222,18 +223,17 @@
                                     похвалу предь ѡбразо<seg rend="sup">м</seg> еѧ по всѧ дни
                                     г҃лати, и рече, иже, аще, кто г҃леть, сїю похвалу. пре<seg rend="sup">д</seg> ѡбразо<seg rend="sup">м</seg> моимь по
                                     всѧ дни живота своего, во бремѧ смерти его сама предстану ему и
-                                    ѿ вечнїѧ муки избавлю его</add>
-                            </explicit>
+                                    ѿ вечнїѧ муки избавлю его</add></explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="original">
-                        <locus n="6">46r-48r</locus>
+                        <locus n="6">46r–48r</locus>
                         <title xml:lang="bg">Молитва към архангел Михаил</title>
                         <author>anonymous</author>
                         <note>
                             <bibl xml:lang="ru" type="published">
                                 <ref type="bibl" target="bib:Яцимирский1913">Яцимирский 1913:
-                                    59-63</ref>
+                                    59–63</ref>
                             </bibl>
                         </note>
                         <filiation type="source" subtype="other">May be the original Bulgarian
@@ -269,7 +269,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="original">
-                        <locus n="8">49r-50r</locus>
+                        <locus n="8">49r–50r</locus>
                         <title xml:lang="bg">Описание на обреди при умиращ</title>
                         <author>anonymous</author>
                         <note>Without title</note>
@@ -305,10 +305,9 @@
                 <history>
                     <origin evidence="catalogue" resp="#AS">
                         <origDate notBefore="1701" notAfter="1799">18th c.</origDate>
-                        <origPlace>unknown</origPlace>
                         <note>
                             <ref type="bibl" target="bib:Vašica1957">Vašica &amp; Vajs 1957:
-                                314-317</ref>
+                                314–317</ref>
                         </note>
                     </origin>
                 </history>

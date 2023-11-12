@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM2_23RM">
     <teiHeader>
         <fileDesc>
@@ -21,8 +25,7 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -47,7 +50,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>miscellany</item>
                     </list>
                 </keywords>
@@ -62,6 +65,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#DB" when="2016-07-02">Added @xml:id attributes to author and editors of
@@ -83,23 +87,14 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper, a few types, thick, white and smooth</material>
+                                <material>A few types of paper, thick, white and smooth</material>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Two
                                         crossed swords</motif>
                                     <term>similar to</term>
                                     <ref type="bibl" target="bib:Briquet1907">
-                                        <num>5159</num>
-                                        <date>1476-1487</date>
-                                    </ref>
-                                </watermark>
-                                <watermark>
-                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Two
-                                        crossed arrows</motif>
-                                    <term>similar to</term>
-                                    <ref type="bibl" target="bib:Briquet1907">
-                                        <num>2463</num>
-                                        <date>1477</date>
+                                        <num><ref target="https://briquet-online.at/5159">5159</ref></num>
+                                        <date>1476–1487</date>
                                     </ref>
                                 </watermark>
                                 <watermark>
@@ -107,8 +102,8 @@
                                         in circle</motif>
                                     <term>two types, similar to</term>
                                     <ref type="bibl" target="bib:Briquet1907">
-                                        <num>2463</num>
-                                        <date>1471-1476</date>
+                                        <num><ref target="https://briquet-online.at/2463">2463</ref></num>
+                                        <date>1468–1471</date>
                                     </ref>
                                 </watermark>
                                 <watermark>
@@ -116,16 +111,16 @@
                                         with star</motif>
                                     <term>sinilar to</term>
                                     <ref type="bibl" target="bib:Briquet1907">
-                                        <num>10713</num>
-                                        <date>1480-1489</date>
+                                        <num><ref target="https://briquet-online.at/10713">10713</ref></num>
+                                        <date>1480–1489</date>
                                     </ref>
                                 </watermark>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Hat</motif>
                                     <term>equal to</term>
                                     <ref type="bibl" target="bib:Briquet1907">
-                                        <num>3369</num>
-                                        <date>1455-1470</date>
+                                        <num><ref target="https://briquet-online.at/3369">3369</ref></num>
+                                        <date>1455–1470</date>
                                     </ref>
                                 </watermark>
                                 <watermark>
@@ -134,7 +129,7 @@
                                     <term>two types, equal to</term>
                                     <ref type="bibl" target="bib:Briquet1907">
                                         <num>2463</num>
-                                        <date>1471-1476</date>
+                                        <date>1471–1476</date>
                                     </ref>
                                 </watermark>
                             </support>
@@ -151,9 +146,9 @@
                             </extent>
                             <foliation>Foliation with Cyrillic letters, late.</foliation>
                             <collation>
-                                <summary>The quires signed with Cyrillic letters under
-                                        <emph>titlo</emph> in the middle of the lower margin of the
-                                    first quire folio</summary>
+                                <signatures>The quires signed with Cyrillic letters under
+                                    <emph>titlo</emph> in the middle of the lower margin of the
+                                    first quire folio</signatures>
                             </collation>
                             <condition>A large part of the MS is well preserved; some folia are
                                 worn.</condition>
@@ -167,20 +162,19 @@
                     <decoDesc>
                         <decoNote>
                             <p>Balkan style, with some islamic elements;</p>
-                            <p>
-                                <locus>f. 2r</locus> a big quadratic headpiece with islamic elements
+                            <p><locus>f. 2r</locus> a big quadratic headpiece with islamic elements
                                 in red, blue, brown and gold;<locus>2r</locus> initial "L" in
                                 colours.</p>
                         </decoNote>
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Thick wooden boards covered with dark brown leather without
-                                ornaments.</p>
+                            <summary>Thick wooden boards covered with dark brown leather without
+                                ornaments.</summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
-                        <list type="simple">
+                        <list>
                             <item>
                                 <locus>inside front cover</locus>
                                 <quote xml:lang="cu">Да са знае когда бѣше размиръ ѿ турками сосъ
@@ -204,7 +198,7 @@
                             </item>
                             <item>
                                 <locus>f. Iv</locus>
-                                <persName type="reader" full="yes">Pamfilij of Rila</persName>
+                                <persName type="reader">Pamfilij of Rila</persName>
                                 <quote xml:lang="cu">Сїа книга прочетѡхъ азъ Памфилїа грешны рилецъ
                                     въ лѣто <date>1797</date>
                                 </quote>
@@ -236,36 +230,30 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <summary xmlns="http://www.tei-c.org/ns/1.0">Vladislav the Grammarian</summary>
                     <scribe n="1">
-                        <name xmlns="http://www.tei-c.org/ns/1.0" cert="high" full="yes">Vladislav
+                        <name xmlns="http://www.tei-c.org/ns/1.0" cert="high" role="scribe">Vladislav
                             the Grammarian</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Regular refined semiuncial;</p>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  script="Cyrs" style="semiuncial">Regular refined semiuncial;</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Resavian school, without
-                                    juses, with two jers.</p>
-                            </orthography>
+                            <langNote key="orthography">Resavian school, without juses, with two jers.
+                            </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">B. Hristova</name>
-                            <resp>description 1996 : 49-63.</resp>
-                        </respStmt>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0"><ref target="bib:Христова1996">Христова 1996</ref></bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents type="translation">
                     <summary>Vitas and homilies</summary>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1r-2r</locus>
+                        <locus n="1">1r–2r</locus>
                         <title xml:lang="bg">Съдържание на ръкописа</title>
                         <note>Titles and incipita of the articles.</note>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">2r-38r</locus>
+                        <locus n="2">2r–38r</locus>
                         <title xml:lang="bg">Слово похвално за Василий Велики на Амфилохий Иконийски</title>
                         <author>Amphilochios of Ikonion (Pseudo)</author>
-                        <note>The homily is a work of an anonimous author <ref type="bibl" target="bib:Христова1996">Христова 1996: 126-127</ref>
-                        </note>
+                        <note>The homily is a work of an anonimous author <ref type="bibl" target="bib:Христова1996">Христова 1996: 126-127</ref></note>
                         <filiation type="translation">1</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Ге<seg rend="sup">н</seg>а.
@@ -278,7 +266,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3">
-                        <locus n="3">39r-133v</locus>
+                        <locus n="3">39r–133v</locus>
                         <title xml:lang="bg">Житие на св. Григорий Акрагантийски от Леонтий презвитер</title>
                         <author>Leontios of Rome</author>
                         <filiation type="translation">1</filiation>
@@ -293,7 +281,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
-                        <locus n="4">134r-177v</locus>
+                        <locus n="4">134r–177v</locus>
                         <title xml:lang="bg">Житие на св. Йоан Милостиви от Симеон Метафраст</title>
                         <author>Symeon Metaphrastes</author>
                         <filiation type="translation">1</filiation>
@@ -307,7 +295,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5">
-                        <locus n="5">178r-301v</locus>
+                        <locus n="5">178r–301v</locus>
                         <title xml:lang="bg">Житие на Йоан Златоуст от Симеон Метафраст</title>
                         <author>Symeon Metaphrastes</author>
                         <filiation type="translation">1</filiation>
@@ -322,7 +310,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6">
-                        <locus n="6">301v-329r</locus>
+                        <locus n="6">301v–329r</locus>
                         <title xml:lang="bg">Житие на Йоан Дамаскин от Йоан Йерусалимски</title>
                         <author>John of Jerusalem</author>
                         <filiation type="translation">1</filiation>
@@ -338,7 +326,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7">
-                        <locus n="7">329r-362r</locus>
+                        <locus n="7">329r–362r</locus>
                         <title xml:lang="bg">Мъчение на св. Мина, Ермоген и Евграф</title>
                         <author>Symeon Metaphrastes</author>
                         <filiation type="translation">1</filiation>
@@ -351,7 +339,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8">
-                        <locus n="8">363r-565v</locus>
+                        <locus n="8">363r–565v</locus>
                         <title xml:lang="bg">Житие на Григорий Омиритски (Григентий Тефаренски)</title>
                         <filiation type="translation">1</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -366,7 +354,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9">
-                        <locus n="9">556r-572v</locus>
+                        <locus n="9">556r–572v</locus>
                         <title xml:lang="bg">Слово за Рождество Христово</title>
                         <author cert="medium">John of Damascus</author>
                         <author cert="medium">John of Euboea</author>
@@ -380,7 +368,7 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#AM">
+                    <origin evidence="conjecture" resp="#AM">
                         <origDate notBefore="1479" notAfter="1490">15th c., 80s</origDate>
                         <origPlace>Rila monastery</origPlace>
                         <ref type="bibl" target="bib:Христова1996">Христова 1996</ref>

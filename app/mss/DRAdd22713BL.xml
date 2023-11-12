@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DRAdd22713BL">
     <teiHeader>
         <fileDesc>
@@ -14,7 +18,7 @@
             <publicationStmt>
                 <publisher>Istitute of Literature</publisher>
                 <pubPlace>Sofia, Bulgaria</pubPlace>
-                <date>11.2003</date>
+                <date when="2003-11">11.2003</date>
                 <idno type="Repertorium">RC-DRAdd22713BL</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -22,13 +26,12 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <p>This description is based on <emph>de visu</emph> observations and on the
-                    published catalogue descriptions <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 74-75</ref>.</p>
+                    published catalogue descriptions <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 74–75</ref>.</p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -55,6 +58,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#DR" when="2009-10-07">Removed entities for the basic Old Slavic characters </change>
@@ -71,10 +75,10 @@
                     <repository>British Library</repository>
                     <collection>Additional Manuscripts</collection>
                     <idno type="shelfmark">Add. MS 22713</idno>
-                    <altIdentifier type="catalgue">
+                    <altIdentifier>
                         <idno type="catalogue">58</idno>
                         <note>
-                            <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 74-75.</ref>
+                            <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 74–75.</ref>
                         </note>
                     </altIdentifier>
                 </msIdentifier>
@@ -82,7 +86,6 @@
                     <objectDesc form="roll">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Fool
                                         2/4</motif>
@@ -109,8 +112,7 @@
                                     occupied by the headpiece, and the margin begins only below
                                     this</ruling>
                             </collation>
-                            <condition>Good condition; repaired in the British Library
-                                (20/8/2001).</condition>
+                            <condition>Good condition</condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1">Line count varies</layout>
@@ -143,23 +145,22 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
-                        <persName xmlns="http://www.tei-c.org/ns/1.0" type="scribe" xml:id="AnonymousAdd22713BL" full="yes">Anonymous.</persName>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="skoropis">
-                            <p>Skoropis'; <dim unit="mm">2 mm</dim> of height for the lines with
-                                propis'; the height of specimens varies.</p>
+                        <persName xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous.</persName>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="cursive">'Skoropis'; <dimensions unit="mm" type="char"><height>2</height></dimensions> for the lines with
+                                propis'; the height of specimens varies.</scriptNote>
                         </scriptDesc>
                     </scribe>
                 </scribeDesc>
                 <msContents>
-                    <summary>Cyrillic alphabet with propisi.</summary>
+                    <summary>Cyrillic alphabet with 'propisi'.</summary>
                     <msItemStruct xml:id="ACD1" type="translation">
                         <title xml:lang="bg">Молитва встъпителна</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <p xmlns="http://www.tei-c.org/ns/1.0">
-                                <foreign xml:lang="cu">Великѡго б҃га помощию і мл҃твами вели́кихъ
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">
+                                Великѡго б҃га помощию і мл҃твами вели́кихъ
                                     св҃тителе' Петра а̋леѯѣ́ꙗ ю҆ны і фили́ппа московъскихь і всеа
-                                    Рѡсиї чюдотворцѡвъ</foreign>
-                            </p>
+                                    Рѡсиї чюдотворцѡвъ</ab>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
@@ -187,30 +188,33 @@
                         <title xml:lang="bg">Молитва завършваща</title>
                         <note>"After the prayers"</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <p xmlns="http://www.tei-c.org/ns/1.0">
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">
                                 <foreign xml:lang="cu">За Мл҃твъ св҃тыхь ѡц҃ъ н҃шихъ Гд<seg rend="sup">с҇</seg>и Иі҆с҃е Хр<seg rend="sup">с҇</seg>е Бж҃е
                                     н҃шъ Помилꙋ<seg rend="sup">и</seg> на<seg rend="sup">с҇</seg>
-                                    Ами́нь</foreign>
-                            </p>
+                                    Ами́нь</foreign></ab>
                         </sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#DR">
+                    <origin evidence="conjecture" resp="#DR">
                         <origDate notBefore="1601" notAfter="1699">17th c.</origDate>
                         <origPlace>Russian</origPlace>
                     </origin>
                     <provenance>Presented by <persName>Hen. Garling</persName>.</provenance>
-                    <acquisition>2 March 1859.</acquisition>
+                    <acquisition>2 March 1859</acquisition>
                 </history>
                 <additional>
                     <adminInfo>
                         <recordHist>
                             <source>
                                 <p>Directly catalogued from the original manuscript using the
-                                    printed catalogue <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 74-75</ref>.</p>
+                                    printed catalogue <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 74–75</ref>.</p>
                             </source>
                         </recordHist>
+                        <custodialHist>
+                            <custEvent type="restoration">Restored in the British Library
+                                (<date when="2001-08-20">20/8/2001</date>).</custEvent>
+                        </custodialHist>
                     </adminInfo>
                     <surrogates>
                         <p>Digital image of the roll (files: C7927-08, C7928-01)</p>.</surrogates>

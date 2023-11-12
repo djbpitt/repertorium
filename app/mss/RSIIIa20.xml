@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-RSIIIa20">
     <teiHeader>
         <fileDesc>
@@ -20,18 +24,15 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Mošin1955">Mošin 1955: 74-75</ref>
-                    <ref type="bibl" target="bib:Цонев1911">Цонев 1911: No. 97, p. 38, Repr. No.
-                        68-69.</ref>
-                    <ref type="bibl" target="bib:Novaković1877">Novaković 1877: 60-61</ref>
-                    <ref type="bibl" target="bib:Jagić1886">Jagić 1886</ref>
-                </p>
+                <listBibl><bibl><ref target="bib:Mošin1955">Mošin 1955: 74-75</ref></bibl>
+                   <bibl><ref target="bib:Цонев1911">Цонев 1911: No. 97, p. 38, Repr. No.
+                        68-69</ref></bibl>
+                    <bibl><ref target="bib:Novaković1877">Novaković 1877: 60-61</ref></bibl>
+                    <bibl><ref target="bib:Jagić1886">Jagić 1886</ref></bibl></listBibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -44,7 +45,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>miscellany</item>
                     </list>
                 </keywords>
@@ -58,6 +59,9 @@
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
+        <revisionDesc>
+            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
+        </revisionDesc>
     </teiHeader>
     <text>
         <body>
@@ -82,15 +86,15 @@
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Anchor</motif>
                                     <ref type="bibl" target="bib:Briquet1907">
-                                        <num>544-547</num>
-                                        <date>1518-1534</date>
+                                        <num><ref target="https://briquet-online.at/BR.php?refnr=544">544–547</ref></num>
+                                        <date>1532/1547</date>
                                     </ref>
                                 </watermark>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Scales
                                         in circle with star above</motif>
                                     <ref type="bibl" target="bib:Briquet1907">
-                                        <num>2586</num>
+                                        <num><ref target="https://briquet-online.at/2586">2586</ref></num>
                                         <date>1505</date>
                                     </ref>
                                 </watermark>
@@ -122,11 +126,11 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Wooden binding with dark red ornamented leader</p>
+                            <summary>Wooden binding with dark red ornamented leader</summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
-                        <list type="simple">
+                        <list>
                             <item>
                                 <locus>ff. 4-5</locus>
                                 <date>19th c.</date>
@@ -144,21 +148,21 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial"/>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  script="Cyrs" style="semiuncial"/>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Serbian orthography</p>
-                            </orthography>
+                                <langNote key="orthography">Serbian orthography</langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
                             <ref type="bibl" target="bib:Mošin1955">Mošin 1955: 74-75</ref>
-                        </note>
+                        </bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents type="translation">
                     <summary>Miscellany of Serbian chronicles and rodoslovs, sermons for calendar
-                        feasts, apocryphal texts, questions and answers, zodiak.</summary>
+                        feasts, apocryphal texts, questions and answers, zodiak</summary>
                     <msItemStruct xml:id="ACD1">
                         <locus n="1">[1]</locus>
                         <title xml:lang="bg">Историческа бележка за идването на турците</title>
@@ -168,9 +172,7 @@
                         <title xml:lang="bg">Загребски родослов</title>
                         <note>
                             <ref type="bibl" target="bib:Novaković1877">Novaković 1877: 71-77</ref>;
-                                <ref type="bibl" target="bib:Stojanović1927">Stojanović 1927:
-                                2-38</ref>
-                        </note>
+                                <ref type="bibl" target="bib:Stojanović1927">Stojanović 1927: 2-38</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Родословь светіхь ктиторь и
                                 господь срьбскихь земль.</head>
@@ -182,8 +184,7 @@
                         <locus n="3">10-12</locus>
                         <title xml:lang="bg">Загребски летопис</title>
                         <note>
-                            <ref type="bibl" target="bib:Stojanović1927">Stojanović 1927:
-                                121-122</ref>
+                            <ref type="bibl" target="bib:Stojanović1927">Stojanović 1927: 121-122</ref>
                         </note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">А се ѡт битиа кажеть.</head>
@@ -197,8 +198,7 @@
                         <note>Contains twenty-nine chapters, a compilation of the Second (З2) and
                             the Third (З3) translations, including four chapters with mixed text
                                 <ref type="bibl" target="bib:Стойкова1994">Стойкова 1994:
-                                78-81</ref>
-                        </note>
+                                78-81</ref></note>
                         <filiation type="translation">2</filiation>
                         <filiation type="translation">3</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -281,8 +281,7 @@
                             <title xml:lang="bg">Физиолог. За гълъба</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">сло<seg rend="sup">в</seg>
-                                    за голѹба пти<gap/>
-                                </head>
+                                    за голѹба пти<gap/></head>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0">голѹбь ѥ<seg rend="sup">т</seg> мека птица сьбирают се да стрегѹть себѣ ѿ ꙗст<seg rend="sup">р</seg>еба или есть единь или мнози и васи ѹмь
                                         имѹт<supplied>.</supplied> ѡ ꙗстребе.</incipit>
                             </sampleText>
@@ -495,9 +494,8 @@
                         <locus n="5">31v-40</locus>
                         <title xml:lang="bg">Разказ как Константин цар и майка му Елена намериха честния кръст</title>
                         <date type="churchCal" when="--09-14">14 September</date>
-                        <note>
-                            <ref type="bibl" target="bib:Иванова2008">Иванова 2008: 204</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS:  14.09/3а</ref>
+                        </filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мѣсеца сеп. ді. дьнь.
                                 Вьздвижение чьстнаго и животворещего крьста гь. нашего Ісоусь Хс.
@@ -666,9 +664,8 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#RS">
+                    <origin evidence="conjecture" resp="#RS">
                         <origDate notBefore="1500" notAfter="1520">16th c., beginning</origDate>
-                        <origPlace>Unknown</origPlace>
                         <ref type="bibl" target="bib:Mošin1955">Mošin 1955: 74-75</ref>
                     </origin>
                 </history>

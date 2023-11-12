@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-MY3Upps">
     <teiHeader>
         <fileDesc>
@@ -8,14 +12,14 @@
                 <author xml:id="MY">Mariya Yovcheva</author>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
                 <respStmt>
-                    <name>Predrag Matejich</name>
+                    <name>Predrag Matejić</name>
                     <resp>Catalogue</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>20.07.2010</date>
+                <date when="2010-07-20">20.07.2010</date>
                 <idno type="Repertorium">RC-MY3Upps</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -23,14 +27,11 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Глубоковский1918">Глубоковский 1918</ref>
-                </p>
+                <bibl><ref target="bib:Глубоковский1918">Глубоковский 1918</ref></bibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -64,6 +65,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -84,9 +86,6 @@
                 <physDesc>
                     <objectDesc form="codex">
                         <supportDesc material="paper">
-                            <support>
-                                <material>Paper</material>
-                            </support>
                             <extent>
                                 <measure unit="folia">220</measure>
                                 <dimensions unit="mm" type="folia">
@@ -94,7 +93,7 @@
                                     <width>80</width>
                                 </dimensions>
                             </extent>
-                            <condition>Manuscript is in very good condition.</condition>
+                            <condition>Manuscript is in very good condition</condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" writtenLines="8 18"/>
@@ -108,8 +107,8 @@
                         <p>Ornamented ending on 159v.</p>
                     </decoDesc>
                     <bindingDesc>
-                        <binding>
-                            <p>Leather binding (original).</p>
+                        <binding contemporary="true">
+                            <summary>Leather binding (original).</summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
@@ -119,75 +118,55 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-220v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Semiunicial with cursive elements</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–220v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Semiunicial with cursive elements</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Russian</p>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Russian</summary>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name>M. Yovcheva</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <filiation type="protograph">Russian</filiation>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">4r-141r</locus>
+                        <locus n="1">4r–141r</locus>
                         <title xml:lang="bg">Месецослов</title>
-                        <note>Ff. 1-3 are empty; Съдържа паметите на св. Петка (л. 23а, без тропар),
-                            св. Иван Рилски (л. 25а, без тропар), пренасяне на мощите на св. Илариан
-                            Мъгленски (л. 25б, без тропар), св. Сава Сръбски (л. 58б, без тропар,
-                            вж. листа__________________), св. Кирил (л. 69б без тропар, вж.
-                            листа__________)</note>
+                        <note>Ff. 1–3 are empty; Съдържа паметите на св. Петка (л. 23r, без тропар),
+                            св. Иван Рилски (л. 25r, без тропар), пренасяне на мощите на св. Илариан
+                            Мъгленски (л. 25v, без тропар), св. Сава Сръбски (л. 58v, без тропар,), св. Кирил (л. 69v без тропар)</note>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">143r-159v</locus>
+                        <locus n="2">143r–159v</locus>
                         <title xml:lang="bg">Календарни таблици</title>
-                        <note>Ff. 141v-142r-v are empty; calendar for the years 7169-7402
-                            (1661-1894) -- thus was probably the year of the coping.</note>
+                        <note>Ff. 141v–142r–v are empty; calendar for the years 7169–7402
+                            (1661–1894) – thus was probably the year of the coping.</note>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3">
-                        <locus n="3">160r-198v</locus>
+                        <locus n="3">160r–198v</locus>
                         <title xml:lang="bg">Таблици пасхални</title>
                         <note/>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
-                        <locus n="4">199r-217v</locus>
+                        <locus n="4">199r–217v</locus>
                         <title xml:lang="bg">Календар лунен</title>
-                        <note>Ff. 218-220 are empty.</note>
+                        <note>Ff. 218–220 are empty.</note>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                 </msContents>
                 <history>
                     <origin resp="#MY">
                         <origDate notBefore="1661" notAfter="1661">1661</origDate>
-                        <note>
                             <ref type="bibl" target="bib:Глубоковский1918">Глубоковский
                             1918</ref>
-                        </note>
                     </origin>
-                    <acquisition>
-                        <note>On the frontispiece there is a inscription "Johan Rodde" Narůa N
-                            1700.</note>
-                    </acquisition>
+                    <accMat>On the frontispiece there is a inscription "Johan Rodde" Narůa N
+                        1700.</accMat>
                 </history>
-                <additional>
-                    <adminInfo>
-                        <recordHist>
-                            <source>
-                                <p>Directly catalogued from the original manuscript using the
-                                    printed catalogue from ...</p>
-                            </source>
-                        </recordHist>
-                    </adminInfo>
-                </additional>
             </msDesc>
         </body>
     </text>

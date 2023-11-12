@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AA761NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Miscellany with Didactic Texts Devoted to Women, NBKM 761, 19th
+                <title>Miscellany with Didactic Texts Devoted to Women, NBKM 761, 19th
                     c.</title>
                 <author xml:id="AA">Adelina Angusheva</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
@@ -13,7 +17,7 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>30. 08. 1995</date>
+                <date when="1995-08-30">30. 08. 1995</date>
                 <idno type="Repertorium">RC-AA761</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -21,14 +25,11 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Цонев1923">Цонев 1923: 425-430</ref>
-                </p>
+                <p><ref type="bibl" target="bib:Цонев1923">Цонев 1923: 425-430</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -58,6 +59,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when="2009-04-17">Removed constructions
@@ -87,8 +89,7 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">129</measure>
@@ -110,22 +111,16 @@
                     </decoDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-                    <scribe n="1">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1-129</locus>
+                    <scribe>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1–129</locus>
                         <name xmlns="http://www.tei-c.org/ns/1.0">Daskal Todor Pirdopski</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Late seniuncial</p>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Late seniuncial</scriptNote>          
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, with two jers,
-                                    inconsistently used</p>
-                            </orthography>
+                            <langNote key="orthography">Without juses, with two jers,
+                                inconsistently used</langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name>Adelina Angusheva</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -133,7 +128,7 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1-25v</locus>
+                        <locus n="1">1–25v</locus>
                         <title xml:lang="bg">Поучение за жените-магьосници, самовили и бродници</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -145,7 +140,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">25v-33v</locus>
+                        <locus n="2">25v–33v</locus>
                         <title xml:lang="bg">Поучение за апостол Петър и Симон влъхва</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -160,7 +155,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3">
-                        <locus n="3">36v-48v</locus>
+                        <locus n="3">36v–48v</locus>
                         <title xml:lang="bg">Поучение срещу магиосник</title>
                         <note>Without beginning</note>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -173,7 +168,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
-                        <locus n="4">50r-60r</locus>
+                        <locus n="4">50r–60r</locus>
                         <title xml:lang="bg">Житие на св. Киприян и Юстина</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -187,7 +182,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5">
-                        <locus n="5">60r-64v</locus>
+                        <locus n="5">60r–64v</locus>
                         <title xml:lang="bg">Поучение за християните</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -197,11 +192,11 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Гдѣ са тїе дѣто
                                 викатъ</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">б҃гу получити ѡ Хр҃с҃тѣ
-                                Ї҃се <gap hand="AA"/> аминъ</explicit>
+                                Ї҃се <gap/> аминъ</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6">
-                        <locus n="6">65r-71v</locus>
+                        <locus n="6">65r–71v</locus>
                         <title xml:lang="bg">Поучение за жените-магьосници</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -215,7 +210,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">73r-95v</locus>
+                        <locus n="7">73r–95v</locus>
                         <title xml:lang="bg">Поучение за злите жени от Йоан Златоуст</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -229,7 +224,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8">
-                        <locus n="8">96v- 102v</locus>
+                        <locus n="8">96v– 102v</locus>
                         <title xml:lang="bg">Поучение за добрите жени</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -244,7 +239,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9">
-                        <locus n="9">103r-115v</locus>
+                        <locus n="9">103r–115v</locus>
                         <title xml:lang="bg">Поучение за моми и жени</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -254,11 +249,11 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Послушаіте друго како
                                 подобает жены и момы да живѣѧть</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">блгодатию и члвѣколюбїе
-                                г҃сда <gap hand="AA"/>аминъ.</explicit>
+                                г҃сда <gap/>аминъ.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10">
-                        <locus n="10">116r-134v</locus>
+                        <locus n="10">116r–134v</locus>
                         <title xml:lang="bg">Поучение за богоугодните мъже и жени</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -271,9 +266,8 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#AA">
+                    <origin evidence="conjecture" resp="#AA">
                         <origDate notBefore="1800" notAfter="1899">19th c.</origDate>
-                        <origPlace>unknown</origPlace>
                     </origin>
                 </history>
                 <additional>
@@ -281,8 +275,7 @@
                         <recordHist>
                             <source>
                                 <p>Directly catalogued from the original manuscript using the
-                                    printed catalogue from <ref type="bibl" target="bib:Цонев1923">Цонев 1923: 425-430</ref>
-                                </p>
+                                    printed catalogue from <ref type="bibl" target="bib:Цонев1923">Цонев 1923: 425–430</ref></p>
                             </source>
                         </recordHist>
                     </adminInfo>

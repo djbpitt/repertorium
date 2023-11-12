@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-MDManoil">
+-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-MDManoil">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -10,6 +12,7 @@
                 <author xml:id="MD">Margaret Dimitrova</author>
                 <author xml:id="AB">Andrej Bojadžiev</author>
                 <author xml:id="EM">Elisaveta Mousakova</author>
+                <editor corresp="#AB">Andrej Bojadžiev</editor>
             </titleStmt>
             <publicationStmt>
                 <publisher>Institute of Literature, </publisher>
@@ -18,14 +21,10 @@
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by its creator(s) under
                         the Creative Commons Attribution-No Derivative Works 3.0 License under
-                        legislation in <ref
-                            target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>. In short, you could download and disseminate
+                        legislation in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref
-                            target="http://www.ilit.bas.bg/repertorium/"
-                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -36,9 +35,7 @@
                         34-35;</ref>
                     <ref type="bibl" target="bib:Христова1982">Христова и др. 1982: 29</ref>
                     <ref type="bibl" target="bib:Куев1986">Куев 1986: 221-223.</ref> The information
-                    on the fragments kept in Russian libraries was taken from <ref type="bibl"
-                        target="bib:Шмидт1984">Шмидт 1984: 340-341.</ref> and <ref type="bibl"
-                        target="bib:Срезневский1868">Срезневский 1868, 1: 47-48; 2: 199-201;</ref>
+                    on the fragments kept in Russian libraries was taken from <ref type="bibl" target="bib:Шмидт1984">Шмидт 1984: 340-341.</ref> and <ref type="bibl" target="bib:Срезневский1868">Срезневский 1868, 1: 47-48; 2: 199-201;</ref>
                     .</p>
             </sourceDesc>
         </fileDesc>
@@ -53,14 +50,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -74,153 +71,13 @@
                     <msName type="individual" xml:lang="bg">Маноилов апостол</msName>
                     <msName type="individual" xml:lang="en">Apostle of Manoil</msName>
                     <msName type="individual" xml:lang="ru">Апостол Маноиля</msName>
-                    <p>Six fragments belonging to an once big codex have been identified by
-                        Tixomirov <ref type="bibl" target="bib:Шмидт1984">Шмидт 1984: 340.</ref>
-                        They are now housed in three libraries.</p>
-                    <altIdentifier xml:id="NBKM499">
-                        <country>Bulgaria</country>
-                        <settlement>Sofia</settlement>
-                        <repository>SS Cyril and Methodius National Library </repository>
-                        <idno type="shelfmark">499</idno>
-                        <altIdentifier>
-                            <idno type="catalogue">499</idno>
-                            <note>
-                                <ref type="bibl" target="bib:Цонев1910">Цонев 1910: 34</ref></note>
-                        </altIdentifier>
-                        <altIdentifier>
-                            <idno type="unioncatalogue">31 </idno>
-                            <note>
-                                <ref type="bibl" target="bib:Христова1982">Христова и др. 1982: No.
-                                    29</ref></note>
-                        </altIdentifier>
-                        <altIdentifier type="former">
-                            <idno type="shelfmark">38</idno>
-                        </altIdentifier>
-                    </altIdentifier>
-                    <altIdentifier xml:id="NBKM500">
-                        <country>Bulgaria</country>
-                        <settlement>Sofia</settlement>
-                        <repository>SS Cyril and Methodius National Library </repository>
-                        <idno type="shelfmark">500</idno>
-                        <altIdentifier>
-                            <idno type="catalogue">500</idno>
-                            <note>
-                                <ref type="bibl" target="bib:Цонев1910">Цонев 1910: 35</ref></note>
-                        </altIdentifier>
-                        <altIdentifier>
-                            <idno type="unioncatalogue">32</idno>
-                            <note>
-                                <ref type="bibl" target="bib:Христова1982">Христова и др. 1982:
-                                    30</ref></note>
-                        </altIdentifier>
-                        <altIdentifier type="former">
-                            <idno type="shelfmark">184</idno>
-                        </altIdentifier>
-                    </altIdentifier>
-                    <altIdentifier xml:id="BAN4.5.23">
-                        <country>Russia</country>
-                        <settlement>St. Peterbourg</settlement>
-                        <repository>Library of the Academy of Sciences</repository>
-                        <idno type="shelfmark">4.5.23</idno>
-                        <altIdentifier>
-                            <idno type="catalogue">421</idno>
-                            <note>
-                                <ref type="bibl" target="bib:Шмидт1984">Шмидт 1984: 340</ref></note>
-                        </altIdentifier>
-                        <altIdentifier type="collectionid">
-                            <collection>П. Сырку</collection>
-                            <idno type="collNr">10</idno>
-                            <note>
-                                <ref type="bibl" target="bib:Срезневский1910">Срезневский,
-                                    Покровский I: 30-31</ref></note>
-                        </altIdentifier>
-                        <altIdentifier type="collectionid">
-                            <collection>П. Сырку</collection>
-                            <idno type="collNr">15</idno>
-                            <note>
-                                <ref type="bibl" target="bib:Ильинский1908b">Ильинский 1908:
-                                    351-352</ref>; <ref type="bibl" target="bib:Мошин1966">Мошин,
-                                    табл. 52</ref></note>
-                        </altIdentifier>
-                    </altIdentifier>
-                    <altIdentifier xml:id="BAN4.5.24">
-                        <country>Russia</country>
-                        <settlement>St. Peterbourg, </settlement>
-                        <repository>Library of the Academy of Sciences</repository>
-                        <idno type="current">4.5.24</idno>
-                        <altIdentifier>
-                            <idno type="catalogue">422</idno>
-                            <note>
-                                <ref type="bibl" target="bib:Шмидт1984">Шмидт 1984: 340</ref></note>
-                        </altIdentifier>
-                        <altIdentifier type="collectionid">
-                            <collection>П. Сырку</collection>
-                            <idno type="collNr">6</idno>
-                            <note>
-                                <ref type="bibl" target="bib:Срезневский1910">Срезневский,
-                                    Покровский I: 30;</ref></note>
-                        </altIdentifier>
-                        <altIdentifier>
-                            <collection>П. Сырку</collection>
-                            <idno type="collNr">16</idno>
-                            <note>
-                                <ref type="bibl" target="bib:Ильинский1908b">Ильинский 1908:
-                                    361</ref>
-                                <ref type="bibl" target="bib:Мошин1966">Мошин 1966: табл.
-                                53</ref></note>
-                        </altIdentifier>
-                    </altIdentifier>
-                    <altIdentifier xml:id="BAN24.4.7">
-                        <country>Russia</country>
-                        <settlement>St. Peterbourg</settlement>
-                        <repository>Library of the Academy of Sciences</repository>
-                        <idno type="current">24.4.7</idno>
-                        <altIdentifier>
-                            <idno type="catalogue">423</idno>
-                            <note>
-                                <ref type="bibl" target="bib:Шмидт1984">Шмидт 1984: 340</ref></note>
-                        </altIdentifier>
-                        <altIdentifier>
-                            <collection>И. И. Срезневский</collection>
-                            <idno type="collNr">54</idno>
-                            <note>
-                                <ref type="bibl" target="bib:Срезневский1868">Срезневский 1868, 1:
-                                    47-48; 2: 199-201;</ref>
-                                <ref type="bibl" target="bib:Воскресенский1892">Воскресенский
-                                    1892-1908, 1: 14; 3/5: II;</ref>
-                                <ref type="bibl" target="bib:Воскресенский1879">Воскресенский 1879:
-                                    111-112;</ref>
-                                <ref type="bibl" target="bib:Ильинский1908a">Ильинский 1908, 1:
-                                    366-379</ref></note>
-                        </altIdentifier>
-                    </altIdentifier>
-                    <altIdentifier xml:id="RSLGrig15.III">
-                        <country>Russia</country>
-                        <settlement>Moscow</settlement>
-                        <repository>Russian State Library</repository>
-                        <idno type="current">Grig. 15. III</idno>
-                        <altIdentifier type="former">
-                            <idno type="shelfmark">M.1697.III</idno>
-                        </altIdentifier>
-                        <altIdentifier>
-                            <idno type="catalogue">424 </idno>
-                            <note>
-                                <ref type="bibl" target="bib:Шмидт1984">Шмидт 1984: 341</ref></note>
-                        </altIdentifier>
-                        <altIdentifier>
-                            <collection>В. И. Григорович</collection>
-                            <idno type="collNr">15.III</idno>
-                            <note>
-                                <ref type="bibl" target="bib:Викторов1879">Викторов 1879:
-                                12</ref></note>
-                        </altIdentifier>
-                    </altIdentifier>
                 </msIdentifier>
                 <physDesc>
-                    <summary>21 folia are preserved and they could be arranged according to
-                        the</summary>
+                    <summary>Six fragments belonging to an once big codex have been identified by
+                        Tixomirov <ref type="bibl" target="bib:Шмидт1984">Шмидт 1984: 340.</ref>
+                        Now the manuscript has 21 folia.</summary>
                     <objectDesc>
-                        <supportDesc>
+                        <supportDesc material="parch">
                             <support>
                                 <material>Parchment, rough and uneven</material>
                             </support>
@@ -232,7 +89,7 @@
                                     <ref target="#BAN4.5.23">(BAN 4.5.23)</ref> +
                                         <foreign>9</foreign>
                                     <ref target="#NBKM499">(lacuna + f. 4 + lacuna + f. 5 + lacuna +
-                                        ff. 6-10 + lacuna + f.11-12, NBKM 499)</ref> + lacuna +
+                                        ff. 6–10 + lacuna + f.11–12, NBKM 499)</ref> + lacuna +
                                         <foreign>1</foreign>
                                     <ref target="#RSLGrig15.III">(Grig. 15.III, 1r/v)</ref> +
                                         <foreign>4</foreign>
@@ -241,78 +98,12 @@
                                     <ref target="#RSLGrig15.III">(Grig. 15.III, 2r/v)</ref> +lacuna
                                     + <foreign>1</foreign>
                                     <ref target="#NBKM500">(NBKM 500)</ref>+<foreign>2</foreign>
-                                    <ref target="#NBKM499">(ff. 1-2, NBKM 499)</ref> +
+                                    <ref target="#NBKM499">(ff. 1–2, NBKM 499)</ref> +
                                         <foreign>1</foreign>
                                     <ref target="#BAN4.5.24">(BAN 4.5.24)</ref></note>
-                                <dimensions type="folia" unit="mm" corresp="#NBKM499">
-                                    <height>275, 280</height>
-                                    <width>185, 190</width>
-                                </dimensions>
-                                <dimensions type="written" unit="mm" corresp="#NBKM499">
-                                    <height>225</height>
-                                    <width>145</width>
-                                </dimensions>
-                                <dimensions type="folia" unit="mm" corresp="#NBKM500">
-                                    <height>285</height>
-                                    <width>200</width>
-                                </dimensions>
-                                <dimensions type="written" unit="mm" corresp="#NBKM500">
-                                    <height>220</height>
-                                    <width>145</width>
-                                </dimensions>
-                                <dimensions type="folia" unit="mm">
-                                    <height>282 </height>
-                                    <width>200</width>
-                                </dimensions>
-                                <dimensions type="folia" unit="mm" corresp="#BAN24.4.7">
-                                    <height>282 X </height>
-                                    <width>200</width>
-                                </dimensions>
-                                <dimensions type="folia" unit="mm" corresp="#RSLGrig15.III">
-                                    <height>284, 280</height>
-                                    <width>197, 201</width>
-                                </dimensions>
                             </extent>
-                            <foliation>The modern foliation of NBKM 499 and 500 with Arabic numerals
-                                in the middle of the upper margins was made in the <date>20th
-                                    century</date> with pencil.</foliation>
-                            <collation>
-                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                    corresp="#NBKM499">
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">
-                                        <num>3</num> The order of the quires described by Conev is
-                                        wrong. His first quire is actually the third one. His second
-                                        and third quires were located in the first part of the
-                                        manuscirpt, while his first quire, containing a Menologion
-                                        for the end of July and the beginning of August was located
-                                        close to the end of then big codex. Therefore, the correct
-                                        order is as follows: . The missing 3rd folio of the first
-                                        quire (Conev's II quire) is kept as a fragment BAN 4.5.23;
-                                        therefore, the first preserved quire of the Manuilev
-                                        Apostolos has the following structure: I: 8 (-1-5-6-8).
-                                            <formula>I: 8 (-1-3-5-6-8) [= B. Conev's II ] + II : 8
-                                            (-6) [= B. Conev's III ] + III: 8 (-1-2-3-6-7-8) [=
-                                            B.Conev's I ] </formula>
-                                        <signatures>There is no quire signatures
-                                            preserved.</signatures></p>
-                                </quire>
-                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                    corresp="#BAN24.4.7">
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">6 folia of another quire
-                                        are preserved under the signatures BAN 24.4.7 (Sreznevskij
-                                        54) (-1-2-7-8) and Grig. 15.III (-1-3-4-5-6-8), that is we
-                                        have the following quire structure : 8 (-1-8)?</p>
-                                </quire>
-                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                    corresp="#NBKM500">
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">A bifolio of NBKM 500
-                                        seems to ne the outer leaves of a quire of 8 folia if we
-                                        consider the text, herefore probably <formula>I:8
-                                            (-2-3-4-5-6-7)</formula></p>
-                                </quire>
-                            </collation>
                             <condition>The manuscript is badly damaged. Only some fragments are
-                                preserved. preserved. Water was poured on the first folio of NBKM
+                                preserved. Water was poured on the first folio of NBKM
                                 499 and the right upper corner has been turn off.</condition>
                         </supportDesc>
                         <layoutDesc>
@@ -323,18 +114,16 @@
                         the third quire is more dark than on those of the second quire</ink>
                     <decoDesc>
                         <decoNote type="headpieces" corresp="#NBKM499">There is a very narrow
-                            headband <locus>on f. 1r of NBKM 4999</locus> with interlace, drawn in
+                            headband <locus>on f. 1r of NBKM 499</locus> with interlace, drawn in
                             red ink with yellow filling and ornamentated with black dots. Another
                             very thin interlaced headpiece with black dots was drawn at the end of a
                             line on 9r. It finishes a lection. </decoNote>
                         <decoNote type="initials" corresp="#NBKM499"> Every lesson begins with an
-                            initial, in particular , on 1r (last line) <foreign xml:lang="cu"
-                                >Б</foreign> (drawn in red ink and ornamented with black dots); on
+                            initial, in particular , on 1r (last line) <foreign xml:lang="cu">Б</foreign> (drawn in red ink and ornamented with black dots); on
                             f. 2r <foreign xml:lang="cu">Б</foreign> (drawn in red ink with yellow
                             filling) , f. 2v <foreign xml:lang="cu">Б</foreign> (big initial, drawn
                             in red ink), on f. 3r two initials <foreign xml:lang="cu">Б</foreign> a
-                            naive drawing in red ink with green filling; on f. 3v <foreign
-                                xml:lang="cu">Б</foreign> (a small one, drawn in red), on f. 4r
+                            naive drawing in red ink with green filling; on f. 3v <foreign xml:lang="cu">Б</foreign> (a small one, drawn in red), on f. 4r
                                 <foreign xml:lang="cu">Б</foreign> (drawn in red ink with green filling)<bibl>
                                 <ref type="bibl" target="bib:Джурова1981">Джурова 1981: 92</ref>
                             </bibl>, f. 4r <foreign xml:lang="cu">Б</foreign> (drawn in red ink with
@@ -342,12 +131,9 @@
                                 <ref type="bibl" target="bib:Джурова1981">Джурова 1981: 92</ref>
                             </bibl>, on f. 4v <foreign xml:lang="cu">Б</foreign> (drawn in red ink);
                             on f. 5r <foreign xml:lang="cu">Б</foreign> (drawn in red ink and
-                            ornamentated with black dots); on f. 5r <foreign xml:lang="cu"
-                                >Б</foreign> (a teratological initial), on f. 5v two geometrical
-                            initials <foreign xml:lang="cu">Б</foreign>; on f. 6r <foreign
-                                xml:lang="cu">Б</foreign>, a teratological initial drawn in red with
-                            green and yellow filling and again on f. 6r <foreign xml:lang="cu"
-                                >Б</foreign>, small initial drawn in red ink with yellow filling; on
+                            ornamentated with black dots); on f. 5r <foreign xml:lang="cu">Б</foreign> (a teratological initial), on f. 5v two geometrical
+                            initials <foreign xml:lang="cu">Б</foreign>; on f. 6r <foreign xml:lang="cu">Б</foreign>, a teratological initial drawn in red with
+                            green and yellow filling and again on f. 6r <foreign xml:lang="cu">Б</foreign>, small initial drawn in red ink with yellow filling; on
                             f.7r <foreign xml:lang="cu">Б</foreign> (a big initial in red ink and
                             ornamentated with black dots, with geometrical and teratological
                             elements), on f. 9r <foreign xml:lang="cu">Е</foreign>, a beautiful
@@ -356,8 +142,7 @@
                             ink with interlace; f. 9v <foreign xml:lang="cu">Б</foreign>, drawn with
                             red ink with yellow filling and black dots, with teratological elements;
                             f. 10r two initials <foreign xml:lang="cu">Б</foreign>, drawn in red ink
-                            with yellow filling, interlace; on f. 10v <foreign xml:lang="cu"
-                                >Б</foreign> (a big teratological initial with two heads drawn with
+                            with yellow filling, interlace; on f. 10v <foreign xml:lang="cu">Б</foreign> (a big teratological initial with two heads drawn with
                             green and yellow ink); on f. 11r <foreign xml:lang="cu">Б</foreign>
                             (drawn with red ink with yellow filling and black dots), on f. 11v
                                 <foreign xml:lang="cu">Б</foreign> (only the lower part of the
@@ -365,13 +150,11 @@
                             black dots); on f. 12r <foreign xml:lang="cu">Б</foreign> (teratological
                             initial drawn with red ink and ornamentated with black dots); on f. 12 r
                                 <foreign xml:lang="cu">Б</foreign> (interlace drawn with red ink,
-                            yellow filling and black dots); on f. 12v <foreign xml:lang="cu"
-                                >Б</foreign> (with a head of a man); on f. 12v <foreign
-                                xml:lang="cu">Б</foreign> (big initial drawn with red ink). </decoNote>
+                            yellow filling and black dots); on f. 12v <foreign xml:lang="cu">Б</foreign> (with a head of a man); on f. 12v <foreign xml:lang="cu">Б</foreign> (big initial drawn with red ink). </decoNote>
                         <decoNote type="initials">In conclusion, there are the following types of
                             initials: teratological initials on f. 5r, 6r, 7v, 9v, 10r, 10v, 12v o
                             NBKM 499 and on f. 1r NBKM 500 and on f. 5v of Syrku 15; two initials
-                            with a human face drawn in the circles of the letters -- on f. 4r and
+                            with a human face drawn in the circles of the letters – on f. 4r and
                             12v of NBKM 499; geometrical initials with elements of interlace and
                             different other ornamental elements on f. 1v, 2v, 4r, 5r, 6r, 9r, 10r,
                             12v of NBKM 499, 1v, 2r, 2v of NBKM 500, 5r of Syrku 15, 1r, 1v, 2r, 2v
@@ -390,15 +173,15 @@
                     </bindingDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-                    <scribe n="1">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-12v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs">
-                            <p>The Cyrillic script of MSS NBKM 499 and NBKM 500 is similar to that
+                    <scribe>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–12v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="uncial">The Cyrillic script of MSS NBKM 499 and NBKM 500 is similar to that
                                 of the manuscripts dating from the end of the 13th and the beginning
                                 of the 14th century. This writing seems to be early representative
                                 of the type of script attested in the first part of the the Pirdop
-                                Apostle (ff. 1-5, NBKM 497, 13th c.), Menologion BAN 72 (end of the
+                                Apostle (ff. 1–5, NBKM 497, 13th c.), Menologion BAN 72 (end of the
                                 13th century), Menologion St. Peterbourg RNL, Pogod. 58 , dated
                                 1339, Paraenesis of Ephrem Syrus (Rila monastery 3/7, second half of
                                 the 14th century), Taktikon of Nikon of Montenegro (Rila monastery
@@ -406,156 +189,62 @@
                                 and NBKM 500 is believed to have written the other four fragments
                                 kept in Russian Libraries. The identification was made by Tixomirov
                                     <ref type="bibl" target="bib:Шмидт1984">Шмидт 1984:
-                                    340-341.</ref> ; see also <ref type="bibl" target="bib:Куев1986"
-                                    >Куев 1986: 221-223.</ref></p>
+                                    340–341.</ref> ; see also <ref type="bibl" target="bib:Куев1986">Куев 1986: 221–223.</ref></scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
                                 <summary xmlns="http://www.tei-c.org/ns/1.0">The orthographic
                                     overview is based only on <emph>de visu</emph> examination of
                                     the fragments kept in NBKM (499 and 500). Unfortunately, the
-                                    publication of Grigorij Il'inski <ref type="bibl"
-                                        target="Ильинский 1908a">Ильинский 1908: 366-379</ref>was
+                                    publication of Grigorij Il'inski <ref type="bibl" target="Ильинский 1908a">Ильинский 1908: 366–379</ref>was
                                     not available to us.</summary>
-                                <orthNote type="jers" subtype="irregular">The two letters for jers
+                                <langNote key="orthography" type="jers" subtype="irregular">The two letters for jers
                                     are used, in Menologion in NBKM 499 the front jer is much more
                                     frequent than in Synaxarion. In word-final position the back jer
-                                    is preferred. It is preferred also following letters <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ж, ш,
-                                        щ</foreign>, while following <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >ч</foreign> both jers could be seen. There are many
-                                    examples of writing of <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >е</foreign> for the front jer both in roots (e.g. <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >весъ</foreign> 9r and particularly often in root <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >-шед-</foreign>) and suffixes (e.g. <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">-енъ,
-                                        -ець</foreign>) and also in G. Pl., jo-declension <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >съгрѣшенеи</foreign> 12r. Still, there are examples with
-                                    jer, e.g. <foreign xmlns="http://www.tei-c.org/ns/1.0"
-                                        xml:lang="cu">пришълъци </foreign> 9r and the variation
-                                        <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >тъмнѣмъ</foreign> (1v) <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0">темницѫ</foreign> (4r).
-                                    In NBKM 499 and NBKM 500 only two instances of <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >О</foreign> for back jer is attested in suffix, e.g.
-                                        <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >избьітокь</foreign> (12r) and <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >любовь</foreign> (5r), but in root and prefixes jer is
-                                    preserved, e.g. <foreign xmlns="http://www.tei-c.org/ns/1.0"
-                                        xml:lang="cu">дъждь</foreign>. Examples with <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >О</foreign> for back jer in suffix were found by G.
-                                    Il'inskij in BAN 24.4.7 (Srezn. 54) and two are quoted by<bibl
-                                        xmlns="http://www.tei-c.org/ns/1.0">
+                                    is preferred. It is preferred also following letters <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ж, ш,
+                                        щ</foreign>, while following <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ч</foreign> both jers could be seen. There are many
+                                    examples of writing of <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">е</foreign> for the front jer both in roots (e.g. <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">весъ</foreign> 9r and particularly often in root <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">-шед-</foreign>) and suffixes (e.g. <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">-енъ,
+                                        -ець</foreign>) and also in G. Pl., jo-declension <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">съгрѣшенеи</foreign> 12r. Still, there are examples with
+                                    jer, e.g. <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">пришълъци </foreign> 9r and the variation
+                                        <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">тъмнѣмъ</foreign> (1v) <foreign xmlns="http://www.tei-c.org/ns/1.0">темницѫ</foreign> (4r).
+                                    In NBKM 499 and NBKM 500 only two instances of <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">О</foreign> for back jer is attested in suffix, e.g.
+                                        <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">избьітокь</foreign> (12r) and <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">любовь</foreign> (5r), but in root and prefixes jer is
+                                    preserved, e.g. <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">дъждь</foreign>. Examples with <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">О</foreign> for back jer in suffix were found by G.
+                                    Il'inskij in BAN 24.4.7 (Srezn. 54) and two are quoted by<bibl xmlns="http://www.tei-c.org/ns/1.0">
                                         <ref type="bibl" target="bib:Куев 1986">Куев 1986: 221</ref>
-                                    </bibl>, viz. <foreign xmlns="http://www.tei-c.org/ns/1.0"
-                                        xml:lang="cu">начѧтокь, любовь</foreign>. The adversative
-                                    conjunction appears both as <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >нъ</foreign> and <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >нѫ</foreign>. A case of assimilation after the fall of a
-                                    week jer is attested, <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >тѧкомь</foreign> (5v). Further, the spelling <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >дьвери</foreign> is found. Following letters <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >р</foreign> and <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >л</foreign> both jers are used without a
-                                    pattern.</orthNote>
-                                <orthNote type="juses" subtype="nonEtymReg">Three letters for the
+                                    </bibl>, viz. <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">начѧтокь, любовь</foreign>. The adversative
+                                    conjunction appears both as <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">нъ</foreign> and <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">нѫ</foreign>. A case of assimilation after the fall of a
+                                    week jer is attested, <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">тѧкомь</foreign> (5v). Further, the spelling <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">дьвери</foreign> is found. Following letters <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">р</foreign> and <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">л</foreign> both jers are used without a
+                                    pattern.</langNote>
+                                <langNote key="orthography" type="juses" subtype="nonEtymReg">Three letters for the
                                     nasal vowels are used: big jus, small jus, and rarely jotated
                                     small jus following a vowel, most often following small jus or
                                     big jus. There are several cases of writing of small jus for the
                                     big one following a vowel but this is not a strictly consistent
                                     pattern. Small jus is used after letters for the soft consonants
-                                        <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >р</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0"
-                                        xml:lang="cu">л</foreign>, <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >н</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0"
-                                        xml:lang="cu">ч</foreign>. Following letters <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >ш</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0"
-                                        xml:lang="cu">щ</foreign> the big jus is preferred, while
-                                    following <foreign xmlns="http://www.tei-c.org/ns/1.0"
-                                        xml:lang="cu">ч</foreign> the small jus is written as a
-                                    rule. Following <foreign xmlns="http://www.tei-c.org/ns/1.0"
-                                        xml:lang="cu">ц</foreign> both juses are attested. </orthNote>
-                                <orthNote type="jotVowel">The jotated <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >ꙗ</foreign> is regularly used in word-initial position and
-                                    following a vowel, while after letters <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >н</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0"
-                                        xml:lang="cu">р</foreign>, <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >л</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0"
-                                        xml:lang="cu">ч</foreign>, <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >ц</foreign>
-                                    <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >ѣ</foreign> is written. Thus, the norm is <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ша, чѣ,
-                                        рѣ, лѣ, нѣ, цꙗ, ꙗ.</foreign>. The jotated <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >ѥ</foreign> also appears in word-initial position and after
-                                    vowel, but with the same function гдⷭ҇и wide <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >є</foreign> is also used.</orthNote>
-                                <orthNote type="otherLetters">The letter <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >ы</foreign> appears regularly for <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >и</foreign> in the verb <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >изити</foreign>. The scribe preserves <emph
-                                        xmlns="http://www.tei-c.org/ns/1.0">l-epentheticum</emph> in
-                                    many forms but there examples without it, such as <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >вьзлюбеньіи</foreign> (1v, 2v), <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">бл<seg
-                                            rend="sup">т</seg>вениемь</foreign> (2v). The scribe
-                                    uses letter <foreign xmlns="http://www.tei-c.org/ns/1.0"
-                                        xml:lang="cu">ꙃ</foreign> in its archaic form. Wide ѻ is
-                                    used mainly in word-initial position and in postvocalic one. </orthNote>
-                                <orthNote type="foreignOrth">The scribe uses inconsistently izhica
+                                        <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">р</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">л</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">н</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ч</foreign>. Following letters <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ш</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">щ</foreign> the big jus is preferred, while
+                                    following <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ч</foreign> the small jus is written as a
+                                    rule. Following <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ц</foreign> both juses are attested. </langNote>
+                                <langNote key="orthography"  type="jotVowel">The jotated <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ꙗ</foreign> is regularly used in word-initial position and
+                                    following a vowel, while after letters <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">н</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">р</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">л</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ч</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ц</foreign>
+                                    <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ѣ</foreign> is written. Thus, the norm is <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ша, чѣ,
+                                        рѣ, лѣ, нѣ, цꙗ, ꙗ.</foreign>. The jotated <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ѥ</foreign> also appears in word-initial position and after
+                                    vowel, but with the same function гдⷭ҇и wide <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">є</foreign> is also used.</langNote>
+                                <langNote key="orthography" type="otherLetters">The letter <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ы</foreign> appears regularly for <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">и</foreign> in the verb <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">изити</foreign>. The scribe preserves <emph xmlns="http://www.tei-c.org/ns/1.0">l-epentheticum</emph> in
+                                    many forms but there examples without it, such as <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">вьзлюбеньіи</foreign> (1v, 2v), <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">бл<seg rend="sup">т</seg>вениемь</foreign> (2v). The scribe
+                                    uses letter <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ꙃ</foreign> in its archaic form. Wide ѻ is
+                                    used mainly in word-initial position and in postvocalic one. </langNote>
+                                <langNote key="orthography" type="foreignOrth">The scribe uses inconsistently izhica
                                     with two dots above in Greel loan-words and particularly
-                                    following the letters for velars. Both <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >и</foreign> and <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >оу</foreign> could be found for the Greek ypsilon in Greek
-                                    loans; cf. variation <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">сумона,
+                                    following the letters for velars. Both <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">и</foreign> and <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">оу</foreign> could be found for the Greek ypsilon in Greek
+                                    loans; cf. variation <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">сумона,
                                         сумеона, лоуканьскьі листрѫ. </foreign>, but regularly
-                                        <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >егупетьстѣи</foreign>, <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >куринеискьі</foreign>. Both <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >еу</foreign> and <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >ев</foreign> appear in Greek loans, the latter prevailing
+                                        <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">егупетьстѣи</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">куринеискьі</foreign>. Both <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">еу</foreign> and <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ев</foreign> appear in Greek loans, the latter prevailing
                                     in Menologion part. The Greek letters thita and ksi are also
                                     used in Greek loans but they are usually combined with Cyrillic
                                     letters denoting the sound with which these Greek elements are
-                                    substituted in Slavic, e.g. <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >евьстѳатия</foreign>, <foreign
-                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
-                                        >маѯсима</foreign>. </orthNote>
-                            </orthography>
-                            <grammar>
+                                    substituted in Slavic, e.g. <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">евьстѳатия</foreign>, <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">маѯсима</foreign>. </langNote>
+                            
+                            <langNote key="grammar">
                                 <list xmlns="http://www.tei-c.org/ns/1.0">
                                     <item xml:id="morphology">The fragments have archaic morphology
                                         and use asigmatic Aoristus, but also some typical Middle
@@ -564,31 +253,21 @@
                                         </foreign>5v , <foreign xml:lang="cu">досадителие</foreign>
                                         10r, <foreign xml:lang="cu">свѣдѣтелие</foreign> 3v. Also in
                                         1 p. Pl. the ending "-my" appears, especially in the
-                                            <emph>v.substantivum</emph>, such as <foreign
-                                            xml:lang="cu">сльішахомьі</foreign> 1v, <foreign
-                                            xml:lang="cu">есмьі</foreign> 3v, 5r, although the old
+                                            <emph>v.substantivum</emph>, such as <foreign xml:lang="cu">сльішахомьі</foreign> 1v, <foreign xml:lang="cu">есмьі</foreign> 3v, 5r, although the old
                                         forms are also used. Pronominal endings for adjectives are
-                                        also used, even the form <foreign xml:lang="cu"
-                                            >творѧщоому</foreign> 12v is attested. </item>
+                                        also used, even the form <foreign xml:lang="cu">творѧщоому</foreign> 12v is attested. </item>
                                     <item xml:id="lexicology">In many cases the fragments preserve
                                         the variant readings typical of the archaic Apostoloi
                                         reflecting the Cyrillo-Methodian translation. Still, in some
                                         places it has Preslavisms which are not consistently used.
-                                        For instance, the manuscript uses both <foreign
-                                            xml:lang="cu">постити</foreign> and <foreign
-                                            xml:lang="cu">алкати</foreign>, <foreign xml:lang="cu"
-                                            >етеръ </foreign> and <foreign xml:lang="cu"
-                                            >нѣкъто</foreign>, <foreign xml:lang="cu"
-                                            >съньмище</foreign> and <foreign xml:lang="cu"
-                                            >съборъ</foreign>. The manuscript uses <foreign
-                                            xml:lang="cu">диꙗволъ</foreign> Act 13: 10, 14: 38
+                                        For instance, the manuscript uses both <foreign xml:lang="cu">постити</foreign> and <foreign xml:lang="cu">алкати</foreign>, <foreign xml:lang="cu">етеръ </foreign> and <foreign xml:lang="cu">нѣкъто</foreign>, <foreign xml:lang="cu">съньмище</foreign> and <foreign xml:lang="cu">съборъ</foreign>. The manuscript uses <foreign xml:lang="cu">диꙗволъ</foreign> Act 13: 10, 14: 38
                                         instead of <foreign xml:lang="cu">неприѣзнь</foreign> in
                                         Archaic Apostoloi, including in the Slepče Apostolos. Also
                                         it prefers <foreign xml:lang="cu">островъ</foreign>,
                                             <foreign xml:lang="cu">старѣишина жрьчьскьі</foreign>
                                         and several other Preslavisms. </item>
                                 </list>
-                            </grammar>
+                            </langNote>
                         </scribeLang>
                     </scribe>
                 </scribeDesc>
@@ -596,24 +275,20 @@
                     <summary>The manuscript is a full (long) Aprakos (lectionary) Apostolos,
                         beginning with the mobile cycle after Easter. Parts of the Menologion are
                         also preserved. The distribution of readings (lections) coincides with what
-                        is published by C. R. Gregory for the Greek tradition <ref type="bibl"
-                            target="bib:Gregory1900">Gregory 1900</ref> The Menologion is shorter
+                        is published by C. R. Gregory for the Greek tradition <ref type="bibl" target="bib:Gregory1900">Gregory 1900</ref> The Menologion is shorter
                         than that of NBKM 882, NBKM 847 (Banica Gospel) and the Greek sources as
-                        Patmos Typikon 266, and Holy Cross 40. <ref type="bibl"
-                            target="bib:Коцева1993">Коцева, Атанасов 1993: 225-226</ref>. It has
+                        Patmos Typikon 266, and Holy Cross 40. <ref type="bibl" target="bib:Коцева1993">Коцева, Атанасов 1993: 225–226</ref>. It has
                         several commemorations typical of the calendar of the Church in
                         Constantinople and connected with the history of the town.</summary>
                     <filiation type="litRedaction">The manuscript uses archaic lexis and is
                         considered to belong to the archaic group of Apostoloi representing the
-                        Cyrillo-Methodian translation; see <ref type="bibl"
-                            target="bib:Воскресенский1879">Воскресенский 1879: 111-112;</ref> . It
+                        Cyrillo-Methodian translation; see <ref type="bibl" target="bib:Воскресенский1879">Воскресенский 1879: 111–112;</ref> . It
                         uses several Preslavisms and shares common reading with the Slepče Apostolos
                         as a full Aprakos Apostolos and more rarely with the Matica Srpska
                         Apostolos; examples for common readings with the Slepče Apostolos as opposed
                         to other archaic Apostoloi: <foreign xml:lang="cu">заповѣданое</foreign> Act
                         10: 32 vs <foreign xml:lang="cu">повелѣное </foreign> in Archaic Apostoloi;
-                            <foreign xml:lang="cu">оударившоу </foreign> Act 12: 12 vs <foreign
-                            xml:lang="cu">тлькнѫвъшоу</foreign>, <foreign xml:lang="cu">алчѧщимь
+                            <foreign xml:lang="cu">оударившоу </foreign> Act 12: 12 vs <foreign xml:lang="cu">тлькнѫвъшоу</foreign>, <foreign xml:lang="cu">алчѧщимь
                         </foreign> Act 13: 2 vs <foreign xml:lang="cu">постѧщимъ</foreign>, but
                             <foreign xml:lang="cu">пощъше</foreign> Act 13: 3 as in archaic
                         Apostoloi vs <foreign xml:lang="cu">алъкавъше</foreign> in the Slepče
@@ -675,19 +350,18 @@
                         <locus n="9">NBKM 499, 4v,</locus>
                         <title xml:lang="bg">Деяния на Апостолите 13: 13–17</title>
                         <date type="churchCal">Wednesday of the 5th Week in Easter.</date>
-                        <note>The end of the lection (Act 13: 13-24) is not preserved since the next
+                        <note>The end of the lection (Act 13: 13–24) is not preserved since the next
                             two folia of the manuscript are missing.</note>
                         <note>The text finishes with из . до (Аct 13: 17).</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true"
-                                >неѧ</explicit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">неѧ</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10">
                         <locus n="10">NBKM 499, 5r,</locus>
                         <title xml:lang="bg">Деяния на Апостолите 17: 23–27</title>
                         <date type="churchCal">Tuesday of the 6th Week in Easter</date>
-                        <note>The beginning of the lection Act 17: 19-22 is missing since the
+                        <note>The beginning of the lection Act 17: 19–22 is missing since the
                             previous folio of the manuscript is not preserved. begins from (Act 17:
                             23)</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -705,9 +379,9 @@
                         <title xml:lang="bg">Литургически указания и химнографски начала</title>
                         <date type="churchCal">Thursday of the 6th Week in Easter
                             (Assumption).</date>
-                        <note>The expected lection Act 1: 1-12 is not given</note>
+                        <note>The expected lection Act 1: 1–12 is not given</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <p xmlns="http://www.tei-c.org/ns/1.0">ищи на пасхѫ</p>
+                            <rubric xmlns="http://www.tei-c.org/ns/1.0">ищи на пасхѫ</rubric>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13">
@@ -724,7 +398,7 @@
                         <locus n="15">NBKM 499, 5v,</locus>
                         <title xml:lang="bg">Деяния на Апостолите 20: 16–18, 28–31</title>
                         <date type="churchCal">7th Sunday in Easter</date>
-                        <note>The end of the lection Act 20: 16-18 and 28-36 is missing. The week
+                        <note>The end of the lection Act 20: 16–18 and 28–36 is missing. The week
                             begins with Sunday.</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">съ
@@ -736,7 +410,7 @@
                         <title xml:lang="bg">Деяния на Апостолите 23: 9–11</title>
                         <date type="churchCal">Wednesday of the 7th Week in Easter (Week before
                             Pentecost)</date>
-                        <note>The beginning of the original lection Acts 23: 1-11 is missing due to
+                        <note>The beginning of the original lection Acts 23: 1–11 is missing due to
                             manuscript damage. The text begins with Acts 23: 9</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">бьіс веплъ
@@ -750,7 +424,7 @@
                             Pentecost)</date>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18">
-                        <locus n="18">NBKM 499, 6r-7v,</locus>
+                        <locus n="18">NBKM 499, 6r–7v,</locus>
                         <title xml:lang="bg">Деяния на Апостолите 27: 1–44, 28: 1</title>
                         <date type="churchCal">Friday of of the 7th Week in Easter (Week before
                             Pentecost)</date>
@@ -772,16 +446,15 @@
                         <title xml:lang="bg">Послания на Апостолите. Eф. 5: 8–19</title>
                         <date type="churchCal">Monday of the Week after Pentecost</date>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Съшествие св. духа иже на
-                                    ап<foreign rend="sup">о</foreign>с<foreign rend="sup"
-                                    >тол</foreign>ьі</p>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Съшествие св. духа иже на
+                                    ап<foreign rend="sup">о</foreign>с<foreign rend="sup">тол</foreign>ьі</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD22">
                         <locus n="22">NBKM 499, 9v/10r,</locus>
                         <title xml:lang="bg">Послания на Апостолите. Рим. 1: 1–17</title>
                         <date type="churchCal">Thuesday of the Week after Pentecost</date>
-                        <note>The usual lection includes R 1: 1-7 and 13-17. Here R 1: 8-12 is also
+                        <note>The usual lection includes R 1: 1–7 and 13–17. Here R 1: 8–12 is also
                             included which suggests that the protograph/ or antigraph was a
                             contionuous Apostolos.</note>
                     </msItemStruct>
@@ -789,7 +462,7 @@
                         <locus n="23">NBKM 499, 10r,</locus>
                         <title xml:lang="bg">Послания на Апостолите. Рим. 1: 18–24</title>
                         <date type="churchCal">Wednesday of the Week after Pentecost</date>
-                        <note>The usual lection includes R 1: 18-27.</note>
+                        <note>The usual lection includes R 1: 18–27.</note>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD24">
                         <locus n="24">NBKM 499, 10r/v,</locus>
@@ -800,19 +473,17 @@
                         <locus n="25">NBKM 499, 10v/11r,</locus>
                         <title xml:lang="bg">Послания на Апостолите. Рим. 2: 14–21</title>
                         <date type="churchCal">Friday of the Week after Pentecost</date>
-                        <note>The end of the lection R 2: 14-28 is missing because of manuscript
+                        <note>The end of the lection R 2: 14–28 is missing because of manuscript
                             damage.</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <div xmlns="http://www.tei-c.org/ns/1.0">
-                                <p>себе не оучиши <foreign rend="sup">Act R 2: 21</foreign>.</p>
-                            </div>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">себе не оучиши </explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD26">
                         <locus n="26">NBKM 499, 11r,</locus>
                         <title xml:lang="bg">Послания на Апостолите. Рим. 3: 7–18</title>
                         <date type="churchCal">Monday of the 2nd Week after Pentecost</date>
-                        <note>The beginning of the lection R 2: 28-3: 18. is missing. The text
+                        <note>The beginning of the lection R 2: 28–3: 18. is missing. The text
                             begins with R 2: 3</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">вѫ его.
@@ -855,7 +526,7 @@
                         <title xml:lang="bg">Послания на Апостолите. Рим. 7: 1–7</title>
                         <date type="churchCal">Monday of the Third Week after Pentecost</date>
                         <note>The end of the lection is missing, as a rule the lection includes R 7:
-                            1-13. Apparently the week begins with Monday again.</note>
+                            1–13. Apparently the week begins with Monday again.</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">грѣха да
                                 не бѫдетъ нѫ грѣха.</explicit>
@@ -866,13 +537,13 @@
                         <title xml:lang="bg">Послания на Апостолите. 1 Тим. 4: 8–16</title>
                         <date type="churchCal">Friday of the 26th Week after Pentecost</date>
                         <note>In the expected lection for Friday of the 26th Week after Pentecost
-                            the lection for the Sunday of the 30th Week (1 Tim 4: 9-15) is inserted.
+                            the lection for the Sunday of the 30th Week (1 Tim 4: 9–15) is inserted.
                             This fact suggests that the protograph/ antigraph was a continuous
                             Apostolos.</note>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD35">
-                        <locus n="35">Grig. 15.III, 1r/v (?)</locus>
-                        <title xml:lang="bg">Инципит на четенето за сряда на 26-та седмица след Петдесетница</title>
+                        <locus n="35" cert="low">Grig. 15.III, 1r/v</locus>
+                        <title xml:lang="bg">Инципит на четенето за сряда на 26–та седмица след Петдесетница</title>
                         <date type="churchCal">Wednesday of the 26th Week after Pentecost</date>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD36">
@@ -887,9 +558,9 @@
                     </msItemStruct>
                     <msItemStruct xml:id="ACD38">
                         <locus n="38">Grig. 15.III, 1v and BAN24.4.7, 1r,</locus>
-                        <title xml:lang="bg">Послания на Апостолите. 1 Тим. 5: 22–23, 1 Тим. 5: 25, 6: 1–2 (?)</title>
+                        <title xml:lang="bg" cert="low">Послания на Апостолите. 1 Тим. 5: 22–23, 1 Тим. 5: 25, 6: 1–2</title>
                         <date type="churchCal">Wednesday of the 27th Week after Pentecost.</date>
-                        <note>Usually the lection is 1 Tim 5: 22-6: 11.</note>
+                        <note>Usually the lection is 1 Tim 5: 22–6: 11.</note>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD39">
                         <locus n="39">BAN24.4.7, 1r</locus>
@@ -931,7 +602,7 @@
                         <locus n="46">BAN24.4.7</locus>
                         <title xml:lang="bg">Послания на Апостолите. Тит 1: 5–16, 2: 1</title>
                         <date type="churchCal">Thursday of the 28th Week after Pentecost.</date>
-                        <note>without beginning. The usual lection is Tt 1: 5-16 and 2: 1. It is not
+                        <note>without beginning. The usual lection is Tt 1: 5–16 and 2: 1. It is not
                             clear from the description available to us which verses are
                             missing.</note>
                         <note>The lection was wrongly denoted as the Epistle to Timothy by the
@@ -974,7 +645,7 @@
                         <date type="churchCal">Thursday of the 29th Week after Pentecost.</date>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD54">
-                        <locus n="54">Grig. 15. III, 2 r/v (?)</locus>
+                        <locus n="54" cert="low">Grig. 15. III, 2 r/v</locus>
                         <title xml:lang="bg">Послания на Апостолите. Евр. 7: 18–25</title>
                         <date type="churchCal">Friday of the 29th Week after Pentecost.</date>
                     </msItemStruct>
@@ -991,10 +662,10 @@
                             Ephessians.</note>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD57">
-                        <locus n="57">NBKM 500, 2r, 1-7,</locus>
+                        <locus n="57">NBKM 500, 2r, 1–7</locus>
                         <title xml:lang="bg">Послания на Апостолите. 1 Иоан. 3: 18–22</title>
                         <date type="churchCal">Tuesday of the 35th Week after Pentecost.</date>
-                        <note>The beginning of the lection 1J 3: 9-22 is missing due to manuscript
+                        <note>The beginning of the lection 1J 3: 9–22 is missing due to manuscript
                             damage. Since the folio was used for binding of another book, most of
                             the text is illegible. The text begins from 1 J 3: 18</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -1011,7 +682,7 @@
                         <locus n="59">NBKM 500, 2v,</locus>
                         <title xml:lang="bg">Послания на Апостолите. 1 Иоан. 4: 20–5: 16</title>
                         <date type="churchCal">Thursday of the 35th Week after Pentecost.</date>
-                        <note>The end of the lection 1 J 4: 20--5: 16 is missing due to manuscript
+                        <note>The end of the lection 1 J 4: 20–5: 16 is missing due to manuscript
                             damage.</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">и дастъ
@@ -1019,24 +690,21 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD60">
-                        <locus n="60">НБКМ 500, 1r1-19,</locus>
+                        <locus n="60">НБКМ 500, 1r1–19</locus>
                         <title xml:lang="bg">Послания на Апостолите. Иуд. 1: 16–25</title>
                         <date type="churchCal">Thursday of the Week of Tyrophage.</date>
-                        <note>The beginning of the lection Jud 1: 11-25 is missing. I</note>
+                        <note>The beginning of the lection Jud 1: 11–25 is missing</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <div xmlns="http://www.tei-c.org/ns/1.0">
-                                <p>сѧ лицемь оуспѣха дѣлѣ <foreign rend="sup">Acts 1:
-                                    16</foreign></p>
-                            </div>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">сѧ лицемь оуспѣха дѣлѣ </incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD61">
-                        <locus n="61">NBKM 500, 1r19-1v1</locus>
+                        <locus n="61">NBKM 500, 1r19–1v1</locus>
                         <title xml:lang="bg">Инципити на химнографски текстове, Послания на Апостолите. Рим. 14: 19–23, 16: 25–27</title>
                         <date type="churchCal">Saturday of the Week of Tyrophage.</date>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD62">
-                        <locus n="62">NBKM 500, 1v1-17</locus>
+                        <locus n="62">NBKM 500, 1v1–17</locus>
                         <title xml:lang="bg">Послания на Апостолите. Рим. 13: 11–14: 4</title>
                         <date type="churchCal">Sunday of Tyrophage</date>
                         <note>The lection is erroneously named as the Epistle of St. Paul to the
@@ -1046,12 +714,13 @@
                         <locus n="63">NBKM 500, 1v,</locus>
                         <title xml:lang="bg">Инципити на химнографски текстове, Послания на Апостолите. Евр. 1: 1–6</title>
                         <date type="churchCal">First Week of Lent</date>
-                        <note>The end of the lection H 1: 1-12 is missing due to manuscript
+                        <note>The end of the lection H 1: 1–12 is missing due to manuscript
                             damage.</note>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD64">
                         <locus n="64">NBKM 499, 1r,</locus>
                         <title xml:lang="bg">Литургически указания и инципити на химнографски текстове и новозаветни четива за подвижните празници през юли (26–31)</title>
+                        
                         <date type="churchCal" when="--07-26" cert="low">26 July</date>
                         <date type="churchCal" when="--07-27">7 July (St. Panteleimon)</date>
                         <date type="churchCal" when="--07-28">28 July (St. Eustasius of
@@ -1062,13 +731,13 @@
                             Stratelates)</date>
                         <date type="churchCal" when="--07-31">31 July (St. Julitta, St. Eudokimos
                             the New)</date>
+                        <note>St. John the Strratelates is called <foreign xml:lang="cu">воиникъ</foreign> and not <foreign xml:lang="cu">воинъ</foreign></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <p xmlns="http://www.tei-c.org/ns/1.0">St. John the Strratelates is
-                                called воиникъ and not воинъ</p>
+                            
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD65">
-                        <locus n="65">NBKM 499, 1r-2v + BAN 4.5.24 (Syrku 16).</locus>
+                        <locus n="65">NBKM 499, 1r–2v + BAN 4.5.24 (Syrku 16).</locus>
                         <title xml:lang="bg">Литургически указания, инципити на химнографски текстове и Апостолски четива от за подвижните празниците през август (1–29)</title>
                         <date type="churchCal" when="--08-01">1 August (St. Maccabees, St. Eleazar,
                             St. Solomonia (and 7 children in the text)</date>
@@ -1094,19 +763,18 @@
                         <date type="churchCal" when="--08-12">12 August (St. Photios and St.
                             Aniketos)</date>
                         <date type="churchCal" when="--08-14">14 August ( St. Malachi Prophet in the
-                            source -- obviously a mistake for Micah Prophet, with a lection)</date>
+                            source – obviously a mistake for Micah Prophet, with a lection)</date>
                         <date type="churchCal" when="--08-15">15 August (Dormition of the
                             Theotokos)</date>
                         <date type="churchCal" when="--08-16">16 August (Commemoration of the
-                            victorious battle against the Saracenes (<foreign xml:lang="el"
-                                >Ἐπέλευσης τῶν σαρακηνών</foreign>) after they beleaguered
+                            victorious battle against the Saracenes (<foreign xml:lang="el">Ἐπέλευσης τῶν σαρακηνών</foreign>) after they beleaguered
                             Constantinople for an year, emperor Leon the Third (717/718), and
-                            Commemoration of an eathcake (in the period of Justinian 552/554?) --
+                            Commemoration of an eathcake (in the period of Justinian 552/554?) – 
                             with a lection</date>
                         <date type="churchCal" when="--08-17">17 August (St. Paul and his sister
                             Juliania).</date>
-                        <note>The cycle August 1-17 is located in NBKM 499, 1r/v (examined <emph>de
-                                visu</emph>) and the cycle for August 18-29 is located in BAN.
+                        <note>The cycle August 1–17 is located in NBKM 499, 1r/v (examined <emph>de
+                                visu</emph>) and the cycle for August 18–29 is located in BAN.
                             4.5.24 (Syrku 16) (non vidi).</note>
                         <msItemStruct xml:id="ACD65.1">
                             <locus n="65.1">NBKM 499 1r/v</locus>
@@ -1125,7 +793,7 @@
                             <title xml:lang="bg">Послания на Апостолите. Еф. 1: 3–12</title>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD65.4">
-                            <locus n="65.4">65.4. BAN 4.5.24, 1r/v (?)</locus>
+                            <locus n="65.4" cert="low">65.4. BAN 4.5.24, 1r/v</locus>
                             <title xml:lang="bg">Послания на Апостолите. Тит 1: 4–5, 3: 1–2, 12–15</title>
                             <date type="churchCal" when="--08-25">St. Titus (August 25).</date>
                         </msItemStruct>
@@ -1134,20 +802,20 @@
                             <title xml:lang="bg">Деяния на Апостолите 13: 25–29</title>
                             <date type="churchCal" when="--08-29">Beheading of St. John Baptist
                                 (August 29)</date>
-                            <note>Only the first part of the usual reading Act 13: 25- is preserved
+                            <note>Only the first part of the usual reading Act 13: 25 is preserved
                                 on the extant folio.</note>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD66">
                         <locus>2v</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <colophon>
-                            <p>попъ маноилъ</p>
-                        </colophon>
+                        <re:sampleText xml:lang="cu"><colophon>
+                            <ab>попъ маноилъ</ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#MD #AB #EM">
+                    <origin evidence="conjecture" resp="#MD #AB #EM">
                         <origDate notBefore="1250" notAfter="1299">13th c., second half</origDate>
                         <origPlace>Probably written in North-Eastern Bulgaria</origPlace>
                     </origin>
@@ -1163,15 +831,278 @@
                         received the fragment from <persName>A. Bogoev-Bogorov</persName> in
                             <placeName>Leipzig</placeName> in <date>1847</date>; on the history of
                         the fragments, see <ref type="bibl" target="bib:Шмидт1984">Шмидт 1984:
-                            340-341.</ref>, and <ref type="bibl" target="bib:Куев1986">Куев 1986:
-                            221-223.</ref></provenance>
+                            340–341.</ref>, and <ref type="bibl" target="bib:Куев1986">Куев 1986:
+                            221–223.</ref></provenance>
                     <acquisition>The fragments in the collections of Syrku and Sreznevskij became
                         possession of the Library of the Academy of Sciences in St.Petersburg when
                         these collections were housed there. The fragment in the collection of
                         Grigorović as a part of this collection was housed in the State Library in
-                        Moscow. Ms 499 was given to the National Library in Sofia by <name
-                            type="commisioner">A. Vǎrbanov</name>.</acquisition>
+                        Moscow. Ms 499 was given to the National Library in Sofia by <name type="commisioner">A. Vǎrbanov</name>.</acquisition>
                 </history>
+                <msFrag xml:id="NBKM499">
+                    <msIdentifier>
+                        <msName type="individual"></msName>
+                            <country>Bulgaria</country>
+                            <settlement>Sofia</settlement>
+                            <repository>SS Cyril and Methodius National Library </repository>
+                            <idno type="shelfmark">499</idno>
+                                <idno type="catalogue">499</idno>
+                                <note>
+                                    <ref type="bibl" target="bib:Цонев1910">Цонев 1910: 34</ref></note>
+                            <altIdentifier>
+                                <idno type="unioncatalogue">31 </idno>
+                                <note>
+                                    <ref type="bibl" target="bib:Христова1982">Христова и др. 1982: No. 29</ref></note>
+                            </altIdentifier>
+                            <altIdentifier type="former">
+                                <idno type="shelfmark">38</idno>
+                            </altIdentifier>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <dimensions type="folia" unit="mm">
+                                        <height>275, 280</height>
+                                        <width>185, 190</width>
+                                    </dimensions>
+                                    <dimensions type="written" unit="mm">
+                                        <height>225</height>
+                                        <width>145</width>
+                                    </dimensions>
+                                </support>
+                               <foliation>The modern foliation with Arabic numerals
+                                    in the middle of the upper margins was made in the <date>20th
+                                        century</date> with pencil.</foliation>
+                                <collation>
+                                   <summary>The order of the quires described by Conev is
+                                        wrong. His first quire is actually the third one. His second
+                                        and third quires were located in the first part of the
+                                        manuscirpt, while his first quire, containing a Menologion
+                                        for the end of July and the beginning of August was located
+                                        close to the end of then big codex. </summary>
+                                    <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1">
+                                        <extent xmlns="http://www.tei-c.org/ns/1.0"><formula>8 (-1-3-5-6-8)</formula>
+                                    </extent>
+                                </quire>
+                                    <re:quire n="2">
+                                        <extent><formula>8(-6)</formula></extent>
+                                    </re:quire>
+                                    <re:quire n="3">
+                                        <extent><formula>8 (-1-2-3-6-7-8)</formula></extent>
+                                    </re:quire>
+                                </collation>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msFrag>
+                <msFrag xml:id="NBKM500">
+                    <msIdentifier>
+                        <msName type="individual"></msName>
+                            <country>Bulgaria</country>
+                            <settlement>Sofia</settlement>
+                            <repository>SS Cyril and Methodius National Library </repository>
+                            <idno type="shelfmark">500</idno>
+                                <idno type="catalogue">500</idno>
+                                <note>
+                                    <ref type="bibl" target="bib:Цонев1910">Цонев 1910: 35</ref></note>
+                            <altIdentifier>
+                                <idno type="unioncatalogue">32</idno>
+                                <note>
+                                    <ref type="bibl" target="bib:Христова1982">Христова и др. 1982:
+                                        30</ref></note>
+                            </altIdentifier>
+                            <altIdentifier type="former">
+                                <idno type="shelfmark">184</idno>
+                            </altIdentifier>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <dimensions type="folia" unit="mm">
+                                        <height>285</height>
+                                        <width>200</width>
+                                    </dimensions>
+                                    <dimensions type="written" unit="mm">
+                                        <height>220</height>
+                                        <width>145</width>
+                                    </dimensions>
+                                </support>
+                             <foliation>The modern foliation with Arabic numerals
+                                    in the middle of the upper margins was made in the <date>20th
+                                        century</date> with pencil.</foliation>
+                                <collation>
+                                    <summary>A bifolio of NBKM 500
+                                        seems to be the outer leaves of a quire of 8 folia if we
+                                        consider the text, herefore probably </summary>
+                                    <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" corresp="#NBKM500">
+                                        <extent xmlns="http://www.tei-c.org/ns/1.0"><formula>I:8
+                                            (-2-3-4-5-6-7)</formula></extent>
+                                </quire></collation>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msFrag>
+                <msFrag xml:id="BAN4.5.23">
+                    <msIdentifier>
+                        <msName type="individual"></msName>
+                            <country>Russia</country>
+                            <settlement>St. Peterbourg</settlement>
+                            <repository>Library of the Academy of Sciences</repository>
+                            <idno type="shelfmark">4.5.23</idno>
+                            <altIdentifier>
+                                <idno type="catalogue">421</idno>
+                                <note>
+                                    <ref type="bibl" target="bib:Шмидт1984">Шмидт 1984: 340</ref></note>
+                            </altIdentifier>
+                            <altIdentifier type="former">
+                                <collection>П. Сырку</collection>
+                                <idno>10</idno>
+                                <note>
+                                    <ref type="bibl" target="bib:Срезневский1910">Срезневский,
+                                        Покровский I: 30–31</ref></note>
+                            </altIdentifier>
+                            <altIdentifier type="former">
+                                <collection>П. Сырку</collection>
+                                <idno type="collNr">15</idno>
+                                <note>
+                                    <ref type="bibl" target="bib:Ильинский1908b">Ильинский 1908:
+                                        351–352</ref>; <ref type="bibl" target="bib:Мошин1966">Мошин,
+                                            табл. 52</ref></note>
+                            </altIdentifier>
+                    </msIdentifier>
+                    <physDesc>
+                        <summary>The missing 3rd folio of the first
+                            quire of NBKM 499 is kept as a fragment BAN 4.5.23</summary>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <dimensions type="folia" unit="mm">
+                                        <height>282</height>
+                                        <width>200</width>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msFrag>
+                <msFrag  xml:id="BAN4.5.24">
+                    <msIdentifier>
+                        <msName type="individual">Manuilov Apostle</msName>
+                            <country>Russia</country>
+                            <settlement>St. Peterbourg, </settlement>
+                            <repository>Library of the Academy of Sciences</repository>
+                            <idno type="current">4.5.24</idno>
+                            <altIdentifier>
+                                <idno type="catalogue">422</idno>
+                                <note>
+                                    <ref type="bibl" target="bib:Шмидт1984">Шмидт 1984: 340</ref></note>
+                            </altIdentifier>
+                            <altIdentifier type="former">
+                                <collection>П. Сырку</collection>
+                                <idno type="collNr">6</idno>
+                                <note>
+                                    <ref type="bibl" target="bib:Срезневский1910">Срезневский,
+                                        Покровский I: 30;</ref></note>
+                            </altIdentifier>
+                            <altIdentifier type="former">
+                                <collection>П. Сырку</collection>
+                                <idno>16</idno>
+                                <note>
+                                    <ref type="bibl" target="bib:Ильинский1908b">Ильинский 1908:
+                                        361</ref>
+                                    <ref type="bibl" target="bib:Мошин1966">Мошин 1966: табл.
+                                        53</ref></note>
+                            </altIdentifier>
+                    </msIdentifier>
+                </msFrag>
+                <msFrag xml:id="BAN24.4.7">
+                    <msIdentifier>
+                        <msName type="individual"></msName>
+                            <country>Russia</country>
+                            <settlement>St. Peterbourg</settlement>
+                            <repository>Library of the Academy of Sciences</repository>
+                            <idno type="current">24.4.7</idno>
+                            <altIdentifier>
+                                <idno type="catalogue">423</idno>
+                                <note>
+                                    <ref type="bibl" target="bib:Шмидт1984">Шмидт 1984: 340</ref></note>
+                            </altIdentifier>
+                            <altIdentifier type="former">
+                                <collection>И. И. Срезневский</collection>
+                                <idno>54</idno>
+                                <note>
+                                    <ref type="bibl" target="bib:Срезневский1868">Срезневский 1868, 1:
+                                        47–48; 2: 199–201;</ref>
+                                    <ref type="bibl" target="bib:Воскресенский1892">Воскресенский
+                                        1892–1908, 1: 14; 3/5: II;</ref>
+                                    <ref type="bibl" target="bib:Воскресенский1879">Воскресенский 1879:
+                                        111–112;</ref>
+                                    <ref type="bibl" target="bib:Ильинский1908a">Ильинский 1908, 1:
+                                        366–379</ref></note>
+                            </altIdentifier>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <dimensions type="folia" unit="mm">
+                                        <height>282 X </height>
+                                        <width>200</width>
+                                    </dimensions>
+                                </support>
+                                <collation>
+                                    <summary></summary>
+                                    <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1">
+                                        <extent xmlns="http://www.tei-c.org/ns/1.0"><formula>8(-1-2-7-8)</formula></extent>
+                                    </quire>
+                                </collation>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msFrag>
+                <msFrag xml:id="RSLGrig15.III">
+                    <msIdentifier>
+                        <msName type="individual"></msName>
+                            <country>Russia</country>
+                            <settlement>Moscow</settlement>
+                            <repository>Russian State Library</repository>
+                            <idno type="current">Grig. 15. III</idno>
+                            <altIdentifier type="former">
+                                <idno type="shelfmark">M.1697.III</idno>
+                            </altIdentifier>
+                            <altIdentifier>
+                                <idno type="catalogue">424 </idno>
+                                <note>
+                                    <ref type="bibl" target="bib:Шмидт1984">Шмидт 1984: 341</ref></note>
+                            </altIdentifier>
+                            <altIdentifier type="former">
+                                <collection>В. И. Григорович</collection>
+                                <idno>15.III</idno>
+                                <note>
+                                    <ref type="bibl" target="bib:Викторов1879">Викторов 1879:
+                                        12</ref></note>
+                            </altIdentifier>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <dimensions type="folia" unit="mm">
+                                        <height>284, 280</height>
+                                        <width>197, 201</width>
+                                    </dimensions>
+                                </support>
+                                <collation>
+                                    <re:quire n="1">
+                                        <extent><formula>8 (-1-8)</formula></extent>
+                                    </re:quire>
+                                </collation>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msFrag>
             </msDesc>
         </body>
     </text>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DRAdd15715BL">
     <teiHeader>
         <fileDesc>
@@ -13,7 +17,7 @@
             <publicationStmt>
                 <publisher>Istitute of Literature</publisher>
                 <pubPlace>Sofia, Bulgaria</pubPlace>
-                <date>11.2003</date>
+                <date when="2003-11">11.2003</date>
                 <idno type="Repertorium">RC-DRAdd15715BL</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -21,8 +25,7 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -55,6 +58,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#DR" when="2009-10-07">Removed entities for the basic Old Slavic characters </change>
@@ -76,10 +80,10 @@
                     <repository>British Library</repository>
                     <collection>Additional manuscripts</collection>
                     <idno type="shelfmark">Add. MS 15715</idno>
-                    <altIdentifier type="catalgue">
+                    <altIdentifier>
                         <idno type="catalogue">54</idno>
                         <note>
-                            <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 68-70.</ref>
+                            <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 68–70.</ref>
                         </note>
                     </altIdentifier>
                 </msIdentifier>
@@ -87,16 +91,15 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper. Three (or more) types of paper: white (ff. 1-96,
-                                    131-143), beige (ff. 97-101, 144-174) and grey-green (ff. 93-94,
-                                    119-128, 130), all thick and rough</material>
+                                <material>Three (or more) types of paper: white (ff. 1–96,
+                                    131–143), beige (ff. 97–101, 144–174) and grey-green (ff. 93–94,
+                                    119–128, 130), all thick and rough</material>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">ФМ,
                                         KФ</motif>
                                     <term>cf.</term>
                                     <ref type="bibl" target="bib:Клепиков1978">
                                         <num>383</num>
-                                        <date>?</date>
                                     </ref>
                                     <date>1828</date>
                                 </watermark>
@@ -126,7 +129,7 @@
                             </extent>
                             <foliation>
                                 <date>Modern</date>
-                                <signatures>(i-iii), 1-105, (105a), 106-174, (174a), 175,
+                                <signatures>(i–iii), 1–105, (105a), 106–174, (174a), 175,
                                     (176).</signatures>
                             </foliation>
                             <collation>
@@ -183,10 +186,9 @@
                                     <extent xmlns="http://www.tei-c.org/ns/1.0">2</extent>
                                 </quire>
                                 <signatures>Gatherings signed in the mid lower margin, first recto:
-                                    I-VIII <foreign xml:lang="cu">а҃-и҃</foreign>, IX <foreign xml:lang="cu"> ѳ҃а</foreign>, X <foreign xml:lang="cu">ѳ҃в</foreign>, XI <foreign xml:lang="cu">і҃</foreign>,
-                                    XII-XVIII <foreign xml:lang="cu">а҃-з҃</foreign>, XIX-XXII
-                                        <foreign xml:lang="cu">а҃-д҃</foreign>, XXVII-XVIII <foreign xml:lang="cu">а҃і-в҃і</foreign>, XXXII-XL <foreign xml:lang="cu">а҃-ѳ҃.</foreign>
-                                </signatures>
+                                    I–VIII <foreign xml:lang="cu">а҃–и҃</foreign>, IX <foreign xml:lang="cu"> ѳ҃а</foreign>, X <foreign xml:lang="cu">ѳ҃в</foreign>, XI <foreign xml:lang="cu">і҃</foreign>,
+                                    XII–XVIII <foreign xml:lang="cu">а҃–з҃</foreign>, XIX–XXII
+                                        <foreign xml:lang="cu">а҃–д҃</foreign>, XXVII–XVIII <foreign xml:lang="cu">а҃і–в҃і</foreign>, XXXII–XL <foreign xml:lang="cu">а҃–ѳ҃.</foreign></signatures>
                                 <ruling xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">17 rulled
                                     ll./p.</ruling>
                             </collation>
@@ -467,18 +469,16 @@
                             Kingdom; Christ enthroned in glory, angels, the soul of St
                             Haralampos.</decoNote>
                         <decoNote type="headpieces">
-                            <p>
-                                <locus>72 f.</locus> - of Barogue type; <locusGrp scheme="ff">
+                            <p><locus>72 f.</locus> – of Barogue type; <locusGrp scheme="ff">
                                     <locus>98</locus>
                                     <locus>106</locus>
                                     <locus>119</locus>
                                     <locus>132</locus>
-                                </locusGrp> - with Barogue motifs.</p>
+                                </locusGrp> – with Barogue motifs.</p>
                         </decoNote>
                         <decoNote type="borders">
-                            <p>
-                                <locus>2</locus> - text frame with Barogue floral motif,
-                                    <locus>44</locus> - with reach vegetal ornament.</p>
+                            <p><locus>2</locus> – text frame with Barogue floral motif,
+                                    <locus>44</locus> – with reach vegetal ornament.</p>
                         </decoNote>
                         <decoNote type="initials">
                             <p>At each entry, drawn in red ink. Large initials on</p>
@@ -504,7 +504,7 @@
                         <list>
                             <item>
                                 <locus>f. ii</locus>
-                                <quote xml:lang="en">Purchased of A. Asher, 24th Janu. 1846</quote>
+                                <quote xml:lang="en">Purchased of <persName>A. Asher</persName>, 24th Janu. 1846</quote>
                             </item>
                             <item>
                                 <locus>f. 175r</locus>
@@ -525,23 +525,22 @@
                         were trained in a same scriptoria.</summary>
                     <scribe n="1">
                         <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
-                            <locus>ff. 1-176.</locus>
+                            <locus>ff. 1–176.</locus>
                         </locusGrp>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Late semiuncial</p>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Late semiuncial</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Russian Church Slavonic, with
-                                    confusing of <foreign xml:lang="cu">ѣ</foreign> and <foreign xml:lang="cu">е</foreign>.</p>
-                            </orthography>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Russian Church Slavonic</summary>
+                            <langNote key="orthography">Confusing of <foreign xmlns="http://www.tei-c.org/ns/1.0">ѣ</foreign> and <foreign xmlns="http://www.tei-c.org/ns/1.0">е</foreign>
+                            </langNote>
                         </scribeLang>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <summary>An Old Believer manuscript; contains various readings.</summary>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">2-42</locus>
+                        <locus n="1">2–42</locus>
                         <title xml:lang="bg">Повест за Варлаам и Йоасаф</title>
                         <note>ff. 3, 4v, 5, 6v, 7, 8v, 9, 10v, 11, 12v, 13, 14v, 15, 18v, 19, 21,
                             22v, 23, 24v, 25, 26v, 27, 31v, 32 are blank.</note>
@@ -560,7 +559,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">44-70</locus>
+                        <locus n="2">44–70</locus>
                         <title xml:lang="bg">Видение на монах Козма</title>
                         <note>ff. 46v, 47, 48v, 49, 50v, 51, 53, 54v, 55, 57, 59, 60v, 61, 63, 64v,
                             65, 66v, 67, 68v, 69 are blank.</note>
@@ -575,7 +574,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">72-90v</locus>
+                        <locus n="3">72–90v</locus>
                         <title xml:lang="bg">Видение на монах Йоан</title>
                         <note>Excerpt from the Dioptra. Ff. 73, 74v, 75, 77, 79, 80v, 81, 82v, 83,
                             85, 87, 89 are blank.</note>
@@ -590,7 +589,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">92-92v</locus>
+                        <locus n="4">92–92v</locus>
                         <title xml:lang="bg">Физиолог. За алконоста</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Граногра́фъ глава̀.</head>
@@ -611,7 +610,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="6">96-96v</locus>
+                        <locus n="6">96–96v</locus>
                         <title xml:lang="bg">Разказ за отец Макарий Велики</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">ѿ житїѧ̀ прп<seg rend="sup">д҇</seg>бꙿнаго о҆ц҃а на́шего мака́рїѧ е҆ги́птѧнина</head>
@@ -619,12 +618,11 @@
                                 пꙋсты́ни, и҆ срѣ́те ста́рца нѣ́коего бре́мене<seg rend="sup">м҇</seg> тѧ́жки<seg rend="sup">м҇</seg> о҆бремене́на.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">ѿ того̀ помазꙋ́ю и̋ноковъ
                                 наблꙋ́дъ поѡ̋щрѧ́ю, а҆ и̋же на хребтѣ̀ мое<seg rend="sup">м҇</seg>
-                                и҆ налыста́хъ мо́и<seg rend="sup">х҇</seg>
-                            </explicit>
+                                и҆ налыста́хъ мо́и<seg rend="sup">х҇</seg></explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">98-105a</locus>
+                        <locus n="7">98–105a</locus>
                         <title xml:lang="bg">Разказ за монаха, който живял триста години</title>
                         <note>ff. 99, 100v, 101, 102v, 103 are blank.</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -641,7 +639,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="8">106-117</locus>
+                        <locus n="8">106–117</locus>
                         <title xml:lang="bg">Чудо на Богородица за дъщерята на овчаря</title>
                         <note>ff. 107v, 108, 110, 112, 114, 116 are blank.</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -658,7 +656,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="9">119-130</locus>
+                        <locus n="9">119–130</locus>
                         <title xml:lang="bg">Житие на св. Онуфрий</title>
                         <date type="churchCal" when="--06-12">June 12</date>
                         <note>ff. 121, 122v, 123, 125, 127, 128v, 129 are blank.</note>
@@ -666,15 +664,14 @@
                             <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ҆ рожде́нїи и҆ ѡ҆тро́чествѣ
                                     пр<seg rend="sup">д҇</seg>пбнаго о҆нꙋ́фрїѧ</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Ца́рь нѣ́кїй въ пер'си́дѣ.
-                                е҆го́же лѣто̀ писа́тели мнѧ<seg rend="sup">т҇</seg>
-                            </incipit>
+                                е҆го́же лѣто̀ писа́тели мнѧ<seg rend="sup">т҇</seg></incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и҆ бы́сть всѣ́хъ лѣ́тъ
                                 о҆нꙋ́фрїѧ пр<seg rend="sup">д҇</seg>пбнаго се́дмьдесѧ<seg rend="sup">т҇</seg> поживѣ̀ в'монастырѝ лѣ<seg rend="sup">т҇</seg>
                                     дѣсѧ<seg rend="sup">т҇</seg>, а҆ ше́стьдесѧ<seg rend="sup">т҇</seg> в пꙋсты́ни</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="10">132-174v</locus>
+                        <locus n="10">132–174v</locus>
                         <title xml:lang="bg">Житие на св. Харалампий</title>
                         <date type="churchCal" when="--02-10">February 10</date>
                         <note>ff. 134, 136, 138, 139v, 140, 143, 145, 148, 156v, 157, 153, 155v,
@@ -692,7 +689,7 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#DR">
+                    <origin evidence="conjecture" resp="#DR">
                         <origDate notBefore="1801" notAfter="1899">19th c.</origDate>
                         <origPlace>Russian</origPlace>
                     </origin>
@@ -705,13 +702,15 @@
                         <recordHist>
                             <source>
                                 <p>Directly catalogued from the original manuscript using the
-                                    printed catalogue <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 68-70</ref>.</p>
+                                    printed catalogue <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 68–70</ref>.</p>
                             </source>
                         </recordHist>
                     </adminInfo>
                     <surrogates>
-                        <p>Microform: Central Library of BAS, MF-32,</p>
-                        <p>Digital image of f. 2 (file: C7912-03).</p>
+                        <list>
+                        <item>Microform: Central Library of BAS, <idno type="microform">MF-32</idno></item>
+                        <item>Digital image of f. 2 (file: C7912-03)</item>
+                        </list>
                     </surrogates>
                 </additional>
             </msDesc>

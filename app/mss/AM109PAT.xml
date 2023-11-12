@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM109PAT">
     <teiHeader>
         <fileDesc>
@@ -11,7 +15,7 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>10 April 1995</date>
+                <date when="1995-04-10">10 April 1995</date>
                 <idno type="Repertorium">RC-AM109PAT</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -19,15 +23,12 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Лавров1899">Лавров 1899: XV-XVI; 70-81;
-                    82-92.</ref>
-                </p>
+                <bibl><ref type="bibl" target="bib:Лавров1899">Лавров 1899: XV–XVI; 70–81;
+                    82–92.</ref></bibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -56,6 +57,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2009-04-17">Removed constructions
                 &lt;author&gt;anonumous&lt;/author&gt;</change>
             <change who="#AB" when="2009-04-17">Added copyright statement</change>
@@ -93,20 +95,14 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Semiuncial</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"/>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, with one jer;
-                                    Rashka school with traces of Middle Bulgarian original</p>
-                            </orthography>
+                            <langNote key="orthography">Without juses, with one jer;
+                                Rashka school with traces of Middle Bulgarian original</langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Istrin, V.M.</name>
-                            <resp>description</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -118,9 +114,9 @@
                         <title xml:lang="bg">Цикъл разкази за Авраам. Разказ за праведния Авраам</title>
                         <note>This is one of earliest copies on the base of first translation. For
                             other copies cf. <ref type="bibl" target="bib:Милтенова1996">Милтенова
-                                1996: 68-79, 121-123</ref>, <ref type="bibl" target="bib:Порфирьев1872">Порфирьев 1872: 44-52, 247-256</ref>,
-                                <ref type="bibl" target="Порфирьев1877">Порфирьев 1877: 55-59,
-                                111-130, 135-138</ref>, <ref type="bibl" target="../bibliography/JacimirskijA.xml">X Яцимирский</ref> , <ref target="bib:Вълчанов1973" type="bibl">Вълчанов 1973</ref>.</note>
+                                1996: 68–79, 121–123</ref>, <ref type="bibl" target="bib:Порфирьев1872">Порфирьев 1872: 44–52, 247–256</ref>,
+                                <ref type="bibl" target="Порфирьев1877">Порфирьев 1877: 55–59,
+                                111–130, 135–138</ref>, <ref type="bibl" target="../bibliography/JacimirskijA.xml">X Яцимирский</ref> , <ref target="bib:Вълчанов1973" type="bibl">Вълчанов 1973</ref>.</note>
                         <filiation type="source">unidentified</filiation>
                         <filiation type="translation">1</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -226,8 +222,7 @@
                         <locus n="6">unknown</locus>
                         <title xml:lang="bg">Цикъл разкази за Авраам. Разказ за смъртта на Авраам</title>
                         <note>The copy is concordant with the text in N 29 Savina Monastery.</note>
-                        <filiation type="source">Greek text ed. by <ref type="bibl" target="bib:James1892">X James, M.R.</ref>
-                        </filiation>
+                        <filiation type="source">Greek text ed. by <ref type="bibl" target="bib:James1892">X James, M.R.</ref></filiation>
                         <filiation type="translation">1, Bulgarian revision of first
                             translation.</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -257,9 +252,7 @@
                         <note>This is one of the earliest copies. <ref target="../bibliography/IstrinV.xml" type="bibl">X V. M.
                                 Istrin</ref>notes that the text is diferent from the text published
                             by <ref type="bibl" target="bib:Тихонравов1863">Тихонравов
-                            1863</ref>
-                        </note>
-                        <filiation type="translation">?</filiation>
+                            1863</ref></note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -282,10 +275,10 @@
                         <title xml:lang="bg">Поучение върху казаното от пророк Исая от Йоан Златоуст. Разказ за кръвосмешението</title>
                         <author cert="medium">John Chrysostom</author>
                         <note>The text is without end. This sermon is similar to another text under
-                            title "Slovo o dushevnix razborehx" (N 677 NBKM - Sofia); one
+                            title <quote xml:lang="cu">Слово о доушевьных разборѣхъ</quote> (N 677 NBKM – Sofia); one
                             translation may be, but two redactions (?). Another copies, concordant
-                            to this copy: N 433 NBKM, XVI c., N 149 NB - Wien; N 100 MSPC (Gruijc)
-                            -Belgrad etc. Bibl. parallel: IS 24.1-27.13. Story about the
+                            to this copy: N 433 NBKM, XVI c., N 149 NB – Wien; N 100 MSPC (Gruijc)
+                            – Belgrad etc. Bibl. parallel: IS 24.1–27.13. Story about the
                             incest.</note>
                         <filiation type="source">Greek text is unknown</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -300,19 +293,16 @@
                     <summary>The manuscript was apparently lost at the beginning of the 20th c. It
                         is known now only from V. M. Istrin’s description.</summary>
                     <origin resp="Lavrov" evidence="catalogue">
-                        <origDate>15th c.</origDate>
-                        <origPlace>unknown</origPlace>
-                        <ref type="bibl" target="bib:Лавров1899">Лавров 1899: XV-XVI; 70-81;
-                            82-92.</ref>
+                        <origDate>15th c.</origDate>                        <ref type="bibl" target="bib:Лавров1899">Лавров 1899: XV–XVI; 70–81;
+                            82–92.</ref>
                     </origin>
                 </history>
                 <additional>
                     <adminInfo>
                         <recordHist>
                             <source>
-                                <p>Catalogued using the printed description from <ref type="bibl" target="bib:Лавров1899">Лавров 1899: XV-XVI; 70-81;
-                                        82-92.</ref>
-                                </p>
+                                <p>Catalogued using the printed description from <ref type="bibl" target="bib:Лавров1899">Лавров 1899: XV–XVI; 70–81;
+                                        82–92.</ref></p>
                             </source>
                         </recordHist>
                         <availability status="unknown">

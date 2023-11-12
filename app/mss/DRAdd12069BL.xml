@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DRAdd12069BL">
     <teiHeader>
         <fileDesc>
@@ -12,7 +16,7 @@
             <publicationStmt>
                 <publisher>Istitute of Literature</publisher>
                 <pubPlace>Sofia, Bulgaria</pubPlace>
-                <date>11.2004</date>
+                <date when="2004-11">11.2004</date>
                 <idno type="Repertorium">RC-DRAdd12069BL</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -20,8 +24,7 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -53,6 +56,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when="2016-07-07">Editorial changes. Replace lat value with la. Fixed
@@ -72,10 +76,10 @@
                     <repository>British Library</repository>
                     <collection>Additional Manuscripts</collection>
                     <idno type="shelfmark">Add. MS 12069</idno>
-                    <altIdentifier type="catalogue">
+                    <altIdentifier>
                         <idno type="catalogue">53</idno>
                         <note>
-                            <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 67-68.</ref>
+                            <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 67–68.</ref>
                         </note>
                     </altIdentifier>
                 </msIdentifier>
@@ -83,7 +87,6 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper </material>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Horn</motif>
                                     <countermark xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
@@ -126,11 +129,10 @@
                                 </dimensions>
                             </extent>
                             <foliation>
-                                <date>Modern and original.</date>
-                                <signatures>(i-ii), 1-339, (340-361) above erazed one: (i-iii),
-                                    1-214; 214-337, (338-359). Original foliation on ff. 3-339,
-                                        <foreign xml:lang="cu">а҃-тл҃з</foreign>
-                                </signatures>
+                                <date>Modern and original</date>
+                                <signatures>(i–ii), 1–339, (340–361) above erazed one: (i–iii),
+                                    1–214; 214–337, (338–359). Original foliation on ff. 3–339,
+                                        <foreign xml:lang="cu">а҃–тл҃з</foreign></signatures>
                             </foliation>
                             <collation>
                                 <summary>30 quires</summary>
@@ -150,37 +152,37 @@
                                     <extent xmlns="http://www.tei-c.org/ns/1.0">12(-12)</extent>
                                 </quire>
                                 <signatures>Gatherings II-XXVIII signed, mid lower margin, first
-                                    recto, <foreign xml:lang="cu">в҃-к҃и</foreign>
-                                </signatures>
+                                    recto, <foreign xml:lang="cu">в҃-к҃и</foreign></signatures>
                                 <ruling xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">17 single
                                     rulled ll./p. </ruling>
                             </collation>
-                            <condition>The MS is in good condition.</condition>
+                            <condition>The MS is in good condition</condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" writtenLines="17" ruledLines="17"/>
                         </layoutDesc>
                     </objectDesc>
-                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Black.</ink>
+                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Black</ink>
                     <decoDesc>
-                        <decoNote type="overview">None.</decoNote>
+                        <decoNote type="overview">None</decoNote>
                     </decoDesc>
                     <bindingDesc>
-                        <p>Dark brown leather on boards, blind stamped front and back, <dimensions unit="mm">
+                       <binding> <summary>Dark brown leather on boards, blind stamped front and back, <dimensions unit="mm" type="plates">
                                 <height>215</height>
                                 <width>155</width>
-                            </dimensions>. Remains of two clasps.</p>
+                            </dimensions></summary>
+                           <condition>Remains of two clasps</condition>
+                       </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
                         <list>
                             <item>
                                 <locus>f. iv:</locus>
                                 <quote xml:lang="en">
-                                    <date>12 May 1770</date>, Griffin S<seg rend="sup">t</seg>:
-                                    Edmund Hall Oxon May 12th 1770<seg rend="sup">at</seg>
+                                    <date>12 May 1770</date>, <persName>Griffin S<seg rend="sup">t</seg></persName>:
+                                    <placeName>Edmund Hall Oxon</placeName> May 12th 1770<seg rend="sup">at</seg>
                                 </quote>
-                                <note>The author is evidently Dr <persName type="scribe" full="yes">Philip Griffin</persName>, see <ref type="bibl" target="bib:Foster1891">Foster 1891-92.</ref>
-                                </note>
+                                <note>The author is evidently Dr <persName>Philip Griffin</persName>, see <ref type="bibl" target="bib:Foster1891">Foster 1891–92.</ref></note>
                             </item>
                         </list>
                     </additions>
@@ -188,21 +190,18 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
-                            <locus>ff. 2-339.</locus>
+                            <locus>ff. 2–339.</locus>
                         </locusGrp>
-                        <persName xmlns="http://www.tei-c.org/ns/1.0" type="scribe" xml:id="AnonymousAdd12069BL" full="yes">Anonymous.</persName>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="skoropis">
-                            <p>Russian <hi>skoropis' </hi> and Latin cursive. <dim>3mm</dim> high
-                                    (<dim>7mm</dim> interline space)</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous.</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="cursive">Russian <hi>skoropis' </hi><dimensions type="char" unit="mm"><height>3</height></dimensions> <dim>3mm</dim>, <dimensions type="line-space" unit="mm"><height>7</height></dimensions></scriptNote>
+                            <scriptNote script="Latn" style="cursive"/>
                         </scriptDesc>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name>Cleminson</name>
-                            <resp>description</resp>
-                        </respStmt>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0"><ref target="bib:Cleminson1988">Cleminson 1988: 67–68.</ref></bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
-                    <summary>Contains Slavonic-Latin Dictionary; Ff. i-ii, 1, 339v-end are
+                    <summary>Contains Slavonic-Latin Dictionary; Ff. i–ii, 1, 339v–end are
                         blank.</summary>
                     <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="la">
                         <head xmlns="http://www.tei-c.org/ns/1.0">
@@ -212,7 +211,7 @@
                         </head>
                     </sampleText>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">2-338v</locus>
+                        <locus n="1">2–338v</locus>
                         <title xml:lang="bg">Славяно-латински речник</title>
                         <note>Slavonic and Latin dictionary. The Slavonic adheres fundamentally to
                             the norms of Russian Church Slavonic, avoiding pleophonic forms where
@@ -229,28 +228,28 @@
                                 Anno, 1695.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">А҆ гласъ
                                 сѣтованиѧ</incipit>
-                            <p xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">А҆. гласъ
-                                сѣтованиѧ,</p>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Ah, heu, hei</p>
-                            <p xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">Абїе.</p>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Statim, confestim mox</p>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Et sic prout quis.. operator
+                            <ab xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">А҆. гласъ
+                                сѣтованиѧ,</ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ah, heu, hei</ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">Абїе.</ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">Statim, confestim mox</ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">Et sic prout quis.. operator
                                 dig<lb/>nus mercede sua, operanti de<lb/>mentiae Divinae,
                                 inconcessu, inci<lb/>pere et finire Libellum humc<lb/>ad dignum
                                 cultum, dignissimo <lb/> operi eius, sit pro mercede, <lb/> a me
                                 scabellino pulvere: par<lb/>ticipe papiri, atramenti et <lb/> calami
                                 in praedicto opere, <lb/>gloria sempiterna, digni<lb/>tas et
-                                adoratis. <lb/> in aevum aevi</p>
+                                adoratis. <lb/> in aevum aevi</ab>
                         </sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#DR">
+                    <origin evidence="internal" resp="#DR">
                         <origDate notBefore="1695" notAfter="1695">1695</origDate>
                     </origin>
                     <provenance>The stamp inside the front and back covers, 'E Bibliotheca
                         Butleriana', shows that the MS came from the collection of Dr
-                            <persName>Samuel Butler </persName>(1774-1839), Bishop of
+                            <persName>Samuel Butler </persName>(1774–1839), Bishop of
                         Lichfield.</provenance>
                     <acquisition>Purchased by the British Museum in 1841.</acquisition>
                 </history>
@@ -259,8 +258,7 @@
                         <recordHist>
                             <source>
                                 <p>Directly catalogued from the original manuscript using the
-                                    printed catalogue <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 67-68.</ref>
-                                </p>
+                                    printed catalogue <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 67–68.</ref></p>
                             </source>
                         </recordHist>
                     </adminInfo>

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DAGrig15IRGB">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Apostle</title>
+                <title>Acts of Apostles (fragment), Russian State Library, Moscow, Grig. 15.I, 1276–1277</title>
                 <author xml:id="DA">Desislava Atanasova</author>
                 <editor xml:id="DR">Dilyana Radoslavova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -12,22 +16,19 @@
             <publicationStmt>
                 <publisher>Institute of Literature, </publisher>
                 <pubPlace>Sofia</pubPlace>
-                <idno type="Repertorium">RC-DAGrig15II</idno>
+                <idno type="Repertorium">RC-DAGrig15I</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by its creator(s) under
                         the Creative Commons Attribution-No Derivative Works 3.0 License under
                         legislation in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <bibl>
-                    <ref type="bibl" target="bib:Шмидт1984">Сводный каталог 1984: 329</ref>
-                    <ref type="bibl" target="bib:Викторов1879">Викторов 1879: 12</ref>
-                </bibl>
+                <bibl><ref target="bib:Шмидт1984">Сводный каталог 1984: 329</ref> </bibl>
+                  <bibl>  <ref target="bib:Викторов1879">Викторов 1879: 12</ref></bibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -38,6 +39,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-29">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -48,35 +50,28 @@
                 <msIdentifier>
                     <msName xml:lang="en" type="general">apostle</msName>
                     <msName type="specific" xml:lang="en">full praxapostolos</msName>
-                    <p>The fragment belonging to a big codex, found of Grigorovic at the time of his
-                        trip.</p>
                     <country>Russia</country>
                     <settlement>Moscow</settlement>
                     <repository>Russian State Library</repository>
+                    <collection>В. И. Григорович</collection>
                     <idno type="shelfmark">Grig. 15. I</idno>
-                    <altIdentifier type="old">
+                    <altIdentifier type="former">
                         <idno type="shelfmark">M.1697</idno>
                     </altIdentifier>
                     <altIdentifier>
-                        <idno type="description">182</idno>
+                        <idno type="union_catalogue">182</idno>
                         <note>
-                            <bibl>
                                 <ref type="bibl" target="bib:Шмидт1984">Сводный каталог 1984:
                                     206–207</ref>
-                            </bibl>
-                        </note>
-                    </altIdentifier>
-                    <altIdentifier>
-                        <collection>В. И. Григорович</collection>
-                        <idno type="collNr">15.I</idno>
-                        <note>
                             <ref type="bibl" target="bib:Викторов1879">Викторов 1879: 12</ref>
                         </note>
                     </altIdentifier>
                 </msIdentifier>
                 <physDesc>
+                    <summary>The fragment belongs to a big codex, found from Grigorovič at the time of his
+                        trip.</summary>
                     <objectDesc>
-                        <supportDesc>
+                        <supportDesc material="parch">
                             <support>
                                 <material>Parchment, rough and uneven</material>
                             </support>
@@ -107,12 +102,13 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
                         <locus xmlns="http://www.tei-c.org/ns/1.0">1r-2v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0">anomymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial"/>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Theodor</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="uncial"/>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Serbian orthography</p>
-                            </orthography>
+                            <langNote key="orthography">Serbian orthography
+                            </langNote>
                         </scribeLang>
                     </scribe>
                 </scribeDesc>
@@ -132,23 +128,19 @@
                     <msItemStruct xml:id="ACD3">
                         <locus n="3">2v</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <colophon>
-                            <p>
-                                <note>The long colophon of the copist Theodor who finished manuscript
-                                    at the time of <name>Stefan Urosh</name> the king of the
-                                        <geogName>Serbia</geogName> (1276–1277) and archbishop
-                                        <name>Ioanikij</name>.</note>
-                            </p>
-                        </colophon>
+                        <note>The long colophon of the copist Theodor who finished manuscript
+                                at the time of <name>Stefan Uroš</name> the king of the
+                                <geogName>Serbia</geogName> (1276–1277) and archbishop
+                                <name>Ioanikij</name>.</note>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#DA">
+                    <origin evidence="internal" resp="#DA">
                         <origDate notBefore="1276" notAfter="1277">1276–1277</origDate>
                         <origPlace>Serbia</origPlace>
                     </origin>
                     <acquisition>
-                        <p>The fragment in the collection of Grigorović as a part of this collection
+                        <p>The fragment in the collection of Grigorovič as a part of this collection
                             was housed in the State Library in Moscow.</p>
                     </acquisition>
                 </history>

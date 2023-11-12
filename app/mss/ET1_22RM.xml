@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-ET1_22RM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Nikifor's Miscellany 2</title>
+                <title>Nikifor's Miscellany 2</title>
                 <author xml:id="ET">Elena Tomova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -12,7 +16,7 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>10 November 1995</date>
+                <date when="1995-11-10">10 November 1995</date>
                 <idno type="Repertorium">RC-ET1_22RM</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -20,19 +24,16 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Спространов1902">Спространов 1902: 22-23, N 1/22
-                        (47)</ref>
-                    <ref type="bibl" target="bib:Райков1986">Райков, Кодов, Христова 1986: 69-71, №
-                        32</ref>
-                    <ref type="bibl" target="bib:Христова1982">Своден каталог 1982: 153, No.
-                        414</ref>
-                </p>
+                <listBibl><bibl><ref target="bib:Спространов1902">Спространов 1902: 22–23, N 1/22
+                        (47)</ref></bibl>
+                   <bibl> <ref target="bib:Райков1986">Райков, Кодов, Христова 1986: 69–71, №
+                        32</ref></bibl>
+                    <bibl><ref target="bib:Христова1982">Своден каталог 1982: 153, No.
+                        414</ref></bibl></listBibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -44,7 +45,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>services and vitas of St. John of Rila</item>
                     </list>
                 </keywords>
@@ -59,6 +60,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -80,18 +82,17 @@
                     <altIdentifier type="former">
                         <idno type="shelfmark">47</idno>
                     </altIdentifier>
-                    <altIdentifier type="description">
+                    <altIdentifier>
                         <idno type="catalogue">32</idno>
                     </altIdentifier>
-                    <altIdentifier type="unioncatalogue">
-                        <idno type="catalogue">414</idno>
+                    <altIdentifier>
+                        <idno type="unioncatalogue">414</idno>
                     </altIdentifier>
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
                                 <watermark>unclear</watermark>
                             </support>
                             <extent>
@@ -128,16 +129,14 @@
                     <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">dark brown</ink>
                     <bindingDesc>
                         <binding contemporary="false">
-                            <p>The codex was rebound by priest Atanas Boboshevec in 1739 as it's
-                                marked in the inscription on f. 203 v. The thick wooden panels
-                                covered with ornamented leather. There are nasps.</p>
+                            <summary>The thick wooden panels covered with ornamented leather.  The codex was rebound by priest <persName>Atanas Boboševec</persName> in <date>1739</date> as it's marked in the inscription on <locus>f. 203v</locus>. There are nasps.</summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
-                        <list type="simple">
+                        <list>
                             <item>
                                 <locus>f. 203v</locus>
-                                <persName full="yes">Atanas from Boboshevo</persName>
+                                <persName full="yes"><persName>Atanas</persName> from <placeName>Boboševo</placeName></persName>
                                 <date>1839</date>
                                 <quote xml:lang="cu">А҃.Ѱ҃Л҃Ѳ҃ пповеза<seg rend="sup">х</seg> сїю
                                     книгу азь многогрѣшнїи <persName full="yes">попь Атанас
@@ -147,8 +146,8 @@
                             <item>
                                 <locus>f. 204v</locus>
                                 <date>1692</date>
-                                <quote xml:lang="cu">Се<seg>л</seg>ѡ Туряковци да се з<seg rend="sup">н</seg>ае къга дѡде Стѡмирь. попь къга дѡдѡхь у
-                                    манастиръ въ летѡ ҂З҃ тистущѡ. Ц҃ тамамь Паисиа тагая
+                                <quote xml:lang="cu">Се<seg>л</seg>ѡ <placeName>Туряковци</placeName> да се з<seg rend="sup">н</seg>ае къга дѡде <persName>Стѡмирь. попь</persName> къга дѡдѡхь у
+                                    манастиръ въ летѡ ҂З҃ тистущѡ. Ц҃ тамамь <persName>Паисиа</persName> тагая
                                     дѡде.</quote>
                             </item>
                             <item>
@@ -159,8 +158,8 @@
                             </item>
                             <item>
                                 <locus>on the back pastedown</locus>
-                                <quote xml:lang="cu">Да<seg rend="sup">с</seg> знае кога при<seg rend="sup">д</seg>е Еѵѳимие Рилец въ ме<seg rend="sup">с</seg>то нарицаего Книшава на ме<seg rend="sup">с</seg>то
-                                    Цр҃и врх҃ъ по планина по работа некꙗ мудриа того ра<seg rend="sup">д</seg>и въспѵ его же къ нему бро<seg rend="sup">д</seg>еше гл҃а ему г<seg rend="sup">с</seg>ди.</quote>
+                                <quote xml:lang="cu">Да<seg rend="sup">с</seg> знае кога при<seg rend="sup">д</seg>е <persName>Еѵѳимие Рилец</persName> въ ме<seg rend="sup">с</seg>то нарицаего <placeName>Книшава</placeName> на ме<seg rend="sup">с</seg>то
+                                    <placeName>Цр҃и врх҃ъ</placeName> по планина по работа некꙗ мудриа того ра<seg rend="sup">д</seg>и въспѵ его же къ нему бро<seg rend="sup">д</seg>еше гл҃а ему г<seg rend="sup">с</seg>ди.</quote>
                             </item>
                         </list>
                     </additions>
@@ -168,36 +167,31 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
-                            <locus>1r-10v</locus>
-                            <locus>75r-204v</locus>
+                            <locus>1r–10v</locus>
+                            <locus>75r–204v</locus>
                         </locusGrp>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">priest Nikifor</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial"/>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">priest Nikifor</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"/>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography type="resava">
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Resava regular
-                                    orthography</p>
-                            </orthography>
+                            <langNote key="orthography">Resava regular orthography</langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Райков1986">Райков, Кодов, Христова 1986:
-                                69-71, № 32</ref>
-                        </note>
+                           <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                               <ref target="bib:Райков1986">Райков, Кодов, Христова 1986:
+                                69–71, № 32</ref></bibl>
                     </scribe>
                     <scribe n="2">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">11r-74v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial"/>
-                        <scribeLang>
-                            <orthography type="resava">
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Resava regular
-                                    orthography</p>
-                            </orthography>
-                        </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Райков1986">Райков, Кодов, Христова 1986:
-                                69-71, № 32</ref>
-                        </note>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">11r–74v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"/>
+                        </scriptDesc>
+                            <scribeLang>
+                                <langNote key="orthography">Resava regular orthography</langNote>
+                            </scribeLang>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0"><ref target="bib:Райков1986">Райков, Кодов, Христова 1986:
+                            69–71, № 32</ref></bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -205,7 +199,7 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation" style="non-narrative">
-                        <locus n="1">1r-10v</locus>
+                        <locus n="1">1r–10v</locus>
                         <title xml:lang="bg">Параклис на Богородица</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -218,7 +212,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">11r-13v</locus>
+                        <locus n="2">11r–13v</locus>
                         <title xml:lang="bg">Поучение към иереите от Василий Велики</title>
                         <author>Basil the Great</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -233,7 +227,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">14r-22v</locus>
+                        <locus n="3">14r–22v</locus>
                         <title xml:lang="bg">Устав на литургията и на дяконството</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -245,7 +239,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation" style="non-narrative">
-                        <locus n="4">23r-77r</locus>
+                        <locus n="4">23r–77r</locus>
                         <title xml:lang="bg">Литургия на Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -255,11 +249,11 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Кадило ти приносимь х҃е б҃е
                                 наш</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и оумив' се гл҃ѥ<seg rend="sup">т</seg>
-                                <gap hand="DR"/>+</explicit>
+                                <gap/>+</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">78r-78v</locus>
+                        <locus n="5">78r–78v</locus>
                         <title xml:lang="bg">Молитва над житото в памет на светец, или на мъченик или на преподобен</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -271,44 +265,42 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">иже въсе съвръшивыи словомь
                                 своимь г҃и.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и тебѣ славу възсилаемь.
-                                ѡц҃у <gap hand="ET"/> амїнь.</explicit>
+                                ѡц҃у <gap/> амїнь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="original" style="non-narrative">
-                        <locus n="6">79r-129v</locus>
+                        <locus n="6">79r–129v</locus>
                         <title xml:lang="bg">Служба по Ерусалимския устав от Иван Рилски с Търновското (първо) проложно житие на св. Иван Рилски</title>
                         <author>anonymous</author>
                         <date type="churchCal" when="--10-19">19 october</date>
                         <note>Tŭrnovo (First) Synaxarion notice of St. John of Rila stands after the
-                            sixth song of the kanon (see ff 112r-117v).</note>
+                            sixth song of the kanon (see ff 112r–117v).</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">въ Ѳ҃І҃ , дн҃ь. паме<seg rend="sup">т</seg> прѣпо<seg rend="sup">д</seg>бнаго оц҃а начего
-                                . Іѡаннна поустыни жителꙗ рылскаг<seg rend="sup">о</seg>
-                            </head>
+                                . Іѡаннна поустыни жителꙗ рылскаг<seg rend="sup">о</seg></head>
                             <rubric xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ц҃ъ
                                 октѡмврїи има<seg rend="sup">т</seg> , д҃и. л҃а҃. д<seg rend="sup">н</seg>ь има<seg rend="sup">т</seg> , ча<seg rend="sup">с</seg>. а҃і҃. а нощь, г҃і҃.</rubric>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Разума свѣтлостми оукрашаѥ
                                 се</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Въ тъж<seg rend="sup">д</seg>е
+                           <sampleText> <head xmlns="http://www.tei-c.org/ns/1.0">Въ тъж<seg rend="sup">д</seg>е
                                 дн҃ь . паме<seg rend="sup">т</seg> прп<seg rend="sup">д</seg>бнаго
-                                оц҃а нашег<seg rend="sup">о</seg> . Іѡанна рылскаго .</head>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">с<seg rend="sup">х</seg>
+                                оц҃а нашег<seg rend="sup">о</seg> . Іѡанна рылскаго .</head></sampleText>
+                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">с<seg rend="sup">х</seg>
                                 .</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">въ слъза<seg rend="sup">х</seg> древлѥ и трудѣ<seg rend="sup">х</seg>, сѣавь долу.
-                                Іѡанне, пожинаѥши н҃нꙗ.</incipit>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ст҃ыи и прп<seg rend="sup">д</seg>бныи ѡ ц҃ь нашь, великыи въ постницѣ<seg rend="sup">х</seg>
-                            </incipit>
+                                Іѡанне, пожинаѥши н҃нꙗ.</incipit></sampleText>
+                            <sampleText><incipit xmlns="http://www.tei-c.org/ns/1.0">Ст҃ыи и прп<seg rend="sup">д</seg>бныи ѡ ц҃ь нашь, великыи въ постницѣ<seg rend="sup">х</seg></incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">прїидѣте бл҃с҃венїи о҃ца
                                 моего, наслѣадуите уготованное вамь цр҃с҃твїе ѿ сложенїа миру. ꙗко
-                                    <gap hand="ET"/>аминъ</explicit>
+                                    <gap/>аминъ</explicit></sampleText>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">тако выходи<seg rend="sup">м</seg> въ трапезу бл<seg rend="sup">г</seg>одареще б҃а, и
                                 славеще прп<seg rend="sup">д</seg>бнаго Іѡанна.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation" style="non-narrative">
-                        <locus n="7">130r-138v</locus>
+                        <locus n="7">130r–138v</locus>
                         <title xml:lang="bg">Царски часове срещу Рождество Христово</title>
                         <author>anonymous</author>
                         <date type="churchCal" when="--12-24">24 December</date>
@@ -321,7 +313,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation" style="non-narrative">
-                        <locus n="8">138v-146v</locus>
+                        <locus n="8">138v–146v</locus>
                         <title xml:lang="bg">Царски часове срещу Богоявление</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -334,7 +326,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation" style="non-narrative">
-                        <locus n="9">147r-169r</locus>
+                        <locus n="9">147r–169r</locus>
                         <title xml:lang="bg">Служба за Велика събота</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -348,7 +340,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10">
-                        <locus n="10">170r-182v</locus>
+                        <locus n="10">170r–182v</locus>
                         <title xml:lang="bg">Рилско (народно, манастирско) житие на св. Иван Рилски</title>
                         <author>anonymous</author>
                         <date type="churchCal" when="--10-19">19 October</date>
@@ -361,11 +353,11 @@
                                 нашего Іѡанна, поустыни жителꙗ рылскаго, и о прѣнесенїи моще<seg rend="sup">м</seg> его. ѡч҃е бл<seg rend="sup">с</seg>ви:</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Бы<seg rend="sup">с</seg>
                                 чл҃кь дх҃в'ь. бл҃гошѣр'нь и хр<seg rend="sup">с</seg>толюбивь.</incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и оставлѥннїе грѣхо<seg rend="sup">м</seg> нашимь шъ дн҃ь соудныи. бл҃годѣтїю <gap hand="ET"/>аминь.</explicit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и оставлѥннїе грѣхо<seg rend="sup">м</seg> нашимь шъ дн҃ь соудныи. бл҃годѣтїю <gap/>аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="11">183r-203v</locus>
+                        <locus n="11">183r–203v</locus>
                         <title xml:lang="bg">Житие на св. Иван Рилски от Георги Скилица</title>
                         <author>George Skylitzes</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -381,11 +373,11 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Сщ҃енное начети пошѣданїе.
                                 желанїе оубо понуж<seg rend="sup">д</seg>ает' ме</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">сп<seg rend="sup">с</seg>ны<seg rend="sup">х</seg> чести причестникы сътворити.
-                                бл҃ г<seg rend="sup">д</seg>тїйи <gap hand="ET"/> аминь.</explicit>
+                                бл҃ г<seg rend="sup">д</seg>тїйи <gap/> аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="original" style="non-narrative">
-                        <locus n="12">203v-204r</locus>
+                        <locus n="12">203v–204r</locus>
                         <title xml:lang="bg">Слава на тримата отци Прохор Пшински, Иван Рилски и Иоаким Сарандапорски</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -404,33 +396,24 @@
                     <msItemStruct xml:id="ACD13">
                         <locus>169v</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <div xml:lang="cu">
-                            <p>съврьши се сїа книга въ лѣ<seg rend="sup">т</seg> , ҂З҃П҃Х҃ <note resp="#ET">= <date>1602</date>
-                                </note>, м<seg rend="sup">т</seg>ца августа, К҃А҃. кру(г҃). сльньчны. К҃Ѕ҃. лоуны, Д҃.
+                       <re:sampleText xml:lang="cu"> 
+                           <colophon>
+                            <ab>съврьши се сїа книга въ лѣ<seg rend="sup">т</seg> , ҂З҃П҃Х҃ <note resp="#ET">= <date>1602</date></note>, м<seg rend="sup">т</seg>ца августа, К҃А҃. кру(г҃). сльньчны. К҃Ѕ҃. лоуны, Д҃.
                                 ѳемелїѡ(н҃). З҃І҃. злато число , З҃. Съписа сїю кнїгу еропапа
                                 Никѵфѡ(р҃). и поставї ю въ ц<seg rend="sup">р</seg>кв ст҃го ѡц҃а
                                 Іѡанна Рылскаго на бл<seg rend="sup">т</seg>венїе дш҃и драганове и
                                     Ѳеѡ<seg rend="sup">д</seg>рїне и че<seg rend="sup">д</seg> еѥ
                                 драганѫ . и аще кто дръзнеть калугерь или козмїкъ изностї ю из
                                 монасты(р҃) и посвои(т҃) ю. анаѳема его да буде(т҃) ѿ ст҃ыи<seg rend="sup">х</seg> въселенскы<seg rend="sup">х</seg> ѿц҃ь, Т҃И
-                                ҃І҃. и ѿ Іѡанна Рыл'скаг<seg rend="sup">о</seg>. амїнъ.</p>
-                        </div>
+                                ҃І҃. и ѿ Іѡанна Рыл'скаг<seg rend="sup">о</seg>. амїнъ.</ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu">
+                    <origin evidence="internal">
                         <origDate notBefore="1602" notAfter="1602">1602</origDate>
                         <origPlace>Rila monastery</origPlace>
-                        <note>
-                            <bibl>
-                                <respStmt>
-                                    <name full="yes">Райков, Б., Хр. Кодов, Б. Христова</name>
-                                    <resp>
-                                        <title>Славянски ръкописи в Рилския манастир</title>
-                                    </resp>
-                                </respStmt>
-                            </bibl>
-                        </note>
+                        <ref type="bibl" target="bib:Райков1986">Райков, Кодов, Христова 1986</ref>
                     </origin>
                 </history>
             </msDesc>

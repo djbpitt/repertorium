@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DD437NBKM">
     <teiHeader>
         <fileDesc>
@@ -21,13 +25,12 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <bibl>
-                    <ref target="bib:Цонев1910">Цонев 1910: 455-456</ref>
+                    <ref target="bib:Цонев1910">Цонев 1910: 455–456</ref>
                 </bibl>
                 <bibl>
                     <ref target="bib:Манолева2013">Манолева 2013</ref>
@@ -43,7 +46,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Miscellany of mixed content</item>
                         <item>Apokryphal miscellany</item>
                     </list>
@@ -59,6 +62,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-29">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#DB" when="2016-07-02">Added @xml:id for author and editor of electronic
@@ -87,8 +91,7 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">106</measure>
@@ -136,44 +139,39 @@
                             <locusGrp>
                                 <locus>12r</locus>
                                 <locus>47v</locus>
-                            </locusGrp>there are two borders in the codex - ff.12r end
+                            </locusGrp>there are two borders in the codex – ff.12r end
                             47v</decoNote>
                         <decoNote type="initials">there are many reds initials on the
                             codex</decoNote>
                     </decoDesc>
                     <bindingDesc>
                         <binding contemporary="true">
-                            <p>original binding - wooden panels covered with ornamented leather and
-                                metall nasps</p>
+                            <summary>original binding – wooden panels covered with ornamented leather and
+                                metall nasps</summary>
                         </binding>
                     </bindingDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">2r-116v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
-                            <p>New uncial</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">2r–116v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  script="Cyrs" style="uncial">New uncial</scriptNote>
                         </scriptDesc>
                         <scribeLang>
                             <summary xmlns="http://www.tei-c.org/ns/1.0">East Bulgarian dialect
                                 features</summary>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">With one (small) jus, two
-                                    jers</p>
-                            </orthography>
+                            <langNote key="orthography">With one (small) jus, two
+                                    jers
+                            </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Dimitrinka Dimitrova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <summary>The manuscript contains 9 texts.</summary>
                     <filiation type="protograph">Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">2r-11v</locus>
+                        <locus n="1">2r–11v</locus>
                         <title xml:lang="bg">Разказ за въздвижение на честния кръст</title>
                         <author>anonymous</author>
                         <note>without beginning, compilation</note>
@@ -192,11 +190,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">13r-23r</locus>
+                        <locus n="2">13r–23r</locus>
                         <title xml:lang="bg">Разказ за Адам и Ева</title>
                         <author>anonymous</author>
                         <note>
-                            <bibl xml:lang="bg">
+                            <bibl>
                                 <ref type="bibl" target="bib:Димитрова1982">Димитрова 1982</ref>
                             </bibl>
                         </note>
@@ -218,7 +216,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="2">23v-26v</locus>
+                        <locus n="2">23v–26v</locus>
                         <title xml:lang="bg">Евангелие Никодимово. Разказ как Марта осъди Пилат</title>
                         <author>anonymous</author>
                         <note>without end</note>
@@ -233,7 +231,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
-                        <locus n="4">26v-29r</locus>
+                        <locus n="4">26v–29r</locus>
                         <title xml:lang="bg">Разказ, космогоничен</title>
                         <author>anonymous</author>
                         <note>without beginning</note>
@@ -268,7 +266,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6">
-                        <locus n="6">48v-87v</locus>
+                        <locus n="6">48v–87v</locus>
                         <title xml:lang="bg">Видение на апостол Павел</title>
                         <author>anonymous</author>
                         <note>without beginning, compilation</note>
@@ -288,7 +286,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">88r-91v</locus>
+                        <locus n="7">88r–91v</locus>
                         <title xml:lang="bg">Поучение против пиянството</title>
                         <author>anonymous</author>
                         <note>without beginning</note>
@@ -307,7 +305,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="8">92r-99v</locus>
+                        <locus n="8">92r–99v</locus>
                         <title xml:lang="bg">Житие на св. Алексий Римски</title>
                         <author>anonymous</author>
                         <note>without beginning</note>
@@ -324,7 +322,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="9">100v-105v</locus>
+                        <locus n="9">100v–105v</locus>
                         <title xml:lang="bg">Поучение за душевното покаяние</title>
                         <author cert="medium">John Chrysostom</author>
                         <note>The text is without end</note>
@@ -340,24 +338,12 @@
                     <msItemStruct xml:id="ACD10" type="original">
                         <locus n="10">142r</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <colophon>
-                            <p/>
-                        </colophon>
-                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu"/>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu">
+                    <origin evidence="conjecture">
                         <origDate notBefore="1780" notAfter="1799">18th c., end</origDate>
                         <origPlace cert="medium">Kotel</origPlace>
-                        <note>
-                            <bibl>
-                                <respStmt>
-                                    <name full="yes">Dimitrova, D.</name>
-                                    <resp>de visu</resp>
-                                </respStmt>
-                            </bibl>
-                        </note>
                     </origin>
                 </history>
             </msDesc>

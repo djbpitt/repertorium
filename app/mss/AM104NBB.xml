@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM104NBB">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Miscellany No. 104, National Library, Beograd, 14th c.</title>
+                <title>Miscellany No. 104, National Library, Beograd, 14th c.</title>
                 <author xml:id="AM">Anisava Miltenova</author>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
             </titleStmt>
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>December 2008</date>
+                <date when="2008-12">December 2008</date>
                 <idno type="Repertorium">RC-AM104NBB</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -19,8 +24,7 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -53,7 +57,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Miscellany with mixed content</item>
                         <item>Apocrypha</item>
                     </list>
@@ -69,6 +73,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-28">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AM" when="2011-10-07">Removed old elements</change>
@@ -94,7 +99,7 @@
                     <idno type="shelfmark">104</idno>
                     <altIdentifier type="catalogue">
                         <idno>468</idno>
-                        <note>Стоjановић 1903 : 294-305</note>
+                        <note><ref type="bibl" target="bib:Стоjановић1903">Стоjановић 1903 : 294–305</ref></note>
                     </altIdentifier>
                 </msIdentifier>
                 <physDesc>
@@ -118,7 +123,6 @@
                             <extent>
                                 <measure unit="folia">296</measure>
                             </extent>
-                            <foliation>No data.</foliation>
                             <collation>
                                 <summary>42 quires</summary>
                                 <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1">
@@ -151,8 +155,7 @@
                             </collation>
                             <condition>The beginning and the end of the manuscript are missing; many
                                 folia and quires (7, 8, 9) seem to be missing too, see
-                                    <ref>Стоjановић 1903: 294-305.</ref>
-                            </condition>
+                                    <ref>Стоjановић 1903: 294-305.</ref></condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" writtenLines="20 21"/>
@@ -164,16 +167,16 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>No data</p>
+                            <summary>Without binding</summary>
                         </binding>
                     </bindingDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locus xmlns="http://www.tei-c.org/ns/1.0">1r-296v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Nikolic</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>semiuntial</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Nikolic</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"/>
                         </scriptDesc>
                         <scribeLang>
                             <summary xmlns="http://www.tei-c.org/ns/1.0">No data of the orthography
@@ -181,21 +184,15 @@
                                 predominated part of mss is without juses, with two jehrs and with
                                 very evident features of Bulgarian protograph. At the end of the mss
                                 juses are used, for ex. in the Vita of St. Phillip.</summary>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Rashka school?</p>
-                            </orthography>
+                            <langNote key="orthography" cert="low">Rashka school</langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Стоjановић</name>
-                            <resp>analysis</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <msItemStruct xml:id="ACD1" type="translation">
                         <locus n="1">1r-7v</locus>
                         <title xml:lang="bg">Антология от сентенции и ексцерпти</title>
-                        <note>Sentemciae and citation from the Church fathers and from the
+                        <note>Sentenciae and citation from the Church fathers and from the
                             Bible.</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -205,80 +202,85 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Бѣ чловѣкь благовѣрнь и
                                 саномь великь оу цара, и слоучи се ѥмоу видѣти чловѣка хрома
                                 ногама.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">О царехь сие кажеть.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Царь ли ѥси или кнезь или
-                                воѥвода, помислы ѿ кого ѥси власть приѥль. Рече бо апостоль, никтоже
-                                власть о себѣ не приѥмлеть, тькмо званїи ѿ бога.</incipit>
+                            <sampleText>
+                                <head xmlns="http://www.tei-c.org/ns/1.0">О царехь сие кажеть.</head>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0">Царь ли ѥси или кнезь или
+                                    воѥвода, помислы ѿ кого ѥси власть приѥль. Рече бо апостоль, никтоже
+                                    власть о себѣ не приѥмлеть, тькмо званїи ѿ бога.</incipit>    
+                            </sampleText>
+                            
+                           <sampleText>
                             <head xmlns="http://www.tei-c.org/ns/1.0">О необидѣни.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Не ѡбидеще никогоже ни
-                                грабеще ни вьсхищающе ни оубивающе бес правды.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">О любви.</head>
+                                грабеще ни вьсхищающе ни оубивающе бес правды.</incipit></sampleText>
+                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">О любви.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Боудѣте братолюбци, а не
-                                братоненавид'ци. ꙗкоже рече богослов'ць ѳеологь.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">ѡ любве благовѣриꙗ.</head>
+                                братоненавид'ци. ꙗкоже рече богослов'ць ѳеологь.</incipit></sampleText>
+                           <sampleText> <head xmlns="http://www.tei-c.org/ns/1.0">ѡ любве благовѣриꙗ.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Любеще жени своѥ и жени да
                                 любеть моужеи своихь, ꙗкоже рече апостоль моужиѥ любите жени
-                                своѥ.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">ѡ поповѣхь.</head>
+                                своѥ.</incipit></sampleText>
+                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">ѡ поповѣхь.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Иѥреѡм' же лѣ но быти ꙗ ко
-                                и свѣтиломь црьквнимь.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">ѡ пиꙗницахь.</head>
+                                и свѣтиломь црьквнимь.</incipit></sampleText>
+                           <sampleText> <head xmlns="http://www.tei-c.org/ns/1.0">ѡ пиꙗницахь.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Пиꙗница бо инѣхь оучить а
-                                себе не можеть наоучити что оубо злѣѥ пиꙗн'ства ѥсть.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">ѡ светѣи икони повѣсть.</head>
+                                себе не можеть наоучити что оубо злѣѥ пиꙗн'ства ѥсть.</incipit></sampleText>
+                           <sampleText> <head xmlns="http://www.tei-c.org/ns/1.0">ѡ светѣи икони повѣсть.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Слышахомь ѿ нѣкоѥго
                                 чрьноризца света моужа, ꙗко бѣ моужь благовѣрень и по вьсе дьни
-                                хождаше кь црьквь светоую.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">О ѿврьжени крьщениꙗ.</head>
+                                хождаше кь црьквь светоую.</incipit></sampleText>
+                          <sampleText>  <head xmlns="http://www.tei-c.org/ns/1.0">О ѿврьжени крьщениꙗ.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Тьижде мнихь повѣда намь,
                                 ꙗко придоста два саракунина вь їросалимь, едїнь же ѥю видѣвь како
                                 живоуть христиане и веровь вь господа нашего ісоус Христа и крьсти
-                                се.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">ѡ лѣности.</head>
+                                се.</incipit></sampleText>
+                          <sampleText>  <head xmlns="http://www.tei-c.org/ns/1.0">ѡ лѣности.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">ꙗкоже и птичию родоу
-                                имѣющимь тѣлеса здрава и спехь имать.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">А се о богатствѣ.</head>
+                                имѣющимь тѣлеса здрава и спехь имать.</incipit></sampleText>
+                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">А се о богатствѣ.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Не глаголи богатства ради
-                                себе добра ижевь нѥмь добрѣ не живоуть.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">О томжде.</head>
+                                себе добра ижевь нѥмь добрѣ не живоуть.</incipit></sampleText>
+                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">О томжде.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Показа бо ни и ѡбразомь не
-                                висоцѣ ни надѣ ꙗ ꙗти се на множьство богатства своѥго.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">О родѣ.</head>
+                                висоцѣ ни надѣ ꙗ ꙗти се на множьство богатства своѥго.</incipit></sampleText>
+                           <sampleText> <head xmlns="http://www.tei-c.org/ns/1.0">О родѣ.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Не хвали се родомь своимь
-                                благородьнь сіи. ноу самь собою и дѣлы своими.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">ѡ томжде.</head>
+                                благородьнь сіи. ноу самь собою и дѣлы своими.</incipit></sampleText>
+                           <sampleText> <head xmlns="http://www.tei-c.org/ns/1.0">ѡ томжде.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Ѿкоудоу бо те могоу
-                                разоумѣти вѣр'на. ревеши ꙗко и ѡсль.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">О злѣ и о добрѣ.</head>
+                                разоумѣти вѣр'на. ревеши ꙗко и ѡсль.</incipit></sampleText>
+                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">О злѣ и о добрѣ.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Нѣсть никако чловѣкꙋ биити
-                                ꙗкоже не имѣти никакова же дѣла кь богоу добра.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">О пчелѣ.</head>
+                                ꙗкоже не имѣти никакова же дѣла кь богоу добра.</incipit></sampleText>
+                            <sampleText>
+                                <head xmlns="http://www.tei-c.org/ns/1.0">О пчелѣ.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Что бо пчели хоужде есть.
-                                что ли паоунѣ краснѣе. котори каковь ею плодь приносить.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">ѡ доуши.</head>
+                                что ли паоунѣ краснѣе. котори каковь ею плодь приносить.</incipit></sampleText>
+                         <sampleText>   <head xmlns="http://www.tei-c.org/ns/1.0">ѡ доуши.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Доуша бо и тѣло брать и
                                 сестра си ѥста. да ꙗко не живеть тѣло без доуше то ни доуша без
-                                тѣлесе.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">А се Павла апостола о
+                                тѣлесе.</incipit></sampleText>
+                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">А се Павла апостола о
                                 любви.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще имамь вѣроу и аще храню
                                 се ѿ блоуда и ѿ пиꙗ ньства, аще и ѿдамь все имѣниѥ и оудроуче тѣло
-                                своѥ постомь.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">О злѣ.</head>
+                                своѥ постомь.</incipit></sampleText>
+                           <sampleText> <head xmlns="http://www.tei-c.org/ns/1.0">О злѣ.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Еже вьходить вь оуста
-                                чловѣкоу нѣсть зло нь ѥже ѿ оусть исходить.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">О Златоустѣ.</head>
+                                чловѣкоу нѣсть зло нь ѥже ѿ оусть исходить.</incipit></sampleText>
+                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">О Златоустѣ.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">И Златооусто рече. бывшоу
-                                Давидꙋ царемь и иде и ѡбрѣте женꙋ не блꙋдницоу.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">О Соломонѣ рече.</head>
+                                Давидꙋ царемь и иде и ѡбрѣте женꙋ не блꙋдницоу.</incipit></sampleText>
+                           <sampleText> <head xmlns="http://www.tei-c.org/ns/1.0">О Соломонѣ рече.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Грѣхь мои прѣдь мною есть
-                                виноу.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">ѡ доуши повѣсть.</head>
+                                виноу.</incipit></sampleText>
+                         <sampleText>   <head xmlns="http://www.tei-c.org/ns/1.0">ѡ доуши повѣсть.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">ѡ колма доуше, постенѥши и
-                                колико вьстресеши се различныхь даровь.</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Фисософиꙗ.</head>
+                                колико вьстресеши се различныхь даровь.</incipit></sampleText>
+                          <sampleText>  <head xmlns="http://www.tei-c.org/ns/1.0">Фисософиꙗ.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Дѣтища дѣтищь ѡтрочищь
-                                юноша моужа стрьбла старца тьже оубо мѣрить се седмицами.</incipit>
+                                юноша моужа стрьбла старца тьже оубо мѣрить се седмицами.</incipit></sampleText>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
@@ -344,8 +346,7 @@
                         <title xml:lang="bg">Житие на св. Петка Римска</title>
                         <note>Vita of the Great martyr Petka, the earliest copy.<bibl>
                                 <ref type="bibl" target="bib:Новаковић1895">28-32</ref>
-                            </bibl>
-                        </note>
+                            </bibl></note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -909,9 +910,9 @@
                         <locus n="49">184r-189v</locus>
                         <title xml:lang="bg">Житие на св. Юлияния</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <p xmlns="http://www.tei-c.org/ns/1.0">роу ти се ни поклоню се камению и
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">роу ти се ни поклоню се камению и
                                 не вѣроую глꙋхимь идоломь нь вѣроую и покланꙗю се господоу моѥмоу
-                                Иісу Христоу милосрьдномоу ѡтьцоу.</p>
+                                Иісу Христоу милосрьдномоу ѡтьцоу.</ab>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD54">
@@ -1008,9 +1009,7 @@
                         <title xml:lang="bg">Поучение за спасението на душата</title>
                         <note>Fragment. Folia appear to be missing</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <p xmlns="http://www.tei-c.org/ns/1.0">
-                                <gap/>о доуши<gap/>
-                            </p>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0"><gap/>о доуши<gap/></ab>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD63">
@@ -1136,7 +1135,7 @@
                     <msItemStruct xml:id="ACD72">
                         <locus n="68">276r-278r</locus>
                         <title xml:lang="bg">Житие на апостол Марко</title>
-                        <note>apocryphal?</note>
+                        <filiation type="source">Greek parallel: BHG 1036, CANT 287 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/16533">Pinakes</ref>)</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Моучениѥ светаго апостола
                                 ѥугелиста Марка.</head>
@@ -1190,8 +1189,7 @@
                                 <supplied>Боу</supplied> нашемоу їсоус Христоу царьствовавшоу все
                                 приѣль ...вьска слоужба оупразни се, бысть же жена
                                     крь<unclear>....</unclear>ива и боѥщи се Бога именемь
-                                    ѳе<unclear>...</unclear>
-                            </incipit>
+                                    ѳе<unclear>...</unclear></incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD77">
@@ -1221,21 +1219,21 @@
                         <locus>f. 178v</locus>
                         <title xml:lang="bg">Колофон</title>
                         <note>There are numerous marginal notes date from different periods. They
-                            include a <label>notes</label> by a certain <name full="yes">Nikolic</name>.</note>
-                        <colophon>
-                            <p>Сиꙗ слова писа грѣшни Никѡлиць тко ихь прочти еа да рече богь да
+                            include a <label>notes</label> by a certain <persName>Nikolic</persName>.</note>
+                       <re:sampleText xml:lang="cu"> <colophon>
+                            <ab>Сиꙗ слова писа грѣшни Никѡлиць тко ихь прочти еа да рече богь да
                                 прости Николица ѡ<seg rend="sup">д</seg> душевнихь и телѥсних
-                                болезниї.</p>
-                        </colophon>
+                                болезниї.</ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD80">
                         <locus>f. 178v:</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <colophon>
-                            <p>+ Сиꙗ слова писа грѣшни Сергїе анагность сире<seg rend="sup">ч</seg>
+                        <re:sampleText xml:lang="cu"><colophon>
+                            <ab>+ Сиꙗ слова писа грѣшни Сергїе анагность сире<seg rend="sup">ч</seg>
                                 чьтьць вь лѣто з҃ѯ҃г҃ ме<seg rend="sup">т</seg>ца ноевриꙗ д҃нь
-                                і҃.</p>
-                        </colophon>
+                                і҃.</ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>

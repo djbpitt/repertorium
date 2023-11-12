@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DA1039NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Reading Menaion for September-November, National Lubrary, Sofia, No. 1039,
+                <title>Reading Menaion for September–November, National Lubrary, Sofia, No. 1039,
                     14th c., middle</title>
                 <author xml:id="DA">Desislava Atanasova</author>
                 <author xml:id="MP">Maya Petrova</author>
@@ -22,13 +26,12 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <bibl>
-                    <ref target="bib:Стоянов1964">Стоянов 1964: 246-252</ref>
+                    <ref target="bib:Стоянов1964">Стоянов 1964: 246–252</ref>
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -41,7 +44,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>vitae</item>
                         <item>homilies</item>
                         <item>reading menaion</item>
@@ -58,6 +61,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-28">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -78,7 +82,7 @@
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="codex">
-                        <supportDesc material="parchment">
+                        <supportDesc material="parch">
                             <support>
                                 <material>Parchment. Sleek, well worked, but various – at some
                                     places more yellowish at others whitish. Some folia are very
@@ -97,7 +101,7 @@
                             </extent>
                             <foliation>There are two foliations: an oldest one in black ink at the
                                 right top edge of each folio and a most recent one in pencil below
-                                the first one. Both do not coincide - the oldest ink foliation
+                                the first one. Both do not coincide – the oldest ink foliation
                                 counts 3 folia plus in comparison to the pencil one. This electronic
                                 description follows the pencil foliation</foliation>
                             <collation>
@@ -110,7 +114,7 @@
                                 the end of the manuscript; a folio between ff. 5 and 6, two folia
                                 between ff. 9 and 10; a folio between ff. 233 and 234, a folio
                                 between ff. 258 and 259, two or three folia between ff. 365 and 366.
-                                There are approximately 30-35 missing folia from the end of the
+                                There are approximately 30–35 missing folia from the end of the
                                 manuscript. F. 288 is taken from another manuscript. It was added as
                                 a substitution of a lost original folio when the binding was made.
                                 The first two folia are missing, too, though they were aparently
@@ -128,16 +132,15 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Boards covered with ornamented leather, torn. Both the boards and the
+                            <summary>Boards covered with ornamented leather, torn. Both the boards and the
                                 leather are rubbed, frayed and worm-eaten. The back board is broken
-                                into tow pieces. It dates most likely from the 15th c. <bibl>
-                                    <ref>Иванова 2005: 263</ref>
-                                </bibl>
-                            </p>
+                                into tow pieces. It dates most likely from the 15th c.  
+                                <ref type="bibl" target="bib:Иванова2005">Иванова 2005: 263</ref>
+                                </summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
-                        <list type="simple">
+                        <list>
                             <item>
                                 <locus>f. 1r</locus>
                                 <quote xml:lang="ru">читаше монахь феодосїи россїискои земли
@@ -145,7 +148,7 @@
                                     муки прияше</quote>
                             </item>
                             <item>
-                                <locus>f. 1v, marginal - 2r; 2v</locus>
+                                <locus>f. 1v, marginal – 2r; 2v</locus>
                                 <date>1673</date>
                                 <quote xml:lang="cu">оваѧ книга житіе г҃ м<seg rend="sup">т</seg>ци
                                     посана ѹ марковь мн<seg rend="sup">т</seg>трь ка се писала т҃к а
@@ -168,54 +171,54 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
-                            <locus>1-209</locus>
+                            <locus>1–209</locus>
                         </locusGrp>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Draiko diak</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Middle semiuncial, not entirely regular with a slight backward
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Draiko diak</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  script="Cyrs" style="semiuncial">Middle semiuncial, not entirely regular with a slight backward
                                 sloping. Scriptio continua. Black disjunctive dots. Rare diacritical
                                 signs. Lack of accents. Some letters (<foreign xml:lang="cu">д
                                     м</foreign>) are of an antique drawing. The letter <foreign xml:lang="cu">ї</foreign> is written predominantly at the ends
                                 of the rows (see <ref type="bibl" target="bib:Стоянов1964">Стоянов
-                                    1964: 251</ref>)</p>
+                                    1964: 251</ref>)</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography type="rashka">
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Serbian Rashka orthography.
-                                    Only one jer (<foreign xml:lang="cu">ь</foreign>), very often
+                            <langNote key="orthography">Serbian Rashka orthography.
+                                    Only one jer (<foreign xmlns="http://www.tei-c.org/ns/1.0">ь</foreign>), very often
                                     doubled in final position. Rare and inconsistent jotation. The
                                     forms of a Dual form the verbs and nouns are entirely kept. Some
                                     of these orthographic peculiarities could be due to Bulgarian
-                                    copy source coping (protograph), see <ref type="bibl" target="bib:Стоянов1964">Стоянов 1964: 251</ref>
-                                </p>
-                            </orthography>
+                                    copy source coping (protograph), see <ref xmlns="http://www.tei-c.org/ns/1.0" type="bibl" target="bib:Стоянов1964">Стоянов 1964: 251</ref>
+                            </langNote>
                         </scribeLang>
                     </scribe>
                     <scribe n="2">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">209-373</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Stanislav</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Middle semiuncial, not entirely regular with a slight backward
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">209–373</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Stanislav</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  script="Cyrs" style="semiuncial">Middle semiuncial, not entirely regular with a slight backward
                                 sloping. Scriptio continua. Black disjunctive dots. Rare diacritical
                                 signs. Lack of accents. Some letters (<foreign xml:lang="cu">д,
                                     м</foreign> ) are of an antique drawing. The letter <foreign xml:lang="cu">ї</foreign> is written predominantly at the ends
                                 of the rows (see <ref type="bibl" target="bib:Стоянов1964">Стоянов
-                                    1964: 251</ref>)</p>
+                                    1964: 251</ref>)</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography type="rashka">
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Serbian Rashka orthography.
-                                    Only one jer (<foreign xml:lang="cu">ь</foreign>), very often
-                                    doubled in final position. Rare and inconsistent jotation.</p>
-                            </orthography>
-                            <grammar>The forms of a Dual form the verbs and nouns are entirely
-                                kept.</grammar>
+                            <langNote key="orthography">Serbian Rashka orthography.
+                                    Only one jer (<foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ь</foreign>), very often
+                                    doubled in final position. Rare and inconsistent jotation.
+                            </langNote>
+                            <langNote key="grammar">The forms of a Dual form the verbs and nouns are entirely
+                                kept.</langNote>
                         </scribeLang>
                         <note xmlns="http://www.tei-c.org/ns/1.0">Some of these language
-                            peculiarities could be due to Bulgarian copy source coping (protograph),
-                            see <ref type="bibl" target="bib:Стоянов1964">Стоянов 1964:
-                            251</ref>
-                        </note>
+                            peculiarities could be due to Bulgarian copy source, 
+                            see <ref type="bibl" target="bib:Стоянов1964">Стоянов 1964: 251</ref></note>
+                        <note xmlns="http://www.tei-c.org/ns/1.0">Stanislav copied several other manuscripts (e.g. Menaion
+                            of Oliver dated at 1342; see <ref type="bibl" target="bib:Стоянов1954">Стоянов, Кодов 1964: 252</ref>). He was
+                            well-trained to write both with Serbian and with Middle Bulgarian
+                            orthography. It is known that he spent certain time in Lesnovo Monastery
+                            and also in Markov Monastery.</note>
                     </scribe>
                 </scribeDesc>
                 <msContents type="translation">
@@ -223,38 +226,35 @@
                         content however (extensive vitas of saints, passions of martyrs and sermons,
                         arranged by church calendar dates, starting from 1st of September till 12th
                         of November) it is rather a reading menology of the so-called old redaction
-                            (<ref type="bibl" target="bib:Иванова2002">Иванова 2002: 363</ref>; <ref type="bibl" target="bib:Иванова2005">Иванова 2005: 263</ref>; <ref type="bibl" target="bib:Иванова2008">BHBS: 93-94</ref>. At the end of
-                        the manuscript there are four folia (369-372), which were considered to be a
+                            (<ref type="bibl" target="bib:Иванова2002">Иванова 2002: 363</ref>; <ref type="bibl" target="bib:Иванова2005">Иванова 2005: 263</ref>; <ref type="bibl" target="bib:Иванова2008">BHBS: 93–94</ref>. At the end of
+                        the manuscript there are four folia (369–372), which were considered to be a
                         part of the life of John the Merciful (<ref type="bibl" target="bib:Стоянов1964">Стоянов 1964: 251</ref>). In fact they contain
                         six other texts which do not correspond to the genre of the codex. Perhaps
                         originally they were placed at the end of the whole manuscript, and only
-                        occasionally binded at its present-day place (<ref type="bibl" target="bib:Иванова2005">Иванова 2005: 264-265</ref>). For the first
+                        occasionally binded at its present-day place (<ref type="bibl" target="bib:Иванова2005">Иванова 2005: 264–265</ref>). For the first
                         time they were identified by Sv. Nikolova as four pateric stories included
                         at the date of 12th of November (<ref type="bibl" target="bib:Николова1980">Николова 1980: 58</ref>). Some correction in this identification were
                         made by Kl. Ivanova, who distinguished two more texts and points out that
                         there is no date indication for all the six texts. Ivanova also notes that
                         the four folia are fold the other way about and that’s why their correct
-                        order should be as follows: f. 370, f. 369, f. 372, f. 371 (<ref type="bibl" target="bib:Иванова2005">Иванова 2005: 265-266</ref>). The author
+                        order should be as follows: f. 370, f. 369, f. 372, f. 371 (<ref type="bibl" target="bib:Иванова2005">Иванова 2005: 265–266</ref>). The author
                         follows here the most recent pagination, which differs minus 3 folia from
                         the oldest one). It appears to be possible that the manuscript has been
                         created in the Markov Monastery (near Skopje) or in the Monastery of Lesnovo
-                        (both in nowadays Republic of Macedonia) <ref type="bibl" target="bib:Иванова2005">Иванова 2005: 263-264</ref>. The linguistic
+                        (both in nowadays Republic of Macedonia) <ref type="bibl" target="bib:Иванова2005">Иванова 2005: 263–264</ref>. The linguistic
                         analysis of the manuscript gives a ground for a suggestion that the majority
                         of the texts have been translated in Preslav in the 10th c. (<ref type="bibl" target="bib:Добрев1982">Добрев 1982: 21, note 5</ref>). The
                         suggestion of Old Bulgarian origin of the translations copied in this
                         miscellany is supported by structural and typological investigation of that
-                        codex. The MSS has an electronic edition, prepared by Diana Atanasova, Irina
+                        codex. <!--The MSS has an electronic edition, prepared by Diana Atanasova, Irina
                         Kuzidova, Aneta Dimitrova, Lyubka Nenova, Tsvetomira Danova, and Kozma
-                        Popovski, see <ref target="http://hagioslavica.com/bg/home/">http://hagioslavica.com/bg/home/</ref>
-                    </summary>
+                        Popovski, see <ref target="http://hagioslavica.com/bg/home/">http://hagioslavica.com/bg/home/</ref>--></summary>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1a-5d</locus>
+                        <locus n="1">1a–5d</locus>
                         <title xml:lang="bg">Житие на св. Симеон Стълпник</title>
                         <date type="churchCal" when="--09-01">1 September</date>
                         <note>The end of the text is missing</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 181, 1в<emph>в</emph>
-                            </ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 1.09/1вв</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                 септемврїа вь а҃ д҃нь. паметь ст҃го сумеѡна стльпника</head>
@@ -267,12 +267,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">6a-9d</locus>
+                        <locus n="2">6a–9d</locus>
                         <title xml:lang="bg">Житие на св. Мамант</title>
-                        <date type="churchCal">No data</date>
+                        <date type="churchCal" cert="unknown">2 September</date>
                         <note>The beginning and the end of the text are missing</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 183, 1а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 2.09/1a</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">четврьтаго
                                 лѣта юже врѣме кон'чав'шаго. ре<seg rend="sup">ч</seg> ж<seg rend="sup">е</seg> матрона, и ина болꙗ слыши. глѡ҃мь римьскѡмь
@@ -283,12 +282,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3">
-                        <locus n="3">10a-15a</locus>
+                        <locus n="3">10a–15a</locus>
                         <title xml:lang="bg">Житие на св. Антим Никомидийски</title>
                         <date type="churchCal" when="--09-03">3 September</date>
                         <note>The beginning of the text is missing</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 184, 1а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 3.09/1а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">з'де ѥгоже
                                 вы ищете. ть же самь гла҃ше кь нимь, ѻни же не вѣдѣахѹ.</incipit>
@@ -297,11 +295,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
-                        <locus n="4">15b-16d</locus>
+                        <locus n="4">15b–16d</locus>
                         <title xml:lang="bg">Слово за Рождество на Йоан Кръстител и за смъртта на баща му Захарий</title>
                         <date type="churchCal" when="--09-05">5 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 185-186, 1</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 5.09/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     т<seg rend="sup">о</seg>гж .е҃. днь҃. словѡ. ѻ рож<seg rend="sup">д</seg>ьствѣ їѡа<seg rend="sup">н</seg> пр<seg rend="sup">д</seg>тче. и ѡ ѹмрьти ѡ҃ца єгѡ захарїє. ѡ҃че бл<seg rend="sup">с</seg>ви.</head>
@@ -315,11 +312,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5">
-                        <locus n="5">17a-22a</locus>
+                        <locus n="5">17a–22a</locus>
                         <title xml:lang="bg">Повест за архистратиг Михаил, за чудесата му и за парамонаря Архип</title>
                         <date type="churchCal" when="--09-06">6 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 187, 3б</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 6.09/3б</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     тог<seg rend="sup">ож</seg> .ѕ. д҃нь пов<seg rend="sup">ѣ</seg>сти великааго и славнааго и ч<seg rend="sup">с</seg>тнаго и
@@ -340,12 +336,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6">
-                        <locus n="6">22a-22d</locus>
+                        <locus n="6">22a–22d</locus>
                         <title xml:lang="bg">Слово за Рождество Богородично</title>
                         <date type="churchCal" when="--09-08">8 September</date>
-                        <note>See the Greek source in <ref>CPG 5057</ref>, the text is included in
-                                <ref type="bibl" target="bib:Иванова2008">BHBS 197: 8</ref>
-                        </note>
+                        <filiation type="source"><ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/3260/">CPG 5057</ref></filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 8.09/8</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     то<seg rend="sup">гж</seg> .и҃. днь҃. рож<seg rend="sup">д</seg>ьство прѣст҃ыѥ бц҃е приснодв҃ы мри҃ѥ. сло<seg rend="sup">в</seg>о похвално архїеп<seg rend="sup">с</seg>па іѡа<seg rend="sup">н</seg> зла<seg rend="sup">т</seg>устаго ѡч҃е бл<seg rend="sup">с</seg>ви.</head>
@@ -359,10 +354,9 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7">
-                        <locus n="7">22d-29a</locus>
+                        <locus n="7">22d–29a</locus>
                         <date type="churchCal" when="--09-08">8 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 192, 3а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 8.09/3а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Ино чтениѥ на рож<seg rend="sup">д</seg>ьство прѣст҃ыѥ б҃це пр<seg rend="sup">с</seg>нодв҃ы мр҃иѥ, ѡ<seg rend="sup">ч</seg>.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Вь лѣтонаписаниꙗ
@@ -375,15 +369,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8">
-                        <locus n="8">29b-35a</locus>
+                        <locus n="8">29b–35a</locus>
                         <title xml:lang="bg">Житие на св. Теодора Александрийска</title>
                         <date type="churchCal" when="--09-11">11 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 200, 1а</ref>
-                        </note>
                         <note>
                             <damage>There are two missing folia from the text – between f. 29 and
-                                30, and between f. 33 and 34.</damage>
-                        </note>
+                                30, and between f. 33 and 34.</damage></note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 11.09/1а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     септе<seg rend="sup">б</seg> .аі҃. днь҃ житиє и жизнь бл҃женыє
@@ -398,12 +390,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9">
-                        <locus n="9">35a-39b</locus>
+                        <locus n="9">35a–39b</locus>
                         <title xml:lang="bg">Слово за намирането на св. Кръст от Андрей Йерусалимски</title>
                         <author>Andrew of Crete</author>
                         <date type="churchCal" when="--09-14">14 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 204-205, 3а, 3б</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 14.09/3а, 3б</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ць
                                 сеп҃. .ді҃. днь҃ грѣшнаго а<seg rend="sup">н</seg>дреє.
@@ -420,11 +411,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10">
-                        <locus n="10">39b-40d</locus>
+                        <locus n="10">39b–40d</locus>
                         <title xml:lang="bg">Слово за Въздвижение на Честния кръст от Андрей Йерусалимски</title>
                         <date type="churchCal" when="--09-14">14 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 206-207, 7а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 14.09/7а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Вь ть<seg rend="sup">жд</seg>
                                 днь҃ грѣшнаго андреꙗ їєросолимлꙗнина. сло<seg rend="sup">в</seg>
@@ -438,11 +428,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11">
-                        <locus n="11">41a-42d</locus>
+                        <locus n="11">41a–42d</locus>
                         <title xml:lang="bg">Слово за Въздвижение на св. Кръст от презвитер Пантолеон</title>
                         <date type="churchCal" when="--09-14">14 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 209, 9б</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 14.09/9б</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Пантольва презвїтера цр҃кве
                                 визаньтьиские. чтениє на вьз<seg rend="sup">д</seg>вижениє ч<seg rend="sup">с</seg>тнаго и животворещаго кр<seg rend="sup">с</seg>та. вл<seg rend="sup">д</seg>ко бл<seg rend="sup">с</seg>.</head>
@@ -454,11 +443,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12">
-                        <locus n="12">42d-46c</locus>
+                        <locus n="12">42d–46c</locus>
                         <title xml:lang="bg">Житие на св. Никита</title>
                         <date type="churchCal" when="--09-15">15 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 214, 1а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 15.09/1а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     секте<seg rend="sup">б</seg> вь .єі҃. д<seg rend="sup">н</seg>ь
@@ -473,11 +461,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13">
-                        <locus n="13">46c-50d</locus>
+                        <locus n="13">46c–50d</locus>
                         <title xml:lang="bg">Житие на св. Евтимия</title>
                         <date type="churchCal" when="--09-16">16 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 215, 1</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 16.09/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     се<seg rend="sup">к</seg>. вь .ѕі҃ . д<seg rend="sup">н</seg>ь҃
@@ -492,11 +479,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14">
-                        <locus n="14">50d-58d</locus>
+                        <locus n="14">50d–58d</locus>
                         <title xml:lang="bg">Житие на св. Вяра, Любов, Надежда и София</title>
                         <date type="churchCal" when="--09-17">17 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 216, 1</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS:17.09/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     тѡ<seg rend="sup">г</seg> вь .з҃҃і. дь<seg rend="sup">н</seg>
@@ -515,11 +501,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15">
-                        <locus n="15">58d-67d</locus>
+                        <locus n="15">58d–67d</locus>
                         <title xml:lang="bg">Житие на св. Евстатий и семейството му</title>
                         <date type="churchCal" when="--09-20">20 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 218, 1в</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 20.09/1в</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     тѡ<seg rend="sup">г</seg>. вь .к҃. страсть ст҃го м<seg rend="sup">ч</seg>нка евстатиꙗ стратила<seg rend="sup">т</seg>.
@@ -533,11 +518,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16">
-                        <locus n="16">67d-71c</locus>
+                        <locus n="16">67d–71c</locus>
                         <title xml:lang="bg">Похвално слово за св. Фока, 1</title>
                         <date type="churchCal" when="--09-22">22 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 219, 1</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 22.09/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     то<seg rend="sup">г</seg>. вь .кв҃. д҃нь. похвала ст҃го
@@ -553,11 +537,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17">
-                        <locus n="17">71c-78b</locus>
+                        <locus n="17">71c–78b</locus>
                         <title xml:lang="bg">Житие на св. Текла</title>
                         <date type="churchCal" when="--09-24">24 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 221, 1а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 24.09/1а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     тѡ<seg rend="sup">г</seg>. вь .кд҃. ст҃ы<seg rend="sup">е</seg>
@@ -570,11 +553,10 @@
                                 и пр<seg rend="sup">с</seg>.</explicit>
                         </sampleText>
                         <msItemStruct xml:id="ACD17.1">
-                            <locus n="17.1">78b-78d</locus>
+                            <locus n="17.1">78b–78d</locus>
                             <title xml:lang="bg">Чудо на св. Текла, 1</title>
                             <date type="churchCal" when="--09-24">24 September</date>
-                            <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 222-223, 3</ref>
-                            </note>
+                            <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 24.09/3</ref></filiation>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Вь <seg rend="sup">т</seg>ж<seg rend="sup">д</seg>е днь҃ ст҃ые прьвом<seg rend="sup">ч</seg>нице Ѳекли. вл<seg rend="sup">д</seg>ко
                                         бл<seg rend="sup">с</seg>.</head>
@@ -587,11 +569,10 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD17.2">
-                            <locus n="17.2">78d-80b</locus>
+                            <locus n="17.2">78d–80b</locus>
                             <title xml:lang="bg">Чудо на св. Текла, 2</title>
                             <date type="churchCal" when="--09-24">24 September</date>
-                            <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 222, 2</ref>
-                            </note>
+                            <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 24.09/2</ref></filiation>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Вь тьж<seg rend="sup">д</seg>е днь҃ .г҃.є чю<seg rend="sup">д</seg> быв'шеє вь
                                     мерѡсонѣ</head>
@@ -604,19 +585,17 @@
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18">
-                        <locus n="18">80c-86d</locus>
+                        <locus n="18">80c–86d</locus>
                         <title xml:lang="bg">Житие на св. Ефросина</title>
                         <date type="churchCal" when="--09-25">25 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 223, 1а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 25.09/1а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     тѡ<seg rend="sup">г</seg> вь. ке҃. ст҃ы<seg rend="sup">е</seg>
                                 єфросины исхож<seg rend="sup">д</seg>енїє и житиє. вл<seg rend="sup">д</seg>ко бл<seg rend="sup">с</seg>ви.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Бы<seg rend="sup">с</seg>
                                 нѣкто вь алеѯан'дрьсцѣ градѣ, именемь пафнотиє. зѣло поспѣшьствовавь
-                                по заповѣде<seg rend="sup">х</seg> гн҃и<seg rend="sup">х</seg>
-                            </incipit>
+                                по заповѣде<seg rend="sup">х</seg> гн҃и<seg rend="sup">х</seg></incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">пожї .і҃. лѣ<seg rend="sup">т</seg> вь томь монастирї кь гѹ҃ ѡтиде и погребень
                                     бы<seg rend="sup">с</seg> близь дьщере своеѥ. на славѹ ѡ҃цѹ и
                                 с҃нѹ и с҃томѹ д҃хѹ. н҃нꙗ и пр<seg rend="sup">с</seg>но и вь вѣкы
@@ -624,11 +603,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD19">
-                        <locus n="19">86d-128d</locus>
+                        <locus n="19">86d–128d</locus>
                         <title xml:lang="bg">Житие и деяния на Йоан Богослов</title>
                         <date type="churchCal" when="--09-26">26 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 224-226, 1а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 26.09/1а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Прохорь вь потрѣба<seg rend="sup">х</seg> самого сед'мого. поставлѥнна нети же стефанѹ
                                     прьвом<seg rend="sup">ч</seg>нкѹ ис писанїꙗ о жи<seg rend="sup">т</seg>. дѣꙗниꙗ їѡа<seg rend="sup">н</seg> бг҃ослова ї єу<seg rend="sup">г</seg>лїста. вл<seg rend="sup">д</seg>ко бл<seg rend="sup">с</seg>ви.</head>
@@ -640,74 +618,67 @@
                                 н҃нꙗ и пр<seg rend="sup">с</seg>но.</explicit>
                         </sampleText>
                         <msItemStruct xml:id="ACD19.1">
-                            <locus n="19.1">89c-92c</locus>
+                            <locus n="19.1">89c–92c</locus>
                             <title xml:lang="bg">Разказ за Роман</title>
                             <date type="churchCal" when="--09-26">26 September</date>
-                            <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 224-226, 1а1</ref>
-                            </note>
+                            <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 26.09/1а1</ref></filiation>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">ѡ ром<seg rend="sup">а</seg>нѣ сло<seg rend="sup">в</seg>.</head>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD19.2">
-                            <locus n="19.2">92b-107d</locus>
+                            <locus n="19.2">92b–107d</locus>
                             <title xml:lang="bg">Разказ за Домен, Диоскоровия син</title>
                             <date type="churchCal" when="--09-26">26 September</date>
-                            <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 224-226, 1а2</ref>
-                            </note>
+                            <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 26.09/1а2</ref></note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">ѡ домнѣ с҃нѣ
                                     діѡскоровѣ.</head>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD19.3">
-                            <locus n="19.3">107d-110d</locus>
+                            <locus n="19.3">107d–110d</locus>
                             <title xml:lang="bg">Разказ за Василий и неговата жена Харися</title>
                             <date type="churchCal" when="--09-26">26 September</date>
-                            <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 224-226, 1а3</ref>
-                            </note>
+                            <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 26.09/1а3</ref></filiation>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">сло<seg rend="sup">в</seg>
                                     ѡ василїи и харисѣ женѣ его.</head>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD19.4">
-                            <locus n="19.4">110d-111c</locus>
+                            <locus n="19.4">110d–111c</locus>
                             <title xml:lang="bg">Разказ за прокажения</title>
                             <date type="churchCal" when="--09-26">26 September</date>
-                            <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 224-226, 1а4</ref>
-                            </note>
+                            <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 26.09/1а4</ref></filiation>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">ѡ прокажено<seg rend="sup">м</seg>.</head>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD19.5">
-                            <locus n="19.5">111c-112a</locus>
+                            <locus n="19.5">111c–112a</locus>
                             <title xml:lang="bg">Разказ за евреина Кар</title>
                             <date type="churchCal" when="--09-26">26 September</date>
-                            <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 224-226, 1а5</ref>
-                            </note>
+                            <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 26.09/1а5</ref></note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">ѡ карѣ евреанинѣ.</head>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD19.6">
-                            <locus n="19.6">112b-128d</locus>
+                            <locus n="19.6">112b–128d</locus>
                             <title xml:lang="bg">Разказ за Киноп</title>
                             <date type="churchCal" when="--09-26">26 September</date>
-                            <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 224-226, 1а6</ref>
-                            </note>
+                            <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 26.09/1а6</ref></filiation>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">ѡ кинопѣ</head>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD20">
-                        <locus n="20">128d-155d</locus>
+                        <locus n="20">128d–155d</locus>
                         <title xml:lang="bg">Житие на св. Григорий Арменски и Рипсимия и Гиания</title>
                         <date type="churchCal" cert="high" when="--09-30">30 September</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 230, 1а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 30.09/1а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">ч</seg>ниѥ
                                     ст<seg rend="sup">г</seg>ѡ грїгори<seg rend="sup">а</seg>
@@ -724,11 +695,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD21">
-                        <locus n="21">156a-157d</locus>
+                        <locus n="21">156a–157d</locus>
                         <title xml:lang="bg">Житие на апостол Ананий</title>
                         <date type="churchCal" when="--10-01">1 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 233, 1б</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 1.10/1б</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     ѡ<seg rend="sup">к</seg>те<seg rend="sup">б</seg>ра в .а҃. д҃нь
@@ -743,11 +713,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD22">
-                        <locus n="22">157d-162c</locus>
+                        <locus n="22">157d–162c</locus>
                         <title xml:lang="bg">Житие на св. Юстина</title>
                         <date type="churchCal" when="--10-02">2 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 235, 2</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 2.10/2</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     ѡ<seg rend="sup">кв</seg> вь .в҃. днь҃ ж<seg rend="sup">т</seg>иє ст҃ыє ꙋстыны. вл<seg rend="sup">д</seg>ко блг<seg rend="sup">с</seg>ви.</head>
@@ -759,11 +728,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD23">
-                        <locus n="23">162c-164d</locus>
+                        <locus n="23">162c–164d</locus>
                         <title xml:lang="bg">Житие на св. Киприян и Юстина</title>
                         <date type="churchCal" when="--10-02">2 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 234-235, 1б.</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 2.10/1б.</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Вь <seg rend="sup">т</seg>ьж<seg rend="sup">д</seg>е д҃нь м<seg rend="sup">ч</seg>ниѥ ст҃аго куприꙗна. и ст҃ы ꙋстыни дв҃ы. вл<seg rend="sup">д</seg>ко бл<seg rend="sup">с</seg>ви.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Пр<seg rend="sup">о</seg>рчьскы<seg rend="sup">м</seg>' словесемь сьбивающим' се.
@@ -778,11 +746,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD24">
-                        <locus n="24">164d-171b</locus>
+                        <locus n="24">164d–171b</locus>
                         <title xml:lang="bg">Житие на св. Дионисий Ареопагит</title>
                         <date type="churchCal" when="--10-03">3 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 236-237, 1.</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 3.10/1.</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     тѡ<seg rend="sup">г</seg> вь .г҃. днь҃ м<seg rend="sup">ч</seg>ние ст҃го диѻнисиа ареопагита атинѣн'скаго. вл<seg rend="sup">д</seg>ко бл<seg rend="sup">с</seg>ви.</head>
@@ -799,11 +766,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD25">
-                        <locus n="25">171b-174d</locus>
+                        <locus n="25">171b–174d</locus>
                         <title xml:lang="bg">Житие на св. Теотекн Антиохийски</title>
                         <date type="churchCal" when="--10-04">4 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 237, 1</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 4.10/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца.
                                     ѡ<seg rend="sup">к</seg>. вь .д҃. днь҃ м<seg rend="sup">ч</seg>ниє стг҃ѡ <sic>ѳеѡк'тена</sic>. вл<seg rend="sup">д</seg>ко.</head>
@@ -818,11 +784,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD26">
-                        <locus n="26">175a-179b</locus>
+                        <locus n="26">175a–179b</locus>
                         <title xml:lang="bg">Деяния на апостол Тома</title>
                         <date type="churchCal" when="--10-06">6 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 238-239, 2а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 6.10/2а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     ѡк<seg rend="sup">б</seg> вь .ѕ҃. днь҃ дѣаниє стаго҃ ап<seg rend="sup">с</seg>ла ѳомы како вь индїи сьз<seg rend="sup">д</seg>а нбсн҃ѹю полатѹ ц҃рѹ. вл<seg rend="sup">д</seg>ко.
@@ -841,11 +806,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD27">
-                        <locus n="27">179b-182d</locus>
+                        <locus n="27">179b–182d</locus>
                         <title xml:lang="bg">Мъчение на апостол Тома</title>
                         <date type="churchCal" when="--10-06">6 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 239-240, 3.</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 6.10/3.</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Вь тьж<seg rend="sup">д</seg>е
                                 днь҃ мѹченїе стго҃ ап<seg rend="sup">с</seg>ла ѳоми. вл<seg rend="sup">д</seg>ко.</head>
@@ -855,11 +819,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD28">
-                        <locus n="28">182d-192c</locus>
+                        <locus n="28">182d–192c</locus>
                         <title xml:lang="bg">Житие на св. Сергий и Вакх</title>
                         <date type="churchCal" when="--10-07">7 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 240-241, 1.</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 7.10/1.</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     ѡ<seg rend="sup">кб</seg> .вь з҃. днь҃ м<seg rend="sup">ч</seg>ние ст҃ыю и славныю сергьꙗ и вак'ха. вл<seg rend="sup">д</seg>ко бл<seg rend="sup">с</seg>.</head>
@@ -874,11 +837,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD29">
-                        <locus n="29">192c-199c</locus>
+                        <locus n="29">192c–199c</locus>
                         <title xml:lang="bg">Житие на св. Пелагия</title>
                         <date type="churchCal" when="--10-08">8 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 241-242, 1.</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 8.10/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     ѡ<seg rend="sup">к</seg>те<seg rend="sup">б</seg>. вь .и҃. днь҃
@@ -896,11 +858,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD30">
-                        <locus n="30">199c-201c</locus>
+                        <locus n="30">199c–201c</locus>
                         <title xml:lang="bg">Житие на св. Доротей</title>
                         <date type="churchCal" when="--10-10">10 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 243, 1</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 10.10/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     тѡ<seg rend="sup">г</seg> вь .і҃. днь҃. сщ҃нном<seg rend="sup">ч</seg>ника дорѡѳеа. вл<seg rend="sup">д</seg>кѡ
@@ -916,11 +877,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD31">
-                        <locus n="31">201c-208b</locus>
+                        <locus n="31">201c–208b</locus>
                         <title xml:lang="bg">Житие на св. Пров, Тарах и Андроник</title>
                         <date type="churchCal" when="--10-12">12 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 244-245, 1а.</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 12.10/1а.</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     тѡ<seg rend="sup">г</seg>. вь .ві҃. д<seg rend="sup">н</seg>ь.
@@ -939,11 +899,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD32">
-                        <locus n="32">208b-210a</locus>
+                        <locus n="32">208b–210a</locus>
                         <title xml:lang="bg">Житие на св. Карп и Папил</title>
                         <date type="churchCal" when="--10-13">13 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 245, 1а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 13.10/1а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     то<seg rend="sup">г</seg>. вь .гі҃. днь.҃ ст҃ыю м<seg rend="sup">ч</seg>нкѹ. кар'па и папила. вл<seg rend="sup">д</seg>ко.
@@ -960,11 +919,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD33">
-                        <locus n="33">210a-214b</locus>
+                        <locus n="33">210a–214b</locus>
                         <title xml:lang="bg">Житие на св. Назарий и дружина</title>
                         <date type="churchCal" when="--10-14">14 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 246, 1</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 14.10/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца.
                                     то<seg rend="sup">г</seg>. вь .ді҃. днь҃ ст҃ыи<seg rend="sup">х</seg> м<seg rend="sup">ч</seg>нкьь назарїа и протасиꙗ и
@@ -978,11 +936,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD34">
-                        <locus n="34">214b- 219b</locus>
+                        <locus n="34">214b– 219b</locus>
                         <title xml:lang="bg">Житие на св. Лонгин Стотник</title>
                         <date type="churchCal" when="--10-16">16 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 250-251, 1</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 16.10/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца.
                                     то<seg rend="sup">г</seg>. вь .ѕі҃. днь҃ ст҃аго логина сьт'ника.
@@ -998,11 +955,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD35">
-                        <locus n="35">219b-225a</locus>
+                        <locus n="35">219b–225a</locus>
                         <title xml:lang="bg">Житие на св. Гликерия</title>
                         <date type="churchCal" when="--10-17">17 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 251, 1</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 17.10/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца.
                                     то<seg rend="sup">г</seg>. вь . з҃і. днь҃ м<seg rend="sup">ч</seg>ниѥ ст҃ыѥ мѹченице гликериѥ . вл<seg rend="sup">д</seg>кѡ. бл<seg rend="sup">с</seg>ви.</head>
@@ -1017,11 +973,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD36">
-                        <locus n="36">225a-226b</locus>
+                        <locus n="36">225a–226b</locus>
                         <title xml:lang="bg">Житие на апостол Лука</title>
                         <date type="churchCal" when="--10-18">18 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 253, 3в</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 18.10/3в</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с</seg>а.
                                     то<seg rend="sup">г</seg>. вь . и҃і. днь҃. покои ст҃ааго ап<seg rend="sup">с</seg>ла х<seg rend="sup">с</seg>ва и єу<seg rend="sup">г</seg>листа лꙋкы. вл<seg rend="sup">д</seg>кѡ бл<seg rend="sup">с</seg>ви.</head>
@@ -1036,11 +991,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD37">
-                        <locus n="37">226b-242d</locus>
+                        <locus n="37">226b–242d</locus>
                         <title xml:lang="bg">Житие на св. Иларион Велики</title>
                         <date type="churchCal" when="--10-21">21 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 257-258, 1а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 21.10/1а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца.
                                     то<seg rend="sup">г</seg>. вь .ка҃. днь҃. житиѥ прп<seg rend="sup">д</seg>б'нааго ѡца҃ нашего иларїѡна. вл<seg rend="sup">д</seg>кѡ блг<seg rend="sup">с</seg>ви.</head>
@@ -1055,11 +1009,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD38">
-                        <locus n="38">242d-252d</locus>
+                        <locus n="38">242d–252d</locus>
                         <title xml:lang="bg">Житие на седмете Ефески отрока</title>
                         <date type="churchCal" when="--10-22">22 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 261, 1а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 22.10/1а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца.
                                     то<seg rend="sup">г</seg>. вь .кв҃. м<seg rend="sup">ч</seg>ниѥ
@@ -1076,11 +1029,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD39">
-                        <locus n="39">252d-258d</locus>
+                        <locus n="39">252d–258d</locus>
                         <title xml:lang="bg">Житие на апостол Яков</title>
                         <date type="churchCal" when="--10-23">23 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 262-263, 1</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 23.10/I.1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца.
                                     то<seg rend="sup">г</seg> вь .кг҃. днь҃ житиѥ и м<seg rend="sup">ч</seg>ниѥ. ст҃ааго ап<seg rend="sup">с</seg>ла їакова бра<seg rend="sup">т</seg> г҃нꙗ по пльти. ѡ<seg rend="sup">ч</seg>
@@ -1095,11 +1047,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD40">
-                        <locus n="40">258d-274b</locus>
+                        <locus n="40">258d–274b</locus>
                         <title xml:lang="bg">Житие на св. Аверкий Йераполски</title>
                         <date type="churchCal" cert="high" when="--10-23">23 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 263, 1</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 23.10/II.1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово и житиѥ прпо<seg rend="sup">д</seg>б'нааго ѡ҃ца нашегѡ аверькыꙗ. ѡ<seg rend="sup">ч</seg>.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Вь ѡни дн҃и старѣишиньствѡ
@@ -1114,16 +1065,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD41">
-                        <locus n="41">274b-284d</locus>
+                        <locus n="41">274b–284d</locus>
                         <title xml:lang="bg">Житие на св. Арета и дружина</title>
                         <date type="churchCal" when="--10-24">24 October</date>
                         <note>The end of the text, about 1 folio, is missing</note>
-                        <note>It is a 10th-c. Old Bulgarian Preslav translation of the Greek vita
-                            BHG No. 166, see edition and commentaries in <ref type="bibl" target="bib:Атаносова2005">Атанасова 2005: 566-578.</ref>. The copy
-                            is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 264-265,
-                                    1б<emph>а</emph>
-                            </ref>
-                        </note>
+                        <filiation type="source">Greek parallel; BHG 166 
+                            <ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/14682">Pinakes</ref></filiation>
+                        <filiation type="translation">10th-c. Old Bulgarian Preslav translation. Edition and commentaries: <ref type="bibl" target="bib:Атаносова2005">Атанасова 2005: 566–578</ref></filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 24.10/1ба</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца.
                                 того. вь .кд҃. д҃нь м<seg rend="sup">ч</seg>ниѥ. стаа҃го ареѳы и
@@ -1136,14 +1085,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD42">
-                        <locus n="42">285a-285d</locus>
+                        <locus n="42">285a–285d</locus>
                         <title xml:lang="bg">Слово похвално за св. Димитър Солунски от Григорий Палама</title>
                         <author>Gregory Palamas</author>
                         <date type="churchCal" cert="high" when="--10-26">26 October</date>
                         <note>The end of the text is missing</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 270-271, 6<emph>а</emph>
-                            </ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 26.10/6а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Грїгорїа архїеп<seg rend="sup">с</seg>па солѹнскааго бесѣда. ѡ иже вь ст҃ыхь великом<seg rend="sup">ч</seg>нцѣ и чю<seg rend="sup">д</seg>отворци и
                                 муроточци димитрїи. бл<seg rend="sup">с</seg>ви ѡ҃че.</head>
@@ -1155,12 +1102,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD43">
-                        <locus n="43">286c-290c</locus>
+                        <locus n="43">286c–290c</locus>
                         <title xml:lang="bg">Мъчение на св. Димитър Солунски</title>
                         <date type="churchCal" when="--10-26">26 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 269-270, 4б</ref>
-                        </note>
                         <note>The end of the text is missing</note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 26.10/4б</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     то<seg rend="sup">г</seg> вь .кѕ.҃ днь҃ м<seg rend="sup">ч</seg>ниѥ ст҃аго и прѣславнаго м<seg rend="sup">ч</seg>ника х<seg rend="sup">с</seg>ва димитриꙗ. вл<seg rend="sup">д</seg>кѡ
@@ -1175,11 +1121,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD44">
-                        <locus n="44">290c-293c</locus>
+                        <locus n="44">290c–293c</locus>
                         <title xml:lang="bg">Чудеса на св. Димитър Солунски. Чудо с ангелите</title>
                         <date type="churchCal" when="--10-26">26 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 273, 10.</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 26.10/10.</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Чю<seg rend="sup">д</seg>
                                 ст҃го м<seg rend="sup">ч</seg>ника димитриꙗ. ѥже видѣ слѹга ѥго,
@@ -1195,11 +1140,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD45">
-                        <locus n="45">293c-298d</locus>
+                        <locus n="45">293c–298d</locus>
                         <title xml:lang="bg">Житие на св. Капитолина и Йеротида</title>
                         <date type="churchCal" when="--10-27">27 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 274-275, 1</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 27.10/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца.
                                     то<seg rend="sup">г</seg>. вь .кз҃. м<seg rend="sup">ч</seg>ниѥ.
@@ -1216,11 +1160,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD46">
-                        <locus n="46">299a-301d</locus>
+                        <locus n="46">299a–301d</locus>
                         <title xml:lang="bg">Житие на св. Зиновий Егейски и сестра му Зиновия</title>
                         <date type="churchCal" when="--10-30">30 October</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 277, 1</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 30.10/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца.
                                     то<seg rend="sup">г</seg>. вь .л.҃ днь҃ м<seg rend="sup">ч</seg>ниѥ. ст҃ааго зиновїе еп<seg rend="sup">с</seg>па єг'генииска
@@ -1238,11 +1181,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD47">
-                        <locus n="47">302a-316c</locus>
+                        <locus n="47">302a–316c</locus>
                         <title xml:lang="bg">Житие на св. Козма и Дамян</title>
                         <date type="churchCal" when="--11-01">1 November</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 279-280, 1а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 1.11/1а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     но<seg rend="sup">е</seg>бра вь .а҃. днь. житиѥ и чюдеса. ст҃ою
@@ -1259,11 +1201,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD48">
-                        <locus n="48">316c-324d</locus>
+                        <locus n="48">316c–324d</locus>
                         <title xml:lang="bg">Житие на св. мъченици Акиндин и дружина</title>
                         <date type="churchCal" when="--11-02">2 November</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 283, 2</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 2.11/2</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца.
                                     то<seg rend="sup">г</seg>. вь .в҃. д҃нь. м<seg rend="sup">ч</seg>ниѥ. ст҃ыих' м<seg rend="sup">ч</seg>нкь. акын'дина. и
@@ -1276,12 +1217,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD49">
-                        <locus n="49">324d-328a</locus>
+                        <locus n="49">324d–328a</locus>
                         <title xml:lang="bg">Слово похвално за архангелите Михаил и Гавриил</title>
                         <author>Clement of Ochrid</author>
                         <date type="churchCal" when="--11-08">8 November</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 287-288, 7</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 8.11/7</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца.
                                     то<seg rend="sup">г</seg>. вь .и҃. д҃нь сло<seg rend="sup">в</seg> пох'вал'но архан'г҃лѹ михаилꙋ и гаврїилѹ. сьтворен'но
@@ -1295,11 +1235,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD50">
-                        <locus n="50">328a-329d</locus>
+                        <locus n="50">328a–329d</locus>
                         <title xml:lang="bg">За ангелите</title>
                         <date type="churchCal" cert="high" when="--11-08">8 November</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 288-289, 9</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 8.11/9</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ аг҃глѣхь</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Нач'н'ше бесѣдовати ѡ б҃зѣ,
@@ -1315,11 +1254,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD51">
-                        <locus n="51">329d-337b</locus>
+                        <locus n="51">329d–337b</locus>
                         <title xml:lang="bg">Сказание за чудесата на св. Мина от Тимотей Александрийски</title>
                         <date type="churchCal" when="--11-13">11 November</date>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 291-292, 1а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 11.11/1а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца.
                                     то<seg rend="sup">г</seg>. вь .а҃і. д҃нь. ѳимоѳеꙗ архыєп<seg rend="sup">с</seg>па алеѯан'дрьскааго сказаниѥ чюдесмь.
@@ -1337,12 +1275,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD52">
-                        <locus n="52">337b-365d</locus>
+                        <locus n="52">337b–365d</locus>
                         <title xml:lang="bg">Житие на св. Йоан Милостиви от Леонтий Кипърски</title>
                         <date type="churchCal" when="--11-12">12 November</date>
                         <note>The end of the text is missing</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 294-297, 1а</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 12.11/1а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца.
                                     то<seg rend="sup">г</seg>. вь .в҃і. д҃нь ѡ жити. ст҃ааго. и
@@ -1356,7 +1293,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD53">
-                        <locus n="53">366a-367a (367a, 367b, 367c, 367d, 366a)</locus>
+                        <locus n="53">366a–367a (367a, 367b, 367c, 367d, 366a)</locus>
                         <title xml:lang="bg">Похвално слово за св. Фока, 2</title>
                         <author>John Chrysostom</author>
                         <date type="churchCal" cert="low" when="--09-22">22 September</date>
@@ -1368,10 +1305,9 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD54">
-                        <locus n="54">367a-367d (366a, 366b, 366c, 366d)</locus>
+                        <locus n="54">367a–367d (366a, 366b, 366c, 366d)</locus>
                         <title xml:lang="bg">Разказ за Георги, игумена на синайския манастир "Св. Екатерина"</title>
-                        <note>The text is identified by <ref type="bibl" target="bib:Николова1980">Николова 1980: 58</ref> and edited by <ref type="bibl" target="bib:Иванова2005">Иванова 2005: 265, 270-271</ref>
-                        </note>
+                        <note>The text is identified by <ref type="bibl" target="bib:Николова1980">Николова 1980: 58</ref> and edited by <ref type="bibl" target="bib:Иванова2005">Иванова 2005: 265, 270–271</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">ѡ геѡ<seg rend="sup">р</seg>гїи їгѹменѣ сїнаискѻмь, ѡ҃че бл<seg rend="sup">с</seg>ви.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Повѣдаше намь ам'ма дамиꙗни
@@ -1381,10 +1317,9 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD55">
-                        <locus n="55">367d-368b (366d, 369a, 369b)</locus>
+                        <locus n="55">367d–368b (366d, 369a, 369b)</locus>
                         <title xml:lang="bg">Разказ за монахинята, която избола очите си</title>
-                        <note>The text is identified by <ref type="bibl" target="bib:Николова1980">Николова 1980: 58</ref> and edited by <ref type="bibl" target="bib:Иванова2005">Иванова, 2005, 265, 273-273</ref>
-                        </note>
+                        <note>The text is identified by <ref type="bibl" target="bib:Николова1980">Николова 1980: 58</ref> and edited by <ref type="bibl" target="bib:Иванова2005">Иванова, 2005, 265, 273–273</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Повѣдаше мнѣ ре<seg rend="sup">ч</seg> софронїии мѹжь бг҃обоивь. сѹщем<seg rend="sup">а</seg> нама вь алеѯандрїи, рекы чрьноризица сѣдѣаше
                                 вь св<seg rend="sup">о</seg>ѥмь домѹ мльчещи.</incipit>
@@ -1393,10 +1328,9 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD56">
-                        <locus n="56">368b-369a (369a, 369b, 369c, 369d, 368a)</locus>
+                        <locus n="56">368b–369a (369a, 369b, 369c, 369d, 368a)</locus>
                         <title xml:lang="bg">Разказ за разбойника Давид</title>
-                        <note>The text is identified by <ref type="bibl" target="bib:Николова1980">Николова 1980: 58</ref> and edited by <ref type="bibl" target="bib:Иванова2005">Иванова, 2005, 265, 274-275</ref>
-                        </note>
+                        <note>The text is identified by <ref type="bibl" target="bib:Николова1980">Николова 1980: 58</ref> and edited by <ref type="bibl" target="bib:Иванова2005">Иванова, 2005, 265, 274–275</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">О дв҃дѣ разбоиниц<seg rend="sup">ѣ</seg>.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Вьшь<seg rend="sup">д</seg>шимь вь ѳїваидѹ, бесѣдовахѻмь кь сивистѹ и тївамонѹ. ти
@@ -1409,10 +1343,9 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD57">
-                        <locus n="57">369b-369d (368b, 368c, 368d)</locus>
+                        <locus n="57">369b–369d (368b, 368c, 368d)</locus>
                         <title xml:lang="bg">Разказ за девицата, която избяга в пустинята</title>
-                        <note>The text is identified by <ref type="bibl" target="bib:Николова1980">Николова 1980: 58</ref> and edited by <ref type="bibl" target="bib:Иванова2005">Иванова, 2005, 265, 276</ref>
-                        </note>
+                        <note>The text is identified by <ref type="bibl" target="bib:Николова1980">Николова 1980: 58</ref> and edited by <ref type="bibl" target="bib:Иванова2005">Иванова, 2005, 265, 276</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">ѻ дв҃ци монастырїи</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Сповѣдаше ї҃ѡ
@@ -1425,8 +1358,7 @@
                         <locus n="58">369d (368d)</locus>
                         <title xml:lang="bg">Разказ за благочестивия мирянин</title>
                         <note>The end of the text is missing</note>
-                        <note>The text is identified by <ref type="bibl" target="bib:Николова1980">Николова 1980: 58</ref> and edited by <ref type="bibl" target="bib:Иванова2005">Иванова, 2005, 265, 277</ref>
-                        </note>
+                        <note>The text is identified by <ref type="bibl" target="bib:Николова1980">Николова 1980: 58</ref> and edited by <ref type="bibl" target="bib:Иванова2005">Иванова, 2005, 265, 277</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Гл҃а же ѡц҃ь їѡр'дань,
                                     корениѥ<seg rend="sup">м</seg> крьмеи се. ꙗко трье ѿходеще,
@@ -1436,13 +1368,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD59">
-                        <locus n="59">370a-370b</locus>
+                        <locus n="59">370a–370b</locus>
                         <title xml:lang="bg">Увод към житието на Йоан Златѹст</title>
                         <date type="churchCal" cert="high" when="--11-13">13 November</date>
                         <note>The beginning of the text is missing</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 300, 3а<emph>а</emph>
-                            </ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 13.11/3aa1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">…любити и всѣмь. не тьчию
                                 нь и слышав'шїимь житиѥ его</incipit>
@@ -1452,13 +1382,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD60">
-                        <locus n="60">370b-370d</locus>
+                        <locus n="60">370b–370d</locus>
                         <title xml:lang="bg">Житие на Йоан Златоуст</title>
                         <date type="churchCal" cert="high" when="--11-13">13 November</date>
                         <note>This copy of the vita contains a partially preserved foreword (f.
-                            370a-370b), see previous item. The end of the vita is missing</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 300, 3а<emph>а</emph>1</ref>
-                        </note>
+                            370a–370b), see previous item. The end of the vita is missing</note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 300, 3аa1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Начетькь жи<seg rend="sup">т</seg>ю їѡана зл<seg rend="sup">т</seg>устааго</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Сь ѹбо крѣп'кыи и
@@ -1473,34 +1402,27 @@
                         <locus>209v</locus>
                         <title xml:lang="bg">Колофон</title>
                         <author>Draiko Diak</author>
-                        <colophon>
+                      <re:sampleText xml:lang="cu">  <colophon>
                             <p>доз<seg rend="sup">д</seg>е писа грѣшны драико дїак</p>
-                        </colophon>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD62">
                         <locus>207r</locus>
                         <title xml:lang="bg">Колофон</title>
                         <author>Stanislav Diak</author>
-                        <colophon>
-                            <p>одз<seg rend="sup">д</seg>е почехь станиславь дїакъ</p>
-                        </colophon>
+                       <re:sampleText xml:lang="cu"> <colophon>
+                            <p>доз<seg rend="sup">д</seg>е почехь станиславь дїакъ</p>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#DA">
+                    <origin evidence="conjecture" resp="#DA">
                         <origDate notBefore="1300" notAfter="1399">14th c.</origDate>
-                        <origPlace>The second part of the manuscript (f. 209v-373) is written by the
-                            well-known scribe Stanislav who copid several other manuscripts (Menaion
-                            of Oliver dated at 1342; see Стоянов-Кодов 1964: 252). He was
-                            well-trained to write both with Serbian and with Middle Bulgarian
-                            orthography. It is known that he spent certain time in Lesnovo Monastery
-                            and also in Markov Monastery. It is unclear, however, where the
-                            manuscript was written. According to the notes from the 17th century the
-                            manuscript belonged to the Markov Monastery. In the beginning of the
-                            20th c. the codex was kept in the Metropolitan Library in
-                            Skopje.</origPlace>
-                        <note/>
                     </origin>
+                    <provenance>According to the notes from the 17th century the
+                        manuscript belonged to the Markov Monastery. In the beginning of the
+                        20th c. the codex was kept in the Metropolitan Library in
+                        Skopje.</provenance>
                 </history>
             </msDesc>
         </body>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM1-108O">
     <teiHeader>
         <fileDesc>
@@ -20,16 +24,13 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Мочульский1890">Мочульский 1890: 13-18</ref>, <ref type="bibl" target="bib:Копыленко1960">Копиленко, Рапопорт 1960</ref>
+                <p><ref type="bibl" target="bib:Мочульский1890">Мочульский 1890: 13-18</ref>, <ref type="bibl" target="bib:Копыленко1960">Копиленко, Рапопорт 1960</ref>
                     <ref type="bibl" target="bib:Королькова1963">Королькова, Кравченко
-                    1963</ref>
-                </p>
+                    1963</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -58,6 +59,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when="2009-04-20">Added copyright statement</change>
@@ -77,8 +79,8 @@
                     <repository>State Library</repository>
                     <collection>V. Grigorovich</collection>
                     <idno type="shelfmark">1/108</idno>
-                    <altIdentifier type="catalogue">
-                        <idno>10</idno>
+                    <altIdentifier>
+                        <idno type="catalogue">10</idno>
                     </altIdentifier>
                     <altIdentifier type="former">
                         <idno type="shelfmark">36</idno>
@@ -88,8 +90,7 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">70</measure>
@@ -103,14 +104,13 @@
                     </objectDesc>
                     <bindingDesc>
                         <binding>
-                            <p>New (cardboard), made during the restoration</p>
+                            <summary>New (cardboard), made during the restoration</summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
-                        <note>Three marginal notes by <persName full="yes">Viktor
-                                Grigorovich</persName>
-                        </note>
-                        <list type="simple">
+                        <note>Three marginal notes by <persName>Viktor
+                                Grigorovič</persName></note>
+                        <list>
                             <item>
                                 <locus>f. 34v</locus>
                                 <quote xml:lang="ru">М. Бистрица, Валахия</quote>
@@ -121,7 +121,7 @@
                             </item>
                             <item>
                                 <locus>f. 61r</locus>
-                                <quote xml:lang="ru">Типикарница на св. Сава</quote>
+                                <quote xml:lang="bg">Типикарница на св. Сава</quote>
                             </item>
                         </list>
                     </additions>
@@ -135,8 +135,7 @@
                         <objectDesc>
                             <supportDesc material="paper">
                                 <support>
-                                    <material>Paper</material>
-                                    <watermark>none</watermark>
+                                    <watermark>None</watermark>
                                 </support>
                                 <extent>
                                     <measure unit="folio">1</measure>
@@ -145,7 +144,7 @@
                                         <width>135</width>
                                     </dimensions>
                                 </extent>
-                                <condition>folio seems to be added to the book later</condition>
+                                <condition>Folio seems to be added to the book later</condition>
                             </supportDesc>
                             <layoutDesc>
                                 <layout columns="1" writtenLines="21"/>
@@ -156,25 +155,20 @@
                     <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                         <scribe>
                             <locus xmlns="http://www.tei-c.org/ns/1.0">1r-1v</locus>
-                            <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                                <p>large semiuncial</p>
+                            <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                                <scriptNote script="Cyrs" style="semiuncial">large semiuncial</scriptNote>
                             </scriptDesc>
                             <scribeLang>
-                                <orthography>
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, only one
-                                        jer</p>
-                                </orthography>
+                                <langNote key="orthography">Without juses, only one
+                                        jer
+                                </langNote>
                             </scribeLang>
-                            <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                                <name full="yes">Anisava Miltenova</name>
-                                <resp>de visu</resp>
-                            </respStmt>
                         </scribe>
                     </scribeDesc>
                     <msContents>
                         <msItemStruct xml:id="ACD1" type="translation">
-                            <locus n="1">1r-1v</locus>
+                            <locus n="1">1r–1v</locus>
                             <title xml:lang="bg">Съдържание на втората книга на Паноплия догматики</title>
                             <note>without end</note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -184,8 +178,7 @@
                                     г҃и.</incipit>
                                 <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">
                                         ег<seg rend="sup">д</seg>а ѿ гж<seg rend="sup">д</seg>е
-                                    своѥе, шьствоваше<gap/>
-                                </explicit>
+                                    своѥе, шьствоваше<gap/></explicit>
                             </sampleText>
                         </msItemStruct>
                     </msContents>
@@ -201,8 +194,7 @@
                         <objectDesc>
                             <supportDesc material="paper">
                                 <support>
-                                    <material>Paper</material>
-                                    <watermark>none</watermark>
+                                    <watermark>None</watermark>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
@@ -213,20 +205,15 @@
                     <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                         <scribe>
                             <locus xmlns="http://www.tei-c.org/ns/1.0">2r</locus>
-                            <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Gerasim</name>
-                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="cursive">
-                                <p>Large cursiv</p>
+                            <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Gerasim</name>
+                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                                <scriptNote script="Cyrs" style="cursive">Large cursiv</scriptNote>
                             </scriptDesc>
                             <scribeLang>
-                                <orthography>
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">without juses, with two
-                                        jers</p>
-                                </orthography>
+                                <langNote key="orthography">Without juses, with two
+                                        jers
+                                </langNote>
                             </scribeLang>
-                            <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                                <name full="yes">Anisava Miltenova</name>
-                                <resp>de visu</resp>
-                            </respStmt>
                         </scribe>
                     </scribeDesc>
                     <msContents>
@@ -236,12 +223,13 @@
                             <author>Gerasim</author>
                             <note>Colophon about the origin of the translation by Gerasim
                                 Bulgarin.</note>
-                            <colophon>
-                                <p>+ исписа се сїа книга въсебл҃гонарѡчитому и х<seg rend="sup">с</seg>ѡлюбивому великому г<seg rend="sup">с</seg>ноу
+                            <re:sampleText xml:lang="cu">
+                                <colophon>
+                                <ab>+ исписа се сїа книга въсебл҃гонарѡчитому и х<seg rend="sup">с</seg>ѡлюбивому великому г<seg rend="sup">с</seg>ноу
                                     срьблѥмь деспотоу ку<seg rend="sup">р</seg> стефану, рукою
-                                        недостоиною<name xml:lang="cu" full="yes">гѥрасима</name>г҃лѥмаго болгарина вь с҃тѣи горѣ аѳонсцѣи, вь
-                                    монастири г҃лѥмо<seg rend="sup">м</seg> хиландаръ.</p>
-                            </colophon>
+                                        недостоиною<persName>гѥрасима</persName>г҃лѥмаго болгарина вь с҃тѣи горѣ аѳонсцѣи, вь
+                                    монастири г҃лѥмо<seg rend="sup">м</seg> хиландаръ.</ab>
+                            </colophon></re:sampleText>
                         </msItemStruct>
                     </msContents>
                     <history>
@@ -256,7 +244,6 @@
                         <objectDesc>
                             <supportDesc material="paper">
                                 <support>
-                                    <material>Paper</material>
                                     <watermark>
                                         <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Griffon</motif>
                                     </watermark>
@@ -268,31 +255,25 @@
                                         <width>135</width>
                                     </dimensions>
                                 </extent>
-                                <condition>without beginning and end</condition>
+                                <condition>Without beginning and end</condition>
                             </supportDesc>
                             <layoutDesc>
                                 <layout columns="1" writtenLines="25"/>
                             </layoutDesc>
                         </objectDesc>
-                        <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">black</ink>
+                        <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Black</ink>
                     </physDesc>
                     <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                         <scribe>
                             <locus xmlns="http://www.tei-c.org/ns/1.0">3r -35v</locus>
-                            <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="semiuncial" script="Cyrs">
-                                <p>small semiuncial with elements of (b'rzopis)</p>
+                            <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                                <scriptNote style="semiuncial" script="Cyrs">small semiuncial with elements of (b'rzopis)</scriptNote>
                             </scriptDesc>
                             <scribeLang>
-                                <orthography>
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">without juses, with two
-                                        jers</p>
-                                </orthography>
+                                <langNote key="orthography">Without juses, with two jers
+                                </langNote>
                             </scribeLang>
-                            <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                                <name full="yes">Anisava Miltenova</name>
-                                <resp>de visu</resp>
-                            </respStmt>
                         </scribe>
                     </scribeDesc>
                     <msContents>
@@ -301,33 +282,32 @@
                             <title xml:lang="bg">Паноплия догматики</title>
                             <author>Euthymius Zigabenus</author>
                             <note>without beginning and end</note>
-                            <filiation>1 <date>14th c.</date>
-                            </filiation>
+                            <filiation>1 <date>14th c.</date></filiation>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">нїе
-                                    дрьзнувшыимь скопиты уставише. Кльну<seg rend="sup">т</seg> се
-                                    убо бестраха и прѣклинают се. нх сїа г҃у нашему и҃у х҃у
-                                    вазбранившу не тькмо прѣклетовьство</incipit>
-                                <head xmlns="http://www.tei-c.org/ns/1.0">тїтло к҃г. на
-                                    бѡгомїле.</head>
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">ѳеонь убо грьчьскы ѥзикь
+                                <ab xmlns="http://www.tei-c.org/ns/1.0">тїтло к҃г. на
+                                    бѡгомїле.</ab>
+                                <ab xmlns="http://www.tei-c.org/ns/1.0">ѳеонь убо грьчьскы ѥзикь
                                     б҃а наричеть елеисон же, милуи. буде<seg rend="sup">т</seg> же
                                     убо б҃омиль по тѣ<seg rend="sup">х</seg> ѥзику и по своем<seg rend="sup">у</seg> мнъніиу иже <unclear>...</unclear> б҃жїу
-                                    притрьзаеи.</rubric>
-                                <head xmlns="http://www.tei-c.org/ns/1.0">тїтло к҃д. на саракѵни.
+                                    притрьзаеи.</ab>
+                                <ab xmlns="http://www.tei-c.org/ns/1.0" part="F">нїе
+                                    дрьзнувшыимь скопиты уставише. Кльну<seg rend="sup">т</seg> се
+                                    убо бестраха и прѣклинают се. нх сїа г҃у нашему и҃у х҃у
+                                    вазбранившу не тькмо прѣклетовьство</ab>
+                                <ab xmlns="http://www.tei-c.org/ns/1.0">тїтло к҃д. на саракѵни.
                                     иже наричу<seg rend="sup">т</seg> се измаилїте убо, ꙗко ѿ
                                     исмаила сьходеще. с҃нь же бѣсь авраамовь, родив се ѥму ѿ агары
-                                    рабинѥ ссаррины.</head>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0">Агарѣ еже ѿ агарь
+                                    рабинѥ ссаррины.</ab>
+                                <ab xmlns="http://www.tei-c.org/ns/1.0">Агарѣ еже ѿ агарь
                                     матере исмаиле сы. саракѵни же ѿ ѥже агарь рещи кь аггелу егда
                                     изьгнана ѿ госпож<seg rend="sup">д</seg>е свое ѥ<seg rend="sup">и</seg> хождааше по пустини носещи исмаила. ꙗко сарра тьщу
-                                    ме ѿпусти ꙗко же ѡни г҃лють.</incipit>
-                                <head xmlns="http://www.tei-c.org/ns/1.0">стихове гра<seg rend="sup">д</seg> стїи прѣпо<seg rend="sup">д</seg>бнаго ѡ҃ца нашего
+                                    ме ѿпусти ꙗко же ѡни г҃лють.</ab>
+                                <ab xmlns="http://www.tei-c.org/ns/1.0">стихове гра<seg rend="sup">д</seg> стїи прѣпо<seg rend="sup">д</seg>бнаго ѡ҃ца нашего
                                     нѵла постника ѡпаснѣ сьбранїи ѿ различны<seg rend="sup">х</seg>
-                                        прави<seg rend="sup">л</seg>.</head>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0">Множицею ме понꙋдиле
+                                        прави<seg rend="sup">л</seg>.</ab>
+                                <ab xmlns="http://www.tei-c.org/ns/1.0">Множицею ме понꙋдиле
                                     ѥси и сьтѣсниль ѡ чедо · пачеж<seg rend="sup">е</seg> помолиль и
-                                    ꙋбѣдиль ѕѣлиѣше</incipit>
+                                    ꙋбѣдиль ѕѣлиѣше</ab>
                             </sampleText>
                         </msItemStruct>
                     </msContents>
@@ -338,10 +318,9 @@
                         <objectDesc>
                             <supportDesc material="paper">
                                 <support>
-                                    <material>Paper</material>
                                     <watermark>
                                         <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Vase</motif>
-                                        <term>unclear fragment</term>
+                                        <term>unclear</term>
                                     </watermark>
                                 </support>
                                 <extent>
@@ -351,7 +330,7 @@
                                         <width>135</width>
                                     </dimensions>
                                 </extent>
-                                <condition>without beginning and end</condition>
+                                <condition>Without beginning and end</condition>
                             </supportDesc>
                             <layoutDesc>
                                 <layout columns="1" writtenLines="23"/>
@@ -365,42 +344,31 @@
                     <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                         <scribe>
                             <locus xmlns="http://www.tei-c.org/ns/1.0">36r-59r</locus>
-                            <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                                <p>middle seiuncial</p>
+                            <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                                <scriptNote script="Cyrs" style="semiuncial">Middle seiuncial</scriptNote>
                             </scriptDesc>
                             <scribeLang>
-                                <orthography>
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">without juses,
-                                        predominantly with small jer</p>
-                                </orthography>
+                                <langNote key="orthography">Without juses,
+                                        predominantly with small jer
+                                </langNote>
                             </scribeLang>
-                            <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                                <name full="yes">Anisava Miltenova</name>
-                                <resp>de visu</resp>
-                            </respStmt>
-                        </scribe>
+                           </scribe>
                         <scribe>
                             <locus xmlns="http://www.tei-c.org/ns/1.0">59r-59v</locus>
-                            <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="semiuncial" script="Cyrs">
-                                <p>small semiuncial</p>
+                            <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                                <scriptNote  style="semiuncial" script="Cyrs">Small semiuncial</scriptNote>
                             </scriptDesc>
                             <scribeLang>
-                                <orthography>
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">without juses, with small
-                                        jer only</p>
-                                </orthography>
+                                <langNote key="orthography">Without juses, with small jer only
+                                </langNote>
                             </scribeLang>
-                            <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                                <name full="yes">Anisava Miltenova</name>
-                                <resp>de visu</resp>
-                            </respStmt>
                         </scribe>
                     </scribeDesc>
                     <msContents>
                         <msItemStruct xml:id="ACD4">
-                            <locus>36r-v</locus>
+                            <locus>36r–v</locus>
                             <title xml:lang="bg">Поучение срещу мохамеданството</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">ѿ и<seg rend="sup">х</seg>же мниха еѵодїа</head>
@@ -411,7 +379,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD5" type="translation">
-                            <locus n="4">36v-40r</locus>
+                            <locus n="4">36v–40r</locus>
                             <title xml:lang="bg">Поучение за злите жени</title>
                             <author>John Chrysostom</author>
                             <note>The text contain three parts: first (only end) is on f. 39r; after
@@ -422,18 +390,18 @@
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">повинуете се х҃оу. також<seg rend="sup">д</seg>е
                                         <unclear>...</unclear> ны моуже<seg rend="sup">м</seg> вь
                                         <unclear>...</unclear> и хощь ви да вѣсте</incipit>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Тогож<seg rend="sup">д</seg>е
+                                <ab xmlns="http://www.tei-c.org/ns/1.0">Тогож<seg rend="sup">д</seg>е
                                         е<seg rend="sup">ж</seg> ѡ <unclear>и</unclear>родїадѣ
-                                        сло<seg rend="sup">в</seg> р҃м҃з҃.</p>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Тогож<seg rend="sup">д</seg>е
-                                    с҃того васїлїа. сло<seg rend="sup">в</seg> е<seg rend="sup">ж</seg>е ѥ<seg rend="sup">с</seg> вьзрѣти на <seg rend="sup">ж</seg>ену.</p>
+                                        сло<seg rend="sup">в</seg> р҃м҃з҃.</ab>
+                                <ab xmlns="http://www.tei-c.org/ns/1.0">Тогож<seg rend="sup">д</seg>е
+                                    с҃того васїлїа. сло<seg rend="sup">в</seg> е<seg rend="sup">ж</seg>е ѥ<seg rend="sup">с</seg> вьзрѣти на <seg rend="sup">ж</seg>ену.</ab>
                                 <explicit xmlns="http://www.tei-c.org/ns/1.0">Помисли чесому се
                                     чюдеши. и пост<seg rend="sup">д</seg>и се разумо<seg rend="sup">м</seg> свои<seg rend="sup">м</seg>. и постидѣвь покаи
                                     се.</explicit>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD6" type="translation">
-                            <locus n="5">40r-59r</locus>
+                            <locus n="5">40r–59r</locus>
                             <title xml:lang="bg">Евангелие Никодимово</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Написанїе ѡ прѣдани г҃а
@@ -451,15 +419,14 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD7" type="translation">
-                            <locus n="6">59r-59v</locus>
+                            <locus n="6">59r–59v</locus>
                             <title xml:lang="bg">Житие на св. Андрей Юродиви, извлечение</title>
                             <note>The fragment is written later on the empty part of the 59r-v
                                 without beginning and title.</note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">рц҃и
                                     ми ѡче кое езикы въз<seg rend="sup">д</seg>вигнеть б҃ь и
-                                        соуди<seg rend="sup">т</seg> имь и коимь не соуди<seg rend="sup">т</seg>
-                                </incipit>
+                                        соуди<seg rend="sup">т</seg> имь и коимь не соуди<seg rend="sup">т</seg></incipit>
                                 <explicit xmlns="http://www.tei-c.org/ns/1.0">страшнымь ѡк<seg rend="sup">м</seg> бж<seg rend="sup">с</seg>тьвны<seg rend="sup">м</seg> еже ѡ на<seg rend="sup">с</seg>
                                         сп҃саѥмы<seg rend="sup">х</seg> провидѣ</explicit>
                             </sampleText>
@@ -472,7 +439,6 @@
                         <objectDesc>
                             <supportDesc material="paper">
                                 <support>
-                                    <material>Paper</material>
                                     <watermark>
                                         <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Scissors</motif>
                                     </watermark>
@@ -484,39 +450,34 @@
                                         <width>135</width>
                                     </dimensions>
                                 </extent>
-                                <condition>without end</condition>
+                                <condition>Without end</condition>
                             </supportDesc>
                             <layoutDesc>
                                 <layout columns="1" writtenLines="27"/>
                             </layoutDesc>
                         </objectDesc>
-                        <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">light brown</ink>
+                        <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Light brown</ink>
                         <decoDesc>
-                            <p>small red titles and capitals</p>
+                            <p>Small red titles and capitals</p>
                         </decoDesc>
                     </physDesc>
                     <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                         <scribe>
-                            <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                            <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
                             <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                                <p>middle semiuncial/poluustav</p>
+                                <scriptNote script="Cyrs" style="semiuncial">Middle semiuncial</scriptNote>
                             </scriptDesc>
                             <scribeLang>
-                                <orthography>
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">without juses, with two
-                                        jers</p>
-                                </orthography>
+                                <langNote key="orthography">Without juses, with two
+                                        jers
+                                </langNote>
                             </scribeLang>
-                            <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                                <name full="yes">Anisava Miltenova</name>
-                                <resp>de visu</resp>
-                            </respStmt>
                         </scribe>
                     </scribeDesc>
                     <msContents>
                         <summary>10</summary>
                         <msItemStruct xml:id="ACD8" type="translation">
-                            <locus n="7">61r-63v</locus>
+                            <locus n="7">61r–63v</locus>
                             <title xml:lang="bg">Сказание за 12-те петъка</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Сказанїе ѡ обрѣтенїа
@@ -529,15 +490,15 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD9" type="translation">
-                            <locus n="8">63v-64r</locus>
+                            <locus n="8">63v–64r</locus>
                             <title xml:lang="bg">Сказание за седемте вселенски събора</title>
                             <note>It is the short version</note>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD10" type="translation">
-                            <locus n="9">64r-64v</locus>
+                            <locus n="9">64r–64v</locus>
                             <title xml:lang="bg">Поучение за това, че е недостойно да се излиза от църква преди края на службата</title>
                             <author>King Michael (Pseudo)</author>
-                            <note>without end</note>
+                            <note>Without end</note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Ц''рь Михаѵ<seg rend="sup">л</seg>. Повѣсть ꙗко пользно и бж<seg rend="sup">с</seg>тв<seg rend="sup">н</seg>о, еже ждати вь цр҃кви, до
                                     сврьшенїа с҃тые и бж<seg rend="sup">с</seg>тьвные лѵ<seg rend="sup">т</seg>ргїе.</head>
@@ -548,7 +509,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD11" type="translation">
-                            <locus n="10">65r-72v</locus>
+                            <locus n="10">65r–72v</locus>
                             <title xml:lang="bg">Гномологий</title>
                             <note>Without beginning and end</note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -560,7 +521,7 @@
                             </sampleText>
                             <bibl>
                                 <ref type="bibl" target="bib:Кузидова2012">Kuzidova-Karadzinova
-                                    2012: 99-108</ref>
+                                    2012: 99–108</ref>
                             </bibl>
                         </msItemStruct>
                     </msContents>

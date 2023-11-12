@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DR621NBKM">
     <teiHeader>
         <fileDesc>
@@ -20,16 +24,14 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Цонев1923">Цонев 1923: 129-132</ref>
-                    <ref type="bibl" target="bib:Христова1982">Своден каталог 1982: No.
-                    517</ref>
-                </p>
+                <listBibl>
+                    <bibl><ref target="bib:Цонев1923">Цонев 1923: 129–132</ref></bibl>
+                    <bibl><ref target="bib:Христова1982">Христова и др. 1982: No.
+                    517</ref></bibl></listBibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -57,6 +59,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-29">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -79,7 +82,6 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
                                 <watermark>unclear</watermark>
                             </support>
                             <extent>
@@ -95,8 +97,8 @@
                             </extent>
                             <foliation>New, on some places, with Arabic numerals</foliation>
                             <collation>
-                                <summary>14 quires of 8 folia, except for Quire 1 - 6 folia, Quire
-                                    36 - 7 folia</summary>
+                                <summary>14 quires of 8 folia, except for Quire 1 – 6 folia, Quire
+                                    36 – 7 folia</summary>
                                 <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1">
                                     <extent xmlns="http://www.tei-c.org/ns/1.0">6</extent>
                                 </quire>
@@ -106,7 +108,7 @@
                                 <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="36">
                                     <extent xmlns="http://www.tei-c.org/ns/1.0">7</extent>
                                 </quire>
-                                <signatures>Original (from <foreign xml:lang="cu">а҃ -
+                                <signatures>Original (from <foreign xml:lang="cu">а҃ –
                                     лѕ҃</foreign>); the serial numbers are marked on first recto
                                     folio and on last verso folio of each quire in the middle of the
                                     bottom margin or in the middle of the outer half of the bottom
@@ -128,15 +130,15 @@
                             motif (f. 92r); large red initials from new-Byzantine type, some of them
                             with simple floral motifs (ff. 25r, 30v, 36v, 37r, etc.), with richly
                             floral compositions (ff. 7r, 120r, 245v, etc.) and one anthropomorphical
-                            Ѡ </decoNote>
+                            <foreign xml:lang="cu">Ѡ</foreign> </decoNote>
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Old, but not original binding - wooden panels covered with ornamented
-                                leather; on the front cover shouldered with floral border - stamped
+                            <summary>Old, but not original binding – wooden panels covered with ornamented
+                                leather; on the front cover shouldered with floral border – stamped
                                 depicting the Crucifix and the Theotokos, St. John the Apostle and
-                                St. Mary Magdalene; on the back cover - stamped drawing "The Madonna
-                                with the Infant" within a frame of floral motifs</p>
+                                St. Mary Magdalene; on the back cover – stamped drawing "The Madonna
+                                with the Infant" within a frame of floral motifs</summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
@@ -144,11 +146,11 @@
                             <item>
                                 <locus>inside front cover</locus>
                                 <quote xml:lang="bg">види се, че е написана таѧ кннига въ времето на
-                                    царь Іоан Шишманъ. Познава цѧ по нѣкои молиттви, които се
+                                     царь <persName>Іоан Шишманъ</persName>. Познава цѧ по нѣкои молиттви, които се
                                     ннамират въ неѧ куга се нападали турцитѣ на българската земѧ.
                                     Царь Іѡань са споменува на нѣколко места въ речените молитви.
                                     Писахъ свѧщенникъ <persName>Манчо И. Джуджовъ</persName> въ гр.
-                                    Панагюрище іѧъь г. септемврїхи іѵи.</quote>
+                                    <placeName>Панагюрище</placeName> іѧъь г. септемврїхи іѵи.</quote>
                             </item>
                             <item>
                                 <locus>f. 1r</locus>
@@ -164,35 +166,29 @@
                             </item>
                             <item>
                                 <locus>f. 271v</locus>
-                                <quote xml:lang="bg">попъ Манчо Джуджовъ забележилъ</quote>
+                                <quote xml:lang="bg">попъ <persName>Манчо Джуджовъ</persName> забележилъ</quote>
                             </item>
                             <item>
                                 <locus>f. 277r</locus>
-                                <quote xml:lang="bg">таѧ сбѣлѣжка написахъ Свѣщ. Манчо
-                                    Джуджовъ</quote>
+                                <quote xml:lang="bg">таѧ сбѣлѣжка написахъ Свѣщ. <persName>Манчо Джуджовъ</persName></quote>
                             </item>
                         </list>
                     </additions>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">2r-385v</locus>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">2r–385v</locus>
                         <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>3 mm high, of artistic quality; the hand is similar to the one of
-                                Priest Vasilij from the Teteven Monastery of St. Elijah (Prayer book
-                                No. 54 from the Church-Historical and Archival Institute, Sofia)</p>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"><height unit="mm">3</height>, of artistic quality; the hand is similar to the one of
+                                <persName>Priest Vasilij </persName>from the <placeName>Teteven Monastery of St. Elijah</placeName> (<ref target="DR54CIAI.xml">Prayer book
+                                No. 54</ref> from the Church-Historical and Archival Institute, Sofia)</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography type="resava">
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Resava orthography, on some
-                                    places - nasals; traces of Middle Bulgarian antigraph</p>
-                            </orthography>
+                            <langNote key="orthography">Resava orthography, on some
+                                    places – nasals; traces of Middle Bulgarian antigraph
+                            </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name>Dilyana Radoslavova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents type="translation">
@@ -203,10 +199,10 @@
                         <head xmlns="http://www.tei-c.org/ns/1.0">начело м<seg rend="sup">о</seg>литвьныку</head>
                     </sampleText>
                     <msItemStruct xml:id="ACD1" type="translation" style="non-narrative">
-                        <locus n="1">2r-12v</locus>
+                        <locus n="1">2r–12v</locus>
                         <title xml:lang="bg">Чинопоследование на водосвет</title>
                         <date type="churchCal" when="--08-01">1 August</date>
-                        <note>?The beginning of the text (first three folia) is missing</note>
+                        <note>The beginning of the text (first three folia) is missing</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">с</seg>ца
                                     авгу<seg rend="sup">ста</seg>. а҃ д҃нь. происхож<seg rend="sup">д</seg>енїе ч<seg rend="sup">с</seg>тнаго и животворещаго
@@ -215,14 +211,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="original" style="non-narrative">
-                        <locus n="2">12v-13v</locus>
+                        <locus n="2">12v–13v</locus>
                         <title xml:lang="bg">Чинопоследование на освещаване на нов дом</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">чинь бываемыи на бл<seg rend="sup">с</seg>венїе новому храму</head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="original">
-                        <locus n="3">13v-15v</locus>
+                        <locus n="3">13v–15v</locus>
                         <title xml:lang="bg">Молитви над бабина вода</title>
                         <note>This text contains three prayers</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -231,7 +227,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">16r-18v</locus>
+                        <locus n="4">16r–18v</locus>
                         <title xml:lang="bg">Молитви над родилка на третия ден</title>
                         <note>This text contains three prayers</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -240,7 +236,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation" style="non-narrative">
-                        <locus n="5">18v-21v</locus>
+                        <locus n="5">18v–21v</locus>
                         <title xml:lang="bg">Молитви над родилка на 40-тия ден</title>
                         <note>This text contains three prayers</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -249,7 +245,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="6">22r-40v</locus>
+                        <locus n="6">22r–40v</locus>
                         <title xml:lang="bg">Чинопоследование на кръщение</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">послѣдованїе еже сътворити
@@ -257,7 +253,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">41r-42r</locus>
+                        <locus n="7">41r–42r</locus>
                         <title xml:lang="bg">Молитва за умиване на новопокръстен на 8-ия ден след кръщението</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">л</seg>тва по
@@ -265,7 +261,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="8">42r-43v</locus>
+                        <locus n="8">42r–43v</locus>
                         <title xml:lang="bg">Чинопоследование на обручение</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">послѣдованїе бываемое
@@ -273,38 +269,36 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="9">43v-53r</locus>
+                        <locus n="9">43v–53r</locus>
                         <title xml:lang="bg">Чинопоследование на венчание</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">чинь вѣньчаню</head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="10">53r-57v</locus>
+                        <locus n="10">53r–57v</locus>
                         <title xml:lang="bg">Чинопоследование на венчание на второбрачни</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">чинь вѣнчанїю второбрачны<seg rend="sup">м</seg>
-                            </head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">чинь вѣнчанїю второбрачны<seg rend="sup">м</seg></head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="11">57v-67v</locus>
+                        <locus n="11">57v–67v</locus>
                         <title xml:lang="bg">Чинопоследование на изповед</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">чинь исповѣданїа хотеи каати
-                                се грѣхобь свои<seg rend="sup">х</seg>
-                            </head>
+                                се грѣхобь свои<seg rend="sup">х</seg></head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation">
-                        <locus n="12">67v-73r</locus>
+                        <locus n="12">67v–73r</locus>
                         <title xml:lang="bg">Чинопоследование на братотворение</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">чинь братотворенїа</head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
-                        <locus n="13">73v-114r</locus>
+                        <locus n="13">73v–114r</locus>
                         <title xml:lang="bg">Чинопоследование на маслосвет</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">послѣдованїе с҃тго масла сы
@@ -312,34 +306,31 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="translation">
-                        <locus n="14">114r-118v</locus>
+                        <locus n="14">114r–118v</locus>
                         <title xml:lang="bg">Чинопоследование на изход души</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">послѣдованїе на исхо<seg rend="sup">д'</seg> д҃ши ег<seg rend="sup">д</seg>а изнемагаеть
-                                    бра<seg rend="sup">т</seg>
-                            </head>
+                                    бра<seg rend="sup">т</seg></head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15" type="translation">
-                        <locus n="15">119r-156v</locus>
+                        <locus n="15">119r–156v</locus>
                         <title xml:lang="bg">Чинопоследование на опело и погребение на мирянин</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">послѣдованїе погрыбанїе
-                                    мыр'скы<seg rend="sup">м</seg> чл҃кѡ<seg rend="sup">м</seg>
-                            </head>
+                                    мыр'скы<seg rend="sup">м</seg> чл҃кѡ<seg rend="sup">м</seg></head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16" type="translation">
-                        <locus n="16">156v-161v</locus>
+                        <locus n="16">156v–161v</locus>
                         <title xml:lang="bg">Чинопоследование на опело и погребение на младенец</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">чинь погрыбанїа
-                                    младеньческа<seg rend="sup">г</seg>
-                            </head>
+                                    младеньческа<seg rend="sup">г</seg></head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17" type="translation">
-                        <locus n="17">161v-169r</locus>
+                        <locus n="17">161v–169r</locus>
                         <title xml:lang="bg">Чинопоследование на опело и погребение през Светлата седмица</title>
                         <date type="churchCal">Easter Week</date>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -348,15 +339,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18" type="translation">
-                        <locus n="18">169r-180r</locus>
+                        <locus n="18">169r–180r</locus>
                         <title xml:lang="bg">Чинопоследование над коливо за умрели</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">чинь бываемы на<seg rend="sup">д</seg> коливѡ<seg rend="sup">м</seg> оусоп'ши<seg rend="sup">м</seg>
-                            </head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">чинь бываемы на<seg rend="sup">д</seg> коливѡ<seg rend="sup">м</seg> оусоп'ши<seg rend="sup">м</seg></head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD19" type="translation">
-                        <locus n="19">180r-183r</locus>
+                        <locus n="19">180r–183r</locus>
                         <title xml:lang="bg">Чинопоследование на причестяване на тежко болен</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">чинь ег'да случит' се въскорѣ
@@ -364,7 +354,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD20" type="translation">
-                        <locus n="20">195r-211r</locus>
+                        <locus n="20">195r–211r</locus>
                         <title xml:lang="bg">Молитви различни "на всяка потреба"</title>
                         <note>This text contains 18 prayers</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -383,8 +373,7 @@
                             <title xml:lang="bg">Молитва над върбови клонки на Цветница</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">л</seg>тва въ не<seg rend="sup">д</seg>лю цвѣтоносну на<seg rend="sup">д</seg> връбїи</head>
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">іереи г҃лѥ<seg rend="sup">т</seg> г҃у по<seg rend="sup">м</seg>
-                                </rubric>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">іереи г҃лѥ<seg rend="sup">т</seg> г҃у по<seg rend="sup">м</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0">г҃и въседръжителю,
                                         сказавы<seg rend="sup">и</seg> ков'чгѡ<seg rend="sup">м</seg> образь цр҃ков'ныи</incipit>
                             </sampleText>
@@ -488,8 +477,7 @@
                                         с҃ты<seg rend="sup">х</seg> б҃гоꙗвлѥнїи, г<seg rend="sup">щ</seg>. и тако прѣливаеть вино или масло или медь. въ тъи
                                     съсудь чистыи. г҃лѥ<seg rend="sup">т</seg> по<seg rend="sup">п</seg>. бл<seg rend="sup">с</seg>вень б҃ь на<seg rend="sup">ш</seg> тр<seg rend="sup">с</seg>тое и по ѡ҃че
                                         на<seg rend="sup">ш</seg> тро<seg rend="sup">п</seg>
-                                    д҃нѥв'ныи и б<seg rend="sup">о</seg>. посе<seg rend="sup">м</seg>. г҃у по<seg rend="sup">м</seg>, та<seg rend="sup">ж</seg> г҃лѥ<seg rend="sup">т</seg>, м<seg rend="sup">л</seg> сїю на<seg rend="sup">д</seg> съсу<seg rend="sup">дом</seg>
-                                </rubric>
+                                    д҃нѥв'ныи и б<seg rend="sup">о</seg>. посе<seg rend="sup">м</seg>. г҃у по<seg rend="sup">м</seg>, та<seg rend="sup">ж</seg> г҃лѥ<seg rend="sup">т</seg>, м<seg rend="sup">л</seg> сїю на<seg rend="sup">д</seg> съсу<seg rend="sup">дом</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0">с҃тыи вл<seg rend="sup">д</seg>ко г҃и і҃се х҃е б҃е нашь. иже твои<seg rend="sup">м</seg> бл҃гооутроб'нымь на землю пришьствїемь. въсаку
                                     нечистоту вражїю оупраз'<seg rend="sup">д</seg>нивь</incipit>
                                 <rubric xmlns="http://www.tei-c.org/ns/1.0">и тако въкушаеть пръвѣе
@@ -558,14 +546,12 @@
                                         тр<seg rend="sup">с</seg>тое и по ѡ<seg rend="sup">ч</seg>
                                         на<seg rend="sup">ш</seg> тро<seg rend="sup">п</seg>.
                                     д҃нѥв'ны и б<seg rend="sup">о</seg> та<seg rend="sup">ж</seg>
-                                    г҃у пом҃лим' се и мл҃тву сїю ве<seg rend="sup">л</seg>
-                                </rubric>
+                                    г҃у пом҃лим' се и мл҃тву сїю ве<seg rend="sup">л</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0">г҃и б҃е нашь, рекыи
                                     връхов'ному ап<seg rend="sup">с</seg>лу своему петру. въ
                                     съсудѣплащанич'нѣмь. нечистому и скврън'ному въсему чисту
                                     быти</incipit>
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">сла<seg rend="sup">в</seg> и н҃нꙗ г҃и пом҃лу<seg rend="sup">и</seg> г<seg rend="sup">щ</seg> г҃и бл<seg rend="sup">с</seg>ви и ѿпу<seg rend="sup">с</seg>
-                                </rubric>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">сла<seg rend="sup">в</seg> и н҃нꙗ г҃и пом҃лу<seg rend="sup">и</seg> г<seg rend="sup">щ</seg> г҃и бл<seg rend="sup">с</seg>ви и ѿпу<seg rend="sup">с</seg></rubric>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD20.16" type="translation">
@@ -579,8 +565,7 @@
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0">б҃е велико имениты,
                                     твореи чюдеса им'же нѣ<seg rend="sup">с</seg> числа</incipit>
                                 <rubric xmlns="http://www.tei-c.org/ns/1.0">сла<seg rend="sup">в</seg> и н҃нꙗ. г҃и пом҃луи г<seg rend="sup">щ</seg>, г҃и
-                                        бл<seg rend="sup">с</seg>ви и ѿпу<seg rend="sup">с</seg>
-                                </rubric>
+                                        бл<seg rend="sup">с</seg>ви и ѿпу<seg rend="sup">с</seg></rubric>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD20.17" type="translation">
@@ -593,8 +578,7 @@
                                     ѡ҃че нашь. ꙗко твое ѥ<seg rend="sup">с</seg> цр<seg rend="sup">с</seg>тво. тро<seg rend="sup">п</seg> д҃нѥв'ны и б<seg rend="sup">о</seg>. по семь. г҃у по<seg rend="sup">м</seg>лим' се и м<seg rend="sup">л</seg>тву сїю ве<seg rend="sup">л</seg>ми</rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0">г҃и і҃се х҃е б҃е нашь.
                                     заповѣдавыи връхов'ному ап<seg rend="sup">с</seg>лу твоему петру
-                                    . видѣнїе<seg rend="sup">м</seg> и гласѡ<seg rend="sup">м</seg>
-                                </incipit>
+                                    . видѣнїе<seg rend="sup">м</seg> и гласѡ<seg rend="sup">м</seg></incipit>
                                 <rubric xmlns="http://www.tei-c.org/ns/1.0">сла<seg rend="sup">в</seg> и н҃нꙗ г҃и по<seg rend="sup">м</seg>. г<seg rend="sup">щ</seg> г҃и б<seg rend="sup">с</seg>ви. и ѿпу<seg rend="sup">с</seg> д҃неви</rubric>
                             </sampleText>
                         </msItemStruct>
@@ -605,8 +589,7 @@
                                 <rubric xmlns="http://www.tei-c.org/ns/1.0">попь. бл<seg rend="sup">с</seg>вень б҃ь нашь таже тр<seg rend="sup">с</seg>тое. и
                                     по ѡ҃че нашь. ꙗко твое ѥ<seg rend="sup">с</seg> цр<seg rend="sup">с</seg>тво. по се<seg rend="sup">м</seg> тро<seg rend="sup">п</seg>ре въскр<seg rend="sup">с</seg>ны
                                         осмыи<seg rend="sup">м</seg> гласѡ<seg rend="sup">м</seg>
-                                    <gap hand="DR"/>
-                                </rubric>
+                                    <gap/></rubric>
                             </sampleText>
                             <msItemStruct xml:id="ACD20.18.1" type="translation">
                                 <title xml:lang="bg">Молитви над ново вино. Молитва над ново вино, 1</title>
@@ -632,7 +615,7 @@
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD21" type="translation">
-                        <locus n="21">201v-202v</locus>
+                        <locus n="21">201v–202v</locus>
                         <title xml:lang="bg">Тропари и богородични за дните от седмицата</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">тропаре и б҃городичны пѣз
@@ -640,7 +623,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD22" type="translation">
-                        <locus n="22">203r-215v</locus>
+                        <locus n="22">203r–215v</locus>
                         <title xml:lang="bg">Чинопоследование на Велик водосвет</title>
                         <date type="churchCal">Epiphany</date>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -649,7 +632,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD23" type="translation">
-                        <locus n="23">216r-263r</locus>
+                        <locus n="23">216r–263r</locus>
                         <title xml:lang="bg">Чинопоследование на опело и погребение на свещеник</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">чинь погрыбанїю
@@ -657,7 +640,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD24" type="translation">
-                        <locus n="24">263v-274v</locus>
+                        <locus n="24">263v–274v</locus>
                         <title xml:lang="bg">Чинопоследование на литии на Господските празници</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">чинь бываемы изношенїе литїи
@@ -665,14 +648,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD25" type="translation">
-                        <locus n="25">212v-213r</locus>
+                        <locus n="25">212v–213r</locus>
                         <title xml:lang="bg">Отпусти за дните от седмицата</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">ѿпусте прѣ<seg rend="sup">з</seg> не<seg rend="sup">д</seg>лю</head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD26" type="translation">
-                        <locus n="26">276r-280v</locus>
+                        <locus n="26">276r–280v</locus>
                         <title xml:lang="bg">Правила епитимийни</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">правилѡ изложено лъгьчаише по
@@ -682,7 +665,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD27" type="translation">
-                        <locus n="27">280v-282r</locus>
+                        <locus n="27">280v–282r</locus>
                         <title xml:lang="bg">Правила за степените на сродство и за законните бракове</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">ѡ различїи съро<seg rend="sup">д</seg>ства. и о брацѣхь законѡ<seg rend="sup">м</seg>.
@@ -690,7 +673,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD28" type="translation">
-                        <locus n="28">282r-285v</locus>
+                        <locus n="28">282r–285v</locus>
                         <title xml:lang="bg">Молитви разрешителни, четени от архиерей или духовен отец</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мл҃тва юже г҃лѥ<seg rend="sup">т</seg> ар'хїереи или д҃хов'никь прощену, за грѣхы въсе.
@@ -706,9 +689,8 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#DR">
+                    <origin evidence="conjecture" resp="#DR">
                         <origDate notBefore="1600" notAfter="1620">17th c., beginning</origDate>
-                        <origPlace>Unknown</origPlace>
                     </origin>
                 </history>
             </msDesc>

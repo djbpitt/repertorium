@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DRA787a18Stock">
     <teiHeader>
         <fileDesc>
@@ -17,7 +21,7 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>19.09.2011</date>
+                <date when="2011-09-19">19.09.2011</date>
                 <idno type="Repertorium">RC-DRA787a18Stock</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -25,15 +29,12 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Steensland2005">Steensland 2005: No 5.</ref>
-                    <ref type="bibl" target="bib:Wesslén1985">Wesslén 1985: 112-142.</ref>
-                </p>
+                <listBibl><bibl><ref type="bibl" target="bib:Steensland2005">Steensland 2005: No 5.</ref></bibl>
+                    <bibl><ref type="bibl" target="bib:Wesslén1985">Wesslén 1985: 112-142.</ref></bibl></listBibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -67,12 +68,9 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-30">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
-            <change who="#AB" when="2009-04-17">Added copyright statement</change>
-            <change who="#AB" when="2009-04-15">Corrections</change>
-            <change who="#AB" when="2009-04-13">Added Repertorium Identifier</change>
-            <change who="#AB" when="2009-03-02">Conversion to Repertorium 3.0</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -99,7 +97,7 @@
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="fragment">
-                        <supportDesc material="parchment">
+                        <supportDesc material="parch">
                             <support>
                                 <material>Parchment of fine quality. The recto is the hair side, the
                                     verso is the slesh side, respectively.</material>
@@ -128,7 +126,7 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Kept together with other parchment fragments (A787a)</p>
+                            <summary>Kept together with other parchment fragments (A787a)</summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
@@ -139,34 +137,30 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locus xmlns="http://www.tei-c.org/ns/1.0">1r-2v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
-                            <p>uncial, 6mm high (interline space: 10)</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="uncial"><dimensions type="chars" unit="mm"><height>6</height></dimensions>; <dimensions type="line-spacing" unit="mm"><height>10</height></dimensions></scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Russian, Church Slavonic</p>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Russian, Church Slavonic</summary>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name>Dilyana Radoslavova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
-                    <summary>The fragment contains Mark 14.27-42 with lacunae</summary>
+                    <summary>The fragment contains Mark 14.27–42 with lacunae</summary>
                     <filiation type="protograph">Russian</filiation>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1r-1v</locus>
+                        <locus n="1">1r–1v</locus>
                         <title xml:lang="bg">Изборно евангелие</title>
                         <filiation type="antigraph">Russian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <p xmlns="http://www.tei-c.org/ns/1.0">леѡньскоую. ї г҃ла имъ</p>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Въ<seg rend="sup">в҃</seg> ѡ<seg rend="sup">н҃</seg> г҃лщоу їс҃ви къ оучн҃комъ</p>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">леѡньскоую. ї г҃ла имъ</ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">Въ<seg rend="sup">в҃</seg> ѡ<seg rend="sup">н҃</seg> г҃лщоу їс҃ви къ оучн҃комъ</ab>
                         </sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin resp="#DR" evidence="de visu">
+                    <origin resp="#DR" evidence="conjecture">
                         <origDate notBefore="1401" notAfter="1499">15th c.</origDate>
                         <note>Russian origin.</note>
                     </origin>
@@ -176,23 +170,15 @@
                     </acquisition>
                 </history>
                 <additional>
-                    <adminInfo>
-                        <recordHist>
-                            <source>
-                                <p>Directly catalogued from the original manuscript using the
-                                    printed catalogue from ...</p>
-                            </source>
-                        </recordHist>
-                    </adminInfo>
                     <listBibl>
                         <bibl>
-                            <ref type="bibl" target="bib:Wesslén1985">Wesslén 1985: 112-142.</ref>
+                            <ref target="bib:Wesslén1985">Wesslén 1985: 112–142.</ref>
                         </bibl>
                         <bibl>
-                            <ref type="bibl" target="bib:Стенсланд1996">Стенсланд 1996.</ref>
+                            <ref target="bib:Стенсланд1996">Стенсланд 1996.</ref>
                         </bibl>
                         <bibl>
-                            <ref type="bibl" target="bib:Steensland2005">Steensland 2005: 211-225
+                            <ref target="bib:Steensland2005">Steensland 2005: 211–225
                                 (see N5).</ref>
                         </bibl>
                     </listBibl>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AS685NBKM">
     <teiHeader>
         <fileDesc>
@@ -20,16 +24,15 @@
                             <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and
                         disseminateinformation, but you are not allowed to alter, transform, or
                         buildupon the works on this section of the site. All reuse ordistribution of
-                        this work must contain somewhere a link back to theURL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        this work must contain somewhere a link back to theURL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <bibl>
-                    <ref target="bib:Цонев1923">Цонев 1923: 232-236</ref>
+                    <ref target="bib:Цонев1923">Цонев 1923: 232–236</ref>
                 </bibl>
                 <bibl>
-                    <ref target="bib:Демина1968">Демина 1968: 51-53</ref>
+                    <ref target="bib:Демина1968">Демина 1968: 51–53</ref>
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -42,7 +45,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Miscellany of sermons by Damaskenos Stoudites</item>
                         <item>Miscellany with mixed content</item>
                     </list>
@@ -58,6 +61,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-28">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -85,8 +89,7 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">202</measure>
@@ -113,18 +116,19 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1-202</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial"/>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1–202</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  script="Cyrs" style="semiuncial"/>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography type="resava">
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, with one
-                                    (small) jer, Resava school</p>
-                            </orthography>
+                            <langNote key="orthography">Without juses, with one
+                                    (small) jer, Resava school
+                            </langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Цонев1923">Цонев 1923: 232-236</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Цонев1923">Цонев 1923: 232–236</ref>
+                        </bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -132,7 +136,7 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1r-8v</locus>
+                        <locus n="1">1r–8v</locus>
                         <title xml:lang="bg">Поучение за покаянието</title>
                         <author>anonymous</author>
                         <note>without beginning</note>
@@ -148,7 +152,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">8v-25v</locus>
+                        <locus n="2">8v–25v</locus>
                         <title xml:lang="bg">Поучение за десетте Божи заповеди</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -162,7 +166,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus>26r-37r</locus>
+                        <locus>26r–37r</locus>
                         <title xml:lang="bg">Житие и чудеса на св. Николай Мирликийски</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -178,7 +182,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">37r-50v</locus>
+                        <locus n="4">37r–50v</locus>
                         <title xml:lang="bg">Чудеса на св. Николай Мирликийски. Чудо за тримата воини</title>
                         <author>anonymous</author>
                         <note>Without end</note>
@@ -186,15 +190,14 @@
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Чю<seg rend="sup">д</seg> ѡ
-                                    тре<seg rend="sup">х</seg> воинѡ<seg rend="sup">х</seg>
-                            </head>
+                                    тре<seg rend="sup">х</seg> воинѡ<seg rend="sup">х</seg></head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ странѣ оубо велицѣи
                                 Фригїи живуще езыци тужды и странны. иже нарицааху се
                                 таифали.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">50v-54v</locus>
+                        <locus n="5">50v–54v</locus>
                         <title xml:lang="bg">Чудеса на св. Николай Мирликийски. Чудо за килима</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -213,7 +216,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="6">54v-56r</locus>
+                        <locus n="6">54v–56r</locus>
                         <title xml:lang="bg">Чудеса на архангелите Михаил и Гавриил. Чудо за Авраам и Агар</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -229,7 +232,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">56r-57v</locus>
+                        <locus n="7">56r–57v</locus>
                         <title xml:lang="bg">Чудеса на архангелите Михаил и Гавриил. Чудо за жертвата на Авраам</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -245,7 +248,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="8">57v-59r</locus>
+                        <locus n="8">57v–59r</locus>
                         <title xml:lang="bg">Чудеса на архангелите Михаил и Гавриил. Чудо на архангел Михаил как изби 70 хиляди по времето на цар Давид</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -261,7 +264,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="9">59v-60v</locus>
+                        <locus n="9">59v–60v</locus>
                         <title xml:lang="bg">Чудеса на архангелите Михаил и Гавриил. Чудо за пророк Илия</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -277,7 +280,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="10">60v-63r</locus>
+                        <locus n="10">60v–63r</locus>
                         <title xml:lang="bg">Чудеса на архангелите Михаил и Гавриил. Чудо как архангел Михаил порази войската на цар Синахериб</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -293,7 +296,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="11">63r-64r</locus>
+                        <locus n="11">63r–64r</locus>
                         <title xml:lang="bg">Чудеса на архангелите Михаил и Гавриил. Чудо за трите отрока</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -309,15 +312,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation">
-                        <locus n="12">64r-66v</locus>
+                        <locus n="12">64r–66v</locus>
                         <title xml:lang="bg">Чудеса на архангелите Михаил и Гавриил. Чудо за пророк Даниил</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ пр<seg rend="sup">о</seg>рцѣ
-                                Данїилѣ чю<seg rend="sup">д</seg>
-                            </head>
+                                Данїилѣ чю<seg rend="sup">д</seg></head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">По съмрьти же цара
                                 Навъходоносора. въц҃ри се синь его Валтасарь. и по семь въцари се
                                 Дарїе царь.</incipit>
@@ -327,7 +329,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
-                        <locus n="13">66v-68r</locus>
+                        <locus n="13">66v–68r</locus>
                         <title xml:lang="bg">Чудеса на архангелите Михаил и Гавриил. Чудо как архангел Михаил нахрани пророк Даниил</title>
                         <author>anonymous</author>
                         <note>Without title</note>
@@ -342,7 +344,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="translation">
-                        <locus n="14">68r-70r</locus>
+                        <locus n="14">68r–70r</locus>
                         <title xml:lang="bg">Чудеса на архангелите Михаил и Гавриил. Чудо за инок Макарий</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -360,7 +362,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15" type="translation">
-                        <locus n="15">70r-75r</locus>
+                        <locus n="15">70r–75r</locus>
                         <title xml:lang="bg">Чудеса на архангелите Михаил и Гавриил. Чудо в Дохиарската обител</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -378,7 +380,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16" type="translation">
-                        <locus n="16">75v-79r</locus>
+                        <locus n="16">75v–79r</locus>
                         <title xml:lang="bg">Чудеса на архангелите Михаил и Гавриил. Чудо с болярската жена Анна</title>
                         <author>anonymous</author>
                         <note>Without title</note>
@@ -393,7 +395,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17" type="translation">
-                        <locus n="17">79r-81v</locus>
+                        <locus n="17">79r–81v</locus>
                         <title xml:lang="bg">Чудеса на архангелите Михаил и Гавриил. Чудо за кръщението на блудницата</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -410,7 +412,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18" type="translation">
-                        <locus n="18">82r-92r</locus>
+                        <locus n="18">82r–92r</locus>
                         <title xml:lang="bg">Житие на св. Димитър Солунски</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -428,7 +430,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD19" type="translation">
-                        <locus n="19">92r-93v</locus>
+                        <locus n="19">92r–93v</locus>
                         <title xml:lang="bg">Чудеса на св. Димитър Солунски. Чудо за княз Леонтий как премина Дунава</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -444,7 +446,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD20" type="translation">
-                        <locus n="20">93v-97r</locus>
+                        <locus n="20">93v–97r</locus>
                         <title xml:lang="bg">Чудеса на св. Димитър Солунски. Чудо с епископа на Афригия</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -459,7 +461,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD21" type="translation">
-                        <locus n="21">97v-99r</locus>
+                        <locus n="21">97v–99r</locus>
                         <title xml:lang="bg">Чудеса на св. Димитър Солунски. Чудо как спаси Тесалия от глад</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -475,7 +477,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD22" type="translation">
-                        <locus n="22">99r-101r</locus>
+                        <locus n="22">99r–101r</locus>
                         <title xml:lang="bg">Чудеса на св. Димитър Солунски. Чудо с мирото, изтичащо от тялото му</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -492,7 +494,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD23" type="translation">
-                        <locus n="23">101r-101v</locus>
+                        <locus n="23">101r–101v</locus>
                         <title xml:lang="bg">Чудеса на св. Димитър Солунски. Чудо как излекува Мариан</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -507,7 +509,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD24" type="translation">
-                        <locus n="24">101v-102v</locus>
+                        <locus n="24">101v–102v</locus>
                         <title xml:lang="bg">Чудеса на св. Димитър Солунски. Чудо за изгарянето на пратениците на цар Юстиниан</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -524,15 +526,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD25" type="translation">
-                        <locus n="25">102v-104r</locus>
+                        <locus n="25">102v–104r</locus>
                         <title xml:lang="bg">Чудеса на св. Димитър Солунски. Чудо как спаси Солун от славяните</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Чю<seg rend="sup">д</seg> .з҃.
-                                ѡ сѳлавине<seg rend="sup">х</seg>
-                            </head>
+                                ѡ сѳлавине<seg rend="sup">х</seg></head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Ѿ сицевы<seg rend="sup">х</seg> оубо чюдесь с҃тго, и ѿ ины<seg rend="sup">х</seg>
                                 мнѡжаишїихь бывающїи<seg rend="sup">х</seg> повъсегда. сътицааше<seg rend="sup">с</seg>е мирь на въсако лѣто ѿ ѡкрьстны<seg rend="sup">х</seg> весѣ<seg rend="sup">х</seg>, и ѿ ины<seg rend="sup">х</seg> градѡвь.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">елико многащи избашль ихь
@@ -540,7 +541,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD26" type="translation">
-                        <locus n="26">104r-106r</locus>
+                        <locus n="26">104r–106r</locus>
                         <title xml:lang="bg">Чудеса на св. Димитър Солунски. Чудо как спаси Солун от аварите</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -558,7 +559,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD27" type="translation">
-                        <locus n="27">106r-107v</locus>
+                        <locus n="27">106r–107v</locus>
                         <title xml:lang="bg">Чудеса на св. Димитър Солунски. Чудо за човека, който крадеше свещите от гроба на светеца</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -578,7 +579,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD28" type="translation">
-                        <locus n="28">107v-109r</locus>
+                        <locus n="28">107v–109r</locus>
                         <title xml:lang="bg">Чудеса на св. Димитър Солунски. Чудо за срещата му с епископа на Лариса Ахил</title>
                         <author>anonymous</author>
                         <note>without title</note>
@@ -594,7 +595,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD29" type="translation">
-                        <locus n="29">109r-110r</locus>
+                        <locus n="29">109r–110r</locus>
                         <title xml:lang="bg">Поучение за ползата да се чете за мъчението и чудесата на св. Димитър Солунски</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -611,7 +612,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD30" type="translation">
-                        <locus n="30">110v-133v</locus>
+                        <locus n="30">110v–133v</locus>
                         <title xml:lang="bg">Житие на св. Георги</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -629,7 +630,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD31" type="translation">
-                        <locus n="31">133v-135v</locus>
+                        <locus n="31">133v–135v</locus>
                         <title xml:lang="bg">Чудеса на св. Георги. Чудо за колоната на вдовицата</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -644,7 +645,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD32" type="translation">
-                        <locus n="32">135v-141r</locus>
+                        <locus n="32">135v–141r</locus>
                         <title xml:lang="bg">Чудеса на св. Георги. Чудо за сина на Лъв Пафлагонски</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -661,7 +662,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD33" type="translation">
-                        <locus n="33">141r-143v</locus>
+                        <locus n="33">141r–143v</locus>
                         <title xml:lang="bg">Чудеса на св. Георги. Чудо за пържените яйца</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -698,7 +699,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD35" type="translation">
-                        <locus>148r-152v</locus>
+                        <locus>148r–152v</locus>
                         <title xml:lang="bg">Разказ за монаха Малх, от Патерика</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -716,7 +717,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD36" type="translation">
-                        <locus n="36">152v-153v</locus>
+                        <locus n="36">152v–153v</locus>
                         <title xml:lang="bg">Поучение за покаянието на св. Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -734,15 +735,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD37" type="translation">
-                        <locus n="37">153v-157r</locus>
+                        <locus n="37">153v–157r</locus>
                         <title xml:lang="bg">Поучение против пиянството</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово поученїе къ ц҃ре<seg rend="sup">м</seg> и кнеꙃе<seg rend="sup">м</seg> и кь еп<seg rend="sup">с</seg>кѡ<seg rend="sup">м</seg> и попово<seg rend="sup">м</seg> и кь вьсѣ<seg rend="sup">м</seg> хр<seg rend="sup">с</seg>тїанѡ<seg rend="sup">м</seg> еже не ꙋпивати се
-                                    вино<seg rend="sup">м</seg>
-                            </head>
+                                    вино<seg rend="sup">м</seg></head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Бл<seg rend="sup">с</seg>венїи ѡ҃ца д҃хов'наго ѡ г҃и къ дѣтемь ѡ чеда. вѣдѣти иже ми
                                 даль е<seg rend="sup">с</seg> б҃ь талан'ть. егоже хощеть ѿ мене
                                 истез3ань быти на страшнѣмь соудищи</incipit>
@@ -753,7 +753,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD38" type="translation">
-                        <locus n="38">157r-158v</locus>
+                        <locus n="38">157r–158v</locus>
                         <title xml:lang="bg">Разказ за мъжа, който поверил жена си на Богородица</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -769,7 +769,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD39" type="translation">
-                        <locus n="39">158v-160r</locus>
+                        <locus n="39">158v–160r</locus>
                         <title xml:lang="bg">Разказ за човека, който дал дрехата си на бедния</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -787,7 +787,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD40" type="translation">
-                        <locus n="40">160r-161r</locus>
+                        <locus n="40">160r–161r</locus>
                         <title xml:lang="bg">Поучение за онези, които ядат хляб на трапезата, от Патерика</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -804,7 +804,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD41" type="translation">
-                        <locus n="41">161r-162v</locus>
+                        <locus n="41">161r–162v</locus>
                         <title xml:lang="bg">Поучение за гнева от Григорий Богослов</title>
                         <author cert="medium">Gregory of Nazianzos</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -821,7 +821,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD42" type="translation">
-                        <locus n="42">162v-163r</locus>
+                        <locus n="42">162v–163r</locus>
                         <title xml:lang="bg">Поучение на светите отци да не обиждаме вдовици и сираци</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -836,7 +836,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD43" type="translation">
-                        <locus n="43">165r-166v</locus>
+                        <locus n="43">165r–166v</locus>
                         <title xml:lang="bg">Поучение за това, че е недостойно да се излиза от църква преди края на службата</title>
                         <author>anonymous</author>
                         <note>without end</note>
@@ -854,7 +854,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD44" type="translation">
-                        <locus n="44">167r-168v</locus>
+                        <locus n="44">167r–168v</locus>
                         <title xml:lang="bg">Чудо на св. Мина за евреина, който се покръстил</title>
                         <author>anonymous</author>
                         <note>without beginning</note>
@@ -869,7 +869,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD45" type="translation">
-                        <locus n="45">168v-171r</locus>
+                        <locus n="45">168v–171r</locus>
                         <title xml:lang="bg">Разказ за жената, която закла двете си деца заради мъж</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -887,7 +887,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD46" type="translation">
-                        <locus n="46">171r-174v</locus>
+                        <locus n="46">171r–174v</locus>
                         <title xml:lang="bg">Разказ за човека, който възкръсна</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -903,7 +903,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD47" type="translation">
-                        <locus n="47">174v-176r</locus>
+                        <locus n="47">174v–176r</locus>
                         <title xml:lang="bg">Поучение за четенето на книги от Йоан Златоуст</title>
                         <author cert="medium">John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -921,7 +921,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD48" type="translation">
-                        <locus n="48">176r-179r</locus>
+                        <locus n="48">176r–179r</locus>
                         <title xml:lang="bg">Поучение към онези, които казват, че няма ад от Йоан Златоуст</title>
                         <author cert="medium">John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -938,7 +938,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD49" type="translation">
-                        <locus n="49">179r-182r</locus>
+                        <locus n="49">179r–182r</locus>
                         <title xml:lang="bg">Житие на св. Андрей Юродиви, извлечение. За мъртвата девица</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -954,7 +954,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD50" type="translation">
-                        <locus n="50">182r-188v</locus>
+                        <locus n="50">182r–188v</locus>
                         <title xml:lang="bg">Житие на св. Андрей Юродиви, извлечение</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -971,7 +971,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD51" type="translation">
-                        <locus n="51">188v-193v</locus>
+                        <locus n="51">188v–193v</locus>
                         <title xml:lang="bg">Житие на св. Андрей Юродиви, извлечение</title>
                         <author>anonymous</author>
                         <note>without end</note>
@@ -988,7 +988,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD52" type="translation">
-                        <locus n="52">194r-194v</locus>
+                        <locus n="52">194r–194v</locus>
                         <title xml:lang="bg">Поучение за милостинята</title>
                         <author>anonymous</author>
                         <note>without beginning</note>
@@ -1002,7 +1002,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD53" type="translation">
-                        <locus n="53">194v-195v</locus>
+                        <locus n="53">194v–195v</locus>
                         <title xml:lang="bg">Разказ за отец Макарий Велики</title>
                         <author>anonymous</author>
                         <note>without end</note>
@@ -1019,9 +1019,9 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#AS">
+                    <origin evidence="conjecture" resp="#AS">
                         <origDate notBefore="1601" notAfter="1699">17th c.</origDate>
-                        <ref type="bibl" target="bib:Цонев1923">Цонев 1923: 232-236</ref>
+                        <ref type="bibl" target="bib:Цонев1923">Цонев 1923: 232–236</ref>
                     </origin>
                 </history>
             </msDesc>

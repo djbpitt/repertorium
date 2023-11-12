@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DRAdd5232BBL">
     <teiHeader>
         <fileDesc>
@@ -13,7 +17,7 @@
             <publicationStmt>
                 <publisher>Istitute of Literature</publisher>
                 <pubPlace>Sofia, Bulgaria</pubPlace>
-                <date>02.2004</date>
+                <date when="2004-02">02.2004</date>
                 <idno type="Repertorium">RC-DRAdd5232BBL</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -21,8 +25,7 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -55,6 +58,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-31">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#DR" when="2009-10-07">Removed entities for the basic Old Slavic characters </change>
@@ -74,24 +78,24 @@
                     <repository>British Library</repository>
                     <collection>Additional Manuscripts</collection>
                     <idno type="shelfmark">Add. MS 5232B</idno>
-                    <altIdentifier type="catalgue">
+                    <altIdentifier>
                         <idno type="catalogue">50</idno>
                         <note>
                             <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 65.</ref>
                         </note>
                     </altIdentifier>
                 </msIdentifier>
-                <msPart>
                     <physDesc>
-                        <objectDesc form="leaf">
-                            <supportDesc>
-                                <support>A single sheet mounted on a page of a large volume.
+                        <summary>A single sheet mounted on a page of a large volume.</summary>
+                        <objectDesc form="fragment">
+                            <supportDesc material="paper">
+                                <support>
                                         <material>Paper, thick and rough</material>
                                     <watermark>unclear</watermark>
                                 </support>
                                 <extent>
                                     <measure unit="folia">1</measure>
-                                    <dimensions unit="mm" type="folia" extent="f.171">
+                                    <dimensions unit="mm" type="folia">
                                         <height>340</height>
                                         <width>270</width>
                                     </dimensions>
@@ -100,7 +104,7 @@
                                         <width>170</width>
                                     </dimensions>
                                 </extent>
-                                <foliation>171.</foliation>
+                                <foliation>171</foliation>
                                 <collation>
                                     <ruling xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Impossible to establish, though the quality of the writing
                                         suggests that there was some ruling</ruling>
@@ -112,36 +116,27 @@
                         </objectDesc>
                         <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Black</ink>
                         <decoDesc>
-                            <decoNote type="overview"> A pen and ink drawing of a hand in the
+                            <p>A pen and ink drawing of a hand in the
                                 correct position for the three-fingered sign of the Cross, with a
-                                basic description of this, all surrounded by a scrollwork border.
-                            </decoNote>
+                                basic description of this, all surrounded by a scrollwork border.</p>
                         </decoDesc>
                     </physDesc>
                     <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-                        <scribe n="1">
-                            <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
-                                <locus>f. 171.</locus>
-                            </locusGrp>
-                            <persName xmlns="http://www.tei-c.org/ns/1.0" type="scribe" xml:id="AnonymousAdd5232BBL" full="yes">Anonymous.</persName>
-                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                                <p>An upright semiuncial</p>
+                        <scribe>
+                            <locus xmlns="http://www.tei-c.org/ns/1.0">f. 171.</locus>
+                            <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous.</name>
+                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                                <scriptNote script="Cyrs" style="semiuncial">An upright semiuncial <dimensions unit="mm" type="char"><height>2–3</height></dimensions>,  <dimensions unit="mm" type="line-space"><height>5</height></dimensions>; a few lines within the border are
+                                    written in letters 5 mm of height); with regular diacritics; both it
+                                    and the border show very strong influence of the printed original
+                                    from which they were copied.</scriptNote>
                             </scriptDesc>
-                            <note xmlns="http://www.tei-c.org/ns/1.0">Semiuncial (<dim unit="mm">2-3mm</dim> line, <dimensions unit="mm">
-                                    <dim>5</dim>
-                                </dimensions> interline space; a few lines within the border are
-                                written in letters 5 mm of height); with regular diacritics; both it
-                                and the border show very strong influence of the printed original
-                                from which they were copied.</note>
-                            <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                                <name>Cleminson</name>
-                                <resp>description</resp>
-                            </respStmt>
+                            <bibl xmlns="http://www.tei-c.org/ns/1.0"><ref target="bib:Cleminson1988">Cleminson 1988: 65</ref></bibl>
                         </scribe>
                     </scribeDesc>
                     <msContents>
                         <summary>Instructions on how to make the sign of the Cross; The contents of
-                            this MS are derived from the book, printed Moscow, 1665-6; it would
+                            this MS are derived from the book, printed Moscow, 1665–6; it would
                             appear, though, that it was not copied directly from the book, but from
                             a printed flysheet containing this portion of the text and the hand,
                             which it reproduces faithfully. A copy of this flysheet is to be found
@@ -150,8 +145,7 @@
                         <msItemStruct xml:id="ACD1" type="translation">
                             <locus n="1">171</locus>
                             <title xml:lang="bg">Указания как да се прави кръстен знак</title>
-                            <note>Copied from Skrizhal' (printed Moscow 1665-6), f. <foreign xml:lang="cu">ѱ҃о г</foreign> and f. <foreign xml:lang="cu">ѱ҃чд</foreign>
-                            </note>
+                            <note>Copied from Skrizhal' (printed Moscow 1665–6), f. <foreign xml:lang="cu">ѱ҃о г</foreign> and f. <foreign xml:lang="cu">ѱ҃чд</foreign></note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0">Си́це до́лженъ кїиждо
                                     бл҃гочести́вы хр<seg rend="sup">с҇</seg>тїа́нинъ воѡбража́ти на
@@ -167,12 +161,12 @@
                         </msItemStruct>
                     </msContents>
                     <history>
-                        <origin evidence="de visu" resp="#DR">
+                        <origin evidence="internal" resp="#DR">
                             <origDate notBefore="1655" notAfter="1700">1665, after</origDate>
                             <origPlace>Russian</origPlace>
                         </origin>
                         <provenance>The volume in which this roll is mounted forms part of the notes
-                            of the traveler <persName>Engelbert Kämpfer</persName> (1651-1716),
+                            of the traveler <persName>Engelbert Kämpfer</persName> (1651–1716),
                             ranging in subject from date palms to acupuncture. In the earlier parts
                             of the volume are some rough maps and views of Russian towns executed by
                                 <persName>Kämpfer</persName>.</provenance>
@@ -187,7 +181,6 @@
                             </recordHist>
                         </adminInfo>
                     </additional>
-                </msPart>
             </msDesc>
         </body>
     </text>

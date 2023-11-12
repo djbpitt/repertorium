@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-MP304BAB">
     <teiHeader>
         <fileDesc>
@@ -9,6 +13,7 @@
                 <author xml:id="MP">Maya Petrova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="DB">David J. Birnbaum</editor>
+                <editor xml:id="AB">Andrej Bojadžiev</editor>
             </titleStmt>
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
@@ -21,15 +26,13 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the <seg rend="sup">т</seg>RL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the <seg rend="sup">т</seg>RL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Panaitescu2003">Panaitescu 2003: 31-34</ref>
-                    <ref type="bibl" target="bib:Яцимирский1905">Яцимирский 1905: No149</ref>
-                </p>
+                <listBibl>
+                    <bibl><ref target="bib:Panaitescu2003">Panaitescu 2003: 31–34</ref></bibl>
+                   <bibl> <ref target="bib:Яцимирский1905">Яцимирский 1905: No149</ref></bibl></listBibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -40,7 +43,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>vitae</item>
                         <item>homilies</item>
                         <item>festal menaion</item>
@@ -57,6 +60,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
             <change who="#DB" when="2016-07-06">Clean up XML markup, edit English language
                 text.</change>
         </revisionDesc>
@@ -71,13 +75,15 @@
                     <repository>Academy Library</repository>
                     <idno type="shelfmark">304</idno>
                     <idno type="catalogue">304</idno>
-                    <idno type="catalogue">149</idno>
+                   <altIdentifier> 
+                       <idno type="catalogue">149</idno>
+                   </altIdentifier>
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper. Good quality.</material>
+                                <material>Paper of good quality</material>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Latin
                                         letter R under a cross.</motif>
@@ -124,11 +130,11 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Boards covered with ornamented leather.</p>
+                            <summary>Boards covered with ornamented leather.</summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
-                        <list type="simple">
+                        <list>
                             <item>
                                 <quote xml:lang="cu">съборни(к)</quote>
                             </item>
@@ -165,33 +171,27 @@
                     </additions>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-                    <scribe n="1">
-                        <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
-                            <locus>1-182</locus>
-                        </locusGrp>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Middle semiuncial. Scriptio continua. Sporadic diacritical signs.</p>
+                    <scribe>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1–182</locus>
+ <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  script="Cyrs" style="semiuncial">Middle semiuncial. Scriptio continua. Sporadic diacritical signs.</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography type="Turnovo">
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Tŭrnovo orthography</p>
-                            </orthography>
+                            <langNote key="orthography">Tŭrnovo orthography</langNote>
                         </scribeLang>
                     </scribe>
                 </scribeDesc>
                 <msContents type="translation">
                     <summary>The manuscript contains 13 texts: lifes of saints and homilies. The
-                        initial content was of 22 texts.</summary>
+                        initial content was of 22 texts. The text of the miscellany is identified in <ref type="bibl" target="bib:Иванова2004a">Иванова 2004: 213–225</ref></summary>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">2r-6v</locus>
+                        <locus n="1">2r–6v</locus>
                         <title xml:lang="bg">Житие на св. Антоний Велики от Атанасий Александрийски</title>
                         <author>Athanasios of Alexandria</author>
                         <date type="churchCal" when="--01-17">17 January</date>
-                        <note>Missing folia 7-38</note>
-                        <note>The miscellany is identified in <ref type="bibl" target="bib:Иванова2004a">Иванова 2004:213-225</ref>.</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS
-                                16.01.II.; 17.01.I.</ref>
-                        </note>
+                        <note>Missing folia 7–38</note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS 17.01/I.1в</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Житїе и жиꙁнь прѣп<seg rend="sup">д</seg>бнаго ѡ҃҃ца нашего Антонїа Великааго, съписано
                                 блаженыимъ Аѳа<unclear>на</unclear>сїемь патрїархомь Алеѯандїискымь.
@@ -207,12 +207,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">38v-49r</locus>
+                        <locus n="2">38v–49r</locus>
                         <title xml:lang="bg">Житие на св. Пантелеймон</title>
                         <date type="churchCal" when="--07-27">27 July</date>
-                        <note>The miscellany is identified in <ref type="bibl" target="bib:Иванова2004a">Иванова 2004:213-225</ref>.</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 27.07.</ref>
-                        </note>
+                        <note>.</note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 27.07/3аа</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Іꙋ<seg rend="sup">л</seg> к҃ꙁ.
                                 Мѫченїе ст҃го и славнаго великомѫченика Панделеимона. слово
@@ -232,12 +231,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3">
-                        <locus n="3">49r-72r</locus>
+                        <locus n="3">49r–72r</locus>
                         <title xml:lang="bg">Житие на св. импeратрица Теофана</title>
-                        <date type="churchCal" when="--12-16">16 December</date>
-                        <note>The miscellany is identified in <ref type="bibl" target="bib:Иванова2004a">Иванова 2004:213-225</ref>.</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 16.12.</ref>
-                        </note>
+                        <date type="churchCal" when="--12-18">18 December</date>
+                        <note><ref type="bibl" target="bib:Иванова2008">BHBS: 18.12/1</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">де<seg rend="sup">к</seg> и҃і.
                                 Житїе и жиꙁнь прп<seg rend="sup">д</seg>бныѫ мт҃ре нашѫ Ѳеофанѡ
@@ -250,18 +247,15 @@
                                 сѧ.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">инаа же ꙗже врѣмѧ
                                 забьвенїа гльбинами покры безчислъна сѫща, которое слово сказати
-                                възможеть. о Хѣ҃ Iс҃ѣ г҃и нашемь .ами<seg rend="sup">н</seg>
-                            </explicit>
+                                възможеть. о Хѣ҃ Iс҃ѣ г҃и нашемь .ами<seg rend="sup">н</seg></explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
-                        <locus n="4">72r-91v</locus>
+                        <locus n="4">72r–91v</locus>
                         <title xml:lang="bg">Житие и мъчение на св. Евстатий и семейството му</title>
                         <date type="churchCal" when="--12-13">13 December</date>
-                        <note>The miscellany is identified in <ref type="bibl" target="bib:Иванова2004a">Иванова 2004:213-225</ref>.</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS
-                                13.12.</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS
+                                13.12/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мѫченїе ст҃хь м<seg rend="sup">ч</seg>никь Евстратїа. Авѯентїа. Еугенїа. Мардарїа и
                                 Ѡреста.</head>
@@ -276,13 +270,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5">
-                        <locus n="5">91v-123v</locus>
+                        <locus n="5">91v–123v</locus>
                         <title xml:lang="bg">Мъчение на св. Артемий</title>
                         <date type="churchCal" when="--10-20">20 October</date>
-                        <note>The miscellany is identified in <ref type="bibl" target="bib:Иванова2004a">Иванова 2004:213-225</ref>.</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS
-                                20.10.</ref>
-                        </note>
+                        <note><ref type="bibl" target="bib:Иванова2008">BHBS 20.10/1</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мѫченїе ст҃го и славнаго
                                     великом<seg rend="sup">ч</seg>ника Артемїа. сло<seg rend="sup">в</seg> е҃.</head>
@@ -299,13 +290,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6">
-                        <locus n="6">124r-141r</locus>
+                        <locus n="6">124r–141r</locus>
                         <title xml:lang="bg">Мъчение на св. Феврония</title>
                         <date type="churchCal" when="--06-25">25 June</date>
-                        <note>The miscellany is identified in <ref type="bibl" target="bib:Иванова2004a">Иванова 2004:213-225</ref>.</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS
-                                25.06.</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS 25.06/1б</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">
                                 <unclear>Іꙋ<seg rend="sup">н</seg> к҃е</unclear>. Мѫченїе ст҃ыѫ
@@ -325,13 +313,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7">
-                        <locus n="7">141r-147v</locus>
+                        <locus n="7">141r–147v</locus>
                         <title xml:lang="bg">Надгробно слово за Мелетий Антиохийски от Григорий Нисийски</title>
                         <author>Gregory of Nyssa</author>
                         <date type="churchCal" when="--02-12">12 February</date>
-                        <note>The miscellany is identified in <ref type="bibl" target="bib:Иванова2004a">Иванова 2004:213-225</ref>.</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 12.02.</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 12.02/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ сты҃хъ ѡ҃ца нашего
                                 Григорїа сло<seg rend="sup">в</seg> нагробное иже въ ст҃ы<seg rend="sup">х</seg> великомѹ Мелетїоу архїепк<seg rend="sup">с</seg>пꙋ Антїохїискомоу·</head>
@@ -344,12 +330,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8">
-                        <locus n="8">147v-160v</locus>
+                        <locus n="8">147v–160v</locus>
                         <title xml:lang="bg">Слово за Сретение Господне от Атанасий Александрийски</title>
                         <date type="churchCal" when="--02-02">2 February</date>
-                        <note>The miscellany is identified in <ref type="bibl" target="bib:Иванова2004a">Иванова 2004:213-225</ref>.</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 2.02.</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 2.02/7</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ыхъ о҃ца нашего
                                 Аѳанасїа Великааго, архїепк<seg rend="sup">с</seg>па
@@ -366,14 +350,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9">
-                        <locus n="9">160v-166v</locus>
+                        <locus n="9">160v–166v</locus>
                         <title xml:lang="bg">Житие на св. 40 мъченици от Севастия</title>
                         <author>Alexander the Monk</author>
                         <date type="churchCal" when="--03-09">9 March</date>
-                        <note>The miscellany is identified in <ref type="bibl" target="bib:Иванова2004a">Иванова 2004:213-225</ref>.</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS
-                                09.03.</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS 09.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мѫченїе с҃ты<seg rend="sup">х</seg> мч҃нкь м҃ иже въ Севастїи м<seg rend="sup">ч</seg>ны<seg rend="sup">х</seg> Сло<seg rend="sup">в</seg>
                                 ѳ҃.</head>
@@ -388,12 +369,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10">
-                        <locus n="10">166v-172v</locus>
+                        <locus n="10">166v–172v</locus>
                         <title xml:lang="bg">Похвала за св. 40 мъченици от Василий Велики</title>
                         <date type="churchCal" when="--03-09">9 March</date>
-                        <note>The miscellany is identified in <ref type="bibl" target="bib:Иванова2004a">Иванова 2004:213-225</ref>.</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 09.03.</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 09.03/4б</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ыхь о҃ца нашего
                                     архїеп<seg rend="sup">с</seg>кпа Кесарїѫ Каппадѡкїискыѧ Василїа
@@ -407,13 +386,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11">
-                        <locus n="11">173-177v</locus>
+                        <locus n="11">173–177v</locus>
                         <title xml:lang="bg">Житие на св. Теодор Стратилат</title>
                         <date type="churchCal" when="--06-08">8 June</date>
-                        <note>The miscellany is identified in <ref type="bibl" target="bib:Иванова2004a">Иванова 2004:213-225</ref>.</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS
-                                08.06.</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS
+                                08.06/2</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мѫченїе ст҃го м<seg rend="sup">ч</seg>ника Ѳеѡдѡра Стратилата. сло<seg rend="sup">в</seg>
                                 а҃і.</head>
@@ -427,12 +404,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12">
-                        <locus n="14">177v-180v</locus>
+                        <locus n="14">177v–180v</locus>
                         <title xml:lang="bg">Похвала за апостол Вартоломей от Йосиф монах</title>
                         <date type="churchCal" when="--06-11">11 June</date>
-                        <note>The miscellany is identified in <ref type="bibl" target="bib:Иванова2004a">Иванова 2004:213-225</ref>.</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 11.06.</ref>
-                        </note>
+                        <filiation><ref type="bibl" target="bib:Иванова2008">BHBS: 11.06/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Іѡсифа смѣренаго инока, слово
                                 похвалное ст҃мѹ Варѳоломеꙋ ап<seg rend="sup">с</seg>лѹ. сло<seg rend="sup">в</seg> в҃і.</head>
@@ -445,11 +420,9 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13">
-                        <locus n="13">173r-177v</locus>
+                        <locus n="13">173r–177v</locus>
                         <title xml:lang="bg">Слово за Благовещение от Йоан Златоуст, 2</title>
-                        <note>The miscellany is identified in <ref type="bibl" target="bib:Иванова2004a">Иванова 2004:213-225</ref>.</note>
-                        <note>The text is included in <ref type="bibl" target="bib:Иванова2008">BHBS: 14.09/10б</ref>
-                        </note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 25.03/8</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Тогож<seg rend="sup">д</seg>е
                                 Іѡанна архїеп<seg rend="sup">с</seg>кпа Кѡнстантина градѣ
@@ -464,7 +437,7 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#EN">
+                    <origin evidence="conjecture" resp="#EN">
                         <origDate>15th c., the beginning</origDate>
                     </origin>
                     <provenance>The codex once belonged to the National Museum of antiquities, №

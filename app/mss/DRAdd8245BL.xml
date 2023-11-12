@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DRAdd8245BL">
     <teiHeader>
         <fileDesc>
@@ -12,7 +16,7 @@
             <publicationStmt>
                 <publisher>Istitute of Literature</publisher>
                 <pubPlace>Sofia, Bulgaria</pubPlace>
-                <date>02.2004</date>
+                <date when="2004-02">02.2004</date>
                 <idno type="Repertorium">RC-DRAdd8245BL</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -20,8 +24,7 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -54,6 +57,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#DR" when="2009-10-07">Removed entities for the basic Old Slavic characters </change>
@@ -70,18 +74,17 @@
                     <repository>British Library</repository>
                     <collection>Additional manuscripts</collection>
                     <idno type="shelfmark">Add. MS 8245</idno>
-                    <altIdentifier type="catalgue">
+                    <altIdentifier>
                         <idno type="catalogue">52</idno>
                         <note>
-                            <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 66-67.</ref>
+                            <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 66–67.</ref>
                         </note>
                     </altIdentifier>
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="codex">
-                        <supportDesc>
+                        <supportDesc material="paper">
                             <support>
-                                <material>Paper </material>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Arms of
                                         Amsterdam</motif>
@@ -106,9 +109,9 @@
                                 </dimensions>
                             </extent>
                             <foliation>
-                                <date>Modern.</date>
-                                <signatures>i, (ia, ib), 2-87, (88-91). Previous foliation: 1-86, on
-                                    ff. 2-87.</signatures>
+                                <date>Modern</date>
+                                <signatures>i, (ia, ib), 2–87, (88–91). Previous foliation: 1–86, on
+                                    ff. 2–87</signatures>
                             </foliation>
                             <collation>
                                 <summary>Indeterminable because of the stiffness of the
@@ -135,24 +138,24 @@
                                 <dimensions unit="mm" type="binding">
                                 <height>160</height>
                                 <width>100</width>
-                            </dimensions>. The leather from the older binding with simple blind
+                            </dimensions>The leather from the older binding with simple blind
                             tooled borders and floral ornaments is re-used for both covers;
-                            page-edges are gilded.</p>
+                            page-edges are gilded</p>
                     </bindingDesc>
                     <additions type="inscriptions">
                         <list type="simple">
                             <item>
                                 <locus>f. i a</locus>
                                 <quote xml:lang="en">
-                                    <persName type="owner" full="yes">John Meetchewrin</persName>
-                                    <date>1717</date> My <persName type="owner" full="yes">Lord
+                                    <persName>John Meetchewrin</persName>
+                                    <date>1717</date> My <persName>Lord
                                         Apraxin</persName>s Gift</quote>
                             </item>
                             <item>
                                 <locus>f. 87v</locus>
                                 <date>17th/18th c.</date>
-                                <quote xml:lang="cu"> сиꙗ книга <name type="owner" full="yes">алеѯан<seg rend="sup">д҇</seg>ръ петровича
-                                        оп'раѯина</name> ді, мо<seg rend="sup">с҇</seg>ковскогѡ
+                                <quote xml:lang="cu"> сиꙗ книга <persName>алеѯан<seg rend="sup">д҇</seg>ръ петровича
+                                        оп'раѯина</persName> ді, мо<seg rend="sup">с҇</seg>ковскогѡ
                                         пи<seg rend="sup">с҇</seg>ма </quote>
                                 <note>in skoropis'</note>
                             </item>
@@ -166,22 +169,17 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
                         <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
-                            <locus>ff. 1-(91)</locus>
+                            <locus>ff. 1–(91)</locus>
                         </locusGrp>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" type="scribe" xml:id="AnonymousAdd8245BL" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="cursive">
-                            <p>A very late <hi>skoropis'</hi>, or detached cursive (<dim>3</dim>mm
-                                line, <dim>6</dim> mm between lines), with relatively few
-                                superscripts.</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="cursive">A very late <hi>skoropis'</hi>, or detached cursive (<dimensions type="char" unit="mm"><height>3</height></dimensions>, <dimensions type="line-space" unit="mm"><height>6</height></dimensions>), with relatively few
+                                superscripts.</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Russian.</p>
-                            </orthography>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Russian</summary>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 66-67</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0"><ref target="bib:Cleminson1988">Cleminson 1988: 66–67</ref></bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -197,7 +195,7 @@
                         </head>
                     </sampleText>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">2-13v</locus>
+                        <locus n="1">2–13v</locus>
                         <title xml:lang="bg">Молитва за понеделник вечер</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">П'ла́чь в' понедѣ́ло<seg rend="sup">к҇</seg> в' ве́че<seg rend="sup">р҇</seg>.</head>
@@ -206,7 +204,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">14-25</locus>
+                        <locus n="2">14–25</locus>
                         <title xml:lang="bg">Молитва за вторник вечер</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Пла́чь во вто́ро<seg rend="sup">к҇</seg> ве́черъ;</head>
@@ -215,7 +213,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">25v-37</locus>
+                        <locus n="3">25v–37</locus>
                         <title xml:lang="bg">Молитва за сряда вечер</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Пла́чь в' сре́ду в'
@@ -226,7 +224,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">37v-48v</locus>
+                        <locus n="4">37v–48v</locus>
                         <title xml:lang="bg">Молитва за четвъртък вечер</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Пла́чъ вчетверто́къ в'
@@ -236,7 +234,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">49-59v</locus>
+                        <locus n="5">49–59v</locus>
                         <title xml:lang="bg">Молитва за петък вечер</title>
                         <author>Ephrem the Syrian</author>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -247,7 +245,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="6">60-72v</locus>
+                        <locus n="6">60–72v</locus>
                         <title xml:lang="bg">Молитва за събота вечер, 1</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Пла́чъ в суббо́ту в'
@@ -258,7 +256,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">73-87</locus>
+                        <locus n="7">73–87</locus>
                         <title xml:lang="bg">Молитва за събота вечер, 2</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <rubric xmlns="http://www.tei-c.org/ns/1.0">В то́йже д҃нь и҆
@@ -268,18 +266,16 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#DR">
-                        <origDate notBefore="1601" notAfter="1799">17th-18th c.</origDate>
+                    <origin evidence="conjecture" resp="#DR">
+                        <origDate notBefore="1601" notAfter="1799">17th–18th c.</origDate>
                         <origPlace>Unknown; Russian origin</origPlace>
-                        <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 66-67</ref>
+                        <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 66–67</ref>
                     </origin>
-                    <provenance>
-                        <locus>Inside the front cover</locus> is the bookplate of the Hon.
-                            <persName type="owner" full="yes">Frederic North</persName> (later the
-                        fifth Earl of Gilford). On North, see <ref type="publication" target="bib:Partridge1975">Partridge (1975)</ref>. An <persName full="yes">Ivan Mičurin</persName> was in Britain in 1701-1714: see <ref type="publication" target="bib:Cross1980">Cross (1980): 147</ref>. Count
+                    <provenance><locus>Inside the front cover</locus> is the bookplate of the Hon.
+                            <persName type="owner">Frederic North</persName> (later the
+                        fifth Earl of Gilford). On North, see <ref type="bibl" target="bib:Partridge1975">Partridge (1975)</ref>. An <persName>Ivan Mičurin</persName> was in Britain in 1701–1714: see <ref type="bibl" target="bib:Cross1980">Cross 1980: 147</ref>. Count
                             <persName full="yes">Alexandr Petrovič Apraksin</persName> (c.
-                        1690-1725) was here in 1709-1716: see <ref type="publication" target="bib:Cross1980">Cross (1980): 152-153.</ref>
-                    </provenance>
+                        1690–1725) was here in 1709–1716: see <ref type="bibl" target="bib:Cross1980">Cross 1980: 152–153.</ref></provenance>
                     <acquisition>After the sale of Frederic North's book in 1830 the MS was bought
                         by the British Museum; bears a British museum stamp.</acquisition>
                 </history>
@@ -288,15 +284,16 @@
                         <recordHist>
                             <source>
                                 <p>Directly catalogued from the original manuscript using the
-                                    printed catalogue <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 66-67</ref>.</p>
+                                    printed catalogue <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 66–67</ref>.</p>
                             </source>
                         </recordHist>
                     </adminInfo>
                     <surrogates>
-                        <p>Microform: Central Library of BAS, <idno>MF-25</idno>
-                        </p>
-                        <p>Digital images of ff. 49, 2 (files: <idno>C7911-03</idno>,
-                                <idno>C7911-02</idno>).</p>
+                        <list>
+                            <item>Microform: Central Library of BAS, <idno>MF-25</idno></item>
+                            <item>Digital images of ff. 49, 2 (files: <idno>C7911-03</idno>,
+                                <idno>C7911-02</idno>).</item>
+                        </list>
                     </surrogates>
                 </additional>
             </msDesc>

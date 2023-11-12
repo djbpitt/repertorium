@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AA308NBKM">
     <teiHeader>
         <fileDesc>
@@ -12,7 +15,7 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>15. 08. 1995</date>
+                <date when="1995-08-15">15. 08. 1995</date>
                 <idno type="Repertorium">RC-AA308NBKM</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -20,14 +23,11 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Цонев1910">Цонев 1910: 252-254</ref>
-                </p>
+                <p><ref type="bibl" target="bib:Цонев1910">Цонев 1910: 252-254</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -55,6 +55,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when="2009-04-17">Removed constructions
@@ -83,7 +84,7 @@
                     <altIdentifier type="former">
                         <idno type="shelfmark">80</idno>
                     </altIdentifier>
-                    <altIdentifier type="other">
+                    <altIdentifier>
                         <idno type="unioncatalogue">222</idno>
                         <note>
                             <ref type="bibl" target="bib:Христова1982">Своден каталог: 91</ref>
@@ -94,7 +95,6 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Anchor
                                         in circle with star above</motif>
@@ -111,9 +111,6 @@
                                     <width>60-70</width>
                                 </dimensions>
                             </extent>
-                            <collation>
-                                <summary>no data</summary>
-                            </collation>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" writtenLines="15 17"/>
@@ -126,31 +123,27 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Leather over wooden panels</p>
+                            <summary>Leather on cardboard</summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
-                        <locus>f. 131r</locus>
+                        <list><item><locus>f. 131r</locus>
                         <quote xml:lang="cu">вь лѣто зѯи҃ сиие лето бисть соуша велика не роди
                                 се<unclear>...</unclear>. бисть неволꙗ и зла. велика ѡ҃т҃
-                            тоурци</quote>
+                            тоурци</quote></item></list>
                     </additions>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
                         <locus xmlns="http://www.tei-c.org/ns/1.0">1r-131v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Grigorie</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial"/>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Grigorie</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"/>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, with two jers
-                                    (predominate small jer) used inconsistently</p>
-                            </orthography>
+                            <langNote key="orthography">Without juses, with two jers
+                                (predominate small jer) used inconsistently</langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <resp>de visu</resp>
-                            <name full="yes">Adelina Angusheva</name>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -176,8 +169,7 @@
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">До<seg rend="sup">с</seg>ино
-                                по троичны канѡ<seg rend="sup">н</seg>
-                            </head>
+                                по троичны канѡ<seg rend="sup">н</seg></head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="original">
@@ -400,8 +392,7 @@
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мс҃цослов'ць. ві҃ мс҃цемь въ
-                                    немоще<seg rend="sup">х</seg>
-                            </head>
+                                    немоще<seg rend="sup">х</seg></head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD25" type="translation">
@@ -442,14 +433,16 @@
                         <note>
                             <note>Cryptographical note:</note>
                         </note>
+                    <re:sampleText xml:lang="cu">
                         <colophon>
-                            <p>азь многогрѣшни дяконь <name xml:lang="cu" type="scribe" full="yes">Григорие</name> писа.</p>
+                            <ab>азь многогрѣшни дяконь <name  role="scribe">Григорие</name> писа.</ab>
                         </colophon>
+                    </re:sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#AA">
-                        <origDate notBefore="1400" notAfter="1599">15th-16th c.</origDate>
+                    <origin evidence="conjecture" resp="#AA">
+                        <origDate notBefore="1500" notAfter="1525">16th c., first quarter</origDate>
                     </origin>
                 </history>
                 <additional>
@@ -457,8 +450,7 @@
                         <recordHist>
                             <source>
                                 <p>Directly catalogued from the original manuscript using the
-                                    printed catalogue from <ref type="bibl" target="bib:Цонев1910">Цонев 1910:252-254</ref>
-                                </p>
+                                    printed catalogue from <ref type="bibl" target="bib:Цонев1910">Цонев 1910:252-254</ref></p>
                             </source>
                         </recordHist>
                     </adminInfo>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-MPSuprasliensis">
+-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-MPSuprasliensis">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -14,18 +16,15 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>1998</date>
+                <date when="1998">1998</date>
                 <idno type="Repertorium">RC-MPSuprasliensis</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref
-                            target="http://www.ilit.bas.bg/repertorium/"
-                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -48,7 +47,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Reading menaion for March</item>
                         <item>Vitae</item>
                         <item>Homilies</item>
@@ -58,14 +57,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when-iso="2010-07-10">Conversion to Repertorium 3.3. Included head
@@ -83,57 +82,24 @@
     <text>
         <body>
             <msDesc>
-                <head>Menologion and Triodion Panegyrikon, 10th c., Southeastern Bulgaria</head>
                 <msIdentifier>
                     <msName xml:lang="en" type="general">menologion</msName>
                     <msName xml:lang="bg" type="individual">Супрасълски сборник</msName>
                     <msName xml:lang="la" type="individual">Codex Suprasliensis</msName>
                     <msName xml:lang="en" type="individual">Codex Suprasliensis</msName>
                     <msName xml:lang="ru" type="individual">Супрасльская рукопись</msName>
-                    <p>Parts are:</p>
-                    <altIdentifier type="partial" n="1." xml:id="Kopitar2">
-                        <country>Slovenia</country>
-                        <settlement>Ljubljana</settlement>
-                        <repository>National and University library</repository>
-                        <idno type="shelfmark">Cod. Kopitrar 2</idno>
-                    </altIdentifier>
-                    <altIdentifier type="partial" n="2." xml:id="BO3201">
-                        <country>Poland</country>
-                        <settlement>Warszawa</settlement>
-                        <repository>Biblioteka Narodowa</repository>
-                        <collection>Zamojski's collection</collection>
-                        <idno type="shelfmark">BO 3.201</idno>
-                    </altIdentifier>
-                    <altIdentifier type="partial" n="3." xml:id="QpI72">
-                        <country>Russia</country>
-                        <settlement>Sankt Peterburg</settlement>
-                        <repository>Rossiiskaia natsional’naia biblioteka</repository>
-                        <collection>Osnovnoe sobranie</collection>
-                        <idno type="shelfmark">Q.p.I.72</idno>
-                    </altIdentifier>
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="codex">
                         <supportDesc material="parchment">
                             <extent>
                                 <measure unit="folia">285</measure>
-                                <note>(<ref target="#Kopitar2">118 ff.</ref>, <ref target="#BO3201"
-                                        >151 ff.</ref>, <ref target="#QpI72">16 ff</ref>)</note>
-                                <dimensions unit="mm" corresp="Kopitar2" type="folia">
-                                    <height>310</height>
-                                    <width>213</width>
-                                </dimensions>
-                                <dimensions unit="mm" corresp="QpI72" type="folia">
-                                    <height>312</height>
-                                    <width>250</width>
-                                </dimensions>
+                                <note>(118 ff. (Kopitar 2), 151 ff. (BO3 201), 16 ff (Q.п.I.72)</note>
                             </extent>
                             <collation>
                                 <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                                     <extent xmlns="http://www.tei-c.org/ns/1.0">16</extent>
                                 </quire>
-                                <pricking xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                    >no;</pricking>
                             </collation>
                             <condition>
                                 <p>The beginning and the end of Ljubljana part is missing; f. 38
@@ -141,7 +107,7 @@
                                     Pompius) is bound at a wrong place and should be read after f.
                                     88v. Two leaves have been lost from the middle of the Vita of St
                                     Paul the Simple, after f. 86v. There are lacunae between
-                                    ff.78v-79r, 84v-85r.</p>
+                                    ff.78v–79r, 84v–85r.</p>
                                 <p>The edges of the folia in Ljubljana part were trimmed during the
                                     restoration of this part of the MS, with the result that the
                                     parts that are now in Saint Petersburg and Warsaw are slightly
@@ -156,19 +122,18 @@
                     <decoDesc>
                         <p>Small borders and initials in geometrical style, painted with the same
                             ink as the main text, mark the beginnings of almost every chapter
-                                (<locus>ff. 8r, 12r-12v, 27v, 34v, 41v-42r, 50r, 61rr, 63v, 72v,
-                                73v,85v-86r, 88v, 93r, 105r, 107r-107v, 110v</locus>)</p>
+                                (<locus>ff. 8r, 12r–12v, 27v, 34v, 41v–42r, 50r, 61rr, 63v, 72v,
+                                73v,85v–86r, 88v, 93r, 105r, 107r–107v, 110v</locus>)</p>
                     </decoDesc>
                     <bindingDesc>
-                        <binding>
-                            <p>No orginal binding</p>
+                        <binding contemporary="false">
+                            <summary>No orginal binding</summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
                         <locus>f. 260</locus>
-                        <quote xml:lang="cu">г(оспод)и помилоуи <persName full="yes"
-                                >ретъка</persName> амин</quote>
-                        <note>This marginal note reads: ‘Lord have mercy on Retŭko. Amen. Some
+                        <quote xml:lang="cu">г(оспод)и помилоуи <persName>ретъка</persName> амин</quote>
+                        <note>Some
                             researchers have suggested that Retŭko is the name of a scribe.</note>
                     </additions>
                 </physDesc>
@@ -176,47 +141,45 @@
                     <summary xmlns="http://www.tei-c.org/ns/1.0">Codex Suprasliensis shows careful
                         Cyrillic writing and craftsmanship.</summary>
                     <scribe n="1">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-118v</locus>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
-                            <p>Uncial of archic type</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–118v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="uncial">Uncial of archic type</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Two jers; four letters for
+                            <langNote key="orthography">Two jers; four letters for
                                     the nasals: back nasal, jotated back nasal and two signs for the
                                     front nasal (one in postvocalic position, one in postconsonantal
                                     position); mixing up of the jat' and jotated "a" in the same
-                                    position following soft consonants.</p>
-                            </orthography>
+                                    position following soft consonants.
+                            </langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Велчева1980">Велчева 1980</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Велчева1980">Велчева 1980</ref>
+                        </bibl>
                     </scribe>
                     <scribe n="2">
                         <locus xmlns="http://www.tei-c.org/ns/1.0">66r, line 30</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">M. Petrova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
                     </scribe>
                     <scribe n="3">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">67r, line 9-20</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">67r, line 9–20</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
                     </scribe>
                     <scribe n="4">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">109v, line 8-16</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">109v, line 8–16</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1r-8r</locus>
+                        <locus n="1">1r–8r</locus>
                         <title xml:lang="bg">Житие на св. Павел и Юлияния</title>
                         <date type="churchCal" when="--03-04">4th of March</date>
                         <note>Without beginning and title.</note>
+                        <filiation type="source">Greek parallel: BHG 964 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/16553">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 4.03/1</ref></filiation>
                         <re:sampleText xml:lang="cu">
                             <incipit defective="true">мꙑи҅хъ бо о҅тъ бога ѥ҅свѣ· твоѥи бо доуши
                                 погꙑбѣль҆ прѣо҅долѣ дожи и҆ до съмрь҆ти· не добрѣ мѫдровати на
@@ -228,10 +191,12 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">8r-12r</locus>
+                        <locus n="2">8r–12r</locus>
                         <title xml:lang="bg">Житие на св. Василиск</title>
                         <date type="churchCal" when="--03-05">5th of March</date>
+                        <filiation type="source">Greek parallel: BHG 241 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/15198">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 5.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мѣсꙙца марта въ е꙯ день҆·
                                 мѫчениѥ ст꙯ааго василиска⁘</head>
@@ -246,10 +211,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3">
-                        <locus n="3">12r-27v</locus>
+                        <locus n="3">12r–27v</locus>
                         <title xml:lang="bg">Житие на св. Конон Исаврийски</title>
                         <date type="churchCal" when="--03-06">6th of March</date>
+                        <filiation type="source">Greek parallel: BHG 2077 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/14959">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 6.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта вь ѕ꙯ дьнь҆
                                 чоудотворениꙗ ст꙯ааго конона и҅же въ исавриї ⁘</head>
@@ -266,12 +233,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
-                        <locus n="4">27v-34v</locus>
+                        <locus n="4">27v–34v</locus>
                         <title xml:lang="bg">Житие на св. Теодор, Константин, Теофил, Калист, Васой и дружината им</title>
                         <date type="churchCal" when="--03-07">7th of March, Vita of the 42 Martyrs
                             of Amorion</date>
-                        <note xml:lang="bg">(Житие на 42-мата аморийски мъченици)</note>
+                        <note xml:lang="bg">(Житие на 42–мата аморийски мъченици)</note>
+                        <filiation type="source">Greek parallel: BHG 1210 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/17020">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 7.03/I.1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта ·з꙯· мѫчениѥ
                                 ст꙯ꙑи҅хъ и҅ славънꙑхъ новоꙗ҅вь҆шиїхъ сꙙ мѫченикъ· ѳеѡ҄дора·
@@ -289,10 +258,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5">
-                        <locus n="5">34v-42r</locus>
+                        <locus n="5">34v–42r</locus>
                         <title xml:lang="bg">Житие на св. 40 мъченици от Севастия</title>
                         <date type="churchCal" when="--03-09">9th of March</date>
+                        <filiation type="source">Greek parallel: BHG 1201 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/17010">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 9.03/1в</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта въ ѳ꙯ дьнь҆
                                 мѫчениѥ ст꙯ꙑи҅хъ мѫченикъ м꙯· и҅же въ севастии мѫчени бꙑшꙙ ⁘</head>
@@ -307,11 +278,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6">
-                        <locus n="6">42r-50r</locus>
+                        <locus n="6">42r–50r</locus>
                         <title xml:lang="bg">Похвала за св. 40 мъченици от Василий Велики</title>
                         <author>Basil the Great</author>
                         <date type="churchCal" when="--03-09">9th of March</date>
+                        <filiation type="source">Greek parallel: BHG 1205, CPG 2863 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/7401">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 9.03/4а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Ст꙯аа҅го васил҄ѣ а҅рꙿхие҅пп꙯а
                                 к҄есариѧ кападок҄иїскꙑѧ· похвала о҅ м꙯ мѫченицѣхъ·</head>
@@ -325,10 +298,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7">
-                        <locus n="7">50r-61r</locus>
+                        <locus n="7">50r–61r</locus>
                         <title xml:lang="bg">Житие на св. Кодрат</title>
                         <date type="churchCal" when="--03-10">10th of March</date>
+                        <filiation type="source">Greek parallel: BHG 359 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/14954">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 10.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта въ ї꙯ мѫка
                                 ст꙯ааго кодрата и҅ и҅же сь н҄имъ ⁘</head>
@@ -344,10 +319,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8">
-                        <locus n="8">61r-63v</locus>
+                        <locus n="8">61r–63v</locus>
                         <title xml:lang="bg">Житие на св. Григорий папа Римски</title>
                         <date type="churchCal" when="--03-11">11th of March</date>
+                        <filiation type="source">Greek parallel: BHG 721 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/15721">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 11.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта въ а꙯ї· житиѥ
                                 григора папꙑ роумъскаꙿго·</head>
@@ -364,10 +341,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9">
-                        <locus n="9">63v-72v</locus>
+                        <locus n="9">63v–72v</locus>
                         <title xml:lang="bg">Житие на св. Пионий</title>
                         <date type="churchCal" when="--03-12">12th of March</date>
+                        <filiation type="source">Greek parallel: BHG 1546 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/17604">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 12.03/I.1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта въ в꙯ї· мѫчениѥ
                                 ст꙯ааго пио҅нꙿна· презвутера змурнь҆ска града⁘</head>
@@ -382,9 +361,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10">
-                        <locus n="10">72v-73v</locus>
+                        <locus n="10">72v–73v</locus>
                         <title xml:lang="bg">Молитва на св. Пионий</title>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 12.03/I.2</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">молитва ст꙯аа҅го піѡ҄ниꙗ҆·
                                 и҅же сꙙ о҅брѣте въ и҅но писаниѥ ⁘</head>
@@ -399,11 +379,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11">
-                        <locus n="11">73v-78v</locus>
+                        <locus n="11">73v–78v</locus>
                         <title xml:lang="bg">Житие на св. Савин</title>
                         <date type="churchCal" when="--03-13">13th of March</date>
-                        <note>The end are missing</note>
+                        <note>The end is missing</note>
+                        <filiation type="source">Greek parallel: BHG 1612 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/17727">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 13.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта въ г꙯і мѫчениѥ
                                 ст꙯ааго савина ⁘</head>
@@ -417,12 +399,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12">
-                        <locus n="12">79r-84v</locus>
+                        <locus n="12">79r–84v</locus>
                         <title xml:lang="bg">Житие на св. Александър</title>
                         <date type="churchCal" when="--03-15">15th of March</date>
                         <note>The beginning and the end are missing</note>
-                        <note>The beginning and the end of this text has been lost</note>
+                        <filiation type="source">Greek parallel: BHG 1318 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/19770">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 15–17.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">и҅ мнози вѣровашꙙ кꙿ немоу·
                                 Слꙑшавъ же кнꙙзъ повелѣ привести и҆· пришь҆дъшоу же а҅леѯандроу
@@ -433,10 +416,9 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13">
-                        <locus n="13">85r-85v</locus>
+                        <locus n="13">85r–85v</locus>
                         <title xml:lang="bg">Слово за таксиота на светите отци</title>
                         <note>The beginning and the end are missing</note>
-                        <note>The beginning of this text has been lost</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">хъ молити ꙗ· и҅звести мꙙ
@@ -452,10 +434,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14">
-                        <locus n="14">85v-88v</locus>
+                        <locus n="14">85v–88v</locus>
                         <title xml:lang="bg">Житие на св. Павел Препрости</title>
                         <note>Two folia are missing from the middle of the text after f. 86v</note>
+                        <filiation type="source">Greek parallel: BHG 1474r (<ref target="https://pinakes.irht.cnrs.fr/notices/recension/id/35">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 19.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мѣсꙙца марта въ девꙙтꙑ на
                                 десꙙте· житиѥ прѣподобь҆нааго о҅тьца нашего· павъла прѣпростааго
@@ -471,10 +455,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15">
-                        <locus n="15">88v, 38r-38v, 89r-93r</locus>
+                        <locus n="15">88v, 38r–38v, 89r–93r</locus>
                         <title xml:lang="bg">Житие на св. Терентий, Африкан и Помпий</title>
                         <date type="churchCal" when="--03-20">20th of March</date>
+                        <filiation type="source">Greek parallel: BHG 1700 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/17896">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 20.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта к꙯· мѫка
                                 свꙙтꙑихъ· терентиꙗ· африкана· и помпиꙗ ⁘</head>
@@ -490,10 +476,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16">
-                        <locus n="16">93r-105r</locus>
+                        <locus n="16">93r–105r</locus>
                         <title xml:lang="bg">Житие на св. Исакий</title>
                         <date type="churchCal" when="--03-21">21st of March</date>
+                        <filiation type="source">Greek parallel: BHG 956 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/16524">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 21.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта к꙯а· житиѥ
                                 прѣподобънааго о҅ц꙯а нашего и҅саак҄и моностꙑра далматъскаꙿго
@@ -510,10 +498,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17">
-                        <locus n="17">105r-107r</locus>
+                        <locus n="17">105r–107r</locus>
                         <title xml:lang="bg">Житие на св. Трофим и Евкарпион</title>
                         <date type="churchCal" when="--03-22">22nd of March</date>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 22.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта к꙯в мѫчениѥ
                                 свꙙтоую҄· трофима и҅ е҅укарпиѡ҄на ⁘</head>
@@ -529,10 +518,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18">
-                        <locus n="18">107r-110v</locus>
+                        <locus n="18">107r–110v</locus>
                         <title xml:lang="bg">Житие на св. Дометий</title>
                         <date type="churchCal" when="--03-23">23rd of March</date>
+                        <filiation type="source">Greek parallel: BHG 561 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/15400">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 23.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мѣсꙙца марта· к꙯г· мѫка
                                 ст꙯ааго дометиа и҅ ꙋ҄ченикъ ѥ҅го ⁘</head>
@@ -548,12 +539,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD19">
-                        <locus n="19">110v-118v</locus>
+                        <locus n="19">110v–118v</locus>
                         <title xml:lang="bg">Житие на св. Артемий</title>
                         <date type="churchCal" when="--03-24">24th of March</date>
-                        <note>The end is missing</note>
                         <note>The end is missing. Ljubljana part is ending here.</note>
+                        <filiation type="source">Greek parallel: BHG 175 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/14703">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 24.03/I.1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мѣсꙙца марта к꙯д· страсть
                                 свꙙтааго чистител҄ѣ и҅ мѫченика· а҅ртемиа ⁘</head>
@@ -565,13 +557,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD20">
-                        <locus n="20">1r-4r [119r-122r]</locus>
+                        <locus n="20">1r–4r [119r–122r]</locus>
                         <title xml:lang="bg">Слово за Благовещение от Йоан Златоуст, 1</title>
                         <author>John Chrysostom</author>
                         <date type="churchCal" when="--03-25">25th of March</date>
-                        <note>The beginning is missing. St Petersburg part is beginning here.</note>
-                        <note>Without beginning and title.</note>
+                        <note>The title and the beginning are missing. St Petersburg part is beginning here.</note>
+                        <filiation type="source">Greek parallel: BHG 1085c, CPG 4628, Aldama 54 (<ref target="https://pinakes.irht.cnrs.fr/notices/recension/id/479">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 25.03/14ж</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">жърьцемъ· и҅ мь҆нѣ бѫдетъ
                                 страдати подроужиꙗ и волꙙ своѥѧ· а҅ твоѭ̑ шиѭ̑ брадвиѭ̑ о҅тъсѣкнетъ·
@@ -584,11 +577,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD21">
-                        <locus n="21">4r-8r [122r-126r]</locus>
+                        <locus n="21">4r–8r [122r–126r]</locus>
                         <title xml:lang="bg">Слово за Благовещение от Йоан Златоуст, 2</title>
                         <author>John Chrysostom</author>
                         <date type="churchCal" when="--03-25">25th of March</date>
+                        <filiation type="source">Greek parallel: BHG 1128f, CPG 4519, Aldama 389 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/7444">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 25.03/11а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">ст꙯ааго їѡ̑ана златоо̑устаа҅го
                                 слово на благовѣштениѥ богородици·</head>
@@ -602,10 +597,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD22">
-                        <locus n="22">8v-9v [126v-127v]</locus>
+                        <locus n="22">8v–9v [126v–127v]</locus>
                         <title xml:lang="bg">Житие на св. Ириней</title>
                         <date type="churchCal" when="--03-26">26th of March</date>
+                        <filiation type="source">Greek parallel: BHG 948 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/16506">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 26.03/II.1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта к꙯ѕ· мѫчениѥ
                                 ст꙯аа҅го и҅ринеа ⁘</head>
@@ -620,11 +617,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD23">
-                        <locus n="23">9v-16v, 1r-2v [127v-136v]</locus>
+                        <locus n="23">9v–16v, 1r–2v [127v–136v]</locus>
                         <title xml:lang="bg">Житие на св. Йона и Варахисий</title>
                         <date type="churchCal" when="--03-29">29th of March</date>
                         <note>The Warszaw part begins.</note>
+                        <filiation type="source">Greek parallel: BHG 942 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/16470">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 29.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта к꙯ѳ· мѫчениѥ҆
                                 ст꙯ааго їѡ̑нꙑ· и҅ варахисиꙗ· и҅ дроужинꙑ ѥ҅го ⁘</head>
@@ -639,10 +638,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD24">
-                        <locus n="24">2v-5v [136v-139v]</locus>
+                        <locus n="24">2v–5v [136v–139v]</locus>
                         <title xml:lang="bg">Житие на св. Йоан Схоластик Синайски</title>
                         <date type="churchCal" when="--03-30">30th of March</date>
+                        <filiation type="source">Greek parallel: BHG 882 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/13396">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 30.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта л꙯ житиѥ
                                 прѣпрость҆· о҅тьца їѡ̑а҅на и҅гоумена ст꙯ꙑѧ горꙑ синеи҅скꙑ· ѥ҅моуже
@@ -660,10 +661,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD25">
-                        <locus n="25">5v-17v [139v-151v]</locus>
+                        <locus n="25">5v–17v [139v–151v]</locus>
                         <title xml:lang="bg">Житие на св. Йоан Мълчаливи</title>
                         <date type="churchCal" when="--03-31">31st of March</date>
+                        <filiation type="source">Greek parallel: BHG 897, CPG 7537 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/13399">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 31.03/I.1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">мѣсꙙца марта л꙯а· житиѥ
                                 ст꙯ааго їѡ̑ана е҅пискоупа мль҆чаливааго· моностꙑра о҅тца нашего савꙑ
@@ -680,7 +683,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD26">
-                        <locus n="26">18r-22v [152r-156r]</locus>
+                        <locus n="26">18r–22v [152r–156r]</locus>
                         <title xml:lang="bg">Слово за Четиридневния Лазар от Йоан Златоуст, 1</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -698,7 +701,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD27">
-                        <locus n="27">-25v [156v-159v]</locus>
+                        <locus n="27">25v [156v–159v]</locus>
                         <title xml:lang="bg">Слово за Четиридневния Лазар от Йоан Златоуст, 2</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -717,7 +720,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD28">
-                        <locus n="28">25v-32v [159v-166v]</locus>
+                        <locus n="28">25v–32v [159v–166v]</locus>
                         <title xml:lang="bg">Слово за Връбница от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -734,7 +737,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD29">
-                        <locus n="29">32v-37v [166v-171v]</locus>
+                        <locus n="29">32v–37v [166v–171v]</locus>
                         <title xml:lang="bg">Слово за Връбница от патриарх Фотий</title>
                         <author>Photios</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -753,7 +756,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD30">
-                        <locus n="30">38r-43v [172r-177v]</locus>
+                        <locus n="30">38r–43v [172r–177v]</locus>
                         <title xml:lang="bg">Слово за смокинята на Велики понеделник от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -774,7 +777,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD31">
-                        <locus n="31">43v-50v [177v-184v]</locus>
+                        <locus n="31">43v–50v [177v–184v]</locus>
                         <title xml:lang="bg">Слово за поста и за Йосиф от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -793,7 +796,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD32">
-                        <locus n="32">50v-58v [184v-192v]</locus>
+                        <locus n="32">50v–58v [184v–192v]</locus>
                         <title xml:lang="bg">Слово за десетте девици от Матеевото евангелие от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -816,7 +819,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD33">
-                        <locus n="33">58v-61v [192v-195r]</locus>
+                        <locus n="33">58v–61v [192v–195r]</locus>
                         <title xml:lang="bg">Слово за Велики вторник от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -834,7 +837,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD34">
-                        <locus n="34">61v-64r [195v-198r]</locus>
+                        <locus n="34">61v–64r [195v–198r]</locus>
                         <title xml:lang="bg">Слово за блудницата във Велика сряда от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -853,7 +856,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD35">
-                        <locus n="35">64r-68v [198r-203r]</locus>
+                        <locus n="35">64r–68v [198r–203r]</locus>
                         <title xml:lang="bg">Слово за завистта във Велика сряда от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -873,14 +876,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD36">
-                        <locus n="36">69r-78v [203r-212v]</locus>
+                        <locus n="36">69r–78v [203r–212v]</locus>
                         <title xml:lang="bg">Слово за предателството на Юда във Велики четвъртък от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">їа҅на а҅рхие҅пискоупа
                                 костантинꙗ града златоо̑устааго слово въ свꙙтꙑи четвръть҆къ· о҅
-                                прѣдани-ї-ю̑дꙑ и҅ о҅ пастѣ· и҅ о҅ сь҆казании҆ свꙙтꙑи҅хъ таи҅нъ· и҅
+                                прѣдани–ї–ю̑дꙑ и҅ о҅ пастѣ· и҅ о҅ сь҆казании҆ свꙙтꙑи҅хъ таи҅нъ· и҅
                                 ѥ҅же не поминати зъла ⁘</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Мала ноужда дьнесь҆ къ
                                 вашеи любьви сьвѣштати· мала же ноужда сь҆вѣштати· не пон҄еже
@@ -895,7 +898,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD37">
-                        <locus n="37">78v-80r [212v-214r]</locus>
+                        <locus n="37">78v–80r [212v–214r]</locus>
                         <title xml:lang="bg">Слово за Велики четвъртък от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -913,7 +916,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD38">
-                        <locus n="38">80r-86r [214r-220r]</locus>
+                        <locus n="38">80r–86r [214r–220r]</locus>
                         <title xml:lang="bg">Слово за Велики петък от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -930,7 +933,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD39">
-                        <locus n="39">86r-90r [220r-224r]</locus>
+                        <locus n="39">86r–90r [220r–224r]</locus>
                         <title xml:lang="bg">Слово върху Евангелието от Матей от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <note>Homily 89 on Matth. 27: 62–64</note>
@@ -957,7 +960,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD40">
-                        <locus n="40">90r-102r [224r-236r]</locus>
+                        <locus n="40">90r–102r [224r–236r]</locus>
                         <title xml:lang="bg">Слово за погребение Христово от Епифаний Кипърски</title>
                         <author>Epiphanios of Salamis</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -980,7 +983,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD41">
-                        <locus n="41">102r-106r [236r-240r]</locus>
+                        <locus n="41">102r–106r [236r–240r]</locus>
                         <title xml:lang="bg">Слово за Възкресение Христово от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -1000,7 +1003,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD42">
-                        <locus n="42">106r-109r [240r-243v]</locus>
+                        <locus n="42">106r–109r [240r–243v]</locus>
                         <title xml:lang="bg">Слово за светата Пасха от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -1020,7 +1023,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD43">
-                        <locus n="43">109v-115v [243v-249v]</locus>
+                        <locus n="43">109v–115v [243v–249v]</locus>
                         <title xml:lang="bg">Слово за тридневното възкресение от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -1040,7 +1043,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD44">
-                        <locus n="44">115v-120v [249v-254v]</locus>
+                        <locus n="44">115v–120v [249v–254v]</locus>
                         <title xml:lang="bg">Слово за неверния Тома от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -1060,7 +1063,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD45">
-                        <locus n="45">120v-123r [254v-257r]</locus>
+                        <locus n="45">120v–123r [254v–257r]</locus>
                         <title xml:lang="bg">Слово за апостол Тома и срещу арианите от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -1080,10 +1083,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD46">
-                        <locus n="46">123r-132v [257r-266v]</locus>
+                        <locus n="46">123r–132v [257r–266v]</locus>
                         <title xml:lang="bg">Житие на св. Яков черноризец</title>
                         <note>Without date of church calendar</note>
+                        <filiation type="source">Greek parallel: BHG 770 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/16148">Pinakes</ref>)</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 4.03/II.1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">житиѥ їꙗ҅кѡ̑ва чръноризьца·
                                 много и҅мꙑ о̑умил҄ень҆ѥ҆ ⁘</head>
@@ -1102,10 +1107,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD47">
-                        <locus n="">132v-138r [266v-272r]</locus>
+                        <locus n="">132v–138r [266v–272r]</locus>
                         <title xml:lang="bg">Житие на св. Василей и Капитон Херсонски</title>
+                        <date type="churchCal" when="--03-07">7th of March</date>
                         <note>Without date of church calendar</note>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 7.03/II.1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">марта въ з꙯ дꙿнь житиѥ и҅
                                 страсть҆ ст꙯ꙑи҅хъ о҅ц꙯ь· и҅ е҅пискоупъ бꙑвъшиїхъ· василѣа· капитона·
@@ -1126,11 +1133,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD48">
-                        <locus n="48">138r-151v [272r-285v]</locus>
+                        <locus n="48">138r–151v [272r–285v]</locus>
                         <title xml:lang="bg">Житие на св. Анин чудотворец</title>
                         <note>Without date of church calendar</note>
                         <note>The end is missing.</note>
                         <filiation type="protograph">Bulgarian</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 18.03/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">житиѥ҆ и҅ дѣаниѥ
                                 прѣподобь҆наа҅го а҅нина ⁘ <supplied>і҃и днъ</supplied></head>
@@ -1145,14 +1153,14 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#AB">
+                    <origin evidence="conjecture" resp="#AB">
                         <origDate notBefore="0933" notAfter="0972">10th c., middle</origDate>
-                        <note>
-                            <ref type="overview" target="bib:Милтенова2008">Милтенова и др. 2008:
+                        <bibl>
+                            <ref target="bib:Милтенова2008">Милтенова и др. 2008:
                                 68</ref>
-                        </note>
-                        <origPlace>North-eastern Bulgaria (most probably Preslav
-                            region).</origPlace>
+                        </bibl>
+                        <origPlace>North-Eastern Bulgaria (most probably Preslav
+                            region)</origPlace>
                     </origin>
                     <provenance>In the second half of the 19th century the manuscript has been
                         divided into parts. Two other part form the Cod. Suprasliensis are now
@@ -1165,12 +1173,64 @@
                     <adminInfo>
                         <recordHist>
                             <source>
-                                <p>Catalogued from the edition of the manuscript <ref type="bibl"
-                                        target="bib:Заимов1982">Заимов, Капалдо 1982</ref></p>
+                                <p>Catalogued from the edition of the manuscript <ref type="bibl" target="bib:Заимов1982">Заимов, Капалдо 1982</ref></p>
                             </source>
                         </recordHist>
                     </adminInfo>
                 </additional>
+                <msFrag xml:id="Kopitar2">
+                    <msIdentifier>
+                        <msName type="individual"></msName>
+                            <country>Slovenia</country>
+                            <settlement>Ljubljana</settlement>
+                            <repository>National and University library</repository>
+                            <idno type="shelfmark">Cod. Kopitrar 2</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <dimensions unit="mm" type="folia">
+                                        <height>310</height>
+                                        <width>213</width>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msFrag>
+                <msFrag xml:id="BO3201">
+                    <msIdentifier>
+                        <msName type="individual"></msName>
+                        <country>Poland</country>
+                        <settlement>Warszawa</settlement>
+                        <repository>Biblioteka Narodowa</repository>
+                        <collection>Zamojski's collection</collection>
+                        <idno type="shelfmark">BO 3.201</idno>
+                    </msIdentifier>
+                </msFrag>
+                <msFrag xml:id="QpI72">
+                    <msIdentifier>
+                        <msName type="individual"></msName>
+                        <country>Russia</country>
+                        <settlement>Sankt Peterburg</settlement>
+                        <repository>Rossiiskaia natsional’naia biblioteka</repository>
+                        <collection>Osnovnoe sobranie</collection>
+                        <idno type="shelfmark">Q.p.I.72</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <dimensions unit="mm" type="folia">
+                                        <height>312</height>
+                                        <width>250</width>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msFrag>
             </msDesc>
         </body>
     </text>

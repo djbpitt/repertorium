@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-IK1RSL">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title>Miscellany of German, Bucharest, The Synodal Library, No. 1,
-                    1358-1359</title>
+                    1358–1359</title>
                 <author xml:id="IK">Irina Kuzidova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -21,15 +25,12 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Jufu1960">Jufu 1960</ref>
-                    <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006</ref>
-                </p>
+                <p><ref type="bibl" target="bib:Jufu1960">Jufu 1960</ref>
+                    <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -42,7 +43,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Hagiography</item>
                     </list>
                 </keywords>
@@ -57,6 +58,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -78,10 +80,7 @@
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="codex">
-                        <supportDesc material="parchment">
-                            <support>
-                                <material>Parchment</material>
-                            </support>
+                        <supportDesc material="parch">
                             <extent>
                                 <measure unit="folia">296</measure>
                                 <dimensions type="folia" unit="mm">
@@ -109,11 +108,11 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>No data</p>
+                            <summary>No data</summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
-                        <list type="simple">
+                        <list>
                             <item>
                                 <locus>f. 193v</locus>
                                 <quote xml:lang="pl">Roku 1841, May 23. CZytaw Zwiiatois Zyties
@@ -150,41 +149,38 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="semiuncial" script="Cyrs"/>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  style="semiuncial" script="Cyrs"/>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Tŭrnovo orthography</p>
-                            </orthography>
+                            <langNote key="orthography">Tŭrnovo orthography</langNote>
                         </scribeLang>
                     </scribe>
                 </scribeDesc>
                 <msContents type="translation">
-                    <summary>....</summary>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="2">1r-1v</locus>
+                        <locus n="1">1r–1v</locus>
                         <title xml:lang="bg">Протоевангелие на Яков</title>
                         <date type="churchCal" when="--09-08">8 September</date>
-                        <note>
-                            <ref type="bibl" target="bib:Иванова2008">BHGS 8.09, No. 3в, p.
-                                193</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            86-85</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 86–85</ref></note>
+                        <filiation type="source">Greek parallel: <ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/16196">Pinakes</ref></filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS 8.09/3в</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">енъ бы<seg rend="sup">с</seg>. нѫ въ ча<seg rend="sup">с</seg> лобзанꙇа
                                 идошѧ. и не срѣте и<seg rend="sup">х</seg> блг<seg rend="sup">с</seg>вение захарꙇино.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">2r-3v</locus>
+                        <locus n="2">2r–3v</locus>
                         <title xml:lang="bg">Слово за Рождество Богородично</title>
                         <author>John Chrysostom</author>
                         <date type="churchCal" when="--09-08">8 September</date>
-                        <note>Greek parallels BHG 1149p; CPG 5057, see <ref type="bibl" target="bib:Иванова2008">BHGS: 8.09, No. 8, p. 197-198</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            86-85</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            86–85</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1149p; CPG 5057 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/3260/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 8.09/8</ref>
+                        </filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иѡана архиеп<seg rend="sup">с</seg>па златоꙋстаго. слово похвал'но. на рождъство ст҃ѫѫ бц҃ѫ
                                 .в.</head>
@@ -193,13 +189,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">3v-15r</locus>
+                        <locus n="3">3v–15r</locus>
                         <title xml:lang="bg">Слово за обретение на Кръста</title>
                         <date type="churchCal" when="--09-14">14 September</date>
-                        <note>Greek parallels BHG 396; see <ref type="bibl" target="bib:Иванова2008">BHGS: 14.09, No. 3a, p. 204</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            86-90</ref>
-                        </note>
+                        <note>Edition:  <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            86–90</ref></note>
+                        <filiation type="source">Greek parallel: BHG 396 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/8875/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 14.09/3a</ref>
+                           </filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с</seg>а
                                 тогожде . дꙗ҃ . д҃нь. ѡбрѣтенꙗе чь<seg rend="sup">с</seg>наго кр<seg rend="sup">с</seg>та. и животворѧщаго. егоже ѡбрѣе елена
@@ -210,13 +207,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">15r-27r</locus>
+                        <locus n="4">15r–27r</locus>
                         <title xml:lang="bg">Чудеса на архангелите Михаил и Гавриил. Чудо на архангел Михаил в Хоня</title>
                         <date type="churchCal" when="--09-06">6 September</date>
-                        <note>Greek parallels BHG 1282; see <ref type="bibl" target="bib:Иванова2008">BHGS: 6.09, No. 3a, p. 187</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            90-94</ref>
-                        </note>
+                        <note><ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 90–94</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1282 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/9365/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 6.09/3a</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с</seg>а
                                 сектѧбрѣ .҃. д҃нь. чюдо бывшее в хонѣ<seg rend="sup">х</seg>,
@@ -228,13 +224,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">27r-30r</locus>
+                        <locus n="5">27r–30r</locus>
                         <title xml:lang="bg">Чудо на св. Текла</title>
                         <date type="churchCal" when="--09-24">24 September</date>
-                        <note>Greek parallels BHG 1716а; see <ref type="bibl" target="bib:Иванова2008">BHGS: 24.09, No. 2, p. 222</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            94-96</ref>
-                        </note>
+                        <note>Edition:   <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 94–96</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1716a (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/16360/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 24.09/2</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 сектѧбрѣ въ .к҃д. с҃тыѫ ѳеклы. чю<seg rend="sup">д</seg> бывшее
@@ -245,15 +240,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="original">
-                        <locus n="6">30r-41r</locus>
+                        <locus n="6">30r–41r</locus>
                         <title xml:lang="bg">Слово похвално за св. Йоан Богослов от Йоан Екзарх</title>
                         <author>John the Exarch</author>
                         <date type="churchCal" when="--09-26">26 September</date>
-                        <note>See <ref type="bibl" target="bib:Иванова2008">BHGS: 26.09, No. 4a, p.
-                                227-228</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            96-98</ref>
-                        </note>
+                        <note>Edition:   <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 96–98</ref></note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 26.09/4a</ref>
+                          </filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 сектѧбрѣ въ .к҃ѕ . похвала. ст҃го ап<seg rend="sup">с҃</seg>ла и
@@ -265,13 +258,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">41r-48v</locus>
+                        <locus n="7">41r–48v</locus>
                         <title xml:lang="bg">Мъчение на апостол Тома</title>
                         <date type="churchCal" when="--10-06">6 October</date>
-                        <note>Greek parallel BHG 1831, see <ref type="bibl" target="bib:Иванова2008">BHGS: 6.10, No. 3, p. 239-240</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            99-100</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 99–100</ref></note>
+                        <filiation type="sources">Greek parallel: BHG 1831 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/18092/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 6.10/3</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 ѡктѧбрѣ .ѕ҃. д҃нь мч҃ние ст҃го ап<seg rend="sup">с҃</seg>ла
@@ -282,13 +274,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="8">48v-55r</locus>
+                        <locus n="8">48v–55r</locus>
                         <title xml:lang="bg">Житие на св. Петка Епиватска</title>
                         <date type="churchCal" when="--10-14">14 October</date>
-                        <note>Greek parallel BHG 1420а, see <ref type="bibl" target="bib:Иванова2008">BHGS: 14.10, No. 2, p. 249</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            100-104</ref>
-                        </note>
+                        <note>Edition:  <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 100–104</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1420а (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/17444/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 14.10/2</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 ѡктѧбрѣ д҃ꙗ. д҃нь. житие и чюдеса. с҃тыѫ прѣпо<seg rend="sup">д</seg>бныѫ, параскеви. блгл<seg rend="sup">с</seg>ви ѡ<seg rend="sup">ч҃</seg>.</head>
@@ -298,13 +289,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="9">56r-64r</locus>
+                        <locus n="9">56r–64r</locus>
                         <title xml:lang="bg">Житие на св. Димитър Солунски</title>
                         <date type="churchCal" when="--10-26">26 October</date>
-                        <note>Greek parallel BHG 497, see <ref type="bibl" target="bib:Иванова2008">BHGS: 26.10, No. 4б, p. 269-270</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            104-108</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 104–108</ref></note>
+                        <filiation type="source">Greek parallel: BHG 497 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/15314/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 26.10/4б</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 ѡктѧбрѣ.к҃ѕ. д҃нь.</head>
@@ -314,13 +304,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="10">64r-65v</locus>
+                        <locus n="10">64r–65v</locus>
                         <title xml:lang="bg">Житие на св. Козма и Дамян</title>
                         <date type="churchCal" when="--11-01">1 November</date>
-                        <note>Greek parallel BHG 372, see <ref type="bibl" target="bib:Иванова2008">BHGS: 1.11, No. 1г, p. 282</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            108-109</ref>
-                        </note>
+                        <note>Edition:  <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 108–109</ref></note>
+                        <filiation type="source">Greek parallel: BHG 372 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/15006/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 1.11/1г</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 ноѫбрѣ въ .а҃. днь. жꙗтие и хождение. с҃тою безмез'днꙗкꙋ. козмы, и
@@ -330,15 +319,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="original">
-                        <locus n="11">67r-73v</locus>
+                        <locus n="11">67r–73v</locus>
                         <title xml:lang="bg">Слово похвално за архангелите Михаил и Гавриил</title>
                         <author>Clement of Ochrid</author>
                         <date type="churchCal" when="--11-08">8 November</date>
-                        <note>See <ref type="bibl" target="bib:Иванова2008">BHGS: 8.11, No. 7, p.
-                                287-288</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            110-114</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 110–114</ref></note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 8.11/7</ref>
+                            </filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 ноѫбрѣ въ .и҃. слово похвал҃но. архг҃глꙋ михаилу. и гаврилꙋ. блг<seg rend="sup">с҃</seg>лови ѡче .а҃ꙗ.</head>
@@ -348,14 +335,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation">
-                        <locus n="12">73v-76r</locus>
+                        <locus n="12">73v–76r</locus>
                         <title xml:lang="bg">Слово похвално за св. Йоан Златоуст</title>
                         <author>Proklos of Constantinople</author>
                         <date type="churchCal" when="--11-13">13 November</date>
-                        <note>Greek parallel PG 65, col. 827-834, CPG 5819, see <ref type="bibl" target="bib:Иванова2008">BHGS: 13.11, No. 1, p. 298</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            114-116</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            114–116</ref></note>
+                        <filiation type="source">Greek parallel: CPG 5819, BHG 878c <ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/16194/">Pinakes</ref></filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 13.11/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 ноѫбрѣ въ .г҃ꙗ. д҃нь. слово похвално. на памѧ, иѡана златоꙋстаго.
@@ -365,13 +352,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
-                        <locus n="13">73v-76r</locus>
+                        <locus n="13">73v–76r</locus>
                         <title xml:lang="bg">Мъчение на апостол Филип</title>
                         <date type="churchCal" when="--11-14">14 November</date>
-                        <note>Greek parallel BHG 1525, see <ref type="bibl" target="bib:Иванова2008">BHGS: 14.11, No. 1, p. 303</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            117-120</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            117–120</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1525, CANT 250.II (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/17569/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 14.11/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 ноѫбрѣ въ .д҃ꙗ. д҃нь. мѫченꙗе ст҃го апл<seg rend="sup">с</seg>а
@@ -383,13 +370,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="translation">
-                        <locus n="14">82v-91r</locus>
+                        <locus n="14">82v–91r</locus>
                         <title xml:lang="bg">Слово за Въведение Богородично от Герман Константинополски</title>
                         <date type="churchCal" when="--11-21">21 November</date>
-                        <note>Greek parallel BHG 1104, CPG 8008, see <ref type="bibl" target="bib:Иванова2008">BHGS: 21.11, No. 9, p. 314</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            120-125</ref>
-                        </note>
+                        <note>Edition:   <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            120–125</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1104, CPG 8008, Aldama 193 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/8375/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 21.11/9</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 ноѫбрѣ въ .к҃а. сл҃во. ѡ с҃тѣи гж<seg rend="sup">д</seg>и б҃ци.
@@ -400,13 +387,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15" type="translation">
-                        <locus n="15">91r-96r</locus>
+                        <locus n="15">91r–96r</locus>
                         <title xml:lang="bg">Житие на св. Варвара</title>
                         <date type="churchCal" when="--12-04">4 December</date>
-                        <note>Greek parallel BHG 213 and 214, see <ref type="bibl" target="bib:Иванова2008">BHGS: 4.12, No. 1в, p. 334</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            125-127</ref>
-                        </note>
+                        <note>Edition:    <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            125–127</ref></note>
+                        <filiation type="source">Greek parallel: BHG 213 and 214 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/14783/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 4.12/1в</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                     де<seg rend="sup">к҃</seg>брѣ .д҃. д҃нь. мн<seg rend="sup">ч҃</seg>ꙗе стыѫ мчс҃нцѫ вар'вары. блглв<seg rend="sup">с҃</seg>и ѡ҃че. е҃ꙗ.</head>
@@ -416,13 +403,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16" type="translation">
-                        <locus n="16">96r-102v</locus>
+                        <locus n="16">96r–102v</locus>
                         <title xml:lang="bg">Деяния на св. Николай Мирликийски</title>
                         <date type="churchCal" when="--12-06">6 December</date>
-                        <note>Greek parallel BHG 1350 (a, b or c), see <ref type="bibl" target="bib:Иванова2008">BHGS: 6.12, No. 4а, p. 340</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            127-130</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            127–130</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1350 a, b or c (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/17273/">Pinakes</ref>) </filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 6.12/4а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 декѣ бр<seg rend="sup">ѣ</seg> .ѕ҃. д҃нь. дѣанꙗе ст҃го николы.
@@ -432,15 +419,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17" type="compilation">
-                        <locus n="17">102v-109r</locus>
+                        <locus n="17">102v–109r</locus>
                         <title xml:lang="bg">Слово за зачатието на св. Анна</title>
                         <date type="churchCal" when="--12-09">9 December</date>
-                        <note>Variant of <emph>Protoevangelium James</emph>, with no Greek parallel
-                            found, see <ref type="bibl" target="bib:Иванова2008">BHGS: 9.12, No. 2,
-                                p. 351-352</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            130-136</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            130–136</ref></note>
+                        <filiation type="source">Greek parallel: unidentified, variant of Protoevangelion Iacobi</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 9.12/2</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                     деб<seg rend="sup">к҃</seg>рѣ .ѳ҃. д҃нь. сл҃ово на зачѧ<seg rend="sup">т҃</seg> ст҃ѣи аннѣ. егда зачѧ<seg rend="sup">т҃</seg> ст҃ѫѧ бц҃ѫ. блг<seg rend="sup">с҃</seg>лви ѡ҃че.
@@ -451,14 +436,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18" type="translation">
-                        <locus n="18">109r-115v</locus>
+                        <locus n="18">109r–115v</locus>
                         <title xml:lang="bg">Слово за Рождество Христово от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <date type="churchCal" when="--12-25">25 December</date>
-                        <note>Greek parallel BHG 1916y, CPG 4560 see <ref type="bibl" target="bib:Иванова2008">BHGS: 25.12, No. 22, p. 394</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            136-139</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            136–139</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1916y (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/18791/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 25.12/22</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                     де<seg rend="sup">к҃</seg> брѣ въ .к҃е. иѡана златоꙋстаго. слово
@@ -469,14 +454,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD19" type="translation">
-                        <locus n="19">115v-123v</locus>
+                        <locus n="19">115v–123v</locus>
                         <title xml:lang="bg">Слово похвално за св. първомъченик Стефан</title>
                         <author>Proklos of Constantinople</author>
                         <date type="churchCal" when="--12-27">27 December</date>
-                        <note>Greek parallel BHG 1657, CPG 5816, see <ref type="bibl" target="bib:Иванова2008">BHGS: 27.12, No. 4а, p. 402</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            139-144</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            139–144</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1657, CPG 5816, Aldama 273 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/6888/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 27.12/4а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                     де<seg rend="sup">к҃</seg>брѣ въ .к҃з. д҃нь. иѡана архиеп<seg rend="sup">с҃</seg>па костандина града златоꙋстаго. сл҃во на
@@ -487,13 +472,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD20" type="translation">
-                        <locus n="20">123v-128r</locus>
+                        <locus n="20">123v–128r</locus>
                         <title xml:lang="bg">Слово за младенците, избити от цар Ирод</title>
                         <date type="churchCal" when="--12-29">29 December</date>
-                        <note>Greek parallel BHG 827b, CPG 4638, see <ref type="bibl" target="bib:Иванова2008">BHGS: 29.12, No. 1б, p. 404</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            144-146</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 144–146</ref></note>
+                        <filiation type="source">Greek parallel: BHG 827b, CPG 4638 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/7919">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 29.12/1б</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                     де<seg rend="sup">к҃</seg>брѣ въ .к҃ѳ иѡана арр'хиепк<seg rend="sup">с҃</seg>па златоустаго. слово ѡ иродѣ. и ѡ
@@ -503,13 +487,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD21" type="translation">
-                        <locus n="21">128r-131r</locus>
+                        <locus n="21">128r–131r</locus>
                         <title xml:lang="bg">Чудеса на св. Василий Велики. За Анастасий Презвитер</title>
                         <date type="churchCal" when="--01-01">1 January</date>
-                        <note>Greek parallel BHG 254, see <ref type="bibl" target="bib:Иванова2008">BHGS: 1.01, No. 8, p. 417</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            147-149</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            147–149</ref></note>
+                        <filiation type="source">Greek parallel: BHG 254 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/13373">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 1.01/8</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 генарѣ въ .а҃. дн҃ь. ѿ чюдесъ ст҃го василиа. ѡ анастасѣ презвꙗтерѣ.
@@ -519,13 +503,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD22" type="translation">
-                        <locus n="22">131r-135v</locus>
+                        <locus n="22">131r–135v</locus>
                         <title xml:lang="bg">Слово за Богоявление</title>
                         <date type="churchCal" when="--01-06">6 January</date>
-                        <note>Greek parallel BHG 1948, see <ref type="bibl" target="bib:Иванова2008">BHGS: 6.01, No. 19, p. 430</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            149-150</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            149–150</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1948, CPG 5806 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/6922">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 6.01/19</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 генарѣ въ .ѕ҃. д҃нь. иѡана архиѥпк<seg rend="sup">с҃</seg>па
@@ -537,13 +521,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD23" type="translation">
-                        <locus n="23">135v -143v</locus>
+                        <locus n="23">135v –143v</locus>
                         <title xml:lang="bg">Слово за Сретение Господне</title>
                         <date type="churchCal" when="--02-02">2 February</date>
-                        <note>With no identified Greek parallel, see <ref type="bibl" target="bib:Иванова2008">BHGS: 2.02, No. 1, p. 457-458</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            151-155</ref>
-                        </note>
+                        <note>Edition:   <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 151–155</ref></note>
+                        <filiation type="source">Greek parallel: unidentified</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 2.02/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 феврарѣ .в҃. дн҃ь. сл҃во на срѣтение г<seg rend="sup">с҃</seg>не.
@@ -555,14 +538,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD24" type="translation">
-                        <locus n="24">143v-154r</locus>
+                        <locus n="24">143v–154r</locus>
                         <title xml:lang="bg">Житие на св. 40 мъченици от Севастия</title>
                         <date type="churchCal" when="--03-09">9 March</date>
-                        <note>Greek parallel BHG 1201 1a, c, d, see <ref type="bibl" target="bib:Иванова2008">BHGS: 9.03, No. 1а<emph>а</emph>, p.
-                                482-483</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            155-161</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 155–161</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1201 1a, c, d (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/17010">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 9.03/1аа</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 мартавъ .ѳ҃. дн҃ь. мч҃енꙗе ст҃ыхъ .м҃. мч҃нкъ. блгл<seg rend="sup">с҃</seg>ви ѡ҃че .к҃г.</head>
@@ -573,13 +554,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD25" type="translation">
-                        <locus n="25">154r-160v</locus>
+                        <locus n="25">154r–160v</locus>
                         <title xml:lang="bg">Слово за Благовещение от Йоан Златоуст</title>
                         <date type="churchCal" when="--03-25">25 March</date>
-                        <note>Greek parallel BHG 1128f, CPG 4519, see <ref type="bibl" target="bib:Иванова2008">BHGS: 25.03, No. 11б, p. 503</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            161-166</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            161–166</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1128f, CPG 4519, Aldama 389 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/7444/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 25.03/11б</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 марта въ .к҃е. дн҃ь. иѡ<seg rend="sup">н҃</seg>а златоꙋстаго. слово
@@ -591,12 +572,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD26" type="translation">
-                        <locus n="26">160v-166v</locus>
+                        <locus n="26">160v–166v</locus>
                         <title xml:lang="bg">Слово за Възкресение Лазарово</title>
                         <author>Amphilochios of Ikonion</author>
-                        <date type="churchCal">[Saturday of Lazarus]</date>
-                        <note>Greek parallel BHG 2228, CPG 3233, see <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 167-170</ref>
-                        </note>
+                        <date type="churchCal" cert="low">Saturday of Lazarus</date>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 167–170</ref></note>
+                        <filiation type="source">Greek parallel: BHG 2228, CPG 3233 <ref type="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/16670/">Pinakes</ref></filiation>   
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Амфилохеа епк<seg rend="sup">с</seg>па иконꙗискаго. слово ѡ четврѣд҃невнѣмъ лазарѣ. блгл<seg rend="sup">с҃</seg>ви ѡ҃че .к҃е.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Се пакы на срѣдѫ ѥуг҃листа
@@ -605,11 +586,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD27" type="translation">
-                        <locus n="27">166v -173r</locus>
+                        <locus n="27">166v –173r</locus>
                         <title xml:lang="bg">Слово за Цветница</title>
                         <date type="churchCal">Palm Sunday</date>
-                        <note>With no identified Greek parallel, see <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 170-172</ref>
-                        </note>
+                        <filiation type="litRedaction">Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 170–172</ref></filiation>
+                        <filiation type="source">Greek parallel: unidentified</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово на цвѣтоноснѫѧ нел<seg rend="sup">д҃</seg>ѧ блг<seg rend="sup">с҃</seg>лви ѡ҃че
                                 .к҃е.</head>
@@ -619,12 +600,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD28" type="translation">
-                        <locus n="28">173v -198v</locus>
+                        <locus n="28">173v –198v</locus>
                         <title xml:lang="bg">Слово за погребение Христово</title>
                         <author>Epiphanios of Salamis</author>
                         <date type="churchCal">Holy Saturday</date>
-                        <note>Greek parallel CPG 3768, see <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 172-179</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 172–179</ref></note>
+                        <filiation type="source">Greek parallel: BHG 808e, CPG 3768 <ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/7717/">Pinakes</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ с҃ты<seg rend="sup">х</seg> ѡца нашего епифана архиепк<seg rend="sup">с҃</seg>па
                                 купръскаго. слово ѡ бг҃отелѣснѣмъ погребенꙗ. г҃а б҃а и сп҃са нашего
@@ -637,12 +618,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD29" type="translation">
-                        <locus n="29">198v-201r</locus>
+                        <locus n="29">198v–201r</locus>
                         <title xml:lang="bg">Слово за Възкресение Христово</title>
                         <author>Gregory of Nazianzos</author>
                         <date type="churchCal">Easter</date>
-                        <note>Greek parallel CPG 3010, see <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 179-183</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 179–183</ref></note>
+                        <filiation type="source">Greek parallel: CPG 3010.01–02 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/8625/">Pinakes</ref>)</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ы<seg rend="sup">х</seg> ѡца нашего григориа бг҃ословца. архиепк<seg rend="sup">с҃</seg>па костандина града. слово на въск҃рсен ꙗе г҃а нашего
                                     ꙗс<seg rend="sup">с҃</seg> хт<seg rend="sup">с҃</seg>а. блг<seg rend="sup">с҃</seg>лвꙗ.</head>
@@ -652,11 +633,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD30" type="translation">
-                        <locus n="30">201r-205v</locus>
+                        <locus n="30">201r–205v</locus>
                         <title xml:lang="bg">Поучение за Неделя православна</title>
                         <date type="churchCal">Sunday of Orthodoxy</date>
-                        <note>With no identified Greek parallel, see <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 183-185</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 183–185</ref></note>
+                        <filiation type="source">Greek parallel: unidentified</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Пѡꙋченꙗе дш҃еполезнъно на
                                 православнѫѧ не<seg rend="sup">д</seg>лѧ. блгл<seg rend="sup">с҃</seg>ви ѡ҃че.</head>
@@ -666,11 +647,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD31" type="translation">
-                        <locus n="31">205v -213r</locus>
+                        <locus n="31">205v –213r</locus>
                         <title xml:lang="bg">Слово за Неделя Томина</title>
-                        <date type="churchCal">Timothy Sunday</date>
-                        <note>With no identified Greek parallel, see <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 186-189</ref>
-                        </note>
+                        <date type="churchCal">Thomas Sunday</date>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 186–189</ref></note>
+                        <filiation type="source">Greek parallel: unidentified</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѿ сказанꙗꙗ ѥу<seg rend="sup">г҃</seg>лъскаго. въ бѣлѫѧ не<seg rend="sup">д</seg>лѧ. на ѳомино невѣрие. блг<seg rend="sup">с҃</seg>лови
                                 ѡ҃че.</head>
@@ -679,11 +660,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD32" type="translation">
-                        <locus n="32">213r-216r</locus>
+                        <locus n="32">213r–216r</locus>
                         <title xml:lang="bg">Слово за преполовение на Петдесетница</title>
                         <date type="churchCal">Mid-Pentecost</date>
-                        <note>With no identified Greek parallel, see <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 189-191</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 189–191</ref></note>
+                        <filiation type="source">Greek parallel: unidentified</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ с҃т<seg rend="sup">х</seg>ы ѡц҃а нашегѡ иѡан'на. архиѥпкп<seg rend="sup">с҃</seg>а
                                 костан'дина гра<seg rend="sup">д</seg> златоꙋстаго слово. егда
@@ -695,11 +676,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD33" type="translation">
-                        <locus n="33">216v-221v</locus>
+                        <locus n="33">216v–221v</locus>
                         <title xml:lang="bg">Слово за Възнесение</title>
-                        <date type="churchCal">Assention</date>
-                        <note>Greek parallel CPG 4532, see <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 191-194</ref>
-                        </note>
+                        <date type="churchCal">Ascension</date>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 191–194</ref></note>
+                        <filiation type="source">Greek parallel: CPG 4532, Aldama 145 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/7581/">Pinakes</ref>)</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Ст҃го ѡц҃а нашего иѡана
                                 златоꙋстаго. архиепк<seg rend="sup">с҃</seg>па костандина града.
@@ -709,12 +690,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD34" type="translation">
-                        <locus n="34">221v-223v</locus>
+                        <locus n="34">221v–223v</locus>
                         <title xml:lang="bg">Слово за Петдесетница</title>
                         <author>Proklos of Constantinople</author>
                         <date type="churchCal">Pentecost</date>
-                        <note>Greek parallel CPG 5815, see <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 195-197</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 195–197</ref></note>
+                        <filiation type="source">Greek parallel: CPG 5815 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/6886/">Pinakes</ref>)</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Ст҃го ѡ҃ца нашего прокла
                                     архиѥпк<seg rend="sup">с҃</seg>па ц҃рѣграда. слово на ст҃ѫѧ
@@ -724,15 +705,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD35" type="original">
-                        <locus n="35">223v-228v</locus>
+                        <locus n="35">223v–228v</locus>
                         <title xml:lang="bg">Слово за Рождество на Йоан Кръстител</title>
                         <author>Clement of Ochrid</author>
                         <date type="churchCal" when="--06-24">24 June</date>
-                        <note>See <ref type="bibl" target="bib:Иванова2008">BHBS: 24.06, No.
-                                12а</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            198-201</ref>
-                        </note>
+                        <note>Edition:  <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 198–201</ref></note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 24.06/12а</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 июнѣ въ .к҃д. слово на рож<seg rend="sup">д</seg>ъство иѡана кр<seg rend="sup">с҃</seg>тлѣ. блг<seg rend="sup">с҃</seg>лвиѡ҃че.</head>
@@ -741,14 +719,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD36" type="translation">
-                        <locus n="36">229r-234v</locus>
+                        <locus n="36">229r–234v</locus>
                         <title xml:lang="bg">Слово похвално за апостолите Петър и Павел</title>
                         <author>John Chrysostom</author>
                         <date type="churchCal" when="--06-29">29 June</date>
-                        <note>Greek parallel BHG 1497 and CPG 4572, see <ref type="bibl" target="bib:Иванова2008">BHBS: 29.06, No. 8</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            201-206</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 201–206</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1497, CPG 4572 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/8337/">Pinakes</ref>) </filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 29.06/8</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 юнѣ въ .к҃ѳ. памѧ<seg rend="sup">т҃</seg> и похвала. с҃тою ап<seg rend="sup">с҃</seg>лꙋ петра и паула. блг<seg rend="sup">с҃</seg>ви ѡ҃че.</head>
@@ -756,14 +733,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD37" type="translation">
-                        <locus n="37">235r-240r</locus>
+                        <locus n="37">235r–240r</locus>
                         <title xml:lang="bg">Слово похвално за пророк Илия</title>
                         <author>Clement of Ochrid</author>
                         <date type="churchCal" when="--07-20">20 July</date>
-                        <note>See <ref type="bibl" target="bib:Иванова2008">BHBS: 20.07, No. 3</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            207-211</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            207–211</ref></note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 20.07/3</ref>, 
+                            </filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 ꙗюлѣ въ .к. днь пѡхвала прѣдивнаго житиꙗ илиина. блгл<seg rend="sup">с҃</seg>ви.</head>
@@ -773,14 +750,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD38" type="translation">
-                        <locus n="38">240r-248r</locus>
+                        <locus n="38">240r–248r</locus>
                         <title xml:lang="bg">Слово за Преображение</title>
                         <author>John the Exarch</author>
                         <date type="churchCal" when="--08-06">6 August</date>
-                        <note>See <ref type="bibl" target="bib:Иванова2008">BHBS: 6.08, No. 2</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            212-217</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            212–217</ref></note>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 6.08/2</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мца<seg rend="sup">с҃</seg>
                                 аугꙋста въ .ѕ҃. д҃нь. <sic>сово </sic> на прѣѡ браженїе гн<seg rend="sup">с҃</seg>е. иѡана презвитера. блг<seg rend="sup">с҃</seg>лви ѡ҃че.</head>
@@ -789,13 +765,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD39" type="translation">
-                        <locus n="39">248r-268v</locus>
+                        <locus n="39">248r–268v</locus>
                         <title xml:lang="bg">Слово за Успение Богородично</title>
                         <date type="churchCal" when="--08-15">15 August</date>
-                        <note>With no identified Greek parallel, see <ref type="bibl" target="bib:Иванова2008">BHBS: 15.08, No. 2</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            218-224</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 218–224</ref></note>
+                        <filiation type="source">Greek parallel: unidentified</filiation>
+                        <filiation type="litRedaction"><ref  type="bibl" target="bib:Иванова2008">BHBS: 15.08/2</ref>
+                            </filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Того<seg rend="sup">д</seg>же
                                     мц<seg rend="sup">с҃</seg>а въ .е҃ꙗ. д҃нь пѡхвала на
@@ -805,7 +781,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD40" type="translation">
-                        <locus n="40">268v-269v</locus>
+                        <locus n="40">268v–269v</locus>
                         <title xml:lang="bg">Съдържание на ръкописа</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Главы чьтеніамъ</head>
@@ -814,10 +790,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD41" type="translation">
-                        <locus n="40">269v-270v</locus>
+                        <locus n="40">269v–270v</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <colophon>
-                            <p>п<seg rend="sup">р</seg>ѣначѧлнѡмꙋ начѧлѹ. и безначѧлномѹ б҃жствꙋ.
+                        <re:sampleText xml:lang="cu"><colophon>
+                            <ab>п<seg rend="sup">р</seg>ѣначѧлнѡмꙋ начѧлѹ. и безначѧлномѹ б҃жствꙋ.
                                     сирѣ<seg rend="sup">ч</seg> тріс҃тѣи т҃рци слава, ѡ҃цѹ и с҃нѹ и
                                 с҃тмѹ д҃хѹ . нінѣ и присно, и въ бесконеч'ныѫ вѣкы аминъ. Хвалѫ тебѣ
                                 и славѫ възсилаѫ г҃и і<seg rend="sup">т</seg>с х<seg rend="sup">т</seg>е. тръстыи б҃же нашъ. ꙗко далъ еси мнѣ недо<seg rend="sup">т</seg>оиномѹ начѧти и кончѣти. сего б҃гомъ
@@ -837,17 +813,16 @@
                                 алеѯѧдра. <unclear>...</unclear>ѣго багрород'нѣмъ иѡанна
                                     ши<unclear>...</unclear>нѣ. при патриарсѣ въсеѡс҃щеннѣмъ
                                     <unclear>...</unclear>еѡдоси. б҃гос҃пснаго ц҃риграда трънова. въ
-                                лѣто теченіꙗ. ҂ѕ҃ ѡ҃ ѯ҃ з҃. ендикто. в҃і.</p>
-                        </colophon>
+                                лѣто теченіꙗ. ҂ѕ҃ ѡ҃ ѯ҃ з҃. ендикто. в҃і.</ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD42" type="translation">
-                        <locus n="42">262r-216r</locus>
+                        <locus n="42">262r–216r</locus>
                         <title xml:lang="bg">Слово за отсичане главата на св. Йоан Кръстител</title>
                         <date type="churchCal" when="--08-29">29 August</date>
-                        <note>Greek parallel BHG 867, CPG 4578, see <ref type="bibl" target="bib:Иванова2008">BHBS: 29.08, No. 5в</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            224-227</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 224–227</ref></note>
+                        <filiation type="source">Greek parallel: BHG 867, CPG 4578, Aldama 676 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/15085/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 29.08/5в</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 аугуста въ. к҃ѳ. д҃нь. сл<seg rend="sup">в҃</seg>о<seg rend="sup">о</seg> на ꙋсѣк'новенꙗе главы. с҃таго пр҃рка и прт<seg rend="sup">д҃</seg>чѧ, иѡан'на кр<seg rend="sup">с</seg>тлѣ
@@ -857,13 +832,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD43" type="translation">
-                        <locus n="43">270v-276r</locus>
+                        <locus n="43">270v–276r</locus>
                         <title xml:lang="bg">Житие на св. Георги</title>
                         <date type="churchCal" when="--04-23">23 April</date>
-                        <note>Greek parallel BHG 691 c, f, g, see <ref type="bibl" target="bib:Иванова2008">BHBS: 23.04, No. 11</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            228-223</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            228–233</ref></note>
+                        <filiation type="source">Greek parallel: BHG 691 c, f, g <ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/16102/">Pinakes BHG 691c</ref>, <ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/15656/">Pinakes BHG 691f</ref>, <ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/15657/">Pinaks 691g</ref></filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 23.04/11</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с҃</seg>ца
                                 априлиа .к҃г. д҃нь. паѧм<seg rend="sup">т҃</seg> ст҃аго великомч҃ка.
@@ -875,13 +850,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD44" type="translation">
-                        <locus n="44">276v-280r</locus>
+                        <locus n="44">276v–280r</locus>
                         <title xml:lang="bg">Чудеса на св. Георги. Чудо за змея</title>
                         <date type="churchCal" when="--04-23">23 April</date>
-                        <note>Greek parallel BHG 687e, see <ref type="bibl" target="bib:Иванова2008">BHBS: 23.04, No. 11</ref>
-                            <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
-                            233-235</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006:
+                            233–235</ref></note>
+                        <filiation type="source">Greek parallel: BHG 687e (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/15643/">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 23.04/11</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с҃</seg>ца
                                 априлиа .к҃г. д҃нь ст҃го великѡм҃чнка, и побѣдонос'ца геѡргиа, чюдо
@@ -892,11 +867,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD45" type="translation">
-                        <locus n="45">280r-289v</locus>
+                        <locus n="45">280r–289v</locus>
                         <title xml:lang="bg">Житие на св. Теодор Стратилат</title>
                         <date type="churchCal">1st Saturday of the Holy Lent</date>
-                        <note>Greek parallel BHG 1750, see <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 235-237</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 235–237</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1750 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/17962">Pinakes</ref>)</filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 8.06/2, 8.02/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Въ сѫботѫ .а҃. по<seg rend="sup">с҃</seg> мѫчение ст҃го. ѳеѡ<seg rend="sup">д</seg>ра
                                 тирона. блг<seg rend="sup">с҃</seg>ви ѡ҃че.</head>
@@ -906,11 +882,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD46" type="translation">
-                        <locus n="46">290r-296v</locus>
+                        <locus n="46">290r–296v</locus>
                         <title xml:lang="bg">Чудо на св. Теодор Тирон</title>
                         <date type="churchCal" when="--06-08">8 June</date>
-                        <note>Greek parallel BHG 1766a, see <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 238-240</ref>
-                        </note>
+                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 238–240</ref></note>
+                        <filiation type="source">Greek parallel: BHG 1766a <ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/18001/">Pinakes</ref></filiation>
+                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 8.06/1</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мц<seg rend="sup">с҃</seg>а
                                 июнꙗа .и҃. дн҃ь чюдеса ст҃го и славнаго великом҃чнка ѳеѡ<seg rend="sup">д</seg>ра стратилата блгл<seg rend="sup">с҃</seg>ви
@@ -921,25 +898,13 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu">
-                        <origDate notBefore="1358" notAfter="1359">1358-1359</origDate>
+                    <origin>
+                        <origDate notBefore="1358" notAfter="1359">1358–1359</origDate>
                         <origPlace>Tŭrnovo, Bulgaria</origPlace>
-                        <note>
-                            <bibl>
-                                <respStmt>
-                                    <name full="yes">Irina Kuzidova</name>
-                                    <resp>Printed description</resp>
-                                </respStmt>
-                                <respStmt>
-                                    <name full="yes">Jufu, J.</name>
-                                    <resp>Description</resp>
-                                </respStmt>
-                                <respStmt>
-                                    <name full="yes">Mircheva</name>
-                                    <resp>Edition</resp>
-                                </respStmt>
-                            </bibl>
-                        </note>
+                        <listBibl>
+                            <bibl><ref target="bib:Jufu1960">Jufu 1960</ref></bibl>
+                            <bibl><ref target="bib:Мирчева2006">Мирчева 2006</ref></bibl>
+                        </listBibl>
                     </origin>
                 </history>
             </msDesc>

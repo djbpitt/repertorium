@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DRAdd1860BL">
     <teiHeader>
         <fileDesc>
@@ -13,7 +17,7 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>January 2005</date>
+                <date when="2005-01">January 2005</date>
                 <idno type="Repertorium">RC-ABAdd1860BL</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -21,15 +25,13 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <p>This description is based on <emph>de visu</emph> observations, on MS microform
                     and on the published catalogue descriptions.<ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 65-66</ref>. <ref type="bibl" target="bib:Partridge1963">Partridge 1963: 81-90.</ref>
-                    <ref type="bibl" target="bib:DuFeu1984">Du Feu 1984: 79-80.</ref>
-                </p>
+                    <ref type="bibl" target="bib:DuFeu1984">Du Feu 1984: 79-80.</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -60,6 +62,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-30">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when="2009-04-17">Removed constructions
@@ -103,12 +106,12 @@
                                 <dimensions unit="mm" type="written">
                                     <height>2410</height>
                                     <width>380</width>
-                                </dimensions>.</extent>
+                                </dimensions></extent>
                             <foliation>Modern, pen-written, in the upper right margins. No traces of
                                 previous foliations or paginations.</foliation>
                             <collation>
                                 <ruling xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Ruled left
-                                    margin <dim xmlns="http://www.tei-c.org/ns/1.0"> 55mm</dim>
+                                    margin <dimensions xmlns="http://www.tei-c.org/ns/1.0" unit="mm" type="ruled"><width>55</width></dimensions>
                                     wide.</ruling>
                             </collation>
                             <condition>
@@ -132,14 +135,12 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locus xmlns="http://www.tei-c.org/ns/1.0">1</locus>
-                        <persName xmlns="http://www.tei-c.org/ns/1.0">Anonymous.</persName>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="bosanchica">
-                            <p>Cyrillic: bosančica</p>
+                        <persName xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous.</persName>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="bosančica"/>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Serbo-Croatian.</p>
-                            </orthography>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Serbo-Croatian</summary>
                         </scribeLang>
                     </scribe>
                 </scribeDesc>
@@ -156,9 +157,9 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin resp="#AM" evidence="de visu">
-                        <origDate evidence="internal" notBefore="1519" notAfter="1519">1519</origDate>
-                        <origPlace evidence="de visu">Bosnia</origPlace>
+                    <origin resp="#AM" evidence="internal">
+                        <origDate notBefore="1519" notAfter="1519">1519</origDate>
+                        <origPlace>Bosnia</origPlace>
                     </origin>
                     <provenance>Presented by <persName>Henry Gory</persName>, who may have been a
                         descendant of a Mr <persName>Gory</persName> mentioned by <persName>Humfrey
@@ -177,14 +178,16 @@
                         </recordHist>
                     </adminInfo>
                     <surrogates>
-                        <p>Microform: Central Library of BAS, <idno>MF-15</idno>,</p>
-                        <p>Digital images of the roll (files: <idno>C7936-03</idno> -
-                                <idno>C7936-06</idno>).</p>
+                        <list>
+                            <item>Microform: Central Library of BAS, <idno>MF-15</idno>;</item>
+                            <item>Digital images of the roll (files: <idno>C7936-03</idno> –
+                                <idno>C7936-06</idno>).</item>
+                        </list>
                     </surrogates>
                     <listBibl>
                         <bibl>
                             <ref type="bibl" target="bib:Partridge1963">Partridge 1963:
-                                281-90.</ref>
+                                281–90.</ref>
                         </bibl>
                         <bibl>
                             <ref type="bibl" target="bib:DuFeu1984">Du Feu 1984: 79-80.</ref>

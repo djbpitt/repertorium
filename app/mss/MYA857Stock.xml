@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-MYA857Stock">
     <teiHeader>
         <fileDesc>
@@ -11,7 +15,7 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>30.07.2010</date>
+                <date when="2010-07-30">30.07.2010</date>
                 <idno type="Repertorium">RC-MYA857Stock</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -19,15 +23,12 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Глубоковский1918">Глубоковский 1918</ref>
-                    <ref type="bibl" target="bib:Roubetz">description No. 1</ref>
-                </p>
+                <listBibl><bibl><ref target="bib:Глубоковский1918">Глубоковский 1918</ref></bibl>
+                    <bibl><ref target="bib:Roubetz">description No. 1</ref></bibl></listBibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -60,6 +61,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -80,9 +82,6 @@
                 <physDesc>
                     <objectDesc form="codex">
                         <supportDesc material="paper">
-                            <support>
-                                <material>Paper</material>
-                            </support>
                             <extent>
                                 <measure unit="folia">II+243+III</measure>
                                 <dimensions unit="mm" type="folia">
@@ -103,100 +102,78 @@
                             end of the verses of the psalms.</p>
                     </decoDesc>
                     <bindingDesc>
-                        <binding>
-                            <p>Leather binding (original).</p>
+                        <binding contemporary="true">
+                            <summary>Leather binding (original).</summary>
                         </binding>
                     </bindingDesc>
-                    <additions type="editorial">
-                        <note>Several glosses in the margns (interpretations and liturgical notes,
-                            correction of the words and part of the words.</note>
-                        <note>Numbers of the psalms with later hand marked with arabic figures and
-                            reordered from 10 to 147 (plus one); the letter 'kopa' is re-edited with
-                            Cyrillic <foreign xml:lang="cu">ч</foreign> by this later hand in the
-                            margins.</note>
-                    </additions>
                     <additions type="inscriptions">
-                        <list type="simple">
-                            <item>
-                                <note>Late inscription of f. 9v</note>
+                        <list>
+                            <item>Several glosses in the margns (interpretations and liturgical notes,
+                                correction of the words and part of the words.</item>
+                            <item>Numbers of the psalms with later hand marked with arabic figures and
+                                reordered from 10 to 147 (plus one); the letter 'kopa' is re-edited with
+                                Cyrillic <foreign xml:lang="cu">ч</foreign> by this later hand in the
+                                margins.</item>
+                            <item><locus>f. 9v</locus> Late inscription
                             </item>
                             <item>
                                 <locus>f. V</locus>
-                                <quote xml:lang="cu">Сеа книга іванова голѧмыя (глаголемая) псартерь </quote>
-                                <note>One more, illegible inscription.</note>
+                                <quote xml:lang="cu">Сеа книга іванова голѧмыя (глаголемая) <sic>псартерь</sic> </quote> and one more, illegible inscription
                             </item>
                         </list>
                     </additions>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-239v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Semiunicial of South Russian origin.</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–239v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Semiunicial of South Russian origin.</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Russian: two juses; the big
-                                    jus is rear but it is in use; two jers.</p>
-                            </orthography>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Russian</summary>
+                            <langNote key="orthography">two juses; the big jus is rare but it is in use; two jers</langNote>
                         </scribeLang>
                     </scribe>
                     <scribe n="2">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">240r-243v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Semiunicial of South Russian origin.</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">240r–243v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Semiunicial of South Russian origin.</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Russian; two jers, two
-                                    juses.</p>
-                            </orthography>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Russian</summary>
+                            <langNote key="orthography">Two jers, two juses.</langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name>M. Yovcheva</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <filiation type="protograph">Russian</filiation>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1r-198v</locus>
+                        <locus n="1">1r–198v</locus>
                         <title xml:lang="bg">Псалтир</title>
                         <note>Some of titles are in the form of interpretations of the
                             psalms.</note>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">198v-216r</locus>
+                        <locus n="2">198v–216r</locus>
                         <title xml:lang="bg">Песни библейски (десет)</title>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3">
-                        <locus n="3">216r-243v</locus>
+                        <locus n="3">216r–243v</locus>
                         <title xml:lang="bg">Избрани псалми за празници</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#MY">
-                        <origDate notBefore="1380" notAfter="1420">14th c., end - 15th c.,
+                    <origin evidence="conjecture" resp="#MY">
+                        <origDate notBefore="1380" notAfter="1420">14th c., end – 15th c.,
                             beginning</origDate>
-                        <note>The manuscript was written in South Russia, may be Galitzia.</note>
+                        <origPlace cert="low">South Russia, may be Galitzia.</origPlace>
+                        <note></note>
                     </origin>
-                    <acquisition/>
                 </history>
-                <additional>
-                    <adminInfo>
-                        <recordHist>
-                            <source>
-                                <p>Directly catalogued from the original manuscript using the
-                                    handwritten catalogue from Roubetz.</p>
-                            </source>
-                        </recordHist>
-                    </adminInfo>
-                </additional>
             </msDesc>
         </body>
     </text>

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM305NBB">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Fragment of apocryphal miscellany NB Belgrade, 305</title>
+                <title>Fragment of apocryphal miscellany NB Belgrade, 305</title>
                 <author xml:id="AM">Anisava Miltenova</author>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
             </titleStmt>
@@ -20,14 +25,12 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <bibl>
-                        <ref type="bibl" target="bib:Макушев1882">Макушев 1882</ref>
+                <bibl>
+                        <ref target="bib:Макушев1882">Макушев 1882</ref>
                     </bibl>
                     <bibl>
-                        <ref type="bibl" target="bib:Стојановић1982">Стојановић 1982: 294</ref>
+                        <ref target="bib:Стојановић1982">Стојановић 1982: 294</ref>
                     </bibl>
-                </p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -40,7 +43,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Miscellany of mixed content</item>
                         <item>Apocryphal miscellany</item>
                         <item>Florilegia</item>
@@ -57,6 +60,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-28">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -72,8 +76,7 @@
                     <repository>National Library</repository>
                     <idno type="shelfmark">305</idno>
                     <note>The MS is destroyed at the time of Second War. The fragment is a part from
-                        MSS N 39 (41) from the National Library, Athens. <ref type="bibl" target="bib:Станчев1998">Станчев 1998</ref>
-                    </note>
+                        MSS N 39 (41) from the National Library, Athens. <ref type="bibl" target="bib:Станчев1998">Станчев 1998</ref></note>
                     <altIdentifier type="former">
                         <country>Serbia</country>
                         <settlement>Belgrade</settlement>
@@ -86,9 +89,8 @@
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="fragment">
-                        <supportDesc material="parchment">
+                        <supportDesc material="parch">
                             <support>
-                                <material>Parchment</material>
                             </support>
                             <extent>
                                 <measure unit="folia">14</measure>
@@ -126,35 +128,28 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-14v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
-                            <p>Uncial with archaic elements.</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–14v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="uncial">Uncial with archaic elements</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">without juses, with small
-                                    jehr only</p>
-                            </orthography>
+                            <langNote key="orthography">Without juses, with small jer only
+                            </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Stanchev, Kr.</name>
-                            <resp>publication</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
-                    <summary>The manuscript contains 4 texts</summary>
+                    <summary>The manuscript contains 5 texts</summary>
                     <filiation type="protograph">Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1r-3r</locus>
+                        <locus n="1">1r–3r</locus>
                         <title xml:lang="bg">Откровение на Псевдо-Методий Патарски</title>
                         <author>Methodios of Olympos (Pseudo)</author>
                         <note>Without beginning and title. The copy is concordant with first
                             translation of the work; earliest text: MSS N 382 (453) from the
-                            Hilandar Monastery on Mount Athos, 13th-14th c. (see: <ref type="bibl" target="bib:Истрин1897">Истрин 1897</ref>
-                        </note>
-                        <filiation type="source">Greek text is edited by <ref type="bibl" target="bib:Истрин1897">Истрин 1897: 84-142</ref>).</filiation>
+                            Hilandar Monastery on Mount Athos, 13th–14th c. (see: <ref type="bibl" target="bib:Истрин1897">Истрин 1897</ref></note>
+                        <filiation type="source">Greek text is edited by <ref type="bibl" target="bib:Истрин1897">Истрин 1897: 84–142</ref>).</filiation>
                         <filiation type="translation">
                             <num>1</num>
                             <date>10th c.</date>
@@ -170,7 +165,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">3r-6v</locus>
+                        <locus n="2">3r–6v</locus>
                         <title xml:lang="bg">Сказание на Афродитиан за раждането на Исус</title>
                         <author>anonymous</author>
                         <note>Without end. The fragment needs to filling out with the text from N 39
@@ -188,13 +183,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">7r-10v</locus>
+                        <locus n="3">7r–10v</locus>
                         <title xml:lang="bg">Слизане на Исус Христос в ада</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">10v-12v</locus>
+                        <locus n="4">10v–12v</locus>
                         <title xml:lang="bg">Евангелие Никодимово. Послание на Пилат до Тиберий</title>
                         <author>anonymous</author>
                         <note>The text is published by <ref type="bibl" target="bib:Сперанский1895">Сперанский 1895: 114 sq.</ref>)</note>
@@ -209,7 +204,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">13r-14v</locus>
+                        <locus n="5">13r–14v</locus>
                         <title xml:lang="bg">Неидентифициран текст (поучение, житие, разказ или др.)</title>
                     </msItemStruct>
                 </msContents>
@@ -221,8 +216,7 @@
                         <origPlace>Unknown. <note>Makushev added comment, that MS is from the
                                 Djakovica Monastery; Stojanovich mentioned that MSS is from Skopie.
                                 See, <ref type="bibl" target="bib:Станчев1984">Станчев
-                                1984</ref>
-                            </note>
+                                1984</ref></note>
                         </origPlace>
                     </origin>
                 </history>

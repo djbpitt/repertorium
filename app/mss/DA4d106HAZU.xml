@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DA4d106HAZU">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Apostle IV d 106 Archives of the Croatian Academy of
+                <title>Apostle IV d 106 Archives of the Croatian Academy of
                     Sciences</title>
                 <author xml:id="DA">Desislava Atanasova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
@@ -13,7 +17,7 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>2000</date>
+                <date when="2000">2000</date>
                 <idno type="Repertorium">RC-DA4d106HAZU.xml</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -21,8 +25,7 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -51,6 +54,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-28">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -67,10 +71,7 @@
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="fragment">
-                        <supportDesc material="parchment">
-                            <support>
-                                <material>Parchment</material>
-                            </support>
+                        <supportDesc material="parch">
                             <extent>
                                 <measure unit="folia">3</measure>
                                 <dimensions type="folia" unit="mm">
@@ -96,28 +97,25 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">2v-3r</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Vasa the
-                            Grammarian</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
-                            <p>Elegant East Bulgarian uncial</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">2v–3r</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Vasa the Grammarian</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  script="Cyrs" style="uncial">Elegant East Bulgarian uncial</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Two jers, two nasals; both
-                                    confused</p>
-                            </orthography>
+                            <langNote key="orthography">Two jers, two juses; both
+                                    confused
+                            </langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Mošin1955">Mošin 1955: 143</ref>; <ref type="bibl" target="bib:Богдановић1982">Богдановић 1982:
-                            19</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Mošin1955">Mošin 1955: 143</ref>; <ref target="bib:Богдановић1982">Богдановић 1982:
+                            19</ref></bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <summary>The manuscript contains 2 texts.</summary>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1r1-2v15</locus>
+                        <locus n="1">1r1–2v15</locus>
                         <title xml:lang="bg">Апостолски четива за събота и неделя на Великия пост</title>
                         <re:sampleText xml:lang="cu">
                             <incipit>Моисеу и Ароноу и прочимь
@@ -129,10 +127,11 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="original">
-                        <locus>2v17-3r9</locus>
+                        <locus>2v17–3r9</locus>
                         <title xml:lang="bg">Колофон</title>
                         <author xml:lang="bg">Vasa the Grammarian</author>
-                        <colophon>
+                       <re:sampleText xml:lang="cu"> 
+                           <colophon>
                             <p>се трудолюбивое мниха Аркадиа, оуч<seg rend="sup">е</seg>н<seg rend="sup">и</seg>ка Висариона митрѡполита прѣѫславскаго, списа
                                 сѧ ѿ дара власти его рѫкоѫ Васѣ граматика. иже съ Б<seg rend="sup">ого</seg>мъ истрѣбихь малѫѫ стъзѫ. а хотѧщиі шествовати еѫ
                                 оумрѣѫть наказани Д<seg rend="sup">оу</seg>хомъ свѧтымъ оублачити
@@ -144,12 +143,12 @@
                                 Костандинѣ, и ц<seg rend="sup">а</seg>р<seg rend="sup">и</seg>ци его
                                 Марии, и ѿрасль ею Михаилѣ Порфиророднѣмъ, и патриарсѣ Игнатии
                                 стльпоу правовѣриа. ты ми еси Христе зачало и конець.</p>
-                        </colophon>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#DA">
-                        <origDate cert="high" datingMethod="colophon" notBefore="1277" notAfter="1277">1277</origDate>
+                    <origin evidence="internal" resp="#DA">
+                        <origDate cert="high" notBefore="1277" notAfter="1277">1277</origDate>
                         <origPlace>Bulgaria</origPlace>
                         <ref type="bibl" target="bib:Богдановић1982">Богдановић 1982: 19</ref>
                         <ref type="bibl" target="bib:Mošin1955">Mošin 1955: 143</ref>

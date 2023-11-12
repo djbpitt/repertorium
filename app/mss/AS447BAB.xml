@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AS447BAB">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Miscellany N 447 from the Romanian Academy of Sciences</title>
+                <title>Miscellany N 447 from the Romanian Academy of Sciences</title>
                 <author xml:id="AS">Ana Stoykova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -20,8 +24,7 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -39,7 +42,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Miscellany of mixed content</item>
                     </list>
                 </keywords>
@@ -54,6 +57,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-28">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -73,8 +77,7 @@
                     <objectDesc>
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">23 ff.</measure>
@@ -100,19 +103,16 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-23v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="semiuncial" script="Cyrs"/>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–23v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  style="semiuncial" script="Cyrs"/>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">With two juses, with two jers
-                                    (predominate small jer)</p>
-                            </orthography>
+                            <langNote key="orthography">With two juses, with two jers
+                                    (predominate small jer)
+                            </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">A. Stojkova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -120,7 +120,7 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1r-2v</locus>
+                        <locus n="1">1r–2v</locus>
                         <title xml:lang="bg">Апокалипсис на Йоан Богослов</title>
                         <author>anonymous</author>
                         <note>without beginning and end</note>
@@ -134,7 +134,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">3r-3v</locus>
+                        <locus n="2">3r–3v</locus>
                         <title xml:lang="bg">Поучения нравствени с номерация 293–300</title>
                         <author>anonymous</author>
                         <note>Without beginning</note>
@@ -150,7 +150,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3">
-                        <locus n="2">3v-11v</locus>
+                        <locus n="2">3v–11v</locus>
                         <title xml:lang="bg">Видение на пророк Исая</title>
                         <author>anonymous</author>
                         <note>in the middle of the article some folia are missing</note>
@@ -168,7 +168,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">11r-23v</locus>
+                        <locus n="4">11r–23v</locus>
                         <title xml:lang="bg">Евангелие Никодимово</title>
                         <author>anonymous</author>
                         <note>without end</note>
@@ -185,7 +185,7 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#AS">
+                    <origin evidence="conjecture" resp="#AS">
                         <origDate notBefore="1550" notAfter="1599">16th c., second half</origDate>
                         <origPlace>probably in Moldova</origPlace>
                         <ref type="bibl" target="bib:Panaitescu1959">Panaitescu 1959</ref>

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AS1053NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Miscellany No 1053 NBKM</title>
+                <title>Miscellany No 1053 NBKM</title>
                 <author xml:id="AS">Ana Stoykova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -20,13 +24,12 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <bibl>
-                    <ref target="bib:Стоянов1964">Стоянов и Кодов 1964: 315-317</ref>
+                    <ref target="bib:Стоянов1964">Стоянов и Кодов 1964: 315–317</ref>
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -38,7 +41,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Miscellany of mixed content</item>
                     </list>
                 </keywords>
@@ -53,6 +56,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-28">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -73,7 +77,6 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Crown
                                         with star and crescent</motif>
@@ -97,8 +100,8 @@
                                 missing</condition>
                         </supportDesc>
                         <layoutDesc>
-                            <layout columns="1" writtenLines="18 19">ff.1r-35r: 16 lines; f.36r-97v
-                                predominately 18-19 lines</layout>
+                            <layout columns="1" writtenLines="18 19">ff.1r–35r: 16 lines; f.36r–97v
+                                predominately 18–19 lines</layout>
                         </layoutDesc>
                     </objectDesc>
                     <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">dark brown</ink>
@@ -119,34 +122,34 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <summary xmlns="http://www.tei-c.org/ns/1.0">Two hands</summary>
                     <scribe n="1">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-35v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="semiuncial" script="Cyrs"/>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–35v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote style="semiuncial" script="Cyrs"/>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, with two
-                                    jers</p>
-                            </orthography>
+                            <langNote>Without juses, with two
+                                    jers
+                            </langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Стоянов1964">Стоянов и Кодов 1964:
-                                315-317</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Стоянов1964">Стоянов и Кодов 1964: 315–317</ref>
+                        </bibl>
                     </scribe>
                     <scribe n="2">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">36r-97v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="semiuncial" script="Cyrs"/>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">36r–97v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote style="semiuncial" script="Cyrs"/>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, with two
-                                    jers</p>
-                            </orthography>
+                            <langNote key="orthography">Without juses, with two
+                                    jers
+                            </langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Стоянов1964">Стоянов и Кодов 1964:
-                                315-317</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Стоянов1964">Стоянов и Кодов 1964: 315–317</ref>
+                        </bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -154,7 +157,7 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
                         <locus>1r</locus>
-                        <title xml:lang="bg">Заповеди към иереите, 1</title>
+                        <title xml:lang="bg">Заповеди към йереите, 1</title>
                         <author>anonymous</author>
                         <note>without beginning</note>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -167,8 +170,8 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">1r-1v</locus>
-                        <title xml:lang="bg">Заповеди към иереите, 2</title>
+                        <locus n="2">1r–1v</locus>
+                        <title xml:lang="bg">Заповеди към йереите, 2</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -181,7 +184,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus>1v-2r</locus>
+                        <locus>1v–2r</locus>
                         <title xml:lang="bg">Поучение на отец Пимен за покаянието, от Патерика</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -198,13 +201,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">2r-3v</locus>
+                        <locus n="4">2r–3v</locus>
                         <title xml:lang="bg">Поучение за свещениците от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Слово ІІѡанна зла<seg rend="sup">т</seg>устаго о с҃щенико<seg rend="sup">х</seg>
-                            </head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Слово ІІѡанна зла<seg rend="sup">т</seg>устаго о с҃щенико<seg rend="sup">х</seg></head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">длъжно убо ѥ<seg rend="sup">т</seg> иереу сице о люде<seg rend="sup">х</seg> промишлꙗти.
                                 прьвое мл҃тву творити въсею д҃шею за люди</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">не достоить бо іереу често
@@ -212,7 +214,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">4r-4v</locus>
+                        <locus n="5">4r–4v</locus>
                         <title xml:lang="bg">Разказ за монаха Даниил, от Патерика</title>
                         <author>anonymous</author>
                         <note>Story from the Paterikon</note>
@@ -226,7 +228,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="6">4v-5v</locus>
+                        <locus n="6">4v–5v</locus>
                         <title xml:lang="bg">Разказ за некръстеното дете и властта на йерея</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -243,7 +245,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="8">5v-7v</locus>
+                        <locus n="8">5v–7v</locus>
                         <title xml:lang="bg">Разказ за силата на вярата на презвитера Севир</title>
                         <author cert="medium">Grigorius</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -257,7 +259,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus>7v-8r</locus>
+                        <locus>7v–8r</locus>
                         <title xml:lang="bg">Поучение за посещаването на боледуващи</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -271,7 +273,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus>8r-8v</locus>
+                        <locus>8r–8v</locus>
                         <title xml:lang="bg">Поучение за милостинята от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -287,7 +289,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10">
-                        <locus n="10">9r-35v</locus>
+                        <locus n="10">9r–35v</locus>
                         <title xml:lang="bg">Видение на апостол Павел</title>
                         <author>anonymous</author>
                         <note>text is a compilation including St. Nicolaus' Vita; without
@@ -303,7 +305,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="11">36r-52v</locus>
+                        <locus n="11">36r–52v</locus>
                         <title xml:lang="bg">Житие на св. Кирик и Юлита</title>
                         <author>anonymous</author>
                         <date type="churchCal" when="--07-15">15 July</date>
@@ -320,7 +322,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation">
-                        <locus n="12">53r-64v</locus>
+                        <locus n="12">53r–64v</locus>
                         <title xml:lang="bg">Житие на св. 40 мъченици от Севастия</title>
                         <author>anonymous</author>
                         <note>without beginning</note>
@@ -334,7 +336,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
-                        <locus n="13">65r-65v</locus>
+                        <locus n="13">65r–65v</locus>
                         <title xml:lang="bg">Разказ за раждането на пророк Илия</title>
                         <author>anonymous</author>
                         <date type="churchCal" when="--07-30">30 July</date>
@@ -352,7 +354,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="translation">
-                        <locus n="14">66r-72r</locus>
+                        <locus n="14">66r–72r</locus>
                         <title xml:lang="bg">Разказ за живота на пророк Илия</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -369,7 +371,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15" type="translation">
-                        <locus n="15">72v-78v</locus>
+                        <locus n="15">72v–78v</locus>
                         <title xml:lang="bg">Житие на св. Петка Епиватска</title>
                         <author>anonymous</author>
                         <note>without end</note>
@@ -381,7 +383,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16" type="translation">
-                        <locus n="16">79r-89v</locus>
+                        <locus n="16">79r–89v</locus>
                         <title xml:lang="bg">Епистолия за Неделята</title>
                         <author>anonymous</author>
                         <note>without beginning and end</note>
@@ -393,7 +395,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17" type="translation">
-                        <locus n="17">90r-91v</locus>
+                        <locus n="17">90r–91v</locus>
                         <title xml:lang="bg">Чудеса на св. Георги. Чудо за воловете на Теоктист</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -408,7 +410,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18">
-                        <locus>92r-96r</locus>
+                        <locus>92r–96r</locus>
                         <title xml:lang="bg">Тълкувание на светата литургия</title>
                         <author>anonymous</author>
                         <note>without beginning</note>
@@ -423,7 +425,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD19" type="translation">
-                        <locus n="19">96v-97v</locus>
+                        <locus n="19">96v–97v</locus>
                         <title xml:lang="bg">Поучение против пиянството</title>
                         <author>anonymous</author>
                         <note>without title; without end</note>
@@ -435,10 +437,10 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#AS">
+                    <origin evidence="conjecture" resp="#AS">
                         <origDate notBefore="1701" notAfter="1720">18th c., beginning</origDate>
                         <ref type="bibl" target="bib:Стоянов1964">Стоянов и Кодов 1964:
-                            313-314</ref>
+                            313–314</ref>
                     </origin>
                 </history>
             </msDesc>

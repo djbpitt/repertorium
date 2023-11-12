@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM1-102O">
     <teiHeader>
         <fileDesc>
@@ -19,8 +23,7 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -37,7 +40,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>vita</item>
                         <item>synaxarion</item>
                     </list>
@@ -53,6 +56,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when="2009-04-17">Removed constructions
@@ -91,7 +95,6 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Crown</motif>
                                     <ref type="bibl" target="bib:Tromonin1965">
@@ -122,14 +125,13 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>New library binding</p>
+                            <summary>New library binding</summary>
                         </binding>
                     </bindingDesc>
-                    <additions type="inscriptions">
-                        <list type="ordered">
+                    <additions>
+                        <list>
                             <item>
-                                <locus>f. 1r</locus>
-                                <date>1517</date>
+                                <locus>f. 1r</locus> from <date>1517</date>: 
                                 <quote xml:lang="cu">Въ лѣ<seg rend="sup">т</seg> ҂зк҃е ҃ прише<seg rend="sup">л</seg> ѿ. старецъ Ісаіѧ. принеслъ ко великому
                                     кнз҃ю книгу. житїе ст҃гѡ савы србск<unclear>..</unclear>
                                 </quote>
@@ -144,37 +146,27 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1-157</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial"/>
-                        <scribeLang>
-                            <summary xmlns="http://www.tei-c.org/ns/1.0">Russian features</summary>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">only one jus (small); two
-                                    jers (nonconsistent)</p>
-                            </orthography>
-                        </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name xml:id="RVB" full="yes">R. V. Bulatova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
-                    </scribe>
-                    <scribe n="2">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">158-195</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Middle Semiuncial</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"/>
                         </scriptDesc>
                         <scribeLang>
                             <summary xmlns="http://www.tei-c.org/ns/1.0">Russian features</summary>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Only one jus (small);
-                                    occasionally big jus; two jers (nonconsistent);</p>
-                            </orthography>
+                            <langNote key="orthography">Only one jus (small); two
+                                jers (nonconsistent)</langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name ref="#RVB" full="yes">Bulatova, R.V.</name>
-                            <resp>de visu</resp>
-                        </respStmt>
+                    </scribe>
+                    <scribe n="2">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">158-195</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Middle Semiuncial</scriptNote>
+                        </scriptDesc>
+                        <scribeLang>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Russian features</summary>
+                            <langNote key="orthography">Only one jus (small);
+                                occasionally big jus; two jers (nonconsistent)</langNote>
+                        </scribeLang>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -182,11 +174,10 @@
                     <filiation type="protograph">Serbian, Bulgarian</filiation>
                     <filiation type="antigraph">Serbian, Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="original">
-                        <locus n="1">1r-44v</locus>
+                        <locus n="1">1r–44v</locus>
                         <title xml:lang="bg">Житие на св. Сава</title>
                         <author>Dometian archbishop</author>
-                        <note>Without end. The text is related with the <date type="churchCal" when="--01-14">14 January</date>
-                        </note>
+                        <note>Without end. The text is related with the <date type="churchCal" when="--01-14">14 January</date></note>
                         <filiation type="protograph">Serbian</filiation>
                         <filiation type="antigraph">Serbian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -201,12 +192,11 @@
                                 не ѿ трънїѧ но и лозы грѡз<seg rend="sup">д</seg>ъ.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">и ꙗко же
                                 въ мало врѣмен'нѣмь, и прельстнѣмь се<seg rend="sup">м</seg> житїи,
-                                    донде<seg rend="sup">же</seg>
-                            </explicit>
+                                    донде<seg rend="sup">же</seg></explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="original">
-                        <locus n="2">48r-80r</locus>
+                        <locus n="2">48r–80r</locus>
                         <title xml:lang="bg">Житие на св. Константин и Елена</title>
                         <author>Euthymios of Tŭrnovo</author>
                         <date type="churchCal" when="--05-21">21 May</date>
@@ -221,15 +211,14 @@
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">их же буди въсѣмъ на<seg rend="sup">м</seg> получити. блг<seg rend="sup">д</seg>тїю и
                                 чл҃колюбїемъ г҃а нашего і҃ѵ х҃а, съ нимже ѡ҃цу коупно съ с҃тым<seg rend="sup">м</seg> д҃хѡ<seg rend="sup">м</seg>, слава и дръжава.
                                 честь и покланѧнїе въ неоуставны<seg rend="sup">ѧ</seg>
-                                <seg function="formula">вѣкы вѣкѡмь, аминь.</seg>
-                            </explicit>
+                                <seg function="formula">вѣкы вѣкѡмь, аминь.</seg></explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="original">
-                        <locus n="3">84r-124v</locus>
+                        <locus n="3">84r–124v</locus>
                         <title xml:lang="bg">Житие на св. Стефан Лазаревич</title>
                         <author>Constantine of Kostenets</author>
-                        <date type="churchCal" when="--06-12">12 June?</date>
+                        <date type="churchCal" when="--06-12" cert="medium">12 June</date>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Житїе и жизнь пр<seg rend="sup">с</seg>нопомнима<seg rend="sup">го</seg> словуща<seg rend="sup">го</seg> бл҃гоч<seg rend="sup">с</seg>тиваго г<seg rend="sup">с</seg>на. деспѡта стефана. съписано повелѣнїемь, и
                                     понуж<seg rend="sup">д</seg>енїемь. с҃тѣ н'шаго патрїарха. землѧ
@@ -245,7 +234,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="original">
-                        <locus n="5">126r-157r</locus>
+                        <locus n="5">126r–157r</locus>
                         <title xml:lang="bg">Житие на св. Стефан Дечански</title>
                         <author>Grigorij Camblak</author>
                         <date type="churchCal" when="--11-11">11 November</date>
@@ -268,7 +257,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="original">
-                        <locus n="5">158r-195v</locus>
+                        <locus n="5">158r–195v</locus>
                         <title xml:lang="bg">Житие на Иларион Мъгленски</title>
                         <author>Euthymios of Tŭrnovo</author>
                         <date type="churchCal" when="--10-21">21 October</date>
@@ -287,7 +276,7 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin resp="#AM" evidence="de visu">
+                    <origin resp="#AM" evidence="conjecture">
                         <origDate notBefore="1500" notAfter="1550">16th c., first half</origDate>
                         <origPlace cert="low">Unknown. It is possible that the manuscript has been
                             written by Russian writter in Hilandar. </origPlace>

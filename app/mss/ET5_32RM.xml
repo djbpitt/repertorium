@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-ET5_32RM">
     <teiHeader>
         <fileDesc>
@@ -20,15 +24,12 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Райков1986">Райков, Кодов, Христова 1986:
-                        114-116</ref>
-                </p>
+                <bibl><ref target="bib:Райков1986">Райков, Кодов, Христова 1986:
+                        114–116</ref></bibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -39,7 +40,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Miscellany devoted to a single Saint</item>
                     </list>
                 </keywords>
@@ -54,6 +55,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -77,7 +79,6 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Three
                                         crescents</motif>
@@ -103,9 +104,9 @@
                                 </dimensions>
                             </extent>
                             <pagination xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">original
-                                pagination; each of articles is paginated separately: 1-20 (1r-21v);
-                                1-29 (25r-54v); 1-21 (57r-77v); 1-29 (79r-102r); 25-35 (103r-113v);
-                                116r-124r is not paginated</pagination>
+                                pagination; each of articles is paginated separately: 1–20 (1r–21v);
+                                1–29 (25r–54v); 1–21 (57r–77v); 1–29 (79r–102r); 25–35 (103r–113v);
+                                116r–124r is not paginated</pagination>
                             <collation>
                                 <summary>14 quires, 8 folia each.</summary>
                             </collation>
@@ -122,39 +123,40 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>The thick wooden panels covered with leather.</p>
+                            <summary>The thick wooden panels covered with leather.</summary>
                         </binding>
                     </bindingDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-124v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial"/>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–124v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"/>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">With one jus (<foreign xml:lang="cu">ѧ</foreign>), with two jers (predominately big
-                                    jer)</p>
-                            </orthography>
+                            <langNote key="orthography">With one jus (<foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ѧ</foreign>), with two jers (predominately big
+                                    jer)
+                            </langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Райков1986">Райков, Кодов, Христова 1986:
-                                114-116</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Райков1986">Райков, Кодов, Христова 1986:
+                                114–116</ref>
+                        </bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <summary>The manuscript contains 6 texts</summary>
                     <filiation type="protograph">Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="original" style="non-narrative">
-                        <locus n="1">1r-20v</locus>
+                        <locus n="1">1r–20v</locus>
                         <title xml:lang="bg">Служба за св. Иван Рилски от Димитър Кантакузин</title>
                         <author>Demetrios Kantakouzenos</author>
                         <date type="churchCal" when="--07-01">1 July</date>
                         <note>The text of the service, which includes an acrostic, coincides
                             completely with text, published by Neofit of Rila in his edition: Служби
                             с житием преподабнаго и богоноснаго отца нашего Іоанна Рилскаго
-                            Чудотворца. Белград, 1836, l.30-42. Acrostic with the name of the autor
+                            Чудотворца. Белград, 1836, l.30–42. Acrostic with the name of the autor
                             of the Service: Demetrios Kantakouzenos "Похвалу ти отче Іѡанне плету
                             Димитрие"</note>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -170,7 +172,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="original" style="non-narrative">
-                        <locus n="2">25r- 53v</locus>
+                        <locus n="2">25r– 53v</locus>
                         <title xml:lang="bg">Служба за св. Иван Рилски за 19 октомври</title>
                         <author>anonymous</author>
                         <date type="churchCal" when="--10-19">19 October</date>
@@ -187,7 +189,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="original" style="non-narrative">
-                        <locus n="3">57r-78r</locus>
+                        <locus n="3">57r–78r</locus>
                         <title xml:lang="bg">Служба за св. Иван Рилски за 18 август</title>
                         <date type="churchCal" when="--08-18">18 August</date>
                         <note>This service is similar to the service in Skopski minej 1451, but it
@@ -208,7 +210,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
-                        <locus n="4">79r-102r</locus>
+                        <locus n="4">79r–102r</locus>
                         <title xml:lang="bg">Житие на св. Иван Рилски</title>
                         <author>Daniil of Rila, Monk</author>
                         <note>Compilation on the basis of the all lives of St. John of Rila</note>
@@ -221,12 +223,11 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Сеи прп<seg rend="sup">д</seg>бныи и бг҃оносніьи оц҃ъ нашъ іѡаннъ ріьлскыи великыи в'
                                 постницѣхъ</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">прїидите блг҃ословенїи
-                                оц҃а моего <gap hand="ET"/>
-                            </explicit>
+                                оц҃а моего <gap/></explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="original">
-                        <locus n="5">103r-113v</locus>
+                        <locus n="5">103r–113v</locus>
                         <title xml:lang="bg">Повест за пренасянето на мощите на св. Иван Рилски</title>
                         <author>anonymous</author>
                         <note>The Story is composed on the basis of the Life of St. John of Rila by
@@ -245,7 +246,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="original" style="non-narrative">
-                        <locus n="6">116r-124r</locus>
+                        <locus n="6">116r–124r</locus>
                         <title xml:lang="bg">Канон молебен за св. Иван Рилски</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -261,33 +262,33 @@
                     <msItemStruct xml:id="ACD7">
                         <locus>89v</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <colophon>
-                            <p>Зри и здѣ блѣдословїе невѣдѣвшаго какѡ согласити пещеру и каменъ.</p>
-                        </colophon>
+                       <re:sampleText> <colophon>
+                            <ab>Зри и здѣ блѣдословїе невѣдѣвшаго какѡ согласити пещеру и каменъ.</ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8">
                         <locus>97v</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <colophon>
-                            <p>Здѣ несогласую списатели житїя сего, или сей здѣ ѿ себе нѣкая
-                                приложилъ</p>
-                        </colophon>
+                       <re:sampleText xml:lang="cu"> <colophon>
+                            <ab>Здѣ несогласую списатели житїя сего, или сей здѣ ѿ себе нѣкая
+                                приложилъ</ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9">
                         <locus>120r</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <colophon>
-                            <p>Трижды ѡбрѣтает ся преподобне, въ семъ кондацѣ, и возможно ли сему
-                                быти.</p>
-                        </colophon>
+                        <re:sampleText xml:lang="cu"><colophon>
+                            <ab>Трижды ѡбрѣтает ся преподобне, въ семъ кондацѣ, и возможно ли сему
+                                быти.</ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#ET">
+                    <origin evidence="conjecture" resp="#ET">
                         <origDate notBefore="1780" notAfter="1799">18th c., end </origDate>
                         <origPlace>Rila monastery</origPlace>
                         <ref type="bibl" target="bib:Райков1986">Райков, Кодов, Христова 1986:
-                            114-116</ref>
+                            114–116</ref>
                     </origin>
                 </history>
             </msDesc>

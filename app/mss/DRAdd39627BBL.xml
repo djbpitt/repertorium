@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DRAdd39627BBL">
     <teiHeader>
         <fileDesc>
@@ -10,11 +14,12 @@
                 <author xml:id="AB">Andrej Bojadžiev</author>
                 <author xml:id="DR">Dilyana Radoslavova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
+                <editor corresp="#AB">Andrej Bojadžiev</editor>
             </titleStmt>
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>January 2005</date>
+                <date when="2005-01">January 2005</date>
                 <idno type="Repertorium">RC-DRAdd39627BL</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -22,13 +27,12 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <p>This description is based on <emph>de visu</emph> observations, on MS microform
-                    and on the published catalogue descriptions. <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 121-123</ref>.</p>
+                    and on the published catalogue descriptions. <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 121–123</ref>.</p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -62,6 +66,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when="2009-04-17">Removed constructions
@@ -89,14 +94,16 @@
                     <settlement>London</settlement>
                     <repository>British Library</repository>
                     <idno type="shelfmark">Add. MS 39627</idno>
-                    <idno type="catalogue" corresp="CleminsonR1988">78</idno>
                     <note>
-                        <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 121-123.</ref>
+                        <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 121–123.</ref>
                     </note>
+                <altIdentifier>
+                    <idno type="catalogue">78</idno>
+                </altIdentifier>
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="codex">
-                        <supportDesc material="parchment">
+                        <supportDesc material="parch">
                             <support>
                                 <material>Parchment of good quality</material>
                             </support>
@@ -111,7 +118,7 @@
                                     <width>160</width>
                                 </dimensions>
                             </extent>
-                            <foliation>(i), 1-283, (284-286).</foliation>
+                            <foliation>(i), 1–283, (284–286).</foliation>
                             <collation>
                                 <summary/>
                                 <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1">
@@ -141,7 +148,7 @@
                                 <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="38">
                                     <extent xmlns="http://www.tei-c.org/ns/1.0">4(-3)</extent>
                                 </quire>
-                                <signatures>I-XXXVII signed bottom l.h. corner, last verso, <foreign xml:lang="cu">а҃-лз҃</foreign>. The signatures are in blue,
+                                <signatures>I–XXXVII signed bottom l.h. corner, last verso, <foreign xml:lang="cu">а҃–лз҃</foreign>. The signatures are in blue,
                                     like the colour used in the miniatures. Traces of a different
                                     sequience in the upper margin of the rectos on f. 45 ѕ҃, f. 92
                                     в҃і, f. 100 г҃і , f. 131 з҃і.</signatures>
@@ -158,35 +165,36 @@
                             <condition>
                                 <p>Generally excellent, but on some leaves, especially in St Mark,
                                     the ink is badly faded. A few of the miniatures are similarly
-                                    affected. A little staining on ff. 264-276. Ff. 1-2, 4v-5v, 87v,
-                                    136v, 273, 275v, 279, 284-end are blank.</p>
+                                    affected. A little staining on ff. 264–276. Ff. 1–2, 4v–5v, 87v,
+                                    136v, 273, 275v, 279, 284–end are blank.</p>
                             </condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" writtenLines="22 25" ruledLines="22 25"/>
                             <layout columns="1" writtenLines="22 25" ruledLines="31 33">
-                                <locus>ff. 276-283v</locus>
+                                <locus>ff. 276–283v</locus>
                             </layout>
                         </layoutDesc>
                     </objectDesc>
                     <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Black; gold for titles,
                         initials and sectional numbers; it looks like some of the initials and the
                         marginal notes, especially those in pale red and in carmine-like colour,
-                        were written with ink used in the miniatures. On ff. 2v-3, 5, red. On ff.
-                        276-283v, black, with red for titles and initials.</ink>
+                        were written with ink used in the miniatures. On ff. 2v–3, 5, red. On ff.
+                        276–283v, black, with red for titles and initials.</ink>
                     <decoDesc>
-                        <decoNote type="overview">Luxurious, with miniatures, illustrative
-                            headpieces and initials; copied from the 11th-c. Par. Gr. 74 (B. Filov
+                        <summary>Luxurious, with miniatures, illustrative
+                            headpieces and initials; copied from the 11th–c. Par. Gr. 74 (B. Filov
                                 (<ref type="bibl" target="bib:Filow1927">Filow 1927/28</ref>, <ref type="bibl" target="bib:Филов1929">Филов 1929</ref>, <ref type="bibl" target="bib:Филов1934">Филов 1934</ref>) and S. Der
                             Nersessian (<ref type="bibl" target="bib:DerNersessian1927">Der
                                 Nersessian 1927</ref>) suggest a lost model after which both Paris
                             and London copies were made); ornament in neo-Byzantine style, developed
                             on the floral-petal Byzantine style; gold, dark blue, dark and light
                             green, bright red, orange, brown and white palette; colours evenly laid,
-                            golden shading on the draperies.</decoNote>
+                            golden shading on the draperies.</summary>
                         <decoNote type="miniatures">Full-page, column-pictures and small miniatures
                             inserted in the outer side of the text column; painted by three artists,
-                            difficult to distinguish.<list>
+                            difficult to distinguish.
+                            <list>
                                 <item>
                                     <locus>f. 2v:</locus>Full-page; portrait of the Tsar’s son in
                                     law Constantine and the Tsar’s daughters Kera Thamar, Keratsa
@@ -745,7 +753,7 @@
                                     husbandmen.</item>
                                 <item>
                                     <locus>f. 197v:</locus>The parable of the Caesar’s penny ?
-                                    Caesar’s tribute money?.</item>
+                                    Caesar’s tribute money?</item>
                                 <item>
                                     <locus>f. 198v:</locus>Jesus asking the Pharisees.</item>
                                 <item>
@@ -1026,7 +1034,7 @@
                         </decoNote>
                     </decoDesc>
                     <bindingDesc>
-                        <p>Ornamented red (rather pink) leather on thick wooden boards, <dimensions unit="mm" type="binding">
+                       <binding> <summary>Ornamented red (rather pink) leather on thick wooden boards, <dimensions unit="mm" type="binding">
                                 <height>325</height>
                                 <width> 240</width>
                             </dimensions>mm; rounded spine, two peg-and-strap fastenings, now
@@ -1046,7 +1054,7 @@
                             the Tsar <foreign xml:lang="cu">златыми дъсками покова</foreign>. No
                             pastedowns. The binding demonstrates exceptional similarity to that of
                             the <ref target="BL_Addms27442.xml">Add MS 27442</ref>, so there is no
-                            doubt that both MSS were bound in one and the same workshop.</p>
+                            doubt that both MSS were bound in one and the same workshop.</summary></binding>
                     </bindingDesc>
                     <additions type="inscriptions">
                         <list>
@@ -1082,59 +1090,55 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1-275</locus>
-                        <persName xmlns="http://www.tei-c.org/ns/1.0">Simon the Monk</persName>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
-                            <p>A formal high uncial, <dimensions unit="mm" type="letters">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1–275</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Simon the Monk</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="uncial">A formal high uncial, <dimensions unit="mm" type="chars">
                                     <height>6</height>
-                                </dimensions> mm high (<dimensions unit="mm" type="line">
+                                </dimensions> mm high (<dimensions unit="mm" type="line=space">
                                     <height>13</height>
-                                </dimensions> mm between lines).</p>
+                                </dimensions> mm between lines).</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Old Church Slavonic.</p>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Two-<emph>jer</emph>,
-                                        two-<emph>jus</emph> orthography.</p>
-                            </orthography>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Old Church Slavonic</summary>
+                            <langNote key="orthography">Two-<emph xmlns="http://www.tei-c.org/ns/1.0">jer</emph>,
+                                two-<emph xmlns="http://www.tei-c.org/ns/1.0">jus</emph> orthography.
+                            </langNote>
                         </scribeLang>
                     </scribe>
                     <scribe n="2">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 276-279</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0">Anonymous</name>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 276–279</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
                         <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <p>Semiuncial, a smaller (ca<dimensions unit="mm" type="letters">
+                            <scriptNote script="Cyrs" style="semiuncial">Semiuncial, a smaller (ca<dimensions unit="mm" type="chars">
                                     <height>3</height>
-                                </dimensions> mm high, <dimensions unit="mm" type="line">
+                                </dimensions> mm high, <dimensions unit="mm" type="line-space">
                                     <height>9</height>
                                 </dimensions> mm between lines), much less formal and possibly
-                                later, 14th/15th-c.? hand.</p>
+                                later, 14th/15th-c. hand.</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Old Church Slavonic.</p>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Two-<emph>jer</emph>,
-                                        two-<emph>jus</emph> orthography.</p>
-                            </orthography>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Old Church Slavonic</summary>
+                            <langNote key="orthography">Two-<emph xmlns="http://www.tei-c.org/ns/1.0">jer</emph>,
+                                two-<emph xmlns="http://www.tei-c.org/ns/1.0">jus</emph> orthography.
+                            </langNote>
                         </scribeLang>
                     </scribe>
                     <scribe n="3">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 280-283v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0">Anonymous</name>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 280–283v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
                         <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <p>Semiuncial, another small (ca<dimensions unit="mm" type="letters">
+                            <scriptNote script="Cyrs" style="semiuncial">Semiuncial, another small (ca<dimensions unit="mm" type="chars">
                                     <height>3</height>
-                                </dimensions> mm high, <dimensions unit="mm" type="line">
-                                    <height>8-9</height>
+                                </dimensions> mm high, <dimensions unit="mm" type="line-space">
+                                    <height>8–9</height>
                                 </dimensions> mm between lines), much less formal and possibly
-                                later, 14th/15th-c.? hand.</p>
+                                later, 14th/15th–c. hand.</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Old Church Slavonic.</p>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Two-<emph>jer</emph>,
-                                        two-<emph>jus</emph> orthography.</p>
-                            </orthography>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Old Church Slavonic</summary>
+                            <langNote key="orthography">Two-<emph xmlns="http://www.tei-c.org/ns/1.0">jer</emph>,
+                                two-<emph xmlns="http://www.tei-c.org/ns/1.0">jus</emph> orthography.</langNote>
                         </scribeLang>
                     </scribe>
                 </scribeDesc>
@@ -1148,14 +1152,14 @@
                         The Synaxarion and the Menology at the end of the MS are most likely later
                         additions.</summary>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">3v-4</locus>
+                        <locus n="1">3v–4</locus>
                         <title xml:lang="bg">Съдържание на Евангелието от Матей</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">главы ѥ҆у<seg rend="sup">г҇</seg>лїа и̋же ѿ матѳе́а</head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">6-86v</locus>
+                        <locus n="2">6–86v</locus>
                         <title xml:lang="bg">Евангелие от Матей</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Е҆ѴАГГЕ́ЛЇЕ сТ҃ОЕ Ѿ МА<seg rend="sup">т҇</seg>Ѳе́а</head>
@@ -1169,7 +1173,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">88-134v</locus>
+                        <locus n="4">88–134v</locus>
                         <title xml:lang="bg">Евангелие от Марко</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Е҆ѴАГГЕ́ЛЇЕ сТ҃ОЕ Ѿ
@@ -1177,7 +1181,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">135-136</locus>
+                        <locus n="5">135–136</locus>
                         <title xml:lang="bg">Съдържание на Евангелието от Лука</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">главы е҆вагге́лїю е҆же ѿ
@@ -1185,7 +1189,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="6">137-212</locus>
+                        <locus n="6">137–212</locus>
                         <title xml:lang="bg">Евангелие от Лука</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Е҆ВАГГЕ́ЛИЕ СТ҃ОЕ Ѿ
@@ -1201,7 +1205,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="8">213-272v</locus>
+                        <locus n="8">213–272v</locus>
                         <title xml:lang="bg">Евангелие от Йоан</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Е҆ВАГГе́ЛЇЕ сТ҃ОЕ Ѿ
@@ -1209,13 +1213,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9">
-                        <locus n="9">274-275</locus>
+                        <locus n="9">274–275</locus>
                         <title xml:lang="bg">Колофон</title>
                         <note>A very long colophon, stating that the book was written and bound for
                             the Tsar.</note>
-                        <colophon>
-                            <p>
-                                <milestone unit="page" n="247r"/> Слава въ тр<seg rend="sup">о҇</seg>ици, славимомоу бо҃у . съвръ<lb/> шаѫщомоу вьсѣко начинание
+                        <re:sampleText xml:lang="cu"><colophon>
+                            <ab><milestone unit="page" n="247r"/> Слава въ тр<seg rend="sup">о҇</seg>ици, славимомоу бо҃у . съвръ<lb/> шаѫщомоу вьсѣко начинание
                                 бл҃го .<lb/> ꙗ҆же ѡ҆ немь начинаѥмомоу . и҆ да<lb/>ѫщомоу, по начѧлѣ
                                 и҆ конецъ:<lb/> Писа сѧ сии животочныи и҆сточникъ<lb/> новыѫ бл҃гдти
                                 . прѣсла<seg rend="sup">д҇</seg>го оу҆ченїа х<seg rend="sup">с҇</seg>ва,<lb/> и҆ того бж<seg rend="sup">с҇</seg>твныхъ
@@ -1258,12 +1261,12 @@
                                 лоуцѣ . и҆ <lb/> і҆ѡ҃а́ноу. и҆хже молитвами. побѣдѫ <lb/> да
                                     прїиме<seg rend="sup">т҇</seg> ѿ ба҃, на врагы ратоуѫщихъ<lb/>
                                 того. и҆ главы ихъ съкрꙋши<seg rend="sup">т҇</seg> по<seg rend="sup">д҇</seg> ноꙃѣ сво<seg rend="sup">и҇</seg>, а҅ми<seg rend="sup">н҇</seg>+<lb/> Лѣтоу текѫщоу, <date>҂ѕ҃ ѿ҇ѯ҇д҃. и̋нді҆кта ѳ҃
-                                    :⁓</date>:-<lb/> + раб же гн҃а моего цр҃ѣ, писавыи сиѫ кни<lb/>
-                                гѫ, сїмѡнъ мни<seg rend="sup">х҇</seg> нарицаєт сѧ :⁓</p>
-                        </colophon>
+                                    :⁓</date>:–<lb/> + раб же гн҃а моего цр҃ѣ, писавыи сиѫ кни<lb/>
+                                гѫ, сїмѡнъ мни<seg rend="sup">х҇</seg> нарицаєт сѧ :⁓</ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="10">276-279</locus>
+                        <locus n="10">276–279</locus>
                         <title xml:lang="bg">Календар</title>
                         <note>Contans selected dates.</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -1272,60 +1275,59 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="10">280-283v</locus>
+                        <locus n="10">280–283v</locus>
                         <title xml:lang="bg">Месецослов</title>
-                        <note>Contans selected dates.</note>
+                        <note>Contans selected dates</note>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#RC">
+                    <origin evidence="internal" resp="#RC">
                         <origDate evidence="internal" notBefore="1356" notAfter="1356">1356</origDate>
                         <origPlace>Bulgaria, most likely in Tŭrnovo</origPlace>
                     </origin>
                     <provenance>Given to <persName>Robert Curzon</persName> by the
-                            <placeName>Monastery of St Paul</placeName>on Athos.<ref type="bibl" target="bib:Curzon1849">Curzon, 1849: 422-424</ref>
-                    </provenance>
+                            <placeName>Monastery of St Paul</placeName>on Athos.<ref type="bibl" target="bib:Curzon1849">Curzon, 1849: 422–424</ref></provenance>
                 </history>
                 <additional>
                     <adminInfo>
                         <recordHist>
                             <source>Directly catalogued from the original manuscript using the
-                                printed catalogue <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 121-123.</ref>
+                                printed catalogue <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 121–123.</ref>
                             </source>
                         </recordHist>
                     </adminInfo>
                     <surrogates>
-                        <p>Microform: Central Library of BAS, MF-11,</p>
-                        <p>Digital images of ff. 184, 188, 200, 213, 259v, 10v, 2v, 6v, 84, 6, 13,
+                        <list><item>Microform: Central Library of BAS, MF-11,</item>
+                        <item>Digital images of ff. 184, 188, 200, 213, 259v, 10v, 2v, 6v, 84, 6, 13,
                             59, 76v, 78v, 85, 86v, 118, 123, 133, 163v, 166, 171, 183 (files:
                             C5246-07, C5247-07, C5250-07, C5254-01, C5256-06, C7885-01, C7885-02,
                             C7885-03, C2180-08, C5202-03, C5204-01, C5215-05, C5219-08, C5220-04,
                             C5222-01, C5222-04, C5230-03, C5231-05, C5234-01, C5241-06, C5242-03,
-                            C5243-05, C52446-05).</p>
+                            C5243-05, C52446-05).</item></list>
                     </surrogates>
                     <listBibl>
                         <bibl>
-                            <ref type="bibl" target="bib:Джурова1977">Джурова и Дуйчев 1977: no. 4,
-                                pls. X-XV.</ref>
+                            <ref target="bib:Джурова1977">Джурова и Дуйчев 1977: no. 4,
+                                pls. X–XV.</ref>
                         </bibl>
                         <bibl>
-                            <ref type="bibl" target="bib:Живкова1980">Живкова 1980.</ref>
+                            <ref target="bib:Живкова1980">Живкова 1980.</ref>
                         </bibl>
                         <bibl>
-                            <ref type="bibl" target="bib:DerNersessian1927">Der Nersessian
+                            <ref target="bib:DerNersessian1927">Der Nersessian
                                 1927</ref>
                         </bibl>
                         <bibl>
-                            <ref type="bibl" target="bib:Filow1927">Filow 1927/28.</ref>
+                            <ref target="bib:Filow1927">Filow 1927/28.</ref>
                         </bibl>
                         <bibl>
-                            <ref type="bibl" target="bib:Филов1929">Филов 1929.</ref>
+                            <ref target="bib:Филов1929">Филов 1929.</ref>
                         </bibl>
                         <bibl>
-                            <ref type="bibl" target="bib:Филов1934">Филов 1934.</ref>
+                            <ref target="bib:Филов1934">Филов 1934.</ref>
                         </bibl>
                         <bibl>
-                            <ref type="bibl" target="bib:Dimitrova1994">Dimitrova 1994</ref>
+                            <ref target="bib:Dimitrova1994">Dimitrova 1994</ref>
                         </bibl>
                     </listBibl>
                 </additional>

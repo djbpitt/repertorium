@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AS22PANT">
     <teiHeader>
         <fileDesc>
@@ -20,8 +24,7 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -53,6 +56,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-28">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -67,14 +71,13 @@
                     <settlement>Mount Athos</settlement>
                     <repository>St. Pantelejmon Monastery (Rossikon) Library</repository>
                     <idno type="shelfmark">22</idno>
-                    <idno type="catalogue">22</idno>
+                    <altIdentifier><idno type="catalogue">22</idno></altIdentifier>
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">311</measure>
@@ -94,8 +97,8 @@
                         <p>Titles and initials in red</p>
                     </decoDesc>
                     <bindingDesc>
-                        <p>Leather on wood</p>
-                    </bindingDesc>
+                        <binding><summary>Leather on wood</summary>
+</binding>                    </bindingDesc>
                     <additions type="inscriptions">
                         <locus>f. 116r</locus>
                         <quote xml:lang="cu">Сїе слово нѣстъ добро</quote>
@@ -103,26 +106,25 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-311v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial"/>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–311v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"/>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, only small
-                                    jer</p>
-                            </orthography>
+                            <langNote key="orthography">Without juses, only small
+                                    jer
+                            </langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Tachiaos1981">Tachiaos 1981:
-                            59</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Tachiaos1981">Tachiaos 1981: 59</ref></bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <summary>The manuscript contains 15 texts.</summary>
                     <filiation type="protograph">Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1r-71r</locus>
+                        <locus n="1">1r–71r</locus>
                         <title xml:lang="bg">Житие на св. Атанасий Атонски</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -134,7 +136,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">71r-115v</locus>
+                        <locus n="2">71r–115v</locus>
                         <title xml:lang="bg">Житие на св. Григорий, епископ на Велика Армения</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -145,25 +147,24 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">116r-134v</locus>
+                        <locus n="3">116r–134v</locus>
                         <title xml:lang="bg">Житие на св. Ипатий</title>
                         <note>without beginning</note>
                         <filiation type="protograph">Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">135r-160v</locus>
+                        <locus n="4">135r–160v</locus>
                         <title xml:lang="bg">Покаяние на Киприян</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Покаанїе Киприановѡ, бл҃с҃ви
-                                    ѡт<seg rend="sup">ч</seg>
-                            </head>
+                                    ѡт<seg rend="sup">ч</seg></head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Елици ѡ Х҃свѣхь таинах
                                 блазните се</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5">
-                        <locus n="5">157r-160v</locus>
+                        <locus n="5">157r–160v</locus>
                         <title xml:lang="bg">Житие на св. Киприян и Юстина</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -173,7 +174,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="6">161r-176r</locus>
+                        <locus n="6">161r–176r</locus>
                         <title xml:lang="bg">Житие на св. седем отрока от Ефес</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -185,7 +186,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">176r-187v</locus>
+                        <locus n="7">176r–187v</locus>
                         <title xml:lang="bg">Разказ за живота на Ксенофонт болярина</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -197,7 +198,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="8">188r-206v</locus>
+                        <locus n="8">188r–206v</locus>
                         <title xml:lang="bg">Разказ за иконата на Господ в Халкопатрия</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -210,7 +211,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="9">207r-224v</locus>
+                        <locus n="9">207r–224v</locus>
                         <title xml:lang="bg">Слово похвално за 40 мъченици от Севастия от Ефрем Сирин</title>
                         <author>Ephrem the Syrian</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -223,7 +224,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="10">225r-237v</locus>
+                        <locus n="10">225r–237v</locus>
                         <title xml:lang="bg">Поучение на Христофор Александрийски</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -235,7 +236,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="11">238r-242v</locus>
+                        <locus n="11">238r–242v</locus>
                         <title xml:lang="bg">Видение на цар Амфилохий</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -247,7 +248,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="original">
-                        <locus n="12">243r-265v</locus>
+                        <locus n="12">243r–265v</locus>
                         <title xml:lang="bg">Житие на св. Петър Коришки</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -259,7 +260,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
-                        <locus n="13">266r-274v</locus>
+                        <locus n="13">266r–274v</locus>
                         <title xml:lang="bg">Житие на св. Минодора, Митродора и Нимфодора</title>
                         <date type="churchCal" when="--09-10"/>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -271,7 +272,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="original">
-                        <locus n="14">274v-283r</locus>
+                        <locus n="14">274v–283r</locus>
                         <title xml:lang="bg">Житие на св. Лазар Сръбски</title>
                         <date type="churchCal" when="--06-15">15 June</date>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -294,13 +295,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15" type="translation">
-                        <locus n="15">283r-311v</locus>
+                        <locus n="15">283r–311v</locus>
                         <title xml:lang="bg">Физиолог</title>
                         <note>
                             <ref type="bibl" target="bib:Александров1893">Александров 1893</ref>;
                                 <ref type="bibl" target="bib:Стойкова1994">Стойкова
-                            1994</ref>
-                        </note>
+                            1994</ref></note>
                         <filiation type="translation">1</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="litRedaction">Pseudo-Basil's</filiation>
@@ -313,7 +313,7 @@
                                 ихь.</explicit>
                         </sampleText>
                         <msItemStruct xml:id="ACD15.1">
-                            <locus n="15.1">283r-284v</locus>
+                            <locus n="15.1">283r–284v</locus>
                             <title xml:lang="bg">Физиолог. За лъва</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Прьвое ѡ львѣ</head>
@@ -323,7 +323,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.2">
-                            <locus n="15.2">284v-285v</locus>
+                            <locus n="15.2">284v–285v</locus>
                             <title xml:lang="bg">Физиолог. За харадрия</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ харадрїи слово</head>
@@ -332,7 +332,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.3">
-                            <locus n="15.3">285v-286r</locus>
+                            <locus n="15.3">285v–286r</locus>
                             <title xml:lang="bg">Физиолог. За слънчевия гущер</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О саврѣ сл҃нчнѣи
@@ -343,7 +343,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.4">
-                            <locus n="15.4">286r-286v</locus>
+                            <locus n="15.4">286r–286v</locus>
                             <title xml:lang="bg">Физиолог. За щъркела</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О стрьцѣ слѡво</head>
@@ -353,7 +353,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.5">
-                            <locus n="15.5">286v-287r</locus>
+                            <locus n="15.5">286v–287r</locus>
                             <title xml:lang="bg">Физиолог. За нощния гарван</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О нощнѣмь вранѣ</head>
@@ -363,18 +363,17 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.6">
-                            <locus n="15.6">287r-288r</locus>
+                            <locus n="15.6">287r–288r</locus>
                             <title xml:lang="bg">Физиолог. За магарето</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                                <head xmlns="http://www.tei-c.org/ns/1.0">О ѡнагрѡ<seg rend="sup">х</seg>
-                                </head>
+                                <head xmlns="http://www.tei-c.org/ns/1.0">О ѡнагрѡ<seg rend="sup">х</seg></head>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0">Писано бысть вь Іѡвѣ
                                     кто ѡстави ѡсла дївлꙗго свобѡдна. ꙗко чрѣдѣ начелникь
                                     ѥсть.</incipit>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.7">
-                            <locus n="15.7">288r-289r</locus>
+                            <locus n="15.7">288r–289r</locus>
                             <title xml:lang="bg">Физиолог. За ехидната</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О ехиднѣ</head>
@@ -384,7 +383,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.8">
-                            <locus n="15.8">289r-290v</locus>
+                            <locus n="15.8">289r–290v</locus>
                             <title xml:lang="bg">Физиолог. За змията</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О змїи слѡво прьво</head>
@@ -394,7 +393,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.9">
-                            <locus n="15.9">290v-291r</locus>
+                            <locus n="15.9">290v–291r</locus>
                             <title xml:lang="bg">Физиолог. За магарето-кентавър и сирената</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О инокіетаврѡхь и
@@ -404,7 +403,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.10">
-                            <locus n="15.10">291r-292r</locus>
+                            <locus n="15.10">291r–292r</locus>
                             <title xml:lang="bg">Физиолог. За таралежа</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О ѥжи повѣсть</head>
@@ -413,7 +412,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.11">
-                            <locus n="15.11">292r-293r</locus>
+                            <locus n="15.11">292r–293r</locus>
                             <title xml:lang="bg">Физиолог. За пантерата</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О панѳїрѣ слѡво</head>
@@ -422,7 +421,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.12">
-                            <locus n="15.12">293r-293v</locus>
+                            <locus n="15.12">293r–293v</locus>
                             <title xml:lang="bg">Физиолог. За яребицата</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ ѥребици</head>
@@ -431,7 +430,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.13">
-                            <locus n="15.13">293v-294r</locus>
+                            <locus n="15.13">293v–294r</locus>
                             <title xml:lang="bg">Физиолог. За лисицата</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О лисици сказанїе</head>
@@ -441,7 +440,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.14">
-                            <locus n="15.14">294r-295r</locus>
+                            <locus n="15.14">294r–295r</locus>
                             <title xml:lang="bg">Физиолог. За кита</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ китѣ аспедохелѡни</head>
@@ -450,7 +449,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.15">
-                            <locus n="15.15">295r-295v</locus>
+                            <locus n="15.15">295r–295v</locus>
                             <title xml:lang="bg">Физиолог. За аспидата</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ аспидѣ дроугоє</head>
@@ -460,12 +459,11 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.16">
-                            <locus n="15.16">295v-296r</locus>
+                            <locus n="15.16">295v–296r</locus>
                             <title xml:lang="bg">Физиолог. За лешояда</title>
                             <note>
                                 <ref type="bibl" target="bib:Белова2001">Белова 2001:
-                                гип</ref>
-                            </note>
+                                гип</ref></note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О птищи великааго
                                     гѵ̋п'па</head>
@@ -485,7 +483,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.18">
-                            <locus n="15.18">296v-298r</locus>
+                            <locus n="15.18">296v–298r</locus>
                             <title xml:lang="bg">Физиолог. За мравката</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ мравїахь</head>
@@ -494,12 +492,11 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.19">
-                            <locus n="15.19">306r-306v</locus>
+                            <locus n="15.19">306r–306v</locus>
                             <title xml:lang="bg">Физиолог. За невестулката</title>
                             <note>
                                 <ref type="bibl" target="bib:Белова2001">Белова 2001, under
-                                    "невестка"</ref>
-                            </note>
+                                    "невестка"</ref></note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ невѣска<seg rend="sup">х</seg> слѡво</head>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0">Законь г҃ліеть. да не
@@ -508,7 +505,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.20">
-                            <locus n="15.20">298v-299v</locus>
+                            <locus n="15.20">298v–299v</locus>
                             <title xml:lang="bg">Физиолог. За еднорога</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О инорѡзѣ слѡво</head>
@@ -517,7 +514,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.21">
-                            <locus n="15.21">299v-300v</locus>
+                            <locus n="15.21">299v–300v</locus>
                             <title xml:lang="bg">Физиолог. За вълка</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О вльцѣ слѡво
@@ -527,11 +524,10 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.22">
-                            <locus n="15.22">300v-301r</locus>
+                            <locus n="15.22">300v–301r</locus>
                             <title xml:lang="bg">Физиолог. За глигана</title>
                             <note>See <ref type="bibl" target="bib:Белова2001">Белова
-                                2001</ref>
-                            </note>
+                                2001</ref></note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ иноцѣ дивніемь
                                     слѡво</head>
@@ -541,7 +537,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.23">
-                            <locus n="15.23">301r- 301v</locus>
+                            <locus n="15.23">301r– 301v</locus>
                             <title xml:lang="bg">Физиолог. За бобъра</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О кастори слѡво</head>
@@ -559,7 +555,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.25">
-                            <locus n="15.25">301v-302v</locus>
+                            <locus n="15.25">301v–302v</locus>
                             <title xml:lang="bg">Физиолог. За видрата и крокодила</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О енидри и о
@@ -580,7 +576,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.27">
-                            <locus n="15.27">303r-303v</locus>
+                            <locus n="15.27">303r–303v</locus>
                             <title xml:lang="bg">Физиолог. За гърлицата</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О грьлици</head>
@@ -589,7 +585,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.28">
-                            <locus n="15.28">303v-304v</locus>
+                            <locus n="15.28">303v–304v</locus>
                             <title xml:lang="bg">Физиолог. За жабата</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О жебѣ воднѣи и ѡ
@@ -600,7 +596,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.29">
-                            <locus n="15.29">304v-305v</locus>
+                            <locus n="15.29">304v–305v</locus>
                             <title xml:lang="bg">Физиолог. За елена и змията</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О ѥлѣни и ѡ змїи</head>
@@ -620,7 +616,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.31">
-                            <locus n="15.31">305v-306r</locus>
+                            <locus n="15.31">305v–306r</locus>
                             <title xml:lang="bg">Физиолог. За диаманта</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О адамантѣ</head>
@@ -639,7 +635,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.33">
-                            <locus n="15.33">306v-307r</locus>
+                            <locus n="15.33">306v–307r</locus>
                             <title xml:lang="bg">Физиолог. За дъба</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О доубѣ перидеѯїи</head>
@@ -649,11 +645,10 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.34">
-                            <locus n="15.34">307r-308v</locus>
+                            <locus n="15.34">307r–308v</locus>
                             <title xml:lang="bg">Физиолог. За гълъба</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                                <head xmlns="http://www.tei-c.org/ns/1.0">О голоубѡ<seg rend="sup">х</seg>
-                                </head>
+                                <head xmlns="http://www.tei-c.org/ns/1.0">О голоубѡ<seg rend="sup">х</seg></head>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0">Ибо Іѡань рече. ꙗко
                                     видѣхь н҃бса ѿврьста. и д҃хь сьходещь ꙗко голоубь и прѣбывающь
                                         на<seg rend="sup">д</seg> нимь.</incipit>
@@ -661,7 +656,7 @@
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.35">
                             <locusGrp n="15.35">
-                                <locus n="15.35.1">308v-309r</locus>
+                                <locus n="15.35.1">308v–309r</locus>
                                 <locus n="15.35.2">311r</locus>
                             </locusGrp>
                             <title xml:lang="bg">Физиолог. За дипса</title>
@@ -673,7 +668,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.36">
-                            <locus n="15.36">309r-309v</locus>
+                            <locus n="15.36">309r–309v</locus>
                             <title xml:lang="bg">Физиолог. За заека</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О заіеци</head>
@@ -693,7 +688,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.38">
-                            <locus n="15.38">309v-310r</locus>
+                            <locus n="15.38">309v–310r</locus>
                             <title xml:lang="bg">Физиолог. За орела</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О ѡрлѣ</head>
@@ -703,7 +698,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.39">
-                            <locus n="15.39">310r-310v</locus>
+                            <locus n="15.39">310r–310v</locus>
                             <title xml:lang="bg">Физиолог. За слона</title>
                             <note>Without end.</note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -724,7 +719,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15.41">
-                            <locus n="15.41">311r-311v</locus>
+                            <locus n="15.41">311r–311v</locus>
                             <title xml:lang="bg">Физиолог. За тризъбия морски звяр</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">О гадѣ морсцѣмь

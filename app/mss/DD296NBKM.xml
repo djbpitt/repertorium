@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DD296NBKM">
     <teiHeader>
         <fileDesc>
@@ -20,8 +24,7 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -105,17 +108,14 @@
                             <locus>1r-111r</locus>
                             <locus>112r-173v</locus>
                         </locusGrp>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial"/>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"></scriptNote>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Two jers; without juses</p>
-                            </orthography>
+                            <langNote key="orthography">Two jers; without juses
+                            </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Dimitrinka Dimitrova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -134,37 +134,33 @@
                                 великых вселенскых седми съборь. и поместных нѣкых кь семоу и иже вь
                                 иных отца нашего Васілїа Великаго и иных ст҃лѥи и
                                 преподобных</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Кь сщеннимь читателѥмь</head>
+                           <sampleText> <head xmlns="http://www.tei-c.org/ns/1.0">Кь сщеннимь читателѥмь</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Бголюбазннї сщеннїи дховни
                                 нищїи ѡтци, вамь симже власть везати и пѣшїти чльскаа
-                                съгрѣшенїа</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Номоканонь сирѣчь правило
+                                съгрѣшенїа</incipit></sampleText>
+                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">Номоканонь сирѣчь правило
                                 законникь сь бгѡм стым</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Прїемлѥи помышлѥнїа ччскаа
                                 дльжнь есть быти обраазы блгь вьздрьжникь смѣрень и
-                                добродетелнь</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Номоканонь сирѣч каноник имѣе
+                                добродетелнь</incipit></sampleText>
+                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">Номоканонь сирѣч каноник имѣе
                                 правила по ськрашеннїю свѣтых апсль. Великаго Василїа сты саборь
                                 правиль</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Иже роукополагати, чрѣз
                                 прѣдльсъ роукою полагаемимь да изверьжетсе по .л. правилу стых
-                                апль</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">различны главизни събрани ѿ
-                                    сщен<supplied>ѣ</supplied>
-                                <seg rend="sup">х</seg>
-                            </head>
+                                апль</incipit></sampleText>
+                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">различны главизни събрани ѿ
+                                    сщен<supplied>ѣ</supplied><seg rend="sup">х</seg></head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">сщенникь аще
-                                понебреженїѥпролїеть сты дары имать запреѣщенїе лѣ<seg rend="sup">т</seg> .г. твореи на вьсакь днь поклонь. въори<seg rend="sup">с</seg> аще ѿ стго поутіра</incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">О сроенїи пѣнїа вь кра<seg rend="sup">д</seg>це главизны ѿ правиль събраны<seg rend="sup">х</seg> и нѣкы<seg rend="sup">х</seg> сты<seg rend="sup">х</seg> събора .с. го еже въ трул<seg rend="sup">с</seg>лѣ
+                                понебреженїѥпролїеть сты дары имать запреѣщенїе лѣ<seg rend="sup">т</seg> .г. твореи на вьсакь днь поклонь. въори<seg rend="sup">с</seg> аще ѿ стго поутіра</incipit></sampleText>
+                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">О сроенїи пѣнїа вь кра<seg rend="sup">д</seg>це главизны ѿ правиль събраны<seg rend="sup">х</seg> и нѣкы<seg rend="sup">х</seg> сты<seg rend="sup">х</seg> събора .с. го еже въ трул<seg rend="sup">с</seg>лѣ
                                 правило .ое. вь маѳеи</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Еже пѣти вь црковь
-                                    приходещїи<seg rend="sup">х</seg>
-                            </incipit>
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Съборь .с. деве<seg rend="sup">д</seg>есѣтое же правило .с.го сьбора</head>
+                                    приходещїи<seg rend="sup">х</seg></incipit></sampleText>
+                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">Съборь .с. деве<seg rend="sup">д</seg>есѣтое же правило .с.го сьбора</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Понеже рече се ѿ бж<seg rend="sup">с</seg>твны<seg rend="sup">х</seg> ѿць. колѣне
-                                непрекланꙗти въ не<seg rend="sup">д</seg>ле повелѣше</incipit>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">аще кто зажежеть домь и<seg rend="sup">л</seg> гоумно. по<seg rend="sup">с</seg> .г. лѣ<seg rend="sup">т</seg>
-                            </incipit>
+                                непрекланꙗти въ не<seg rend="sup">д</seg>ле повелѣше</incipit></sampleText>
+                            <sampleText><incipit xmlns="http://www.tei-c.org/ns/1.0">аще кто зажежеть домь и<seg rend="sup">л</seg> гоумно. по<seg rend="sup">с</seg> .г. лѣ<seg rend="sup">т</seg></incipit></sampleText>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation" style="non-narrative">
@@ -199,8 +195,7 @@
                             <title xml:lang="bg">Молитва за сряда вечер</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">пла<seg rend="sup">ч</seg>
-                                    въ срѣ<seg rend="sup">д</seg>
-                                </head>
+                                    въ срѣ<seg rend="sup">д</seg></head>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0">Троудь глати къ боу
                                         поноуж<seg rend="sup">д</seg>етме</incipit>
                             </sampleText>
@@ -262,28 +257,25 @@
                         <filiation type="apograph">no</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Мл съ оумилѥнїемь въ прѣстѣи
-                                бци и малою похвалою творенїе Ддиммитррїа Катакоузына. по стыхѡ<seg rend="sup">м</seg>
-                            </head>
+                                бци и малою похвалою творенїе Ддиммитррїа Катакоузына. по стыхѡ<seg rend="sup">м</seg></head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Въсѣ<seg rend="sup">х</seg>
                                 цра ба мти блгаа въсѣ<seg rend="sup">х</seg> съдѣтелꙗ рожь<seg rend="sup">д</seg>ши единаа.</incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">Роу<seg rend="sup">д</seg>и се прѣрадованаа ч<seg rend="sup">с</seg>таа роу<seg rend="sup">д</seg>исе ꙗко с тобою и есть гь ами<seg rend="sup">н</seg>
-                            </explicit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">Роу<seg rend="sup">д</seg>и се прѣрадованаа ч<seg rend="sup">с</seg>таа роу<seg rend="sup">д</seg>исе ꙗко с тобою и есть гь ами<seg rend="sup">н</seg></explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
                         <locus n="4">106r</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <colophon>
-                            <p>Въ с҃тѣи горѣ<name type="scribe" full="yes">Аѳона</name>писа се: въ
+                        <re:sampleText xml:base="cu"><colophon>
+                            <p>Въ с҃тѣи горѣ <placeName>Аѳона</placeName> писа се: въ
                                     лѣто<date>.#з҃р҃л҃з҃.</date>м<seg rend="sup">т</seg>ць се҃г д҃
                                 д҃нь</p>
-                        </colophon>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#DD">
+                    <origin evidence="conjecture" resp="#DD">
                         <origDate cert="high" notBefore="1629" notAfter="1629">1629</origDate>
-                        <origPlace>unknown</origPlace>
                     </origin>
                 </history>
             </msDesc>

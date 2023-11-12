@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-IK198MatichNBB">
     <teiHeader>
         <fileDesc>
@@ -21,13 +25,12 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <bibl>
-                    <ref target="bib:Матић1952">Матић 1952: 140-143</ref>
+                    <ref target="bib:Матић1952">Матић 1952: 140–143</ref>
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -41,7 +44,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>miacellany</item>
                     </list>
                 </keywords>
@@ -56,6 +59,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#DR" when="2013-08-29">Conversion to Repertorium 4.0; conversion of the cu
@@ -81,15 +85,14 @@
                     <settlement>Belgrade</settlement>
                     <repository>National Library</repository>
                     <collection>L. Kovachević</collection>
+                    <!--
                     <idno type="shelfmark">No current signature</idno>
+                    -->
                     <idno type="catalogue">198</idno>
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="codex">
                         <supportDesc material="paper">
-                            <support>
-                                <material>Paper</material>
-                            </support>
                             <extent>
                                 <measure unit="folia">67</measure>
                                 <dimensions type="folia" unit="mm">
@@ -97,47 +100,26 @@
                                     <width>105</width>
                                 </dimensions>
                             </extent>
-                            <foliation>No data</foliation>
-                            <collation>
-                                <summary>No data</summary>
-                            </collation>
-                            <condition>No data</condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1"/>
                         </layoutDesc>
                     </objectDesc>
-                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">No data</ink>
-                    <decoDesc>
-                        <p>No data</p>
-                    </decoDesc>
-                    <bindingDesc>
-                        <binding>
-                            <p>No data</p>
-                        </binding>
-                    </bindingDesc>
                     <additions type="inscriptions">
-                        <note>Various notices and names on ff. 67v-74r</note>
+                        <note>Various notices and names on ff. 67v–74r</note>
                     </additions>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-                    <scribe n="1">
-                        <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
-                            <locus>No data</locus>
-                        </locusGrp>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" cert="high" full="yes">Veselin
-                            Deacon of Studenica</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs">
-                            <p>No data</p>
+                    <scribe>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Veselin Deacon of Studenica</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs"/>                        
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Russian</p>
-                            </orthography>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Russian</summary>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Матић1952">Матић 1952: 140-143</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Матић1952">Матић 1952: 140–143</ref></bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents type="translation">
@@ -146,17 +128,17 @@
                         <locus n="1">1r</locus>
                         <title xml:lang="bg">Колофон</title>
                         <author>Veselin Deacon of Studenica</author>
-                        <colophon>
-                            <p>Сїи тетракъ еже глаголет сꙗ кныжица на всꙗкихъ малихъ еже есть
+                       <re:sampleText xml:lang="cu"> <colophon>
+                            <ab>Сїи тетракъ еже глаголет сꙗ кныжица на всꙗкихъ малихъ еже есть
                                 рукописаныхъ потребъ, многогрѣшнагѡ и недостоинаго нарещи сꙗ
                                 г(оспо)днꙗ раба зовомїи Веселина дїꙗка с(вꙗ) то стꙋденыческагѡ.
                                 Отечествѡ емꙋ землꙗ, мати егѡ гробъ, б<seg rend="sup">о</seg>гатство
-                                грѣхъ. Написахъ в лѣто а҃ ѱ҃ п҃ з҃ -1787, ноемв(рие) 16 дне.
-                                Драгꙋтиновичъ сиирѣчъ Велимировичъ.</p>
-                        </colophon>
+                                грѣхъ. Написахъ в лѣто а҃ ѱ҃ п҃ з҃ –1787, ноемв(рие) 16 дне.
+                                Драгꙋтиновичъ сиирѣчъ Велимировичъ.</ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">1r-5r</locus>
+                        <locus n="2">1r–5r</locus>
                         <title xml:lang="bg">Плач на славна Сърбия</title>
                         <author>Zacharij Orfelin</author>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -165,11 +147,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="original" style="non-narrative">
-                        <locus n="3">5v-6v</locus>
+                        <locus n="3">5v–6v</locus>
                         <title xml:lang="bg">Въпроси и отговори. Тълкувание за Новия завет</title>
                         <note>
-                            <ref type="bibl" target="bib:Милтенова2004">Милтенова 2004</ref>
-                        </note>
+                            <ref type="bibl" target="bib:Милтенова2004">Милтенова 2004</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Вопроси и ѡтвѣти толкованы
                                     с<seg rend="sup">вꙗ</seg>таго ев҃гелїа еже изречено ѡного
@@ -182,11 +163,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="original">
-                        <locus n="4">6v-13r</locus>
+                        <locus n="4">6v–13r</locus>
                         <title xml:lang="bg">Разказ за Адам и Ева</title>
                         <note>
-                            <ref type="bibl" target="bib:Милтенова2004">Милтенова 2004</ref>
-                        </note>
+                            <ref type="bibl" target="bib:Милтенова2004">Милтенова 2004</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Повѣсть ѡ Адамꙋ и Еви ѡт
                                 начала даже до конца.</head>
@@ -196,7 +176,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">13v-18r</locus>
+                        <locus n="5">13v–18r</locus>
                         <title xml:lang="bg">Цикъл разкази за кръстното дърво, приписван на Григорий Богослов</title>
                         <filiation type="litRedaction">3</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -208,7 +188,7 @@
                                 повѣданїе</incipit>
                         </sampleText>
                         <msItemStruct xml:id="ACD5.1" type="translation">
-                            <locus>[13v-18r]</locus>
+                            <locus>[13v–18r]</locus>
                             <title xml:lang="bg">Цикъл разкази за кръстното дърво. Разказ за двамата разбойници</title>
                             <filiation type="litRedaction">3</filiation>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -220,7 +200,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD5.2" type="translation">
-                            <locus>[13v-18r]</locus>
+                            <locus>[13v–18r]</locus>
                             <title xml:lang="bg">Цикъл разкази за кръстното дърво. Разказ за второто дърво</title>
                             <filiation type="litRedaction">3</filiation>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -229,7 +209,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD5.3" type="translation">
-                            <locus>[13v-18r]</locus>
+                            <locus>[13v–18r]</locus>
                             <title xml:lang="bg">Цикъл разкази за кръстното дърво. Разказ за третото дърво</title>
                             <filiation type="litRedaction">3</filiation>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -238,21 +218,20 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD5.4" type="translation">
-                            <locus>[13v-18r]</locus>
+                            <locus>[13v–18r]</locus>
                             <title xml:lang="bg">Цикъл разкази за кръстното дърво. Разказ за Адамовата глава</title>
                             <note>
                                 <ref type="bibl" target="bib:Милтенова1982b">Милтенова
-                                1982</ref>
-                            </note>
+                                1982</ref></note>
                             <filiation type="litRedaction">3</filiation>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Повѣсть ѡ главе
-                                    Адамове.</head>
+                                    Адамове</head>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation" style="non-narrative">
-                        <locus n="6">18v-24r</locus>
+                        <locus n="6">18v–24r</locus>
                         <title xml:lang="bg">Разказ за пророк и цар Давид</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Сказанїе ѡ Давидꙋ царю и
@@ -264,7 +243,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">24r-25v</locus>
+                        <locus n="7">24r–25v</locus>
                         <title xml:lang="bg">Разказ как Давид написа Псалтира</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово како испыса Давидь
@@ -283,12 +262,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="9">26r-26v</locus>
+                        <locus n="9">26r–26v</locus>
                         <title xml:lang="bg">Физиолог. За слона</title>
                         <note>Contains only the Story about the elephant</note>
                         <note>
-                            <ref type="bibl" target="bib:Стойкова1994">Стойкова 1994</ref>
-                        </note>
+                            <ref type="bibl" target="bib:Стойкова1994">Стойкова 1994</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">.Слово о слонꙋ зверю.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Слонъ есть великъ ѕвѣрь,
@@ -296,11 +274,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="10">27r-28v</locus>
+                        <locus n="10">27r–28v</locus>
                         <title xml:lang="bg">Разказ за Успение на Богородица</title>
                         <note>
-                            <ref type="bibl" target="bib:Йорданова2003">Йорданова 2003</ref>
-                        </note>
+                            <ref type="bibl" target="bib:Йорданова2003">Йорданова 2003</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово како воздвиже сꙗ
                                     прес<seg rend="sup">вꙗ</seg>таꙗ</head>
@@ -310,12 +287,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="11">28v-34v</locus>
+                        <locus n="11">28v–34v</locus>
                         <title xml:lang="bg">Цикъл разкази за Авраам. Разказ за праведния Авраам</title>
                         <note>
-                            <ref type="bibl" target="bib:Милтенова1982a">Милтенова 1982: 68-69,
-                                120-124, 222-228, 320-337</ref>; <ref type="bibl" target="bib:Милтенова2003">Милтенова 2003</ref>
-                        </note>
+                            <ref type="bibl" target="bib:Милтенова1982a">Милтенова 1982: 68–69,
+                                120–124, 222–228, 320–337</ref>; <ref type="bibl" target="bib:Милтенова2003">Милтенова 2003</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ Аврамꙋ ѡт зачала до
                                 конца.</head>
@@ -324,12 +300,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation">
-                        <locus n="12">35r-36v</locus>
+                        <locus n="12">35r–36v</locus>
                         <title xml:lang="bg">Цикъл разкази за Авраам. Разказ за гостолюбието на Авраам</title>
                         <note>
-                            <ref type="bibl" target="bib:Милтенова1982a">Милтенова 1982: 68-69,
-                                120-124, 222-228, 320-337</ref>; <ref type="bibl" target="bib:Милтенова2003">Милтенова 2003</ref>
-                        </note>
+                            <ref type="bibl" target="bib:Милтенова1982a">Милтенова 1982: 68–69,
+                                120–124, 222–228, 320–337</ref>; <ref type="bibl" target="bib:Милтенова2003">Милтенова 2003</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово како гости Аврамь с<seg rend="sup">вꙗ</seg>тꙋю Тр<seg rend="sup">ои</seg>цꙋ.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Аврамь всѣгда имꙗше ѡбичаи
@@ -338,12 +313,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
-                        <locus n="13">37r-38r</locus>
+                        <locus n="13">37r–38r</locus>
                         <title xml:lang="bg">Цикъл разкази за Авраам. Разказ за Измаил</title>
                         <note>
-                            <ref type="bibl" target="bib:Милтенова1982a">Милтенова 1982: 68-69,
-                                120-124, 222-228, 320-337</ref>; <ref type="bibl" target="bib:Милтенова2003">Милтенова 2003</ref>
-                        </note>
+                            <ref type="bibl" target="bib:Милтенова1982a">Милтенова 1982: 68–69,
+                                120–124, 222–228, 320–337</ref>; <ref type="bibl" target="bib:Милтенова2003">Милтенова 2003</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">ѡ Исмаиле.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Егда родисꙗ Іисакь, Исмаилъ
@@ -352,12 +326,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="translation">
-                        <locus n="14">38v-40r</locus>
+                        <locus n="14">38v–40r</locus>
                         <title xml:lang="bg">Цикъл разкази за Авраам. Разказ за Исаак</title>
                         <note>
-                            <ref type="bibl" target="bib:Милтенова1982a">Милтенова 1982: 68-69,
-                                120-124, 222-228, 320-337</ref>; <ref type="bibl" target="bib:Милтенова2003">Милтенова 2003</ref>
-                        </note>
+                            <ref type="bibl" target="bib:Милтенова1982a">Милтенова 1982: 68–69,
+                                120–124, 222–228, 320–337</ref>; <ref type="bibl" target="bib:Милтенова2003">Милтенова 2003</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ Исацꙗ.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Ісаакъ воспитань бысть в
@@ -366,7 +339,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15" type="translation">
-                        <locus n="15">40v-43v</locus>
+                        <locus n="15">40v–43v</locus>
                         <title xml:lang="bg">Разказ за кръчмарката Теофана</title>
                         <note>
                             <ref type="bibl" target="bib:Сырку1883">Сырку 1883</ref>; <ref type="bibl" target="bib:Turdeanu1976"/>Turdeanu 1976</note>
@@ -378,7 +351,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16" type="translation">
-                        <locus n="16">44r-47r</locus>
+                        <locus n="16">44r–47r</locus>
                         <title xml:lang="bg">Разказ за Самсон</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ Самѱонꙋ и жены
@@ -389,7 +362,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17" type="translation">
-                        <locus n="17">47v-48r</locus>
+                        <locus n="17">47v–48r</locus>
                         <title xml:lang="bg">Поучение за злите жени от Йоан Златоуст</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Повѣсть с<seg rend="sup">ве</seg>таго Іѡана Златоустаго како е҃. жень хотꙗхꙋ весь свет
@@ -399,7 +372,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18" type="translation">
-                        <locus n="18">48r-53v</locus>
+                        <locus n="18">48r–53v</locus>
                         <title xml:lang="bg">Въпроси и отговори. Разумник</title>
                         <note target="bib:Милтенова2004">Милтенова 2004</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -410,26 +383,24 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD19" type="translation">
-                        <locus n="19">53v-55v</locus>
+                        <locus n="19">53v–55v</locus>
                         <title xml:lang="bg">Въпроси и отговори. Изправление за Новия завет</title>
                         <note>
-                            <ref type="bibl" target="bib:Милтенова2004">Милтенова 2004</ref>
-                        </note>
+                            <ref type="bibl" target="bib:Милтенова2004">Милтенова 2004</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Исправленїе о Новомь Завѣтꙋ
                                     с<seg rend="sup">вꙗ</seg>таго Іѡанна ѡ вопросѣх и
                                 ѡтвѣтехь.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Вопрос: кого не много
-                                пожалова Б<seg rend="sup">ог</seg>ь? ѡтвѣть: Азїа тако ї
+                                пожалова Б<seg rend="sup">ог</seg><unclear>ь</unclear> ѡтвѣть: Азїа тако ї
                                 Арїа.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD20" type="translation">
-                        <locus n="20">56r-67r</locus>
+                        <locus n="20">56r–67r</locus>
                         <title xml:lang="bg">Молитви против чародейства и болести по хората и животните</title>
                         <note>
-                            <ref type="bibl" target="bib:Милтенова2004">Милтенова 2004</ref>
-                        </note>
+                            <ref type="bibl" target="bib:Милтенова2004">Милтенова 2004</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Послѣдованїе молебное
                                 сопротивъ чародѣꙗнїꙗмъ, ѡб<seg rend="sup">олѣ</seg>ванїꙗм чл<seg rend="sup">овѣ</seg>ковъ и скотовъ, домовже и мѣсть ѡплазнꙗемих
@@ -444,18 +415,7 @@
                     <origin>
                         <origDate notBefore="1600" notAfter="1650">17th c., first half</origDate>
                         <origPlace>Rila monastery and Etropole</origPlace>
-                        <note>
-                            <bibl>
-                                <respStmt>
-                                    <name full="yes">Elena Tomova</name>
-                                    <resp>de visu</resp>
-                                </respStmt>
-                                <respStmt>
-                                    <name full="yes">Стоянов, М., Хр. Кодов, </name>
-                                    <resp>Опис 1964</resp>
-                                </respStmt>
-                            </bibl>
-                        </note>
+                        <ref type="bibl" target="bib:Стоянов1964">Стоянов, Кодов 1964</ref>
                     </origin>
                 </history>
                 <additional>

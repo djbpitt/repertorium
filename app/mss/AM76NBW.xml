@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM76NBW">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Miscellany, National Library Slav 76, Vienna</title>
+                <title>Miscellany, National Library Slav 76, Vienna</title>
                 <author xml:id="AM">Anisava Miltenova</author>
                 <editor xml:id="DB">David J. Birnbaum</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -21,12 +27,10 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Яцимирский1921b">Яцимирский1921: N 148,
+                <p><ref type="bibl" target="bib:Яцимирский1921b">Яцимирский1921: N 148,
                         229-230</ref>
                     <ref type="bibl" target="bib:Birkfellner1975">Birkfellner 1975:
-                    225-227</ref>
-                </p>
+                    225-227</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -56,6 +60,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#DB" when="2016-07-02">Removed empty &lt;editor&gt; element</change>
@@ -72,7 +77,7 @@
                     <settlement>Vienna</settlement>
                     <repository>National Library</repository>
                     <idno type="shelfmark">Cod Slav. 76</idno>
-                    <altIdentifier type="old">
+                    <altIdentifier type="former">
                         <idno type="shelfmark">148</idno>
                     </altIdentifier>
                     <altIdentifier>
@@ -83,8 +88,7 @@
                     <objectDesc>
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">47</measure>
@@ -117,22 +121,14 @@
                             <locus>1r-7v</locus>
                             <locus>8r-47v</locus>
                         </locusGrp>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Anonumous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs">
-                            <p>semiuncial/poluustav</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonumous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"/>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <summary xmlns="http://www.tei-c.org/ns/1.0">Without juses, with two
-                                    jers, Resava school.</summary>
-                                <re:orthNote type="jer" subtype="nonEtymReg"/>
-                                <re:orthNote type="jus" subtype="nonJus"/>
-                            </orthography>
+                            <langNote key="orthography">Without juses, with two jers, Resava school.
+                            </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Anisava Miltenova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                     <scribe n="2">
                         <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
@@ -140,19 +136,12 @@
                             <locus>8r</locus>
                             <locus>47v</locus>
                         </locusGrp>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>semiuncial</p>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"/>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <!--<p xmlns="http://www.tei-c.org/ns/1.0">without juses, with two jers, Resava school</p>-->
-                                <orthNote type="jer" subtype="nonEtymReg"/>
-                            </orthography>
+                            <langNote key="orthography" type="jer" subtype="nonEtymReg"/>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Anisava Miltenova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -175,7 +164,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="original">
-                        <locus n="2">1r-7v</locus>
+                        <locus n="2">1r–7v</locus>
                         <title xml:lang="bg">Родослов на сръбските владетели</title>
                         <author>anonymous</author>
                         <note>Without end. Folia appear to be missing.</note>
@@ -191,7 +180,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">8r-10v</locus>
+                        <locus n="3">8r–10v</locus>
                         <title xml:lang="bg">Тълкувание на притчата за съдията и вдовицата</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -223,7 +212,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5">
-                        <locus n="5">11v-12r</locus>
+                        <locus n="5">11v–12r</locus>
                         <title xml:lang="bg">Цикъл разкази за кръстното дърво. Разказ за двамата разбойници</title>
                         <author>anonymous</author>
                         <note>It seems that this text is shortened in the comparison with first
@@ -242,13 +231,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6">
-                        <locus n="6">12r-15v</locus>
+                        <locus n="6">12r–15v</locus>
                         <title xml:lang="bg">Цикъл разкази за кръстното дърво, приписван на Григорий Богослов, 2</title>
                         <author>Gregory of Nazianzos (Pseudo)</author>
                         <note>The copy represents specific redaction of the text. <bibl xml:lang="bg">
                                 <ref type="bibl" target="bib:Милтенова1982b">Милтенова 1982</ref>
-                            </bibl>
-                        </note>
+                            </bibl></note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -278,7 +266,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="8">16r-24v</locus>
+                        <locus n="8">16r–24v</locus>
                         <title xml:lang="bg">Слизане на св. Йоан Предтеча в ада</title>
                         <author>Eusebios of Alexandria</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -293,7 +281,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="9">24v-32r</locus>
+                        <locus n="9">24v–32r</locus>
                         <title xml:lang="bg">Евангелие Никодимово</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -309,7 +297,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus>32r-33v</locus>
+                        <locus>32r–33v</locus>
                         <title xml:lang="bg">Тълкувание на молитвата "Отче наш"</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Serbian</filiation>
@@ -329,8 +317,7 @@
                         <author>anonymous</author>
                         <note>Only a part of the text. <bibl>
                                 <ref type="bibl" target="bib:Милтенова1986b">Милтенова 1986</ref>
-                            </bibl>
-                        </note>
+                            </bibl></note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -343,7 +330,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12">
-                        <locus n="12">34r-39r</locus>
+                        <locus n="12">34r–39r</locus>
                         <title xml:lang="bg">Въпроси и отговори</title>
                         <note>The translation of this version is uncluded in the Prolog in verse.
                             Without title.</note>
@@ -358,7 +345,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
-                        <locus n="13">39r-43v</locus>
+                        <locus n="13">39r–43v</locus>
                         <title xml:lang="bg">Житие на св. Андрей Юродиви, извлечение</title>
                         <author>Gregory of Constantinople</author>
                         <note>The copy is concordant with Bulgarian translation of the 14th c.
@@ -367,9 +354,8 @@
                                     <author>Novakovich, S.</author>
                                     <edition>Glasnik Srbskog Uchenog Drushtva</edition>
                                     <num>63</num>
-                                    <extent>41-73</extent>
-                                </bibl>
-                            </ref>.</note>
+                                    <extent>41–73</extent>
+                                </bibl></ref>.</note>
                         <filiation type="translation">
                             <num>3</num>
                             <date>14th c.</date>
@@ -386,7 +372,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="translation">
-                        <locus n="14">44r-47v</locus>
+                        <locus n="14">44r–47v</locus>
                         <title xml:lang="bg">Молитва на Григорий архиепископ</title>
                         <author>Gregory of Constantinople</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -398,15 +384,14 @@
                                 вѣликаго и неви<seg rend="sup">д</seg>маго ѡ҃ца. иже прѣж<seg rend="sup">д</seg>е вѣкь.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">да прослав'лю прѣс҃тое<add xml:lang="cu" status="unremarkable">
                                     <seg rend="sup">име</seg>
-                                </add>ѡ҃ца и с҃на и с҃тго д҃ха. ему же слава ч<seg rend="sup">с</seg>ть и поклонение вь бѣсконачние и <sic>неисчатеные</sic> и
+                                </add>ѡ҃ца и с҃на и с҃тго д҃ха. ему же слава ч<seg rend="sup">с</seg>ть и поклонение вь бѣсконачние и <sic>неисчатеные</sic>и
                                 прѣвечние вѣкы вѣкомь аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
                     <origin evidence="description" resp="#AM">
-                        <origDate notBefore="1501" notAfter="1699">16th-17th c.</origDate>
-                        <origPlace>unknown</origPlace>
+                        <origDate notBefore="1501" notAfter="1699">16th–17th c.</origDate>
                     </origin>
                 </history>
             </msDesc>

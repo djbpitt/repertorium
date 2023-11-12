@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM13613S">
     <teiHeader>
         <fileDesc>
@@ -21,22 +25,20 @@
                         in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref>
-                    </p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <p>Description is based on available published catalogues and papers:<bibl>
-                        <ref type="bibl" target="bib:Милтенова1982a">Милтенова 1982a : 102-106,
-                            366-369</ref>
+                        <ref type="bibl" target="bib:Милтенова1982a">Милтенова 1982a : 102–106,
+                            366–369</ref>
                     </bibl>
                     <bibl>
-                        <ref>Милтенова 1982b : 35–55</ref>
+                        <ref target="bib:Милтенова1982b">Милтенова 1982b: 35–55</ref>
                     </bibl>
                     <bibl>
-                        <ref type="bibl" target="bib:Яцимирский1913">Яцимирский 1913: 93-97</ref>
-                    </bibl>
-                </p>
+                        <ref target="bib:Яцимирский1913">Яцимирский 1913: 93–97</ref>
+                    </bibl></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -51,7 +53,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>mixed-content miscellany</item>
                         <item>interpretations</item>
                         <item>apocrypha</item>
@@ -68,6 +70,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-28">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when-iso="2010-07-10">Conversion to Repertorium 3.3. Included head
@@ -100,19 +103,18 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Scissors</motif>
                                     <ref type="bibl" target="bib:Mošin1957">
                                         <num>2622</num>
-                                        <date>1390-1400</date>
+                                        <date>1390–1400</date>
                                     </ref>
                                 </watermark>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Unicorn</motif>
                                     <ref type="bibl" target="bib:Mošin1957">
                                         <num>6084</num>
-                                        <date>1390-1400</date>
+                                        <date>1390–1400</date>
                                     </ref>
                                 </watermark>
                             </support>
@@ -132,10 +134,10 @@
                                 <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1-16">
                                     <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
                                 </quire>
-                                <signatures>Old.</signatures>
+                                <signatures>Old</signatures>
                             </collation>
                             <condition>Without beginning and end; folia appear to be missing between
-                                ff. 34-35, ff. 80-81, and between ff. 109-110.</condition>
+                                ff. 34–35, ff. 80–81, and between ff. 109–110.</condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" writtenLines="21 22"/>
@@ -144,56 +146,47 @@
                     <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Dark brown and red for
                         titles and initials</ink>
                     <decoDesc>
-                        <summary>Small red titles and capitals</summary>
-                        <decoNote>without special decoration</decoNote>
+                        <p>Small red titles and capitals. Without special decoration</p>
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Binding from the 17th-18th c.</p>
+                            <summary>Binding from the <date>17th–18th c.</date></summary>
                         </binding>
                     </bindingDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
-                            <locus>1r-109v</locus>
-                            <locus>116r-116v</locus>
+                            <locus>1r–109v</locus>
+                            <locus>116r–116v</locus>
                         </locusGrp>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Middle semiuncial</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Middle semiuncial</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">two juses, two jehrs, Tŭrnovo
-                                    school, Moldavian origin</p>
-                            </orthography>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Moldavian origin</summary>
+                            <langNote key="orthography">Two juses, two jers, Tŭrnovo
+                                    school
+                            </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Anisava Miltenova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                     <scribe n="2">
                         <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
-                            <locus>110r -115v</locus>
-                            <locus>117r -124v</locus>
-                            <locus>125r -127v</locus>
+                            <locus>110r–115v</locus>
+                            <locus>117r–124v</locus>
+                            <locus>125r–127v</locus>
                         </locusGrp>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Middle semiuncial</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Middle semiuncial</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">two juses, two jehrs, Tŭrnovo
-                                    school, Moldavian origin</p>
-                            </orthography>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Moldavian origin</summary>
+                            <langNote key="orthography">Two juses, two jers, Tŭrnovo
+                                school
+                            </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Anisava Miltenova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -201,7 +194,7 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian, Tŭrnovo school</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1r-5r</locus>
+                        <locus n="1">1r–5r</locus>
                         <title xml:lang="bg">Поучение, неидентифицирано</title>
                         <note>Without beginning and title</note>
                         <filiation type="translation"/>
@@ -216,11 +209,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">4r-7v</locus>
+                        <locus n="2">4r–7v</locus>
                         <title xml:lang="bg">Евангелие Никодимово. Разказ как Марта осъди Пилат</title>
                         <note>One of the earlist copies; other copies of the 15th c.: N 241 from
                             Chludov's collection, N 52 from Nikoljac monastery, 15th c.; N 677
-                            NBKM-Sofia, 15th c. etc.</note>
+                            NBKM–Sofia, 15th c. etc.</note>
                         <filiation type="translation"/>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -248,7 +241,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">7v-9r</locus>
+                        <locus n="4">7v–9r</locus>
                         <title xml:lang="bg">Поучение за разделянето на душата от тялото</title>
                         <filiation type="translation"/>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -261,7 +254,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">9r-23v</locus>
+                        <locus n="5">9r–23v</locus>
                         <title xml:lang="bg">Поучение за богатите и бедните, които са починали</title>
                         <author>John Chrysostom</author>
                         <filiation type="translation"/>
@@ -275,7 +268,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="6">23v-26r</locus>
+                        <locus n="6">23v–26r</locus>
                         <title xml:lang="bg">Поучение как да бъдат учени духовните чада</title>
                         <author>Prophet Ezekiel (Pseudo)</author>
                         <note>A note on the margin: "[gl]ava .l҃v."</note>
@@ -290,13 +283,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">26r-27v</locus>
+                        <locus n="7">26r–27v</locus>
                         <title xml:lang="bg">Поучение как да се слави светата Троица</title>
                         <author>Athanasios of Alexandria</author>
                         <note>There is a note in the title that this text is translated from Latin
                             to Bulgarian language (!)</note>
-                        <filiation type="source">Latin?</filiation>
-                        <filiation type="translation"/>
+                        <filiation type="source" cert="low">Latin</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -307,7 +299,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8">
-                        <locus n="8">28r-30r</locus>
+                        <locus n="8">28r–30r</locus>
                         <title xml:lang="bg">Откровение на Богородица за седемте гряха</title>
                         <note>This is one of the earliest copies. This is the short variant of the
                             article, probably a Slavic revision.</note>
@@ -321,13 +313,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9">
-                        <locus n="9">30r-35v</locus>
+                        <locus n="9">30r–35v</locus>
                         <title xml:lang="bg">Цикъл разкази за кръстното дърво, приписван на Григорий Богослов</title>
                         <author>Gregory of Nazianzos (Pseudo)</author>
                         <note>This is the earliest copy of the first redaction<bibl xml:lang="bg" type="published">
                                 <ref type="bibl" target="bib:Милтенова1982b">Милтенова 1982</ref>
-                            </bibl>
-                        </note>
+                            </bibl></note>
                         <filiation type="translation">
                             <num>1</num>
                         </filiation>
@@ -373,7 +364,7 @@
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10">
-                        <locus n="10">35v-35r</locus>
+                        <locus n="10">35v–35r</locus>
                         <title xml:lang="bg">Цикъл разкази за кръстното дърво. Разказ за Адамовата глава</title>
                         <note>The text is the part of Apocryphal cycle about Holy Tree; it is the
                             earliest copy of the first redaction. Without title.</note>
@@ -394,7 +385,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11">
-                        <locus n="11">35r-37v</locus>
+                        <locus n="11">35r–37v</locus>
                         <title xml:lang="bg">Цикъл разкази за кръстното дърво. Разказ за двамата разбойници</title>
                         <note>The text usually is the part of the Apocryphal cycle about Holy Tree,
                             but sometimes appears separately. This is the earliest copy of the first
@@ -416,7 +407,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation">
-                        <locus n="12">37v-41r</locus>
+                        <locus n="12">37v–41r</locus>
                         <title xml:lang="bg">Въпросите на св. Йоан Богослов към Авраам</title>
                         <filiation type="translation"/>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -429,7 +420,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
-                        <locus n="13">41r-47r</locus>
+                        <locus n="13">41r–47r</locus>
                         <title xml:lang="bg">Тълкувание на Евангелието от Матей</title>
                         <filiation type="translation"/>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -440,7 +431,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="translation">
-                        <locus n="14">47v-50r</locus>
+                        <locus n="14">47v–50r</locus>
                         <title xml:lang="bg">Тълкувание за православната вяра от дванадесетте апостоли</title>
                         <filiation type="translation"/>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -456,7 +447,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15" type="translation">
-                        <locus n="15">50r-54r</locus>
+                        <locus n="15">50r–54r</locus>
                         <title xml:lang="bg">Поучение срещу крадците и сребролюбците</title>
                         <author>John Chrysostom</author>
                         <filiation type="translation"/>
@@ -472,7 +463,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16" type="translation">
-                        <locus n="16">54r-56v</locus>
+                        <locus n="16">54r–56v</locus>
                         <title xml:lang="bg">Въпроси и отговори на Атанасий Александрийски, извлечение</title>
                         <author>Athanasios of Alexandria</author>
                         <filiation type="translation"/>
@@ -485,7 +476,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17" type="translation">
-                        <locus n="17">56v-61v</locus>
+                        <locus n="17">56v–61v</locus>
                         <title xml:lang="bg">Тълкувание на стиха "Исусе Христе Боже наш, помилуй нас"</title>
                         <filiation type="translation"/>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -498,7 +489,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18" type="translation">
-                        <locus n="18">61v-78v</locus>
+                        <locus n="18">61v–78v</locus>
                         <title xml:lang="bg">Поучение за християнската вяра според казаното от 318 църковни отци в Никея</title>
                         <author>Gregory of Nazianzos</author>
                         <filiation type="translation"/>
@@ -517,7 +508,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD19" type="translation">
-                        <locus n="19">78v-81r</locus>
+                        <locus n="19">78v–81r</locus>
                         <title xml:lang="bg">Поучение против езическите и юдейските обичаи</title>
                         <note>The text is concordant with some rules from the Nomokanon</note>
                         <filiation type="translation"/>
@@ -533,7 +524,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD20" type="translation">
-                        <locus n="20">81r-109v</locus>
+                        <locus n="20">81r–109v</locus>
                         <title xml:lang="bg">Поучение за Второ пришествие, неидентифицирано</title>
                         <note>Unidetified text without beginning and end; folia appear to be missing
                             between 109v and 110 r</note>
@@ -548,7 +539,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD21" type="translation">
-                        <locus n="21">110r-115v</locus>
+                        <locus n="21">110r–115v</locus>
                         <title xml:lang="bg">Апокалипсис на Йоан Богослов</title>
                         <note>Without beginning and end.</note>
                         <filiation type="translation"/>
@@ -562,12 +553,11 @@
                             <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">и р<seg rend="sup">ч</seg>еть кто разгне<seg rend="sup">т</seg>
                                 <gap/> книгы сїѫ. и рекѫ<seg rend="sup">т</seg> ми въсѣ<seg rend="sup">х</seg>ь множьства. аг҃гль мои<seg rend="sup">х</seg>. да видѧ<seg rend="sup">т</seg> книгѫ <gap/>ѫ. аг'ньцоу
                                 семоу да разгѫне<seg rend="sup">т</seg> ѧ. егда разгъне .а҃.
-                                    печа<seg rend="sup">т</seg>
-                            </explicit>
+                                    печа<seg rend="sup">т</seg></explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD22" type="translation">
-                        <locus n="22">116r-116v</locus>
+                        <locus n="22">116r–116v</locus>
                         <title xml:lang="bg">Откровение Варухово</title>
                         <note>Without beginning and end.</note>
                         <filiation type="translation"/>
@@ -583,7 +573,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD23" type="translation">
-                        <locus n="23">117r-124v</locus>
+                        <locus n="23">117r–124v</locus>
                         <title xml:lang="bg">Житие на св. Петка Римска</title>
                         <note>Without beginning and end</note>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -606,7 +596,7 @@
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD25" type="translation">
-                        <locus n="25">125v-126v</locus>
+                        <locus n="25">125v–126v</locus>
                         <title xml:lang="bg">Разказ (неидентифициран) от Патерика</title>
                         <filiation type="translation"/>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -631,7 +621,7 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin resp="#AM" evidence="de visu">
+                    <origin resp="#AM" evidence="conjecture">
                         <origDate notBefore="1401" notAfter="1450">15th c., first half</origDate>
                         <origPlace>Wallachia</origPlace>
                         <note>It seems that MS has been in the Njamc monastery at the first half of

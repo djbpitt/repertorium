@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-MD845NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Gospel Book N 845 NBKM</title>
+                <title>Gospel Book N 845 NBKM</title>
                 <author xml:id="MD">Margaret Dimitrova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -16,9 +20,9 @@
                 <idno type="Repertorium">RC-MD845NBKM</idno>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Стоянов1964">Стоянов, Кодов 1964: 18</ref>
-                </p>
+                <bibl>
+                    <ref target="bib:Стоянов1964">Стоянов, Кодов 1964: 18</ref>
+                </bibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -44,6 +48,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -63,10 +68,7 @@
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="fragment">
-                        <supportDesc material="parchment">
-                            <support>
-                                <material>Parchment</material>
-                            </support>
+                        <supportDesc material="parch">
                             <extent>
                                 <measure unit="folia">4</measure>
                                 <dimensions unit="mm" type="folia">
@@ -75,8 +77,7 @@
                                 </dimensions>
                             </extent>
                             <foliation>New Arabic foliation</foliation>
-                            <condition>These folia were a cover of manuscript N 489, B. Conev, II,
-                                p. 26, therefore the text on 1r and 4v can not be read. There many
+                            <condition>These folia were a cover of manuscript N 489 (<ref type="bibl" target="bib:Цонев1923">Цонев 1923: 26</ref>), therefore the text on 1r and 4v can not be read. There many
                                 other injuries of the text.</condition>
                         </supportDesc>
                         <layoutDesc>
@@ -93,29 +94,23 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-4v</locus>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–4v</locus>
                         <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
-                            <p>Height of letters 5 mm; black points between syntagms</p>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  script="Cyrs" style="uncial"><dimensions type="chars" unit="mm"><height>5</height></dimensions>; black points between syntagms</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <orthNote type="jers" subtype="front">Only front jer; without
+                                <langNote key="orthography" type="jers" subtype="front">Only front jer; without
                                     "vocalization", double "jer" and the end of a demonstrative
-                                    pronoun "s66";</orthNote>
-                                <orthNote type="juses" subtype="nonJus">Without juses;</orthNote>
-                                <orthNote type="jotVowel">jotisized "je', but not regular, jotisized
-                                    "ju" and "ja";</orthNote>
-                                <orthNote type="otherLetters"> almost regular use of "ery"; "і"
+                                    pronoun "s66";</langNote>
+                            <langNote key="orthography" type="juses" subtype="nonJus">Without juses;</langNote>
+                            <langNote  key="orthography" type="jotVowel">jotisized "je', but not regular, jotisized
+                                    "ju" and "ja";</langNote>
+                            <langNote  key="orthography" type="otherLetters"> almost regular use of "ery"; "і"
                                     preceding vowels; regular use of "theta" in Greek loanwords;
-                                    regular use of l-epentheticum;</orthNote>
-                                <orthNote type="supralinear">Spiritus, apostroph, oksia</orthNote>
-                            </orthography>
+                                    regular use of l-epentheticum;</langNote>
+                            <langNote  key="orthography" type="supralinear">Spiritus, apostroph, oksia</langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name>Margaret Dimitrova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -123,9 +118,9 @@
                     <filiation type="protograph">Greek</filiation>
                     <filiation type="antigraph">Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1v-4r</locus>
+                        <locus n="1">1v–4r</locus>
                         <title xml:lang="bg">Евангелие от Йоан</title>
-                        <note>The text includes: 11:15-12:1</note>
+                        <note>The text includes: 11:15–12:1</note>
                         <filiation type="protograph">Greek</filiation>
                         <filiation type="antigraph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -138,9 +133,8 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#MD">
+                    <origin evidence="conjecture" resp="#MD">
                         <origDate notBefore="1201" notAfter="1299">13th c.</origDate>
-                        <origPlace>unknown</origPlace>
                         <ref type="bibl" target="bib:Стоянов1964">Стоянов, Кодов 1964: 18</ref>
                     </origin>
                 </history>
