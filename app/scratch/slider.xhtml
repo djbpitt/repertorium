@@ -3,28 +3,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Slider</title>
+        <link rel="stylesheet" type="text/css" href="../resources/css/style.css" />
         <link rel="stylesheet" type="text/css" href="slider.css" />
         <script src="slider.js"></script>
     </head>
     <body>
-        <!-- https://medium.com/@predragdavidovic10/native-dual-range-slider-html-css-javascript-91e778134816 -->
-        <div class="range_container">
-            <div class="sliders_control">
-                <input id="fromSlider" type="range" value="10" min="0" max="100" />
-                <input id="toSlider" type="range" value="30" min="0" max="100" />
+        <!-- based on: https://medium.com/@predragdavidovic10/native-dual-range-slider-html-css-javascript-91e778134816 -->
+        <fieldset id="date-range">
+            <div id="number_container">Dates: from <input type="number" id="fromInput" value="1000"
+                    min="900" max="1910" /> to <input type="number" id="toInput" value="1800"
+                    min="900" max="1910" />
             </div>
-            <div class="form_control">
-                <div class="form_control_container">
-                    <div class="form_control_container__time">Min</div>
-                    <input class="form_control_container__time__input" type="number" id="fromInput"
-                        value="10" min="0" max="100" />
-                </div>
-                <div class="form_control_container">
-                    <div class="form_control_container__time">Max</div>
-                    <input class="form_control_container__time__input" type="number" id="toInput"
-                        value="30" min="0" max="100" />
-                </div>
+            <div id="range_container">
+                <input id="fromSlider" type="range" value="1000" min="900" max="1910" />
+                <input id="toSlider" type="range" value="1800" min="900" max="1910" />
             </div>
-        </div>
+        </fieldset>
     </body>
 </html>
