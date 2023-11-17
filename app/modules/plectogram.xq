@@ -53,7 +53,6 @@ declare variable $width as xs:integer := count($mss) * $columnSpacing;
 declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msItemStruct => count()) + 1;
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
   width="{$width}"
   viewBox="0 0 {$width} {($max-cell-count + 3) * $boxHeight}"
   id="plectogram_svg">
@@ -80,9 +79,8 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
               y="0"
               height="20"
               width="20"
-              xlink:href="resources/images/drag-icon-djb-dev.svg"/>
-            <a
-              xlink:href="titles?filename={$filename}">
+              href="resources/images/drag-icon-djb-dev.svg"/>
+            <a href="titles?filename={$filename}">
               <text
                 x="{$boxWidth div 2}"
                 y="45"
@@ -106,7 +104,7 @@ declare variable $max-cell-count as xs:integer := max($mss/descendant::tei:msIte
                       height="{$boxHeight}"
                       title="{$box-label}">
                     </rect>
-                    <a xlink:href="search?exactTitle={$ms-bg-title}">
+                    <a href="search?exactTitle={$ms-bg-title}">
                       <text
                       x="{$textXShift}"
                       y="{$text-pos * $boxHeight + $textYShift}">{$box-label}</text>
