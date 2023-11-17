@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DRA787Stock">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-DRA787Stock">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Four Gospels (Tetraevangelie), archive No. A787, 15th–16th c.</title>
+                <title>Four Gospels (Tetraevangelie), archive No. A787, 15th-16th c.?</title>
                 <author xml:id="DR">Dilyana Radoslavova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -20,20 +18,23 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date when="2011-09-16">16.09.2011</date>
+                <date>16.09.2011</date>
                 <idno type="Repertorium">RC-DRA787Stock</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <listBibl><bibl><ref target="bib:Granberg2010">Granberg et al 2010: No 53.</ref></bibl>
-                    <bibl><ref target="bib:Roubetz">Roubetz: No 2.</ref></bibl></listBibl>
+                <p><ref type="bibl" target="bib:Granberg2010">Granberg et al 2010: No 53.</ref>
+                    <ref type="bibl" target="bib:Roubetz">Roubetz: No 2.</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -59,16 +60,20 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-10-30">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
+            <change who="#AB" when="2009-04-17">Added copyright statement</change>
+            <change who="#AB" when="2009-04-15">Corrections</change>
+            <change who="#AB" when="2009-04-13">Added Repertorium Identifier</change>
+            <change who="#AB" when="2009-03-02">Conversion to Repertorium 3.0</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -85,6 +90,7 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
+                                <material>Paper</material>
                                 <watermark>unclear</watermark>
                             </support>
                             <extent>
@@ -94,14 +100,14 @@
                                     <width>200</width>
                                 </dimensions>
                             </extent>
-                            <foliation>Late foliation in ink: 1–199, 201–250, supplemented by a
-                                modern in pencil: i–ii (for the first to original leaves) and
-                                251–263,265–273 at the end of the codex, so that the foliation runs
-                                as follows: [i–ii], i–ii, 1–199, 201–250, 251–263, 265–273,
+                            <foliation>Late foliation in ink: 1-199, 201-250, supplemented by a
+                                modern in pencil: i-ii (for the first to original leaves) and
+                                251-263,265-273 at the end of the codex, so that the foliation runs
+                                as follows: [i-ii], i-ii, 1-199, 201-250, 251-263, 265-273,
                                 [274].</foliation>
                             <condition>The MS is in relatively good condition and seems to be
                                 restored after 1839 (wich is the year of the watermarks of the
-                                flyleaves). F. 4r–v is blank.</condition>
+                                flyleaves). F. 4r-v is blank.</condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" writtenLines="22"/>
@@ -113,7 +119,7 @@
                             motifs in the beginning of each Gospel (ff. 5r, 77r, 121r, 194r) .</p>
                     </decoDesc>
                     <bindingDesc>
-                        <binding><summary>Boards covered with stamped cloth, leather spine</summary></binding>
+                        <p>Boards covered with stamped cloth, leather spine</p>
                     </bindingDesc>
                     <additions type="inscriptions">
                         <list>
@@ -129,29 +135,34 @@
                                         <unclear>...</unclear>
                                 </quote>
                             </item>
-                            <item><locus>ff. 272–273</locus>
-                                <note>Later addition with references to the Slavonic text made by the hand
-                                    that foliated the manuscript and left many glosses throughout the
-                                    book.</note></item>
                         </list>
+                    </additions>
+                    <additions type="editorial">
+                        <locus>ff. 272-273</locus>
+                        <note>Later addition with references to the Slavonic text made by the hand
+                            that foliated the manuscript and left many glosses throughout the
+                            book.</note>
                     </additions>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">i–271v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote  script="Cyrs" style="semiuncial"/>
-                        </scriptDesc>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">i-271v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
+                            type="semiuncial"/>
                         <scribeLang>
-                            <summary xmlns="http://www.tei-c.org/ns/1.0">Russian, Church Slavonic</summary>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Russian, Church Slavonic</p>
                         </scribeLang>
+                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
+                            <name>Dilyana Radoslavova</name>
+                            <resp>de visu</resp>
+                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <summary>Contains the Four Gospels, each with a table of contents and the
                         preface by Theophylactus of Ochrid; instructions on the Gospel reading
-                        during the year, Gospel readings
+                        during the year (menologion and synaxarion? - vzh. Synthia), Gospel readings
                         for various occasions, and the order of Gospel readings during the
                         yaer.</summary>
                     <filiation type="protograph">Russian</filiation>
@@ -166,47 +177,47 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">ir–ii v</locus>
+                        <locus n="2">ir-ii v</locus>
                         <title xml:lang="bg">Съдържание на Евангелието от Матей</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3">
-                        <locus n="3">1r–3v</locus>
+                        <locus n="3">1r-3v</locus>
                         <title xml:lang="bg">Тълкувание на Евангелието от Матей от Теофилакт Охридски</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
-                        <locus n="4">5r–73v</locus>
+                        <locus n="4">5r-73v</locus>
                         <title xml:lang="bg">Евангелие от Матей</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5">
-                        <locus n="5">74r–75r</locus>
+                        <locus n="5">74r-75r</locus>
                         <title xml:lang="bg">Съдържание на Евангелието от Марко</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6">
-                        <locus n="6">75r–76v</locus>
+                        <locus n="6">75r-76v</locus>
                         <title xml:lang="bg">Предисловие към Евангелието от Марко</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7">
-                        <locus n="7">77r–117v</locus>
+                        <locus n="7">77r-117v</locus>
                         <title xml:lang="bg">Евангелие от Марко</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8">
-                        <locus n="8">118r–119v</locus>
+                        <locus n="8">118r-119v</locus>
                         <title xml:lang="bg">Съдържание на Евангелието от Лука</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9">
-                        <locus n="9">119v–120r</locus>
+                        <locus n="9">119v-120r</locus>
                         <title xml:lang="bg">Предисловие към Евангелието от Лука</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10">
-                        <locus n="10">121r–189r</locus>
+                        <locus n="10">121r-189r</locus>
                         <title xml:lang="bg">Евангелие от Лука</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
@@ -216,49 +227,59 @@
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12">
-                        <locus n="12">190r–192v</locus>
+                        <locus n="12">190r-192v</locus>
                         <title xml:lang="bg">Предисловие към Евангелието от Йоан</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13">
-                        <locus n="13">194r–250v</locus>
+                        <locus n="13">194r-250v</locus>
                         <title xml:lang="bg">Евангелие от Йоан</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14">
-                        <locus n="14">251r–258v</locus>
+                        <locus n="14">251r-258v</locus>
                         <title xml:lang="bg">Месецослов с избрани празници и светци</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15">
-                        <locus n="15">258v–268v</locus>
+                        <locus n="15">258v-268v</locus>
                         <title xml:lang="bg">Указания за евангелските четива за подвижните празници</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16">
-                        <locus n="16">268v–269v</locus>
+                        <locus n="16">268v-269v</locus>
                         <title xml:lang="bg">Евангелски четива “на всяка потреба”</title>
                         <note>Съдържа предписания за четивата на велик маслосвет, за освещаване на
                             църква и др.</note>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17">
-                        <locus n="17">269v–270v</locus>
+                        <locus n="17">269v-270v</locus>
                         <title xml:lang="bg">Таблица с евангелски четива и гласовете</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18">
-                        <locus n="18">270v–271v</locus>
+                        <locus n="18">270v-271v</locus>
                         <title xml:lang="bg">Указания за повседневните евангелия</title>
                         <filiation type="protograph">Russian</filiation>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="conjecture" resp="#DR">
-                        <origDate notBefore="1401" notAfter="1599">15th–16th c.</origDate>
+                    <origin evidence="de visu" resp="#DR">
+                        <origDate notBefore="1401" notAfter="1599">15th-16th c.</origDate>
                     </origin>
                     <acquisition/>
                 </history>
+                <additional>
+                    <adminInfo>
+                        <recordHist>
+                            <source>
+                                <p>Directly catalogued from the original manuscript using the
+                                    printed catalogue from ...</p>
+                            </source>
+                        </recordHist>
+                    </adminInfo>
+                </additional>
             </msDesc>
         </body>
     </text>

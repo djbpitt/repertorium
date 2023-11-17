@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DRA787a16Stock">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-DRA787a16Stock">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -21,20 +19,23 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date when="2011-09-17">17.09.2011</date>
+                <date>17.09.2011</date>
                 <idno type="Repertorium">RC-DRA787a16Stock</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <listBibl><bibl><ref target="bib:Steensland2005">Steensland 2005: No 5.</ref></bibl>
-                    <bibl><ref target="bib:Wesslén1985">Wesslén 1985: 112–142.</ref></bibl></listBibl>
+                <p><ref type="bibl" target="bib:Steensland2005">Steensland 2005: No 5.</ref>
+                    <ref type="bibl" target="bib:Wesslén1985">Wesslén 1985: 112-142.</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -61,14 +62,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-10-30">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -84,7 +85,8 @@
                     <idno type="shelfmark">A787a16</idno>
                     <note>The fragment is a part from the 15th-century Russian Evangelion Aprakos
                         (Codex D, f. 3 in <ref target="Wesslén1985">Wessél 1985</ref>), represented
-                        by a few more leaves, kept in various collections (<ref type="bibl" target="bib:Steensland2005">Steensland 2005</ref>): 1. Uppsala
+                        by a few more leaves, kept in various collections (<ref type="bibl"
+                            target="bib:Steensland2005">Steensland 2005</ref>): 1. Uppsala
                         University Library 7; 2. Royal Library, Stockholm A787a16; 3. Royal Library,
                         Stockholm Fb 3 (D:i, ii, iii); 4. Royal Library, Stockholm Fb 13; 5. Royal
                         Library, Stockholm Fb 17:1; 6. Royal Library, Stockholm A787a21; 7. The
@@ -96,7 +98,7 @@
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="fragment">
-                        <supportDesc material="parch">
+                        <supportDesc material="parchment">
                             <support>
                                 <material>Parchment of fine quality. The recto is the hair side, the
                                     verso is the slesh side, respectively.</material>
@@ -104,12 +106,12 @@
                             <extent>
                                 <measure unit="folia">1</measure>
                                 <dimensions unit="mm" type="folia">
-                                    <height>ca 197</height>
-                                    <width>ca 134</width>
+                                    <height>ca197</height>
+                                    <width>ca134</width>
                                 </dimensions>
                             </extent>
                             <condition>It is a leaf fragment. The text is partially preserved, for
-                                much of the leaf has been cut away. Columns b and c contain only 5–6
+                                much of the leaf has been cut away. Columns b and c contain only 5-6
                                 letters per line. The last for lines of each column are missing. The
                                 fragment is green, which indicates that the leaf was used for
                                 binding in Martinus Aschaneus' library (see the initials MA between
@@ -125,7 +127,7 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <summary>Kept together with other parchment fragments (A787a)</summary>
+                            <p>Kept together with other parchment fragments (A787a)</p>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
@@ -135,50 +137,62 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–2v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote script="Cyrs" style="uncial"><dimensions type="chars" unit="mm"><height>6</height></dimensions>; <dimensions type="line-spacing" unit="mm"><height>10</height></dimensions></scriptNote>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-2v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="Cyrs" subtype="uncial">
+                            <p>6mm high; interline space: 10</p>
                         </scriptDesc>
                         <scribeLang>
-                            <summary xmlns="http://www.tei-c.org/ns/1.0">Russian, Church Slavonic</summary>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Russian, Church Slavonic</p>
                         </scribeLang>
+                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
+                            <name>Dilyana Radoslavova</name>
+                            <resp>de visu</resp>
+                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
-                    <summary>The fragment contains Matthew 5.1–25 with lacunae</summary>
+                    <summary>The fragment contains Matthew 5.1-25 with lacunae</summary>
                     <filiation type="protograph">Russian</filiation>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1r–1v</locus>
+                        <locus n="1">1r-1v</locus>
                         <title xml:lang="bg">Изборно евангелие</title>
                         <filiation type="antigraph">Russian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">пристоупиша к' немоу ѹчн҃ци
-                                его</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">соуперникъ соудїи</ab>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">пристоупиша к' немоу ѹчн҃ци
+                                его</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">соуперникъ соудїи</p>
                         </sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin resp="#DR" evidence="conjecture">
+                    <origin resp="#DR" evidence="de visu">
                         <origDate>15th c.</origDate>
                         <note>Russian origin.</note>
                     </origin>
                     <acquisition>
                         <note>The fragment was evidently used for binding in Martinus Aschaneus'
-                            library</note>
+                            library.</note>
                     </acquisition>
                 </history>
                 <additional>
+                    <adminInfo>
+                        <recordHist>
+                            <source>
+                                <p>Directly catalogued from the original manuscript using the
+                                    printed catalogue from ...</p>
+                            </source>
+                        </recordHist>
+                    </adminInfo>
                     <listBibl>
                         <bibl>
-                            <ref target="bib:Wesslén1985">Wesslén 1985: 112–142.</ref>
+                            <ref type="bibl" target="bib:Wesslén1985">Wesslén 1985: 112-142.</ref>
                         </bibl>
                         <bibl>
-                            <ref target="bib:Стенсланд1996">Стенсланд 1996.</ref>
+                            <ref type="bibl" target="bib:Стенсланд1996">Стенсланд 1996.</ref>
                         </bibl>
                         <bibl>
-                            <ref target="bib:Steensland2005">Steensland 2005: 211–225
+                            <ref type="bibl" target="bib:Steensland2005">Steensland 2005: 211-225
                                 (see N5).</ref>
                         </bibl>
                     </listBibl>

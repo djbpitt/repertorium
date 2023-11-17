@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DD312NBKM">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-DD312NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Vita of St. Basil the Younger No 312 NBKM</title>
+                <title>Vita of St. Basil the Young No 312 NBKM</title>
                 <author xml:id="DD">Dimitrinka Dimitrova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="DB">David J. Birnbaum</editor>
@@ -22,10 +20,13 @@
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -42,7 +43,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list>
+                    <list type="simple">
                         <item>Vita of St. Basil the Young</item>
                     </list>
                 </keywords>
@@ -50,14 +51,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-10-29">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#DB" when="2016-07-02">Added @xml:id attributes to author and editors of
@@ -69,7 +70,7 @@
             <msDesc>
                 <msIdentifier>
                     <msName xml:lang="en" type="general">vita</msName>
-                    <msName xml:lang="en" type="specific">vita of St. Basil the Younger</msName>
+                    <msName xml:lang="en" type="specific">vita of St. Basil the Young</msName>
                     <country>Bulgaria</country>
                     <settlement>Sofia</settlement>
                     <repository>National Library</repository>
@@ -83,7 +84,8 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <watermark>None</watermark>
+                                <material>Paper</material>
+                                <watermark>none</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">125</measure>
@@ -118,23 +120,29 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–125v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote  style="semiuncial" script="Cyrs">Semiuncial with cursive elements</scriptNote>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-125v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="semiuncial"
+                            script="Cyrs">
+                            <p>Semiuncial with cursive elements</p>
                         </scriptDesc>
                         <scribeLang>
-                            <langNote key="orthography">Without juses,
-                                    non-etymological use of jers
-                            </langNote>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Without juses,
+                                    non-etymological use of jers</p>
+                            </orthography>
                         </scribeLang>
+                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
+                            <name full="yes">Dimitrinka Dimitrova</name>
+                            <resp>de visu</resp>
+                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <summary>The manuscript contains 2 texts.</summary>
                     <filiation type="protograph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1–125r</locus>
+                        <locus n="1">1-125r</locus>
                         <title xml:lang="bg">Житие на св. Василий Нови</title>
                         <author>Gregory the Monk</author>
                         <filiation type="protograph">Middle Bulgarian</filiation>
@@ -143,30 +151,47 @@
                                 чудесъ сказанихе прѣпѡ<seg rend="sup">д</seg>обнаго о҃ца нашего
                                 Василиꙗ Новаго съписано Григориїемь мнихѡ<seg rend="sup">м</seg>
                                     оученико<seg rend="sup">м</seg>ь егѡ. слово</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Непостижнаго Б҃а ѡ чл<seg rend="sup">чс</seg>ѡ<seg rend="sup">м</seg> рѡдѣ. прѣблагаго Б҃а
-                                чл҃колюбїа и бл҃гостынѧ. прѣмѫдрьно и неизре<seg rend="sup">ч</seg>ено строѫщїа</incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Непостижнаго Б҃а ѡ чл<seg
+                                    rend="sup">чс</seg>ѡ<seg rend="sup">м</seg> рѡдѣ. прѣблагаго Б҃а
+                                чл҃колюбїа и бл҃гостынѧ. прѣмѫдрьно и неизре<seg rend="sup"
+                                >ч</seg>ено строѫщїа</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">Сътвори свѣтило въ домоу
                                 Г҃ню и сты<seg rend="sup">х</seg> помѧ<seg rend="sup">т</seg>
-                                съдѣвлѧ. и нищѫѧ мноуѫ добрѣ тако творити въ вѣчны<seg rend="sup">х</seg> бл҃гь насладитисѧ блг<seg rend="sup">д</seg>тїѫ и
+                                съдѣвлѧ. и нищѫѧ мноуѫ добрѣ тако творити въ вѣчны<seg rend="sup"
+                                    >х</seg> бл҃гь насладитисѧ блг<seg rend="sup">д</seg>тїѫ и
                                 чл҃колюбїемь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">125r–125v</locus>
+                        <locus n="2">125r-125v</locus>
                         <title xml:lang="bg">Правила за постенето, извлечения</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">О житїи. сирѣ<seg rend="sup">ч</seg> ѡ пощени и ра<seg rend="sup">д</seg>рѣшени въсего лѣта.
+                            <head xmlns="http://www.tei-c.org/ns/1.0">О житїи. сирѣ<seg rend="sup"
+                                    >ч</seg> ѡ пощени и ра<seg rend="sup">д</seg>рѣшени въсего лѣта.
                                     Никифо<seg rend="sup">р</seg></head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">По<seg rend="sup">д</seg>бае<seg rend="sup">т</seg> вѣти ꙗко аще слоучичи<seg rend="sup">т</seg> сѧ Х<seg rend="sup">с</seg>ва рож<seg rend="sup">д</seg>ства пра<seg rend="sup">з</seg> и сты<seg rend="sup">х</seg> Бг҃оꙗвленїѧ въ срѣ<seg rend="sup">д</seg> и в
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">По<seg rend="sup"
+                                    >д</seg>бае<seg rend="sup">т</seg> вѣти ꙗко аще слоучичи<seg
+                                    rend="sup">т</seg> сѧ Х<seg rend="sup">с</seg>ва рож<seg
+                                    rend="sup">д</seg>ства пра<seg rend="sup">з</seg> и сты<seg
+                                    rend="sup">х</seg> Бг҃оꙗвленїѧ въ срѣ<seg rend="sup">д</seg> и в
                                     пѧ<seg rend="sup">к</seg> разрѣшаетсꙗ сырь и ꙗица</incipit>
                         </sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="conjecture">
+                    <origin evidence="de visu">
                         <origDate notBefore="1501" notAfter="1599">16th c.</origDate>
+                        <origPlace>unknown</origPlace>
+                        <note>
+                            <bibl>
+                                <respStmt>
+                                    <name full="yes">Dimitrova, D.</name>
+                                    <resp>de visu</resp>
+                                </respStmt>
+                            </bibl>
+                        </note>
                     </origin>
                 </history>
             </msDesc>

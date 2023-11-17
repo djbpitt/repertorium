@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-NG2BAN">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-NG2BAN">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Psalter (Pesnivec), No 2 Archives of the Bulgarian Academy of
+                <title type="main">Psalter (Pesnivec), No 2 Archives of the Bulgarian Academy of
                     Sciences, 1337</title>
                 <author xml:id="NG">Nina Gagova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
@@ -17,20 +15,24 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date when="2005-01">January 2005</date>
+                <date>January 2005</date>
                 <idno type="Repertorium">RC-NG2ABAN</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <p>This description is based on <emph>de visu</emph> observations, on MS microform
-                    and on the published catalogue descriptions. <ref type="bibl" target="bib:Кодов1969">Кодов 1969: 11–16.</ref>.</p>
+                    and on the published catalogue descriptions. <ref type="bibl"
+                        target="bib:Кодов1969">Кодов 1969: 11-16.</ref>.</p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -53,16 +55,18 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
+
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
+
             <change who="#AM" when="2011-10-07">Removed old elements</change>
             <change who="#AM" when="2011-10-07">Editorial work, checked MS and added
                 information</change>
@@ -82,16 +86,16 @@
                     <country>Bulgaria</country>
                     <settlement>Sofia</settlement>
                     <repository>Archives of the Bulgarian Academy of Sciences</repository>
-                    <idno type="shelfmark">2</idno>
+                    <idno type="shelfmark"> 2</idno>
                     <idno type="catalogue">2</idno>
                     <note>
-                        <ref type="bibl" target="bib:Кодов1969">Кодов 1969: 11–16.</ref></note>
+                        <ref type="bibl" target="bib:Кодов1969">Кодов 1969: 11-16.</ref></note>
                 </msIdentifier>
                 <physDesc>
                     <summary>The manuscript was made with an order of Tsar Ivan
                         Aleksander.</summary>
                     <objectDesc form="codex">
-                        <supportDesc material="parch">
+                        <supportDesc material="parchment">
                             <support>
                                 <material>Parchment of very good quality</material>
                             </support>
@@ -110,7 +114,7 @@
                             <collation>
                                 <summary>40 quires</summary>
                             </collation>
-                            <condition>Fair. Quires 2 and 4 are missing</condition>
+                            <condition>Fair. <damage>Quires 2 and 4 are missing</damage></condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" ruledLines="29 30" writtenLines="19 20"/>
@@ -121,85 +125,59 @@
                         <decoNote type="overview">Decoration in neobyzantine style with interlacing
                             elements. </decoNote>
                         <decoNote type="borders">
-                            <locus>f. 1</locus> little red border with "pletenie", in an unfinished
+                            <locus>F.1</locus> little red border with "pletenie", in an unfinished
                             state; <locus>f.158</locus> : big quadratic border, with round medalions
                             inside,with floral elements, in blu and gold (in very poor condition);
                                 <locus>f. 310</locus> and <locus>311</locus>: simple "pletenie" in
                             red and blu. </decoNote>
                         <decoNote type="initials">
-                            <locusGrp>
-                                <locus>f. 4r</locus>
-                                <locus>f. 158r</locus>
-                            </locusGrp> big ornamented initials in
+                            <locus>F.4</locus> and <locus>f.158</locus> : big ornamented initials in
                             red and green.</decoNote>
                     </decoDesc>
                     <bindingDesc>
-                        <binding><summary>Wooden panel covered with ornamented leather</summary></binding>
+                        <p>Wooden panel covered with ornamented leather</p>
                     </bindingDesc>
-                    <additions>
-                        <list>
-                            <item>
-                                <locus>f. IIv</locus>
-                                    <quote xml:lang="cu">Пандази Лѡ<seg rend="sup">г</seg>феть.</quote>
-                            </item>
-                            <item>
-                                    <locus>f. 107v</locus>
-                                        <quote xml:lang="cu">бъ҃ да простї <persName>Сїмона</persName></quote>
-                                   </item>
-                        <item>
-                                <locus>f. 158</locus>
-                                        <quote xml:lang="cu">
-                                            <persName>Іѡаннь Алексан<seg rend="sup">д</seg>р</persName> црь҃ бл҃гар<seg rend="sup">ѡ</seg>мь. + Сїрѣчь сие сътворено бы<seg rend="sup">с</seg>
-                                            въ по<seg rend="sup">м</seg>щь и оутвръж<seg rend="sup">д</seg>енїе <persName>Иѡ<seg rend="sup">а</seg>ну Алеѯан<seg rend="sup">д</seg>ру</persName> црю҃ бл҃гарѡ<seg rend="sup">м</seg> паче
-                                            же и гръкомь. и бѫди въсегда амнь҃.</quote>
-                        </item>
-                            <item>
-                                        <locus>f. 310</locus>                                
-                                        <quote xml:lang="cu">Великыи ѡ цр҃ю <persName> Іѡане
-                                            Алеѯан<seg rend="sup">д</seg>ре.</persName> не забѫди
-                                            писавшааго кꙿнигѫ сиѧ. въ т..ѫ помощь и похвалѫ и застѫпление
-                                            твоему цр<seg rend="sup">с</seg>твїю въ <gap/></quote>
-                            </item>
-                        <item>
-                                <locus>f. 312v</locus>
-                                        <quote xml:lang="cu">Въ лѣ<seg rend="sup">т</seg> ѕцѯе҃. кроу<seg rend="sup">г</seg>
-                                            слн҃цу. ка҃. лу<seg rend="sup">н</seg>. аї҃. прѣстави се
-                                            бл҃гоч<seg rend="sup">с</seg>тивы и хо҃любивы господинь
-                                            срьбле<seg rend="sup">м</seg> деспотъ кѵхръ <persName>Геѡргїе</persName> по ги҃ бѕѣ҃ его вьседръжители. емуже слава
-                                            вь вѣкы аминъ.</quote>
-                        </item>
-                        </list>
-                    </additions>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
-                            <locus>ff. 1r–235r</locus>
+                            <locus>ff. 1-235r</locus>
                             <locus>310v</locus>
                         </locusGrp>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Simon<certainty locus="value" cert="low"/>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Simon<certainty
+                                locus="value" cert="low"/>
                         </name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote script="Cyrs" style="uncial">A small unical of Tŭrnovo type, <dimensions type="chars" unit="mm"><height>4</height></dimensions>, with occasionsl
-                                ligatures</scriptNote>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
+                            <p>A small unicial of Tŭrnovo type, 4 mm high, with occasionsl
+                                ligatures</p>
                         </scriptDesc>
                         <scribeLang>
                             <summary xmlns="http://www.tei-c.org/ns/1.0">Middle Bulgarian, Tŭrnovo
                                 type</summary>
-                                <langNote key="orthography" type="jers" subtype="etymReg">Two jers, with some
-                                    preference of front jer at the end of words, </langNote>
-                            <langNote  key="orthography" type="juses" subtype="etymReg">two juses: at the beginning
-                                    of the word more frequently <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ѧ</foreign>
-                                </langNote>
-                            <langNote  key="orthography" type="otherLetters">
-                                    <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ѣ</foreign> at the etymological place <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">з</foreign> and <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ы</foreign> too.</langNote>
+                            <orthography>
+                                <orthNote type="jers" subtype="etymReg">Two jers, with some
+                                    preference of front jer at the end of words, </orthNote>
+                                <orthNote type="juses" subtype="etymReg">two juses: at the beginning
+                                    of the word more frequently <foreign
+                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
+                                        >ѧ</foreign>
+                                </orthNote>
+                                <orthNote type="otherLetters">
+                                    <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
+                                        >ѣ</foreign> at the etymological place <foreign
+                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
+                                        >з</foreign> and <foreign
+                                        xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu"
+                                        >ы</foreign> too.</orthNote>
+                            </orthography>
                         </scribeLang>
                     </scribe>
                     <scribe n="2">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">235v–315v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote script="Cyrs" style="semiuncial">Elegant semiuncial of Tŭrnovo type.</scriptNote>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">235v-315v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
+                            type="semiuncial">
+                            <p>Elegant semiuncial of Tŭrnovo type.</p>
                         </scriptDesc>
                     </scribe>
                 </scribeDesc>
@@ -208,40 +186,43 @@
                     <note>8 texts</note>
                     <textLang>Tŭrnovo middle Bulgarian</textLang>
                     <msItemStruct xml:id="ACD1" type="translation" style="non-narrative">
-                        <locus n="1">1r–3v</locus>
+                        <locus n="1">1r-3v</locus>
                         <title xml:lang="bg">Увод към Тълковния псалтир (Хипотезиси на Евсевий Кесарийски)</title>
                         <author>Eusebios of Caesarea</author>
                         <filiation type="source">Hypothesis of Eusebios of Caesarea (Migne, PG, t.
-                            23, col. 68–72). Without last 9 chapters</filiation>
+                            23, col. 68-72). Without last 9 chapters</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">П<seg rend="sup">с</seg>лтир.
                                     красе<seg rend="sup">н</seg> починае<seg rend="sup">м</seg>
                                 гле҃мааго. Двдвъ҃. прро҃ка же. и црѣ҃. зде же оубо и Аѳанасиа
-                                    ар'хиеп<seg rend="sup">с</seg>кпа сказание п<seg rend="sup">с</seg>лмомъ. се же оубо п<seg rend="sup">с</seg>лмописецъ
+                                    ар'хиеп<seg rend="sup">с</seg>кпа сказание п<seg rend="sup"
+                                    >с</seg>лмомъ. се же оубо п<seg rend="sup">с</seg>лмописецъ
                                 начинаетъ прѣжде псал'момъ речен'наа глаголатии.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">а҃. оучение бго҃чъстню. и
                                 ѿметанїе противнымъ.</incipit>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">а҃. оучение бго҃чъстню. и
+                            <p xmlns="http://www.tei-c.org/ns/1.0">а҃. оучение бго҃чъстню. и
                                 ѿметанїе противнымъ.в ҃. прро҃чъство ѡ Хѣ҃. и призвание ѧзыкомъ. г҃.
                                 прро҃чьство ѡ бышѫщиихъ <seg rend="sup">сиц!</seg> блаз3ѣхъ Двд҃ви.
-                                д҃. прро҃чьство Двд҃во. ѡ них'же пострада <gap/></ab>
+                                д҃. прро҃чьство Двд҃во. ѡ них'же пострада <gap hand="NG"/></p>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">рма҃. гласъ
                                 борѧщомоусѧ.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation" style="non-narrative">
-                        <locus n="2">4r–152v</locus>
+                        <locus n="2">4-152v</locus>
                         <title xml:lang="bg">Псалтир (Пс. 1–76 вкл.) с тълкувания</title>
-                        <note>Psalter (Ps. 1–76 incl.) witn interpretations<damage>without text of
-                                Ps. 3:8 – Ps.9:8 and Ps.13:7 – Ps. 17:18 (because the 2 and 4 quires
+                        <note>Psalter (Ps. 1-76 incl.) witn interpretations<damage>without text of
+                                Ps. 3:8 - Ps.9:8 and Ps.13:7 - Ps. 17:18 (because the 2 and 4 quires
                                 are missing)</damage></note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Се же Двдъ҃ начинае<seg rend="sup">т</seg> п<seg rend="sup">с</seg>лмъ. прьвї. Аѳанасие
-                                же ар'хиеп<seg rend="sup">с</seg>кпъ въсѧ пса<seg rend="sup">л</seg>мї сказает'.</head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Се же Двдъ҃ начинае<seg
+                                    rend="sup">т</seg> п<seg rend="sup">с</seg>лмъ. прьвї. Аѳанасие
+                                же ар'хиеп<seg rend="sup">с</seg>кпъ въсѧ пса<seg rend="sup"
+                                >л</seg>мї сказает'.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Блаженъ мѫжь иже не иде на
                                 сьвѣтъ нечьстивыихъ</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">Аар'ронь бо сказаетьсѧ
@@ -249,13 +230,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation" style="non-narrative">
-                        <locus n="3">153r–155r</locus>
+                        <locus n="3">153r-155r</locus>
                         <title xml:lang="bg">Среда на Псалтира, 1. Тълкувание на Символа на вярата</title>
                         <note>It includes also in Nomocanons (Ilovichka kormchaja of 1262,
                             Novgorodska kormchaja of 1282, Rjazanska kormchaja of 1282, Voskresenska
                             of 1305 etc.) in psalters with interpretations, miscelanea, evangelions.
                                 <bibl xml:lang="la">
-                                <ref type="bibl" target="bib:Jagić1907">Jagić 1907: 848–850</ref>
+                                <ref type="bibl" target="bib:Jagić1907">Jagić 1907: 848-850</ref>
                             </bibl></note>
                         <filiation type="source">The Greek source is unknown</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -265,23 +246,23 @@
                                 изъѡбраженїꙗ вѣры. еже есть вѣроуѧ въ единого бг҃а.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Знаменание есть вѣроуѧщомоу
                                 се</incipit>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Знаменание есть вѣроуѧщомоу се.
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Знаменание есть вѣроуѧщомоу се.
                                 стое҃ изъображение. въсѣкь бо вѣпоуѧ правовѣр'но исповѣдаеть симь
                                 пооучениемь правѫѫ вѣрѫ истино. ꙗкоже и стии҃ шесть съборь
                                 оутвръдивьше. сиѧ намь прѣдашѫ. глеть҃ оубо правовѣр'но вѣроуѧи
                                 сице. Вѣроуѧ въ единого ба҃ оца҃ въседръжителѣ. не ꙗкоже мноз3и
                                 мънѧть глѧ҃. ꙗко двѣ естѣ начѧлѣ. едино благо. а дроугое лѫкаво.
                                 рек'ше зло. и ꙗко благое оубо обладаеть небс҃ными лѫкавое же
-                                землъными <gap/></ab>
+                                землъными <gap hand="NG"/></p>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и жизні бѫдѫщаго вѣка
                                 аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation" style="non-narrative">
-                        <locus n="4">155r–157v</locus>
+                        <locus n="4">155r-157v</locus>
                         <title xml:lang="bg">Среда на Псалтира, 2. Тълкувание на Господнята молитва</title>
                         <author>John Chrysostom</author>
-                        <note>Includes in MSS usually with interpretations on the Fides
+                        <note>Includes in MSS usualy with interpretations on the Fides
                             Orthodoxa</note>
                         <filiation type="source">The Greek original is unknown</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -293,18 +274,18 @@
                                 Златооустааго</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Оучит' ны како подобаеть
                                 мли҃тисѧ</incipit>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Оучит' ны како подобаеть
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Оучит' ны како подобаеть
                                 мли҃тисѧ. и абие оумь нашь въперѣеть. и ѿ землѧ въз'носить. и къ
                                 нб҃си прилѣплѣеть. повелѣваѫ намь гла҃ти. Ѡче҃ нашь иже еси на
-                                нб҃сехь <gap/></ab>
+                                нб҃сехь <gap hand="NG"/></p>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">избавитисѧ ѿ напасти и
                                 врѣда неприꙗзнинаю</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation" style="non-narrative">
-                        <locus n="5">158r–310r</locus>
+                        <locus n="5">158r-310r</locus>
                         <title xml:lang="bg">Псалтир (Пс. 77–150 вкл.) с тълкувания</title>
-                        <note>Psalter (Ps. 77–150) with interpretations.</note>
+                        <note>Psalter (Ps. 77-150) with interpretations.</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -318,7 +299,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation" style="non-narrative">
-                        <locus n="6">310r–310v</locus>
+                        <locus n="6">310r-310v</locus>
                         <title xml:lang="bg">Псалм 151 (без тълкувания)</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -332,45 +313,101 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="original" style="non-narrative">
-                        <locus n="7">311r–312v</locus>
+                        <locus n="7">311r-312v</locus>
                         <title xml:lang="bg">Послесловие и похвала за цар Иван Александър</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Прѣначѧл'ноомоу начѧлу. и
-                                без'начѧл'ноѡмоу бе҃ствоу <gap/></head>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Прѣначѧл'ноомоу начѧлу. и
+                                без'начѧл'ноѡмоу бе҃ствоу <gap hand="NG"/></head>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Прѣначѧл'ноомоу начѧлу. и
                                 без'начѧл'ноѡмоу бе҃ствоу почѧ сѧ и съвърши сѧ. сие малое дѣло.
-                                зовомое Пѣснивець. съ всѣкымь оуставомь. и съ ѿвѣты. в лѣ<seg rend="sup">т</seg> =ѕ҃. ѡ҃. ме҃. ен'дихто е҃. повелѣниемь
+                                зовомое Пѣснивець. съ всѣкымь оуставомь. и съ ѿвѣты. в лѣ<seg
+                                    rend="sup">т</seg> =ѕ҃. ѡ҃. ме҃. ен'дихто е҃. повелѣниемь
                                 прѣвысокааго црѣ҃ нашего. бг҃омь избран'нааго. и бг҃омь вѣн'чѣнааго
-                                    Іѡа<seg rend="sup">н</seg> Алеѯан<seg rend="sup">д</seg>ра <gap/></ab>
+                                    Іѡа<seg rend="sup">н</seg> Алеѯан<seg rend="sup">д</seg>ра <gap
+                                    hand="NG"/></p>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и да въселить ихь въ
                                 чрътогь села своего. въ вѣкы бесконеч'ныѧ въсегда и ннѣ҃ и прїсно и
                                 въ вѣкы вѣкомь амїнь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation" style="non-narrative">
-                        <locus n="8">313r–314v</locus>
+                        <locus n="8">313r-314v</locus>
                         <title xml:lang="bg">Песни библейски (десет)</title>
                         <note>
-                            <damage>without beginning and without end (two folia here are
+                            <damage>without incipit and without end (two folia here are
                                 missing).</damage></note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">
+                            <p xmlns="http://www.tei-c.org/ns/1.0">
                                 <gap/>наведе бо на нѧ наказание. и възѧть ѿ них' въсѣкѫ мыслъ
-                                мѫжъскѫ <gap/> Приѧть бо моѧ дшѫ да не
+                                мѫжъскѫ <gap hand="NG"/> Приѧть бо моѧ дшѫ да не
                                     погыблеть<unclear>...</unclear>бл<seg rend="sup">с</seg>вѧть тѧ
-                                г<gap/></ab>
+                                г<gap/></p>
                         </sampleText>
                     </msItemStruct>
-                    
+                    <msItemStruct xml:id="ACD9">
+                        <locus>varied</locus>
+                        <title xml:lang="bg">Колофон</title>
+                        <msItemStruct xml:id="ACD9.1">
+                            <locus n="1">f. IIv</locus>
+                            <title xml:lang="bg">Колофон</title>
+                            <colophon>
+                                <p>Пандази Лѡ<seg rend="sup">г</seg>феть.</p>
+                            </colophon>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD9.2">
+                            <locus n="2">f. 158</locus>
+                            <title xml:lang="bg">Колофон</title>
+                            <colophon>
+                                <p>
+                                    <name xml:lang="cu" type="king" full="yes"> Іѡаннь Алексан<seg
+                                            rend="sup">д</seg>р</name> црь҃ бл҃гар<seg rend="sup"
+                                        >ѡ</seg>мь. + Сїрѣчь сие сътворено бы<seg rend="sup">с</seg>
+                                    въ по<seg rend="sup">м</seg>щь и оутвръж<seg rend="sup"
+                                    >д</seg>енїе <name xml:lang="cu" type="king" full="yes">Иѡ<seg
+                                            rend="sup">а</seg>ну Алеѯан<seg rend="sup"
+                                        >д</seg>ру</name> црю҃ бл҃гарѡ<seg rend="sup">м</seg> паче
+                                    же и гръкомь. и бѫди въсегда амнь҃.</p>
+                            </colophon>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD9.3">
+                            <locus n="3">f. 107v</locus>
+                            <title xml:lang="bg">Колофон</title>
+                            <colophon>
+                                <p>бъ҃ да простї <name xml:lang="cu" type="scribe" full="yes"
+                                        >Сїмона</name></p>
+                            </colophon>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD9.4">
+                            <locus n="4">f. 310</locus>
+                            <title xml:lang="bg">Колофон</title>
+                            <colophon>
+                                <p>Великыи ѡ црю҃<name xml:lang="cu" type="king" full="yes"> Іѡане
+                                            Алеѯан<seg rend="sup">д</seg>ре.</name> не забѫди
+                                    писавшааго к'нигѫ сиѧ. въ т..ѫ помощь и похвалѫ и застѫпление
+                                    твоему цр<seg rend="sup">с</seg>твїю въ <gap/></p>
+                            </colophon>
+                        </msItemStruct>
+                        <msItemStruct xml:id="ACD9.5">
+                            <locus n="5">f. 312v</locus>
+                            <title xml:lang="bg">Колофон</title>
+                            <colophon>
+                                <p>Въ лѣ<seg rend="sup">т</seg> ѕцѯе҃. кроу<seg rend="sup">г</seg>
+                                    слн҃цу. ка҃. лу<seg rend="sup">н</seg>. аї҃. прѣстави се
+                                        бл҃гоч<seg rend="sup">с</seg>тивы и хо҃любивы господинь
+                                        срьбле<seg rend="sup">м</seg> деспотъ кѵхръ <name
+                                        xml:lang="cu" type="person" role="writer" full="yes"
+                                        >Геѡргїе</name> по ги҃ бѕѣ҃ его вьседръжители. емуже слава
+                                    вь вѣкы аминъ.</p>
+                            </colophon>
+                        </msItemStruct>
+                    </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="internal" resp="#NG">
+                    <origin evidence="de visu" resp="#NG">
                         <origDate notBefore="1337" notAfter="1337">1337</origDate>
                     </origin>
-                    <provenance>Discovered in the village Katunsko konare near Asenovgrad by Todor Laparov  </provenance>
-                    <acquisition>Became part of the collection of the Archive of Bulgarian Academy of Sciences from the</acquisition>
                 </history>
             </msDesc>
         </body>

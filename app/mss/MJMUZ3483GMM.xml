@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-MJMUZ3483GMM">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-MJMUZ3483GMM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -22,10 +20,13 @@
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -44,7 +45,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list>
+                    <list type="simple">
                         <item>Hagiography</item>
                         <item>Menologion</item>
                     </list>
@@ -53,14 +54,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -85,6 +86,7 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
+                                <material>Paper</material>
                                 <watermark>unclear</watermark>
                             </support>
                             <extent>
@@ -106,7 +108,7 @@
                                     each quire</signatures>
                             </collation>
                             <condition>The manuscript has been restored probably in the 17th c. The
-                                folia have been cropped during the restoration. Three folia – 1, 2
+                                folia have been cropped during the restoration. Three folia - 1, 2
                                 and 196, have been attached to the front and the back covers. Some
                                 folia are detatched from the book and misplaced.</condition>
                         </supportDesc>
@@ -122,19 +124,24 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <summary>Leather on boards, <date>17th c.</date></summary>
+                            <p>Leather on boards, 17th c.</p>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
-                        <list >
+                        <list type="simple">
                             <item>
                                 <locus>f. 196r</locus>
                                 <date>1689</date>
-                                <note>By the hand of <persName>Ruvim II Boljević</persName>, archbishop of <placeName>Monte Negro</placeName>
+                                <note>By the hand of Ruvim II Boljević, archbishop of Monte Negro
                                     amd whole Senderia</note>
-                                <quote xml:lang="cu">Ва їмѣ ѡца и <seg rend="sup">с</seg>на и <seg rend="sup">с</seg>аго д҃ха <foreign xml:lang="el">αμην</foreign> и помощнїца да ни бꙋде прѣчїста го<seg rend="sup">с</seg>пожда б҃ца. желающомꙋ чатїти чатити д<seg rend="sup">и</seg>вна. словеса ее. б҃ъ да помилꙋетъ са нею.
+                                <quote xml:lang="cu">Ва їмѣ ѡца и <seg rend="sup">с</seg>на и <seg
+                                        rend="sup">с</seg>аго д҃ха <foreign xml:lang="el"
+                                        >αμην</foreign> и помощнїца да ни бꙋде прѣчїста го<seg
+                                        rend="sup">с</seg>пожда б҃ца. желающомꙋ чатїти чатити д<seg
+                                        rend="sup">и</seg>вна. словеса ее. б҃ъ да помилꙋетъ са нею.
                                     писав'шаго. и прочїтающаго ю и мѣне, смѣренаго и недостоїнаго.
-                                    Р<persName>ꙋвима</persName>. епї<seg rend="sup">с</seg>кꙋпа. да помїлꙋетъ. ва да<seg rend="sup">н</seg>. сꙋдни. и<seg rend="sup">з</seg>бавїт ни
+                                    Рꙋвима. епї<seg rend="sup">с</seg>кꙋпа. да помїлꙋетъ. ва да<seg
+                                        rend="sup">н</seg>. сꙋдни. и<seg rend="sup">з</seg>бавїт ни
                                     вѣчнїе мꙋки Сїе чрта<seg rend="sup">х</seg> в ҂з҃р҃ч҃з҃</quote>
                             </item>
                             <item>
@@ -142,17 +149,19 @@
                                 <date>1605</date>
                                 <quote xml:lang="cu">ле<seg rend="sup">т</seg> з҃р҃і҃г҃
                                         веѣтꙋнїса<seg rend="sup">с</seg> вл<seg rend="sup">д</seg>ка
-                                        кѵ̈<seg rend="sup">р</seg> <persName>В<seg rend="sup">и</seg>са<seg rend="sup">р</seg>ѡ<seg rend="sup">н</seg></persName> ѡ <placeName>Цѣтинꙗ</placeName></quote>
+                                        кѵ̈<seg rend="sup">р</seg> В<seg rend="sup">и</seg>са<seg
+                                        rend="sup">р</seg>ѡ<seg rend="sup">н</seg> ѡ Цѣтинꙗ</quote>
                             </item>
                             <item>
                                 <locus>f. 9r</locus>
-                                <quote xml:lang="cu">Б҃е помоѕи мнѣ грѣшному зане велми есмь грѣ<seg rend="sup">ш</seg>
+                                <quote xml:lang="cu">Б҃е помоѕи мнѣ грѣшному зане велми есмь грѣ<seg
+                                        rend="sup">ш</seg>
                                 </quote>
                             </item>
                             <item>
                                 <locus>f. 1v</locus>
-                                <quote xml:lang="cu">Сиꙗ книга мне гд҃на <persName>Ѳеодосие ермонаха</persName> и ѡ҃ца из
-                                    <placeName>Маинахь</placeName> з <placeName>Гора манастира </placeName>митрополие <placeName>Цетиске Чернина гори</placeName>
+                                <quote xml:lang="cu">Сиꙗ книга мне гд҃на Ѳеодосие ермонаха и ѡ҃ца из
+                                    Маинахь з Гора манастира митрополие Цетиске Чернина гори
                                     заисто</quote>
                             </item>
                             <item>
@@ -162,28 +171,37 @@
                             </item>
                             <item>
                                 <locus>f. 196r</locus>
-                                <quote xml:lang="cu">бївшꙋ ни ва то врѣме. бега<seg rend="sup">л</seg>це<seg rend="sup">м</seg> ѿ бе<seg rend="sup">з</seg>божны<seg rend="sup">х</seg>че<seg rend="sup">д</seg> ѡ перꙋ <unclear>...</unclear> ꙗка голꙋбъ</quote>
+                                <quote xml:lang="cu">бївшꙋ ни ва то врѣме. бега<seg rend="sup"
+                                        >л</seg>це<seg rend="sup">м</seg> ѿ бе<seg rend="sup"
+                                        >з</seg>божны<seg rend="sup">х</seg>че<seg rend="sup"
+                                        >д</seg> ѡ перꙋ <unclear>...</unclear> ꙗка голꙋбъ</quote>
                             </item>
                         </list>
                     </additions>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1–196</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Arsenje</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote script="Cyrs" style="semiuncial"/>
-                        </scriptDesc>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1-196</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Arsenje</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
+                            type="semiuncial"/>
                         <scribeLang>
-                            <langNote key="orthography">Raška orthography. One-jer,
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Raška orthography. One-jer,
                                     rare usage of a back jer. Traces of middle Bulgarian confusion
-                                    of nazals. Confusion of <foreign  xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ы</foreign> and
-                                <foreign xml:lang="cu"  xmlns="http://www.tei-c.org/ns/1.0">и</foreign>, <foreign xml:lang="cu"  xmlns="http://www.tei-c.org/ns/1.0">ѣ</foreign> and <foreign xml:lang="cu"  xmlns="http://www.tei-c.org/ns/1.0">е</foreign>. Double
-                                vowels: <foreign xml:lang="cu"  xmlns="http://www.tei-c.org/ns/1.0">и</foreign> into <foreign xml:lang="cu" xmlns="http://www.tei-c.org/ns/1.0">їи</foreign>, <foreign xml:lang="cu"  xmlns="http://www.tei-c.org/ns/1.0">ы</foreign> into <foreign xml:lang="cu"   xmlns="http://www.tei-c.org/ns/1.0">ыи</foreign>,
-                                <foreign xml:lang="cu" xmlns="http://www.tei-c.org/ns/1.0">іе</foreign> for the jotated <foreign xml:lang="cu"  xmlns="http://www.tei-c.org/ns/1.0">е</foreign>, inconsistent use of <foreign xml:lang="cu"  xmlns="http://www.tei-c.org/ns/1.0">ѕ</foreign>
-                            </langNote>
+                                    of nazals. Confusion of <foreign xml:lang="cu">ы</foreign> and
+                                        <foreign xml:lang="cu">и</foreign>, <foreign xml:lang="cu"
+                                        >ѣ</foreign> and <foreign xml:lang="cu">е</foreign>. Doubble
+                                    vowels: <foreign xml:lang="cu">и</foreign> into <foreign
+                                        xml:lang="cu">їи</foreign>, <foreign xml:lang="cu"
+                                        >ы</foreign> into <foreign xml:lang="cu">ыи</foreign>,
+                                        <foreign xml:lang="cu">іе</foreign> for the jotated <foreign
+                                        xml:lang="cu">е</foreign>, inconsistent use of <foreign
+                                        xml:lang="cu">ѕ</foreign></p>
+                            </orthography>
                         </scribeLang>
-                            <bibl xmlns="http://www.tei-c.org/ns/1.0"><ref target="bib:Иванова2002">Иванова 2002</ref></bibl>
+                        <note xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref type="bibl" target="bib:Иванова2002">Иванова 2002</ref></note>
                     </scribe>
                 </scribeDesc>
                 <msContents type="translation">
@@ -191,21 +209,26 @@
                         Theotokos</summary>
                     <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                         <head xmlns="http://www.tei-c.org/ns/1.0">Начинае<seg rend="sup">м</seg> сь
-                            б҃гмь чьтенїа всѣмь праз<seg rend="sup">д</seg>никѡ<seg rend="sup">м</seg> прѣч<seg rend="sup">с</seg>тые вл<seg rend="sup">д</seg>чце
+                            б҃гмь чьтенїа всѣмь праз<seg rend="sup">д</seg>никѡ<seg rend="sup"
+                                >м</seg> прѣч<seg rend="sup">с</seg>тые вл<seg rend="sup">д</seg>чце
                             наше б҃це и пр<seg rend="sup">с</seg>нод҃вы марїе.</head>
                     </sampleText>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">3r–19v</locus>
+                        <locus n="1">3r-19v</locus>
                         <title xml:lang="bg">Протоевангелие на Яков</title>
                         <date type="churchCal" when="--09-08">8 September</date>
-                        <filiation type="source">Greek parallel: BHG 1046 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/16196">Pinakes</ref>)</filiation>
-                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 8.09/No. 3a</ref></filiation>
+                        <note>Greek sourvce BHG 1046, see <ref type="bibl" target="bib:Иванова2008"
+                                >BHBS: 8.09, No. 3a</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
-                                септемвїа вь и҃ д҃нь ꙗкѡва ап<seg rend="sup">с</seg>тла ѡ рож<seg rend="sup">д</seg>ьствѣ с҃тые б҃це.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ лѣто нап<seg rend="sup">с</seg>инїа ѡбою на де<seg rend="sup">с</seg>те колѣнѹ
+                                септемвїа вь и҃ д҃нь ꙗкѡва ап<seg rend="sup">с</seg>тла ѡ рож<seg
+                                    rend="sup">д</seg>ьствѣ с҃тые б҃це.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ лѣто нап<seg rend="sup"
+                                    >с</seg>инїа ѡбою на де<seg rend="sup">с</seg>те колѣнѹ
                                 Ис҃лвѹ</incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">Аже Іакѡвь напи<seg rend="sup">с</seg>ви сказанїе се мльвѣ бывшїи ег<seg rend="sup">д</seg>а ѹмрѣть Ірѡдь ськрїивах се на мѣста пѹстѣ дондеже
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">Аже Іакѡвь напи<seg
+                                    rend="sup">с</seg>ви сказанїе се мльвѣ бывшїи ег<seg rend="sup"
+                                    >д</seg>а ѹмрѣть Ірѡдь ськрїивах се на мѣста пѹстѣ дондеже
                                 прѣстанеть мльва вь Іе<seg rend="sup">с</seg>мѣ. славлю давшаго ми
                                     прѣмѹдро<seg rend="sup">с</seg> напи<seg rend="sup">с</seg>ти
                                 таинаа сїи. ꙗко томѹ по<seg rend="sup">д</seg>баѥть слава вь вѣкы
@@ -213,69 +236,85 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">19r–20v</locus>
+                        <locus n="2">19r-20v</locus>
                         <title xml:lang="bg">Слово за Рождество Богородично</title>
                         <author>John Chrysostom</author>
                         <date type="churchCal" when="--09-08">8 September</date>
-                        <filiation type="source">Greek parallel: BHG 1149p, CPG 5057 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/3260">Pinakes</ref>)</filiation>
-                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 8.09/8</ref></filiation>
+                        <note>Greek sourvce BHG 1149p, CPG 5057, see <ref type="bibl"
+                                target="bib:Иванова2008">BHBS: 8.09, No. 8</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Іѡана архїепи<seg rend="sup">с</seg>кпа Златѡѹстаго, слово похвално на рожь<seg rend="sup">д</seg>ство прѣч<seg rend="sup">с</seg>тыѥ вл<seg rend="sup">д</seg>чце наше б҃це и пр<seg rend="sup">с</seg>нод҃вы
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Іѡана архїепи<seg rend="sup"
+                                    >с</seg>кпа Златѡѹстаго, слово похвално на рожь<seg rend="sup"
+                                    >д</seg>ство прѣч<seg rend="sup">с</seg>тыѥ вл<seg rend="sup"
+                                    >д</seg>чце наше б҃це и пр<seg rend="sup">с</seg>нод҃вы
                                 Марїе.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Свѣтльль д҃нь дн<seg rend="sup">с</seg>ь и чюдь прѣ<seg rend="sup">д</seg> ѹчима
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Свѣтльль д҃нь дн<seg
+                                    rend="sup">с</seg>ь и чюдь прѣ<seg rend="sup">д</seg> ѹчима
                                 нашима.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">Сим же сїице сѹшемь. роди
                                 се на<seg rend="sup">м</seg> с҃тилище ѡснованноѥ вь с҃таа с҃тыхь
                                 еюже да спо<seg rend="sup">д</seg>бленїи бѹде<seg rend="sup">м</seg>
                                     нб<seg rend="sup">с</seg>номꙋ цр<seg rend="sup">с</seg>твїю.
-                                    блг<seg rend="sup">д</seg>тїю и чл҃колюбиѥ<seg rend="sup">м</seg> г҃а нашего Іс҃у Ха<seg rend="sup">с</seg>. емѹ<seg rend="sup">ж</seg> слава чь<seg rend="sup">с</seg> и покланꙗнїе
-                                сь ѡ҃цемь и прѣст҃мь д҃хомь н҃нꙗ и пр<seg rend="sup">с</seg>но <gap/> аминъ</explicit>
+                                    блг<seg rend="sup">д</seg>тїю и чл҃колюбиѥ<seg rend="sup"
+                                    >м</seg> г҃а нашего Іс҃у Ха<seg rend="sup">с</seg>. емѹ<seg
+                                    rend="sup">ж</seg> слава чь<seg rend="sup">с</seg> и покланꙗнїе
+                                сь ѡ҃цемь и прѣст҃мь д҃хомь н҃нꙗ и пр<seg rend="sup">с</seg>но <gap
+                                    hand="MJ"/> аминъ</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">20v–36r</locus>
+                        <locus n="3">20v-36r</locus>
                         <title xml:lang="bg">Слово за Рождество Богородично от Андрей Критски</title>
                         <date type="churchCal" when="--09-08">8 September</date>
-                        <filiation type="source">Greek parallel: BHG 1092, CPG 8173 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/8238">Pinakes</ref>)</filiation>
-                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 8.09/1б</ref></filiation>
+                        <note>Greek sourvce BHG 1092, CPG 8173, see <ref type="bibl"
+                                target="bib:Иванова2008">BHBS: 8.09, No. 1б</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Андреа архїепїск<seg rend="sup">о</seg>па Критскаго сл<seg rend="sup">в</seg>о
-                                похвално на рож<seg rend="sup">д</seg>ьство прѣч<seg rend="sup">с</seg>тыѥ б҃це и пр<seg rend="sup">с</seg>нод҃вы Марїе. бл<seg rend="sup">с</seg>ви ѡ<seg rend="sup">ч</seg>е.</head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Андреа архїепїск<seg
+                                    rend="sup">о</seg>па Критскаго сл<seg rend="sup">в</seg>о
+                                похвално на рож<seg rend="sup">д</seg>ьство прѣч<seg rend="sup"
+                                    >с</seg>тыѥ б҃це и пр<seg rend="sup">с</seg>нод҃вы Марїе. бл<seg
+                                    rend="sup">с</seg>ви ѡ<seg rend="sup">ч</seg>е.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще мѣрима бываѥть землꙗ
                                 педїю и нищими ѡписано бываѥ море.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">Роди бо се юнотка ѡ нѥеже
                                 спс҃енїе и всемирноѥ избавлѥнїе. Хс҃ Іс҃ б҃ь слово. Сеи и сїи и
-                                греды и прѣбываѥи вь вѣкы. о нѥм'же и наше, ꙗкоже ѿ великыѥ пꙋчи<seg rend="sup">м</seg> покланꙗѥмомꙋ единѹ трими ст҃бами пр<seg rend="sup">с</seg>но вьзьсилающе славѹ и чьсь и покланꙗнїе н҃нꙗ
-                                    <gap/> аминь.</explicit>
+                                греды и прѣбываѥи вь вѣкы. о нѥм'же и наше, ꙗкоже ѿ великыѥ пꙋчи<seg
+                                    rend="sup">м</seg> покланꙗѥмомꙋ единѹ трими ст҃бами пр<seg
+                                    rend="sup">с</seg>но вьзьсилающе славѹ и чьсь и покланꙗнїе н҃нꙗ
+                                    <gap hand="MJ"/> аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">36–51v</locus>
+                        <locus n="4">36-51v</locus>
                         <title xml:lang="bg">Слово за Въведение Богородично от Герман Константинополски</title>
                         <date type="churchCal" when="--11-21">21 November</date>
-                        <filiation type="source">Greek parallel: BHG 1104, CPG 8008 (<ref target="https://pinakes.irht.cnrs.fr/notices//oeuvre/id/8375/">Pinakes</ref>)</filiation>
-                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 21.11/9a</ref></filiation>
+                        <note>Greek sourvce BHG 1104, CPG 8008, see <ref type="bibl"
+                                target="bib:Иванова2008">BHBS: 21.11, No. 9a</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Иже вь ст҃хь ѡ<seg rend="sup">ц</seg>а наш<seg rend="sup">е</seg>г<seg rend="sup">о</seg>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Иже вь ст҃хь ѡ<seg rend="sup"
+                                    >ц</seg>а наш<seg rend="sup">е</seg>г<seg rend="sup">о</seg>
                                 Германа архїепїс<seg rend="sup">с</seg>кпа Констандина града слово ѡ
                                 вьведены ст҃аа ст҃ымь. бл<seg rend="sup">с</seg>ви ѡ҃ч</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Веселїа ѹбо вьсебж<seg rend="sup">с</seg>твьноѥ трьжьство вьсег<seg rend="sup">д</seg>а
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Веселїа ѹбо вьсебж<seg
+                                    rend="sup">с</seg>твьноѥ трьжьство вьсег<seg rend="sup">д</seg>а
                                 твореще ликосьставныкы насищаѥть д҃ховно.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">вьсемꙊ мирꙊ застꙊпленїе
-                                рѹкꙊ свою подаж<seg rend="sup">д</seg>ь ꙗко вь ве<seg rend="sup">с</seg>лїи и вь радости твоꙗ трьжьства сь н҃нꙗ празнꙋющїими
+                                рѹкꙊ свою подаж<seg rend="sup">д</seg>ь ꙗко вь ве<seg rend="sup"
+                                    >с</seg>лїи и вь радости твоꙗ трьжьства сь н҃нꙗ празнꙋющїими
                                 краснымь сьврьшениѥмь прѣидѣмь. ѡ Хѣ҃ вьсѣ<seg rend="sup">х</seg>
-                                ц҃рѣ истиннаго б҃а <gap/> аминь.</explicit>
+                                ц҃рѣ истиннаго б҃а <gap hand="MJ"/> аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">52r–65v</locus>
+                        <locus n="5">52r-65v</locus>
                         <title xml:lang="bg">Слово за Въведение Богородично от Георги Никомидийски</title>
                         <date type="churchCal" when="--11-21">21 November</date>
-                        <filiation type="source">Greek parallel: BHG 1108 (<ref type="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/20427">Pinakes</ref>)</filiation>
-                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 21.11/4a</ref></filiation>
+                        <note>Greek source BHG 1108, see <ref type="bibl" target="bib:Иванова2008"
+                                >BHBS: 21.11, No. 4a</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Геѡ<seg rend="sup">р</seg>гїа
-                                епїскопа Н<seg rend="sup">и</seg>комидїискаго слѡ<seg rend="sup">в</seg> ст҃ѣи б҃ци егда приведен'наа бы<seg rend="sup">с</seg>
+                                епїскопа Н<seg rend="sup">и</seg>комидїискаго слѡ<seg rend="sup"
+                                    >в</seg> ст҃ѣи б҃ци егда приведен'наа бы<seg rend="sup">с</seg>
                                 вь цр҃квь ѿ своихь родителїи. бл<seg rend="sup">с</seg>ви
                                 ѡ҃че.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Добра намь вещемь начела
@@ -283,63 +322,64 @@
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и ꙗко бл҃голюбива сꙋщїи
                                 грѣхомь ѹбо избавлѥнїе вьздающи и цр<seg rend="sup">с</seg>вїю
                                     нб<seg rend="sup">с</seg>номꙋ сп<seg rend="sup">д</seg>облꙗющи
-                                бл҃гоѹвѣтлива же ѡ҃ца и с҃на и с҃тго д҃ха имꙋщи едино бж<seg rend="sup">с</seg>тво и цр<seg rend="sup">с</seg>тво непобѣдимꙋ
-                                силꙋ и власть <gap/> аминь.</explicit>
+                                бл҃гоѹвѣтлива же ѡ҃ца и с҃на и с҃тго д҃ха имꙋщи едино бж<seg
+                                    rend="sup">с</seg>тво и цр<seg rend="sup">с</seg>тво непобѣдимꙋ
+                                силꙋ и власть <gap hand="MJ"/> аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locusGrp n="6">
-                            <locus>66</locus>
-                            <locus>66r–70v</locus> 
-                            <locus>194</locus>
-                            <locus>193</locus>
-                            <locus>73r–74r</locus></locusGrp>
+                        <locus n="6">66, 66r-70v, 194, 193, 73r-74r</locus>
                         <title xml:lang="bg">Слово за Въведение Богородично от Герман Константинополски, 1</title>
                         <date type="churchCal" when="--11-21">21 November</date>
-                        <filiation type="source">Greek parallel: BHG 1104, CPG 8008 (<ref target="https://pinakes.irht.cnrs.fr/notices//oeuvre/id/8375/">Pinakes</ref>)</filiation>
-                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 21.11/9a</ref></filiation>
+                        <note>Greek source BHG 1104, CPG 8008 see <ref type="bibl"
+                                target="bib:Иванова2008">BHBS: 21.11, No. 9a</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Иже вь ст҃ыи<seg rend="sup">х</seg> ѡ<seg rend="sup">ц</seg>а нашего Геѡ<seg rend="sup">р</seg>мана слово ѡ ст҃ѣи б҃ци ег<seg rend="sup">д</seg>а
-                                вънесена бы<seg rend="sup">с</seg> вь црк҃вь тремь лѣтѡ<seg rend="sup">м</seg> сꙋщи своима родителѥма. бл<seg rend="sup">с</seg>ви ѡ<seg rend="sup">ч</seg>.</head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Иже вь ст҃ыи<seg rend="sup"
+                                    >х</seg> ѡ<seg rend="sup">ц</seg>а нашего Геѡ<seg rend="sup"
+                                    >р</seg>мана слово ѡ ст҃ѣи б҃ци ег<seg rend="sup">д</seg>а
+                                вънесена бы<seg rend="sup">с</seg> вь црк҃вь тремь лѣтѡ<seg
+                                    rend="sup">м</seg> сꙋщи своима родителѥма. бл<seg rend="sup"
+                                    >с</seg>ви ѡ<seg rend="sup">ч</seg>.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Се пакы дрѹгоѥ трьжьство и
                                 свѣтло праздьн'ство г҃нѥ матере.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и за то дрьзаю да не
-                                лишень бѹдꙋ прѣч<seg rend="sup">с</seg>таа г<seg rend="sup">д</seg>же моеѥ надеж<seg rend="sup">д</seg>е. нь да ѹлꙋчѹ ю
+                                лишень бѹдꙋ прѣч<seg rend="sup">с</seg>таа г<seg rend="sup"
+                                >д</seg>же моеѥ надеж<seg rend="sup">д</seg>е. нь да ѹлꙋчѹ ю
                                 б҃гоневѣстнаа. сꙋщїаїе вьсѣмьѣ. ражьшїа више словесе г҃а нашего Іу҃
-                                    Х<seg rend="sup">с</seg>а. рѣснотива б҃а и вл<seg rend="sup">д</seg>кꙋ. емѹже по<seg rend="sup">д</seg>баѥть вьсака слава.
-                                чъсть и покланꙗнїе <gap/> вь вѣкы вѣкѡ<seg rend="sup">м</seg>.</explicit>
+                                    Х<seg rend="sup">с</seg>а. рѣснотива б҃а и вл<seg rend="sup"
+                                    >д</seg>кꙋ. емѹже по<seg rend="sup">д</seg>баѥть вьсака слава.
+                                чъсть и покланꙗнїе <gap hand="MJ"/> вь вѣкы вѣкѡ<seg rend="sup"
+                                    >м</seg>.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">74r–78v</locus>
+                        <locus n="7">74r-78v</locus>
                         <title xml:lang="bg">Слово похвално за Богородица на следпразненство на Рождество Христово</title>
                         <date type="churchCal" when="--12-26">26 December</date>
-                        <filiation type="source">Greek parallel: BHG 1908h, CPG 8008 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/16579">Pinakes</ref>)</filiation>
-                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 26.12/1</ref></filiation>
+                        <note>Greek source BHG 1908h, CPG 8008 see <ref type="bibl"
+                                target="bib:Иванова2008">BHBS: 26.12, No. 1</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Ст҃го Іѡа҃на Злат<seg rend="sup">ѡ</seg>ѹстаго похвала с҃тѣи б҃ци на ѹ<seg rend="sup">т</seg>рїа по рѡж<seg rend="sup">д</seg>ьствѣ Хв҃ѣ. рекши на
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ст҃го Іѡа҃на Злат<seg
+                                    rend="sup">ѡ</seg>ѹстаго похвала с҃тѣи б҃ци на ѹ<seg rend="sup"
+                                    >т</seg>рїа по рѡж<seg rend="sup">д</seg>ьствѣ Хв҃ѣ. рекши на
                                 целованїе.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въсїа намь дн<seg rend="sup">с</seg>ь праведное слн҃цел</incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">дондеже пришь<seg rend="sup">д</seg>ьше ста врьхѹ идеже бѣ ѡтроче. емꙋже слава
-                                    <gap/> аминь</explicit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въсїа намь дн<seg
+                                    rend="sup">с</seg>ь праведное слн҃цел</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">дондеже пришь<seg
+                                    rend="sup">д</seg>ьше ста врьхѹ идеже бѣ ѡтроче. емꙋже слава
+                                    <gap hand="MJ"/> аминь</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locusGrp n="8" cert="low">
-                            <locus>78v–84r</locus>
-                            <locus>86</locus>
-                            <locus>85</locus>
-                            <locus>87</locus>
-                            <locus>88r–90r</locus>
-                            <locus>96</locus> 
-                            <locus>92r–96v</locus>
-                        </locusGrp>
+                        <locus n="8">78v-84r, 86, 85, 87,88r-90r, 96, 92r-96v?</locus>
                         <title xml:lang="bg">Чудо на Богородица с Теофил</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">П<seg rend="sup">о</seg>каанїе
                                 и вьз<seg rend="sup">д</seg>виженїе къ г҃ѹ бывшеѥ ѿ нѣкотораго
-                                строителꙗ, сїирѣчь иконома именемь Ѳеѡфила. ходатаиствїемь прч<seg rend="sup">с</seg>тые вл<seg rend="sup">д</seg>чце нашаше б҃це и
-                                    пр<seg rend="sup">с</seg>нод҃вы марїе. бл<seg rend="sup">с</seg>ви ѡ<seg rend="sup">ч</seg>.</head>
+                                строителꙗ, сїирѣчь иконома именемь Ѳеѡфила. ходатаиствїемь прч<seg
+                                    rend="sup">с</seg>тые вл<seg rend="sup">д</seg>чце нашаше б҃це и
+                                    пр<seg rend="sup">с</seg>нод҃вы марїе. бл<seg rend="sup"
+                                >с</seg>ви ѡ<seg rend="sup">ч</seg>.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Бы<seg rend="sup">с</seg>
                                 по врѣмени ѡномь прѣже даже не быти нахож<seg rend="sup">д</seg>енїе
                                 безбожнїимь и скврьннымь</incipit>
@@ -348,53 +388,58 @@
                                 иконома. причьтник' же великые и с҃тыѥ цр҃кве. и ѡ вьсемь
                                     послѹжи<seg rend="sup">д</seg> моѥмѹ г҃ѹ. и вьсе сь испытаниѥмь
                                     напи<seg rend="sup">с</seg>хь вѣрнымь дрꙋгомь м҃лю се ѹбо вьсѣмь
-                                чьтꙋщїимъ, м҃лите се ѡ мнѣ кь г҃ѹ. да вькꙋпленно спо<seg rend="sup">д</seg>бим се нб<seg rend="sup">с</seg>номꙋ цр<seg rend="sup">с</seg>твїю. ѡ Х<seg rend="sup">с</seg>ѣ Іс҃ѣ г҃и нашемь. емꙋже
-                                слава <gap/> аминь</explicit>
+                                чьтꙋщїимъ, м҃лите се ѡ мнѣ кь г҃ѹ. да вькꙋпленно спо<seg rend="sup"
+                                    >д</seg>бим се нб<seg rend="sup">с</seg>номꙋ цр<seg rend="sup"
+                                    >с</seg>твїю. ѡ Х<seg rend="sup">с</seg>ѣ Іс҃ѣ г҃и нашемь. емꙋже
+                                слава <gap hand="MJ"/> аминь</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locusGrp n="9" cert="low">
-                            <locus>96v</locus>
-                            <locus>91</locus>
-                            <locus>97–104r</locus>
-                        </locusGrp>
+                        <locus n="9">96v, 91, 97-104r?</locus>
                         <title xml:lang="bg">Прение между християнин и евреин за имената на Христос и Богородица</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Ска<seg rend="sup">з</seg>нїе
-                                жидовина сь хрїстїаниномь ѡ имени г҃а нашего І<seg rend="sup">с</seg>у Х҃а и прѣст҃ые вл<seg rend="sup">д</seg>це наше Б҃це и
+                                жидовина сь хрїстїаниномь ѡ имени г҃а нашего І<seg rend="sup"
+                                    >с</seg>у Х҃а и прѣст҃ые вл<seg rend="sup">д</seg>це наше Б҃це и
                                     пр<seg rend="sup">с</seg>нод҃вы Марїе.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ лѣта цр<seg rend="sup">с</seg>твїа еже вь чьстнѣи памети бы<seg rend="sup">с</seg>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ лѣта цр<seg rend="sup"
+                                    >с</seg>твїа еже вь чьстнѣи памети бы<seg rend="sup">с</seg>
                                 вѣрнымь ц҃ремь Иѹстинианомь.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">нь вси истинно ꙗкы своѥмꙋ
                                 вьзлюблѥнномꙋ дрꙋгѹ ѹтаѥно жидови ѹповаѥ и сказѹѥ ѡ Хѣ҃ Іс҃ѣ г҃и
-                                    наше<seg rend="sup">м</seg>. емѹже слава <gap/>
+                                    наше<seg rend="sup">м</seg>. емѹже слава <gap hand="MJ"/>
                                 аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="10">104r–111r</locus>
+                        <locus n="10">104r-111r</locus>
                         <title xml:lang="bg">Слово за зачатието на св. Анна</title>
                         <date type="churchCal" when="--12-09">9 December</date>
-                        <note>Edition: <ref type="bibl" target="bib:Мирчева2006">Мирчева 2006: 130–136</ref></note>
-                        <filiation type="source">Greek parallel: Variant of <emph>Protoevangelium James</emph>, with no Greek parallel
-                            found</filiation>
-                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHGS: 9.12/2</ref></filiation>
+                        <note>Variant of <emph>Protoevangelium James</emph>, with no Greek parallel
+                            found, see <ref type="bibl" target="bib:Иванова2008">BHGS: 9.12, No. 2,
+                                p. 351-352</ref>
+                            <ref>Мирчева 2006: 130-136</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
-                                    деке<seg rend="sup">м</seg>врїа вь ѳ҃ д҃нь сло<seg rend="sup">в</seg> на зачетїе с҃тѣи Аннѣ ег<seg rend="sup">д</seg>а зачеть
-                                ст҃ѹю Богородицꙋ. бл<seg rend="sup">с</seg>ви ѡ<seg rend="sup">ч</seg>.</head>
+                                    деке<seg rend="sup">м</seg>врїа вь ѳ҃ д҃нь сло<seg rend="sup"
+                                    >в</seg> на зачетїе с҃тѣи Аннѣ ег<seg rend="sup">д</seg>а зачеть
+                                ст҃ѹю Богородицꙋ. бл<seg rend="sup">с</seg>ви ѡ<seg rend="sup"
+                                    >ч</seg>.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Ег<seg rend="sup">д</seg>а
-                                приближи се врѣме пр<seg rend="sup">о</seg>рчьскыи<seg rend="sup">х</seg> проповѣданиїи</incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">да вь тишинѣ твои<seg rend="sup">х</seg> щедроть прѣбываю сь всѣми вѣрными единогл҃сно
-                                да прослви<seg rend="sup">м</seg> прѣс҃тѹю Троицꙋ. ѿц҃а и с҃на <gap/> аминь.</explicit>
+                                приближи се врѣме пр<seg rend="sup">о</seg>рчьскыи<seg rend="sup"
+                                    >х</seg> проповѣданиїи</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">да вь тишинѣ твои<seg
+                                    rend="sup">х</seg> щедроть прѣбываю сь всѣми вѣрными единогл҃сно
+                                да прослви<seg rend="sup">м</seg> прѣс҃тѹю Троицꙋ. ѿц҃а и с҃на <gap
+                                    hand="MJ"/> аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="11">111r–121r</locus>
+                        <locus n="11">111r-121r</locus>
                         <title xml:lang="bg">Слово за Сретение Господне, 1</title>
                         <date type="churchCal" when="--02-02">2 February</date>
-                        <filiation type="source">Greek parallel: BHG 1964, CPG 3232 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/8276">Pinakes</ref>)</filiation>
-                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 2.02/2a</ref></filiation>
+                        <note>Greek source BHG 1964, CPG 3232, see <ref type="bibl"
+                                target="bib:Иванова2008">BHBS: 2.02, No. 2a</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                 флеварїа в҃ д҃нь Амфилохїа еп<seg rend="sup">с</seg>па Иконїискаго
@@ -403,31 +448,36 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Мнозїи ѿ великыхь чл҃кь
                                 дв҃ьствѹ дивлет се</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">Видѣсте ли знаменїе
-                                ветхаго и новаго. тои бо ѥ<seg rend="sup">с</seg> кр<seg rend="sup">с</seg>ть сп҃сен мирь. ѡ Хѣ҃ Іс҃ѣ г҃и нашемь. томꙋ слава <gap/> вь вѣкы вѣк<seg rend="sup">м</seg>.</explicit>
+                                ветхаго и новаго. тои бо ѥ<seg rend="sup">с</seg> кр<seg rend="sup"
+                                    >с</seg>ть сп҃сен мирь. ѡ Хѣ҃ Іс҃ѣ г҃и нашемь. томꙋ слава <gap
+                                    hand="MJ"/> вь вѣкы вѣк<seg rend="sup">м</seg>.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation">
-                        <locus n="12">121r–137r</locus>
+                        <locus n="12">121r-137r</locus>
                         <title xml:lang="bg">Повест за избавлението на Константинопол от перси и варвари</title>
                         <date type="churchCal">5th Sunday of the Holy Lent</date>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Повѣсть полезна ѿ дрѣвнꙗго
                                     пи<seg rend="sup">с</seg>нїа сложена вьспоминанїе ꙗвлꙗющи
-                                прѣславно бывшааго чю<seg rend="sup">д</seg>си. Ег<seg rend="sup">д</seg>а перси и варвари цр<seg rend="sup">с</seg>твꙋющїи градь
+                                прѣславно бывшааго чю<seg rend="sup">д</seg>си. Ег<seg rend="sup"
+                                    >д</seg>а перси и варвари цр<seg rend="sup">с</seg>твꙋющїи градь
                                 бранїю ѡкрꙋжише.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ лѣто Ираклїа грьчкаго
                                 ц҃ра Хозрои же перскꙋю власть имы посла Сарвара</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">Велико кь себе хощещїимь
-                                быти ѹготови<seg rend="sup">м</seg> дрьзновенїе. и неизре<seg rend="sup">ч</seg>нныхь бл҃гь полꙋчимь бл҃годѣтїю и чл҃колюбїемь
-                                г҃а нашего Іу҃ Ха҃. емѹ<seg rend="sup">ж</seg> слава <gap/> аминь.</explicit>
+                                быти ѹготови<seg rend="sup">м</seg> дрьзновенїе. и неизре<seg
+                                    rend="sup">ч</seg>нныхь бл҃гь полꙋчимь бл҃годѣтїю и чл҃колюбїемь
+                                г҃а нашего Іу҃ Ха҃. емѹ<seg rend="sup">ж</seg> слава <gap hand="MJ"
+                                /> аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
-                        <locus n="13">137r–143r</locus>
+                        <locus n="13">137r-143r</locus>
                         <title xml:lang="bg">Слово за Благовещение от Йоан Златоуст</title>
                         <date type="churchCal" when="--03-25">25 March</date>
-                        <filiation type="source">Greek parallel: BHG 1128f, CPG 4519, Aldama 389 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/7444">Pinakes</ref>)</filiation>
-                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 25.03/11б</ref></filiation>
+                        <note>Greek parallel BHG 1128f, CPG 4519, see <ref type="bibl"
+                                target="bib:Иванова2008">BHGS: 25.03, No. 11б, p. 503</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                 марта вь ке҃ слѡ<seg rend="sup">в</seg> Іѡанна Златоѹстаго на
@@ -435,60 +485,62 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Пакы радостноѥ бл҃говѣщенїе
                                 пакы свободноѥ вьзвращенїе.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">приде борещим се
-                                    наслаж<seg rend="sup">д</seg>ати се вьсегда, бл<seg rend="sup">д</seg>тию самого Ха҃ емꙋже слава <gap/>
+                                    наслаж<seg rend="sup">д</seg>ати се вьсегда, бл<seg rend="sup"
+                                    >д</seg>тию самого Ха҃ емꙋже слава <gap hand="MJ"/>
                                 аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="translation">
-                        <locus n="14">143r–163v</locus>
+                        <locus n="14">143r-163v</locus>
                         <title xml:lang="bg">Слово похвално за Благовещение</title>
                         <date type="churchCal" when="--03-25">25 March</date>
-                        <filiation type="source">Greek parallel: BHG 1145n, CPG 8009 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/7445">Pinakes</ref>)</filiation>
-                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 25.03/10a</ref></filiation>
+                        <note>Greek parallel BHG 1145n, CPG 8009, see <ref type="bibl"
+                                target="bib:Иванова2008">BHGS: 25.03, No. 10a</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Иже вь ст҃ыи<seg rend="sup">х</seg> ѡ҃ца наше<seg rend="sup">г</seg> Іѡан҃а Дамаскына словѡ
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Иже вь ст҃ыи<seg rend="sup"
+                                    >х</seg> ѡ҃ца наше<seg rend="sup">г</seg> Іѡан҃а Дамаскына словѡ
                                 на бл҃говѣщенїе прѣст҃ые вл<seg rend="sup">д</seg>чце наше б҃це и
-                                    пр<seg rend="sup">с</seg>нод҃вы марїе. бл<seg rend="sup">с</seg>ви ѡче.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Нинꙗшномꙋ чьстномѹ и цр<seg rend="sup">с</seg>комꙋ сьбранїю, свѣтломꙋ и прѣчѹдномꙋ
+                                    пр<seg rend="sup">с</seg>нод҃вы марїе. бл<seg rend="sup"
+                                >с</seg>ви ѡче.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Нинꙗшномꙋ чьстномѹ и цр<seg
+                                    rend="sup">с</seg>комꙋ сьбранїю, свѣтломꙋ и прѣчѹдномꙋ
                                 вьспоминанїю.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">ꙗко сьтвори мнѣ величиѥ
                                 сил'ни и с҃то име ѥго. и мл<seg rend="sup">с</seg>ть ѥго вь родь и
-                                    рѡ<seg rend="sup">д</seg> на бощих се ѥго. емꙋже слава <gap/> аминь.</explicit>
+                                    рѡ<seg rend="sup">д</seg> на бощих се ѥго. емꙋже слава <gap
+                                    hand="MJ"/> аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15" type="translation">
-                        <locus n="15">163r–183v</locus>
+                        <locus n="15">163r-183v</locus>
                         <title xml:lang="bg">Слово за полагане на ризата на Богородица във Влахерна</title>
                         <date type="churchCal" when="--07-02">2 July</date>
-                        <filiation type="source">Greek parallel: BHG 1058, CPG 7935 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/8876">Pinakes</ref>)</filiation>
-                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 2.07/3</ref></filiation>
+                        <note>Greek parallel BHG 1058, CPG 7935, see <ref type="bibl"
+                                target="bib:Иванова2008">BHGS: 2.07, No. 3</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                 іѹла в҃ слѡ<seg rend="sup">в</seg> ꙗвлꙗе мѣсто и врѣме и винꙋ. вь
                                 н'же ꙗви се ст҃аа рїза б҃ци. ꙗже лежи<seg rend="sup">т</seg> вь
-                                ст҃ѣмь ковчезѣ. еиже вь Влахернѣхь покланꙗют се. бл<seg rend="sup">с</seg>ви ѡ<seg rend="sup">ч</seg>.</head>
+                                ст҃ѣмь ковчезѣ. еиже вь Влахернѣхь покланꙗют се. бл<seg rend="sup"
+                                    >с</seg>ви ѡ<seg rend="sup">ч</seg>.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Ст҃аа нѣкаа и велика таина,
-                                    бжїи<seg rend="sup">м</seg> чл҃колюбїемь ꙗвлена вь на<seg rend="sup">с</seg>.</incipit>
+                                    бжїи<seg rend="sup">м</seg> чл҃колюбїемь ꙗвлена вь на<seg
+                                    rend="sup">с</seg>.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">прїими мл҃твꙋ ꙗко
                                 источныкь животны и покровь сп҃сныи. блг<seg rend="sup">д</seg>ть
                                 твою живїимь и мрьтвїимь подаж<seg rend="sup">д</seg>ь. дрьзновенїе
                                 имꙋщїи Х<seg rend="sup">с</seg>ѹ б҃ѹ нашемꙋ егоже ради и тебѣ слава
                                     по<seg rend="sup">д</seg>бно сь беспльтнымь ѥго ѡ҃цемь. и сь
-                                прѣс҃тымь и благымь и животворещїимь ѥго д҃хѡмъ <gap/>
+                                прѣс҃тымь и благымь и животворещїимь ѥго д҃хѡмъ <gap hand="MJ"/>
                                 аминь</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16" type="translation">
-                        <locusGrp n="16">
-                            <locus>183v–192r</locus>
-                            <locus>71r</locus>
-                            <locus>72r</locus>
-                            <locus>195r</locus>
-                        </locusGrp>
+                        <locus n="16">183v-192, 71, 72, 195r</locus>
                         <title xml:lang="bg">Разказ за Успение на Богородица</title>
                         <date type="churchCal" when="--08-15">15 August</date>
-                        <filiation type="source">Greek parallel: BHG 1055–1056 (<ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/18299">Pinakes</ref>)</filiation>
-                        <filiation type="litRedaction"><ref type="bibl" target="bib:Иванова2008">BHBS: 15.08/10</ref>. The end is close to <ref type="bibl" target="bib:Иванова2008">BHBS: 8.09/3a</ref></filiation>
+                        <note>Greek parallel BHG 1055-1056, see <ref type="bibl"
+                                target="bib:Иванова2008">BHGS: 15.08, No. 10</ref></note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     агѹ<seg rend="sup">с</seg>та .еі҃. слово ст҃аго Іѡанна Б҃гослова
@@ -498,34 +550,48 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Ст҃аа и прѣславнаа б҃ца и
                                     пр<seg rend="sup">с</seg>нод҃ва Марїа по ѡбычаю на ст҃ыи гробь
                                 г҃а</incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">мы же ап<seg rend="sup">с</seg>ли видѣвше вьнезапꙋ с҃тааго ее телесе чьстноѥ 
-                                прѣложенїе, прославихомь б҃а показавшаго намь чю<seg rend="sup">д</seg>са мт҃ре г҃а б҃а и сп҃са нашего Іу҃ Ха҃. еѥже милт҃вами
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">мы же ап<seg rend="sup"
+                                    >с</seg>ли видѣвше вьнезапꙋ с҃тааго ее телесе чьстноѥ
+                                прѣложенїе, прославихомь б҃а показавшаго намь чю<seg rend="sup"
+                                    >д</seg>са мт҃ре г҃а б҃а и сп҃са нашего Іу҃ Ха҃. еѥже милт҃вами
                                 и мл҃ѥнїемь достоини бѹдемь вси ѡбрѣсти мл<seg rend="sup">с</seg>ть
-                                и ѿпѹщенїе ѿ г҃а нашего Іу҃ Ха҃ и вь н҃нꙗшни вѣкь и вь бꙋ<seg rend="sup">д</seg>щїи. Славеще вь кꙋпѣ ѡ҃ца и с҃на и с҃тго д҃ха
-                                    <gap/> аминь.</explicit>
+                                и ѿпѹщенїе ѿ г҃а нашего Іу҃ Ха҃ и вь н҃нꙗшни вѣкь и вь бꙋ<seg
+                                    rend="sup">д</seg>щїи. Славеще вь кꙋпѣ ѡ҃ца и с҃на и с҃тго д҃ха
+                                    <gap hand="MJ"/> аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
-                    <msItemStruct xml:id="ACD17" type="original">
+                    <msItemStruct xml:id="ACD17" type="translation">
                         <locus n="16">195v</locus>
                         <title xml:lang="bg">Колофон</title>
-                       <re:sampleText xml:lang="cu"> 
-                           <colophon>
-                            <ab>Слава сьврьшителю б҃ѹ дающомѹ по начелѣ конць. В лѣта бл҃гоч<seg rend="sup">с</seg>тиваго и прѣвисокаго и по истинѣ праславнаго и
-                                ст҃го де<seg rend="sup">с</seg>пота Стѣфана. Самодрьж<seg rend="sup">а</seg>н<seg rend="sup">в</seg>аго срьбле<seg rend="sup">м</seg> и грько<seg rend="sup">м</seg>. и кралѥ<seg rend="sup">м</seg> Угрьскымь и Зети и Поморїю. Напи<seg rend="sup">с</seg>
+                        <colophon>
+                            <p>Слава сьврьшителю б҃ѹ дающомѹ по начелѣ конць. В лѣта бл҃гоч<seg
+                                    rend="sup">с</seg>тиваго и прѣвисокаго и по истинѣ праславнаго и
+                                ст҃го де<seg rend="sup">с</seg>пота Стѣфана. Самодрьж<seg rend="sup"
+                                    >а</seg>н<seg rend="sup">в</seg>аго срьбле<seg rend="sup"
+                                    >м</seg> и грько<seg rend="sup">м</seg>. и кралѥ<seg rend="sup"
+                                    >м</seg> Угрьскымь и Зети и Поморїю. Напи<seg rend="sup">с</seg>
                                 се сїа книга повелѣнїемь бл҃голюбивїиѥ гж<seg rend="sup">д</seg>е
                                 Маре Лѣшеве б҃ь да ю простить амнь а пи<seg rend="sup">с</seg>
                                 многогрѣшни ра<seg rend="sup">б</seg> мона<seg rend="sup">х</seg>
                                 іереи Арсенїе. м҃лю ва<seg rend="sup">с</seg> ѡ҃ци и братїе
                                 прочитоюще исправлите а не к<seg rend="sup">л</seg>ьте, нь паче
-                                рьцѣте б҃ь да ѥго простить ами<seg rend="sup">н</seg>. Въ лѣ<seg rend="sup">т</seg> ҂ѕ҃.ц҃.л҃.г҃. м<seg rend="sup">с</seg>ца
-                                іюнїа допи<seg rend="sup">с</seg> се сїа книга.</ab>
-                        </colophon></re:sampleText>
+                                рьцѣте б҃ь да ѥго простить ами<seg rend="sup">н</seg>. Въ лѣ<seg
+                                    rend="sup">т</seg> ҂ѕ҃.ц҃.л҃.г҃. м<seg rend="sup">с</seg>ца
+                                іюнїа допи<seg rend="sup">с</seg> се сїа книга.</p>
+                        </colophon>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="internal">
+                    <origin evidence="de visu">
                         <origDate notBefore="1425" notAfter="1425">1425</origDate>
-                        <ref type="bibl" target="bib:Иванова2002">Иванова 2002</ref>
+                        <origPlace>Unknown</origPlace>
+                        <note>
+                            <bibl>
+                                <respStmt>
+                                    <name full="yes">Ivanova, Kl.</name>
+                                    <resp>description</resp>
+                                </respStmt>
+                            </bibl></note>
                     </origin>
                 </history>
             </msDesc>

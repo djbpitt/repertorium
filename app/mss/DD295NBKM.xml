@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DD295NBKM">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-DD295NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Nomocanon N 295 NBKM</title>
+                <title type="main">Nomocanon N 295 NBKM</title>
                 <author xml:id="DD">Dimitrinka Dimitrova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -21,10 +19,13 @@
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -41,7 +42,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list>
+                    <list type="simple">
                         <item>Church laws</item>
                         <item>Nomocanon</item>
                     </list>
@@ -50,14 +51,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-10-29">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -80,6 +81,7 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
+                                <material>Paper</material>
                                 <watermark>unclear</watermark>
                             </support>
                             <extent>
@@ -104,23 +106,35 @@
                         <p>New binding</p>
                     </bindingDesc>
                     <additions type="inscriptions">
-                        <list>
+                        <list type="simple">
                             <item>
                                 <locus>f. 9v</locus>
-                                <quote xml:lang="cu">Да се знае кога беше <persName>Иѡсивъ</persName> и <persName>Яковъ</persName> и
-                                        <persName>Василия</persName> и <persName>Богословъ</persName> и водининичар <persName>Богдан</persName> ѿ власи и попадия попу
-                                        <persName>Славкух</persName> и попъ <persName>Гоу<seg rend="sup">т</seg>рийха</persName>ѿ гра<seg rend="sup">д</seg>ьш<seg rend="sup">н</seg>ца и ѡнъ това време оумре и това време
+                                <quote xml:lang="cu">Да се знае кога беше <persName full="yes"
+                                        >Иѡсивъ</persName> и <persName full="yes">Яковъ</persName> и
+                                        <persName full="yes">Василия</persName> и <persName
+                                        full="yes">Богословъ</persName> и водининичар <persName
+                                        full="yes">Богдан</persName> ѿ власи и попадия попу
+                                        <persName full="yes">Славкух</persName> и попъ <name
+                                        type="pop" full="yes">Гоу<seg rend="sup"
+                                    >т</seg>рийха</name>ѿ гра<seg rend="sup">д</seg>ьш<seg
+                                        rend="sup">н</seg>ца и ѡнъ това време оумре и това време
                                     беше збегь на манастиръ ї велики гла<seg rend="sup">д</seg>ъ и
                                     това време подъ есенъ загина йхакъ врабчки ѿ хаїдуци ѿ сегмени
                                     знеполски бехоу се половина по<seg rend="sup">д</seg>ивили беше
-                                    имъ <persName>Голча воиво<seg rend="sup">д</seg>а</persName> ѿ <persName type="place" full="yes">Главановци</persName> ва <seg rend="sup">л</seg>е<seg rend="sup">т</seg>о <date>#з҃р҃с҃з҃</date>
+                                    имъ <persName type="voivoda" full="yes">Голча воиво<seg
+                                            rend="sup">д</seg>а</persName> ѿ <name type="place"
+                                        full="yes">Главановци</name> ва <seg rend="sup">л</seg>е<seg
+                                        rend="sup">т</seg>о <date>#з҃р҃с҃з҃</date>
                                 </quote>
                             </item>
                             <item>
                                 <locus>ff. 14v,15r-v,16r-v</locus>
-                                <quote xml:lang="cu">Да се знае кога беше <persName>Иосифъ</persName> игыхменъ записано бранище мейха ѡтъ<placeName>Погановско</placeName> до <placeName type="place" full="yes">Духпни камикъ</placeName> друхга мейха до
-                                        <placeName>Лисинъ</placeName> треика до клай.
-                                    Четверта отъ планинух <placeName>Милковица</placeName>
+                                <quote xml:lang="cu">Да се знае кога беше <persName full="yes"
+                                        >Иосифъ</persName> игыхменъ записано бранище мейха ѡтъ<name
+                                        type="place" full="yes">Погановско</name> до <name
+                                        type="place" full="yes">Духпни камикъ</name> друхга мейха до
+                                        <name type="place" full="yes">Лисинъ</name> треика до клай.
+                                    Четверта отъ планинух <name full="yes">Милковица</name>
                                 </quote>
                             </item>
                         </list>
@@ -129,18 +143,18 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
                         <locus xmlns="http://www.tei-c.org/ns/1.0">1r-74v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote script="Cyrs" style="semiuncial"/>
-                        </scriptDesc>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
+                            type="semiuncial"/>
                         <scribeLang>
-                            <langNote key="orthography">Without juses, with one
-                                    (small) jer
-                            </langNote>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, with one
+                                    (small) jer</p>
+                            </orthography>
                         </scribeLang>
-                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref target="bib:Цонев1910">Цонев 1910: 204</ref>
-                        </bibl>
+                        <note xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref type="bibl" target="bib:Цонев1910">Цонев 1910: 204</ref>
+                        </note>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -152,44 +166,57 @@
                         <locus n="1">1r-74v</locus>
                         <title xml:lang="bg">Номоканон</title>
                         <author>anonymous</author>
-                        <note>Code of church laws.The text is without title, beginning and end</note>
+                        <note>Code of church laws.The text is without tite, beginning and end</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
-                        <filiation type="litRedaction">MS is close to <ref target="DD296NBKM.xml">N 296</ref> concerning
+                        <filiation type="litRedaction">MS is near to N 296 concerning
                             litredaction</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">прелюбодѣиста мужеложстба и скотолложства нїсходиить даже до
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true"
+                                >прелюбодѣиста мужеложстба и скотолложства нїсходиить даже до
                                     трѣ<seg rend="sup">х</seg> лѣ<seg rend="sup">т</seg></incipit>
-                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">Ѡ воурьколакѡ<seg rend="sup">х</seg></head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Томуже запрѣщ<seg rend="sup">е</seg>нїю по<seg rend="sup">д</seg>падаюті иже
-                                    гл<seg rend="sup">е</seg>миѥ воурколаки сьзфигающе и ѿ ни<seg rend="sup">х</seg> куретсе .ѕ. лѣ<seg rend="sup">т</seg> да не
-                                присттетсе</incipit></sampleText>
-                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">иже вь халькидонѣ сти
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ воурьколакѡ<seg rend="sup"
+                                    >х</seg></head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Томуже запрѣщ<seg
+                                    rend="sup">е</seg>нїю по<seg rend="sup">д</seg>падаюті иже
+                                    гл<seg rend="sup">е</seg>миѥ воурколаки сьзфигающе и ѿ ни<seg
+                                    rend="sup">х</seg> куретсе .ѕ. лѣ<seg rend="sup">т</seg> да не
+                                присттетсе</incipit>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">иже вь халькидонѣ сти
                                 ѿць</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще тие отррроче нераденїа
                                     ра<seg rend="sup">д</seg>и оумре<seg rend="sup">т</seg> некрщено
-                                .г. лѣ<seg rend="sup">т</seg> да не причеститсе</incipit></sampleText>
-                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">Ѿ житїа стго Ан<seg rend="sup">д</seg>реа иже х҃а ра<seg rend="sup">д</seg> оуро<seg rend="sup">д</seg>ваго</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Свщени<seg rend="sup">к</seg> аще по деиствоу сьпротивично пролеть стаа.</incipit></sampleText>
-                     <sampleText>       <incipit xmlns="http://www.tei-c.org/ns/1.0">Слоучаетсе сицеваа и
-                                проливают се с҃таа</incipit></sampleText>
-                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">О чаровницех</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Иже чародѣиствую<seg rend="sup">т</seg> вь .ві. дневномь съппрїемлющи<seg rend="sup">м</seg> симь чарованї</incipit></sampleText>
-                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">Ѡ сти<seg rend="sup">х</seg>
+                                .г. лѣ<seg rend="sup">т</seg> да не причеститсе</incipit>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ѿ житїа стго Ан<seg rend="sup"
+                                    >д</seg>реа иже х҃а ра<seg rend="sup">д</seg> оуро<seg
+                                    rend="sup">д</seg>ваго</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Свщени<seg rend="sup"
+                                    >к</seg> аще по деиствоу сьпротивично пролеть стаа.</incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Слоучаетсе сицеваа и
+                                проливают се с҃таа</incipit>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">О чаровницех</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Иже чародѣиствую<seg
+                                    rend="sup">т</seg> вь .ві. дневномь съппрїемлющи<seg rend="sup"
+                                    >м</seg> симь чарованї</incipit>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ѡ сти<seg rend="sup">х</seg>
                                     сьсуде<seg rend="sup">х</seg> и дарохь</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще случит<seg rend="sup">с</seg>е развивающи стїе дари сире<seg rend="sup">ч</seg>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще случит<seg rend="sup"
+                                    >с</seg>е развивающи стїе дари сире<seg rend="sup">ч</seg>
                                 потирь и дискось и ниспадеть на землю стта ложица или копїе или губа
-                                или звездица ѿ диска</incipit></sampleText>
-                            <sampleText><head xmlns="http://www.tei-c.org/ns/1.0">вѣдомо боу<seg rend="sup">д</seg>и разожденїе</head>
+                                или звездица ѿ диска</incipit>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">вѣдомо боу<seg rend="sup"
+                                    >д</seg>и разожденїе</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Ег<seg rend="sup">д</seg>а
-                                кои члукь падетсе вь любо ки<seg rend="sup">ѳ</seg> грѣ<seg rend="sup">х</seg> или вь убиство или вь прелюбодество или
-                                моужеложьство или скотоложьство</incipit></sampleText>
+                                кои члукь падетсе вь любо ки<seg rend="sup">ѳ</seg> грѣ<seg
+                                    rend="sup">х</seg> или вь убиство или вь прелюбодество или
+                                моужеложьство или скотоложьство</incipit>
                         </sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="conjecture" resp="#DD">
+                    <origin evidence="de visu" resp="#DD">
                         <origDate notBefore="1501" notAfter="1699">16th-17th c.</origDate>
+                        <origPlace>unknown</origPlace>
                     </origin>
                 </history>
             </msDesc>

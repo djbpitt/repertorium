@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM1-103O">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+   xml:id="RC-AM1-103O">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -18,11 +16,13 @@
             <date>20.07.2000</date>
             <availability status="free">
                <p>The intellectual content of this file is copyrighted by the creators under the
-                  Creative Commons Attribution-No Derivative Works 3.0 under legislation in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>.
+                  Creative Commons Attribution-No Derivative Works 3.0 under legislation in <ref
+                     target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>.
                   In short, you could download and disseminate information, but you are not allowed
                   to alter, transform, or build upon the works on this section of the site. All
                   reuse or distribution of this work must contain somewhere a link back to the URL
-                     <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                     <ref target="http://www.ilit.bas.bg/repertorium/"
+                     >http://www.ilit.bas.bg/repertorium/</ref></p>
             </availability>
          </publicationStmt>
          <sourceDesc>
@@ -55,7 +55,6 @@
          </listPrefixDef>
       </encodingDesc>
       <revisionDesc>
-         <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
          <change who="#AB" when="2009-04-17">Removed constructions
             &lt;author&gt;anonumous&lt;/author&gt;</change>
          <change who="#AB" when="2009-04-17">Added copyright statement</change>
@@ -85,18 +84,20 @@
                <objectDesc>
                   <supportDesc material="paper">
                      <support>
-                        <watermark>None</watermark>
+                        <material>Paper</material>
+                        <watermark>none</watermark>
                      </support>
                   </supportDesc>
                </objectDesc>
                <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Black</ink>
                <decoDesc>
-                  <p>Small red titles and initials</p>
+                  <p>small red titles and initials</p>
                </decoDesc>
             </physDesc>
             <history>
-               <origin resp="#AM" evidence="conjecture">
+               <origin resp="#AM" evidence="de visu">
                   <origDate>15th c.</origDate>
+                  <origPlace>Unknown</origPlace>
                </origin>
             </history>
             <additional>
@@ -133,20 +134,28 @@
                      </layoutDesc>
                   </objectDesc>
                   <bindingDesc>
-                     <binding><summary>None</summary>
+                     <binding>
+                        <p>Without binding</p>
                      </binding>
                   </bindingDesc>
                </physDesc>
                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                   <scribe n="1">
                      <locus xmlns="http://www.tei-c.org/ns/1.0">1r-1v</locus>
-                     <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
-                     <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                        <scriptNote script="Cyrs" style="semiuncial">Small semiuncial</scriptNote>
+                     <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
+                     <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs">
+                        <p>Small semiuncial</p>
                      </scriptDesc>
                      <scribeLang>
-                        <langNote key="orthography">Without juses, with two jers</langNote>
+                        <orthography>
+                           <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, with two jers</p>
+                        </orthography>
                      </scribeLang>
+
+                     <respStmt xmlns="http://www.tei-c.org/ns/1.0">
+                        <name>St. Kozhuharov</name>
+                        <resp>de visu</resp>
+                     </respStmt>
                   </scribe>
                </scribeDesc>
                <msContents>
@@ -175,13 +184,19 @@
                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                   <scribe n="2">
                      <locus xmlns="http://www.tei-c.org/ns/1.0">2r-2v</locus>
-                     <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
-                     <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                        <scriptNote script="Cyrs" style="semiuncial">Middle semiuncial</scriptNote>
+                     <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
+                     <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="semiuncial">
+                        <p>Middle semiuncial</p>
                      </scriptDesc>
                      <scribeLang>
-                        <langNote key="orthography">Without juses, with two jers</langNote>
+                        <orthography>
+                           <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, with two jers</p>
+                        </orthography>
                      </scribeLang>
+                     <respStmt xmlns="http://www.tei-c.org/ns/1.0">
+                        <name>Anisava Miltenova</name>
+                        <resp>de visu</resp>
+                     </respStmt>
                   </scribe>
                </scribeDesc>
                <msContents>
@@ -201,9 +216,10 @@
             <msPart>
                <physDesc>
                   <objectDesc form="fragment">
-                     <supportDesc material="paper">
+                     <supportDesc>
                         <support>
-                           <watermark>None</watermark>
+                           <material/>
+                           <watermark>none</watermark>
                            <dimensions unit="mm" type="folia">
                               <height>202</height>
                               <width>[137]</width>
@@ -214,9 +230,9 @@
                         <layout/>
                      </layoutDesc>
                   </objectDesc>
-                  <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Dark brown</ink>
+                  <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">dark brown</ink>
                   <decoDesc>
-                     <p>Small red titles and initials</p>
+                     <p>small red titles and initials</p>
                   </decoDesc>
                </physDesc>
             </msPart>

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DR24Upps">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-DR24Upps">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -13,26 +11,29 @@
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
                 <respStmt>
-                    <name>Predrag Matejich</name>
+                    <name full="yes">Predrag Matejich</name>
                     <resp>Catalogue</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date when="2011-09-12">12.09.2011</date>
+                <date>12.09.2011</date>
                 <idno type="Repertorium">RC-DR24Upps</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <bibl><ref target="bib:Глубоковский1918">Глубоковский 1918: 50.</ref></bibl>
+                <p><ref type="bibl" target="bib:Глубоковский1918">Глубоковский 1918: 50.</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -47,7 +48,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list>
+                    <list type="simple">
                         <item>Gospelbooks</item>
                         <item>Four Gospels</item>
                         <item>Tetraevangelion</item>
@@ -58,14 +59,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-10-29">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -84,8 +85,10 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
+                                <material>Paper</material>
                                 <watermark>
-                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Boar</motif>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                        >Boar</motif>
                                     <term>Unidentified</term>
                                 </watermark>
                             </support>
@@ -96,12 +99,12 @@
                                     <width>225</width>
                                 </dimensions>
                             </extent>
-                            <foliation>Modern foliation in pencil: 1–260.</foliation>
+                            <foliation>Modern foliation in pencil: 1-260.</foliation>
                             <collation/>
                             <condition>The manuscript is in good condition. There extraneous leaf is
                                 detached and kept between ff. 259 and 260. The latter is the back
-                                cover pastedown? The front one is detached, too. Ff. 71v, 115v,
-                                186v–187v, 240v are blank.</condition>
+                                cover pastedown?. The front one is detached, too. Ff. 71v, 115v,
+                                186v-187v, 240v are blank.</condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" writtenLines="23"/>
@@ -116,85 +119,93 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <summary>Leather on boards. A painted icon on the front cover, depicting The
-                                Crucifixion . Two metal clasps.</summary>
+                            <p>Leather on boards. A painted icon on the front cover, depicting The
+                                Crucifixion . Two metal clasps.</p>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
-                       <list>
-                           <item> <locus>f. 1r</locus>
-                        <quote>сїѧ к҃нга Івана Гаврила Ста<seg rend="sup">р</seg>ве<seg rend="sup">н</seg>фелта</quote></item>
-                           <item><locus>ff. 260r–261r, recto of the detached leaf</locus>Late Russian addition of excerpts from the Episltles</item>
-                       </list>
+                        <locus>f. 1r</locus>
+                        <quote>сїѧ к҃нга Івана Гаврила Ста<seg rend="sup">р</seg>ве<seg rend="sup"
+                                >н</seg>фелта</quote>
+                    </additions>
+                    <additions type="addText">
+                        <note>Late Russian addition of excerpts from the Episltles, on ff. 260r-261r
+                            and the recto of the detached leaf.</note>
                     </additions>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–260r</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote  script="Cyrs" style="semiuncial">Large letters</scriptNote>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-260r</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
+                            type="semiuncial">
+                            <p>Large letters</p>
                         </scriptDesc>
                         <scribeLang>
                             <summary xmlns="http://www.tei-c.org/ns/1.0">Old Church Slavonic
                                 (Wallachian)</summary>
-                            <langNote key="orthography">Regular two-juses and
-                                    two-jers orthography
-                            </langNote>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Regular two-juses and
+                                    two-jers orthography</p>
+                            </orthography>
                         </scribeLang>
+                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
+                            <name full="yes">Dilyana Radoslavova</name>
+                            <resp>de visu</resp>
+                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <summary>Contains the Four Gospels, each with a table of contents and the
                         preface by Theophylactus of Ochrid; instructions on the Gospel reading
-                        during the year, and Gospels
+                        during the year (synaxarion and menologion? - vzh. Synthia), and Gospels
                         reading for various occasions.</summary>
                     <filiation type="protograph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1r–2r</locus>
+                        <locus n="1">1r-2r</locus>
                         <title xml:lang="bg">Съдържание на Евангелието от Матей</title>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">2v–4v</locus>
+                        <locus n="2">2v-4v</locus>
                         <title xml:lang="bg">Предисловие към Евангелието от Матей</title>
                         <author>Theophylaktos of Ochrid</author>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3">
-                        <locus n="3">5r–68v</locus>
+                        <locus n="3">5r-68v</locus>
                         <title xml:lang="bg">Евангелие от Матей</title>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
-                        <locus n="4">68v–69v</locus>
+                        <locus n="4">68v-69v</locus>
                         <title xml:lang="bg">Съдържание на Евангелието от Марко</title>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5">
-                        <locus n="5">69v–71r</locus>
+                        <locus n="5">69v-71r</locus>
                         <title xml:lang="bg">Предисловие към Евангелието от Марко</title>
                         <author>Theophylaktos of Ochrid</author>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6">
-                        <locus n="6">72r–113r</locus>
+                        <locus n="6">72r-113r</locus>
                         <title xml:lang="bg">Евангелие от Марко</title>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7">
-                        <locus n="7">113r–114v</locus>
+                        <locus n="7">113r-114v</locus>
                         <title xml:lang="bg">Съдържание на Евангелието от Лука</title>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8">
-                        <locus n="8">114v–115r</locus>
+                        <locus n="8">114v-115r</locus>
                         <title xml:lang="bg">Предисловие към Евангелието от Лука</title>
                         <author>Theophylaktos of Ochrid</author>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9">
-                        <locus n="9">116r–183v</locus>
+                        <locus n="9">116r-183v</locus>
                         <title xml:lang="bg">Евангелие от Лука</title>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
@@ -204,43 +215,43 @@
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11">
-                        <locus n="11">184v–186r</locus>
+                        <locus n="11">184v-186r</locus>
                         <title xml:lang="bg">Предисловие към Евангелието от Йоан</title>
                         <author>Theophylaktos of Ochrid</author>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12">
-                        <locus n="12">188r–240r</locus>
+                        <locus n="12">188r-240r</locus>
                         <title xml:lang="bg">Евангелие от Йоан</title>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13">
-                        <locus n="13">241r–251r</locus>
+                        <locus n="13">241r-251r</locus>
                         <title xml:lang="bg">Указания за евангелските четива за подвижните празници</title>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14">
-                        <locus n="14">251r–257v</locus>
+                        <locus n="14">251r-257v</locus>
                         <title xml:lang="bg">Календар с указания за евангелските четива за избрани празници и светци</title>
                         <note>Съдържа паметите на св. Петка (14 октомври), Св. Сава Сръбски (13
                             февруари)</note>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15">
-                        <locus n="15">257v–258v</locus>
+                        <locus n="15">257v-258v</locus>
                         <title xml:lang="bg">Евангелски четива “на всяка потреба”</title>
                         <note>Съдържа предписания за четивата на велик маслосвет, за освещаване на
                             църква и др.</note>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16">
-                        <locus n="16">258v–260r</locus>
+                        <locus n="16">258v-260r</locus>
                         <title xml:lang="bg">Указания за повседневните евангелия</title>
                         <filiation type="protograph">Middle Bulgarian</filiation>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="internal" resp="#DR">
+                    <origin evidence="de visu" resp="#DR">
                         <origDate notBefore="1565" notAfter="1575">1570 ca</origDate>
                         <ref type="bibl" target="bib:Matejić1992">Matejić 1992</ref>
                         <ref type="bibl" target="bib:Глубоковский1918">Глубоковский 1918</ref>
@@ -248,6 +259,16 @@
                     <provenance>The MS was received by Johan Gebriel Sparwenfeld (Stocklolm) from
                         Ivan Ivanovich Golishin in 1685</provenance>
                 </history>
+                <additional>
+                    <adminInfo>
+                        <recordHist>
+                            <source>
+                                <p>Directly catalogued from the original manuscript using the
+                                    printed catalogue from ...</p>
+                            </source>
+                        </recordHist>
+                    </adminInfo>
+                </additional>
             </msDesc>
         </body>
     </text>

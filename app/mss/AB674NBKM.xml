@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AB674NBKM">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-AB674NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -20,10 +18,13 @@
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -54,14 +55,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -86,6 +87,9 @@
                 <physDesc>
                     <objectDesc form="codex">
                         <supportDesc material="paper">
+                            <support>
+                                <material>Paper</material>
+                            </support>
                             <extent>
                                 <measure unit="folia">294</measure>
                                 <dimensions unit="mm" type="folia">
@@ -142,76 +146,92 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <summary>Late binding made during the restoration of the manuscript.</summary>
+                            <p>Late binding made during the restoration of the manuscript.</p>
                         </binding>
                     </bindingDesc>
-                    <additions>
-                        <list>
-                            <item>Numerous additions, corrections, and deletions made in two later hands
-                                in non-jus, one-jer orthography.</item>
+                    <additions type="editorial">
+                        <note>Numerous additions, corrections, and deletions made in two later hands
+                            in non-jus, one-jer orthography.</note>
+                    </additions>
+                    <additions type="inscriptions">Several later notes made by different scribe
+                            <list type="simple">
                             <item>
                                 <locus>2r, bottom margin</locus>
                                 <p xml:lang="cu">+ пиръ жънъска: –</p>
                                 <date>latter note</date>
-                                <note>Written in black ink</note>
+                                <note>Written in black link</note>
                             </item>
                             <item>
-                                <locus>293v</locus> Later note written in black ink: 
-                                <quote xml:lang="cu">+ да ви<seg rend="sup">д</seg>ишъ старче дїѡнїсїе
+                                <locus>293v</locus>
+                                <p xml:lang="cu">+ да ви<seg rend="sup">д</seg>ишъ старче дїѡнїсїе
                                     како ꙋме<lb/>ша ратї рабъ ч<seg rend="sup">с</seg>не ти ст҃инѣ·
-                                    їм<seg rend="sup">р</seg></quote>
+                                        їм<seg rend="sup">р</seg></p>
+                                <date>latter note</date>
+                                <note>Written in black link</note>
                             </item>
                             <item>
-                                <locus>293v</locus> Later note written in black ink: 
-                                <quote xml:lang="cu">г҃и и мне <sic>помилю</sic> за своѥ си милосрдиѥ и
+                                <locus>293v</locus>
+                                <p xml:lang="cu">г҃и и мне <sic>помилю</sic> за своѥ си милосрдиѥ и
                                     за прѣчи<gap extent="3" unit="letters"/>ѥ своѥє матерѣ грѣшнаго
-                                    раба своѥго</quote>
+                                    раба своѥго</p>
+                                <date>latter note</date>
+                                <note>Written in black link</note>
                             </item>
                             <item>
-                                <locus>294r</locus> Later note written in black ink: 
-                                <quote xml:lang="cu">ч<seg rend="sup">с</seg>тнеишемꙋ въ
-                                    иноц<supplied>ѣ</supplied>
+                                <locus>294r</locus>
+                                <p xml:lang="cu">ч<seg rend="sup">с</seg>тнеишемꙋ въ
+                                        иноц<supplied>ѣ</supplied>
                                     <seg rend="sup">х</seg>
-                                    <lb/> вѣчнаа емꙋ <lb/> въ црствїи нб<seg rend="sup">с</seg></quote>
+                                    <lb/> вѣчнаа емꙋ <lb/> въ црствїи нб<seg rend="sup">с</seg></p>
+                                <date>latter note</date>
+                                <note>Written in black link</note>
                             </item>
                         </list>
                     </additions>
-                   
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locus xmlns="http://www.tei-c.org/ns/1.0">1r-294v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote script="Cyrs" style="alexandrian"><term type="script">Alexandrian</term> (<term type="script">Pop-Gerasim</term>) type of Cyrillic script slightly slanted
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
+                            type="alexandrian">
+                            <p><term type="script">Alexandrian</term> (<term type="script"
+                                    >Pop-Gerasim</term>) type of Cyrillic script slightly slanted
                                 toward to the right. The manuscript is quite an achievement of a
                                 learned caligraph <ref type="bibl" target="bib:Цонев1923">Цонев
                                     1923: 198</ref>, <ref type="bibl" target="bib:Коцева1971">Коцева
-                                        1971: 382–383</ref>, <ref type="bibl" target="bib:Джурова1981">Джурова 1981: 34</ref>.</scriptNote>
+                                    1971: 382–383</ref>, <ref type="bibl" target="bib:Джурова1981"
+                                    >Джурова 1981: 34</ref>.</p>
                         </scriptDesc>
                         <scribeLang>
-                            <langNote key="orthography">Tŭrnovo school orthography.
-                                Front jer is written as part of jery and, as a rule, within
-                                words. In Proto-Slavic reflections of tъ/r, l/t, tь/р,l/t,
-                                <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ъ</foreign> is written without
-                                exception. As a rule two letters for nasals are used, <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ѫ</foreign> and <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ѧ</foreign>; in some cases, in word-initial position
-                                <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ѩ</foreign> appears. The Middle
-                                Bulgarian confusion of nasal letters is present, but not
-                                consistently; most common is the replacement of <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ѧ</foreign> with <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ѫ</foreign> in postvocalic and word-initial position.
-                                <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ѣ</foreign> follows palatal liquids
-                                and is also written after <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ч</foreign>.
-                                Accentual diacritics are used unconsistently; most often they
-                                appear in the beginning of the words in combination with
-                                spiritus lenis and above final vowel letters in the form of
-                                double grave.</langNote>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Tŭrnovo school orthography.
+                                    Front jer is written as part of jery and, as a rule, within
+                                    words. In Proto-Slavic reflections of tъ/r, l/t, tь/р,l/t,
+                                        <foreign xml:lang="cu">ъ</foreign> is written without
+                                    exception. As a rule two letters for nasals are used, <foreign
+                                        xml:lang="cu">ѫ</foreign> and <foreign xml:lang="cu"
+                                        >ѧ</foreign>; in some cases, in word-initial position
+                                        <foreign xml:lang="cu">ѩ</foreign> appears. The Middle
+                                    Bulgarian confusion of nasal letters is present, but not
+                                    consistently; most common is the replacement of <foreign
+                                        xml:lang="cu">ѧ</foreign> with <foreign xml:lang="cu"
+                                        >ѫ</foreign> in postvocalic and word-initial position.
+                                        <foreign xml:lang="cu">ѣ</foreign> follows palatal liquids
+                                    and is also written after <foreign xml:lang="cu">ч</foreign>.
+                                    Accentual diacritics are used unconsistently; most often they
+                                    appear in the beginning of the words in combination with
+                                    spiritus lenis and above final vowel letters in the form of
+                                    double grave.</p>
+                            </orthography>
                         </scribeLang>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <summary>The manuscript contains 16 homilies by Gregory of Nazianzos. Most of
-                        them reflect the second Slavic translation</summary>
+                        them reflect the second Slavic translation.</summary>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1r1–2v22</locus>
+                        <locus n="1">1r1-2v22</locus>
                         <title xml:lang="bg">Съдържание на ръкописа</title>
                         <note>The titles are given along with the incipits of each text. The numbers
                             of each text are given in red in margins.</note>
@@ -228,17 +248,19 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">2r1–6r22</locus>
+                        <locus n="2">2r1-6r22</locus>
                         <title xml:lang="bg">Слово за Пасха</title>
                         <author>Gregory of Nazianzos</author>
-                        <date type="churchCal">Easter</date>
+                        <date type="churchCal" cert="high" evidence="external">Easter</date>
                         <note>The title from the table of contents is <foreign xml:lang="cu">Иже въ
                                 ст҃ыхь ѡц҃а нашего григорїа архїепископа консантинѣ градѣ
                                 бг҃ословца, слово на въскресенїе г҃а нашего іѵ҃ х҃а</foreign></note>
                         <filiation type="source">Greek. The text corresponds to the Greek Oratio 1
                                 <ref type="bibl" target="bib:Bernardi1978">Bernardi 1978:
-                                    72–82</ref>.</filiation>
-                        <filiation type="translation">2 <ref type="bibl" target="bib:Спасова1994">Спасова 1994: 237–254</ref>; <ref type="bibl" target="bib:Спасова2014">Спасова 2014: 10-11</ref></filiation>
+                                72-82</ref>.</filiation>
+                        <filiation type="translation">2 <ref type="bibl" target="bib:Спасова1994"
+                                >Спасова 1994: 237-254</ref>; <ref type="bibl"
+                                target="bib:Спасова2014">Спасова 2014: 10-11</ref></filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ыхь ѡц҃а нашего
                                 григорїа архїепископа константинѣ градѣ бг҃ослова, на пасхѫ и҆ на
@@ -249,21 +271,22 @@
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3">
                         <locusGrp n="3">
-                            <locus>6v1–22</locus>
-                            <locus>5r–5v</locus>
-                            <locus>7r–7v</locus>
-                            <locus>9r–30v10</locus>
+                            <locus>6v1-22</locus>
+                            <locus>5r-5v</locus>
+                            <locus>7r-7v</locus>
+                            <locus>9r-30v10</locus>
                         </locusGrp>
                         <title xml:lang="bg">Слово за понеделник след Пасха</title>
                         <author>Gregory of Nazianzos</author>
-                        <date type="churchCal">Monday after
+                        <date type="churchCal" cert="high" evidence="external">Monday after
                             Easter</date>
                         <note>The title from the table of contents is <foreign xml:lang="cu">Тогожде
                                 григорїа бгословца слово на прѣславное въскрьсенїе</foreign></note>
                         <note>The folios were rearranged in the wrong order before rebinding.</note>
                         <filiation type="source">Greek. The text corresponds to the Greek Oratio XLV
-                            <ref type="bibl" target="bib:PG">PG 36: 624–664</ref>.</filiation>
-                        <filiation type="translation">2 <ref type="bibl" target="bib:Спасова2014">Спасова 2014: 11-12</ref>.</filiation>
+                                <ref type="bibl" target="bib:PG">PG 36: 624-664</ref>.</filiation>
+                        <filiation type="translation">2 <ref type="bibl" target="bib:Спасова2014"
+                                >Спасова 2014: 11-12</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Тогожде на ст҃ѫѫ пасхѫ· слово
                                 в҃: –</head>
@@ -272,17 +295,18 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
-                        <locus n="4">30v11–39r8</locus>
+                        <locus n="4">30v11-39r8</locus>
                         <title xml:lang="bg">Слово за Томина неделя</title>
                         <author>Gregory of Nazianzos</author>
-                        <date type="churchCal">Sunday of St.
+                        <date type="churchCal" cert="high" evidence="external">Sunday of St.
                             Thomas</date>
                         <note>The title from the table of contents is <foreign xml:lang="cu">Тогожде
                                 григорїа бг҃ословца · слово · в новѫѫ нед҃лѧ и въ веснѫ и ѡбновленїи
                             </foreign></note>
                         <filiation type="source">Greek. The text corresponds to the Greek Oratio
                             XLIV <ref type="bibl" target="bib:PG">PG 36: 608-621</ref>.</filiation>
-                        <filiation type="translation">2 <ref type="bibl" target="bib:Спасова1998">Спасова 1998: 105-114</ref>
+                        <filiation type="translation">2 <ref type="bibl" target="bib:Спасова1998"
+                                >Спасова 1998: 105-114</ref>
                             <ref type="bibl" target="bib:Спасова2014">Спасова 2014:
                             12</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -294,19 +318,22 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5">
-                        <locus n="5">39r9–51v21</locus>
+                        <locus n="5">39r9-51v21</locus>
                         <title xml:lang="bg">Слово за Петдесетница</title>
                         <author>Gregory of Nazianzos</author>
-                        <date type="churchCal">Pentecost</date>
+                        <date type="churchCal" cert="high" evidence="external">Pentecost</date>
                         <note>The title from the table of contents is <foreign xml:lang="cu">Тогожде
                                 григорїа бг҃ословца, слово въ дн҃ь пѧтдесѧтницѧ</foreign>and the
                             incipt is <foreign xml:lang="cu">О праздницѣ въкратцѣ да
                                 мѫдръствоуимъ</foreign></note>
                         <filiation type="source">Greek. The text corresponds to the Greek Oratio
-                                XLI<ref type="bibl" target="bib:PG">PG 36: 608-621</ref>; <ref type="bibl" target="bib:Moreschini1990">Moreschini1990:
+                                XLI<ref type="bibl" target="bib:PG">PG 36: 608-621</ref>; <ref
+                                type="bibl" target="bib:Moreschini1990">Moreschini1990:
                                 314-354</ref></filiation>
-                        <filiation type="translation">2 <ref type="bibl" target="bib:Спасова1992">Спасова 1992: 77–95</ref>
-                            <ref type="bibl" target="bib:Спасова2014">Спасова 2014: 12–13</ref>.</filiation>
+                        <filiation type="translation">2 <ref type="bibl" target="bib:Спасова1992"
+                                >Спасова 1992: 77-95</ref>
+                            <ref type="bibl" target="bib:Спасова2014">Спасова 2014:
+                            12-13</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ыхъ ѡц҃а нашего
                                 грїгорїа архїепископа константина града бг҃ослова · сло́во на ст҃ѫѫ
@@ -316,7 +343,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6">
-                        <locus n="6">52r1–63r9</locus>
+                        <locus n="6">52r1-63r9</locus>
                         <title xml:lang="bg">Слово за светите Макавеи</title>
                         <author>Gregory of Nazianzos</author>
                         <date type="churchCal" when="--08-01" cert="high" evidence="external">1
@@ -327,7 +354,8 @@
                                 трьжꙿство</foreign></note>
                         <filiation type="source">Greek. The text corresponds to the Greek Oratio
                                 XV<ref type="bibl" target="bib:PG">PG 35: 912-933</ref></filiation>
-                        <filiation type="translation">2 <ref type="bibl" target="bib:Спасова2014">Спасова 2014: 13-14</ref>.</filiation>
+                        <filiation type="translation">2 <ref type="bibl" target="bib:Спасова2014"
+                                >Спасова 2014: 13-14</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Тогожде ѡ макавеѡхь· слѡвѡ е҃
                                 ѡч҃е бл҃ви</head>
@@ -336,7 +364,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7">
-                        <locus n="7">63r10–76r2</locus>
+                        <locus n="7">63r10-76r2</locus>
                         <title xml:lang="bg">Слово за св. Киприан</title>
                         <author>Gregory of Nazianzos</author>
                         <date type="churchCal" when="--10-01" cert="high" evidence="external">1
@@ -347,7 +375,8 @@
                                 XXIV<ref type="bibl" target="bib:PG">PG 35: 1169-1193</ref>
                             <ref type="bibl" target="bib:Mossay1981">Mossay 1981:
                             40-84</ref></filiation>
-                        <filiation type="translation">2 <ref type="bibl" target="bib:Спасова2014">Спасова 2014: 14</ref>.</filiation>
+                        <filiation type="translation">2 <ref type="bibl" target="bib:Спасова2014"
+                                >Спасова 2014: 14</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Тогожде ѡ мѫченицѣ кипрїанѣ ѿ
                                 села възвращаѧ сѧ по единомъ памѧти дн҃ѣ</head>
@@ -356,7 +385,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8">
-                        <locus n="8">76r3–86v16</locus>
+                        <locus n="8">76r3-86v16</locus>
                         <title xml:lang="bg">Слово против император Юлиан Отстъпник</title>
                         <author>Gregory of Nazianzos</author>
                         <date type="churchCal" when="--12-21" cert="high" evidence="external">21
@@ -368,7 +397,8 @@
                         <filiation type="source">Greek. The text corresponds to the Greek Oratio
                                 XIX<ref type="bibl" target="bib:PG">PG 35:
                             1044-1064</ref></filiation>
-                        <filiation type="translation">2 <ref type="bibl" target="bib:Спасова2014">Спасова 2014: 14-15</ref>.</filiation>
+                        <filiation type="translation">2 <ref type="bibl" target="bib:Спасова2014"
+                                >Спасова 2014: 14-15</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Тогожде ѡ словесехъ и ѡ
                                 съравнители їоулїанѣ · слово з҃: –</head>
@@ -377,7 +407,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9">
-                        <locus n="9">87r1–98r22</locus>
+                        <locus n="9">87r1-98r22</locus>
                         <title xml:lang="bg">Слово за Рождество Христово</title>
                         <author>Gregory of Nazianzos</author>
                         <date type="churchCal" when="--12-25" cert="high" evidence="external">25
@@ -390,7 +420,8 @@
                                 XXXVIII<ref type="bibl" target="bib:PG">PG 36: 312-333</ref>
                             <ref type="bibl" target="bib:Moreschini1990">Moreschini1990:
                                 104-148</ref></filiation>
-                        <filiation type="translation">1 <ref type="bibl" target="bib:Спасова2014">Спасова 2014: 15-16</ref>.</filiation>
+                        <filiation type="translation">1 <ref type="bibl" target="bib:Спасова2014"
+                                >Спасова 2014: 15-16</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ыхъ ѡц҃а нашего
                                 грїгорїа архїепископа констанина града бг҃ослова · сло́во на
@@ -401,15 +432,15 @@
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10">
                         <locusGrp n="10">
-                            <locus>98v1–22</locus>
+                            <locus>98v1-22</locus>
                             <locus>lacuna</locus>
-                            <locus>99r1–144v22</locus>
-                            <locus>8r1–8v22</locus>
-                            <locus>145r1–154r22</locus>
+                            <locus>99r1-144v22</locus>
+                            <locus>8r1-8v22</locus>
+                            <locus>145r1-154r22</locus>
                         </locusGrp>
                         <title xml:lang="bg">Слово надгробно за св. Василий Велики</title>
                         <author>Gregory of Nazianzos</author>
-                        <date type="churchCal" when="--01-01">1
+                        <date type="churchCal" when="--01-01" cert="high" evidence="external">1
                             January</date>
                         <note>The title from the table of contents is <foreign xml:lang="cu">Тогожде
                                 григорїа бг҃ословца, слово на погрибанїе ст҃ааго и великаа҆гѡ
@@ -421,9 +452,11 @@
                                 XLIII<ref type="bibl" target="bib:PG">PG 36: 493-605</ref>
                             <ref type="bibl" target="bib:Bernardi1992">Bernardi 1992:
                             116-306</ref></filiation>
-                        <filiation type="translation">1<ref type="bibl" target="bib:Спасова2008a">Спасова 2008a: 125–164</ref>
-                            <ref type="bibl" target="bib:Спасова2011">Спасова 2011: 457–477</ref>
-                            <ref type="bibl" target="bib:Спасова2014">Спасова 2014: 16–17</ref>.</filiation>
+                        <filiation type="translation">1<ref type="bibl" target="bib:Спасова2008a"
+                                >Спасова 2008a: 125-164</ref>
+                            <ref type="bibl" target="bib:Спасова2011">Спасова 2011: 457-477</ref>
+                            <ref type="bibl" target="bib:Спасова2014">Спасова 2014:
+                            16-17</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ыхъ ѡц҃а нашего
                                 грїгорїа архїепископа констанина града бг҃ословца · сло́вѡ сътворено
@@ -434,17 +467,19 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11">
-                        <locus n="11">154v1–167r13</locus>
+                        <locus n="11">154v1-167r13</locus>
                         <title xml:lang="bg">Слово за Богоявление</title>
                         <author>Gregory of Nazianzos</author>
-                        <date type="churchCal" when="--01-06">6January</date>
+                        <date type="churchCal" when="--01-06" cert="high" evidence="external">6
+                            January</date>
                         <note>The title from the table of contents is <foreign xml:lang="cu">Тогожде
                                 григорїа бг҃ословца слово на ст҃ое кр҃щенїе</foreign>.</note>
                         <filiation type="source">Greek. The text corresponds to the Greek Oratio
                                 XXXIX<ref type="bibl" target="bib:PG">PG 36: 336-360</ref>
                             <ref type="bibl" target="bib:Moreschini1990">Moreschini1990:
                                 110-196</ref></filiation>
-                        <filiation type="translation">2<ref type="bibl" target="bib:Спасова2014">Спасова 2014: 17</ref>.</filiation>
+                        <filiation type="translation">2<ref type="bibl" target="bib:Спасова2014"
+                                >Спасова 2014: 17</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ыхъ ѡц҃а нашего
                                 грїгорїа архїепископа констанина града бг҃ословца · сло́вѡ на ст҃оe
@@ -455,12 +490,12 @@
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12">
                         <locusGrp n="12">
-                            <locus>167r14–178v22</locus>
-                            <locus>180r–201v3</locus>
+                            <locus>167r14-178v22</locus>
+                            <locus>180r-201v3</locus>
                         </locusGrp>
                         <title xml:lang="bg">Слово за Кръщение Господне</title>
                         <author>Gregory of Nazianzos</author>
-                        <date type="churchCal" when="--01-07">7
+                        <date type="churchCal" when="--01-07" cert="high" evidence="external">7
                             January</date>
                         <note>The title from the table of contents is <foreign xml:lang="cu">Тогожде
                                 григорїа бг҃ословца слово на ст҃ое кр҃щенїе</foreign> and the incipt
@@ -469,9 +504,10 @@
                         <note>The folios were wrongly rearranged before rebounding.</note>
                         <filiation type="source">Greek. The text corresponds to the Greek Oratio
                                 XL<ref type="bibl" target="bib:PG">PG 36: 360-425</ref>
-                            <ref type="bibl" target="bib:Moreschini1990">Moreschini 1990:
+                            <ref type="bibl" target="bib:Moreschini1990">Moreschini1990:
                                 198-310</ref></filiation>
-                        <filiation type="translation">2<ref type="bibl" target="bib:Спасова2014">Спасова 2014: 17-18</ref>.</filiation>
+                        <filiation type="translation">2<ref type="bibl" target="bib:Спасова2014"
+                                >Спасова 2014: 17-18</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ыхъ ѡц҃а нашего
                                 грїгорїа архїепископа константина града бг҃ословца · сло́вѡ на ст҃оe
@@ -481,18 +517,20 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13">
-                        <locus n="13">201v4–206r23</locus>
+                        <locus n="13">201v4-206r23</locus>
                         <title xml:lang="bg">Слово за св. Григорий Нисийски</title>
                         <author>Gregory of Nazianzos</author>
-                        <date type="churchCal" when="--01-10">10 January</date>
+                        <date type="churchCal" when="--01-10" cert="high" evidence="external">10
+                            January</date>
                         <note>The title from the table of contents is <foreign xml:lang="cu">Тогожде
                                 грїгорїа бг҃ословца · словѡ, ѡ҆ григории҆ братѣ
                             василиєвѣ</foreign>.</note>
                         <filiation type="source">Greek. The text corresponds to the Greek Oratio
-                            XΙ<ref type="bibl" target="bib:PG">PG 35: 832–841</ref>
+                                XΙ<ref type="bibl" target="bib:PG">PG 35: 832-841</ref>
                             <ref type="bibl" target="bib:Calvet-Sebasti1995">Calvet-Sebasti 1995:
                                 328-347</ref></filiation>
-                        <filiation type="translation">1<ref type="bibl" target="bib:Спасова2014">Спасова 2014: 18</ref>.</filiation>
+                        <filiation type="translation">1<ref type="bibl" target="bib:Спасова2014"
+                                >Спасова 2014: 18</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ыхъ ѡц҃а нашего
                                 грїгорїа архїепископа константина града бг҃ословца · сло́вѡ ѡ
@@ -503,24 +541,26 @@
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14">
                         <locusGrp n="14">
-                            <locus>206v1–206v22</locus>
-                            <locus>215r1–222v22</locus>
-                            <locus>207r1–214v22</locus>
-                            <locus>223r1–230v22</locus>
+                            <locus>206v1-206v22</locus>
+                            <locus>215r1-222v22</locus>
+                            <locus>207r1-214v22</locus>
+                            <locus>223r1-230v22</locus>
                         </locusGrp>
                         <title xml:lang="bg">Слово за св. Атанасий Александрийски</title>
                         <author>Gregory of Nazianzos</author>
-                        <date type="churchCal" when="--01-18">18 January</date>
+                        <date type="churchCal" when="--01-18" cert="high" evidence="external">18
+                            January</date>
                         <note>The title from the table of contents is <foreign xml:lang="cu">Тогожде
                                 григорїа бг҃ословца слово ѡ҆ стѣмь аѳанасии</foreign> and the incipt
                             is <foreign xml:lang="cu">Аѳанасїа хвалѧ, добродѣтелъ
                             похвалѧ</foreign>.</note>
                         <note>The folios were wrongly rearranged before rebounding.</note>
                         <filiation type="source">Greek. The text corresponds to the Greek Oratio
-                            XXΙ<ref type="bibl" target="bib:PG">PG 35: 1081–1128</ref>
+                                XXΙ<ref type="bibl" target="bib:PG">PG 35: 1081-1128</ref>
                             <ref type="bibl" target="bib:Mossay1980">Mossay 1980:
-                                110–192</ref></filiation>
-                        <filiation type="translation">1<ref type="bibl" target="bib:Спасова2014">Спасова 2014: 18–19</ref>.</filiation>
+                            110-192</ref></filiation>
+                        <filiation type="translation">1<ref type="bibl" target="bib:Спасова2014"
+                                >Спасова 2014: 18-19</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ыхъ ѡц҃а нашего
                                 грїгорїа архїепископа константина града бг҃ослова · сло́вѡ ѡ стѣмь
@@ -530,18 +570,20 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15">
-                        <locus n="15">231r1–249v22</locus>
+                        <locus n="15">231r1-249v22</locus>
                         <title xml:lang="bg">Слово за пристигането на 150 епископи</title>
                         <author>Gregory of Nazianzos</author>
-                        <date type="churchCal" when="--01-25">25
-                                <note>The title from the table of contents is <foreign xml:lang="cu">Тогожде грїгорїа бг҃ословца · ѡ҆бѣщанїє ѡ҆ пришестви, рн҃е
+                        <date type="churchCal" when="--01-25" cert="high" evidence="external">25
+                                <note>The title from the table of contents is <foreign xml:lang="cu"
+                                    >Тогожде грїгорїа бг҃ословца · ѡ҆бѣщанїє ѡ҆ пришестви, рн҃е
                                     поповъ</foreign> and the incipt is <foreign xml:lang="cu">Како
                                     вамь наша ѡ дрꙋꙃи и пастырїє </foreign>.</note> January</date>
                         <filiation type="source">Greek. The text corresponds to the Greek Oratio
-                            XLΙI<ref type="bibl" target="bib:PG">PG 36: 457–492</ref>
+                                XLΙI<ref type="bibl" target="bib:PG">PG 36: 457-492</ref>
                             <ref type="bibl" target="bib:Bernardi1992">Bernardi 1992:
                             48-114</ref></filiation>
-                        <filiation type="translation">1<ref type="bibl" target="bib:Спасова2014">Спасова 2014: 19</ref>.</filiation>
+                        <filiation type="translation">1<ref type="bibl" target="bib:Спасова2014"
+                                >Спасова 2014: 19</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ыхъ ѡц҃а нашего
                                 грїгорїа архїепископа константинѣ града бг҃ослова · ѡ҆бѣщанїє ѡ҆
@@ -555,13 +597,14 @@
                         <locus n="16">250r1-277v2</locus>
                         <title xml:lang="bg">Слово за нищелюбието</title>
                         <author>Gregory of Nazianzos</author>
-                        <date type="churchCal">Meatfare
+                        <date type="churchCal" cert="high" evidence="external">Meatfare
                             Sunday</date>
                         <note>The title from the table of contents is <foreign xml:lang="cu">Тогожде
                                 грїгорїа бг҃ословца · слово ѡ нищелюбїи</foreign>.</note>
                         <filiation type="source">Greek. The text corresponds to the Greek Oratio
-                            XVI<ref type="bibl" target="bib:PG">PG 35: 857–909</ref></filiation>
-                        <filiation type="translation">1<ref type="bibl" target="bib:Спасова2014">Спасова 2014: 20</ref>.</filiation>
+                                XVI<ref type="bibl" target="bib:PG">PG 35: 857-909</ref></filiation>
+                        <filiation type="translation">1<ref type="bibl" target="bib:Спасова2014"
+                                >Спасова 2014: 20</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ыхъ ѡц҃а нашего
                                 грїгорїа архїепископа константинѣ града бг҃ослова · слово ѡ
@@ -571,13 +614,15 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17">
-                        <locus n="17">277v3–293r3</locus>
+                        <locus n="17">277v3-293r3</locus>
                         <title xml:lang="bg">Слово за градобитието</title>
                         <author>Gregory of Nazianzos</author>
-                        <date type="churchCal">Meatfare Sunday</date>
+                        <date type="churchCal" cert="high" evidence="external">Meatfare
+                            Sunday</date>
                         <filiation type="source">Greek. The text corresponds to the Greek Oratio
                                 XVI<ref type="bibl" target="bib:PG">PG 35: 933-964</ref></filiation>
-                        <filiation type="translation">2<ref type="bibl" target="bib:Спасова2014">Спасова 2014: 20-21</ref>.</filiation>
+                        <filiation type="translation">2<ref type="bibl" target="bib:Спасова2014"
+                                >Спасова 2014: 20-21</ref>.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ыхъ ѡц҃а нашего
                                 грїгорїа архїепископа константинѣ града бг҃ослова · слово на
@@ -590,37 +635,39 @@
                         <locus n="18">293r4-293v5</locus>
                         <title xml:lang="bg">Колофон</title>
                         <note>The text almost illegible in places because of physical damage, and
-                            some parts are impossible to reconstruct. The text after <foreign xml:lang="cu">младѡм цр҃и</foreign> has been cut our and
+                            some parts are impossible to reconstruct. The text after <foreign
+                                xml:lang="cu">младѡм цр҃и</foreign> has been cut our and
                             approximately 24 letters are completely lost. It is possible that the
                             text at this location contained the name of the other son of Ivan
                             Alexander, Sracimir.</note>
                         <note>The most recent edition of the colophon has been published together
                             with notes, translation into Modern Bulgarian, and photographs from the
                             manuscript by <ref type="bibl" target="bib:Спасова2014">Спасова 2014:
-                                21–28, 615–616</ref> who corrects the edition of <ref type="bibl" target="bib:Христова2003">Христова, Караджова, Узунова 2003: 60–61,
-                                    114–115, 173–174 (No 89, Tables XXVII a, б)</ref>. For previous
+                                21-28, 615-616</ref> who corrects the edition of <ref type="bibl"
+                                target="bib:Христова2003">Христова, Караджова, Узунова 2003: 60-61,
+                                114-115, 173-174 (No 89, Tables XXVII a, б)</ref>. For previous
                             literature see <ref type="bibl" target="bib:Цонев1923">Цонев 1923:
                                 200</ref>; <ref type="bibl" target="bib:Коцева1971">Коцева 1971:
                                 380</ref> ; <ref type="bibl" target="bib:Коцева1980а">Коцева 1980а:
-                                    247–258</ref>; <ref type="bibl" target="bib:Ангелов1983">Ангелов
-                                        1983: 56–59</ref>; <ref type="bibl" target="bib:Турилов2009">Турилов
+                                247-258</ref>; <ref type="bibl" target="bib:Ангелов1983">Ангелов
+                                1983: 56-59</ref>; <ref type="bibl" target="bib:Турилов2009">Турилов
                                 2009</ref>; <ref type="bibl" target="bib:Турилов2013">Турилов
                                 2013</ref></note>
-                       <re:sampleText xml:lang="cu"> <colophon>
+                        <colophon>
                             <head xml:lang="el">Ο ΧΣ ΕΣΤΙ ΑΡΧΗ ΚΑΙ ΤΕΛΟΣ</head>
-                            <ab>Источникоу оубѡ на мѣстѣ сѫщꙋ и животныѫ воды
+                            <p xml:lang="cu">Источникоу оубѡ на мѣстѣ сѫщꙋ и животныѫ воды
                                 истачаѫщоу тѣмже и х҃с къ самарѣныни водѫ проси· женѫ даждъ ми водѫ
                                 пити· и азъ дамъ тебѣ вѡдь пити ꙗко да въ вѣкы не възъжѫждаѥши·
                                 тѣмже оубѡ и сиа книга источникоу есть подобна· еѫже аще кто съ
                                 оусрѣдїемъ разгнѫвъ прочьтетъ, напоитъ дш҃ѫ своѫ живоносныѫ и вѣчныѫ
-                                воды, и въ вѣкы не възждѫждет сѧ: –</ab>
-                            <ab>Нѫ вы оубо прѣблазни г҃и мои, трїе въселенъстїи ст҃ле·
+                                воды, и въ вѣкы не възждѫждет сѧ: –</p>
+                            <p xml:lang="cu">Нѫ вы оубо прѣблазни г҃и мои, трїе въселенъстїи ст҃ле·
                                 и оучителе григорїе, и василїе, и іѡанъ златооустъ прїимѣте вашего
                                 раба ходага мита логоѳетѣ малое приношенїе, вѣщанїа изрѧднаа
                                 бг҃ословаго грїгориїа· прѣ<supplied>мѫ</supplied>драаго оучителѣ и
                                 наставника· троици сѫпоклонника <supplied>с</supplied>ѫпостатѡмъ еѧ
-                                раздрꙋшника, їересемъ прогонителѣ: –</ab>
-                            <ab>
+                                раздрꙋшника, їересемъ прогонителѣ: –</p>
+                            <p xml:lang="cu">
                                 <supplied>И</supplied>списавыи сиѫ книгѫ прьвославъ нарицаах сѧ,
                                 самѣм, <supplied>по</supplied>велѣнїемъ всепочътенаго въ велмѫжехъ
                                 бл҃гарскаго <supplied>цр҃с</supplied>тва логоѳетѣ мита· тогда же
@@ -628,20 +675,22 @@
                                 прѣвысокыи и самодръжецъ всѣмъ <supplied>бл҃г</supplied>арѡм и
                                 гръкѡм цр҃ъ і҃ѡ, алеѯандр꙽· и прї цр҃ци его
                                     новопросвѣ<supplied>щ</supplied>еннои и бл҃говѣрнои ѳеѡдорѣ. и
-                                при сн҃ѣ их шишман младѡм цр҃и <gap quantity="24" unit="character"/>· Молѧ же всѣкого искꙋснаго помощи и напаствнном ѿ сѫпостата· не
+                                при сн҃ѣ их шишман младѡм цр҃и <gap quantity="24" unit="character"
+                                />· Молѧ же всѣкого искꙋснаго помощи и напаствнном ѿ сѫпостата· не
                                 злословити недостаткꙋ ѡскѫднꙗаго ꙋма поминаѫще <pb n="393v"/>
                                 <gap quantity="12" unit="character"/>
-                                <unclear>ꙗко</unclear> имѣѫ и съвръшеное, тъчиѫ е<gap quantity="1" unit="character"/> въ памѧтъ томꙋ самомꙋ ве<supplied>ликомꙋ
+                                <unclear>ꙗко</unclear> имѣѫ и съвръшеное, тъчиѫ е<gap quantity="1"
+                                    unit="character"/> въ памѧтъ томꙋ самомꙋ ве<supplied>ликомꙋ
                                     логоѳетꙋ м</supplied>итꙋ вѣчнѫѫ, и бг҃одарованныи б҃е <gap/>
                                 <unclear>идѡм</unclear>, зде и въ грѧдѫщомъ вѣцѣ, и нынѣ и
-                                    <supplied>присно </supplied> · въ вѣкы :· вѣкѡмъ :· амин꙽·</ab>
-                        </colophon></re:sampleText>
+                                    <supplied>присно </supplied> · въ вѣкы :· вѣкѡмъ :· амин꙽·</p>
+                        </colophon>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="conjecture" resp="#AB">
+                    <origin evidence="de visu" resp="#AB">
                         <origDate cert="high" notBefore="1350" notAfter="1360">1350–1360</origDate>
-                        <origPlace>Tŭrnovo or nearby</origPlace>
+                        <origPlace cert="low">Tŭrnovo or nearby</origPlace>
                     </origin>
                     <provenance>The manuscript was formerly at the Monastery of the Theotokos in
                         Pirg, Kratovo on the river Zletovštica</provenance>
@@ -652,8 +701,11 @@
                             <source>
                                 <p>Directly catalogued from the original manuscript using the
                                     catalogue from <ref type="bibl" target="bib:Цонев 1923">Цонев
-                                        1923</ref>, the digitized copies from <ref target="http://www.europeana.eu/portal/record/9200353/BibliographicResource_3000096072612.html">Europeana Collections</ref>, photographs, and the
-                                    photographic facsimile edition of <ref type="bibl" target="bib:Спасова2014">Спасова 2014</ref>.</p>
+                                        1923</ref>, the digitized copies from <ref
+                                        target="http://www.europeana.eu/portal/record/9200353/BibliographicResource_3000096072612.html"
+                                        >Europeana Collections</ref>, photographs, and the
+                                    photographic facsimile edition of <ref type="bibl"
+                                        target="bib:Спасова2014">Спасова 2014</ref>.</p>
                             </source>
                         </recordHist>
                         <custodialHist>
@@ -661,7 +713,9 @@
                                 conserved at the National Library in Sofia.</custEvent>
                         </custodialHist>
                     </adminInfo>
-                    <surrogates> The manuscipts has been digitized and included in the <ref target="http://www.europeana.eu/portal/record/9200353/BibliographicResource_3000096072612.html">Europeana Collections</ref>. </surrogates>
+                    <surrogates> The manuscipts has been digitized and included in the <ref
+                            target="http://www.europeana.eu/portal/record/9200353/BibliographicResource_3000096072612.html"
+                            >Europeana Collections</ref>. </surrogates>
                     <listBibl>
                         <bibl>
                             <ref type="bibl" target="bib:Цонев1923">Цонев 1923: 198-201</ref>

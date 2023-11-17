@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-NG13317S">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-NG13317S">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Ловчански (Иван Александров) сборник преди 1331 г.</title>
+                <title type="main">Ловчански (Иван Александров) сборник преди 1331 г.</title>
                 <author xml:id="NG">Nina Gagova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -16,27 +14,30 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date when="2006-12">December 2006</date>
+                <date>December 2006</date>
                 <idno type="Repertorium">RC-NG13317S</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <listBibl><bibl>
-                    <ref target="bib:Радченко1898">Радченко 1898</ref>
+                <bibl>
+                    <ref target="bib:Радченко1898"/>
                 </bibl>
                 <bibl>
-                    <ref target="bib:Яцимирский1898">Яцимирский 1898: 144–151</ref>
+                    <ref target="bib:Яцимирский1898">Яцимирский 1898: 144-151</ref>
                 </bibl>
                 <bibl>
-                    <ref target="bib:Куев1979">Куев 1979: 182–185</ref>
-                </bibl></listBibl>
+                    <ref target="bib:Куев1979">Куев 1979: 182-185</ref>
+                </bibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -48,7 +49,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list>
+                    <list type="simple">
                         <item>King Ivan Alexander</item>
                         <item>Miscellany with mixed content</item>
                     </list>
@@ -57,14 +58,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AM" when="2011-10-07">Removed old elements</change>
@@ -87,9 +88,9 @@
                     <country>Russia</country>
                     <settlement>St. Petersburg</settlement>
                     <repository>Academy Library</repository>
+                    <collection>Jacimirskij collection</collection>
                     <idno type="shelfmark">13.3.17</idno>
                     <altIdentifier type="former">
-                        <collection>Jacimirskij collection</collection>
                         <idno type="shelfmark">15</idno>
                     </altIdentifier>
                 </msIdentifier>
@@ -121,25 +122,28 @@
                         </decoNote>
                     </decoDesc>
                     <bindingDesc>
-                        <binding contemporary="false">
-                            <summary>New, <date>20th c.</date></summary>
+                        <binding>
+                            <p>New, 20th c.</p>
                         </binding>
                     </bindingDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–183v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Pahomie</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote  script="Cyrs" style="semiuncial">Tŭrnovo type</scriptNote>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-183v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Pahomie</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
+                            type="semiuncial">
+                            <p>Semiuncial, Tŭrnovo type</p>
                         </scriptDesc>
                         <scribeLang>
                             <summary xmlns="http://www.tei-c.org/ns/1.0">Middle Bulgarian</summary>
-                                <langNote key="orthography" type="jers" subtype="etymNonReg">Two jers</langNote>
-                            <langNote key="orthography" type="juses" subtype="etymNonReg">Two juses</langNote>
+                            <orthography>
+                                <orthNote type="jers" subtype="etymNonReg">Two jers</orthNote>
+                                <orthNote type="juses" subtype="etymNonReg">Two juses</orthNote>
+                            </orthography>
                         </scribeLang>
-                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref target="bib:Куев1979">Куев 1979: 182–185</ref></bibl>
+                        <note xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref type="bibl" target="bib:Куев1979">Куев 1979: 182-185</ref></note>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -147,77 +151,89 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1r–75v (76?)</locus>
+                        <locus n="1">1r-75v (76?)</locus>
                         <title xml:lang="bg">Патерик Скитски (извлечение)</title>
                         <note>Without beginning and title; contains 31 texts</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">О Паисїи.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Бы<seg rend="sup">с</seg>
-                                    нѣког<seg rend="sup">д</seg>а блж҃еномоу Паисїоу <gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Старцъ нѣкыи. въ веси нѣкоеи
-                                живѫщи...</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Иже въ сты<seg rend="sup">х</seg>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">О Паисїи.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Бы<seg rend="sup">с</seg>
+                                    нѣког<seg rend="sup">д</seg>а блж҃еномоу Паисїоу <gap hand="NG"
+                                /></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Старцъ нѣкыи. въ веси нѣкоеи
+                                живѫщи...</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Иже въ сты<seg rend="sup">х</seg>
                                     прп҃бна<seg rend="sup">о</seg> ѡца҃ наше<seg rend="sup">г</seg>
-                                Макарїа Великаа<seg rend="sup">г</seg> слово ѕѣло полезно.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Главизны въкратцѣ съложены еже ѿ
-                                    стареч<seg rend="sup">с</seg>кыхъ пооученїи.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Повѣда нѣкыи старцъ.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ꙗко по<seg rend="sup">д</seg>баеть себе хра<seg rend="sup">ни</seg>ти и ни единого
-                                ѡсѫждатїи.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Бы<seg rend="sup">с</seg>
-                                    иног<seg rend="sup">д</seg>а съборъ въ скитѣ...</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Слово ѕѣло полезно. Хотѧи
-                                пристѫпити къ Гоу҃...</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ѡ дръзости слово.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Стго҃ Исаиѫ...</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg> старцъ.
-                                ꙗко члкъ҃ сѣдеи въ келии своеи...</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg> нѣкыи ѿ
-                                оцъ҃ ꙗко же вѣтръ зноенъ е<seg rend="sup">с</seg>...</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Оупо<seg rend="sup">д</seg>бисѧ
-                                дша҃ желѣзу–</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ѡ то<seg rend="sup">м</seg> како
-                                    по<seg rend="sup">д</seg>бае<seg rend="sup">т</seg> гл҃ти млт҃вѫ.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Сице рѣшѫ ѡци҃. ѡвъ оубо Ги҃
+                                Макарїа Великаа<seg rend="sup">г</seg> слово ѕѣло полезно.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Главизны въкратцѣ съложены еже ѿ
+                                    стареч<seg rend="sup">с</seg>кыхъ пооученїи.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Повѣда нѣкыи старцъ.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ꙗко по<seg rend="sup"
+                                >д</seg>баеть себе хра<seg rend="sup">ни</seg>ти и ни единого
+                                ѡсѫждатїи.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Бы<seg rend="sup">с</seg>
+                                    иног<seg rend="sup">д</seg>а съборъ въ скитѣ...</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Слово ѕѣло полезно. Хотѧи
+                                пристѫпити къ Гоу҃...</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ѡ дръзости слово.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Стго҃ Исаиѫ...</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg> старцъ.
+                                ꙗко члкъ҃ сѣдеи въ келии своеи...</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg> нѣкыи ѿ
+                                оцъ҃ ꙗко же вѣтръ зноенъ е<seg rend="sup">с</seg>...</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Оупо<seg rend="sup">д</seg>бисѧ
+                                дша҃ желѣзу-</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ѡ то<seg rend="sup">м</seg> како
+                                    по<seg rend="sup">д</seg>бае<seg rend="sup">т</seg> гл҃ти млт҃вѫ
+                                .</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Сице рѣшѫ ѡци҃. ѡвъ оубо Ги҃
                                     Ї<seg rend="sup">с</seg>у Х<seg rend="sup">с</seg>е сне҃ бии҃
-                                пом҃луи мѧ......</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg> пакы
-                                ꙗко же члкъ҃ зрѧ ѡрла летѧща.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg> старцъ
-                                нѣкыи ѿ великыи<seg rend="sup">х</seg> лоуче е<seg rend="sup">с</seg> жити съ двѣма или съ трїма боѫщимисѧ Ба҃<gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Повѣда на<seg rend="sup">м</seg>
-                                авва Петръ. оучнкъ҃ аввѫ Исаїѫ<gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Сло<seg rend="sup">в</seg>
-                                полезно.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Тыже ре<seg rend="sup">ч</seg>.
+                                пом҃луи мѧ......</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg> пакы
+                                ꙗко же члкъ҃ зрѧ ѡрла летѧща.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg> старцъ
+                                нѣкыи ѿ великыи<seg rend="sup">х</seg> лоуче е<seg rend="sup"
+                                    >с</seg> жити съ двѣма или съ трїма боѫщимисѧ Ба҃<gap hand="NG"
+                                /></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Повѣда на<seg rend="sup">м</seg>
+                                авва Петръ. оучнкъ҃ аввѫ Исаїѫ<gap hand="NG"/></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Сло<seg rend="sup">в</seg>
+                                полезно.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Тыже ре<seg rend="sup">ч</seg>.
                                     ег<seg rend="sup">д</seg>а оубо услышиши ꙗко Хс҃ съниде въ
-                                    адъ<gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Мни<seg rend="sup">х</seg> нѣкы.
-                                имыи бра<seg rend="sup">т</seg> проста<gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Проповѣдаѧ нѣког<seg rend="sup">д</seg>а въ скитѣ м҃.тнїца по<seg rend="sup">с</seg>
-                                <gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Въпроси иногда авва Логгинъ ѡца҃
-                                Лукїа ѡ три<seg rend="sup">х</seg> помышленїи глѧ<gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ѡ томъ еже не вълагати себе въ
-                                ѡчѣанїе. бра<seg rend="sup">т</seg> нѣкыи. живыи въ монодїи<seg rend="sup">х</seg>
-                                <gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Бѣше нѣкто ѡшелни<seg rend="sup">к</seg>. къ нему же приходихѫ бѣсове<gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg> авва
+                                    адъ<gap hand="NG"/></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Мни<seg rend="sup">х</seg> нѣкы.
+                                имыи бра<seg rend="sup">т</seg> проста<gap hand="NG"/></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Проповѣдаѧ нѣког<seg rend="sup"
+                                    >д</seg>а въ скитѣ м҃.тнїца по<seg rend="sup">с</seg>
+                                <gap hand="NG"/></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Въпроси иногда авва Логгинъ ѡца҃
+                                Лукїа ѡ три<seg rend="sup">х</seg> помышленїи глѧ<gap hand="NG"
+                                /></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ѡ томъ еже не вълагати себе въ
+                                ѡчѣанїе. бра<seg rend="sup">т</seg> нѣкыи. живыи въ монодїи<seg
+                                    rend="sup">х</seg>
+                                <gap hand="NG"/></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Бѣше нѣкто ѡшелни<seg rend="sup"
+                                    >к</seg>. къ нему же приходихѫ бѣсове<gap hand="NG"/></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg> авва
                                 Ѯанѳїе. песъ бол'ши мене е<seg rend="sup">с</seg>
-                                <gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg>
+                                <gap hand="NG"/></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg>
                                 бл҃женныи Іѡа<seg rend="sup">н</seg> Златооустъ сѣдѧщу ти на чьтени
                                 слов бии<seg rend="sup">х</seg>
-                                <gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg> стыи҃
-                                    Ефре<seg rend="sup">м</seg>. слава иноку боатисѧ Га҃<gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Бѣше нѣкто бра<seg rend="sup">т</seg>. и борѣш<seg rend="sup">е</seg> его помышленїе<gap/></ab>
+                                <gap hand="NG"/></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg> стыи҃
+                                    Ефре<seg rend="sup">м</seg>. слава иноку боатисѧ Га҃<gap
+                                    hand="NG"/></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Бѣше нѣкто бра<seg rend="sup"
+                                    >т</seg>. и борѣш<seg rend="sup">е</seg> его помышленїе<gap
+                                    hand="NG"/></p>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">69v–70 (70v?)</locus>
+                        <locus n="2">69v-70 (70v?)</locus>
                         <title xml:lang="bg">Житие на св. Бенедикт, извлечение</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -225,12 +241,14 @@
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">ѿ житїа стого҃ Бенедїкта.
                                     сло<seg rend="sup">в</seg>.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Нѣког<seg rend="sup">д</seg>а стому Бенедикту. въ своеи келїи безмлъвстуѫщу. оучнкъ҃
-                                его имене<seg rend="sup">м</seg> Плаки<seg rend="sup">д</seg></incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Нѣког<seg rend="sup"
+                                    >д</seg>а стому Бенедикту. въ своеи келїи безмлъвстуѫщу. оучнкъ҃
+                                его имене<seg rend="sup">м</seg> Плаки<seg rend="sup"
+                                >д</seg></incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">70v–75v (76?)</locus>
+                        <locus n="3">70v-75v (76?)</locus>
                         <title xml:lang="bg">Сказание от книгите (извадка от Патерика)</title>
                         <author>anonymous</author>
                         <note>The same in Mss Sinod. 38, 135r (the text contains little
@@ -239,11 +257,13 @@
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Сказанїе ѿ книгъ.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ѡбходѧще<seg rend="sup">м</seg> же на<seg rend="sup">м</seg> скиты и прѣбыванїа ѿчь<seg rend="sup">с</seg>ка</incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ѡбходѧще<seg rend="sup"
+                                    >м</seg> же на<seg rend="sup">м</seg> скиты и прѣбыванїа ѿчь<seg
+                                    rend="sup">с</seg>ка</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">76–77v (78?)</locus>
+                        <locus n="4">76-77v (78?)</locus>
                         <title xml:lang="bg">Слово за Успение Богородично</title>
                         <author>Constantine Manasses</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -254,7 +274,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">78–93v (94?)</locus>
+                        <locus n="5">78-93v (94?)</locus>
                         <title xml:lang="bg">Тълкувания за светата Троица и за вярата, извадки</title>
                         <note>Contains four texts, without united title; the same texts + two texts,
                             that not exist in Lovch., formed Book about the Holy Trinity in
@@ -269,126 +289,159 @@
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Изложенїе въкрацѣ о
-                                правовѣрнѣи вѣрѣ Иѡана Фїлософа къ нѣкоему просившу оу не<seg rend="sup">г</seg>.</head>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ѡ еже колико дѣль сътвоти бъ҃ въ
-                                шести҃хъ днехъ <gap/> и сего ради. кб҃. словѣ имѧ<seg rend="sup">т</seg> жидове.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">О то<seg rend="sup">м</seg>ж<seg rend="sup">д</seg>е стго҃ ѡца҃ наше<seg rend="sup">г</seg>
-                                Епифанїа.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Северїана еп<seg rend="sup">к</seg>а Гавалоу. сказанїе ѿ пръвааго слова Шестоднь҃нїка.</ab>
+                                правовѣрнѣи вѣрѣ Иѡана Фїлософа къ нѣкоему просившу оу не<seg
+                                    rend="sup">г</seg>.</head>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ѡ еже колико дѣль сътвоти бъ҃ въ
+                                шести҃хъ днехъ <gap hand="NG"/> и сего ради. кб҃. словѣ имѧ<seg
+                                    rend="sup">т</seg> жидове.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">О то<seg rend="sup">м</seg>ж<seg
+                                    rend="sup">д</seg>е стго҃ ѡца҃ наше<seg rend="sup">г</seg>
+                                Епифанїа.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Северїана еп<seg rend="sup"
+                                    >к</seg>а Гавалоу. сказанїе ѿ пръвааго слова Шестоднь҃нїка.</p>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="6">94–100 (100?)</locus>
+                        <locus n="6">94-100 (100?)</locus>
                         <title xml:lang="bg">Житие на св. Никита</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Чьтенїе стго҃ Никїти бл<seg rend="sup">с</seg>ви ѡче҃.</head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чьтенїе стго҃ Никїти бл<seg
+                                    rend="sup">с</seg>ви ѡче҃.</head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">100–111v (112?)</locus>
+                        <locus n="7">100-111v (112?)</locus>
                         <title xml:lang="bg">Житие на св. Марк Атински</title>
                         <author>anonymous</author>
                         <note>The text is from Patericon.</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Житїе и жизнь пр<seg rend="sup">е</seg>побна<seg rend="sup">г</seg> ѡца҃ наше<seg rend="sup">г</seg> Марка Аѳїнеиска<seg rend="sup">г</seg>.
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Житїе и жизнь пр<seg
+                                    rend="sup">е</seg>побна<seg rend="sup">г</seg> ѡца҃ наше<seg
+                                    rend="sup">г</seg> Марка Аѳїнеиска<seg rend="sup">г</seg>.
                                 жившааг въ горѣ Фрачьстѣи сѫщои ѡбонъ по<seg rend="sup">л</seg>
                                 Еѳіѡпїѫ птѣмо ѧзыка хетеискаго.блго҃слови ѡче҃.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Повѣда на<seg rend="sup">м</seg> авва Серапиѡ<seg rend="sup">н</seg>. сѫщу ми иногда
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Повѣда на<seg rend="sup"
+                                    >м</seg> авва Серапиѡ<seg rend="sup">н</seg>. сѫщу ми иногда
                                 вънѧтрънїи поустыни</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="8">112–130 (130v?)</locus>
+                        <locus n="8">112-130 (130v?)</locus>
                         <title xml:lang="bg">Откровение на Псевдо-Методий Патарски</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Стго҃ ѡца҃ наше<seg rend="sup">г</seg> Меѳодїа еп<seg rend="sup">с</seg>копа Патраска<seg rend="sup">г</seg> слово ѡ цр<seg rend="sup">с</seg>твы ѧзыкъ. ѡ
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Стго҃ ѡца҃ наше<seg rend="sup"
+                                    >г</seg> Меѳодїа еп<seg rend="sup">с</seg>копа Патраска<seg
+                                    rend="sup">г</seg> слово ѡ цр<seg rend="sup">с</seg>твы ѧзыкъ. ѡ
                                     послѣдни<seg rend="sup">х</seg> врѣме<seg rend="sup">н</seg>.
                                 извѣстно сказанїе ѿ пръва<seg rend="sup">г</seg> члка҃ до скончанїа
                                 вѣка.</head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="9">130v–174v (175?)</locus>
+                        <locus n="9">130v-174v (175?)</locus>
                         <title xml:lang="bg">Номоканон, извлечение</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Правила сты<seg rend="sup">х</seg> ѿцъ. ѡ иноко<seg rend="sup">х</seg>. и иереѡ<seg rend="sup">х</seg>. и прочѧѧ главы. и ѡ смѣреномѫдрїи. посланїе
-                                    сты<seg rend="sup">х</seg> ѿць .т҃.ни҃. ѿцъ. ѡ приключаѧщи<seg rend="sup">х</seg>сѧ въ иноко<seg rend="sup">х</seg>. и ереѡ<seg rend="sup">х</seg>. и еже по<seg rend="sup">д</seg> властїѧ
-                                    сѫщи<seg rend="sup">м</seg>. разли<seg rend="sup">ч</seg>ныи<seg rend="sup">м</seg> прѣгрѣшенїи<seg rend="sup">х</seg>. и
-                                пооученїе дше҃полезн<seg rend="sup">о</seg> ѕѣло ѡ трѣбоуѧщїи<seg rend="sup">м</seg> пастырѣ на коиж<seg rend="sup">д</seg>о
-                                    грѣ<seg rend="sup">х</seg> положеныи на ѡсщ҃енїе и з<seg rend="sup">д</seg>равїу полученїе поучаѧщїи<seg rend="sup">х</seg>сѧ си<seg rend="sup">х</seg> слове<seg rend="sup">с</seg> незавїсно.</head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Правила сты<seg rend="sup"
+                                    >х</seg> ѿцъ. ѡ иноко<seg rend="sup">х</seg>. и иереѡ<seg
+                                    rend="sup">х</seg>. и прочѧѧ главы. и ѡ смѣреномѫдрїи. посланїе
+                                    сты<seg rend="sup">х</seg> ѿць .т҃.ни҃. ѿцъ. ѡ приключаѧщи<seg
+                                    rend="sup">х</seg>сѧ въ иноко<seg rend="sup">х</seg>. и ереѡ<seg
+                                    rend="sup">х</seg>. и еже по<seg rend="sup">д</seg> властїѧ
+                                    сѫщи<seg rend="sup">м</seg>. разли<seg rend="sup">ч</seg>ныи<seg
+                                    rend="sup">м</seg> прѣгрѣшенїи<seg rend="sup">х</seg>. и
+                                пооученїе дше҃полезн<seg rend="sup">о</seg> ѕѣло ѡ трѣбоуѧщїи<seg
+                                    rend="sup">м</seg> пастырѣ на коиж<seg rend="sup">д</seg>о
+                                    грѣ<seg rend="sup">х</seg> положеныи на ѡсщ҃енїе и з<seg
+                                    rend="sup">д</seg>равїу полученїе поучаѧщїи<seg rend="sup"
+                                    >х</seg>сѧ си<seg rend="sup">х</seg> слове<seg rend="sup"
+                                    >с</seg> незавїсно.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Понеже нѣции безь писанїа
                                 различно законъ оуставивше</incipit>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">О оубїиство<seg rend="sup">х</seg> заповѣди.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ѡ малакїи и мѫжеложьствѣ.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Млтва҃ на<seg rend="sup">д</seg>
-                                    исповѣдаѧщїи<seg rend="sup">м</seg>сѧ.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ѡ исповѣдани таины<seg rend="sup">х</seg> грѣхо<seg rend="sup">в</seg>. поученїе Іѡанна мниха
-                                    ермѡна<seg rend="sup">х</seg>.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Кръвосмѣшенїи сѫть .и҃.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">И пакы зри ѡпасно се стго и
+                            <p xmlns="http://www.tei-c.org/ns/1.0">О оубїиство<seg rend="sup"
+                                    >х</seg> заповѣди.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ѡ малакїи и мѫжеложьствѣ.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Млтва҃ на<seg rend="sup">д</seg>
+                                    исповѣдаѧщїи<seg rend="sup">м</seg>сѧ.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ѡ исповѣдани таины<seg rend="sup"
+                                    >х</seg> грѣхо<seg rend="sup">в</seg>. поученїе Іѡанна мниха
+                                    ермѡна<seg rend="sup">х</seg>.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Кръвосмѣшенїи сѫть .и҃.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">И пакы зри ѡпасно се стго и
                                     въселенска<seg rend="sup">г</seg> втора<seg rend="sup">г</seg>
-                                събора ѡ сырнѣи не<seg rend="sup">д</seg>ли и ѡ прочїи<seg rend="sup">х</seg> не<seg rend="sup">д</seg>лѣ<seg rend="sup">х</seg> сказанїе.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Повѣдаем же и злѫѧ вѣрѫ и
-                                лѫкавѫѧ. иже безквасное дръжѫще, и служѫще мрътво <gap/>
-                                ꙗдѫще гарвана и галунѧ..желвѫ.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">И се ѡ четыридесѧтници. О
-                                    прочїи<seg rend="sup">х</seg> постѣхъ.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ѡ чръноризцѡхъ.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">О прѣлюбодѣанїи.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ѡ ч<seg rend="sup">с</seg>ти
-                                    родите<seg rend="sup">л</seg> дхо҃вныи<seg rend="sup">х</seg>.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ѡ бране<seg rend="sup">х</seg> цъ
-                                црь҃ми на воинствѣ.</ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ѡ оумершїи<seg rend="sup">х</seg>
-                                и памѧтехь и<seg rend="sup">х</seg>.</ab>
+                                събора ѡ сырнѣи не<seg rend="sup">д</seg>ли и ѡ прочїи<seg
+                                    rend="sup">х</seg> не<seg rend="sup">д</seg>лѣ<seg rend="sup"
+                                    >х</seg> сказанїе.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Повѣдаем же и злѫѧ вѣрѫ и
+                                лѫкавѫѧ. иже безквасное дръжѫще, и служѫще мрътво <gap hand="NG"/>
+                                ꙗдѫще гарвана и галунѧ..желвѫ.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">И се ѡ четыридесѧтници. О
+                                    прочїи<seg rend="sup">х</seg> постѣхъ.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ѡ чръноризцѡхъ.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">О прѣлюбодѣанїи.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ѡ ч<seg rend="sup">с</seg>ти
+                                    родите<seg rend="sup">л</seg> дхо҃вныи<seg rend="sup"
+                                >х</seg>.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ѡ бране<seg rend="sup">х</seg> цъ
+                                црь҃ми на воинствѣ.</p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ѡ оумершїи<seg rend="sup">х</seg>
+                                и памѧтехь и<seg rend="sup">х</seg>.</p>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="10">168–174v (175?)</locus>
+                        <locus n="10">168-174v (175?)</locus>
                         <title xml:lang="bg">Патерик (извлечение)</title>
                         <note>Contains five texts.</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Старцъ нѣкыи вели<seg rend="sup">к</seg> сѣдѣше въ Сирїи въ гора<seg rend="sup">х</seg>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Старцъ нѣкыи вели<seg rend="sup"
+                                    >к</seg> сѣдѣше въ Сирїи въ гора<seg rend="sup">х</seg>
                                     Антїѡхїискы<seg rend="sup">х</seg>
-                                <gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Маѯимово. Хс҃ е<seg rend="sup">с</seg> скровїще иже на селѣ съкръвенное ср<seg rend="sup">д</seg>ца твоего <gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Бра<seg rend="sup">т</seg>
-                                стѧжѣемъ ѿ помышленїи лѫкавыи<seg rend="sup">х</seg> скръбѣше <gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg> авва
-                                Пиминъ. ꙗкоже источни<seg rend="sup">к</seg> имѣѫ смра<seg rend="sup">д</seg> многъ <gap/></ab>
-                            <ab xmlns="http://www.tei-c.org/ns/1.0">Попъ ѿ причьта приходѧ къ
-                                ѡшелнику нѣкоему <gap/></ab>
+                                <gap hand="NG"/></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Маѯимово. Хс҃ е<seg rend="sup"
+                                    >с</seg> скровїще иже на селѣ съкръвенное ср<seg rend="sup"
+                                    >д</seg>ца твоего <gap hand="NG"/></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Бра<seg rend="sup">т</seg>
+                                стѧжѣемъ ѿ помышленїи лѫкавыи<seg rend="sup">х</seg> скръбѣше <gap
+                                    hand="NG"/></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Ре<seg rend="sup">ч</seg> авва
+                                Пиминъ. ꙗкоже источни<seg rend="sup">к</seg> имѣѫ смра<seg
+                                    rend="sup">д</seg> многъ <gap hand="NG"/></p>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Попъ ѿ причьта приходѧ къ
+                                ѡшелнику нѣкоему <gap hand="NG"/></p>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="11">175–181v (182?)</locus>
+                        <locus n="11">175-181v (182?)</locus>
                         <title xml:lang="bg">Деяния на нашия Господ Исус Христос</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Дѣанїа и дѣиство Га҃ наше<seg rend="sup">г</seg> Ї<seg rend="sup">с</seg>у Ха҃ ѡче бл<seg rend="sup">о</seg>ви</head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Дѣанїа и дѣиство Га҃ наше<seg
+                                    rend="sup">г</seg> Ї<seg rend="sup">с</seg>у Ха҃ ѡче бл<seg
+                                    rend="sup">о</seg>ви</head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation">
-                        <locus n="12">182–182v</locus>
+                        <locus n="12">182-182v</locus>
                         <title xml:lang="bg">Гръмник</title>
                         <note>Without beginning.</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">въ то<seg rend="sup">м</seg> лѣтѣ жито<seg rend="sup">м</seg>. многы<seg rend="sup">м</seg> домово<seg rend="sup">м</seg> съмрть҃ и зима
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">въ то<seg
+                                    rend="sup">м</seg> лѣтѣ жито<seg rend="sup">м</seg>. многы<seg
+                                    rend="sup">м</seg> домово<seg rend="sup">м</seg> съмрть҃ и зима
                                 въ малѣ</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и грѡздїе сътрыетсѧ
                                     гнѣво<seg rend="sup">м</seg> бжїемь и ꙗрость рвенїемъ Саваѡѳа.
@@ -405,33 +458,45 @@
                             <head xmlns="http://www.tei-c.org/ns/1.0">А се Колѫдаръїатикъ. въсего
                                 чино. добро е<seg rend="sup">с</seg>. ѡ годинѣ вѣдѣти подобно
                                 есть.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще въ не<seg rend="sup">д</seg>лѧ бѫде<seg rend="sup">т</seg> рож<seg rend="sup">д</seg>ьство Х<seg rend="sup">с</seg>во.</incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще въ не<seg rend="sup"
+                                    >д</seg>лѧ бѫде<seg rend="sup">т</seg> рож<seg rend="sup"
+                                    >д</seg>ьство Х<seg rend="sup">с</seg>во.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14">
                         <locus>binding</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <re:sampleText xml:lang="cu"><colophon>
-                            <ab>Сиа книга напи<seg rend="sup">са</seg> же рѫко<seg rend="sup">ѫ</seg>
-                                    мно<seg rend="sup">го</seg>грѣ<seg rend="sup">ш</seg>нѣ<seg rend="sup">г</seg> мона<seg rend="sup">ха</seg>
-                                <persName>Пахомїа</persName> въ бго҃спа<seg rend="sup">с</seg>емаго <placeName>Ловчѣ</placeName>града. при
+                        <colophon>
+                            <p>Сиа книга напи<seg rend="sup">са</seg> же рѫко<seg rend="sup">ѫ</seg>
+                                    мно<seg rend="sup">го</seg>грѣ<seg rend="sup">ш</seg>нѣ<seg
+                                    rend="sup">г</seg> мона<seg rend="sup">ха</seg>
+                                <name xml:lang="cu" type="person" role="scribe" full="yes"
+                                    >Пахомїа</name>въ бго҃спа<seg rend="sup">с</seg>емаго<name
+                                    xml:lang="cu" type="place" full="yes">Ловчѣ</name>града. при
                                     архїеп<seg rend="sup">с</seg>кпѣ кѵ<seg rend="sup">р</seg>
-                                <persName>Семеѡ<seg rend="sup">н</seg>
-                                </persName> при блго҃ч<seg rend="sup">с</seg>тивѣ<seg rend="sup">м</seg>
-                                    де<seg rend="sup">с</seg>потѣ <persName>Але<seg rend="sup">к</seg>нда</persName>ї
-                                при снѣ҃ его <persName>Михаи<seg rend="sup">л</seg> Асѣ<seg rend="sup">н</seg>
-                                </persName>и приведе<seg rend="sup">на</seg> бы<seg rend="sup">с</seg>
-                                зде въ лто =ѕ҃ц҃ (і392) и понови <persName>Паве<seg rend="sup">л</seg>
-                                </persName> бы<seg rend="sup">в</seg> епк<seg rend="sup">о</seg>п
+                                <name xml:lang="cu" type="person" role="archibishop" full="yes"
+                                        >Семеѡ<seg rend="sup">н</seg>
+                                </name>при блго҃ч<seg rend="sup">с</seg>тивѣ<seg rend="sup">м</seg>
+                                    де<seg rend="sup">с</seg>потѣ<name xml:lang="cu" type="person"
+                                    role="despot" full="yes">Але<seg rend="sup">к</seg>нда</name>ї
+                                при снѣ҃ его<name xml:lang="cu" type="person" role="heir" full="yes"
+                                        >Михаи<seg rend="sup">л</seg> Асѣ<seg rend="sup">н</seg>
+                                </name>и приведе<seg rend="sup">на</seg> бы<seg rend="sup">с</seg>
+                                зде въ лто =ѕ҃ц҃ (і392) и понови<name xml:lang="cu" type="person"
+                                    role="writer" full="yes">Паве<seg rend="sup">л</seg>
+                                </name>бы<seg rend="sup">в</seg> епк<seg rend="sup">о</seg>п
                                 роман'скїи въ монасти<seg rend="sup">р</seg>
-                                <placeName>Неме<seg rend="sup">ц</seg>кои</placeName> в лто҃
-                                =з҃р҃м҃г҃. <add type="editorial"><date>1392</date></add>.</ab>
-                        </colophon></re:sampleText>
-                            <bibl><ref target="bib:Турилов2009">Турилов 2009: 336</ref></bibl>
+                                <name xml:lang="cu" type="place" subtype="monastery" full="yes"
+                                        >Неме<seg rend="sup">ц</seg>кои</name>в лто҃
+                                =з҃р҃м҃г҃.(1392).</p>
+                        </colophon>
+                        <bibl>
+                            <ref type="bibl" target="bib:Турилов2009">Турилов 2009: 336</ref>
+                        </bibl>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="internal" resp="#NG">
+                    <origin evidence="de visu" resp="#NG">
                         <origDate notBefore="1300" notAfter="1331">1331, before</origDate>
                     </origin>
                 </history>

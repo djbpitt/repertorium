@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-ET1_27RM">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-ET1_27RM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -20,14 +18,17 @@
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <bibl><ref target="bib:Райков1986">Райков и др. 1986: 116–118</ref></bibl>
+                <p><ref type="bibl" target="bib:Райков1986">Райков и др. 1986: 116–118</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -38,7 +39,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list>
+                    <list type="simple">
                         <item>Miscellany devoted to a single Saint</item>
                         <item>Hagiography</item>
                         <item>St. John of Rila</item>
@@ -48,14 +49,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -79,15 +80,18 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
+                                <material>Paper</material>
                                 <watermark>
-                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Inscription PEDEMONTE</motif>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                        >Inscription PEDEMONTE</motif>
                                 </watermark>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Flying
                                         angel with inscription TAFKOBITT over him</motif>
                                 </watermark>
                                 <watermark>
-                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Crescent</motif>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                        >Crescent</motif>
                                 </watermark>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Little
@@ -122,16 +126,22 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
                         <locus xmlns="http://www.tei-c.org/ns/1.0">1r-129v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Hieromonk Daniil of
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Hieromonk Daniil of
                             Hilandar</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote  script="Cyrs" style="semiuncial">New regular semiuncial</scriptNote>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
+                            type="semiuncial">
+                            <p>New regular semiuncial</p>
                         </scriptDesc>
                         <scribeLang>
-                            <langNote key="orthography">With one jus, with two jers</langNote>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">With one jus, with two
+                                    jers</p>
+                            </orthography>
                         </scribeLang>
-                        <bibl xmlns="http://www.tei-c.org/ns/1.0"><ref target="bib:Райков1986">Райков и др. 1986:
-                            116–118</ref></bibl>
+                        <note xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref type="bibl" target="bib:Райков1986">Райков и др. 1986:
+                                116–118</ref>
+                        </note>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -165,7 +175,8 @@
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Стихиры прп<seg rend="sup">д</seg>бному ѡц҃у іѡанну рылскому на литїахъ</head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Стихиры прп<seg rend="sup"
+                                    >д</seg>бному ѡц҃у іѡанну рылскому на литїахъ</head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="original" style="non-narrative">
@@ -176,7 +187,8 @@
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Канонъ молебныи прп<seg rend="sup">д</seg>бному ѡц҃у нашему іѡанну рылскому</head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Канонъ молебныи прп<seg
+                                    rend="sup">д</seg>бному ѡц҃у нашему іѡанну рылскому</head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="original" style="non-narrative">
@@ -189,7 +201,8 @@
                         <filiation type="apograph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с҃</seg>цъ
-                                октомврїи въ девѧтнадесѧты день памѧть прп<seg rend="sup">д</seg>бнаго и бг҃носнаго оц҃а нашегѡ іѡанна пустыни жителѧ
+                                октомврїи въ девѧтнадесѧты день памѧть прп<seg rend="sup"
+                                >д</seg>бнаго и бг҃носнаго оц҃а нашегѡ іѡанна пустыни жителѧ
                                 рылскаго</head>
                         </sampleText>
                     </msItemStruct>
@@ -206,7 +219,8 @@
                                 октѡврїа въ ѲІ҃ день памѧть прп<seg rend="sup">д</seg>бнагѡ оц҃а
                                 нашегѡ іѡанна рылскагѡ и воспоминанїе ѡ пренесенїи ст҃ыхъ его
                                 мощеи</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Сеи ст҃и прп<seg rend="sup">д</seg>бныи и бг҃оносныи оц҃ъ нашъ іѡаннъ</incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Сеи ст҃и прп<seg rend="sup"
+                                    >д</seg>бныи и бг҃оносныи оц҃ъ нашъ іѡаннъ</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="original" style="non-narrative">
@@ -259,7 +273,8 @@
                         <filiation type="source">Other</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
-                                августа въ осемьнадесѧтыи день. оуспенїе прп<seg rend="sup">д</seg>бнагѡ оц҃а нашегѡ іѡаннна, пустынножителѧ рылскагѡ</head>
+                                августа въ осемьнадесѧтыи день. оуспенїе прп<seg rend="sup"
+                                >д</seg>бнагѡ оц҃а нашегѡ іѡаннна, пустынножителѧ рылскагѡ</head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="original">
@@ -271,7 +286,8 @@
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Житїе и жизнь прп<seg rend="sup">д</seg>бнагѡ и бг҃оноснагѡ оц҃а нашегѡ іѡанна
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Житїе и жизнь прп<seg
+                                    rend="sup">д</seg>бнагѡ и бг҃оноснагѡ оц҃а нашегѡ іѡанна
                                 рылскагѡ, и ѡ пренесеннїи мощеи егѡ въ гра<seg rend="sup">д</seg>
                                 тернѡвъ, списаннѡ еѵѳїмїемъ патрїархѡ<seg rend="sup">м</seg>
                                     терновски<seg rend="sup">м</seg></head>
@@ -280,36 +296,38 @@
                     <msItemStruct xml:id="ACD11" type="original">
                         <locus n="11">2r</locus>
                         <title xml:lang="bg">Колофон</title>
-                      <re:sampleText xml:lang="cu"><colophon>
-                            <ab>Во славу ст҃ыѧ единосущныѧ, животворѧщыѧ и нераздѣлимыѧ тр(о҃)цы,
+                        <colophon>
+                            <p>Во славу ст҃ыѧ единосущныѧ, животворѧщыѧ и нераздѣлимыѧ тр(о҃)цы,
                                 оц҃а, и сн҃а, и ст҃го дх҃а. повелѣнїемъ и бл҃гословѣнїемъ ѡсщ҃еннаго
                                 собора, и всего ѡ хр(с҃)тѣ братст҃ва ст҃ыѧ и сщ҃енныѧ, цр(с҃)кїѧ и
                                 патрїаршескїѧ обители рылскїѧ. написа сѧ сїѧ книжица правило съ
-                                житїемъ и канѡнами седммичнымми нна ѡсми гласовъ прп<seg rend="sup">д</seg>бному оц҃у нашему іѡанну пустинножителю рылскому.
+                                житїемъ и канѡнами седммичнымми нна ѡсми гласовъ прп<seg rend="sup"
+                                    >д</seg>бному оц҃у нашему іѡанну пустинножителю рылскому.
                                 настоѧнїемъ, трудомъ и иждивѣнїемъ преч(с҃)тнѣишаго господинна оц҃а
                                 дїкеа кѵрь ѳеодосїа, тоѧжде ст҃ыѧ обытели рылскїѧ сщ҃енноинока, да
                                 служитъ оу соборную ст҃ую црк҃овъ за негову дш҃у и спасенїе. въ лѣто
                                 ѿ сотворенїѧ мїра #З҃Т҃З҃ї҃. ѿ рж(с҃)тва же по плоти бг҃а слова
-                                #А҃Ѡ҃Ѳ҃ ( іѧ09) маїа Ѳ҃ го днѧ.</ab>
-                        </colophon></re:sampleText>
+                                #А҃Ѡ҃Ѳ҃ ( іѧ09) маїа Ѳ҃ го днѧ.</p>
+                        </colophon>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="original">
                         <locus>129v</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <re:sampleText xml:lang="cu"><colophon>
-                            <ab>Написахъ азъ грѣшный и недостоиный данїилъ їеромонахъ хиландарскїй
+                        <colophon>
+                            <p>Написахъ азъ грѣшный и недостоиный данїилъ їеромонахъ хиландарскїй
                                 своею рукою. родѡ<seg rend="sup">м</seg> есмь ѿ града казанлука.
                                 молю оубо васъ о(ц҃)ы и братїѧ, аще что ѡбрѧщете погрѣшено вы
                                 духовно исправлѧйте, блг(с҃)овите а не клените, да и васъ проститъ
                                     вл<seg rend="sup">д</seg>ка хр(с҃)тосъ согрѣшеннїѧ ваша, во вѣки
-                                аминъ.</ab>
-                        </colophon></re:sampleText>
+                                аминъ.</p>
+                        </colophon>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="internal" resp="#ET">
-                        <origDate notBefore="1809" notAfter="1809">1809</origDate>
-                        <origPlace>Rila monastery</origPlace>
+                    <origin evidence="de visu" resp="#ET">
+                        <origDate notBefore="1809" notAfter="1809" cert="high" evidence="internal"
+                            >1809</origDate>
+                        <origPlace cert="high" evidence="internal">Rila monastery</origPlace>
                         <ref type="bibl" target="bib:Райков1986">Райков и др. 1986: 116–118</ref>
                     </origin>
                 </history>

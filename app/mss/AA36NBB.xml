@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
     xml:id="RC-AA36NBB">
     <teiHeader>
@@ -17,7 +14,7 @@
             <publicationStmt>
                 <publisher>Istitute of Literature</publisher>
                 <pubPlace>Sofia, Bulgaria</pubPlace>
-                <date when="1995-08-30">30. 08.1995</date>
+                <date>30. 08.1995</date>
                 <idno>RC-AA36NBB</idno>
                 <availability status="free">
                     <p>Creative Commons Attribution-No Derivative Works 3.0 <ref
@@ -27,7 +24,7 @@
             </publicationStmt>
             <sourceDesc>
                 <p><ref type="bibl" target="bib:Штављанин-Ђорђевић1986">Штављанин-Ђорђевић,
-                    Гроздановић-Паић, Цернић 1986: 68–72</ref></p>
+                        Гроздановић-Паић, Цернић 1986: 68-72</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -40,7 +37,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list>
+                    <list type="simple">
                         <item>Apocryphal Miscellany</item>
                         <item>Prognostic Books</item>
                         <item>Apocryphal Prayers</item>
@@ -58,8 +55,6 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
-            <change who="#AB" when="2023-10-19">Moved information about script to element &gt;scriptNote&lt;. Include when attribute and its value in element &lt;date&gt; inside &gt;publicationStmt&lt;</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when="2009-04-17">Removed constructions for anonymous author</change>
@@ -90,22 +85,26 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
+                                <material>Paper</material>
                                 <watermark>
                                     <re:motif>Anchor in circle with star above</re:motif>
                                     <ref type="bibl" target="bib:Moshin1973">
                                         <num>1531</num>
+                                        <date>?</date>
                                     </ref>
                                 </watermark>
                                 <watermark>
                                     <re:motif>Anchor in circle with anchor</re:motif>
                                     <ref type="bibl" target="bib:Moshin1973">
                                         <num>1942</num>
+                                        <date>?</date>
                                     </ref>
                                 </watermark>
                                 <watermark>
                                     <re:motif>Lion</re:motif>
                                     <ref type="bibl" target="bib:Grujch">
                                         <num>42</num>
+                                        <date>?</date>
                                     </ref>
                                 </watermark>
                                 <watermark>
@@ -123,51 +122,51 @@
                                     <width>65</width>
                                 </dimensions>
                             </extent>
+                            <collation>
+                                <summary>no data</summary>
+                            </collation>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" writtenLines="18"/>
                         </layoutDesc>
                     </objectDesc>
                     <re:ink>Dark brown</re:ink>
-                    <decoDesc><p>Red initials, tables and borders</p>
+                    <decoDesc>
+                        <p>Red initials, tables and borders</p>
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <summary>Leather on cardboard</summary>
+                            <p>Leather and cardboard</p>
                         </binding>
                     </bindingDesc>
                 </physDesc>
                 <re:scribeDesc>
                     <re:scribe n="1">
                         <locusGrp>
-                            <locus>1–81</locus>
-                            <locus>95–102</locus>
+                            <locus>1-81</locus>
+                            <locus>95-102</locus>
                         </locusGrp>
-                        <name role="scribe">anonymous</name>
-                        <scriptDesc>
-                            <scriptNote script="Cyrs" style="semiuncial"/>
-                        </scriptDesc>
-                        <re:scribeLang>
-                            <re:langNote>Lowering of jers: <foreign xml:lang="cu">ь</foreign> to <foreign
-                                xml:lang="cu">e</foreign>, <foreign xml:lang="cu">ъ</foreign> to
-                                <foreign xml:lang="cu">o</foreign>; The letter <foreign
+                        <name full="yes">anonymous</name>
+                        <re:scribeLang script="Cyrs" type="semiuncial">
+                            <p>Lowering of jers: <foreign xml:lang="cu">ь</foreign> to <foreign
+                                    xml:lang="cu">e</foreign>, <foreign xml:lang="cu">ъ</foreign> to
+                                    <foreign xml:lang="cu">o</foreign>; The letter <foreign
                                     xml:lang="cu">ѣ</foreign> is replaced in some cases with
-                                <foreign xml:lang="cu">e</foreign> and <foreign xml:lang="cu"
+                                    <foreign xml:lang="cu">e</foreign> and <foreign xml:lang="cu"
                                     >ьі</foreign> with <foreign xml:lang="cu">и</foreign> ; peculiar
                                 forms for the future tense in some places: <foreign xml:lang="cu"
                                     >прибегноукешь</foreign>, <foreign xml:lang="cu"
-                                        >имакешь</foreign></re:langNote>
+                                    >имакешь</foreign></p>
                         </re:scribeLang>
-                        <bibl><ref target="bib:Штављанин-Ђорђевић1986">Штављанин-Ђорђевић,
+                        <note>
+                            <ref type="bibl" target="bib:Штављанин-Ђорђевић1986">Штављанин-Ђорђевић,
                                 Гроздановић-Паић, Цернић 1986.1: 68-72</ref>
-                        </bibl>
+                        </note>
                     </re:scribe>
                     <re:scribe n="2">
                         <locus>97-104</locus>
-                        <name role="scribe">anonymous</name>
-                        <scriptDesc>
-                            <scriptNote  script="Cyrs" style="semiuncial"/>
-                        </scriptDesc>
+                        <name full="yes">anonymous</name>
+                        <re:scribeLang script="Cyrs" type="semiuncial"/>
                         <note>
                             <date>19th c.</date>
                             <ref type="bibl" target="bib:Штављанин-Ђорђевић1986">Штављанин-Ђорђевић,
@@ -180,7 +179,7 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1r–3v</locus>
+                        <locus n="1">1r-3v</locus>
                         <title xml:lang="bg">Трепетник</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -191,7 +190,7 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">3v–5r</locus>
+                        <locus n="2">3v-5r</locus>
                         <title xml:lang="bg">Правила за живота през 12-те месеца</title>
                         <author>Solomon (Pseudo)</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -210,7 +209,7 @@
                         <re:sampleText xml:lang="cu">
                             <head>М<seg rend="sup">л</seg>тва ѡт бесна ѱа или ѡт влька</head>
                             <incipit>комькаи его вь прьвою сѹботѹ. прѣд сл҃нцем</incipit>
-                            <explicit>да ѹкрот'т се вь име <gap/>аминь</explicit>
+                            <explicit>да ѹкрот'т се вь име <gap hand="AA"/>аминь</explicit>
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
@@ -241,7 +240,7 @@
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <re:sampleText xml:lang="cu">
-                            <head>и паки вь дрѹги извод <gap/>ѡт беса слова сїа</head>
+                            <head>и паки вь дрѹги извод <gap hand="AA"/>ѡт беса слова сїа</head>
                             <incipit>Пиши на хлѣбѣ прѣсне</incipit>
                             <explicit>да срькнет и исцѣлѣеть</explicit>
                         </re:sampleText>
@@ -302,7 +301,7 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation">
-                        <locus n="12">8r</locus>
+                        <locus n="12">8</locus>
                         <title xml:lang="bg">Молитва против запек на кон</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -321,7 +320,7 @@
                             <head>Мл҃ ѡ зѹбї егда болать ч҃вка</head>
                             <incipit>вь име ѡ҃ца и с҃на</incipit>
                             <explicit>сего име рѣ<seg rend="sup">кь</seg>и пр<seg rend="sup"
-                                >и</seg>сно и вь вѣки <gap/>амин.</explicit>
+                                >и</seg>сно и вь вѣки <gap hand="AA"/>амин.</explicit>
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="translation">
@@ -332,8 +331,8 @@
                         <re:sampleText xml:lang="cu">
                             <head>Мл҃ в҃ томѹжде.</head>
                             <incipit>Г҃ь б҃ь г҃и име твое</incipit>
-                            <explicit>прѣмѹдраго Соломона. ꙗко дрьжава его ес вь име ѡ҃ца
-                                <gap/>амин</explicit>
+                            <explicit>прѣмѹдраго Соломона. ꙗко дрьжава его ес вь име ѡ҃ца <gap
+                                    hand="AA"/>амин</explicit>
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15" type="translation">
@@ -357,7 +356,7 @@
                         <re:sampleText xml:lang="cu">
                             <head>Мл҃ в҃ томужде. ѡт дна.</head>
                             <incipit>Дно лѹта еси</incipit>
-                            <explicit>дрьжит дна. вь име ѡ҃ца <gap/>вѣки.</explicit>
+                            <explicit>дрьжит дна. вь име ѡ҃ца <gap hand="AA"/>вѣки.</explicit>
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17" type="translation">
@@ -368,7 +367,7 @@
                         <re:sampleText xml:lang="cu">
                             <head>Мл҃ г҃ томѹжде. ѡт дна.</head>
                             <incipit>Испив'шѹ се сїю днѹ</incipit>
-                            <explicit>клета бо еси и трьклета. вь име ѡ҃ца и с҃на <gap/>
+                            <explicit>клета бо еси и трьклета. вь име ѡ҃ца и с҃на <gap hand="AA"/>
                                 прьсно.</explicit>
                         </re:sampleText>
                     </msItemStruct>
@@ -406,7 +405,7 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD21" type="translation">
-                        <locus n="21">14r</locus>
+                        <locus n="21">14</locus>
                         <title xml:lang="bg">Молитва против “наход”</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -454,7 +453,7 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD25" type="translation">
-                        <locus n="25">17v–18r</locus>
+                        <locus n="25">17v-18</locus>
                         <title xml:lang="bg">Коледник</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -464,7 +463,7 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD26" type="translation">
-                        <locus n="26">19r–26r</locus>
+                        <locus n="26">19-26</locus>
                         <title xml:lang="bg">Гръмник Зодиак</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -474,7 +473,7 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD27" type="translation">
-                        <locus n="27">26r–31r</locus>
+                        <locus n="27">26-31</locus>
                         <title xml:lang="bg">Гръмник по растяща и намаляваща луна</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -484,7 +483,7 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD28" type="translation">
-                        <locus n="28">31r–46v</locus>
+                        <locus n="28">31-46v</locus>
                         <title xml:lang="bg">Календар лунен</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -493,7 +492,7 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD29" type="translation">
-                        <locus n="29">46v–57r</locus>
+                        <locus n="29">46v-57</locus>
                         <title xml:lang="bg">Таблици пасхални с луновник и синаксар</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -503,7 +502,7 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD30" type="translation">
-                        <locus n="30">61v–62r</locus>
+                        <locus n="30">61v-62</locus>
                         <title xml:lang="bg">Типик</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -521,7 +520,7 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD32" type="translation">
-                        <locus n="32">61v–62v</locus>
+                        <locus n="32">61v-62v</locus>
                         <title xml:lang="bg">Летопис кратък от Адам до днешния ден</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -532,7 +531,7 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD33" type="translation">
-                        <locus n="33">62v–64r</locus>
+                        <locus n="33">62v-64</locus>
                         <title xml:lang="bg">Сведения за продължителността на лунната светлина</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -541,7 +540,7 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD34" type="translation">
-                        <locus n="34">64r–64v</locus>
+                        <locus n="34">64-64v</locus>
                         <title xml:lang="bg">Сведения за кръга на слънцето или луната</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -559,13 +558,13 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD36" type="translation">
-                        <locus n="36">65r–79v</locus>
+                        <locus n="36">65-79v</locus>
                         <title xml:lang="bg">Таблици пасхални</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD37" type="translation">
-                        <locus n="37">80r–82r</locus>
+                        <locus n="37">80-82</locus>
                         <title xml:lang="bg">Сведения за щастливите и нещастните дни през различни месеци</title>
                         <note>Without title</note>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -577,13 +576,13 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD38" type="translation">
-                        <locus n="38">81v–82r</locus>
+                        <locus n="38">81v-82</locus>
                         <title xml:lang="bg">Описание на магическа практика за съдбата на болния</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD39" type="translation">
-                        <locus n="39">82r–90v</locus>
+                        <locus n="39">82-90</locus>
                         <title xml:lang="bg">Таблици със слънчевото и лунното движение</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -594,7 +593,7 @@
                     <msItemStruct xml:id="ACD40" type="translation">
                         <locus n="40">92v</locus>
                         <title xml:lang="bg">Сведения за небесните стихии</title>
-                        <note>Part of astronomy – cosmography work</note>
+                        <note>Part of astronomy-cosmography work</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <re:sampleText xml:lang="cu">
@@ -603,9 +602,9 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD41" type="translation">
-                        <locus n="41">95r</locus>
+                        <locus n="41">95</locus>
                         <title xml:lang="bg">Сведения за планетите</title>
-                        <note>Part of astronomy – cosmography work</note>
+                        <note>Part of astronomy-cosmography work</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <re:sampleText xml:lang="cu">
@@ -615,9 +614,9 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD42" type="translation">
-                        <locus n="42">96r</locus>
+                        <locus n="42">96</locus>
                         <title xml:lang="bg">Сведения за нелъстивите</title>
-                        <note>Part of astronomy – cosmography work</note>
+                        <note>Part of astronomy-cosmography work</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <re:sampleText xml:lang="cu">
@@ -638,14 +637,14 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD44" type="translation">
-                        <locus n="44">97r</locus>
+                        <locus n="44">97</locus>
                         <title xml:lang="bg">Молитви за жена, която не може да роди</title>
                         <note>The texts were written later than the whole content manuscript</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <re:sampleText xml:lang="cu">
                             <head>М҃лтва егда не можеть жена родити ѡтроче запрено</head>
-                            <rubric>М҃лтва втора томѹжде.</rubric>
+                            <p>М҃лтва втора томѹжжде.</p>
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD45" type="translation">
@@ -659,7 +658,7 @@
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD46" type="translation">
-                        <locus n="46">98r</locus>
+                        <locus n="46">98</locus>
                         <title xml:lang="bg">Рецепта срещу "задих"</title>
                         <note>only few words from this text are left</note>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -670,8 +669,9 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="conjecture" resp="#AA">
-                        <origDate>16th c., third quarter, with some folia from the 19th c.</origDate>
+                    <origin evidence="de visu" resp="#AA">
+                        <origDate>16th c., third quarter, with some folia from the 19th
+                            c.</origDate>
                         <ref type="bibl" target="bib:Штављанин-Ђорђевић1986">Штављанин-Ђорђевић,
                             Гроздановић-Паић, Цернић 1986.1:68-72</ref>
                     </origin>

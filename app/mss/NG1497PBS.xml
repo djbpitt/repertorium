@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-NG1497PBS">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-NG1497PBS">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Хроника на Константин Манасий и други съчинения, Петербургски
+                <title type="main">Хроника на Константин Манасий и други съчинения, Петербургски
                     препис, ХVІ в., начало</title>
                 <author xml:id="NG">Nina Gagova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
@@ -17,20 +15,23 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date when="2005-11">November 2005</date>
+                <date>November 2005</date>
                 <idno type="Repertorium">RC-NG1497PBS</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <listBibl><bibl><ref type="bibl" target="bib:Сырку1898">Сырку 1898: 421</ref></bibl>
-                    <bibl><ref type="bibl" target="bib:Дуйчев1988">Дуйчев и др. 1988: 98-101</ref></bibl></listBibl>
+                <p><ref type="bibl" target="bib:Сырку1898">Сырку 1898: 421</ref>
+                    <ref type="bibl" target="bib:Дуйчев1988">Дуйчев и др. 1988: 98-101</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -42,7 +43,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list>
+                    <list type="simple">
                         <item>King Ivan Alexander</item>
                         <item>Chronicle</item>
                     </list>
@@ -51,16 +52,18 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
+
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
+
             <change who="#AM" when="2011-10-07">Removed old elements</change>
             <change who="#AM" when="2011-10-07">Editorial work, checked MS and added
                 information</change>
@@ -85,11 +88,12 @@
                                 <material>Paper of very good quality, thick and glittering, with
                                     wide versors.</material>
                                 <watermark>
-                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Sphere</motif>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                        >Sphere</motif>
                                     <ref type="bibl" target="bib:Briquet1907">
-                                        <num><ref target="https://briquet-online.at/14010">14010</ref></num>
+                                        <num>14010</num>
                                         <date>1567</date>
-                                        <num><ref target="https://briquet-online.at/14019">14019</ref></num>
+                                        <num>14019</num>
                                         <date>1580</date>
                                     </ref>
                                 </watermark>
@@ -97,8 +101,8 @@
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Pot
                                         with one handle</motif>
                                     <ref type="bibl" target="bib:Briquet1907">
-                                        <num><ref target="https://briquet-online.at/12794">12794</ref></num>
-                                        <date>1591/1592</date>
+                                        <num>12794</num>
+                                        <date>1591</date>
                                     </ref>
                                     <ref type="bibl" target="bib:Гераклитов1963">
                                         <num>409</num>
@@ -134,28 +138,29 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <summary>Old, <date>17th c.</date></summary>
+                            <p>Old, 17th c.</p>
                         </binding>
                     </bindingDesc>
-                    <additions>
+                    <additions type="inscriptions">
                         <locus>f. 1</locus>
-                        <quote xml:lang="ru">Въ началѣ римскымъ книгам Георгия мниха Кирилова монастыря.
+                        <quote>Въ началѣ римскымъ книгам Георгия мниха Кирилова монастыря.
                                 Іс<supplied>оу</supplied>с Сираховъ.</quote>
                     </additions>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–169v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote script="Cyrs" style="semiuncial"/>
-                        </scriptDesc>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-169v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
+                            type="semiuncial"/>
                         <scribeLang>
-                                <langNote key="orthography">Russian orthogrophy</langNote>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Russian orthogrophy</p>
+                            </orthography>
                         </scribeLang>
-                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref target="bib:Дуйчев1988">Дуйчев и др. 1988:
-                            98–101</ref></bibl>
+                        <note xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref type="bibl" target="bib:Дуйчев1988">Дуйчев и др. 1988:
+                            98-101</ref></note>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -164,20 +169,24 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1r–10v</locus>
+                        <locus n="1">1r-10v</locus>
                         <title xml:lang="bg">Хроника на Георги Амартол</title>
                         <author>George Hamartolos</author>
-                        <note>The fragments of the chronicle are published by V. M. Istrin. <ref type="bibl" target="bib:Истрин1920">Истрин 1920: 53–69</ref></note>
+                        <note>The fragments of the chronicle are published by V. M. Istrin. <ref
+                                type="bibl" target="bib:Истрин1920">Истрин 1920: 53-69</ref></note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Начало римским книгам Геѡргїа
                                 мниха.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Адам оубо ѡ пр<seg rend="sup">ѣ</seg>м<seg rend="sup">оу</seg>драго и б<seg rend="sup">о</seg>жественаго пр<seg rend="seg">о</seg>рока</incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Адам оубо ѡ пр<seg
+                                    rend="sup">ѣ</seg>м<seg rend="sup">оу</seg>драго и б<seg
+                                    rend="sup">о</seg>жественаго пр<seg rend="seg"
+                                >о</seg>рока</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">170r–402v</locus>
+                        <locus n="2">170r-402v</locus>
                         <title xml:lang="bg">Хроника на Константин Манасий</title>
                         <author>Constantine Manasses</author>
                         <note>The text is without title and beginning.</note>
@@ -189,9 +198,9 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">402r–404v</locus>
+                        <locus n="3">402r-404v</locus>
                         <title xml:lang="bg">Гномологий</title>
-                        <author cert="low">Sirach</author>
+                        <author>Sirach?</author>
                         <note>Unidentified</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -202,8 +211,10 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin resp="#NG">
-                        <origDate cert="low" evidence="internal" notBefore="1501" notAfter="1599">16th c. </origDate>
+                    <origin evidence="de visu">
+                        <origDate cert="low" evidence="internal" notBefore="1501" notAfter="1599"
+                            >16th c. </origDate>
+                        <origPlace>unknown. </origPlace>
                     </origin>
                     <provenance>Manuscript belonged to the Sofijskaja biblioteka, Theological
                         Academy, St. Peterburg</provenance>

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AA1322NBKM">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-AA1322NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -21,10 +19,13 @@
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -57,14 +58,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when="2012-02-04">Edition of collation to correspond to the new
@@ -98,8 +99,10 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
+                                <material>Paper</material>
                                 <watermark>
-                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Lion</motif>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
+                                        >Lion</motif>
                                 </watermark>
                             </support>
                             <extent>
@@ -111,7 +114,10 @@
                             </extent>
                             <foliation>with letters from <foreign xml:lang="cu">а҃</foreign> to
                                     <foreign xml:lang="cu">ві҃</foreign></foliation>
-                            <condition>ff. 1r–3v and 15v–16v are blank</condition>
+                            <collation>
+                                <summary>No data</summary>
+                            </collation>
+                            <condition>ff. 1r-3v and 15v-16v are blank</condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" ruledLines="26"/>
@@ -123,23 +129,29 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">4r–35v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote style="semiuncial" script="Cyrs">Small new semiuncial with ligatures and diacritics</scriptNote>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">4r-35v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="semiuncial"
+                            script="Cyrs">
+                            <p>Small new semiuncial with ligatures and diacritics</p>
                         </scriptDesc>
                         <scribeLang>
-                            <summary xmlns="http://www.tei-c.org/ns/1.0">Church Slavonic</summary>
-                            <langNote key="orthography">Two jers, nasal
-                                vowel <foreign xmlns="http://www.tei-c.org/ns/1.0">ѧ</foreign> in the places of <foreign xmlns="http://www.tei-c.org/ns/1.0"  xml:lang="cu">ꙗ</foreign>, presence of <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ѣ</foreign></langNote>
+                            <p xmlns="http://www.tei-c.org/ns/1.0">Church Slavonic; two jers, nasal
+                                vowel <foreign xml:lang="cu">ѧ</foreign> in the places of <foreign
+                                    xml:lang="cu">ꙗ</foreign>, presence of <foreign xml:lang="cu"
+                                    >ѣ</foreign></p>
                         </scribeLang>
+                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
+                            <name full="yes">A. Angusheva</name>
+                            <resp>de visu</resp>
+                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">4r–8r</locus>
+                        <locus n="1">4r-8r</locus>
                         <title xml:lang="bg">Видение на цар Амфилохий</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -151,7 +163,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">8v–15r</locus>
+                        <locus n="2">8v-15r</locus>
                         <title xml:lang="bg">Тълкувание за проскомидията на Симеон Солунски</title>
                         <author>Symeon of Thessalonike</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -166,14 +178,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3">
-                        <locus n="3">17r–21v</locus>
+                        <locus n="3">17r-21v</locus>
                         <title xml:lang="bg">Гръмник Зодиак</title>
                         <note place="foot" xml:id="note1">The text presents the type of Thunderbook,
                             predicting by the zodiac circle. It contains a table of the days ruled
                             by the different sighs of the zodiac accordig to the twelve months. The
                             table is typical of this kind of Thunderbook. The earliest Thunderbook
-                            which belongs to this type is in <persName>Dragolov
-                                sbornik</persName>. There is a short text with correspondence between
+                            which belongs to this type is in <name type="ms" full="yes">Dragolov
+                                sbornik</name>. There is a short text with correspondence between
                             zodiac and different geographical places. It stands after the
                             table.</note>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -188,15 +200,16 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
-                        <locus n="4">21v–30v</locus>
+                        <locus n="4">21v-30v</locus>
                         <title xml:lang="bg">Гадание по месеци</title>
-                        <note>The text is wrongly
+                        <note place="foot" type="articleData" xml:id="note2">The text is wrongly
                             titled as Lunary. In fact, it contains predictions by the phases of the
                             moon, thunder, lightning, mist, earthquake for each month. The Old
                             Slavic names of the months are represented here together with the Latin
                             ones (i.e. <phr xml:lang="cu">Октѡмврьі рекомьй листопадъ</phr>). The
                             predictions by the thunder coincide with the text of the Thunderbook by
-                            means of the months from <soCalled>Loveški Sbornik</soCalled> of <persName>Paxomios</persName></note>
+                            means of the months from <soCalled>Loveški Sbornik</soCalled> of <name
+                                type="personal" full="yes">Paxomios</name></note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -210,15 +223,16 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5">
-                        <locus n="5">30v–31v</locus>
+                        <locus n="5">30v-31v</locus>
                         <title xml:lang="bg">Коледник</title>
-                        <note>Type of Kalendologion
+                        <note place="foot" type="articleData" xml:id="note3">Type of Kalendologion
                             without political predictions.</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Сеи Календарь</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще бꙋдетъ Р҃ж<seg rend="sup">д</seg>ство Хр҃тово въ неделю</incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще бꙋдетъ Р҃ж<seg
+                                    rend="sup">д</seg>ство Хр҃тово въ неделю</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и запаленіе многѡ и лѣто
                                 градомъ віемо велми, жита на мѣста. Конець календарѧ</explicit>
                         </sampleText>
@@ -235,7 +249,8 @@
                         <recordHist>
                             <source>
                                 <p>Directly catalogued from the original manuscript using the
-                                    printed catalogue from <ref type="decription" target="bib:Stojanov1971">Стоянов, Кодов 1971</ref></p>
+                                    printed catalogue from <ref type="decription"
+                                        target="bib:Stojanov1971">Стоянов, Кодов 1971</ref></p>
                             </source>
                         </recordHist>
                     </adminInfo>

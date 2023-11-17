@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DA3a48HAZU">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-DA3a48HAZU">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Vranešnički Apostol</title>
+                <title type="main">Vranešnički Apostol</title>
                 <author xml:id="DA">Desislava Atanasova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -50,14 +48,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-10-28">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -78,7 +76,10 @@
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="codex">
-                        <supportDesc material="parch">
+                        <supportDesc material="parchment">
+                            <support>
+                                <material>Parchment</material>
+                            </support>
                             <extent>
                                 <measure unit="folia">26</measure>
                                 <dimensions type="folia" unit="mm">
@@ -99,19 +100,21 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding contemporary="false" when="1950">
-                            <summary>New library's binding from the year 1950</summary>
+                            <p>New library's binding from the year 1950</p>
                         </binding>
                     </bindingDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote script="Cyrs" style="uncial">>Small uncial</scriptNote>
+                        <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
+                            <p>Small uncial</p>
                         </scriptDesc>
                         <scribeLang>
-                            <langNote key="orthography">Only front jer, two nasals
-                            </langNote>
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Only front jer, two
+                                    nasals</p>
+                            </orthography>
                         </scribeLang>
                         <note xmlns="http://www.tei-c.org/ns/1.0">
                             <ref type="bibl" target="bib:Богдановић1982">Богдановић 1982: 20, №
@@ -133,7 +136,7 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="conjecture" resp="#DA">
+                    <origin evidence="de visu" resp="#DA">
                         <origDate notBefore="1250" notAfter="1299">13th c., second half</origDate>
                         <origPlace>Macedonia</origPlace>
                         <ref type="bibl" target="bib:Богдановић1982">Богдановић 1982: 20</ref>

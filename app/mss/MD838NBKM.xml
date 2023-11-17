@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-MD838NBKM">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-MD838NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -20,9 +18,9 @@
                 <idno>RC-MD838NBKM</idno>
             </publicationStmt>
             <sourceDesc>
-                <bibl>
-                    <ref target="bib:Стоянов1964">Стоянов, Кодов 1964</ref>
-                </bibl>
+                <p>
+                    <ref type="bibl" target="bib:Стоянов1964">Стоянов, Кодов 1964</ref>
+                </p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -42,14 +40,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-11-01">Edit elements according to new schema</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -74,10 +72,12 @@
                     <objectDesc form="fragment">
                         <supportDesc material="paper">
                             <support>
+                                <material>Paper</material>
                                 <watermark>
-                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Anchor in circle</motif>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Anchor
+                                        in circle</motif>
                                     <ref type="bibl" target="bib:Briquet1907">
-                                        <num><ref target="https://briquet-online.at/482">482</ref></num>
+                                        <num>482</num>
                                         <date when="1519">1519</date>
                                     </ref>
                                 </watermark>
@@ -110,13 +110,14 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r5v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" >
-                            <scriptNote script="Cyrs" style="uncial">Big letters of <dimensions type="char" unit="mm"><height>5</height></dimensions></scriptNote>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-5v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
+                            <p>Big letters of 5mm height</p>
                         </scriptDesc>
                         <scribeLang>
-                            <langNote key="orthography">Both jers are used
+                            <orthography>
+                                <p xmlns="http://www.tei-c.org/ns/1.0">Both jers are used
                                     nonetymologically: back jer is prefered after "V", "S", while
                                     front jer is regular after "X" in 1p. Aoristus ending. there are
                                     several cases of lowring of jers. there are traces of Jagic rule
@@ -131,9 +132,13 @@
                                     vowels are used with the exception of "ja" in "jako" and "ju".
                                     However wide "e" is used. "i*" with two points is used preceding
                                     a vowel. "Izhe" and "Jery" are confused very rarely. "Dzjalo" is
-                                    used.
-                            </langNote>
+                                    used.</p>
+                            </orthography>
                         </scribeLang>
+                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
+                            <name>Margaret Dimitrova</name>
+                            <resp>de visu</resp>
+                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -142,9 +147,9 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1r5v</locus>
+                        <locus n="1">1r-5v</locus>
                         <title xml:lang="bg">Псалтир</title>
-                        <note>The text includes: 118: 8814: the text begins from the middle of
+                        <note>The text includes: 118: 88-14: the text begins from the middle of
                             verse 118: 88</note>
                         <filiation type="source">Greek</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -157,8 +162,9 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="conjecture" resp="#MD">
-                        <origDate evidence="conjecture" notAfter="1599">16th c.</origDate>
+                    <origin evidence="de visu" resp="#MD">
+                        <origDate evidence="external" notBefore="1501" notAfter="1599">16th
+                            c.</origDate>
                         <ref type="bibl" target="bib:Стоянов1964">Стоянов, Кодов 1964</ref>
                     </origin>
                 </history>

@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<!--
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-NG2VAT">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
+    xml:id="RC-NG2VAT">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Хроника на Константин Манасий (Ватикански кодекс) No. Vatic.
-                    Slav. 2 от Ватиканската библиотека, 1343–1345</title>
+                <title type="main">Хроника на Константин Манасий (Ватикански кодекс) No. Vatic.
+                    Slav. 2 от Ватиканската библиотека, 1343-1345</title>
                 <author xml:id="NG">Nina Gagova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -17,22 +15,25 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date when="2005-01">January 2005</date>
+                <date>January 2005</date>
                 <idno type="Repertorium">RC-NG2VAT</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
+                            >Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref
+                            target="http://www.ilit.bas.bg/repertorium/"
+                            >http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <listBibl><bibl><ref target="bib:Джурова1985">Джурова, А., К. Станчев, М. Япунджич
-                        1985: 77–78</ref></bibl>
-                    <bibl><ref target="bib:Дуйчев1988">Дуйчев, Ив., М. А. Салмина, О. В.
-                        Творогов 1988: 77–90</ref></bibl></listBibl>
+                <p><ref type="bibl" target="bib:Джурова1985">Джурова, А., К. Станчев, М. Япунджич
+                        1985: 77-78</ref>
+                    <ref type="bibl" target="bib:Дуйчев1988">Дуйчев, Ив., М. А. Салмина, О. В.
+                        Творогов 1988: 77-90</ref></p>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -44,7 +45,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list>
+                    <list type="simple">
                         <item>King Ivan Alexander</item>
                         <item>Chronicle</item>
                     </list>
@@ -53,16 +54,18 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
+                    replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
+
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
+
             <change who="#AM" when="2011-10-07">Removed old elements</change>
             <change who="#AM" when="2011-10-07">Editorial work, checked MS and added
                 information</change>
@@ -106,7 +109,7 @@
                                 </quire>
                                 <signatures>Original</signatures>
                             </collation>
-                            <condition>Without beginning; f. 3 and f. 4 are transposed.</condition>
+                            <condition>Without beginning; f.3 and f.4 are transposed.</condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" writtenLines="23 25"/>
@@ -115,56 +118,57 @@
                     <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Dark brown</ink>
                     <decoDesc>
                         <summary>Red initials floral and geometric type.</summary>
-                        <decoNote type="miniatures">69 polychrome miniatures; f.1v and f.205 –
+                        <decoNote type="miniatures">69 polychrome miniatures; f.1v and f.205 -
                             miniatures of the doners</decoNote>
                     </decoDesc>
                     <bindingDesc>
-                        <binding contemporary="false">
-                            <summary>Cardboard, covered with red leather (new, Vatican)</summary>
+                        <binding>
+                            <p>Cardboard, covered with red leather (new, Vatican)</p>
                         </binding>
                     </bindingDesc>
-                    <additions>
-                        <list>
-                            <item>
-                                <locusGrp>
-                                    <locus>3v</locus>
-                                    <locus>16v</locus>
-                                    <locus>70v</locus>
-                                    <locus>103v</locus>
-                                    <locus>108r</locus>
-                                    <locus>136v</locus>
-                                    <locus>144r</locus>
-                                    <locus>202v</locus>
-                                </locusGrp>
-                                Many marginalia and glossa from the scribe (explications by the basic
-                                text)
-                            </item>
+                    <additions type="editorial">
+                        <note>Many marginalia and glossa from the scribe (explications by the basic
+                            text) on ff. 3v, 16v,70v,103v,108,136v, 144, 202v, etc.</note>
+                    </additions>
+                    <additions type="inscriptions">
+                        <list type="simple">
                             <item>
                                 <locus>f. 77v</locus>
-                                <quote xml:lang="cu">г<seg rend="sup">д</seg>ну ми жупану <persName>Николѣ</persName>
+                                <quote xml:lang="cu">г<seg rend="sup">д</seg>ну ми жупану<name
+                                        xml:lang="cu" type="zhupan" full="yes">Николѣ</name>
                                 </quote>
                             </item>
-                            <item>many later inscriptions in Latin, explicated capitals or
-                                    inscriptions of the miniatures
+                            <item>
+                                <note>many later inscriptions in Latin, explicated capitals or
+                                    inscriptions of the miniatures</note>
                             </item>
                         </list>
+                    </additions>
+                    <additions type="addText">
+                        <locus>ff. I-II</locus>
+                        <date>1820</date>
+                        <note>Description of the MS in Latin by M. Bobrovski</note>
                     </additions>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">4r–204v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
-                            <scriptNote script="Cyrs" style="uncial">Elegant uncial of Tŭrnovo type</scriptNote>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">4r-204v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
+                            <p>Elegant uncial of Tŭrnovo type</p>
                         </scriptDesc>
                         <scribeLang>
                             <summary xmlns="http://www.tei-c.org/ns/1.0">Middle Bulgarian, Tŭrnovo
                                 school</summary>
-                               <langNote key="orthography" type="jers" subtype="etymReg">Two jers</langNote>
-                            <langNote  key="orthography" type="juses" subtype="etymReg">Two juses</langNote>
+                            <orthography>
+                                <orthNote type="jers" subtype="etymReg">Two jers</orthNote>
+                                <orthNote type="juses" subtype="etymReg">Two juses</orthNote>
+                            </orthography>
                         </scribeLang>
-                        <bibl xmlns="http://www.tei-c.org/ns/1.0"> <ref target="bib:Дуйчев1988">Дуйчев, Ив., М. А. Салмина, О.
-                            В. Творогов 1988: 77–90</ref></bibl>
+                        <note xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref type="bibl" target="bib:Дуйчев1988">Дуйчев, Ив., М. А. Салмина, О.
+                                В. Творогов 1988: 77-90</ref>
+                        </note>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -172,13 +176,7 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locusGrp n="1">
-                            <locus>4r–v</locus>
-                            <locus>3r–v</locus>
-                            <locus>5r–v</locus>
-                            <locus>41v</locus>
-                            <locus>63r–204v</locus>
-                        </locusGrp>
+                        <locus n="1">4r-v-3r-v-5r-v-41v + 63r-204v</locus>
                         <title xml:lang="bg">Хроника на Константин Манасий</title>
                         <author>Constantine Manasses</author>
                         <note>Without beginning and title.</note>
@@ -190,13 +188,16 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">42r–62r</locus>
+                        <locus n="2">42r-62r</locus>
                         <title xml:lang="bg">Троянска повест</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Повѣсти о извѣствованныи<seg rend="sup">х</seg> вещеи. еже о кралехъ причѧ. и о рож<seg rend="sup">д</seg>ени<seg rend="sup">х</seg> и прѣбывани<seg rend="sup">х</seg>:</head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Повѣсти о извѣствованныи<seg
+                                    rend="sup">х</seg> вещеи. еже о кралехъ причѧ. и о рож<seg
+                                    rend="sup">д</seg>ени<seg rend="sup">х</seg> и прѣбывани<seg
+                                    rend="sup">х</seg>:</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Бѣше въ пръвое врѣмѧ единъ
                                     кра<seg rend="sup">л</seg> иже сѧ зовѣше именемъ Пришедъ
                                 краль</incipit>
@@ -204,11 +205,9 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="conjecture" resp="#NG">
-                        <origDate notBefore="1343" notAfter="1345">1343–1345</origDate>
+                    <origin evidence="de visu">
+                        <origDate notBefore="1343" notAfter="1345">1343-1345</origDate>
                     </origin>
-                    <accMat><locus>ff. I–II</locus>
-                        <date>1820</date> Description of the MS in Latin by M. Bobrovski</accMat>
                 </history>
             </msDesc>
         </body>
