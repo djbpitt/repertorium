@@ -54,8 +54,9 @@ function getParsed(currentFrom, currentTo) {
 }
 
 function fillSlider(from, to, controlSlider) {
-    const sliderColor = "#C6C6C6";
-    const rangeColor = "#25daa5";
+    /* hard-stop gradient; see https://css-tricks.com/books/greatest-css-tricks/hard-stop-gradients/ */
+    const sliderColor = "silver"; /* originally #C6C6C6 */
+    const rangeColor = "green"; /* originally #25daa5" */
     const rangeDistance = to.max-to.min;
     const fromPosition = from.value - to.min;
     const toPosition = to.value - to.min;
