@@ -47,12 +47,12 @@
                 </div>
                 <fieldset id="date-range">
                   <div id="number_container">Dates: from <input type="number" id="fromInput"
-                      value="1000" min="900" max="1910"/> to <input type="number" id="toInput"
-                      value="1800" min="900" max="1910"/>
+                      value="900" min="900" max="1910"/> to <input type="number" id="toInput"
+                      value="1910" min="900" max="1910"/>
                   </div>
                   <div id="range_container">
-                    <input id="fromSlider" type="range" value="1000" min="900" max="1910"/>
-                    <input id="toSlider" type="range" value="1800" min="900" max="1910"/>
+                    <input id="fromSlider" type="range" value="900" min="900" max="1910"/>
+                    <input id="toSlider" type="range" value="1910" min="900" max="1910"/>
                   </div>
                 </fieldset>
               </div>
