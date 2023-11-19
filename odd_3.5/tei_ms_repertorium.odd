@@ -4,12 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title><title>Repertorium MS model based on TEI P5 (Version 4.6.0. Last updated on 4th April 2023, revision f18deffba)</title></title>
+        <title>Repertorium MS model based on TEI P5 (Version 4.6.0. Last updated on 4th April 2023, revision f18deffba)</title>
         <author xml:id="atb">Andrej Bojadžiev</author>
         <author xml:id="djb">David J. Birnbaum</author>
       </titleStmt>
       <editionStmt>
-        <edition>Last updated 24.07.2023</edition>
+        <edition n="3.5">Updated according to version TEI P5 4.6.0</edition>
         <!-- Previous edition: 3.4 Last updated 25.01.2023 -->
         <!-- Previous edition: 3.3. Last updated 09.05.2022 -->
         <!-- Previous edition: 3.2 Last updated 16.11.2019 -->
@@ -21,7 +21,7 @@
             (<email>djbpitt@gmail.com</email>) on behalf of the Repertorium Project (<ptr
             target="http://repertorium.obdurodon.org"/>)</authority>
         <publisher>Repertorium Initiative</publisher>
-        <date when="2023-07-24">24 July 2023</date>
+        <date when="2023-11-03">3rd of Novenber 2023</date>
         <availability status="free">
           <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Distributed under a
             Creative Commons Attribution-ShareAlike 4.0 Unported License </licence>
@@ -60,13 +60,13 @@
         <note type="ns">http://www.ilit.bas.bg/repertorium/ns/3.0</note>
       </notesStmt>
       <sourceDesc>
-        <p>The curren version 3.5 was revised 2023-07-24 by Andrej Bojadžiev
-          <email>aboy@uni-sofia.bg</email>.</p>
+        <p>The curren version 3.5 was revised 2023-11-03 by Andrej Bojadžiev
+          <email>aboy@uni-sofia.bg</email> and David J. Birnbaum (<email>djbpitt@gmail.com</email>)</p>
         <p>The version 3.4 was revised 2023-01-25 by Andrej Bojadžiev
           <email>aboy@uni-sofia.bg</email>.</p>
         <p>The version 3.3 was revised 2022-05-09 by Andrej Bojadžiev
           <email>aboy@uni-sofia.bg</email>.</p>
-        <p>The version 3.2 was revised 2019-10-29 by Andrej Bojadžie5v
+        <p>The version 3.2 was revised 2019-10-29 by Andrej Bojadžiev
             <email>aboy@uni-sofia.bg</email> and David J. Birnbaum
           (<email>djbpitt@gmail.com</email>) .</p>
         <p>The version 3.1 was revised 2017-10-18 by David J. Birnbaum
@@ -77,8 +77,24 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
-      <change who="#atb" when="2023-07-24">Updated to reflect changes in version 4.6.0 of TEI Guidelines (Last updated on 4th April 2023, revision f18deffba). No changes for specific Repertorium elements have been made.</change>
-      <change who="#atb" when="2023-01-25">Allow <gi>scriptDesc</gi> and <gi>scribeLang</gi> to appear as children of <gi>scribeDesc</gi> to be used as general charcteristics for the short catalaogue. Allow element <gi>scriptDesc</gi> to appear more then once.</change>
+      <change who="#atb #djb" when="2023-11-03">
+        <list>
+          <item>Introduce an element <gi>label</gi> as part of <gi>sampleText</gi></item>
+          <item>Rearange the order ot elements in <gi>sampleText</gi></item>
+          <item>Change the content of the element <gi>msPart</gi> making <gi>msIdentifier</gi> optional</item>
+        </list>
+        </change>
+      <change who="#atb #djb" when="2023-10-27">
+        <list>
+          <item>Remove element <gi>bindingNote</gi> and replace its funcions with <gi>decoNote</gi></item>
+          <item>Change element content of binding to include element <gi>summary</gi> instead of TEI's <gi>p</gi></item>
+          <item>Change the content of element <gi>collation</gi> and rearrange the content of element <gi>quire</gi></item>
+          <item>Change instances where you have choice between structured and unstructured description by removing possibility of unstructured ones, e.g. elements <gi>p</gi> and <gi>ab</gi></item>
+          <item>Change attribute <att>tracing</att> to <att>recording</att> of element <gi>watermark</gi>. Add the same attribute to element  <gi>countermark</gi>.</item>
+        </list>
+        </change>
+      <change who="#atb" when="2023-07-24">Updated to reflect changes in version 4.6.0 of TEI Guidelines (Last updated on 4th April 2023, revision f18deffba). No changes for specific Repertorium elements have been made</change>
+      <change who="#atb" when="2023-01-25">Allow <gi>scriptDesc</gi> and <gi>scribeLang</gi> to appear as children of <gi>scribeDesc</gi> to be used as general charcteristics for the short catalogue. Allow element <gi>scriptDesc</gi> to appear more then once.</change>
       <change who="#atb" when="2022-05-09">
         <list>
           <item>Updated to reflect changes in version 4.4.0 of TEI Guidelines (Last updated on 19th April 2022, revision ff9cc28b0).</item>
@@ -218,7 +234,7 @@
       </div>
       <div>
         <p>Repertorium model for manuscript description</p>
-        <schemaSpec ident="re_tei_ms" start="TEI msDesc" source="tei:4.4.0">
+        <schemaSpec ident="re_tei_ms" start="TEI msDesc" source="tei:4.6.0">
           <!-- required modules -->
           <moduleRef key="header"
             except="appInfo application biblFull namespace samplingDecl stdVals styleDefDecl tagUsage tagsDecl xenoData"/>
@@ -239,7 +255,7 @@
           <classSpec ident="model.physDescPart" type="model" mode="delete" module="msdescription"/>
 
           <elementSpec ident="accMat" module="msdescription" mode="change">
-            <!-- This change removes <accMat> from the <physDesc>; it is then added to <history> -->
+            <desc>This change removes <gi>accMat</gi> from the <gi>physDesc</gi>; it is then added to <gi>history</gi></desc>
             <classes>
               <memberOf key="model.physDescPart" mode="delete"/>
             </classes>
@@ -294,7 +310,6 @@
                 <elementRef key="collection" minOccurs="0" maxOccurs="1"/>
                 <elementRef key="idno" minOccurs="0" maxOccurs="1"/>
                 <elementRef key="note" minOccurs="0" maxOccurs="1"/>
-                <elementRef key="altIdentifier" minOccurs="0" maxOccurs="unbounded"/>
               </sequence>
             </content>
             <exemplum>
@@ -365,85 +380,38 @@
 
           <elementSpec ident="binding" module="msdescription" mode="change">
             <content>
-              <alternate minOccurs="1" maxOccurs="unbounded">
-                <classRef key="model.pLike"/>
-                <elementRef key="bindingNote"/>
-                <elementRef key="condition"/>
-                <elementRef key="decoNote"/>
-              </alternate>
+              <sequence>
+                <elementRef key="summary" minOccurs="1" maxOccurs="1"/>
+                <elementRef key="condition" minOccurs="0" maxOccurs="1"/>
+                <elementRef key="decoNote" minOccurs="0" maxOccurs="unbounded"/>
+              </sequence>
             </content>
             <exemplum>
               <p>TEI example:</p>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
 	          <binding contemporary="true">
-	            <p>Contemporary blind stamped leather over wooden boards with
-	              evidence of a fore edge clasp closing to the back cover.</p>
+	            <summary>Contemporary blind stamped leather over wooden boards with
+	              evidence of a fore edge clasp closing to the back cover.</summary>
 	          </binding>
 	        </egXML>
             </exemplum>
             <exemplum>
-              <p>Repertorium adds an element <gi>bindingNote</gi> in the Repertorium namespace as a
-                child element of <gi>binding</gi>, as a way of wrapping a specific observation about
-                a binding motif (in, eg., a <gi>decoNote</gi>) together with its location (in
-                  <gi>locus</gi>).</p>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
 	          <binding>
-	            <p>New, leather and cardboard</p>
-	            <re:bindingNote type="cover">
-	              <locus>On the back side of the upper cover:</locus>
-	              <decoNote>
-	                <stamp>angels with circles.</stamp>
-	              </decoNote>
-	            </re:bindingNote>
+	            <summary>New, leather and cardboard</summary>
+	            <decoNote type="cover">
+	              <locus>On the back side of the upper cover:</locus> <stamp>angels with circles.</stamp>
+	            </decoNote>
 	          </binding>
 	        </egXML>
             </exemplum>
-          </elementSpec>
-
-          <elementSpec ident="bindingNote" module="msdescription" mode="add"
-            ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-            <desc>allows structured description of binding characteristics in addition to decoration
-              and condition</desc>
-            <classes mode="change">
-              <memberOf key="att.global" mode="add"/>
-              <memberOf key="att.typed" mode="add"/>
-              <memberOf key="att.damaged" mode="add"/>
-            </classes>
-            <content>
-              <alternate minOccurs="1" maxOccurs="unbounded">
-                <textNode/>
-                <macroRef key="model.phrase"/>
-                <elementRef key="decoNote"/>
-                <elementRef key="condition"/>
-              </alternate>
-            </content>
-            <exemplum>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <bindingDesc>
-                <binding notBefore="1700" notAfter="1800" contemporary="false">
-                  <bindingNote type="boards">Boards covered with ornamented
-                    leather.</bindingNote>
-                  <bindingNote type="ornaments">The ornaments consist of
-                    florar motifs.</bindingNote>
-                  <bindingNote>
-                    <date>Probably the binding dates from the 18th
-                      century.</date>
-                  </bindingNote>
-                </binding>
-              </bindingDesc>
-            </egXML>
-            </exemplum>
-            <remarks>
-              <p>Features specified in <gi>bindingNote</gi> may include: cover, plates, headbands,
-                edges, clasps, sewing techniques, or any notes related to the binding.</p>
-            </remarks>
+            <remarks><p>Features specified in <gi>decoNote</gi> here may include: cover, plates, headbands,
+              edges, clasps, sewing techniques, or any notes related to the binding.</p></remarks>
           </elementSpec>
 
           <elementSpec ident="collation" module="msdescription" mode="change">
             <content>
-              <alternate minOccurs="1" maxOccurs="1">
-                <macroRef key="macro.specialPara"/>
-                <sequence minOccurs="1" maxOccurs="1">
+                <sequence>
                   <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
                   <elementRef key="quire" minOccurs="0" maxOccurs="unbounded"/>
                   <elementRef key="signatures" minOccurs="0" maxOccurs="1"/>
@@ -452,7 +420,6 @@
                   <elementRef key="ruling" minOccurs="0" maxOccurs="1"/>
                   <elementRef key="pricking" minOccurs="0" maxOccurs="1"/>
                 </sequence>
-              </alternate>
             </content>
             <exemplum>
               <p>TEI example:</p>
@@ -482,33 +449,10 @@
                 example, which describes the collation of each quire in a structured way, is from
                 DD437NBKM.xml:</p>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <collation>
-                <summary>12 quires</summary>
-                <re:quire n="1-3">
-                  <extent>6</extent>
-                </re:quire>
-                <re:quire n="4">
-                  <extent>7</extent>
-                </re:quire>
-                <re:quire n="5-7">
-                  <extent>8</extent>
-                </re:quire>
-                <re:quire n="8">
-                  <extent>10</extent>
-                </re:quire>
-                <re:quire n="9">
-                  <extent>8</extent>
-                </re:quire>
-                <re:quire n="10">
-                  <extent>10</extent>
-                </re:quire>
-                <re:quire n="11">
-                  <extent>8</extent>
-                </re:quire>
-                <re:quire n="12">
-                  <extent>10</extent>
-                </re:quire>
-              </collation>
+                <collation>
+                  <summary>12 quires</summary>
+                  <formula>I-III<hi rend="sup">6</hi> + IV<hi rend="sup">7</hi> + V-VII<hi rend="sup">8</hi> + VIII<hi rend="sup">10</hi> + IX<hi rend="sup">8</hi> + X<hi rend="sup">10</hi> + XI<hi rend="sup">8</hi> + XII<hi rend="sup">8</hi></formula>
+                </collation>
             </egXML>
             </exemplum>
             <exemplum>
@@ -518,8 +462,8 @@
                 <summary>35 quires of 8 folia; the last quire is of 8 folia, but
                   after that 2 folia were pasted later (ff. 261 and
                   262)</summary>
-                <signatures>Original signatures in the beginning and in the end
-                  of each quire (<foreign xml:lang="cu">а҃ - л҃е</foreign>),
+                <formula>I-XXXV<hi rend="sup">8</hi>+XXXI<hi rend="sup">8+2 (261-262)</hi></formula>
+                <signatures>Original signatures in the beginning and in the end of each quire (<foreign xml:lang="cu">а҃ - л҃е</foreign>),
                   too.</signatures>
               </collation>
             </egXML>
@@ -537,36 +481,27 @@
               </alternate>
             </content>
             <exemplum>
-              <p>TEI example:</p>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <colophon>Explicit venenum viciorum domini illius, qui comparavit
-                Anno domini Millessimo Trecentesimo nonagesimo primo, Sabbato in
-                festo sancte Marthe virginis gloriose. Laus tibi criste quia
-                finitur libellus iste.</colophon>
-            </egXML>
-            </exemplum>
-            <exemplum>
               <p>In TEI <gi>colophon</gi> is a phrase-level element. Because longer colophons may
                 have headings and multiple paragraphs, we extend the TEI model to permit
                 paragraph-line content items. The following example is from AB674NBKM.xml:</p>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <colophon>
                 <head xml:lang="grc">Ο ΧΣ ΕΣΤΙ ΑΡΧΗ ΚΑΙ ΤΕΛΟΣ</head>
-                <p xml:lang="cu">Источникоу оубѡ на мѣстѣ сѫщꙋ и животныѫ воды
+                <ab xml:lang="cu">Источникоу оубѡ на мѣстѣ сѫщꙋ и животныѫ воды
                   истачаѫщоу тѣмже и х҃с къ самарѣныни водѫ проси· женѫ даждъ
                   ми водѫ пити· и азъ дамъ тебѣ вѡдь пити ꙗко да въ вѣкы не
                   възъжѫждаѥши· тѣмже оубѡ и сиа книга источникоу есть
                   подобна· еѫже аще кто съ оусрѣдїемъ разгнѫвъ прочьтетъ,
                   напоитъ дш҃ѫ своѫ живоносныѫ и вѣчныѫ воды, и въ вѣкы не
-                  възждѫждет сѧ: –</p>
-                <p xml:lang="cu">Нѫ вы оубо прѣблазни г҃и мои, трїе въселенъстїи
+                  възждѫждет сѧ: –</ab>
+                <ab xml:lang="cu">Нѫ вы оубо прѣблазни г҃и мои, трїе въселенъстїи
                   ст҃ле· и оучителе григорїе, и василїе, и іѡанъ златооустъ
                   прїимѣте вашего раба ходага мита логоѳетѣ малое приношенїе,
                   вѣщанїа изрѧднаа бг҃ословаго грїгориїа·
                   прѣ<supplied>мѫ</supplied>драаго оучителѣ и наставника·
                   троици сѫпоклонника <supplied>с</supplied>ѫпостатѡмъ еѧ
-                  раздрꙋшника, їересемъ прогонителѣ: –</p>
-                <p xml:lang="cu">
+                  раздрꙋшника, їересемъ прогонителѣ: –</ab>
+                <ab xml:lang="cu">
                   <supplied>И</supplied>списавыи сиѫ книгѫ прьвославъ нарицаах
                   сѧ, самѣм, <supplied>по</supplied>велѣнїемъ всепочътенаго въ
                   велмѫжехъ бл҃гарскаго <supplied>цр҃с</supplied>тва логоѳетѣ
@@ -584,7 +519,7 @@
                   бг҃одарованныи б҃е <gap/>
                   <unclear>идѡм</unclear>, зде и въ грѧдѫщомъ вѣцѣ, и нынѣ и
                   <supplied>присно</supplied> · въ вѣкы :· вѣкѡмъ :·
-                  амин꙽·</p>
+                  амин꙽·</ab>
               </colophon>
             </egXML>
             </exemplum>
@@ -599,9 +534,18 @@
                 <elementRef key="motif"/>
               </alternate>
             </content>
+            <attList>
+              <attDef ident="recording">
+                <desc>Describes the methods of recording of some watermark. Methods include:
+                  hand-tracing, rubbing, etc.</desc>
+                <datatype>
+                  <dataRef key="teidata.word"/>
+                </datatype>
+              </attDef>
+            </attList>
             <exemplum>
               <egXML xmlns="http://www.tei-c.org/ns/Examples"><material>
-              <watermark tracing="drawing"><motif type="basic">Leo</motif>within <motif type="supplemental">circle</motif>
+              <watermark recording="hand-tracing"><motif type="basic">Leo</motif>within <motif type="supplemental">circle</motif>
                 surmounted by <motif type="secondary">quatrefoil</motif> and
                 with <countermark>“AP”</countermark> similar to
                 <ref>Nikolaev #125</ref> from the year <date cert="yes">1585</date>.</watermark>
@@ -625,7 +569,8 @@
             <exemplum>
               <p>The <att>type</att> attribute specifies that the method is a simple substitution
                 cipher. The content of the element provides the mapping.</p>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples"><crypto type="simpleSubstitution">а = ѳ, в = и, г = з, д = ѕ, к = п, л =
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <crypto type="simpleSubstitution">а = ѳ, в = и, г = з, д = ѕ, к = п, л =
               о, м = ѯ, р = ц, с = ѡ, т = ѱ, у = х. The other letters are used
               in their regular meanings, without
               substitution.</crypto></egXML>
@@ -639,21 +584,6 @@
 
           <elementSpec ident="date" module="core" mode="change">
             <exemplum>
-              <p>The following is a TEI example:</p>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples"><date when="1980-02">early February 1980</date></egXML>
-            </exemplum>
-            <exemplum>
-              <p>The following is a TEI example:</p>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples">Given on the <date when="1977-06-12">Twelfth Day of June in the Year of Our Lord
-              One Thousand Nine Hundred and Seventy-seven of the Republic the
-              Two Hundredth and first and of the University the
-              Eighty-Sixth.</date></egXML>
-            </exemplum>
-            <exemplum>
-              <p>The following is a TEI example:</p>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples"><date when="1990-09">September 1990</date></egXML>
-            </exemplum>
-            <exemplum>
               <p>References to dates in the church calendar should be encoded as <tag>date
                   type="churchCal"</tag>, and the <gi>date</gi> element should be a child of
                   <gi>msItemStruct</gi> (that is, not wrapped in a <gi>note</gi> element). Dates in
@@ -662,13 +592,13 @@
                 expressed with exactly four digits (using a leading zero for years before 1000).
                 Year plus month must be formatted as <val>YYYY-MM</val>. Month plus date (for
                 example, in the church calendar) require two leading hyphens, i.e.,
-                  <val>--MM-DD</val>. For more information see <ptr
+                  <val>-MM-DD</val>. For more information see <ptr
                   target="https://en.wikipedia.org/wiki/ISO_8601"/>.The following example is from
                 MP408G.xml:</p>
               <egXML xmlns="http://www.tei-c.org/ns/Examples"><msItemStruct xml:id="ACD3" type="translation">
               <locus n="3">39r-58r</locus>
               <title xml:lang="bg">Житие на св. Текла</title>
-              <date type="churchCal" when="--09-24">24. September</date>
+              <date type="churchCal" when="-09-24">24. September</date>
               <filiation type="protograph">Bulgarian</filiation>
               <filiation type="antigraph">Middle Bulgarian</filiation>
               <re:sampleText xml:lang="cu">
@@ -678,54 +608,7 @@
             </msItemStruct></egXML>
             </exemplum>
           </elementSpec>
-<!--
-          <elementSpec ident="grammar" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-            <desc>contains a description of the grammar of a scribe</desc>
-            <classes mode="replace">
-              <memberOf key="att.global" mode="add"/>
-            </classes>
-            <content>
-              <macroRef key="macro.specialPara"/>
-            </content>
-            <exemplum>
-              <p>In the example below, list items have been supplied with <att>xml:id</att> values
-                to indicate the aspect of the language to which they refer (in this case,
-                  <val>phonology</val>, <val>verbs</val>, and <val>nomina</val>). Words and
-                morphemes are tagged with the TEI <gi>w</gi> and <gi>m</gi> elements,
-                respectively.</p>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples"><grammar>
-              <list>
-                <item xml:id="phonology">Adjective forms prefer the archaic
-                  <m xml:lang="cu">-сц-</m> to <m xml:lang="cu">-ст-</m>. Cases with <m xml:lang="cu">-ст-</m> are
-                  rare. Uncontracted forms of pronominal adjectives and of
-                  verbs of the -je-conjugation in Ind. Praes. Act. and of
-                  verbs in Imperfect are much more frequent than
-                  contracted ones. Verbal forms (Ind. Praes. Act., p.3,
-                  je-conjugation) with assimilation, such as <w xml:lang="cu">бѣгаат</w>, <w xml:lang="cu">радоуоутъ</w> are frequent. In Imperativus there is
-                  variation of forms with <c xml:lang="cu">ѣ</c> and with
-                  <c xml:lang="cu">и</c>, such as <w xml:lang="cu">покажѣте</w> 290.17 alongside <w lang="cu">покажите</w> 80.5.</item>
-                <item xml:id="verbs">The manuscript uses non-sigmatic
-                  Aoristus (e.g., <w xml:lang="cu">вьнидъ</w>, <w xml:lang="cu">сънидъ</w>, <w xml:lang="cu">идомъ</w>, <w xml:lang="cu">отидѫ</w>) and first
-                  sigmatic Aoristus of verbs with stems ending in a
-                  consonant (e.g., <w xml:lang="cu">привѣс</w>,<w xml:lang="cu">въвѣсом</w>, <w xml:lang="cu">възнѣсѧ
-                    </w>). Verbs with infinitive stems ending in a vowel
-                  often preserve the archaic ending <m xml:lang="cu">-тъ</m> in Ind. Aor. Act, p. 2 and 3, Sg., e.g., <w xml:lang="cu">обитъ</w>, <w xml:lang="cu">оумрѣт</w>. Three cases of omitted ending <m xml:lang="cu">-тъ</m> for Ind. Praes. Act., p. 3.
-                  Sg. are found (<w xml:lang="cu">e</w> instead of <w xml:lang="cu">естъ</w>, <w xml:lang="cu">нѣ</w> for
-                  <w xml:lang="cu">нѣст</w>, and <w xml:lang="cu">бѫд</w> for <w xml:lang="cu">bѫдет</w>).</item>
-                <item xml:id="nomina">The old suffix <m xml:lang="cu">-нье</m> is written frequently as <m xml:lang="cu">-ние</m>, e.g., <w xml:lang="cu">знамение</w>, but
-                  this orthography is not consistently followed. In other
-                  forms <m xml:lang="cu">-ье</m> is preferred (cf. <w xml:lang="cu">абье</w>, 24r.20).</item>
-              </list>
-            </grammar></egXML>
-            </exemplum>
-            <remarks>
-              <p>The description of grammatical characteristics can be divided into separate units,
-                but in this case, unlike with orthography, there may not be a standard list of
-                descriptive criteria, and the researcher has to introduce the structure using the
-                available means.</p>
-            </remarks>
-          </elementSpec>
--->
+
           <elementSpec ident="gregoryRule" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
             <desc>contains a description of the layout of the parchment according to the Gregory
               rule</desc>
@@ -750,8 +633,6 @@
 
           <elementSpec ident="history" module="msdescription" mode="change">
             <content>
-              <alternate>
-                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
                 <sequence>
                   <elementRef key="summary" minOccurs="0"/>
                   <elementRef key="origin" minOccurs="0"/>
@@ -759,7 +640,6 @@
                   <elementRef key="provenance" minOccurs="0" maxOccurs="unbounded"/>
                   <elementRef key="acquisition" minOccurs="0"/>
                 </sequence>
-              </alternate>
             </content>
             <exemplum>
               <p>TEI example:</p>
@@ -795,7 +675,7 @@
                   <origPlace>Unknown</origPlace>
                 </origin>
                 <accMat>
-                  <locus>binding</locus> From the hand of <name full="yes">Arsenij Suhanov</name> is the following the
+                  <locus>binding</locus> From the hand of <name>Arsenij Suhanov</name> is the following
                   inscripition: <q>163-го (7163=1655) взята изъ кѣльи госусаря
                     патриарха</q>
                 </accMat>
@@ -830,40 +710,14 @@
                 ink composition, brightness, loss of color, etc.</p>
             </remarks>
           </elementSpec>
+
 <!--
-          <elementSpec ident="lexis" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-            <desc>contains a description of lexical features of a scribe</desc>
-            <classes>
-              <memberOf key="att.global"/>
-            </classes>
-            <content>
-              <macroRef key="macro.specialPara"/>
-            </content>
-            <exemplum>
-              <p>The following example is from MDMarianus.xml.</p>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples"><lexis>The manuscript
-              uses lexis that is believed to be typical of the earliest Gospel
-              translation from Greek, cf. the use of the archaic lexemes
-              <foreign xml:lang="cu">баль, жаль, миса, шюи, братръ,
-                небесьскъ, неприѣзнь, пропѧти, иночѧдъ, врътъ, искрьнъ,
-                грѣсти</foreign>. In word-formation the manuscript prefers
-              the old suffix <m xml:lang="cu" type="suffix">ицеѫ</m> and not
-              <m xml:lang="cu" type="suffix">ждьі</m>. The following forms
-              are considered to be relatively later: <foreign xml:lang="cu">благодать, написание, дрѧхлъ</foreign>.</lexis></egXML>
-            </exemplum>
-            <remarks>
-              <p>The lexical features of a scribe can be described similarly to grammatical ones.
-                Whether this takes the form of a list with items or of just one unit depends on the
-                encoder’s vision and the length of the material.</p>
-            </remarks>
-          </elementSpec>
--->
           <elementSpec ident="layout" module="msdescription" mode="change">
             <classes mode="change">
               <memberOf key="att.measurement" mode="add"/>
             </classes>
           </elementSpec>
-          
+-->          
           <elementSpec ident="langNote" module="msdescription" mode="add"
             ns="http://www.ilit.bas.bg/repertorium/ns/3.0">
             <desc>allows structured description of language characteristics of the scribe</desc>
@@ -895,8 +749,8 @@
                                       >искрьнъ</foreign>, <foreign xml:lang="cu"
                                         >грѧсти</foreign> could prove this hypothesis.</item>
                     <item>Also, in word-formation the manuscript prefers the old
-                      suffix - <foreign xml:lang="cu">ицеѫ</foreign> and not
-                      <foreign xml:lang="cu">-ждьі</foreign>. Still, the
+                      suffix -<foreign xml:lang="cu">ицеѫ</foreign> and not
+                      -<foreign xml:lang="cu">-ждьі</foreign>. Still, the
                       following forms are considered to be relatively later:
                       <foreign xml:lang="cu">благодать</foreign>, <foreign
                         xml:lang="cu">написание</foreign>, <foreign
@@ -906,7 +760,7 @@
               </egXML>
             </exemplum>
             <remarks>
-              <p>Features specified in <gi>langNote</gi> may include: orthography, grammar and/or lexis of the scribe.</p>
+              <p>Features specified in <gi>langNote</gi> may include all language levels.</p>
             </remarks>
           </elementSpec>
             
@@ -959,11 +813,8 @@
 
           <elementSpec ident="msContents" module="msdescription" mode="change">
             <content>
-              <alternate>
-                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
                 <sequence>
                   <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="titlePage" minOccurs="0" maxOccurs="1"/>
                   <elementRef key="title" minOccurs="0" maxOccurs="1"/>
                   <elementRef key="author" minOccurs="0" maxOccurs="unbounded"/>
                   <elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/>
@@ -972,10 +823,8 @@
                   <elementRef key="textLang" minOccurs="0" maxOccurs="1"/>
                   <elementRef key="decoNote" minOccurs="0" maxOccurs="unbounded"/>
                   <elementRef key="sampleText" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="div" minOccurs="0" maxOccurs="1"/>
                   <elementRef key="msItemStruct" minOccurs="0" maxOccurs="unbounded"/>
                 </sequence>
-              </alternate>
             </content>
             <attList>
               <attDef ident="type" usage="opt">
@@ -1042,22 +891,16 @@
 
           <elementSpec ident="msDesc" module="msdescription" mode="change">
             <content>
-              <sequence>
-                <classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded"/>
-                <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
-                <alternate>
-                  <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
                   <sequence>
-                    <elementRef key="physDesc" minOccurs="0" maxOccurs="1"/>
-                    <elementRef key="scribeDesc" minOccurs="0" maxOccurs="1"/>
-                    <elementRef key="msContents" minOccurs="0" maxOccurs="1"/>
-                    <elementRef key="history" minOccurs="0" maxOccurs="1"/>
-                    <elementRef key="additional" minOccurs="0" maxOccurs="1"/>
+                    <elementRef key="msIdentifier"/>
+                    <elementRef key="physDesc" minOccurs="0"/>
+                    <elementRef key="scribeDesc" minOccurs="0"/>
+                    <elementRef key="msContents" minOccurs="0"/>
+                    <elementRef key="history" minOccurs="0"/>
+                    <elementRef key="additional" minOccurs="0"/>
                     <elementRef key="msPart" minOccurs="0" maxOccurs="unbounded"/>
                     <elementRef key="msFrag" minOccurs="0" maxOccurs="unbounded"/>
                   </sequence>
-                </alternate>
-              </sequence>
             </content>
             <remarks>
               <p>The Repertorium reorders the contents of <gi>msDesc</gi> to conform to the most
@@ -1068,11 +911,10 @@
           <elementSpec ident="msIdentifier" module="msdescription" mode="change">
             <content>
               <sequence>
-                <elementRef key="msName" minOccurs="1" maxOccurs="unbounded"/>
-                <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"/>
-                <classRef key="model.placeNamePart" expand="sequenceOptionalRepeatable"/>
-                <elementRef key="institution" minOccurs="0" maxOccurs="1"/>
-                <elementRef key="repository" minOccurs="0" maxOccurs="1"/>
+                <elementRef key="msName" minOccurs="0" maxOccurs="unbounded"/>
+                <classRef key="model.placeNamePart" expand="sequenceOptional"/>
+                <elementRef key="institution" minOccurs="0"/>
+                <elementRef key="repository" minOccurs="0"/>
                 <elementRef key="collection" minOccurs="0" maxOccurs="unbounded"/>
                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
                 <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
@@ -1081,29 +923,21 @@
             </content>
             <remarks>
               <p>The Repertorium puts <gi>msName</gi> first, in keeping with common Slavistic
-                cataloguing practice. We also allow <gi>p</gi> and <gi>note</gi> child elements.</p>
+                cataloguing practice. We also allow <gi>note</gi> as child element.</p>
             </remarks>
           </elementSpec>
 <!-- Added altidentifier from TEI but allow it to appear unbounded Reprtorium 3.3: atb -->
+         
           <elementSpec ident="msFrag" module="msdescription" mode="change">
             <content>
               <sequence>
-                <classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded"/>
-                <alternate>
-                 <elementRef key="altIdentifier" minOccurs="0" maxOccurs="unbounded"/>
-                <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
-                </alternate>
-                <alternate>
-                  <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
-                  <sequence>
-                    <elementRef key="physDesc" minOccurs="0" maxOccurs="1"/>
-                    <elementRef key="scribeDesc" minOccurs="0" maxOccurs="1"/>
-                    <elementRef key="msContents" minOccurs="0" maxOccurs="1"/>
-                    <elementRef key="history" minOccurs="0" maxOccurs="1"/>
-                    <elementRef key="additional" minOccurs="0" maxOccurs="1"/>
+                <elementRef key="msIdentifier"/>
+                    <elementRef key="physDesc" minOccurs="0"/>
+                    <elementRef key="scribeDesc" minOccurs="0"/>
+                    <elementRef key="msContents" minOccurs="0"/>
+                    <elementRef key="history" minOccurs="0"/>
+                    <elementRef key="additional" minOccurs="0"/>
                     <elementRef key="msPart" minOccurs="0" maxOccurs="unbounded"/>
-                  </sequence>
-                </alternate>
               </sequence>
             </content>
           </elementSpec>
@@ -1111,31 +945,24 @@
           <elementSpec ident="msItemStruct" module="msdescription" mode="change">
             <content>
               <sequence>
-                <alternate minOccurs="0" maxOccurs="1">
-                  <elementRef key="locus" minOccurs="1" maxOccurs="1"/>
-                  <elementRef key="locusGrp" minOccurs="1" maxOccurs="1"/>
+                <alternate minOccurs="0">
+                  <elementRef key="locus"/>
+                  <elementRef key="locusGrp"/>
                 </alternate>
-                <alternate>
-                  <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
                   <sequence>
-                    <elementRef key="title" minOccurs="0" maxOccurs="unbounded"/>
+                    <elementRef key="title" minOccurs="0" maxOccurs="1"/>
                     <elementRef key="author" minOccurs="0" maxOccurs="unbounded"/>
+                    <elementRef key="respStmt" minOccurs="0" maxOccurs="1"/>
                     <elementRef key="date" minOccurs="0" maxOccurs="unbounded"/>
-                    <elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/>
                     <classRef key="model.noteLike" minOccurs="0" maxOccurs="unbounded"/>
                     <elementRef key="filiation" minOccurs="0" maxOccurs="unbounded"/>
                     <elementRef key="textLang" minOccurs="0" maxOccurs="1"/>
                     <elementRef key="decoNote" minOccurs="0" maxOccurs="unbounded"/>
-                    <elementRef key="colophon" minOccurs="0" maxOccurs="unbounded"/>
-                    <alternate minOccurs="0" maxOccurs="1">
-                      <elementRef key="sampleText" minOccurs="1" maxOccurs="1"/>
-                      <elementRef key="div" minOccurs="1" maxOccurs="1"/>
-                    </alternate>
+                      <elementRef key="sampleText" minOccurs="0" maxOccurs="unbounded"/>
                     <elementRef key="msItemStruct" minOccurs="0" maxOccurs="unbounded"/>
                     <elementRef key="listBibl" minOccurs="0" maxOccurs="unbounded"/>
                     <elementRef key="bibl" minOccurs="0" maxOccurs="unbounded"/>
                   </sequence>
-                </alternate>
               </sequence>
             </content>
             <attList>
@@ -1230,23 +1057,17 @@
           <elementSpec ident="msPart" module="msdescription" mode="change">
             <content>
               <sequence>
-                <alternate minOccurs="0" maxOccurs="unbounded">
-                  <elementRef key="altIdentifier"/>
+                <alternate minOccurs="0">
                   <elementRef key="locus"/>
                   <elementRef key="locusGrp"/>
                 </alternate>
-                <classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded"/>
-                <alternate minOccurs="1" maxOccurs="1">
-                  <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
-                  <sequence>
-                    <elementRef key="physDesc" minOccurs="0" maxOccurs="1"/>
-                    <elementRef key="scribeDesc" minOccurs="0" maxOccurs="1"/>
-                    <elementRef key="msContents" minOccurs="0" maxOccurs="1"/>
-                    <elementRef key="history" minOccurs="0" maxOccurs="1"/>
-                    <elementRef key="additional" minOccurs="0" maxOccurs="1"/>
-                    <elementRef key="msPart" minOccurs="0" maxOccurs="unbounded"/>
-                  </sequence>
-                </alternate>
+                <elementRef key="msIdentifier" minOccurs="0"/>
+                    <elementRef key="physDesc" minOccurs="0"/>
+                    <elementRef key="scribeDesc" minOccurs="0"/>
+                    <elementRef key="msContents" minOccurs="0"/>
+                    <elementRef key="history" minOccurs="0"/>
+                    <elementRef key="additional" minOccurs="0"/>
+                    <elementRef key="msPart" minOccurs="0"/>
               </sequence>
             </content>
             <exemplum>
@@ -1365,110 +1186,14 @@
             <exemplum>
               <p>The Repertorium adds a <add>type</add> attribute to identify the type of notational
                 system, as in the following example:</p>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples"><musicNotation type="theta">Theta-notation is used together with double okseia,
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <musicNotation type="theta">Theta-notation is used together with double okseia,
               double vareia (Piesma), and double
               apostrophos.</musicNotation></egXML>
             </exemplum>
           </elementSpec>
-<!--
-          <elementSpec ident="orthNote" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-            <desc>specifies a detail of the orthographic practice of a scribe</desc>
-            <classes>
-              <memberOf key="att.global"/>
-              <memberOf key="att.typed"/>
-              <memberOf key="att.naming"/>
-              <memberOf key="att.scoping"/>
-            </classes>
-            <content>
-              <macroRef key="macro.specialPara"/>
-            </content>
-            <exemplum>
-              <p>In the example below, the <att>type</att> and <att>subtype</att> attributes are
-                used to indicate that the orthography uses only the front jer. To describe jer
-                orthography the value of the <att>type</att> attribute must be <val>jer</val>, in
-                which case there are five permitted <att>subtype</att> values:<list>
-                  <item><val>front</val>: only front jer is used</item>
-                  <item><val>back</val>: only back jer is used</item>
-                  <item><val>etymReg</val>: etymologically regular use of jers</item>
-                  <item><val>nonEtymReg</val>: not etymological but regular use of jers</item>
-                  <item><val>irregular</val>: the use of jers cannot be formalized in general
-                    rules</item>
-                </list></p>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples"><orthNote type="jer" subtype="front">only <c xml:lang="cu">ь</c>
-            </orthNote></egXML>
-            </exemplum>
-            <exemplum>
-              <p>In the example below, the <att>type</att> and <att>subtype</att> attributes are
-                used to indicate that the orthography uses both front and back nasals, but does so
-                inconsistently. To describe nasal vowel orthography the value of the <att>type</att>
-                attribute must be <val>jus</val>, in which case there are five permitted
-                  <att>subtype</att> values:<list>
-                  <item><val>etymReg</val>: etymologically regular use of juses (e.g., as in Old
-                    Bulgarian)</item>
-                  <item><val>nonEtymReg</val>: non etymological, but otherwise regular use of the
-                    juses (Middle Bulgarian manuscripts, and in part East Slavic examples)</item>
-                  <item><val>nonConsis</val>: nonconsistent use of the juses</item>
-                  <item><val>nonJus</val>: orthography without juses</item>
-                  <item><val>jusTrace</val>: orthography without or with very few examples of the
-                    juses, but with traces, e.g., manuscripts written generally with non-jus
-                    orthography but with traces of the Middle Bulgarian alternation of juses</item>
-                </list></p>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples"><orthNote type="jus" subtype="nonConsis"><c xml:lang="cu">ѫ</c> replaced by <c xml:lang="cu">оу</c>; <c xml:lang="cu">ѧ</c> replaced by <c xml:lang="cu">a</c>;</orthNote></egXML>
-            </exemplum>
-            <exemplum>
-              <p>In the example below, the <att>type</att> attribute with the value of
-                  <val>jotVowel</val> indicates that this note pertains to jotation. In this case
-                there is no <att>subtype</att> attribute, and the behavior is described only in
-                prose.</p>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples"><orthNote type="jotVowel">The letters <c xml:id="cu">є</c> and <c xml:id="cu">ѥ</c> are both used in intervocalic
-              position.</orthNote></egXML>
-            </exemplum>
-            <exemplum>
-              <p>The <att>type</att> attribute value of <val>otherLetters</val> indicates that this
-                note pertains to letters other than jers, nasals, and jotation.</p>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples"><orthNote type="otherLetters"><c xml:lang="cu">ы</c>; <c xml:lang="cu">ѥ</c> and <c xml:lang="cu">ѩ</c></orthNote></egXML>
-            </exemplum>
-            <remarks>
-              <p>The <att>type</att> and <att>subtype</att> attributes support retrieval of
-                manuscripts according to the most important characteristics of scribal practice. The
-                four permitted <att>type</att> values are: <list>
-                  <item><val>jer</val>: jer letters</item>
-                  <item><val>jus</val>: nasal vowel letters</item>
-                  <item><val>jotVowel</val>: jotation</item>
-                  <item>and <val>otherLetters</val>: anything other than jers, nasal vowels, and
-                    jotation.</item>
-                </list> Jer and nasal vowel specifications are formalized through the
-                  <att>subtype</att> attribute, about shich see the examples above.</p>
-            </remarks>
-          </elementSpec>
-          -->
-<!--
-          <elementSpec ident="orthography" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
-            <desc>contains a formal, structured description of the orthography of a scribe</desc>
-            <classes>
-              <memberOf key="att.global"/>
-              <memberOf key="att.typed"/>
-            </classes>
-            <content>
-              <alternate>
-                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
-                <sequence>
-                  <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="orthNote" minOccurs="1" maxOccurs="unbounded"/>
-                </sequence>
-              </alternate>
-            </content>
-            <exemplum>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples"><orthography><orthNote type="jer" subtype="front">only <c xml:lang="cu">ь</c>
-            </orthNote><orthNote type="jus" subtype="nonConsis"><c xml:lang="cu">ѫ</c> replaced by <c xml:lang="cu">оу</c>;
-              <c xml:lang="cu">ѧ</c> replaced by <c xml:lang="cu">a</c>;</orthNote><orthNote type="otherLetters"><c xml:lang="cu">ы</c>; <c xml:lang="cu">ѥ</c> and <c xml:lang="cu">ѩ</c></orthNote></orthography></egXML>
-            </exemplum>
-            <remarks>
-              <p>The individual orthographic features are specified in <gi>orthoNote</gi> children
-                of <gi>orthography</gi> (see the separate documentation of <gi>orthNote</gi>).</p>
-            </remarks>
-          </elementSpec>
--->
+
+
           <elementSpec ident="pagination" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
             <desc>contains information about the pagination of the codex, separately from
               information about the foliation</desc>
@@ -1482,7 +1207,8 @@
             <exemplum>
               <p>The following example is from the electronic description of MS Pogodin 1204 by
                 Antoaneta Granberg.</p>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples"><foliation>original,
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <foliation>original,
               from <date>1805</date></foliation></egXML>
             </exemplum>
             <remarks>
@@ -1496,8 +1222,6 @@
 
           <elementSpec ident="physDesc" mode="change" module="msdescription">
             <content>
-              <alternate>
-                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
                 <sequence>
                   <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
                   <elementRef key="objectDesc" minOccurs="0" maxOccurs="1"/>
@@ -1505,16 +1229,15 @@
                   <elementRef key="decoDesc" minOccurs="0" maxOccurs="1"/>
                   <elementRef key="bindingDesc" minOccurs="0" maxOccurs="1"/>
                   <elementRef key="sealDesc" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="additions" minOccurs="0" maxOccurs="unbounded"/>
+                  <elementRef key="additions" minOccurs="0" maxOccurs="1"/>
                 </sequence>
-              </alternate>
             </content>
             <exemplum>
               <p>TEI example:</p>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <physDesc>
                 <objectDesc form="codex">
-                  <supportDesc material="perg">
+                  <supportDesc material="parch">
                     <support>Parchment.</support>
                     <extent>i + 55 leaves <dimensions scope="all" type="leaf" unit="inch">
                       <height>7¼</height>
@@ -1544,7 +1267,7 @@
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <physDesc>
                 <objectDesc form="fragment">
-                  <supportDesc material="parchment">
+                  <supportDesc material="parch">
                     <support>
                       <material>Parchment of very fine quality. Ff.1r-2v
                         and 2r-v (2 bifolia) both represents F-H, H-F
@@ -1611,7 +1334,7 @@
             </egXML>
             </exemplum>
           </elementSpec>
-
+          
           <elementSpec ident="pricking" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
             <desc>contains a description of pricking patterns in the manuscript</desc>
             <classes>
@@ -1650,45 +1373,10 @@
             <desc>contains information that describes a quire or set of quires</desc>
             <classes mode="change">
               <memberOf key="att.global"/>
-              <memberOf key="att.typed"/>
             </classes>
             <content>
-              <alternate>
-                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
-                <sequence>
-                  <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="locus" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="locusGrp" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="extent" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="formula" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="signatures" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="catchwords" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="gregoryRule" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="ruling" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="pricking" minOccurs="0" maxOccurs="1"/>
-                </sequence>
-              </alternate>
+                  <elementRef key="extent"/>
             </content>
-            <attList>
-              <attDef ident="status" usage="opt">
-                <desc>describes the status of the quire or folia: <val>original</val>,
-                    <val>added</val>, <val>missing</val></desc>
-                <datatype>
-                  <dataRef key="teidata.word"/>
-                </datatype>
-                <valList type="closed" mode="add">
-                  <valItem ident="missing">
-                    <gloss>Original quire is missing</gloss>
-                  </valItem>
-                  <valItem ident="added">
-                    <gloss>New quire has been added</gloss>
-                  </valItem>
-                  <valItem ident="original">
-                    <gloss>Quire is original</gloss>
-                  </valItem>
-                </valList>
-              </attDef>
-            </attList>
             <exemplum>
               <p>In the following example, the first quire of the manuscript consists of 8 ff., all
                 of which, with the exception of the f. 7, are now missing. Quires II through XXI
@@ -1724,9 +1412,11 @@
               <macroRef key="macro.phraseSeq"/>
             </content>
             <exemplum>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples"><ruling>
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <ruling>
               <formula>1+1 1/1</formula>
-            </ruling></egXML>
+            </ruling>
+              </egXML>
             </exemplum>
             <remarks>
               <p>Two kinds of information can be entered in the <gi>ruling</gi> element. The first
@@ -1745,7 +1435,7 @@
                 employed.</p>
             </remarks>
           </elementSpec>
-
+          
           <elementSpec ident="sampleText" ns="http://www.ilit.bas.bg/repertorium/ns/3.0" mode="add">
             <desc>wraps samples from the manuscript, both those with specific identities (such as
                 <gi>head</gi>, <gi>incipit</gi>, etc.) and general ones (tagged as
@@ -1757,29 +1447,22 @@
               <memberOf key="att.typed"/>
             </classes>
             <content>
-              <sequence minOccurs="0" maxOccurs="1">
-                <alternate minOccurs="0" maxOccurs="unbounded">
-                  <elementRef key="head"/>
-                  <elementRef key="rubric"/>
-                  <elementRef key="incipit"/>
+              <sequence>
+                <elementRef key="label" minOccurs="0" maxOccurs="unbounded"/>
+                <elementRef key="rubric" minOccurs="0" maxOccurs="unbounded"/>
+                  <elementRef key="head" minOccurs="0" maxOccurs="1"/>
+                  <elementRef key="rubric" minOccurs="0" maxOccurs="unbounded"/>
+                  <elementRef key="incipit" minOccurs="0" maxOccurs="unbounded"/>
+                <elementRef key="rubric" minOccurs="0" maxOccurs="unbounded"/>
+                <alternate minOccurs="0" maxOccurs="unbounded">  
+                <elementRef key="ab" minOccurs="0" maxOccurs="unbounded"/>
+                  <elementRef key="sampleText" minOccurs="0" maxOccurs="unbounded"/>
                 </alternate>
-                <alternate minOccurs="0" maxOccurs="unbounded">
-                  <classRef key="model.pLike"/>
-                  <elementRef key="div"/>
-                </alternate>
-                <sequence minOccurs="0" maxOccurs="1">
-                  <elementRef key="explicit" minOccurs="0" maxOccurs="unbounded"/>
+                <elementRef key="colophon" minOccurs="0" maxOccurs="1"/>
+                  <elementRef key="explicit" minOccurs="0" maxOccurs="1"/>
                   <elementRef key="finalRubric" minOccurs="0" maxOccurs="unbounded"/>
-                </sequence>
               </sequence>
             </content>
-            <attList>
-              <attDef ident="script" usage="opt">
-                <datatype>
-                  <dataRef key="teidata.word"/>
-                </datatype>
-              </attDef>
-            </attList>
             <exemplum>
               <p>The following example is from the electronic description of DA1039NBKM.xml.</p>
               <egXML xmlns="http://www.tei-c.org/ns/Examples"><sampleText xml:lang="cu" script="cyrs">
@@ -1819,7 +1502,7 @@
                 <elementRef key="locusGrp"/>
               </alternate>
               <classRef key="model.nameLike.agent" minOccurs="0" maxOccurs="1"/>
-              <elementRef key="scriptDesc" minOccurs="0" maxOccurs="unbounded"/>
+              <elementRef key="scriptDesc" minOccurs="0" maxOccurs="1"/>
               <elementRef key="scribeLang" minOccurs="0" maxOccurs="1"/>
               <elementRef key="bibl" minOccurs="0" maxOccurs="unbounded"/>
               <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
@@ -1839,7 +1522,7 @@
               </scriptDesc>
               <scribeLang><summary>Middle Bulgarian with Russian
                 features</summary>  
-                <langNote xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:valueDatcat="http://linguistics-ontology.org/gold/2010/OrthographicSystem">Only <foreign xml:lang="cu">ь</foreign>; <foreign xml:lang="cu">ѫ</foreign> replaced by
+                <langNote key="orthography">Only <foreign xml:lang="cu">ь</foreign>; <foreign xml:lang="cu">ѫ</foreign> replaced by
                 <foreign xml:lang="cu">оу</foreign>; <foreign xml:lang="cu"
                   >ѧ</foreign> replaced by <foreign xml:lang="cu">a</foreign>;
                 <foreign xml:lang="cu">ы</foreign>; <foreign xml:lang="cu"
@@ -1861,15 +1544,10 @@
               <memberOf key="att.global"/>
             </classes>
             <content>
-              <alternate minOccurs="0" maxOccurs="1">
-                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
                 <sequence>
                   <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="scriptDesc" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="scribeLang" minOccurs="0" maxOccurs="1"/>
                   <elementRef key="scribe" minOccurs="0" maxOccurs="unbounded"/>
                 </sequence>
-              </alternate>
             </content>
             <exemplum>
               <p>The following example, from AA771NBKM.xml, contains information about two
@@ -1882,15 +1560,15 @@
                   <locus>f. 54</locus>
                   <locus>ff. 61–62</locus>
                 </locusGrp>
-                <name full="yes">anonymous</name>
-                <scriptDesc script="cyrs" type="semiuncial"/>
+                <name>anonymous</name>
+                <scriptDesc>
+                  <scriptNote  script="cyrs" type="semiuncial"/>
+                </scriptDesc>
                 <scribeLang>
-                  <orthography>
-                    <p>Two nasal vowels and two jers</p>
-                  </orthography>
+                  <summary>Two nasal vowels and two jers</summary>
                 </scribeLang>
                 <respStmt>
-                  <name full="yes">Adelina Angusheva</name>
+                  <name>Adelina Angusheva</name>
                   <resp>de visu</resp>
                 </respStmt>
               </scribe>
@@ -1909,10 +1587,12 @@
                   <locus>f. 109</locus>
                   <locus>f. 131</locus>
                 </locusGrp>
-                <name full="yes">anonymous</name>
-                <scriptDesc script="cyrs" type="semiuncial"/>
+                <name>anonymous</name>
+                <scriptDesc>
+                  <scriptNote  script="Cyrs" type="semiuncial"/>
+                </scriptDesc>
                 <respStmt>
-                  <name full="yes">Adelina Angusheva</name>
+                  <name>Adelina Angusheva</name>
                   <resp>de visu</resp>
                 </respStmt>
               </scribe>
@@ -1928,19 +1608,18 @@
               <memberOf key="att.typed"/>
             </classes>
             <content>
-              <alternate>
-                <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"/>
                 <sequence>
                   <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
                   <elementRef key="langNote" minOccurs="0" maxOccurs="unbounded"/>
-                  <classRef key="model.pLike" include="langNote" maxOccurs="unbounded"/>
                 </sequence>
-              </alternate>
             </content>
             <exemplum>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples"><scribeLang><summary>Middle Bulgarian with Russian
-                features</summary><orthography><orthNote type="jer" subtype="front">only <c xml:lang="cu">ь</c>
-                </orthNote><orthNote type="jus" subtype="nonConsis"><c xml:lang="cu">ѫ</c> replaced by <c xml:lang="cu">оу</c>; <c xml:lang="cu">ѧ</c> replaced by <c xml:lang="cu">a</c>;</orthNote><orthNote type="otherLetters"><c xml:lang="cu">ы</c>; <c xml:lang="cu">ѥ</c> and <c xml:lang="cu">ѩ</c></orthNote></orthography> … </scribeLang></egXML>
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <scribeLang><summary>Middle Bulgarian with Russian features</summary>
+                  <langNote key="orthography" type="jer" subtype="front">only <c xml:lang="cu">ь</c></langNote>
+                  <langNote key="orthography" type="jus" subtype="nonConsis"><c xml:lang="cu">ѫ</c> replaced by <c xml:lang="cu">оу</c>; <c xml:lang="cu">ѧ</c> replaced by <c xml:lang="cu">a</c>;</langNote>
+                  <langNote key="orthography" type="otherLetters"><c xml:lang="cu">ы</c>; <c xml:lang="cu">ѥ</c> and <c xml:lang="cu">ѩ</c></langNote> … 
+                </scribeLang></egXML>
             </exemplum>
             <remarks>
               <p>The <gi>scribeLang</gi> element contains a formal description of the language of a
@@ -1949,27 +1628,14 @@
           </elementSpec>
 
           <elementSpec ident="scriptDesc" mode="change" module="msdescription">
-            <classes mode="change">
-              <memberOf key="att.typed" mode="add"/>
-            </classes>
             <content>
-              <alternate>
-                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
                 <sequence>
                   <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
-                  <elementRef key="scriptNote" minOccurs="0" maxOccurs="unbounded"/>
+                  <elementRef key="scriptNote" minOccurs="1" maxOccurs="unbounded"/>
                   <elementRef key="musicNotation" minOccurs="0" maxOccurs="unbounded"/>
                   <elementRef key="crypto" minOccurs="0" maxOccurs="unbounded"/>
                 </sequence>
-              </alternate>
             </content>
-            <attList>
-              <attDef ident="script" usage="opt">
-                <datatype>
-                  <dataRef key="teidata.word"/>
-                </datatype>
-              </attDef>
-            </attList>
             <exemplum>
               <p>TEI example:</p>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1987,7 +1653,9 @@
                 element, <gi>musicNotation</gi> is moved here from <gi>physDesc</gi> and a new
                   <gi>crypto</gi> Repertorium is added. An example from the file AA771NBKM.xml</p>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <scriptDesc script="cyrs" type="semiuncial"/>
+              <scriptDesc>
+                <scriptNote  script="cyrs" type="semiuncial">...</scriptNote>
+              </scriptDesc>
             </egXML>
             </exemplum>
           </elementSpec>
@@ -2073,34 +1741,17 @@
               </alternate>
             </content>
             <attList>
-              <attDef ident="tracing">
+              <attDef ident="recording">
                 <desc>Describes the methods of recording of some watermark. Methods include:
-                  tracing, rubbing, etc.</desc>
+                  hand-tracing, rubbing, etc.</desc>
                 <datatype>
                   <dataRef key="teidata.word"/>
                 </datatype>
               </attDef>
             </attList>
             <exemplum>
-              <p>TEI example:</p>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <objectDesc form="codex">
-                <supportDesc>
-                  <p>Mostly <material>paper</material>, with watermarks
-                    <watermark>unicorn</watermark> (<ref>Briquet
-                      9993</ref>) and <watermark>ox</watermark> (close to
-                    <ref>Briquet 2785</ref>). The first and last leaf of
-                    each quire, with the exception of quires xvi and xviii,
-                    are constituted by bifolia of parchment, and all seven
-                    miniatures have been painted on inserted singletons of
-                    parchment.</p>
-                </supportDesc>
-              </objectDesc>
-            </egXML>
-            </exemplum>
-            <exemplum>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <watermark tracing="drawing"><motif type="basic">Leo</motif>within
+              <watermark recording="hand-tracing"><motif type="basic">Leo</motif>within
                 <motif type="supplemental">circle</motif> surmounted by
                 <motif type="secondary">quatrefoil</motif> and with
                 <countermark>“AP”</countermark> similar to <ref type="bibl" target="bib:Николаев1954">Nikolaev #125</ref> from the year
@@ -2110,7 +1761,7 @@
             <remarks>
               <p>The content of this element includes phrase level elements, as well as specialized
                 elements like <gi>motif</gi> and <gi>countermark</gi>. There are several special
-                attributes for the content of this element. <att>tracing</att> is used to describe
+                attributes for the content of this element. <att>recording</att> is used to describe
                 very briefly (with one word) the method of watermark tracing. The most usual method
                 is still drawing by hand, but there could be other possibilities, such as rubbing by
                 hand, usage of special Dylux print paper, beta- or x-radiography, scanning, etc. The
