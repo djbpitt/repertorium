@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AS9D15MP">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AS9D15MP">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -23,7 +29,7 @@
             </publicationStmt>
             <sourceDesc>
                 <bibl>
-                    <ref target="bib:Vašica1957">Vašica &amp; Vajs 1957: 112-114</ref>
+                    <ref target="bib:Vašica1957">Vašica &amp; Vajs 1957: 112–114</ref>
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -37,7 +43,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Panegyrikon</item>
                         <item>Homilies</item>
                     </list>
@@ -53,6 +59,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -67,19 +74,18 @@
                     <settlement>Prague</settlement>
                     <repository>National Museum</repository>
                     <idno type="shelfmark">IX D 15</idno>
-                    <altIdentifier type="old">
-                        <idno type="shelfmark">S 7</idno>
-                    </altIdentifier>
                     <altIdentifier>
                         <idno type="catalogue">42</idno>
+                    </altIdentifier>
+                    <altIdentifier type="former">
+                        <idno type="shelfmark">S 7</idno>
                     </altIdentifier>
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="fragment">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">I+12</measure>
@@ -88,7 +94,7 @@
                                     <width>185</width>
                                 </dimensions>
                             </extent>
-                            <condition>without beginning and end; f.8 is new, blank; some folia from
+                            <condition>Without beginning and end; f. 8 is new, blank; some folia from
                                 the middle are missing</condition>
                         </supportDesc>
                         <layoutDesc>
@@ -102,13 +108,15 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-12v</locus>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial"/>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–12v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"/>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, with two
-                                    jers</p>
-                            </orthography>
+                            <langNote key="orthography">Without juses, with two
+                                    jers
+                            </langNote>
                         </scribeLang>
                     </scribe>
                 </scribeDesc>
@@ -128,13 +136,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">1r-5r</locus>
+                        <locus n="2">1r–5r</locus>
                         <title xml:lang="bg">Слово похвално за Рождество Богородично</title>
                         <date type="churchCal" when="--09-08">8 September</date>
                         <note>
                             <bibl xml:lang="ru">
                                 <ref type="bibl" target="bib:Петровский1902">Петровский 1902:
-                                    118-126</ref>
+                                    118–126</ref>
                             </bibl>
                         </note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -148,7 +156,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">5r-5v</locus>
+                        <locus n="3">5r–5v</locus>
                         <title xml:lang="bg">Слово за празника Въздвижение на честния кръст от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <date type="churchCal" when="--09-14">14 September</date>
@@ -162,9 +170,9 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">6r-6v</locus>
+                        <locus n="4">6r–6v</locus>
                         <title xml:lang="bg">Слово за Богородичен празник, фрагмент</title>
-                        <date type="churchCal" when="--11-21" cert="low">21 November (?)</date>
+                        <date type="churchCal" when="--11-21" cert="low">21 November</date>
                         <note>without beginning</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">чит се вь
@@ -175,12 +183,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="original">
-                        <locus n="5">6v-7v</locus>
+                        <locus n="5">6v–7v</locus>
                         <title xml:lang="bg">Разказ за покръстването на Русия</title>
                         <date type="churchCal" when="--11-30"/>
                         <note>
                             <bibl xml:lang="ru">
-                                <ref type="bibl" target="bib:Сырку1896">Сырку 1896: 84-86</ref>
+                                <ref type="bibl" target="bib:Сырку1896">Сырку 1896: 84–86</ref>
                             </bibl>
                         </note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -222,13 +230,13 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="original">
-                        <locus n="8">9r-12r</locus>
+                        <locus n="8">9r–12r</locus>
                         <title xml:lang="bg">Слово за Рождество Христово от Йоан Екзарх</title>
                         <author>John the Exarch</author>
                         <date type="churchCal" when="--12-25">25 December</date>
                         <note>
                             <bibl xml:lang="ru" type="published">
-                                <ref type="bibl" target="bib:Сырку1896">Сырку 1896: 88-91</ref>
+                                <ref type="bibl" target="bib:Сырку1896">Сырку 1896: 88–91</ref>
                             </bibl>
                         </note>
                         <filiation type="source" subtype="other">Original Bulgarian work</filiation>
@@ -243,7 +251,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="9">12r-12v</locus>
+                        <locus n="9">12r–12v</locus>
                         <title xml:lang="bg">Сказание на Афродитиан за раждането на Исус</title>
                         <note>without end</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -257,17 +265,14 @@
                     <msItemStruct xml:id="ACD10" type="original">
                         <locus n="10">142r</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <colophon>
-                            <p/>
-                        </colophon>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#AS">
+                    <origin evidence="conjecture" resp="#AS">
                         <origDate notBefore="1501" notAfter="1599">16th c.</origDate>
                         <origPlace>Unknown</origPlace>
                         <ref type="bibl" target="bib:Vašica1957">Vašica &amp; Vajs 1957:
-                            112-114</ref>
+                            112–114</ref>
                     </origin>
                 </history>
             </msDesc>

@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DR124CIAI">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DR124CIAI">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -23,9 +29,10 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p><ref type="bibl" target="bib:Спространов1900">Спространов 1900: 171-172</ref>
-                    <ref type="bibl" target="bib:Христова1982">Своден каталог 1982: No.
-                    598</ref></p>
+                <listBibl><bibl><ref target="bib:Спространов1900">Спространов 1900: 171–172</ref></bibl>
+                    <bibl><ref target="bib:Христова1982">Своден каталог 1982: No.
+                        598</ref></bibl>
+                </listBibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -53,6 +60,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-29">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -75,7 +83,6 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
                                 <watermark>unclear</watermark>
                             </support>
                             <extent>
@@ -132,31 +139,25 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Without binding</p>
+                            <summary>Without binding</summary>
                         </binding>
                     </bindingDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
-                            <locus>1r-91v</locus>
+                            <locus>1r–91v</locus>
                         </locusGrp>
-                        <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>High quality</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">High quality</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography type="resava">
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Resava orthography</p>
-                            </orthography>
+                            <langNote key="orthography">Resava orthography</langNote>
                         </scribeLang>
                         <note xmlns="http://www.tei-c.org/ns/1.0">Similar to the hand of MS NBKM 621
                             as well as to the writing style of hieromonk Vasilij (Church-Historical
                             and Archival Institute, Sofia, No. 54)</note>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name>Dilyana Radoslavova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents type="translation">
@@ -165,14 +166,14 @@
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <filiation type="apograph">unknown</filiation>
                     <msItemStruct xml:id="ACD1" type="translation" style="non-narrative">
-                        <locus n="1">1r-10v</locus>
+                        <locus n="1">1r–10v</locus>
                         <title xml:lang="bg">Чинопоследование на Велик водосвет</title>
                         <date type="churchCal">Epiphany</date>
                         <note>The beginning of the text is missing</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu"/>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">10v-21v</locus>
+                        <locus n="2">10v–21v</locus>
                         <title xml:lang="bg">Чинопоследование над коливо за умрели</title>
                         <note>The end of the text is missing</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -180,7 +181,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">22r-38v</locus>
+                        <locus n="3">22r–38v</locus>
                         <title xml:lang="bg">Молитви различни "на всяка потреба"</title>
                         <note>This text contains 14 prayers; the beginning and the end are missing;
                             some prayers are preserved in fragments</note>
@@ -404,7 +405,7 @@
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">38v-40r</locus>
+                        <locus n="4">38v–40r</locus>
                         <title xml:lang="bg">Тропари и богородични за дните от седмицата</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">тропаре и б҃городич'ны
@@ -412,14 +413,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">40r-40v</locus>
+                        <locus n="5">40r–40v</locus>
                         <title xml:lang="bg">Отпусти за дните от седмицата</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">ѿпусте през<seg rend="sup">д</seg> нелю</head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="6">40v-46v</locus>
+                        <locus n="6">40v–46v</locus>
                         <title xml:lang="bg">Правила епитимийни</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">правило изложено льгьчаише. по
@@ -429,7 +430,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">46v-48r</locus>
+                        <locus n="7">46v–48r</locus>
                         <title xml:lang="bg">Правила за степените на сродство и за законните бракове</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">ѡ разлїичи сърод'ства. о
@@ -438,7 +439,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="8">49r-91r</locus>
+                        <locus n="8">49r–91r</locus>
                         <title xml:lang="bg">Чинопоследование на опело и погребение на свещеник</title>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">чинь погрыбанїю
@@ -447,9 +448,8 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#DR">
+                    <origin evidence="conjecture" resp="#DR">
                         <origDate notBefore="1675" notAfter="1700">17th c., last quarter</origDate>
-                        <origPlace>Unknown</origPlace>
                         <ref type="bibl" target="bib:Спространов1900">Спространов 1900</ref>
                     </origin>
                 </history>

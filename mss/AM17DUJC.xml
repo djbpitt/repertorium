@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM17DUJC">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM17DUJC">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -9,7 +16,7 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>18 January 1995</date>
+                <date when="1995-01-18">18 January 1995</date>
                 <idno type="Repertorium">RC-AM17DUJC</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -52,6 +59,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when="2009-04-17">Removed constructions
@@ -76,14 +84,13 @@
                     <collection>New</collection>
                     <idno type="shelfmark">17</idno>
                     <note>
-                        <ref type="bibl" target="bib:Христова2000">Христова, Джурова, Велинова 2000:
+                        <ref target="bib:Христова2000">Христова, Джурова, Велинова 2000:
                             № 17</ref></note>
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
                                 <watermark>unclear</watermark>
                             </support>
                             <extent>
@@ -121,19 +128,14 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locus xmlns="http://www.tei-c.org/ns/1.0">1-151r</locus>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="semiuncial" script="Cyrs">
-                            <p>Semiuncial</p>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote style="semiuncial" script="Cyrs"/>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, with two jers,
-                                    used inconsistently; predominate small jer</p>
-                            </orthography>
+                            <langNote key="orthography">Without juses, with two jers,
+                                    used inconsistently; predominates small jer
+                            </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Anisava Miltenova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -143,7 +145,7 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">MS 309 NBKM - Sofia</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="2">2r-3v</locus>
+                        <locus n="2">2r–3v</locus>
                         <title xml:lang="bg">Гръмник по растяща и намаляваща луна</title>
                         <note>The copy is concordant with the text edited by Tixonravov (Severjanov
                             N 20 from 15th c.) <ref type="bibl" target="bib:Тихонравов1863">Тихонравов 1863: 360-366</ref></note>
@@ -159,7 +161,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="3">3v-6v</locus>
+                        <locus n="3">3v–6v</locus>
                         <title xml:lang="bg">Коледник</title>
                         <note>The copy is concordant with the text in the Dragolov sbornik, 13th c.
                                 (<ref type="bibl" target="bib:Јoвaновић-Cmuпчевић1980">Јoвaновић-Cmuпчевић 1980: 153-174.</ref>)</note>
@@ -173,7 +175,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="5">6r-11v</locus>
+                        <locus n="5">6r–11v</locus>
                         <title xml:lang="bg">Сказание за 12-те сънища на цар Шахиншахи</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">MS 309 NBKM</filiation>
@@ -185,7 +187,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="6">11v-15r</locus>
+                        <locus n="6">11v–15r</locus>
                         <title xml:lang="bg">Въпроси и отговори. Разумник</title>
                         <note>Version A</note>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -198,9 +200,9 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="7">15v-110v</locus>
+                        <locus n="7">15v–110v</locus>
                         <title xml:lang="bg">Видение на пророк Даниил</title>
-                        <note>Greek source is known from the P. Alexander publication <ref type="bibl" target="bib:Alexander1967">Alexander 1967</ref></note>
+                        <filiation type="source">Greek parallel: <ref type="bibl" target="bib:Alexander1967">Alexander 1967</ref></filiation>
                         <filiation type="translation">1<date>10th c.</date></filiation>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">MS 309 NBKM</filiation>
@@ -209,13 +211,12 @@
                                 царехь.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Приш<seg rend="sup">д</seg>ь архаггль Гаврїиль кь Данїилу пр<seg rend="sup">о</seg>рку,
                                 и р<seg rend="sup">ч</seg>е ему г҃ле тако</incipit>
-                            <div xmlns="http://www.tei-c.org/ns/1.0" rendition="109r">
-                                <p>І҃. рѡгь ѿ ц҃ра еѳїѡпскаго. и вьнидеть вь седмовръхь ѿ западь</p>
-                            </div>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0" rendition="109r">І҃. рѡгь ѿ ц҃ра еѳїѡпскаго. и вьнидеть вь седмовръхь ѿ западь
+                            </explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="compilation">
-                        <locus n="8">110v-112v</locus>
+                        <locus n="8">110v–112v</locus>
                         <title xml:lang="bg">Въпроси и отговори. Разумник-Указ</title>
                         <note>This copy contained a text without initial part; without title and
                             locnumber; a note on the right margin: <foreign xml:lang="cu">зри</foreign></note>
@@ -231,8 +232,8 @@
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
                         <locusGrp>
-                            <locus n="9">112v-115r</locus>
-                            <locus>19r-22r</locus>
+                            <locus n="9">112v–115r</locus>
+                            <locus>19r–22r</locus>
                         </locusGrp>
                         <title xml:lang="bg">Летопис кратък (Беляковски)</title>
                         <note>This is so called <q>Beljakovski letopis</q> includes historical
@@ -247,7 +248,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="10">22r-26r</locus>
+                        <locus n="10">22r–26r</locus>
                         <title xml:lang="bg">Поучение за всяка неделя от Йоан Златоуст</title>
                         <author>John Chrysostom (Pseudo)</author>
                         <note>The text is concordance with the Sermon about this world and the
@@ -266,7 +267,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="11">26r-29v</locus>
+                        <locus n="11">26r–29v</locus>
                         <title xml:lang="bg">Сказание за 12-те петъка</title>
                         <note>Specific fetures coincides with the text in MS N 34, Sinai mon.,
                             12th-13th c.</note>
@@ -281,7 +282,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="12-23">29v-34v</locus>
+                        <locus n="12-23">29v–34v</locus>
                         <title xml:lang="bg">Физиолог</title>
                         <note>The copy represents second reduced group of the second Physiologus's
                             translation in Southslavic literature; the second group is concordant
@@ -294,7 +295,7 @@
                         <filiation type="antigraph">MS 309 NBKM</filiation>
                         <filiation type="litRedaction">1</filiation>
                         <msItemStruct xml:id="ACD10.1">
-                            <locus n="10.1">29v-30r</locus>
+                            <locus n="10.1">29v–30r</locus>
                             <title xml:lang="bg">Физиолог. За елена</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ еленїи. ѡ<seg rend="sup">ч</seg> блвы.</head>
@@ -308,21 +309,21 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD10.3">
-                            <locus n="10.3">30v-31r</locus>
+                            <locus n="10.3">30v–31r</locus>
                             <title xml:lang="bg">Физиолог. За орела</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ орла ѡ<seg rend="sup">ч</seg> бл<seg rend="sup">с</seg>ви.</head>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD10.4">
-                            <locus n="10.4">31r-31v</locus>
+                            <locus n="10.4">31r–31v</locus>
                             <title xml:lang="bg">Физиолог. За кълвача</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ дѣте<seg rend="sup">л</seg>.</head>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD10.5">
-                            <locus n="10.5">31v-32r</locus>
+                            <locus n="10.5">31v–32r</locus>
                             <title xml:lang="bg">Физиолог. За папуняка</title>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD10.6">
@@ -337,7 +338,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD10.8">
-                            <locus n="10.8">32v-33r</locus>
+                            <locus n="10.8">32v–33r</locus>
                             <title xml:lang="bg">Физиолог. За вълка</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ влька.</head>
@@ -352,7 +353,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD10.10">
-                            <locus n="10.10">33v-34r</locus>
+                            <locus n="10.10">33v–34r</locus>
                             <title xml:lang="bg">Физиолог. За змията</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ змїи</head>
@@ -375,7 +376,7 @@
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="24">34v-51v</locus>
+                        <locus n="24">34v–51v</locus>
                         <title xml:lang="bg">Повест за Акир Премъдри</title>
                         <note>The copy is concordant with text in MS N 29, Savina Monastery, ov.
                             1380 year, with MS N 828 NB - Belgrade, 15th c., etc. <listBibl>
@@ -399,7 +400,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation">
-                        <locus n="25">51v-75v</locus>
+                        <locus n="25">51v–75v</locus>
                         <title xml:lang="bg">Поучение за прекрасния Йосиф от Ефрем Сирин</title>
                         <author>Ephrem the Syrian</author>
                         <note>This sermon is included very often in the MSS with mixed content; the
@@ -413,7 +414,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
-                        <locus n="26">75v-85r</locus>
+                        <locus n="26">75v–85r</locus>
                         <title xml:lang="bg">Евангелие Томино</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">MS 309 NBKM</filiation>
@@ -426,7 +427,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="original">
-                        <locus n="28">85v-90v</locus>
+                        <locus n="28">85v–90v</locus>
                         <title xml:lang="bg">Житие на св. Алексий Римски</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">MS 309 NBKM</filiation>
@@ -439,7 +440,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15">
-                        <locus n="29">90v-96r</locus>
+                        <locus n="29">90v–96r</locus>
                         <title xml:lang="bg">Чудеса на св. Николай Мирликийски. Чудо за сина на Агрипа</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">MS 309 NBKM</filiation>
@@ -451,7 +452,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16">
-                        <locus n="30">96r-98r</locus>
+                        <locus n="30">96r–98r</locus>
                         <title xml:lang="bg">Чудеса на св. Николай Мирликийски. Чудо за Димитрий</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">MS 309 NBKM</filiation>
@@ -464,7 +465,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17" type="original">
-                        <locus n="31">98r-100v</locus>
+                        <locus n="31">98r–100v</locus>
                         <title xml:lang="bg">Поучение за отделянето на душата от тялото от Теофил Александрийски</title>
                         <author cert="medium">Theophilos of Alexandria</author>
                         <note>Sermo de morte et de iudicio; CPG 2618</note>
@@ -479,9 +480,9 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18" type="original">
-                        <locusGrp>
-                            <locus n="32">100v-105r</locus>
-                            <locus>109r-115v</locus>
+                        <locusGrp  n="32">
+                            <locus>100v–105r</locus>
+                            <locus>109r–115v</locus>
                         </locusGrp>
                         <title xml:lang="bg">Житие на св. Петка Римска</title>
                         <note>The text is dislocated on the two parts; the dislocation follows the
@@ -498,11 +499,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD19" type="original">
-                        <locus n="33">115v-121v, 105r-109a</locus>
+                        <locusGrp n="33">
+                            <locus>115v–121v</locus>
+                            <locus>105r–109r</locus>
+                        </locusGrp>
                         <title xml:lang="bg">Поучение за Второ пришествие от Йоан Златоуст</title>
                         <author cert="medium">John Chrysostom (Pseudo)</author>
                         <note>This text is concordant with the text in the MS named Zlatoust of
-                            Jagich, 13th-14th c. (Q. p. I. 56 GPB - St. Petersburgh). Without
+                            Jagich, 13th-14th c. (Q. p. I. 56 GPB – St. Petersburgh). Without
                             beginning according to the antigraph; there is a dislocation in the text
                             following the antigraph.</note>
                         <filiation type="translation">1</filiation>
@@ -517,8 +521,8 @@
                                     готова<seg rend="sup">х</seg></incipit>
                         </sampleText>
                     </msItemStruct>
-                    <msItemStruct xml:id="ACD20" type="original">
-                        <locus n="34">121v-123v</locus>
+                    <msItemStruct xml:id="ACD20" type="translation">
+                        <locus n="34">121v–123v</locus>
                         <title xml:lang="bg">Повест за Варлаам и Йоасаф. Притча за тримата приятели</title>
                         <author>John Chrysostom (Pseudo)</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -532,7 +536,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD21">
-                        <locus n="35">123v-124r</locus>
+                        <locus n="35">123v–124r</locus>
                         <title xml:lang="bg">Поучение за добрите жени от Йоан Златоуст</title>
                         <author cert="medium">John Chrysostom (Pseudo)</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -545,7 +549,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD22">
-                        <locus n="36">124r-126r</locus>
+                        <locus n="36">124r–126r</locus>
                         <title xml:lang="bg">Поучение за злите жени</title>
                         <author>Gregory of Nazianzos</author>
                         <author>Basil the Great (Pseudo)</author>
@@ -559,7 +563,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD23" type="translation">
-                        <locus n="37">126r-128r</locus>
+                        <locus n="37">126r–128r</locus>
                         <title xml:lang="bg">Разказ за милостинята, от Патерика</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">MS 309 NBKM</filiation>
@@ -573,7 +577,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD24" type="translation">
-                        <locus n="38">128r-129v</locus>
+                        <locus n="38">128r–129v</locus>
                         <title xml:lang="bg">Поучение за обущаря от Йоан Златоуст</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">MS 309 NBKM</filiation>
@@ -585,7 +589,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD25" type="translation">
-                        <locus n="39">129v-131r</locus>
+                        <locus n="39">129v–131r</locus>
                         <title xml:lang="bg">Разказ как пророк Даниил съкруши идола Вила</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">MS 309 NBKM</filiation>
@@ -598,7 +602,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD26" type="translation">
-                        <locus n="40">131r-139v</locus>
+                        <locus n="40">131r–139v</locus>
                         <title xml:lang="bg">Апокалипсис на Йоан Богослов</title>
                         <note>The copy coincides with the text in the MS N 34 from Monastery "St.
                             Ekatherina" on the mount Sinai - the oldest wellknown copy.</note>
@@ -613,7 +617,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD27" type="translation">
-                        <locus n="41">139r-148r</locus>
+                        <locus n="41">139r–148r</locus>
                         <title xml:lang="bg">Житие на апостол Петър, апокрифно</title>
                         <note>The copy is without title and beginning (two folia are missing). The
                             text is edited by <ref type="bibl" target="bib:Архангельский1899">Архангельский 1899: 112-119</ref> and used by <ref type="bibl" target="bib:Радченко1903">Радченко 1903: 199-211</ref></note>
@@ -626,7 +630,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD28" type="translation">
-                        <locus n="42">148r-151r</locus>
+                        <locus n="42">148r–151r</locus>
                         <title xml:lang="bg">Разказ за Самсон</title>
                         <note>The copy is edited by Arxangelskij, A. S. <ref type="bibl" target="bib:Архангельский1899">Архангельский 1899:
                             123-126</ref></note>
@@ -640,7 +644,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD29" type="translation">
-                        <locus n="43">151r-151v</locus>
+                        <locus n="43">151r–151v</locus>
                         <title xml:lang="bg">Разказ за монаха, който бягал от манастира си, защото го обиждали, от Патерика</title>
                         <note>Without title and beginning</note>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -653,16 +657,15 @@
                     </msItemStruct>
                     <msItemStruct xml:id="ACD30">
                         <locus>on the inner side of the front cover</locus>
-                        <colophon>
-                            <p>Сїѧ книга глаголемїѧ проказалніца да са казва на хїстенїте. Сїѧ книга
-                                глаголеми проказалница.</p>
-                        </colophon>
+                       <re:sampleText xml:lang="cu"> <colophon>
+                            <ab>Сїѧ книга глаголемїѧ проказалніца да са казва на хїстенїте. Сїѧ книга
+                                глаголеми проказалница.</ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin resp="#AM" evidence="de visu">
+                    <origin resp="#AM" evidence="conjecture">
                         <origDate evidence="internal" cert="high" notBefore="1750" notAfter="1799">18th c., second half</origDate>
-                        <origPlace evidence="conjecture" cert="low"/>
                     </origin>
                 </history>
                 <additional>

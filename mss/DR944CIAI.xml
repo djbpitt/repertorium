@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DR944CIAI">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DR944CIAI">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -23,7 +29,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p><ref type="bibl" target="bib:Христова1982">Своден каталог 1982: No. 566</ref></p>
+                <bibl><ref target="bib:Христова1982">Своден каталог 1982: No. 566</ref></bibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -51,6 +57,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-30">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -66,13 +73,21 @@
                     <idno type="shelfmark">944</idno>
                     <idno type="catalogue">566</idno>
                 </msIdentifier>
-                <msPart n="1">
-                    <locus>ff. 1r-150r</locus>
-                    <physDesc>
-                        <objectDesc form="codex">
+                <physDesc>
+                    <summary>The manuscript is convolute consisting of 4 parts.</summary>
+                    <objectDesc form="convolute"/>
+                    <bindingDesc>
+                        <binding>
+                            <summary>Old binding – wooden panels covered with ornamented leather</summary>
+                        </binding>
+                    </bindingDesc>
+                </physDesc>
+                <msPart n="1" xml:id="CIAI944.1">
+                    <locus>ff. 1r–150r</locus>
+                    <physDesc >
+                        <objectDesc form="convolutePart">
                             <supportDesc material="paper">
                                 <support>
-                                    <material>Paper</material>
                                     <watermark>unclear</watermark>
                                 </support>
                                 <extent>
@@ -101,7 +116,7 @@
                                     <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="20">
                                         <extent xmlns="http://www.tei-c.org/ns/1.0">6</extent>
                                     </quire>
-                                    <signatures>Original (<foreign xml:lang="cu">г҃-к҃</foreign>)</signatures>
+                                    <signatures>Original (<foreign xml:lang="cu">г҃–к҃</foreign>)</signatures>
                                 </collation>
                                 <condition>There are some missing folia between ff. 4 and 5, one
                                     folio between ff. 10 and 11, some folia between ff. 16 and 17,
@@ -123,29 +138,18 @@
                                 2r, 7r, 9v, 11r, 12r, 12v, 14r, 19r, 19v, 25v, 27r, 28r, 43r, 43v,
                                 88r, etc.</decoNote>
                         </decoDesc>
-                        <bindingDesc>
-                            <binding>
-                                <p>Old binding - wooden panels covered with ornamented leather</p>
-                            </binding>
-                        </bindingDesc>
                     </physDesc>
                     <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-                        <scribe n="1">
-                            <locus xmlns="http://www.tei-c.org/ns/1.0">1r-150r</locus>
-                            <name xmlns="http://www.tei-c.org/ns/1.0">[Filip Daskal from
-                                Adzhar]</name>
-                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                                <p>Semiuncial</p>
+                        <scribe>
+                            <locus xmlns="http://www.tei-c.org/ns/1.0">1r–150r</locus>
+                            <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe" cert="low">Filip Daskal from
+                                Adžar</name>
+                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                                <scriptNote script="Cyrs" style="semiuncial"/>
                             </scriptDesc>
                             <scribeLang>
-                                <orthography>
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">Resava orthography</p>
-                                </orthography>
+                                <langNote key="orthography">Resava orthography</langNote>
                             </scribeLang>
-                            <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                                <name>Dilyana Radoslavova</name>
-                                <resp>de visu</resp>
-                            </respStmt>
                         </scribe>
                     </scribeDesc>
                     <msContents type="translation">
@@ -156,7 +160,7 @@
                             <head xmlns="http://www.tei-c.org/ns/1.0">послѣдованїе мл҃тьв'ник<seg rend="sup">у</seg>.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD1" type="original">
-                            <locus n="1">1r-4v</locus>
+                            <locus n="1">1r–4v</locus>
                             <title xml:lang="bg">Молитви над бабина вода</title>
                             <note>The rite contains two prayers</note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -165,7 +169,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD2" type="translation">
-                            <locus n="2">4v-15r</locus>
+                            <locus n="2">4v–15r</locus>
                             <title xml:lang="bg">Чинопоследование на кръщение</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">чинь кр҃щенїе
@@ -173,7 +177,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD3" type="translation" style="non-narrative">
-                            <locus n="3">15r-16v</locus>
+                            <locus n="3">15r–16v</locus>
                             <title xml:lang="bg">Молитви над родилка на 40-тия ден</title>
                             <note>Contains three prayers. The end of this text is missing</note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -181,19 +185,19 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD4" type="translation">
-                            <locus n="4">17r-18r</locus>
+                            <locus n="4">17r–18r</locus>
                             <title xml:lang="bg">Чинопоследование на обручение</title>
                             <note>The beginning of this text is missing</note>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD5" type="translation">
-                            <locus n="5">18r-25r</locus>
+                            <locus n="5">18r–25r</locus>
                             <title xml:lang="bg">Чинопоследование на венчание</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">чинь вѣн'чанїю</head>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD6" type="translation">
-                            <locus n="6">25r-29r</locus>
+                            <locus n="6">25r–29r</locus>
                             <title xml:lang="bg">Чинопоследование на венчание на второбрачни</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">чинь вѣнчанїе второ
@@ -201,7 +205,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD7" type="translation">
-                            <locus n="7">29v-39v</locus>
+                            <locus n="7">29v–39v</locus>
                             <title xml:lang="bg">Чинопоследование на Велик водосвет</title>
                             <date type="churchCal">Epiphany</date>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -210,7 +214,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD8" type="translation">
-                            <locus n="8">40r-49r</locus>
+                            <locus n="8">40r–49r</locus>
                             <title xml:lang="bg">Чинопоследование на водосвет</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">служба ѡс҃щенїе
@@ -218,7 +222,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD9" type="translation">
-                            <locus n="9">49v-77r</locus>
+                            <locus n="9">49v–77r</locus>
                             <title xml:lang="bg">Чинопоследование на маслосвет</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">чинь на ѡс҃щенїе
@@ -226,14 +230,14 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD10" type="translation">
-                            <locus n="10">77r-80v</locus>
+                            <locus n="10">77r–80v</locus>
                             <title xml:lang="bg">Чинопоследование на братотворение</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">чинь братотворенїе</head>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD11" type="translation">
-                            <locus n="11">81r-110r</locus>
+                            <locus n="11">81r–110r</locus>
                             <title xml:lang="bg">Чинопоследование на опело и погребение на мирянин</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">послѣдованїе погрибанїе
@@ -241,14 +245,14 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD12" type="translation">
-                            <locus n="12">110r-115v</locus>
+                            <locus n="12">110r–115v</locus>
                             <title xml:lang="bg">Чинопоследование на опело и погребение на младенец</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">ѡпѣло мл<seg rend="sup">д</seg>нчьско до з҃. лѣ<seg rend="sup">т</seg></head>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD13" type="translation">
-                            <locus n="13">115v-122v</locus>
+                            <locus n="13">115v–122v</locus>
                             <title xml:lang="bg">Чинопоследование на опело и погребение през Светлата седмица</title>
                             <date type="churchCal">Easter Week</date>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -258,22 +262,22 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD14" type="translation">
-                            <locus n="14">122v-127v</locus>
+                            <locus n="14">122v–127v</locus>
                             <title xml:lang="bg">Чинопоследование над коливо за умрели</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                                <label xmlns="http://www.tei-c.org/ns/1.0" rend="margin">коливо</label>
                                 <head xmlns="http://www.tei-c.org/ns/1.0">чинь на<seg rend="sup">д</seg> коливо усъп'ши<seg rend="sup">м</seg></head>
-                                <head xmlns="http://www.tei-c.org/ns/1.0" rend="margin">коливо</head>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD15" type="translation">
-                            <locus n="15">127v-134v</locus>
+                            <locus n="15">127v–134v</locus>
                             <title xml:lang="bg">Канон молебен към Богородица</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">ч<seg rend="sup">с</seg>тны параклись прѣст҃ые б҃це</head>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD16" type="translation">
-                            <locus n="16">135r-142r</locus>
+                            <locus n="16">135r–142r</locus>
                             <title xml:lang="bg">Молитви различни "на всяка потреба"</title>
                             <note>This text contains 12 prayers</note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -417,7 +421,7 @@
                             </msItemStruct>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD17" type="translation">
-                            <locus n="17">142v-143v</locus>
+                            <locus n="17">142v–143v</locus>
                             <title xml:lang="bg">Чинопоследование на изповед</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">чинь испобѣданїю хотеи
@@ -425,7 +429,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD18" type="translation">
-                            <locus n="18">143v-147v</locus>
+                            <locus n="18">143v–147v</locus>
                             <title xml:lang="bg">Правила епитимийни</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">правило изложено вел'ми
@@ -436,7 +440,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD19" type="translation">
-                            <locus n="19">148r-149r</locus>
+                            <locus n="19">148r–149r</locus>
                             <title xml:lang="bg">Правила за степените на сродство и за законните бракове</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">степени сърод'ства и ѡ
@@ -444,7 +448,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD20" type="translation">
-                            <locus n="20">149v-150r</locus>
+                            <locus n="20">149v–150r</locus>
                             <title xml:lang="bg">Таблици пасхални</title>
                             <note>Starts from 1692</note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -454,45 +458,39 @@
                         </msItemStruct>
                     </msContents>
                     <history>
-                        <origin evidence="de visu">
+                        <origin evidence="conjecture">
                             <origDate>17th c., end</origDate>
                             <origPlace>probably Adzhar</origPlace>
-                            <note>
-                                <bibl>
-                                    <respStmt>
-                                        <name>Dilyana Radoslavova</name>
-                                        <resp>de visu</resp>
-                                    </respStmt>
-                                </bibl>
-                            </note>
                         </origin>
                     </history>
                 </msPart>
-                <msPart n="2">
-                    <locus>ff. 151r-182r</locus>
+                <msPart n="2" xml:id="CIAI944.2">
+                    <locus>ff. 151r–182r</locus>
+                    <msIdentifier>
+                        <idno>CIAI 944, ff. 151r–182r</idno>
+                    </msIdentifier>
                     <physDesc>
-                        <objectDesc form="codex">
+                        <objectDesc form="convolutePart">
                             <supportDesc material="paper">
                                 <support>
-                                    <material>Paper</material>
                                     <watermark>unclear</watermark>
                                 </support>
                                 <extent>
                                     <measure unit="folia">32</measure>
-                                    <dimensions type="folia" unit="mm" extent="ff.151r-182r">
+                                    <dimensions type="folia" unit="mm">
                                         <height>195</height>
                                         <width>135</width>
                                     </dimensions>
-                                    <dimensions type="written" unit="mm" extent="ff.151r-182r">
+                                    <dimensions type="written" unit="mm">
                                         <height>150</height>
                                         <width>115</width>
                                     </dimensions>
                                 </extent>
                                 <foliation>Modern</foliation>
                                 <collation>
-                                    <summary>4 quires of 8 folia each. Quire 1 - 4 folia, Quire 2
-                                        and Quire 20 - 6 folia</summary>
-                                    <signatures>Original (а҃-д҃)</signatures>
+                                    <summary>4 quires of 8 folia each. Quire 1 – 4 folia, Quire 2
+                                        and Quire 20 – 6 folia</summary>
+                                    <signatures>Original (а҃–д҃)</signatures>
                                 </collation>
                             </supportDesc>
                             <layoutDesc>
@@ -507,33 +505,27 @@
                         </decoDesc>
                         <bindingDesc>
                             <binding>
-                                <p>Old binding - wooden panels covered with ornamented leather</p>
+                                <summary>Old binding – wooden panels covered with ornamented leather</summary>
                             </binding>
                         </bindingDesc>
                     </physDesc>
                     <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                         <scribe n="1">
-                            <locus xmlns="http://www.tei-c.org/ns/1.0">151r-182r</locus>
+                            <locus xmlns="http://www.tei-c.org/ns/1.0">151r–182r</locus>
                             <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
-                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                                <p>New semiuncial</p>
+                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                                <scriptNote  script="Cyrs" style="semiuncial">New semiuncial</scriptNote>
                             </scriptDesc>
                             <scribeLang>
-                                <orthography>
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">Resava orthography</p>
-                                </orthography>
+                                <langNote key="orthography">Resava orthography</langNote>
                             </scribeLang>
-                            <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                                <name>Dilyana Radoslavova</name>
-                                <resp>de visu</resp>
-                            </respStmt>
                         </scribe>
                     </scribeDesc>
                     <msContents type="translation">
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <msItemStruct xml:id="ACD21" type="translation">
-                            <locus n="21">151r-182r</locus>
+                            <locus n="21">151r–182r</locus>
                             <title xml:lang="bg">Чинопоследование на опело и погребение на свещеник</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">послѣдованїе погрибанїе
@@ -542,27 +534,17 @@
                         </msItemStruct>
                     </msContents>
                     <history>
-                        <origin evidence="de visu">
+                        <origin evidence="conjecture">
                             <origDate>17th c., end</origDate>
-                            <origPlace>unknown</origPlace>
-                            <note>
-                                <bibl>
-                                    <respStmt>
-                                        <name>Dilyana Radoslavova</name>
-                                        <resp>de visu</resp>
-                                    </respStmt>
-                                </bibl>
-                            </note>
                         </origin>
                     </history>
                 </msPart>
-                <msPart n="3">
-                    <locus>ff. 183r-230v</locus>
+                <msPart n="3" xml:id="CIAI944.3">
+                    <locus>ff. 183r–230v</locus>
                     <physDesc>
-                        <objectDesc form="codex">
+                        <objectDesc form="convolutePart">
                             <supportDesc material="paper">
                                 <support>
-                                    <material>Paper</material>
                                     <watermark>unclear</watermark>
                                 </support>
                                 <extent>
@@ -579,9 +561,9 @@
                                 <foliation>Modern</foliation>
                                 <collation>
                                     <summary>
-                                        <num>7 quires</num>, 8 folia each. Quire 6 - 6 folia, Quire
-                                        7 - 2 folia</summary>
-                                    <signatures>Original (<foreign xml:lang="cu">з҃-аі҃</foreign>)</signatures>
+                                        <num>7 quires</num>, 8 folia each. Quire 6 – 6 folia, Quire
+                                        7 – 2 folia</summary>
+                                    <signatures>Original (<foreign xml:lang="cu">з҃–аі҃</foreign>)</signatures>
                                 </collation>
                                 <condition>There are missing: 1 folio between ff. 222 and 223, some
                                     missing folia between ff. 228 and 229, as well as some folia in
@@ -601,35 +583,24 @@
                                 and anthropomorphical motifs, on ff. 183r, 184r, 186r, 188r, 189r,
                                 etc.</decoNote>
                         </decoDesc>
-                        <bindingDesc>
-                            <binding>
-                                <p>Old binding - wooden panels covered with ornamented leather</p>
-                            </binding>
-                        </bindingDesc>
                     </physDesc>
                     <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                         <scribe n="1">
-                            <locus xmlns="http://www.tei-c.org/ns/1.0">183r-230v</locus>
+                            <locus xmlns="http://www.tei-c.org/ns/1.0">183r–230v</locus>
                             <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
-                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                                <p>Semiuncial of high artistic quality</p>
+                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                                <scriptNote script="Cyrs" style="semiuncial">Semiuncial of high artistic quality</scriptNote>
                             </scriptDesc>
                             <scribeLang>
-                                <orthography>
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">Resava orthography</p>
-                                </orthography>
+                                <langNote key="orthography">Resava orthography</langNote>
                             </scribeLang>
-                            <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                                <name>Dilyana Radoslavova</name>
-                                <resp>de visu</resp>
-                            </respStmt>
                         </scribe>
                     </scribeDesc>
                     <msContents type="translation">
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <msItemStruct xml:id="ACD22" type="translation">
-                            <locus n="22">183r-183r</locus>
+                            <locus n="22">183r–183r</locus>
                             <title xml:lang="bg">Литургия на Преждеосвещените дарове</title>
                             <note>Only the end of the text has survived</note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -641,7 +612,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD23" type="translation">
-                            <locus n="23">183r-191r</locus>
+                            <locus n="23">183r–191r</locus>
                             <title xml:lang="bg">Евангелски четива, възкръсни</title>
                             <note>12 readings from the Gospels</note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -650,7 +621,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD24" type="translation">
-                            <locus n="24">191v-228v</locus>
+                            <locus n="24">191v–228v</locus>
                             <title xml:lang="bg">Апостолски и евангелски четива за Господските празници и избрани светци</title>
                             <date type="churchCal" when="--09-01">September: 1st Nativity of the
                                 Theotokos</date>
@@ -696,7 +667,7 @@
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD25" type="translation">
-                            <locus n="25">229r-230v</locus>
+                            <locus n="25">229r–230v</locus>
                             <title xml:lang="bg">Молитви разрешителни, четени от архиерей или духовен отец</title>
                             <note>The beginning and the end of the text are missing</note>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -709,36 +680,26 @@
                         </msItemStruct>
                     </msContents>
                     <history>
-                        <origin evidence="de visu">
+                        <origin evidence="conjecture">
                             <origDate>17th c., end</origDate>
-                            <origPlace>unknown</origPlace>
-                            <note>
-                                <bibl>
-                                    <respStmt>
-                                        <name>Dilyana Radoslavova</name>
-                                        <resp>de visu</resp>
-                                    </respStmt>
-                                </bibl>
-                            </note>
                         </origin>
                     </history>
                 </msPart>
-                <msPart n="4">
-                    <locus>ff. 231r-233r</locus>
+                <msPart n="4" xml:id="CIAI944.4">
+                    <locus>ff. 231r–233r</locus>
                     <physDesc>
-                        <objectDesc form="codex">
+                        <objectDesc form="convolutePart">
                             <supportDesc material="paper">
                                 <support>
-                                    <material>Paper</material>
                                     <watermark>unclear</watermark>
                                 </support>
                                 <extent>
                                     <measure unit="folia">2</measure>
-                                    <dimensions type="folia" unit="mm" extent="ff.231r-233r">
+                                    <dimensions type="folia" unit="mm">
                                         <height>195</height>
                                         <width>135</width>
                                     </dimensions>
-                                    <dimensions type="written" unit="mm" extent="ff.231r-233r">
+                                    <dimensions type="written" unit="mm">
                                         <height>150</height>
                                         <width>100</width>
                                     </dimensions>
@@ -751,39 +712,28 @@
                             </layoutDesc>
                         </objectDesc>
                         <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Black</ink>
-                        <bindingDesc>
-                            <binding>
-                                <p>Old binding - wooden panels covered with ornamented leather</p>
-                            </binding>
-                        </bindingDesc>
                     </physDesc>
                     <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                         <scribe n="1">
-                            <locus xmlns="http://www.tei-c.org/ns/1.0">231r-233v</locus>
-                            <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
-                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                                <p>Semiuncial</p>
+                            <locus xmlns="http://www.tei-c.org/ns/1.0">231r–233v</locus>
+                            <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                                <scriptNote script="Cyrs" style="semiuncial"/>
                             </scriptDesc>
                             <scribeLang>
-                                <orthography>
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">Resava orthography</p>
-                                </orthography>
+                                <langNote key="orthography">Resava orthography</langNote>
                             </scribeLang>
-                            <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                                <name>Dilyana Radoslavova</name>
-                                <resp>de visu</resp>
-                            </respStmt>
                         </scribe>
                     </scribeDesc>
                     <msContents type="translation">
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <msItemStruct xml:id="ACD26" type="translation">
-                            <locus n="26">231r-232r</locus>
+                            <locus n="26">231r–232r</locus>
                             <title xml:lang="bg">Химнографски текст, неидентифициран</title>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD27" type="translation">
-                            <locus n="27">232v-233r</locus>
+                            <locus n="27">232v–233r</locus>
                             <title xml:lang="bg">Славословие на трапеза</title>
                             <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                                 <head xmlns="http://www.tei-c.org/ns/1.0">славословие на
@@ -792,9 +742,8 @@
                         </msItemStruct>
                     </msContents>
                     <history>
-                        <origin evidence="de visu" resp="#DR">
+                        <origin evidence="conjecture" resp="#DR">
                             <origDate notBefore="1680" notAfter="1680">17th c., end</origDate>
-                            <origPlace>unknown</origPlace>
                         </origin>
                     </history>
                 </msPart>

@@ -1,8 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM82NIK">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM82NIK">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Miscellany from the Nikoljac Monastery, 82, about
+                <title>Miscellany from the Nikoljac Monastery, 82, about
                     1515-1520</title>
                 <author xml:id="AM">Anisava Miltenova</author>
                 <editor xml:id="DB">David J. Birnbaum</editor>
@@ -21,11 +28,11 @@
             </publicationStmt>
             <sourceDesc>
                 <listBibl>
-                    <bibl xml:lang="sr" type="described">
-                        <ref type="bibl" target="bib:Мошин1961">Мошин 1961: 704</ref>
+                    <bibl>
+                        <ref target="bib:Мошин1961">Мошин 1961: 704</ref>
                     </bibl>
-                    <bibl xml:lang="bg" type="described">
-                        <ref type="bibl" target="bib:Милтенова1986a">Милтенова 1986: 271</ref>
+                    <bibl>
+                        <ref target="bib:Милтенова1986a">Милтенова 1986: 271</ref>
                     </bibl>
                 </listBibl>
             </sourceDesc>
@@ -56,6 +63,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#DB" when="2016-07-02">Removed empty &lt;editor&gt; element</change>
@@ -69,8 +77,8 @@
                     <msName type="specific" xml:lang="en">apocryphal miscellany</msName>
                     <msName type="specific" xml:lang="en">mixed-content miscellany</msName>
                     <country>Montenegro</country>
-                    <settlement type="episcopate">Montenegro-Primorska Episcopate</settlement>
                     <settlement>Bijelo polje</settlement>
+                    <institution role="episcopate">Montenegro-Primorska Episcopate</institution>
                     <repository>Nikoljac Monastery</repository>
                     <idno type="shelfmark">82</idno>
                 </msIdentifier>
@@ -78,7 +86,7 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
+                                <!-- To be done 
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">???</motif>
                                     <ref type="bibl" target="bib:Станковић1994">
@@ -86,6 +94,7 @@
                                         <date>???</date>
                                     </ref>
                                 </watermark>
+                                -->
                             </support>
                             <extent>
                                 <measure unit="folia">72</measure>
@@ -108,27 +117,22 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
                         <locus xmlns="http://www.tei-c.org/ns/1.0">1r-72v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs">
-                            <p>semiuncial/poluustav</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"/>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, with two
-                                    jehrs, irregular; West Bulgarian dialect features</p>
-                            </orthography>
+                            <langNote key="orthography">Without juses, with two
+                                    jers, irregular; West Bulgarian dialect features
+                            </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Anisava Miltenova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1r-2v</locus>
+                        <locus n="1">1r–2v</locus>
                         <title xml:lang="bg">Поучение, неидентифицирано</title>
                         <author>anonymous</author>
                         <note>The text ends with a sermon on the liturgy</note>
@@ -149,7 +153,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">3r-3v</locus>
+                        <locus n="2">3r–3v</locus>
                         <title xml:lang="bg">Разказ как се появиха павликяните</title>
                         <author>anonymous</author>
                         <note>Without beginning title and end</note>
@@ -171,7 +175,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">4r-7v</locus>
+                        <locus n="3">4r–7v</locus>
                         <title xml:lang="bg">Чудеса на св. Николай Мирликийски, неидентифицирани</title>
                         <author>anonymous</author>
                         <note>Without beginning and title</note>
@@ -204,7 +208,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5">
-                        <locus n="5">8r-12v</locus>
+                        <locus n="5">8r–12v</locus>
                         <title xml:lang="bg">Поучение върху казаното от пророк Исая от Йоан Златоуст. Разказ за кръвосмешението</title>
                         <author>John Chrysostom (Pseudo)</author>
                         <note>Without beginning, title and end</note>
@@ -220,7 +224,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="6">13r-19v</locus>
+                        <locus n="6">13r–19v</locus>
                         <title xml:lang="bg">Повест за Акир Премъдри</title>
                         <author>anonymous</author>
                         <note>Without beginning, title and end</note>
@@ -238,7 +242,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">20r-33v</locus>
+                        <locus n="7">20r–33v</locus>
                         <title xml:lang="bg">Житие на св. Ефросина</title>
                         <author>anonymous</author>
                         <note>Without beginning and title</note>
@@ -254,7 +258,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="8">34r-43v</locus>
+                        <locus n="8">34r–43v</locus>
                         <title xml:lang="bg">Разказ за отец Марко, от Патерика</title>
                         <author>anonymous</author>
                         <note>The text is apophtegmata patrum</note>
@@ -272,7 +276,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="9">43r-47r</locus>
+                        <locus n="9">43r–47r</locus>
                         <title xml:lang="bg">Разказ за св. Меркурий</title>
                         <author>anonymous</author>
                         <date type="churchCal" when="--11-25">25 November</date>
@@ -288,7 +292,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="10">47r-52v</locus>
+                        <locus n="10">47r–52v</locus>
                         <title xml:lang="bg">Житие на св. Петка Римска</title>
                         <author>anonymous</author>
                         <note>Without end</note>
@@ -303,7 +307,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="original">
-                        <locus n="11">53r-58v</locus>
+                        <locus n="11">53r–58v</locus>
                         <title xml:lang="bg">Разказ как архангел Михаил победи Сатанаил</title>
                         <author>anonymous</author>
                         <note>Without beginning and end</note>
@@ -323,7 +327,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation">
-                        <locus n="12">59r-66v</locus>
+                        <locus n="12">59r–66v</locus>
                         <title xml:lang="bg">Евангелие Томино</title>
                         <author>anonymous</author>
                         <note>Without beginning and title</note>
@@ -342,7 +346,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
-                        <locus n="13">66v-70v</locus>
+                        <locus n="13">66v–70v</locus>
                         <title xml:lang="bg">Разказ за кръчмарката Теофана</title>
                         <author>anonymous</author>
                         <note>The copy is concordant with the text in N 677 NBKM, 15th c. This the
@@ -350,7 +354,7 @@
                             women.</note>
                         <filiation type="translation">
                             <num>1</num>
-                            <date>13th-14th c.</date>
+                            <date>13th–14th c.</date>
                         </filiation>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Bulgarian</filiation>
@@ -369,7 +373,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="translation">
-                        <locus n="14">70v-72r</locus>
+                        <locus n="14">70v–72r</locus>
                         <title xml:lang="bg">Разказ за черноризеца Мартирий</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -386,7 +390,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15" type="translation">
-                        <locus n="15">72r-72v</locus>
+                        <locus n="15">72r–72v</locus>
                         <title xml:lang="bg">Повест за Варлаам и Йоасаф. Притча за тримата приятели</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -404,16 +408,7 @@
                 </msContents>
                 <history>
                     <origin>
-                        <origDate notBefore="1515" notAfter="1520">1515-1520 ca.</origDate>
-                        <origPlace>unknown</origPlace>
-                        <note>
-                            <bibl>
-                                <respStmt>
-                                    <name full="yes">Miltenova</name>
-                                    <resp>research work</resp>
-                                </respStmt>
-                            </bibl>
-                        </note>
+                        <origDate notBefore="1515" notAfter="1520">1515–1520 ca.</origDate>
                     </origin>
                 </history>
             </msDesc>

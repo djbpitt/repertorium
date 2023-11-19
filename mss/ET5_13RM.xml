@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-ET5_13RM">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-ET5_13RM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -10,7 +16,7 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>20 December 1995</date>
+                <date when="1995-12-20">20 December 1995</date>
                 <idno type="Repertorium">RC-ET_13RM</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -22,8 +28,8 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p><ref type="bibl" target="bib:Райков1986">Райков, Кодов, Христова 1986:
-                        110-114</ref></p>
+                <bibl><ref target="bib:Райков1986">Райков, Кодов, Христова 1986:
+                        110–114</ref></bibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -34,7 +40,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Miscellany devoted to a single Saint</item>
                         <item>Hagiography</item>
                         <item>St. John of Rila</item>
@@ -51,6 +57,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -74,7 +81,6 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Coat of
                                         arms with letters PQ and inscription Quartino</motif>
@@ -113,28 +119,25 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1-84</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Hieromonk Teofil of
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1–84</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Hieromonk Teofil of
                             Rila</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="semiuncial">
-                            <p>Irregular new semiuncial</p>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Irregular new semiuncial</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Church Slavonic</p>
-                            </orthography>
+                            <langNote key="orthography">Church Slavonic</langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Райков1986">Райков, Кодов, Христова 1986:
-                                110-114</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Райков1986">Райков, Кодов, Христова 1986: 110–114</ref>
+                        </bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <summary>The manuscript contains 11 texts</summary>
                     <filiation type="protograph">Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="original" style="non-narrative">
-                        <locus n="1">1r-24r</locus>
+                        <locus n="1">1r–24r</locus>
                         <title xml:lang="bg">Служба за св. Иван Рилски за 18 август</title>
                         <author>anonymous</author>
                         <date type="churchCal" when="--08-18">18 August</date>
@@ -156,7 +159,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="original" style="non-narrative">
-                        <locus n="2">24r-42r</locus>
+                        <locus n="2">24r–42r</locus>
                         <title xml:lang="bg">Служба за св. Иван Рилски за 19 октомври</title>
                         <author>anonymous</author>
                         <date type="churchCal" when="--10-19">19 October</date>
@@ -178,7 +181,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="original" style="non-narrative">
-                        <locus n="3">42r-56r</locus>
+                        <locus n="3">42r–56r</locus>
                         <title xml:lang="bg">Служба за св. Иван Рилски от Димитър Кантакузин</title>
                         <author>Demetrios Kantakouzenos</author>
                         <date type="churchCal" when="--07-01">1 July</date>
@@ -198,7 +201,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">56v-58v</locus>
+                        <locus n="4">56v–58v</locus>
                         <title xml:lang="bg">Поучение за душевното покаяние</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -211,7 +214,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">57v-58v</locus>
+                        <locus n="5">57v–58v</locus>
                         <title xml:lang="bg">Слово за Покров на Богородица</title>
                         <author>anonymous</author>
                             <date type="churchCal" when="--10-01">1 October</date>
@@ -232,7 +235,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="6">58v-59r</locus>
+                        <locus n="6">58v–59r</locus>
                         <title xml:lang="bg">Поучение за покаянието на св. Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -263,7 +266,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="8">59r - 60r</locus>
+                        <locus n="8">59r – 60r</locus>
                         <title xml:lang="bg">Поучение за небесното царство</title>
                         <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -278,7 +281,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9">
-                        <locus n="9">60r-63r</locus>
+                        <locus n="9">60r–63r</locus>
                         <title xml:lang="bg">Повест за пренасянето на мощите на св. Иван Рилски от Средец в Търново</title>
                         <author>anonymous</author>
                         <note>Short story concerning transfers of the relics to Sredec, Ostrigom and
@@ -299,12 +302,12 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10">
-                        <locus n="10">63r-67v</locus>
+                        <locus n="10">63r–67v</locus>
                         <title xml:lang="bg">Повест за връщането на мощите на св. Иван Рилски от Търново в Рила</title>
                         <author>anonymous</author>
                         <note>The story is compiled on the base of the Vladislav Gramatic's "Povest"
                             and the Vita with short encomium of Dimitrius Cantacuzin; other copy: N
-                            987 NBKM - Sofia.</note>
+                            987 NBKM – Sofia.</note>
                         <filiation type="source">Other</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -319,7 +322,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11">
-                        <locus n="11">70r-84r</locus>
+                        <locus n="11">70r–84r</locus>
                         <title xml:lang="bg">Житие на св. Иван Рилски от йеромонах Даниил Рилски</title>
                         <author>Daniil of Rila, Monk</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -338,27 +341,24 @@
                     <msItemStruct xml:id="ACD12" type="original">
                         <locus n="12">69v</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <colophon>
-                            <p>Преписа сѧ сїѧ книга служби и житїѧ во кратцѣ, с҃таго о҃ца нашего
+                       <re:sampleText xml:lang="cu"> <colophon>
+                            <ab>Преписа сѧ сїѧ книга служби и житїѧ во кратцѣ, с҃таго о҃ца нашего
                                 Іѡанна пустыножителѧ Рылскаго, вь лѣто ѿ Адама #З҃СЧѲ, ѿ Хр<seg rend="sup">т</seg>та, #А҃П3ЧА (1791), м<seg rend="sup">т</seg>ца
                                 маїѧ д҃і день на постница прї игумена кѵрь Герасима, Ѳеѡфиль во
-                                їеромонасехь грѣшны и послѣднеиши Рылець рукою ҂А҃П3ЧА.</p>
-                        </colophon>
+                                їеромонасехь грѣшны и послѣднеиши Рылець рукою ҂А҃П3ЧА.</ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="original">
                         <locus n="13">142r</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <colophon>
-                            <p>???</p>
-                        </colophon>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#ET">
+                    <origin evidence="internal" resp="#ET">
                         <origDate notBefore="1791" notAfter="1791">1791</origDate>
                         <origPlace>Rila monastery</origPlace>
                         <ref type="bibl" target="bib:Райков1986">Райков, Кодов, Христова 1986:
-                            110-114</ref>
+                            110–114</ref>
                     </origin>
                 </history>
             </msDesc>

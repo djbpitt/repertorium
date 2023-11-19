@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM29SAV">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM29SAV">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -9,7 +15,7 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>1999</date>
+                <date when="1999">1999</date>
                 <idno type="Repertorium">RC-AM29SAV</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
@@ -58,6 +64,7 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when="2009-04-17">Removed constructions
@@ -81,7 +88,7 @@
                     <msName type="individual" xml:lang="ru">Савинский апокрифический сборник</msName>
                     <country>Montenegro</country>
                     <settlement>Herceg Novi</settlement>
-                    <settlement type="episcopate">Montenegro-Primorska Episcopate</settlement>
+                    <institution role="episcopate">Montenegro-Primorska Episcopate</institution>
                     <repository>Savina Monastery</repository>
                     <idno type="shelfmark">29</idno>
                 </msIdentifier>
@@ -89,8 +96,7 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">199</measure>
@@ -123,25 +129,21 @@
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locus xmlns="http://www.tei-c.org/ns/1.0">1-199</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs">
-                            <p>Semiuncial one hand with ligatures, without diacritics</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Semiuncial one hand with ligatures, without diacritics</scriptNote>
                         </scriptDesc>
                         <scribeLang>
                             <summary xmlns="http://www.tei-c.org/ns/1.0">Old Church Slavonic, Rashka
                                 school with traces of Middle Bulgarian original;</summary>
-                            <orthography>
-                                <orthNote type="yer" subtype="front">only one jer (front); redoubled
-                                    jer at the end of the word;</orthNote>
-                                <orthNote type="jus" subtype="jusTrace">without nasal vowels; rarely
-                                    traces of <c xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ѫ</c>
-                                </orthNote>
-                            </orthography>
+                            <langNote key="orthography" type="jer" subtype="front">Only one jer (front); redoubled
+                                jer at the end of the word</langNote>
+                                <langNote key="orthography" type="jus" subtype="jusTrace">without nasal vowels; rarely
+                                    traces of <foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ѫ</foreign>
+                                </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Bogdanović, Miltenova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0"><ref target="bib:Богдановић1987">Богдановић, Милтенова
+                            1987</ref></bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -153,7 +155,7 @@
                         <title xml:lang="bg">Поучение на баща към сина си (Поучение на Спанеас)</title>
                         <note>This is the earliest copy. Other copies: N 149 NB-Wien; (Jagic, V); N
                             100 (Gruić) MSPC Belgrade (Radovanović, J.); other translation
-                            (Radojčić, S.). Greek source dated ov. 1142 (Krumbacher, K; Radovanović,
+                            (Radojčić, S.). Greek source dated ca. 1142 (Krumbacher, K; Radovanović,
                             J.); Slavonic translation dated 13th-14th c.</note>
                         <note>
                             <damage>Without beginning and title</damage></note>
@@ -589,7 +591,7 @@
                         <title xml:lang="bg">Въпроси и отговори. Разумник</title>
                         <note>Without beginning and title, small fragment. This text coincides with
                             a part of apocryphal work "О Тивериадском морѣ"; it is not clear if the
-                            text is a part of preceeding text?</note>
+                            text is a part of preceeding text.</note>
                         <note>
                             <listBibl>
                                 <bibl xml:lang="bg">
@@ -644,7 +646,7 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Вь лѣтехь ѡнехь ц҃р<seg rend="sup">с</seg>воющи <sic>Макьсимьꙗну</sic> м'нози страсты и
                                 беди приѥмаху иже вѣровахоу</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и бы<seg rend="sup">с</seg> оусѣкновениѥ с҃таго. <sic>Паньтелемоуна</sic>на .к҃з.
-                                д҃нь вь слав<seg rend="sup">оу</seg> п҃на <seg rend="sup">?</seg>
+                                д҃нь вь слав<seg rend="sup">оу</seg> п҃на <seg rend="sup" cert="low"/>
                                 г҃да и б҃а н҃шего И҃с Х҃а сь прѣс҃тимь д҃хомь в'сегда н҃нꙗ и присно
                                 и вь в҃ки ам҃ь.</explicit>
                         </sampleText>
@@ -962,7 +964,8 @@
                         <title xml:lang="bg">Колофон</title>
                         <note>Bogdanovich suggested, there is a fragment from colophon; it is
                             possible to read a few words only:</note>
-                        <colophon>
+                        <re:sampleText xml:lang="cu">
+                            <colophon>
                             <p>доспехь оу <unclear>...</unclear>оу пладне петро<seg rend="sup">мь</seg> да бѡж<unclear>...</unclear> раба
                                     своѥ<unclear>...</unclear> бѡгать <unclear>...</unclear>грѣси
                                     <unclear>...</unclear> и сты<unclear>...</unclear>оучи
@@ -971,11 +974,11 @@
                                 <unclear>...</unclear>ль що зап<unclear>...</unclear> бира
                                     ѥго<unclear>...</unclear> и бл<seg rend="sup">с</seg>ви
                                     вь<unclear>...</unclear>покои ве<seg rend="sup">ч</seg>н<unclear>...</unclear></p>
-                        </colophon>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#AM">
+                    <origin evidence="internal" resp="#AM">
                         <origDate notBefore="1380" notAfter="1380">1380 ca.</origDate>
                         <ref type="bibl" target="bib:Богдановић1987">Богдановић, Милтенова
                             1987</ref>
