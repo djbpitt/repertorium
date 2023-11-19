@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/out/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DRAdd1860BL">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Firman of Selim Khan, Add. MS 1860, The British Library, 1519</title>
+                <author xml:id="DR">Dilyana Radoslavova</author>
+                <author xml:id="RC">Ralph Cleminson</author>
+                <editor xml:id="AM">Anisava Miltenova</editor>
+                <editor xml:id="AB">Andrej Bojadžiev</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Institute of Literature</publisher>
+                <pubPlace>Sofia</pubPlace>
+                <date when="2005-01">January 2005</date>
+                <idno type="Repertorium">RC-ABAdd1860BL</idno>
+                <availability status="free">
+                    <p>The intellectual content of this file is copyrighted by the creators under
+                        the Creative Commons Attribution-No Derivative Works 3.0 under legislation
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
+                        information, but you are not allowed to alter, transform, or build upon the
+                        works on this section of the site. All reuse or distribution of this work
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This description is based on <emph>de visu</emph> observations, on MS microform
+                    and on the published catalogue descriptions.<ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 65-66</ref>. <ref type="bibl" target="bib:Partridge1963">Partridge 1963: 81-90.</ref>
+                    <ref type="bibl" target="bib:DuFeu1984">Du Feu 1984: 79-80.</ref></p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <date when="2005-02-21">21.01.2005</date>
+                <settlement>London</settlement>
+            </creation>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="bg">Bulgarian</language>
+                <language ident="cu">Old Slavic</language>
+                <language ident="ru">Russian</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="Repertorium">
+                    <list>
+                        <item>Firman</item>
+                    </list>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                    <p>In the context of this project, private URIs with the prefix "bib" point to
+                        bibl elements in the project's bib.xml file.</p>
+                </prefixDef>
+            </listPrefixDef>
+        </encodingDesc>
+        <revisionDesc>
+            <change who="#AB" when="2023-10-30">Edit elements according to new schema.</change>
+            <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
+                element &lt;origDate&gt;</change>
+            <change who="#AB" when="2009-04-17">Removed constructions
+                &lt;author&gt;anonymous&lt;/author&gt;</change>
+            <change who="#AB" when="2009-04-17">Added copyright statement</change>
+            <change who="#AB" when="2009-04-15">Corrections</change>
+            <change who="#AB" when="2009-04-13">Added Repertorium Identifier</change>
+            <change who="#AB" when="2009-03-02">Conversion to Repertorium 3.0</change>
+            <change who="#AM" when="2010-09-02">Conversion to Repertorium 4</change>
+            <change who="#DR" when="2010-09-22">Editorial work</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <msDesc>
+                <msIdentifier>
+                    <msName xml:lang="en" type="general">firman</msName>
+                    <msName xml:lang="en" type="individual">Firman of Selim Khan</msName>
+                    <msName xml:lang="bg" type="individual">Ферман на Селим Хан</msName>
+                    <msName xml:lang="ru" type="individual">Фирман Селима Хана</msName>
+                    <country>United Kingdom</country>
+                    <settlement>London</settlement>
+                    <repository>British Library</repository>
+                    <idno type="shelfmark">Add. MS 1860</idno>
+                    <idno type="catalogue" corresp="#CleminsonR1988">51</idno>
+                    <note>
+                        <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 65-66</ref> (The
+                        MS shelfmark in the Catalogue is Additional 8160).</note>
+                </msIdentifier>
+                <physDesc>
+                    <objectDesc form="roll">
+                        <supportDesc material="paper">
+                            <support>
+                                <material>Composed of four sheets of paper varying in length from
+                                        <dim>370mm</dim> to <dim>720mm</dim>. Backed in cloth,
+                                    making it impossible to discern any watermark.</material>
+                                <watermark>unclear</watermark>
+                            </support>
+                            <extent>
+                                <measure unit="folia">1 roll</measure>
+                                <dimensions unit="mm" type="written">
+                                    <height>2410</height>
+                                    <width>380</width>
+                                </dimensions></extent>
+                            <foliation>Modern, pen-written, in the upper right margins. No traces of
+                                previous foliations or paginations.</foliation>
+                            <collation>
+                                <ruling xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Ruled left
+                                    margin <dimensions xmlns="http://www.tei-c.org/ns/1.0" unit="mm" type="ruled"><width>55</width></dimensions>
+                                    wide.</ruling>
+                            </collation>
+                            <condition>
+                                <p>Good.</p>
+                            </condition>
+                        </supportDesc>
+                        <layoutDesc>
+                            <layout columns="1"/>
+                        </layoutDesc>
+                    </objectDesc>
+                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Black.</ink>
+                    <decoDesc>
+                        <p>Official signature <emph>(tughra)</emph> of the Sultan at the top with
+                            refined vegetal pattern in the outlines, in gold and blue; the first two
+                            lines and the word <foreign xml:lang="cu">господинъ</foreign> in the
+                            fourth are written in gold majuscules with blue decoration. the
+                            superscript <foreign xml:lang="cu">Д</foreign> elaborated as a Sassanian
+                            palmette, the endings extended above the letters</p>
+                    </decoDesc>
+                </physDesc>
+                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                    <scribe n="1">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1</locus>
+                        <persName xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous.</persName>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="bosančica"/>
+                        </scriptDesc>
+                        <scribeLang>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Serbo-Croatian</summary>
+                        </scribeLang>
+                    </scribe>
+                </scribeDesc>
+                <msContents>
+                    <msItemStruct xml:id="ACD1" type="translation">
+                        <locus n="1">1</locus>
+                        <title xml:lang="bg">Ферман на Селим хан</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Милостїю божіею ѧ великї
+                                господаръ</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ꙋ годищо рож҃ства христова
+                                а.ф.ѳі ꙋписанꙋ маꙗ ꙋ дренополю столнина црс҃ка</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                </msContents>
+                <history>
+                    <origin resp="#AM" evidence="internal">
+                        <origDate notBefore="1519" notAfter="1519">1519</origDate>
+                        <origPlace>Bosnia</origPlace>
+                    </origin>
+                    <provenance>Presented by <persName>Henry Gory</persName>, who may have been a
+                        descendant of a Mr <persName>Gory</persName> mentioned by <persName>Humfrey
+                            Wanley</persName> in his diary for <date>1723/4</date> in connection
+                        with the purchase of MSS.</provenance>
+                    <acquisition>1820.</acquisition>
+                </history>
+                <additional>
+                    <adminInfo>
+                        <recordHist>
+                            <source>
+                                <p>Directly catalogued from the original manuscript using the
+                                    printed catalogue <ref type="bibl" target="bib:1988">Cleminson
+                                        1988: 65-66</ref>.</p>
+                            </source>
+                        </recordHist>
+                    </adminInfo>
+                    <surrogates>
+                        <list>
+                            <item>Microform: Central Library of BAS, <idno>MF-15</idno>;</item>
+                            <item>Digital images of the roll (files: <idno>C7936-03</idno> –
+                                <idno>C7936-06</idno>).</item>
+                        </list>
+                    </surrogates>
+                    <listBibl>
+                        <bibl>
+                            <ref type="bibl" target="bib:Partridge1963">Partridge 1963:
+                                281–90.</ref>
+                        </bibl>
+                        <bibl>
+                            <ref type="bibl" target="bib:DuFeu1984">Du Feu 1984: 79-80.</ref>
+                        </bibl>
+                    </listBibl>
+                </additional>
+            </msDesc>
+        </body>
+    </text>
+</TEI>
