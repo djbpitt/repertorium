@@ -101,6 +101,16 @@
                 &lt;note&gt; parent</sch:report>
         </sch:rule>
     </sch:pattern>
+    <sch:pattern id="origDate-rules">
+        <sch:rule context="tei:origDate">
+            <sch:assert test="@notBefore and @notAfter">An &lt;origDate&gt; element must have
+                @notBefore and @notAfter attributes.</sch:assert>
+        </sch:rule>
+        <sch:rule context="tei:origDate/@notBefore | tei:origDate/@notAfter">
+            <sch:assert test="matches(., '\d{3,4}')">The values of @notBefore and @notAfter must be
+                three- or four-digit years.</sch:assert>
+        </sch:rule>
+    </sch:pattern>
     <sch:pattern id="msIdentifier-rules">
         <sch:rule context="tei:msDesc/tei:msIdentifier">
             <sch:p>Rules for &lt;msIdentifier&gt; do not apply inside &lt;msPart&gt; or
@@ -269,7 +279,7 @@
                     "<sch:value-of select="@type"/>" is invalid</sch:report>
         </sch:rule>
     </sch:pattern>
-    
+
     <sch:pattern id="watermark-rules">
         <sch:rule context="tei:watermark">
             <sch:assert test="
@@ -285,7 +295,7 @@
                 be a sibling, so that they share a watermark parent.</sch:report>
         </sch:rule>
     </sch:pattern>
-    
+
     <sch:pattern id="misc-rules">
         <sch:rule context="tei:supportDesc/tei:extent">
             <sch:assert test="tei:measure">supportDesc/extent must contain a measure
