@@ -15,7 +15,7 @@
                 value="substring-before(tokenize(base-uri(.), '/')[last()], '.xml')"/>
             <sch:let name="id" value="substring(@xml:id, 4)"/>
             <sch:assert test="starts-with(@xml:id, 'RC-')">The @xml:id (<sch:value-of
-                select="@xml:id"/>) does not begin with "RC-"</sch:assert>
+                    select="@xml:id"/>) does not begin with "RC-"</sch:assert>
             <sch:assert test="$filename eq $id" sqf:fix="change-tei-xml-id">The filename
                     (<sch:value-of select="$filename"/>) does not match the @xml:id (<sch:value-of
                     select="$id"/>)</sch:assert>
@@ -127,16 +127,15 @@
                 <sqf:add match="tei:msName[1]" node-type="attribute" target="xml:lang" select="'en'"
                 />
             </sqf:fix>
-            <sch:assert
-                test="
+            <sch:assert test="
                     if (tei:msName[@type eq 'individual']) then
                         tei:msName[@type eq 'individual' and @xml:lang eq 'bg'] and
                         tei:msName[@type eq 'individual' and @xml:lang eq 'en'] and
                         tei:msName[@type eq 'individual' and @xml:lang eq 'ru']
                     else
-                        true()"
-                sqf:fix="add-bg add-en add-ru">If there is an individual msName, there must be at
-                least one in each of the three languages, and they must be non-empty.</sch:assert>
+                        true()" sqf:fix="add-bg add-en add-ru">If there is an individual
+                msName, there must be at least one in each of the three languages, and they must be
+                non-empty.</sch:assert>
             <sqf:fix id="add-bg"
                 use-when="not(tei:msName[@type eq 'individual' and @xml:lang eq 'bg'])">
                 <sqf:description>
@@ -246,8 +245,7 @@
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="msName-rules">
-        <sch:rule
-            context="
+        <sch:rule context="
                 tei:msName[@type = ('general',
                 'specific')]">
             <sch:let name="genres" value="doc('http://repertorium.obdurodon.org/genres.xml')"/>
@@ -271,33 +269,23 @@
                     "<sch:value-of select="@type"/>" is invalid</sch:report>
         </sch:rule>
     </sch:pattern>
+    
     <sch:pattern id="watermark-rules">
         <sch:rule context="tei:watermark">
-            <sch:assert
-                test="(not(*) and string-length(normalize-space(.)) gt 0) or count(*:motif) eq 1">A
-                watermark must contain either bare text or exactly one motif element.</sch:assert>
+            <sch:assert test="
+                    if (not(re:motif)) then
+                        . = ('None', 'Unclear', 'Unidentified')
+                    else
+                        true()">A watermark that does not contain any motifs must
+                contain the exact strings “None”, “Unclear”, or “Unidentified”.</sch:assert>
         </sch:rule>
 
-        <sch:rule context="tei:countermark">
-            <sch:assert test="count(*:motif) eq 1">A countermark must contain exactly one motif
-                element</sch:assert>
-        </sch:rule>
-
-        <sch:rule context="tei:watermark/*:motif">
+        <sch:rule context="tei:watermark/re:motif">
             <sch:report test="tei:countermark">Countermark should not be a child of motif; it should
                 be a sibling, so that they share a watermark parent.</sch:report>
         </sch:rule>
-
-        <sch:rule context="tei:watermark/tei:ref">
-            <sch:report
-                test="
-                    *[1][self::tei:date] or *[last()][self::tei:num] or
-                    tei:num/following-sibling::*[1][not(self::tei:date)] or
-                    tei:date/following-sibling::*[1][not(self::tei:num)]"
-                >In an album reference in a watermark, the num and date elements must alternate,
-                starting with a num.</sch:report>
-        </sch:rule>
     </sch:pattern>
+    
     <sch:pattern id="misc-rules">
         <sch:rule context="tei:supportDesc/tei:extent">
             <sch:assert test="tei:measure">supportDesc/extent must contain a measure
@@ -314,9 +302,8 @@
         <sch:rule context="tei:extent/tei:dimensions">
             <sch:assert test="
                     @type = ('folia',
-                    'written')"
-                >extent/dimensions must specify a @type attribute of either 'folia' or
-                'written'</sch:assert>
+                    'written')">extent/dimensions must specify a @type attribute of
+                either 'folia' or 'written'</sch:assert>
         </sch:rule>
     </sch:pattern>
     <sch:pattern id="sampleText-rules">
@@ -419,12 +406,10 @@
                 jers, nasal vowels, and jotation).</sch:assert>
         </sch:rule>
         <sch:rule context="orthNote[@type eq 'jus']">
-            <sch:assert
-                test="
+            <sch:assert test="
                     @subtype = ('etymReg', 'nonEtymReg', 'nonConsis', 'nonJus',
-                    'jusTrace')"
-                >Legal values for jus @subtype are 'etymReg', 'nonEtymReg', 'nonConsis', 'nonJus',
-                and 'jusTrace'.</sch:assert>
+                    'jusTrace')">Legal values for jus @subtype are 'etymReg',
+                'nonEtymReg', 'nonConsis', 'nonJus', and 'jusTrace'.</sch:assert>
         </sch:rule>
         <sch:rule context="orthNote[@type eq 'jotation']">
             <sch:assert test="not(@subtype)">The @subtype attribute is not permitted when the @type
