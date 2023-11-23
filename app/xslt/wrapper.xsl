@@ -154,7 +154,7 @@
                         <xsl:sequence select="$plectogram, $bibliography, $flags"/>
                     </xsl:when>
                     <xsl:when test="../@id eq 'codicology'">
-                        <xsl:sequence select="$titles, $xml, $plectogram, $search, $bibliography"/>
+                        <xsl:sequence select="$titles, $xml, $search, $bibliography"/>
                     </xsl:when>
                     <xsl:when test="../@id eq 'titles'">
                         <xsl:sequence select="$codicology, $xml, $search, $bibliography, $flags"/>

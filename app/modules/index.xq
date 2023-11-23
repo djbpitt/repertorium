@@ -38,7 +38,8 @@ declare option output:indent "no";
       <m:title>Associated projects</m:title>
       <m:ul>
         <m:li><m:a url="https://slav.uni-sofia.bg/exist/apps/paesnoslovec/">Пѣснословьць</m:a> (hymnographic manuscripts)</m:li>
-        <m:li><m:a url="http://aso.obdurodon.org">Slovo-ASO</m:a> (brief descriptions of 140 South Slavic manuscripts)</m:li>
+        <m:li><m:a url="http://aso.obdurodon.org">Slovo-ASO</m:a> (brief descriptions of 140 South Slavic manuscripts,
+        primarily from St. Catherine, Zograph, and Rila)</m:li>
       </m:ul>
     </m:section>
     <!--
