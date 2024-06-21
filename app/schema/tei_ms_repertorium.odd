@@ -4,12 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Repertorium MS model based on TEI P5 (Version 4.6.0. Last updated on 4th April 2023, revision f18deffba)</title>
+        <title>Repertorium MS model based on TEI P5 (P5 Version 4.7.0. Last updated on 16th November 2023, revision e5dd73ed0)</title>
         <author xml:id="atb">Andrej Bojadžiev</author>
         <author xml:id="djb">David J. Birnbaum</author>
       </titleStmt>
       <editionStmt>
-        <edition n="3.5">Updated according to version TEI P5 4.6.0</edition>
+        <edition n="3.5">Updated according to version TEI P5 4.7.0</edition>
         <!-- Previous edition: 3.4 Last updated 25.01.2023 -->
         <!-- Previous edition: 3.3. Last updated 09.05.2022 -->
         <!-- Previous edition: 3.2 Last updated 16.11.2019 -->
@@ -21,7 +21,7 @@
             (<email>djbpitt@gmail.com</email>) on behalf of the Repertorium Project (<ptr
             target="http://repertorium.obdurodon.org"/>)</authority>
         <publisher>Repertorium Initiative</publisher>
-        <date when="2023-11-03">3rd of Novenber 2023</date>
+        <date when="2023-11-29">29th of Novenber 2023</date>
         <availability status="free">
           <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Distributed under a
             Creative Commons Attribution-ShareAlike 4.0 Unported License </licence>
@@ -60,7 +60,7 @@
         <note type="ns">http://www.ilit.bas.bg/repertorium/ns/3.0</note>
       </notesStmt>
       <sourceDesc>
-        <p>The curren version 3.5 was revised 2023-11-03 by Andrej Bojadžiev
+        <p>The curren version 3.5 was revised 2023-11-29 by Andrej Bojadžiev
           <email>aboy@uni-sofia.bg</email> and David J. Birnbaum (<email>djbpitt@gmail.com</email>)</p>
         <p>The version 3.4 was revised 2023-01-25 by Andrej Bojadžiev
           <email>aboy@uni-sofia.bg</email>.</p>
@@ -77,6 +77,9 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
+      <change who="#atb" when="2023-11-29">
+        <p>Test RelaxNG schemas for compatibility with the version 4.7.0 of TEI Guidelines.</p>
+      </change>
       <change who="#atb #djb" when="2023-11-03">
         <list>
           <item>Introduce an element <gi>label</gi> as part of <gi>sampleText</gi></item>
@@ -234,7 +237,7 @@
       </div>
       <div>
         <p>Repertorium model for manuscript description</p>
-        <schemaSpec ident="re_tei_ms" start="TEI msDesc" source="tei:4.6.0">
+        <schemaSpec ident="re_tei_ms" start="TEI msDesc" source="tei:4.7.0">
           <!-- required modules -->
           <moduleRef key="header"
             except="appInfo application biblFull namespace samplingDecl stdVals styleDefDecl tagUsage tagsDecl xenoData"/>
