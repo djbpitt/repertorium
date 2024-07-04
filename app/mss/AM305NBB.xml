@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-AM305NBB">
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM305NBB">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Fragment of apocryphal miscellany NB Belgrade, 305</title>
+                <title>Fragment of apocryphal miscellany NB Belgrade, 305</title>
                 <author xml:id="AM">Anisava Miltenova</author>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
             </titleStmt>
@@ -16,20 +16,16 @@
                 <date when="1995-12-06">6 December 1995</date>
                 <idno type="Repertorium">RC-AM305NBB</idno>
                 <availability status="free">
-                    <p>The intellectual content of this file is copyrighted by its creator(s) under
-                        the Creative Commons Attribution-No Derivative Works 3.0 License under
-                        legislation in <ref
-                            target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>.</p>
+                    <p>The intellectual content of this file is copyrighted by the creators under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p><bibl>
-                        <ref type="bibl" target="bib:Макушев1882">Макушев 1882</ref>
+                <bibl>
+                        <ref target="bib:Макушев1882">Макушев 1882</ref>
                     </bibl>
                     <bibl>
-                        <ref type="bibl" target="bib:Стојановић1982">Стојановић 1982: 294</ref>
-                    </bibl></p>
+                        <ref target="bib:Стојановић1982">Стојановић 1982: 294</ref>
+                    </bibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -42,7 +38,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Miscellany of mixed content</item>
                         <item>Apocryphal miscellany</item>
                         <item>Florilegia</item>
@@ -52,14 +48,15 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-12-01">Update license to CC BY 4.0. Small corrections and additions.</change>
+            <change who="#AB" when="2023-10-28">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -75,8 +72,7 @@
                     <repository>National Library</repository>
                     <idno type="shelfmark">305</idno>
                     <note>The MS is destroyed at the time of Second War. The fragment is a part from
-                        MSS N 39 (41) from the National Library, Athens. <ref type="bibl"
-                            target="bib:Станчев1998">Станчев 1998</ref></note>
+                        MSS No. 39 (41) from the National Library, Athens. <ref type="bibl" target="bib:Станчев1998">Станчев 1998</ref></note>
                     <altIdentifier type="former">
                         <country>Serbia</country>
                         <settlement>Belgrade</settlement>
@@ -89,9 +85,8 @@
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="fragment">
-                        <supportDesc material="parchment">
+                        <supportDesc material="parch">
                             <support>
-                                <material>Parchment</material>
                             </support>
                             <extent>
                                 <measure unit="folia">14</measure>
@@ -129,36 +124,28 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-14v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
-                            <p>Uncial with archaic elements.</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1r–14v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="uncial">Uncial with archaic elements</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">without juses, with small
-                                    jehr only</p>
-                            </orthography>
+                            <langNote key="orthography">Without juses, with small jer only
+                            </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Stanchev, Kr.</name>
-                            <resp>publication</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
-                    <summary>The manuscript contains 4 texts</summary>
+                    <summary>The manuscript contains 5 texts</summary>
                     <filiation type="protograph">Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1r-3r</locus>
+                        <locus n="1">ff. 1r–3r</locus>
                         <title xml:lang="bg">Откровение на Псевдо-Методий Патарски</title>
                         <author>Methodios of Olympos (Pseudo)</author>
                         <note>Without beginning and title. The copy is concordant with first
-                            translation of the work; earliest text: MSS N 382 (453) from the
-                            Hilandar Monastery on Mount Athos, 13th-14th c. (see: <ref type="bibl"
-                                target="bib:Истрин1897">Истрин 1897</ref></note>
-                        <filiation type="source">Greek text is edited by <ref type="bibl"
-                                target="bib:Истрин1897">Истрин 1897: 84-142</ref>).</filiation>
+                            translation of the work; earliest text: MSS No. 382 (453) from the
+                            Hilandar Monastery on Mount Athos, 13th–14th c. (see: <ref type="bibl" target="bib:Истрин1897">Истрин 1897</ref></note>
+                        <filiation type="source">Greek text is edited by <ref type="bibl" target="bib:Истрин1897">Истрин 1897: 84–142</ref>).</filiation>
                         <filiation type="translation">
                             <num>1</num>
                             <date>10th c.</date>
@@ -168,16 +155,15 @@
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">тогда
                                 вьсиꙗють праведьници ꙗко и с҃лнце, слово животноѥ приѥмлюще. а
-                                грѣшьници ѡбличаеми ѡбрат' се вь т'моу, ѥѥже да быхомь мы гонезноули
+                                грѣшьници ѡбличаеми ѡбратꙿ се вь тꙿмоу, ѥѥже да быхомь мы гонезноули
                                 б҃лгодѣтию и ч҃лвколю<seg rend="sup">б</seg>ѥмь г҃а нашего І҃са х҃а.
                                 емуже слава нинꙗ и присно и вь вѣкы вѣкомь. ам҃нь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">3r-6v</locus>
+                        <locus n="2">ff. 3r–6v</locus>
                         <title xml:lang="bg">Сказание на Афродитиан за раждането на Исус</title>
-                        <author>anonymous</author>
-                        <note>Without end. The fragment needs to filling out with the text from N 39
+                        <note>Without end. The fragment needs to filling out with the text from No. 39
                             (41) of the National Library in Athens (8 folia).</note>
                         <filiation type="translation">
                             <num>1</num>
@@ -188,35 +174,30 @@
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Сказаниѥ Афродита иѥр҃лмскаго.
                                 ѡ бывшиимь вь персцѣи земли чюдѣ.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ѿ перьсь оувѣ<seg
-                                    rend="sup">д</seg>нь бы<seg rend="sup">с</seg> г҃ь испрь<seg
-                                    rend="sup">в</seg>а. не оутаи бо се ѿ нихь ничтоже</incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ѿ перьсь оувѣ<seg rend="sup">д</seg>нь бы<seg rend="sup">с</seg> г҃ь испрь<seg rend="sup">в</seg>а. не оутаи бо се ѿ нихь ничтоже</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">7r-10v</locus>
+                        <locus n="3">ff. 7r–10v</locus>
                         <title xml:lang="bg">Слизане на Исус Христос в ада</title>
-                        <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">10v-12v</locus>
+                        <locus n="4">ff. 10v–12v</locus>
                         <title xml:lang="bg">Евангелие Никодимово. Послание на Пилат до Тиберий</title>
-                        <author>anonymous</author>
-                        <note>The text is published by <ref type="bibl" target="bib:Сперанский1895"
-                                >Сперанский 1895: 114 sq.</ref>)</note>
+                        <note>The text is published by <ref type="bibl" target="bib:Сперанский1895">Сперанский 1895: 114 sq.</ref>)</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ прѣдании г҃а нашего
                                 Ї҃с х҃а и ѡ м<seg rend="sup">ч</seg>нии ѥго.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Вельми дрьжавномоу и зѣло
-                                чьстьномоу и вел'ми строиномоу Тиверию кесароу азь Пилать Понтьскы и
+                                чьстьномоу и велꙿми строиномоу Тиверию кесароу азь Пилать Понтьскы и
                                 вьсточныѥ страны ѡбласть прѣдрьже вьзвѣстити зѣло трѣбоую вашемоу
                                 благочьстию нашими книгами.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">13r-14v</locus>
+                        <locus n="5">ff. 13r–14v</locus>
                         <title xml:lang="bg">Неидентифициран текст (поучение, житие, разказ или др.)</title>
                     </msItemStruct>
                 </msContents>
@@ -226,7 +207,7 @@
                     <origin>
                         <origDate notBefore="1250" notAfter="1299">13th c., second half</origDate>
                         <origPlace>Unknown. <note>Makushev added comment, that MS is from the
-                                Djakovica Monastery; Stojanovich mentioned that MSS is from Skopie.
+                                Djakovica Monastery; Stojanović mentioned that MSS is from Skopie.
                                 See, <ref type="bibl" target="bib:Станчев1984">Станчев
                                 1984</ref></note>
                         </origPlace>

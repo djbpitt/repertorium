@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-AA1348NBKM">
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AA1348NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -14,18 +14,10 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>30. 08. 1995</date>
+                <date when="1995-08-30">30. 08. 1995</date>
                 <idno type="Repertorium">RC-AA1348NBKM</idno>
                 <availability status="free">
-                    <p>The intellectual content of this file is copyrighted by the creators under
-                        the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>. In short, you could download and disseminate
-                        information, but you are not allowed to alter, transform, or build upon the
-                        works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref
-                            target="http://www.ilit.bas.bg/repertorium/"
-                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                    <p>The intellectual content of this file is copyrighted by the creators under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -55,14 +47,15 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Update license to CC BY 4.0. Small corrections and additions.</change>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when="2009-04-17">Removed constructions
@@ -85,7 +78,7 @@
                     <idno type="shelfmark">1348</idno>
                     <idno type="catalogue">1348</idno>
                     <note>
-                        <name type="relatedPerson" full="yes">Петарь Боженіца</name>
+                        <persName type="relatedPerson">Петарь Боженіца</persName>
                         <ref type="bibl" target="bib:Стоянов1971">Стоянов, Кодов 1971:141</ref>
                     </note>
                 </msIdentifier>
@@ -93,8 +86,7 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">338</measure>
@@ -105,9 +97,6 @@
                             </extent>
                             <pagination xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">with
                                 letters, original</pagination>
-                            <collation>
-                                <summary>no data</summary>
-                            </collation>
                             <condition>The first page is missing. Twenty two folia are missing
                                 between ff. 322 and 323.</condition>
                         </supportDesc>
@@ -118,25 +107,18 @@
                     <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Dark brown</ink>
                     <bindingDesc>
                         <binding>
-                            <p>New, leather and cardboard</p>
-                            <bindingNote xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                type="cover">
-                                <locus xmlns="http://www.tei-c.org/ns/1.0">On the back side of the
-                                    upper cover:</locus>
-                                <decoNote xmlns="http://www.tei-c.org/ns/1.0">
-                                    <stamp>angels with circles.</stamp>
-                                </decoNote>
-                            </bindingNote>
+                            <summary>New, leather and cardboard</summary>
+                            <decoNote type="stamp"> <locus xmlns="http://www.tei-c.org/ns/1.0">On the back side of the upper cover:</locus><stamp>angels with circles.</stamp></decoNote>
                         </binding>
                     </bindingDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0" from="1" to="338">ff.
-                            1r-338v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0">Daskal Todor Pirdopski</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
-                            type="semiuncial"/>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0" from="1" to="338">ff. 1r–338v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Daskal Todor Pirdopski</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" >
+                            <scriptNote script="Cyrs" style="semiuncial"/>
+                        </scriptDesc>
                         <bibl xmlns="http://www.tei-c.org/ns/1.0">
                             <ref target="bib:Стоянов1971">Стоянов, Кодов 1971</ref>
                         </bibl>
@@ -147,7 +129,7 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1r-68v</locus>
+                        <locus n="1">ff. 1r–68v</locus>
                         <title xml:lang="bg">Гадание за времето по месеци и по години</title>
                         <note>Prediction begins with the <date from="1840">1840</date> and ends to
                             the <date to="1890">1890</date>.</note>
@@ -156,12 +138,11 @@
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ ц҃риградь велый
                                 гдс҃ръ</incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">на <seg rend="sup"
-                                    >ли</seg>сть: ке҃</explicit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">на <seg rend="sup">ли</seg>сть: ке҃</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">69a-115v</locus>
+                        <locus n="2">ff. 69r–115v</locus>
                         <title xml:lang="bg">Гадание за съдбата на човека според Зодиака</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -171,7 +152,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3">
-                        <locus n="3">116r-117r</locus>
+                        <locus n="3">ff. 116r–117r</locus>
                         <title xml:lang="bg">Сведения за злите дни</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -183,7 +164,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
-                        <locus n="4">117r-119v</locus>
+                        <locus n="4">ff. 117r–119v</locus>
                         <title xml:lang="bg">Имената на ангелите</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -197,7 +178,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5">
-                        <locus n="5">119v-123v</locus>
+                        <locus n="5">ff. 119v–123v</locus>
                         <title xml:lang="bg">Рецепти за пчелите и пчелните кошери</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -211,7 +192,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="6">124r-136v</locus>
+                        <locus n="6">ff. 124r–136v</locus>
                         <title xml:lang="bg">Лунник по 30-те дни на луната</title>
                         <note>The text is wrongly titled as a prediction about months; it is a book
                             of divination by the monthly moon phases.</note>
@@ -227,7 +208,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7">
-                        <locus n="7">137r-137v</locus>
+                        <locus n="7">ff. 137r–137v</locus>
                         <title xml:lang="bg">Стихири за Богородица</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -240,7 +221,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8">
-                        <locus n="8">137v-142r</locus>
+                        <locus n="8">ff. 137v–142r</locus>
                         <title xml:lang="bg">Сказание на пророк Исая</title>
                         <note>An original Bulgarian work, created in the 11th c.</note>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -249,15 +230,14 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Во едно времѣне изидутъ
                                 нѣкои насилницы</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">занесуть тѣло его на
-                                н҃бса. тому слава <gap hand="AA"/> аминь</explicit>
+                                н҃бса. тому слава <gap/> аминь</explicit>
                         </sampleText>
                         <bibl>
-                            <ref type="bibl" target="bib:Miltenova2012">Miltenova 2012:
-                                186-217</ref>
+                            <ref target="bib:Miltenova2012">Miltenova 2012: 186–217</ref>
                         </bibl>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="9">142v-144a</locus>
+                        <locus n="9">ff. 142v–144a</locus>
                         <title xml:lang="bg">Разказ за пустинника и смъртта на човека, от Патерика</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -271,7 +251,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="10">144r-172r</locus>
+                        <locus n="10">ff. 144r–172r</locus>
                         <title xml:lang="bg">Съновник, 1</title>
                         <note>Dreambook in alphabetical order</note>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -285,7 +265,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="11">172v-173r</locus>
+                        <locus n="11">ff. 172v–173r</locus>
                         <title xml:lang="bg">Съновник, 2</title>
                         <note>non-alphabetical</note>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -298,7 +278,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12">
-                        <locus n="12">173r-176r</locus>
+                        <locus n="12">ff. 173r–176r</locus>
                         <title xml:lang="bg">Таблица показваща сбъдването на съня</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -312,7 +292,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13">
-                        <locus n="13">173r-176a</locus>
+                        <locus n="13">ff. 173r–176r</locus>
                         <title xml:lang="bg">Сведения за щастливите и нещастните дни през различни месеци</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -322,52 +302,48 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">
                                 <sic>Ханноарїа</sic>
                             </incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">сїрома<seg rend="sup"
-                                    >х</seg> и недолговѣчень</explicit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">сїрома<seg rend="sup">х</seg> и недолговѣчень</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14">
-                        <locus n="14">177v-275v</locus>
+                        <locus n="14">ff. 177v–275v</locus>
                         <title xml:lang="bg">Гадания под формата на въпроси и отговори</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Ѡстрологовъ ѿ древныхъ <gap/>
                                 предсказанное будущее</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">имена проныцательни<seg
-                                    rend="sup">х</seg> хо парагмонъ</incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">имена проныцательни<seg rend="sup">х</seg> хо парагмонъ</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">на помощь додѣ</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15">
-                        <locus n="15">276r-276v</locus>
+                        <locus n="15">ff. 276r–276v</locus>
                         <title xml:lang="bg">Коледник</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Указъ ради рж<seg rend="sup"
-                                    >с</seg>втата х҃рвыхъ.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще случитсѧ р҃ж<seg
-                                    rend="sup">с</seg>тво хс҃во въ нл҃а҃ю</incipit>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Указъ ради рж<seg rend="sup">с</seg>втата х҃рвыхъ.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще случитсѧ р҃ж<seg rend="sup">с</seg>тво хс҃во въ нл҃а҃ю</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">ще да е и болѣсти
                                 много</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16" type="translation">
-                        <locus n="16">277r-295v</locus>
+                        <locus n="16">ff. 277r–295v</locus>
                         <title xml:lang="bg">Гръмник Зодиак</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Сказанїе ради дванадесѧтьтѧхь
                                 мс҃ць ка.</head>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">риба французи,</p>
+                            <rubric xmlns="http://www.tei-c.org/ns/1.0">риба французи,</rubric>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">да са въцари да влада
                                     та<seg rend="sup">м</seg></explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17" type="translation">
-                        <locus n="17">296r-311v</locus>
+                        <locus n="17">ff. 296r–311v</locus>
                         <title xml:lang="bg">Лунник по месеци</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -381,7 +357,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18" type="translation">
-                        <locus n="18">312r-315r</locus>
+                        <locus n="18">ff. 312r–315r</locus>
                         <title xml:lang="bg">Гадание за съдбата на болния</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -395,7 +371,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD19">
-                        <locus n="19">315v-337v</locus>
+                        <locus n="19">ff. 315v–337v</locus>
                         <title xml:lang="bg">Лекарственик</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -409,9 +385,8 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#AA">
-                        <origDate notBefore="1799" notAfter="1899">19th c.</origDate>
-                        <origPlace>Unknown</origPlace>
+                    <origin evidence="conjecture" resp="#AA">
+                        <origDate notBefore="1800" notAfter="1899">19th c.</origDate>
                         <ref type="bibl" target="bib:Стоянов1971">Стоянов, Кодов 1971:141</ref>
                     </origin>
                 </history>
@@ -420,8 +395,7 @@
                         <recordHist>
                             <source>
                                 <p>Directly catalogued from the original manuscript using the
-                                    printed catalogue from <ref type="bibl" target="bib:Стоянов1971"
-                                        >Стоянов, Кодов 1971:141</ref></p>
+                                    printed catalogue from <ref type="bibl" target="bib:Стоянов1971">Стоянов, Кодов 1971:141</ref></p>
                             </source>
                         </recordHist>
                     </adminInfo>

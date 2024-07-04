@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-ET987NBKM">
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-ET987NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Miscellany with service and vitas of St. John of Rila</title>
+                <title>Miscellany with service and vitas of St. John of Rila</title>
                 <author xml:id="ET">Elena Tomova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -14,26 +14,23 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>10 December 1995</date>
+                <date when="1995-12-10">10 December 1995</date>
                 <idno type="Repertorium">RC-ET987NBKM</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref
-                            target="http://www.ilit.bas.bg/repertorium/"
-                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p><ref type="bibl" target="bib:Стоянов1964">Стоянов 1964: 142-143, No 987</ref>
-                    <ref type="bibl" target="bib:Христова1982">Своден каталог 1982: 275-276, No.
-                        761</ref>
-                    <ref type="bibl" target="bib:Ангелов1967">Ангелов 1967: 69-79</ref>
-                    <ref type="bibl" target="bib:Ангелов1960">Ангелов 1960: 247-255</ref></p>
+                <listBibl><bibl><ref target="bib:Стоянов1964">Стоянов 1964: 142–143, No 987</ref></bibl>
+                   <bibl> <ref target="bib:Христова1982">Своден каталог 1982: 275–276, No.
+                        761</ref></bibl>
+                    <bibl><ref target="bib:Ангелов1967">Ангелов 1967: 69–79</ref></bibl>
+                    <bibl><ref target="bib:Ангелов1960">Ангелов 1960: 247–255</ref></bibl></listBibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -44,7 +41,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item xml:lang="en">Miscellany devoted to one Saint</item>
                     </list>
                 </keywords>
@@ -52,14 +49,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -89,7 +86,6 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
                                 <watermark>
                                     <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Letters
                                         CF and over them some ornament (?)</motif>
@@ -105,12 +101,9 @@
                             <foliation>Original pagination in ink by Cyrillic</foliation>
                             <collation>
                                 <summary>Six quires arranged in two different ways. Part I: quire
-                                        <foreign xml:lang="cu">а҃</foreign> is missing; <foreign
-                                        xml:lang="cu">в҃ </foreign>has 5 folia, <foreign
-                                        xml:lang="cu">г҃ </foreign>- 8 folia, <foreign xml:lang="cu"
-                                        >д҃ </foreign>- 6 folia, <foreign xml:lang="cu">е҃
-                                    </foreign>- 3 folia; part II: quire <foreign xml:lang="cu">а҃
-                                    </foreign>- 6 folia.</summary>
+                                        <foreign xml:lang="cu">а҃</foreign> is missing; <foreign xml:lang="cu">в҃ </foreign>has 5 folia, <foreign xml:lang="cu">г҃ </foreign>– 8 folia, <foreign xml:lang="cu">д҃ </foreign>– 6 folia, <foreign xml:lang="cu">е҃
+                                    </foreign>– 3 folia; part II: quire <foreign xml:lang="cu">а҃
+                                    </foreign>– 6 folia.</summary>
                                 <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="2">
                                     <extent xmlns="http://www.tei-c.org/ns/1.0">5</extent>
                                 </quire>
@@ -143,29 +136,26 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Consists of wooden panels covered with ornamented leader. There is
-                                one clasp.</p>
+                            <summary>Consists of wooden panels covered with ornamented leader.</summary>
+                            <condition>There is
+                                one clasp.</condition>
                         </binding>
                     </bindingDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1-60</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="semiuncial"
-                            script="Cyrs">
-                            <p>Irregular semiuncial</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1–60</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  style="semiuncial" script="Cyrs">Irregular semiuncial</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">with one jus (small jus) and
-                                    two jers</p>
-                            </orthography>
+                            <langNote key="orthography">With one jus (small jus) and
+                                    two jers
+                            </langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Стоянов1964">Стоянов 1964: 142-143, No
-                                987</ref>
-                        </note>
+                           <bibl xmlns="http://www.tei-c.org/ns/1.0"> <ref target="bib:Стоянов1964">Стоянов 1964: 142–143, No
+                                987</ref></bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -173,9 +163,8 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="original" style="non-narrative">
-                        <locus n="1">1r19 - 22v20</locus>
+                        <locus n="1">1r19 – 22v20</locus>
                         <title xml:lang="bg">Служба за св. Иван Рилски за 19 октомври</title>
-                        <author>anonymous</author>
                         <date type="churchCal" when="--10-19">19 October</date>
                         <note>The text is without beginning.</note>
                         <filiation type="source">Other</filiation>
@@ -185,13 +174,12 @@
                             <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">щенїе
                                 прїемь нб<seg rend="sup">с</seg>наго цр<seg rend="sup">с</seg>твїа
                                 наслѣдиемь</incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">что воздамъ гд<seg
-                                    rend="sup">с</seg>ви ѡ всѣхъ ап<seg rend="sup">с</seg>лъ къ
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">что воздамъ гд<seg rend="sup">с</seg>ви ѡ всѣхъ ап<seg rend="sup">с</seg>лъ къ
                                 галатомъ.+</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="original">
-                        <locus n="2">23r19 - 52r</locus>
+                        <locus n="2">23r19 – 52r</locus>
                         <title xml:lang="bg">Житие на св. Иван Рилски</title>
                         <author>Daniil of Rila, Monk</author>
                         <date type="churchCal" when="--10-19">19 OCtober</date>
@@ -203,14 +191,13 @@
                                     прп<seg rend="sup">д</seg>бнаго и бг҃оноснаго оц҃а нашего іѡанна
                                 пустиножителѧ рылскаго. собрано ѿ различных списателеи паче же ѿ
                                 еѵѳимиа патрїарха терновскагѡ въ кратцѣ списаное.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Сеи прп<seg rend="sup"
-                                    >д</seg>бныи и богоноснии оц҃ъ нашъ іѡаннъ рылски</incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Сеи прп<seg rend="sup">д</seg>бныи и богоноснии оц҃ъ нашъ іѡаннъ рылски</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">и
                                 поклоненїе со оц҃емъ и единороднимъ его сн҃ом҃</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="original">
-                        <locus n="3">53 r-56v</locus>
+                        <locus n="3">53 r–56v</locus>
                         <title xml:lang="bg">Житие на св. Иван Рилски от Евтимий Търновски</title>
                         <author>Daniil of Rila, Monk</author>
                         <note xml:lang="en">The text belongs to the short redaction. It is without
@@ -229,14 +216,14 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="original">
-                        <locus n="4">56r-60v</locus>
+                        <locus n="4">56r–60v</locus>
                         <title xml:lang="bg">Повест за връщането на мощите на св. Иван Рилски от Търново в Рила</title>
                         <author>Daniil of Rila, Monk</author>
-                        <note xml:lang="en">The text is in short redaction. It is without beginning
-                            and end.</note>
+                        <note>The text is without beginning and end.</note>
                         <filiation type="source">Other</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
+                        <filiation type="litRedaction">The text is in short redaction.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Повестъ о возвращенїе мощеи
                                 ст҃аго прп<seg rend="sup">д</seg>бнаго оц҃а нашего іѡанна в' рылскую
@@ -247,7 +234,7 @@
                                 в монастїръ сказана и братїѧ</explicit>
                         </sampleText>
                         <bibl>
-                            <ref type="bibl" target="bib:Ангелов1960">Ангелов 1960: 247-255</ref>
+                            <ref target="bib:Ангелов1960">Ангелов 1960: 247–255</ref>
                         </bibl>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="original">
@@ -256,13 +243,11 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu">
+                    <origin evidence="conjecture">
                         <origDate notBefore="1780" notAfter="1799">18th c., end</origDate>
                         <origPlace>Rila monastery</origPlace>
-                        <bibl type="catalogue">
                             <ref type="bibl" target="bib:Христова1982">Своден каталог 1982: No.
                                 761</ref>
-                        </bibl>
                     </origin>
                 </history>
             </msDesc>

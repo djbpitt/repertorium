@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-AM39A">
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM39A">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -16,16 +16,12 @@
                 <date when="1995-12-04">4 December 1995</date>
                 <idno type="Repertorium">RC-AM39A</idno>
                 <availability status="free">
-                    <p>The intellectual content of this file is copyrighted by its creator(s) under
-                        the Creative Commons Attribution-No Derivative Works 3.0 License under
-                        legislation in <ref
-                            target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>.</p>
+                    <p>The intellectual content of this file is copyrighted by the creators under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <bibl xml:lang="bg" type="published">
-                    <ref type="bibl" target="bib:Станчев1984">Станчев 1984</ref>
+                <bibl>
+                    <ref target="bib:Станчев1984">Станчев 1984</ref>
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -37,7 +33,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Apocryphal miscellany</item>
                         <item>Miscellany with mixed content</item>
                         <item>Florilegia</item>
@@ -47,14 +43,15 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-12-02">Update license to CC BY 4.0. Small corrections and additions.</change>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -71,19 +68,16 @@
                     <idno type="shelfmark">39</idno>
                     <idno type="catalogue">39</idno>
                     <note>
-                        <persName type="relatedPerson" full="yes">S. Lambros</persName>. The
-                        fragment is a part from MSS N 467 (305) from the National Library, Belgrade,
-                        destroyed at the time of Second war.</note>
-                    <altIdentifier type="old">
+                        <persName type="relatedPerson">S. Lambros</persName>.</note>
+                    <altIdentifier type="former">
                         <idno type="shelfmark">41</idno>
                     </altIdentifier>
                 </msIdentifier>
                 <physDesc>
+                    <summary>The fragment is a part from MSS N 467 (305) from the National Library, Belgrade,
+                        destroyed at the time of Second war.</summary>
                     <objectDesc form="fragment">
-                        <supportDesc material="parchment">
-                            <support>
-                                <material>Parchment</material>
-                            </support>
+                        <supportDesc material="parch">
                             <extent>
                                 <measure unit="folia">8</measure>
                                 <dimensions type="folia" unit="mm">
@@ -123,21 +117,15 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-8v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs">
-                            <p>Uncial/ustav with archaic elements</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1r-8v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="uncial">Uncial with archaic elements</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, with small
-                                    jehr only</p>
-                            </orthography>
+                            <langNote key="orthography">Without juses, with front jer only
+                            </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Stanchev, Kr.</name>
-                            <resp>publication</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents type="translation">
@@ -149,11 +137,10 @@
                     <filiation type="protograph">Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
                         <locusGrp n="1">
-                            <locus>7r-7v</locus>
-                            <locus>1r-2v</locus>
+                            <locus>f. 7r–7v</locus>
+                            <locus>ff. 1r–2v</locus>
                         </locusGrp>
                         <title xml:lang="bg">Сказание на Афродитиан за раждането на Исус</title>
-                        <author>anonymous</author>
                         <note>Without beginning and title. The copy represented may be translation
                             different from well known translations.</note>
                         <filiation type="translation">
@@ -173,9 +160,8 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">2v-3r</locus>
+                        <locus n="2">ff. 2v–3r</locus>
                         <title xml:lang="bg">Пророчество в светилището на Аполон за раждането на Христос</title>
-                        <author>anonymous</author>
                         <note>The copy is concordant with the text in the Melecki sbornik, Zamojski
                             sbornik etc.</note>
                         <filiation type="translation">
@@ -184,19 +170,16 @@
                         </filiation>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Проре<seg rend="sup"
-                                >ч</seg>ниѥ ѡ х҃сѣ вь кумирници ѥлин'скааго б҃а.</head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Проре<seg rend="sup">ч</seg>ниѥ ѡ х҃сѣ вь кумирници ѥлин'скааго б҃а.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Бывшоу гладоу вь
                                     <sic>ѥлинцѣи</sic>земли нѣкоѥи зѣло. и не быв'ши имь помощи ни ѿ
                                 коѥго имь б҃а.</incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и то ѥ<seg rend="sup"
-                                    >с</seg> вь мраморныхь подь бо ихь вьписано. вь незабываѥмую
-                                паметь. б҃оу же нашемоу сла<seg rend="sup">в</seg> вь вѣкы. ам<seg
-                                    rend="sup">н</seg>ь.</explicit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">и то ѥ<seg rend="sup">с</seg> вь мраморныхь подь бо ихь вьписано. вь незабываѥмую
+                                паметь. б҃оу же нашемоу сла<seg rend="sup">в</seg> вь вѣкы. ам<seg rend="sup">н</seg>ь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">3v-4v</locus>
+                        <locus n="3">ff. 3v–4v</locus>
                         <title xml:lang="bg">Сведения за нрава, образа и възрастта на Богородица</title>
                         <author>Epiphanios of Constantinople</author>
                         <note>The copy is concordant with the text in the Melecki sbornik; other
@@ -209,8 +192,7 @@
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">С҃тго Ѥпифаниꙗ мниха и
-                                прозвитера ѡ знамениихь н'рава и ѡбраза и вьзрааста прѣстыѥ вла<seg
-                                    rend="sup">д</seg>чце наше б҃це при<seg rend="sup">с</seg>д҃вы
+                                прозвитера ѡ знамениихь н'рава и ѡбраза и вьзрааста прѣстыѥ вла<seg rend="sup">д</seg>чце наше б҃це при<seg rend="sup">с</seg>д҃вы
                                 М҃риѥ.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Бѣше оубо ѿлоучено мѣсто вь
                                 храмѣ г<seg rend="sup">д</seg>ни. близь лѣвыѥ страны жрьтьвника.
@@ -220,7 +202,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">4v-5r</locus>
+                        <locus n="4">ff. 4v–5r</locus>
                         <title xml:lang="bg">Сведения за нрава и образа на Исус Христос</title>
                         <author>Epiphanios of Constantinople</author>
                         <note>The copy is concordant with the text in the Melecki sbornik.</note>
@@ -230,10 +212,8 @@
                         </filiation>
                         <filiation type="protograph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Знамениꙗ г҃а нашего І҃с х<seg
-                                    rend="sup">с</seg>а.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Мои же х<seg rend="sup"
-                                    >с</seg>ь. б<seg rend="sup">г</seg>ь. бѣ ѡбразомь красьнь зѣло.
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Знамениꙗ г҃а нашего І҃с х<seg rend="sup">с</seg>а.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Мои же х<seg rend="sup">с</seg>ь. б<seg rend="sup">г</seg>ь. бѣ ѡбразомь красьнь зѣло.
                                 вьзрастомь же рекше <sic>выстостию</sic>телесною шеть
                                 стопь.</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">мальмѣ нароуменьию.
@@ -243,9 +223,9 @@
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
                         <locusGrp>
-                            <locus>5r</locus>
-                            <locus>6r-6v</locus>
-                            <locus>8r-8v</locus>
+                            <locus>f. 5r</locus>
+                            <locus>f. 6r–6v</locus>
+                            <locus>f. 8r–8v</locus>
                         </locusGrp>
                         <title xml:lang="bg">Сведения за родословието на св. Богородица</title>
                         <author>Epiphanios of Constantinople</author>
@@ -267,12 +247,7 @@
                 <history>
                     <origin>
                         <origDate notBefore="1250" notAfter="1299">13th c., second half</origDate>
-                        <origPlace>Unknown</origPlace>
-                        <note>
-                            <bibl>
-                                <ref type="bibl" target="bib:Станчев1984">Станчев 1984</ref>
-                            </bibl>
-                        </note>
+                        <ref type="bibl" target="bib:Станчев1984">Станчев 1984</ref>
                     </origin>
                 </history>
             </msDesc>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-NG97BAB">
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-NG97BAB">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Четириевангелие No. 97, Библиотека на Румънската академия</title>
+                <title>Четириевангелие No. 97, Библиотека на Румънската академия</title>
                 <author xml:id="NG">Nina Gagova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -14,23 +14,20 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>November 2005</date>
+                <date when="2005-11">November 2005</date>
                 <idno type="Repertorium">RC-NG97BAB</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref
-                            target="http://www.ilit.bas.bg/repertorium/"
-                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p><ref type="bibl" target="bib:Panaitescu1959">Panaitescu 1959: 124-125</ref>
-                    <ref type="bibl" target="bib:Василев1980">Василев и др. 1980: 41-69</ref></p>
+                <listBibl><bibl><ref target="bib:Panaitescu1959">Panaitescu 1959: 124–125</ref></bibl>
+                    <bibl><ref target="bib:Василев1980">Василев и др. 1980: 41–69</ref></bibl></listBibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -42,7 +39,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Gospels</item>
                         <item>Theophylact of Ochrida</item>
                     </list>
@@ -51,18 +48,16 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-
+            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
-
             <change who="#AM" when="2011-10-07">Removed old elements</change>
             <change who="#AM" when="2011-10-07">Editorial work, checked MS and added
                 information</change>
@@ -84,7 +79,7 @@
                         <supportDesc material="paper">
                             <support>
                                 <material>Paper of good quality</material>
-                                <watermark>unclear</watermark>
+                                <watermark>Unclear</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">376</measure>
@@ -97,7 +92,7 @@
                             <collation>
                                 <summary>no data</summary>
                             </collation>
-                            <condition>Fair.</condition>
+                            <condition>Fair</condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" writtenLines="20"/>
@@ -112,49 +107,46 @@
                             f. 359</decoNote>
                     </decoDesc>
                     <bindingDesc>
-                        <binding>
-                            <p>Old, 16th c.</p>
+                        <binding contemporary="false">
+                            <summary>Old, <date>16th c.</date></summary>
                         </binding>
                     </bindingDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-376 v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
-                            type="semiuncial"/>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–376 v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"></scriptNote>
+                        </scriptDesc>
                         <scribeLang>
                             <summary xmlns="http://www.tei-c.org/ns/1.0">Serbian origin.</summary>
-                            <orthography type="resava">
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Resava school orthography</p>
-                            </orthography>
+                                <langNote key="orthography">Resava school orthography</langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Panaitescu1959">Panaitescu 1959:
-                                124-125</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Panaitescu1959">Panaitescu 1959:
+                                124–125</ref>
+                        </bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1r-9r</locus>
+                        <locus n="1">1r–9r</locus>
                         <title xml:lang="bg">Предисловие към Евангелието от Йоан Златоуст</title>
                         <author>John Chrysostom</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ стыхь҃ ѡца҃ нашего
-                                Іѡанна архїеп<seg rend="sup">с</seg>кпа Кѡнстантїнꙗ града Зла<seg
-                                    rend="sup">т</seg>устааго. повѣданїе о еѵ<seg rend="sup"
-                                    >г҃</seg>лїи стго҃ Ма<seg rend="sup">т</seg>ѳеа еѵаггелиста.
+                                Іѡанна архїеп<seg rend="sup">с</seg>кпа Кѡнстантїнꙗ града Зла<seg rend="sup">т</seg>устааго. повѣданїе о еѵ<seg rend="sup">г҃</seg>лїи стго҃ Ма<seg rend="sup">т</seg>ѳеа еѵаггелиста.
                                 слово а҃. прѣдисловїе.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Подобааше оубѡ намь не
                                 трѣбовати помощь ѿ писанїа</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">..и вса блгаа҃ полоучити
                                 вьзможемь. блг<seg rend="sup">д</seg>тию и члк҃ѡлюбиѣмь га҃ нашего
-                                Іу҃ Ха҃. ѥмоуже слава <gap hand="NG"/> амин.</explicit>
+                                Іу҃ Ха҃. ѥмоуже слава <gap/> амин.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
@@ -167,12 +159,11 @@
                             <head xmlns="http://www.tei-c.org/ns/1.0">Марїе црце҃ блг҃оразоумно
                                 прошениѥ</head>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и исписа вь кратцѣ
-                                сказаниѥ четыре<seg rend="sup">х</seg> еѵаггелисть сиц<seg
-                                    rend="sup">е</seg>:</explicit>
+                                сказаниѥ четыре<seg rend="sup">х</seg> еѵаггелисть сиц<seg rend="sup">е</seg>:</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">9r-40v</locus>
+                        <locus n="3">9r–40v</locus>
                         <title xml:lang="bg">Тълкувание върху предисловието на Йоан Златоуст от Теофилакт Охридски</title>
                         <author>Theophylaktos of Ochrid</author>
                         <note/>
@@ -180,37 +171,31 @@
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Блж҃енаго Ѳеѡфїлакта
-                                    архїеп<seg rend="sup">с</seg>кпа бльгарскаго. о еѵ<seg
-                                    rend="sup">г</seg>лїи Маѳеѡвѣ сказаниѥ вь кратцѣ ѡ Златоустова
+                                    архїеп<seg rend="sup">с</seg>кпа бльгарскаго. о еѵ<seg rend="sup">г</seg>лїи Маѳеѡвѣ сказаниѥ вь кратцѣ ѡ Златоустова
                                 сказаниꙗ</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Книга рѡ<seg rend="sup"
-                                    >д</seg>ства. слово.в҃.въпрос:Почто уобѡ не ре<seg rend="sup"
-                                    >ч</seg> зрѣниѥ или слово</incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Книга рѡ<seg rend="sup">д</seg>ства. слово.в҃.въпрос:Почто уобѡ не ре<seg rend="sup">ч</seg> зрѣниѥ или слово</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">И боудоущаа бл҃гаа
                                 наслѣдити. блг<seg rend="sup">д</seg>тїю и члк҃ѡлюбиѥмь га҃ нашего
                                 Іу҃ Ха҃. ѥмоу же слава и дрьжава..амин.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">40v-358r</locus>
+                        <locus n="4">40v–358r</locus>
                         <title xml:lang="bg">Тълкувание на Евангелието от Матей от Теофилакт Охридски</title>
                         <author>Theophylaktos of Ochrid</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Блаженаго архїеп<seg
-                                    rend="sup">с</seg>кпа бльгар<seg rend="sup">с</seg>каго
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Блаженаго архїеп<seg rend="sup">с</seg>кпа бльгар<seg rend="sup">с</seg>каго
                                 Ѳеѡфїлакта. тлькованиѥ ѥже ѿ Маѳеа стго҃ еѵаггелиꙗ.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ть бо спсе<seg rend="sup"
-                                    >т</seg> людѥ своѥ ѿ грѣхь ихь. тль<seg rend="sup"
-                                >к</seg></incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ть бо спсе<seg rend="sup">т</seg> людѥ своѥ ѿ грѣхь ихь. тль<seg rend="sup">к</seg></incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и пакы съвръшенно
                                     хотещааг<seg rend="sup">о</seg> быти с нами вь бесконьчныѥ вѣкы,
                                 амин.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">359-376r</locus>
+                        <locus n="5">359–376r</locus>
                         <title xml:lang="bg">Тълкувание за това, че няма противоречия между светите Евангелия по въпроса за Възкресението от Йоан Солунски</title>
                         <author>John of Thessalonike</author>
                         <note/>
@@ -232,35 +217,28 @@
                     <msItemStruct xml:id="ACD6">
                         <locus>f. 376:</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <note>The name is of Stefan Berislav, despot Srbije (1520-1535), no of the
+                        <note>The name is of Stefan Berislav, despot Srbije (1520–1535), no of the
                             Stefan Lazarevich.</note>
-                        <colophon>
-                            <p>сїа книга блгоч<seg rend="sup">с</seg>тваго гна҃ деспота<name
-                                    xml:lang="cu" key="despot" type="owner" full="yes">стефа<seg
-                                        rend="sup">н</seg>
-                                </name></p>
-                        </colophon>
+                        <re:sampleText xml:lang="cu"><colophon>
+                            <ab>сїа книга блгоч<seg rend="sup">с</seg>тваго гна҃ деспота<persName>стефа<seg rend="sup">н</seg>
+                                </persName></ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7">
                         <locus>f. 376</locus>
                         <title xml:lang="bg">Колофон</title>
                         <note>The monastery Ksenofont, Mount Athos.</note>
-                        <colophon>
-                            <p>и приложи се въ свѣти мь<seg rend="sup">н</seg>стир глаголи<seg
-                                    rend="sup">м</seg>
-                                <sic>сѯн<seg rend="sup">х</seg>оь</sic> имее ѡбитель свѣти <name
-                                    xml:lang="cu" key="monastery" type="saint" full="yes"
-                                    >геѡр'гїе</name></p>
-                        </colophon>
+                        <re:sampleText xml:lang="cu"><colophon>
+                            <p>и приложи се въ свѣти мь<seg rend="sup">н</seg>стир глаголи<seg rend="sup">м</seg>
+                                <sic>сѯн<seg rend="sup">х</seg>оь</sic> имее ѡбитель свѣти <placeName>геѡр'гїе</placeName></p>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="catalogue" resp="#NG">
-                        <origDate cert="low" evidence="internal" notBefore="1520" notAfter="1535"
-                            >1520-1535</origDate>
-                        <origPlace>Unknown</origPlace>
+                    <origin evidence="internal" resp="#NG">
+                        <origDate cert="low" notBefore="1520" notAfter="1535">1520–1535</origDate>
                     </origin>
-                    <provenance>Neamţ monastery collection.</provenance>
+                    <provenance>Neamţ monastery collection</provenance>
                 </history>
             </msDesc>
         </body>

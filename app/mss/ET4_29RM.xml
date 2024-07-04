@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-ET4_29RM">
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-ET4_29RM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -20,22 +20,19 @@
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref
-                            target="http://www.ilit.bas.bg/repertorium/"
-                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <bibl>
+                <listBibl><bibl>
                     <ref target="bib:Райков1986">Райков, Кодов, Христова 1986: 118–123</ref>
                 </bibl>
                 <bibl>
                     <ref target="bib:Спространов1902">Спространов 1902: 123</ref>
-                </bibl>
+                </bibl></listBibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -46,7 +43,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item xml:lang="en">Miscellany for one saint</item>
                         <item xml:lang="en">Hagiography</item>
                         <item xml:lang="en">st. John of Rila</item>
@@ -60,14 +57,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -94,24 +91,20 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>unclear</watermark>
+                                <watermark>Unclear</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">85</measure>
                             </extent>
-                            <collation>
-                                <summary>No data</summary>
-                            </collation>
                         </supportDesc>
                     </objectDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Cardboards with reddish leather.</p>
+                            <summary>Cardboards with reddish leather.</summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
-                        <list type="simple">
+                        <list>
                             <item>
                                 <locus>f. 3r</locus>
                                 <quote xml:lang="cu">И сегѡ ради нынꙗ Христаки Павлович называет сꙗ,
@@ -130,18 +123,11 @@
                 <msContents>
                     <summary>The manuscript contains 11 texts. The book is devoted to hieromonk
                         Josif, who was the skeuophilaksos and the abbot of Rila Monastery between
-                        1832-1836, 1837-1839 and 1842-1860.</summary>
-                    <titlePage>
-                        <epigraph xml:lang="cu">
-                            <p>Преподобнѣишему господину Іѡсифу скеѵофилаку святыя обытели Рылскїя ѡ
-                                знакъ искреннѧго своего почитанїѧ и благодарности посвѣщаетъ книгу
-                                сїю егѡ списатель.</p>
-                        </epigraph>
-                    </titlePage>
+                        1832–1836, 1837–1839 and 1842–1860: <quote xml:lang="cu" source="epigraph">Преподобнѣишему господину Іѡсифу скеѵофилаку святыя обытели Рылскїя ѡ знакъ искреннѧго своего почитанїѧ и благодарности посвѣщаетъ книгу сїю егѡ списатель.</quote></summary>
                     <filiation type="source">Other</filiation>
                     <filiation type="protograph">Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="original">
-                        <locus n="1">2r-3r</locus>
+                        <locus n="1">2r–3r</locus>
                         <title xml:lang="bg">Предисловие към читателите</title>
                         <author>Xristaki Pavlovič</author>
                         <note>The book was prepared for printing with money of hieromonk
@@ -161,7 +147,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">4r-12v</locus>
+                        <locus n="2">4r–12v</locus>
                         <title xml:lang="bg">Житие на св. Иван Рилски от Христаки Павлович</title>
                         <author>Xristaki Pavlovič</author>
                         <note>The text is compiled on the base of Daniil's Vita of St. John of Rila,
@@ -178,7 +164,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="original">
-                        <locus n="3">13r-15r</locus>
+                        <locus n="3">13r–15r</locus>
                         <title xml:lang="bg">Повест за пренасянето на мощите на св. Иван Рилски</title>
                         <note>The text is concordant with the text in the N 69 (miscellany from
                             1791)</note>
@@ -194,9 +180,8 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4">
-                        <locus n="4">15r-18v</locus>
+                        <locus n="4">15r–18v</locus>
                         <title xml:lang="bg">Повест за връщането на мощите на св. Иван Рилски от Търново в Рила</title>
-                        <author>anonymous</author>
                         <date type="churchCal" when="--10-19">19 October</date>
                         <filiation type="source">Other</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -212,7 +197,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="original" style="non-narrative">
-                        <locus n="5">20r-29r</locus>
+                        <locus n="5">20r–29r</locus>
                         <title xml:lang="bg">Служба за св. Иван Рилски от Христаки Павлович</title>
                         <author>Xristaki Pavlovič</author>
                         <date type="churchCal" when="--10-19">October 19</date>
@@ -230,7 +215,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="original" style="non-narrative">
-                        <locus n="6">30r-37r</locus>
+                        <locus n="6">30r–37r</locus>
                         <title xml:lang="bg">Служба за св. Иван Рилски от Христаки Павлович</title>
                         <author>Xristaki Pavlovič</author>
                         <filiation type="source">Other</filiation>
@@ -248,7 +233,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="original" style="non-narrative">
-                        <locus n="7">39r-43r</locus>
+                        <locus n="7">39r–43r</locus>
                         <title xml:lang="bg">Молебен канон за св. Иван Рилски от Христаки Павлович</title>
                         <author>Xristaki Pavlovič</author>
                         <note>Without title</note>
@@ -262,7 +247,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="original">
-                        <locus n="8">44r-45v</locus>
+                        <locus n="8">44r–45v</locus>
                         <title xml:lang="bg">Молитва към св. Иван Рилски от Христаки Павлович</title>
                         <author>Xristaki Pavlovič</author>
                         <filiation type="source">Other</filiation>
@@ -277,9 +262,8 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation" style="non-narrative">
-                        <locus n="9">46r-65v</locus>
+                        <locus n="9">46r–65v</locus>
                         <title xml:lang="bg">Последование молебно за болен</title>
-                        <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -288,9 +272,8 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation" style="non-narrative">
-                        <locus n="10">65v-74v</locus>
+                        <locus n="10">65v–74v</locus>
                         <title xml:lang="bg">Последование молебно за изгонване на магия и уроки от човек</title>
-                        <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -299,7 +282,7 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="11">74v - 85v</locus>
+                        <locus n="11">74v – 85v</locus>
                         <title xml:lang="bg">Последование молитвено над дом или място за изгонване на магия и зли уроки</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Bulgarian</filiation>
@@ -311,9 +294,9 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#ET">
-                        <origDate>19th c., second quarter (between 1825 and 1830)</origDate>
-                        <origPlace xml:lang="en">Rila monastery</origPlace>
+                    <origin evidence="internal" resp="#ET">
+                        <origDate notBefore="1825" notAfter="1830">19th c., second quarter (between 1825 and 1830)</origDate>
+                        <origPlace>Rila monastery</origPlace>
                         <ref type="bibl" target="bib:Райков1986">Райков, Кодов, Христова 1986:
                             118–123</ref>
                     </origin>
@@ -324,8 +307,7 @@
                             <supportDesc>
                                 <support>
                                     <watermark>
-                                        <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                            >Three cylinders and letters FCV</motif>
+                                        <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Three cylinders and letters FCV</motif>
                                         <term>similar to</term>
                                         <ref type="bibl" target="bib:Николаев1954">
                                             <num>994</num>
@@ -333,8 +315,7 @@
                                         </ref>
                                     </watermark>
                                     <watermark>
-                                        <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                            >Lion's whelp</motif>
+                                        <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Lion's whelp</motif>
                                         <term>similar to</term>
                                         <ref type="bibl" target="bib:Николаев1954">
                                             <num>924</num>
@@ -368,23 +349,19 @@
                     </physDesc>
                     <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                         <scribe n="1">
-                            <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1-45</locus>
-                            <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Hristaki
+                            <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1–45</locus>
+                            <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Hristaki
                                 Pavlovič</name>
-                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="Cyrs"
-                                subtype="semiuncial">
-                                <p>Small new semiuncial</p>
+                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                                <scriptNote script="Cyrs" style="semiuncial">Small new semiuncial</scriptNote>
                             </scriptDesc>
                             <scribeLang>
-                                <orthography>
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">Church-slavonic, with
-                                        modern interpunctuation</p>
-                                </orthography>
+                                <langNote key="orthography">Church Slavonic, with
+                                        modern interpunctuation
+                                </langNote>
                             </scribeLang>
-                            <note xmlns="http://www.tei-c.org/ns/1.0">
-                                <ref type="bibl" target="bib:Райков1986">Райков, Кодов, Христова
-                                    1986: 118–123</ref>
-                            </note>
+                            <bibl xmlns="http://www.tei-c.org/ns/1.0"><ref target="bib:Райков1986">Райков, Кодов, Христова
+                                1986: 118–123</ref></bibl>
                         </scribe>
                     </scribeDesc>
                 </msPart>
@@ -404,7 +381,7 @@
                                     </watermark>
                                 </support>
                                 <extent>
-                                    <measure unit="folia">46-85</measure>
+                                    <measure unit="folia">46–85</measure>
                                     <dimensions unit="mm" type="folia">
                                         <height>210</height>
                                         <width>165</width>
@@ -428,21 +405,17 @@
                     </physDesc>
                     <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                         <scribe n="2">
-                            <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 46-85</locus>
-                            <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
-                                type="semiuncial">
-                                <p>New regular semiuncial</p>
+                            <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 46–85</locus>
+                            <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                                <scriptNote script="Cyrs" style="semiuncial">New regular semiuncial</scriptNote>
                             </scriptDesc>
                             <scribeLang>
-                                <orthography>
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">Church Slavonic</p>
-                                </orthography>
+                                <langNote key="orthography">Church Slavonic</langNote>
                             </scribeLang>
-                            <note xmlns="http://www.tei-c.org/ns/1.0">
-                                <ref type="bibl" target="bib:Райков1986">Райков, Кодов, Христова
+                            <bibl xmlns="http://www.tei-c.org/ns/1.0"><ref target="bib:Райков1986">Райков, Кодов, Христова
                                     1986: 118–123</ref>
-                            </note>
+                            </bibl>
                         </scribe>
                     </scribeDesc>
                 </msPart>

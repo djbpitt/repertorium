@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-DRA787a15Stock">
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DRA787a15Stock">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -19,23 +19,20 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>19.09.2011</date>
+                <date when="2011-09-19">19.09.2011</date>
                 <idno type="Repertorium">RC-DRA787a15Stock</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref
-                            target="http://www.ilit.bas.bg/repertorium/"
-                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p><ref type="bibl" target="bib:Steensland2005">Steensland 2005: No 4.</ref>
-                    <ref target="bib:Wesslén1985">Wesslén 1985: 153-196.</ref></p>
+                <listBibl><bibl><ref type="bibl" target="bib:Steensland2005">Steensland 2005: No 4.</ref></bibl>
+                    <bibl><ref target="bib:Wesslén1985">Wesslén 1985: 153-196.</ref></bibl></listBibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -62,14 +59,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-10-30">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -96,7 +93,7 @@
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="fragment">
-                        <supportDesc material="parchment">
+                        <supportDesc material="parch">
                             <support>
                                 <material>Parchment of very fine quality. The recto is the hair
                                     side, the verso is the slesh side, respectively.</material>
@@ -130,75 +127,62 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Kept together with other parchment fragments (A787a)</p>
+                            <summary>Kept together with other parchment fragments (A787a)</summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
-                        <note>A curcled figure 15 in pencil on f. 1r</note>
+                        <list><item><locus>1r</locus><note>A circled figure 15 in pencil</note></item></list>
                     </additions>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
                         <locus xmlns="http://www.tei-c.org/ns/1.0">1r-2v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" type="Cyrs" subtype="uncial">
-                            <p>5mm high; interline space: 12mm</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="uncial"><dimensions type="chars" unit="mm"><height>5</height></dimensions>; <dimensions type="line-spacing" unit="mm"><height>12</height></dimensions></scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">Russian, Church Slavonic</p>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Russian, Church Slavonic</summary>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name>Dilyana Radoslavova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
-                    <summary>The fragment contains Matthew 21.27-33, 43-46, and Matthew 27.16-23,
-                        23.13-14 with some lacunae</summary>
+                    <summary>The fragment contains Matthew 21.27–33, 43–46, and Matthew 27.16–23,
+                        23.13–14 with some lacunae</summary>
                     <filiation type="protograph">Russian</filiation>
                     <msItemStruct xml:id="ACD1">
-                        <locus n="1">1r-2v</locus>
+                        <locus n="1">1r–2v</locus>
                         <title xml:lang="bg">Изборно евангелие</title>
                         <filiation type="antigraph">Russian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <p xmlns="http://www.tei-c.org/ns/1.0" rend="f.1r">сїа творю: ср
-                                    <unclear>....</unclear></p>
-                            <p xmlns="http://www.tei-c.org/ns/1.0" rend="f.1v">понеже ꙗко пр<seg
-                                    rend="sup">о҃</seg>рка оучн҃комъ</p>
-                            <p xmlns="http://www.tei-c.org/ns/1.0" rend="2r">гошѧ его исцѣ
-                                    <unclear>....</unclear></p>
-                            <p xmlns="http://www.tei-c.org/ns/1.0" rend="2v">вы бо не въсходи</p>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0" rend="f.1r">сїа творю: ср
+                                    <unclear>....</unclear></ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0" rend="f.1v">понеже ꙗко пр<seg rend="sup">о҃</seg>рка оучн҃комъ</ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0" rend="2r">гошѧ его исцѣ
+                                    <unclear>....</unclear></ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0" rend="2v">вы бо не въсходи</ab>
                         </sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
                     <origin resp="#DR">
                         <origDate notBefore="1401" notAfter="1499">15th c.</origDate>
-                        <note>Russian origin.</note>
+                        <origPlace>Russian origin</origPlace>
                     </origin>
                     <acquisition>
                         <note/>
                     </acquisition>
                 </history>
                 <additional>
-                    <adminInfo>
-                        <recordHist>
-                            <source>
-                                <p>Directly catalogued from the original manuscript using the
-                                    printed catalogue from ...</p>
-                            </source>
-                        </recordHist>
-                    </adminInfo>
                     <listBibl>
                         <bibl>
-                            <ref type="bibl" target="bib:Wesslén1985">Wesslén 1985: 153-196.</ref>
+                            <ref target="bib:Wesslén1985">Wesslén 1985: 153–196.</ref>
                         </bibl>
                         <bibl>
-                            <ref type="bibl" target="bib:Стенсланд1996">Стенсланд 1996.</ref>
+                            <ref target="bib:Стенсланд1996">Стенсланд 1996.</ref>
                         </bibl>
                         <bibl>
-                            <ref type="bibl" target="bib:Steensland2005">Steensland 2005: 211-225
+                            <ref target="bib:Steensland2005">Steensland 2005: 211–225
                                 (see N4).</ref>
                         </bibl>
                     </listBibl>

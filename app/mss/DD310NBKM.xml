@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-DD310NBKM">
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DD310NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Vita of St. Basil the Young No 310 NBKM</title>
+                <title>Vita of St. Basil the Younger No 310 NBKM</title>
                 <author xml:id="DD">Dimitrinka Dimitrova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -17,20 +17,12 @@
                 <date when="1995-05-09">9 May 1995</date>
                 <idno type="Repertorium">RC-DD310NBKM</idno>
                 <availability status="free">
-                    <p>The intellectual content of this file is copyrighted by the creators under
-                        the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>. In short, you could download and disseminate
-                        information, but you are not allowed to alter, transform, or build upon the
-                        works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref
-                            target="http://www.ilit.bas.bg/repertorium/"
-                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                    <p>The intellectual content of this file is copyrighted by the creators under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <bibl>
-                    <ref target="bib:Цонев1910">Цонев 1910: 257-258</ref>
+                    <ref target="bib:Цонев1910">Цонев 1910: 257–258</ref>
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -43,21 +35,22 @@
             <textClass>
                 <keywords scheme="Repertorium">
                     <list type="simple">
-                        <item>Vita of St. Basil the Young</item>
+                        <item>Vita of St. Basil the Younger</item>
                     </list>
                 </keywords>
             </textClass>
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-12-04">Update license to CC BY 4.0. Small corrections and additions.</change>
+            <change who="#AB" when="2023-10-29">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -67,7 +60,7 @@
             <msDesc>
                 <msIdentifier>
                     <msName xml:lang="en" type="general">vita</msName>
-                    <msName xml:lang="en" type="specific">vita of St. Basil the Young</msName>
+                    <msName xml:lang="en" type="specific">Vita of St. Basil the Younger</msName>
                     <country>Bulgaria</country>
                     <settlement>Sofia</settlement>
                     <repository>National Library</repository>
@@ -81,8 +74,7 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">84</measure>
@@ -104,7 +96,7 @@
                             </collation>
                             <condition>4 folia appear to be missing in the beginning of the MS; many
                                 folia are disordered. The beginning of the text is in on the f. 36;
-                                ff. 1-35 contain the end of the Vita</condition>
+                                ff. 1–35 contain the end of the Vita</condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" writtenLines="18"/>
@@ -114,7 +106,7 @@
                     <decoDesc>
                         <decoNote type="capitals">Red capitals and titles</decoNote>
                         <decoNote type="note">
-                            <locus>36v</locus>one note with cinnabar</decoNote>
+                            <locus>f. 36v</locus>one note with cinnabar</decoNote>
                     </decoDesc>
                     <bindingDesc>
                         <p>new</p>
@@ -122,24 +114,17 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-84v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Isidor</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
-                            type="semiuncial">
-                            <p>Semiuncial with cursive elements; one hand<certainty locus="value"
-                                    cert="low"/></p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1r–84v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Isidor</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  script="Cyrs" style="semiuncial">Semiuncial with cursive elements; one hand<certainty locus="value" cert="low"/></scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Without juses, without jehrs;
+                            <langNote key="orthography">Without juses.;
                                     Resava school without Serbian specific features. Conev defined
-                                    orthography like Serbian</p>
-                            </orthography>
+                                    orthography like Serbian
+                            </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Dimitrinka Dimitrova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -148,9 +133,9 @@
                     <filiation type="antigraph">Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
                         <locusGrp n="1">
-                            <locus>36r-84v</locus>
-                            <locus>1r-4v</locus>
-                            <locus>5r-35v</locus>
+                            <locus>ff. 36r–84v</locus>
+                            <locus>ff. 1r–4v</locus>
+                            <locus>ff. 5r–35v</locus>
                         </locusGrp>
                         <title xml:lang="bg">Житие на св. Василий Нови</title>
                         <author>Gregory the Monk</author>
@@ -168,18 +153,16 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus>36v</locus>
+                        <locus>f. 36v</locus>
                         <title xml:lang="bg">Колофон</title>
-                        <colophon>
-                            <p>Концъ. Въ лѣто #з҃.с҃.еі҃: рукою моею грѣшнаго<name type="scribe"
-                                    full="yes">Ісїдора</name></p>
-                        </colophon>
+                        <re:sampleText xml:lang="cu"><colophon>
+                            <ab>Концъ. Въ лѣто <date>#з҃.с҃.еі҃</date>: рукою моею грѣшнаго <persName>Ісїдора</persName></ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#DD">
+                    <origin evidence="internal" resp="#DD">
                         <origDate notBefore="1707" notAfter="1707">1707</origDate>
-                        <origPlace>unknown</origPlace>
                     </origin>
                 </history>
             </msDesc>

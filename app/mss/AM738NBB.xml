@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
     xml:id="RC-AM738NBB">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Miscellany 738 from the National Library in Belgrade</title>
+                <title>Miscellany 738 from the National Library in Belgrade</title>
                 <author xml:id="AM">Anisava Miltenova</author>
                 <editor xml:id="DB">David J. Birnbaum</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -17,16 +18,12 @@
                 <date when="1995-02-22">22 February 1995</date>
                 <idno type="Repertorium">RC-AM38NBB</idno>
                 <availability status="free">
-                    <p>The intellectual content of this file is copyrighted by its creator(s) under
-                        the Creative Commons Attribution-No Derivative Works 3.0 License under
-                        legislation in <ref
-                            target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>.</p>
+                    <p>The intellectual content of this file is copyrighted by the creators under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <bibl xml:lang="sr" type="described">
-                    <ref type="bibl" target="bib:Стојановић1982">Стојановић 1982: 306-309</ref>
+                <bibl>
+                    <ref target="bib:Стојановић1982">Стојановић 1982: 306–309</ref>
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -39,7 +36,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Apocryphal miscellany</item>
                         <item>Miscellany of mixed content</item>
                     </list>
@@ -56,6 +53,9 @@
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-12-03">Update license to CC BY 4.0. Small corrections and
+                additions.</change>
+            <change who="#AB" when="2023-10-28">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#DB" when="2016-07-02">Removed empty &lt;editor&gt; element</change>
@@ -66,14 +66,14 @@
             <msDesc>
                 <msIdentifier>
                     <msName type="general" xml:lang="en">miscellany</msName>
-                    <msName type="speciphic" xml:lang="en">apocryphal miscellany</msName>
+                    <msName type="specific" xml:lang="en">apocryphal miscellany</msName>
                     <msName type="specific" xml:lang="en">mixed-content miscellany</msName>
                     <country>Serbia</country>
                     <settlement>Belgrade</settlement>
                     <repository>National Library</repository>
                     <idno type="shelfmark">738</idno>
                     <note>The MS is destroyed at the time of Second World War</note>
-                    <altIdentifier type="old">
+                    <altIdentifier type="former">
                         <idno type="catalogue">470</idno>
                     </altIdentifier>
                 </msIdentifier>
@@ -87,13 +87,10 @@
                                 </dimensions>
                             </extent>
                             <foliation>MSS is paginated by quires</foliation>
-                            <collation>
-                                <summary>No data</summary>
-                            </collation>
                             <condition>Without beginning and end.</condition>
                         </supportDesc>
                         <layoutDesc>
-                            <layout columns="1"/>
+                            <layout columns="1" />
                         </layoutDesc>
                     </objectDesc>
                     <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">dark brown</ink>
@@ -102,31 +99,22 @@
                     </decoDesc>
                     <additions type="inscriptions">
                         <locus>f. 25v</locus>
-                        <quote xml:lang="cu">Сїа книга, глаголеми Дамаскинъ, како ю купи
-                                мниши<persName xml:lang="cu" key="owner" type="proper" full="yes"
-                                >Владисокъ</persName>за .с҃. аспри, и приложи я у светаго оца<name
-                                xml:lang="cu" key="saint" type="proper" full="yes">Николае</name>да
-                            служи за негова душа и очина въ лето ѿ сазданїе мира з҃с҃м҃д҃. а ѿ
-                            рождаство Христово а҃ѱ҃л҃ѕ҃.</quote>
+                        <quote xml:lang="cu">Сїа книга, глаголеми Дамаскинъ, како ю купи мниши
+                                <persName>Владисокъ</persName>за .с҃. аспри, и приложи я у светаго
+                                оца <persName>Николае</persName>да служи за негова душа и очина въ
+                            лето ѿ сазданїе мира з҃с҃м҃д҃. а ѿ рождаство Христово а҃ѱ҃л҃ѕ҃.</quote>
                     </additions>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-159v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Anonumous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs">
-                            <p>semiuncial/poluustav</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1r–159v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonumous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial" />
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">without juses, with two
-                                    jer</p>
-                            </orthography>
+                            <langNote key="orthography">Without juses, with two jers </langNote>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name full="yes">Stojanovich, L6.</name>
-                            <resp>description</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
@@ -135,29 +123,29 @@
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <filiation type="apograph">unknown</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">3r-19v</locus>
+                        <locus n="1">ff. 3r–19v</locus>
                         <title xml:lang="bg">Поучение за десетте Божи заповеди</title>
-                        <author>anonymous</author>
-                        <note>Unidentified text on f. 1r-3r without beginning; Stojanovich did not
+
+                        <note>Unidentified text on f. 1r–3r without beginning; Stojanovich did not
                             give any data for it.</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ десеть заповѣды божїе
-                                иже даст' богь Мѡѵсеоу.</head>
+                                иже дастꙿ богь Мѡѵсеоу.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Пръваа и вещьша заповѣдь
-                                божїа ест ꙗко не вѣровати иного бога тък'мо Христа.</incipit>
+                                божїа ест ꙗко не вѣровати иного бога тъкꙿмо Христа.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">19v-25v</locus>
+                        <locus n="2">ff. 19v–25v</locus>
                         <title xml:lang="bg">Тълкувание върху 12-те съставни части на православната вяра</title>
                         <author>Theophanes the Confessor</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Ѳеофана инока и рытора
-                                оучител'ства къ православнымь христїанѡм простимь сказанїмь ѡ
+                                оучителꙿства къ православнымь христїанѡм простимь сказанїмь ѡ
                                 .вї҃.тых съставь правые вѣрыи.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Пръвѣе подобаеть истинному
                                 христїанину вѣровати и исповѣдати два на десеть състави вѣры нашеи
@@ -165,9 +153,8 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">25v-35v</locus>
+                        <locus n="3">ff. 25v–35v</locus>
                         <title xml:lang="bg">Чудо на св. Николай Мирликийски, неидентифицирано</title>
-                        <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -180,41 +167,38 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">35v-50v</locus>
+                        <locus n="4">ff. 35v–50v</locus>
                         <title xml:lang="bg">Чудеса на св. Николай Мирликийски. Чудо за тримата воини</title>
-                        <author>anonymous</author>
                         <note>Another two miracles of St. Nicholas follow this work; they are not
                             included in the description</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Чюдо светому Николу ѡ трїехь
-                                воиних' како избави ихь.</head>
+                                воинихꙿ како избави ихь.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Землꙗ въса на три честы ест
                                 раздѣлена. на въстокь и на западь и на ливу <seg rend="sup"
-                                >?</seg>.</incipit>
+                                    cert="low" />.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation">
-                        <locus n="5">50v-61r</locus>
+                        <locus n="5">ff. 50v–61r</locus>
                         <title xml:lang="bg">Чудеса на св. Георги. Чудо за колоната на вдовицата</title>
-                        <author>anonymous</author>
                         <note>Another three miracles of St. George follow this work; they are not
                             included in the description</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Чюдо а҃. светаго моученика
-                                Георгїа о стльпѣ вдовые како быст'.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ странѣ Сѵр'цѣи. въ градѣ
+                                Георгїа о стльпѣ вдовые како быстꙿ.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ странѣ Сѵрꙿцѣи. въ градѣ
                                 глаголѥмѣм Рамель свѣщаше мѣстны хрїстїане съ царемь съѕидати
                                 црьковь.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD6" type="translation">
-                        <locus n="6">61r-65v</locus>
+                        <locus n="6">ff. 61r–65v</locus>
                         <title xml:lang="bg">Чудо на св. Димитър Солунски, неидентифицирано</title>
-                        <author>anonymous</author>
                         <note>Another three miracles of St.Demetrius follow this work; they are not
                             included in the description</note>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -228,9 +212,8 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation">
-                        <locus n="7">65v-70r</locus>
+                        <locus n="7">ff. 65v–70r</locus>
                         <title xml:lang="bg">Житие на апостол Петър, апокрифно</title>
-                        <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -242,9 +225,8 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation">
-                        <locus n="8">70r-71v</locus>
+                        <locus n="8">ff. 70r–71v</locus>    
                         <title xml:lang="bg">Разказ как е построен Соломоновият храм, извлечение от Хронографа</title>
-                        <author>anonymous</author>
                         <note>The text is included usually in the Chronograf</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -252,44 +234,41 @@
                             <head xmlns="http://www.tei-c.org/ns/1.0">Сказанїе како бысть творенїе
                                 храма Соломонова.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">.п҃. <seg rend="sup"
-                                    >?</seg> тысоуще сѣчаху каменїе въ горѣ. о҃. тысуще сѣчааху
+                                    cert="low" /> тысоуще сѣчаху каменїе въ горѣ. о҃. тысуще сѣчааху
                                 дрѣвїе. л҃. тысущь приношааху каменїе, .г҃. тысуще и .х҃. прѣстоаху
                                 работѣ, а въ .м҃ѕ. лѣто съвръши се дѣло, а въсегерѣ <seg rend="sup"
-                                    >?</seg> .р҃.п҃.г҃. тысущь.</incipit>
+                                    cert="low" /> .р҃.п҃.г҃. тысущь.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation">
-                        <locus n="9">72r-89v</locus>
+                        <locus n="9">ff. 72r–89v</locus>
                         <title xml:lang="bg">Сведения за домашните врагове на човека</title>
-                        <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово доушеполъзно.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Прїиде нѣкы брать къ
-                                стар'цу и рече ему. о҃че рече богь въ еѵгелїе. врази чловѣку домашни
+                                старꙿцу и рече ему. о҃че рече богь въ еѵгелїе. врази чловѣку домашни
                                 его</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation">
-                        <locus n="10">72r-89v</locus>
+                        <locus n="10">ff. 72r–89v</locus>
                         <title xml:lang="bg">Разказ за прекрасния Йосиф</title>
-                        <author>anonymous</author>
                         <note>Unclear version of this work, different from others</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ прѣкраснаго Їосифа
                                 како прѣдаше его братїа его.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Жив' же Іосифь .зі҃. лѣть
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Живꙿ же Іосифь .зі҃. лѣть
                                 въ дому о҃ца своего Іакова.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation">
-                        <locus n="11">89v-96r</locus>
+                        <locus n="11">ff. 89v–96r</locus>
                         <title xml:lang="bg">Разказ как св. Василий избави човек от дявола</title>
-                        <author>anonymous</author>
-                        <note>The text is concordant with the copy in the MSS N 29 from Savina
+                        <note>The text is concordant with the copy in the MSS No. 29 from Savina
                             Monastery</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -301,28 +280,27 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation">
-                        <locus n="12">96r-102r</locus>
+                        <locus n="12">ff. 96r–102r</locus>
                         <title xml:lang="bg">Поучение върху казаното от пророк Исая от Йоан Златоуст. Разказ за кръвосмешението</title>
                         <author>John Chrysostom (Pseudo)</author>
                         <note>The text is concordant with the John Chrysostom's sermon on the Last
-                            Time and penance (see N 29 Monastery Savina etc.). In fact this is the
-                            medieval story about the incest (paralel to king Edypus).</note>
+                            Time and penance (see No. 29 Monastery Savina etc.). In fact this is the
+                            medieval story about the incest (paralel to king Oedipus).</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово светаго Іѡанна
-                                Златоустаго ѿ пророка Їсаїе о послѣднем врѣмена и ѡ кающих'
+                                Златоустаго ѿ пророка Їсаїе о послѣднем врѣмена и ѡ кающихꙿ
                                 се.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Кто не дивите се или кто не
-                                чюдите се ѡ семь вѣцѣ како ѡставлѥн'на соуть врѣмена сїа.</incipit>
+                                чюдите се ѡ семь вѣцѣ како ѡставлѥнꙿна соуть врѣмена сїа.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation">
-                        <locus n="13">102r-112r</locus>
+                        <locus n="13">ff. 102r–112r</locus>
                         <title xml:lang="bg">Разказ за Адам и Ева</title>
-                        <author>anonymous</author>
-                        <note>The copy represents earliest translation; other copies: N 433 NBKM -
-                            Sofia; N 149 National Library - Vienna, etc.</note>
+                        <note>The copy represents earliest translation; other copies: No. 433 NBKM –
+                            Sofia; No. 149 National Library – Vienna, etc.</note>
                         <filiation type="translation">
                             <num>1</num>
                         </filiation>
@@ -337,12 +315,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="translation">
-                        <locus n="14">114v-116v</locus>
+                        <locus n="14">ff. 114v–116v</locus>
                         <title xml:lang="bg">Цикъл разкази за Авраам. Разказ за праведния Авраам</title>
-                        <author>anonymous</author>
-                        <note>The copy represents first translation; other copies: N 433 NBKM -
-                            Sofia; N 149 NB - Wien, N 100 MSPC (Gruig2) - Belgrade, N 794
-                            Troice-Serg. lavra RGB - Moskva, N 326 NBKM - Sofia etc.</note>
+                        <note>The copy represents first translation; other copies: No. 433 NBKM –
+                            Sofia; No. 149 NB – Wien, No. 100 MSPC (Gruig2) – Belgrade, No. 794
+                            Troice–Serg. lavra RGB – Moskva, No. 326 NBKM – Sofia etc.</note>
                         <filiation type="translation">
                             <num>1</num>
                         </filiation>
@@ -353,15 +330,14 @@
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ праведнаго
                                 Авраама.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Аврамь роди се въ три
-                                тысоущ'ное и въ третїе лѣто по Адамѣ.</incipit>
+                                тысоущꙿное и въ третїе лѣто по Адамѣ.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15" type="translation">
-                        <locus n="15">114v-116v</locus>
+                        <locus n="15">ff. 114v–116v</locus>
                         <title xml:lang="bg">Цикъл разкази за Авраам. Разказ за Исаак</title>
-                        <author>anonymous</author>
-                        <note>The copy is concordant with the same work in N 433 NBKM - Sofia, N
-                            149, 55r-57r; N 100, 38v-40r, etc.</note>
+                        <note>The copy is concordant with the same work in No. 433 NBKM – Sofia, N
+                            149, 55r–57r; No. 100, 38v–40r, etc.</note>
                         <filiation type="translation">
                             <num>1</num>
                         </filiation>
@@ -374,11 +350,10 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16" type="translation">
-                        <locus n="16">116v-117v</locus>
+                        <locus n="16">ff. 116v–117v</locus>
                         <title xml:lang="bg">Разказ за пророк Самуил</title>
-                        <author>anonymous</author>
-                        <note>The same work in N 433, NBKM - Sofia, N 149, 57r-58r; N 100,
-                            40r-40v</note>
+                        <note>The same work in No. 433, NBKM – Sofia, No. 149, 57r–58r; No. 100,
+                            40r–40v</note>
                         <filiation type="translation">
                             <num>1</num>
                         </filiation>
@@ -392,9 +367,8 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17" type="translation">
-                        <locus n="17">117v-120r</locus>
+                        <locus n="17">ff. 117v–120r</locus>
                         <title xml:lang="bg">Разказ за Мелхиседек</title>
-                        <author>anonymous</author>
                         <filiation type="translation">
                             <num>1</num>
                         </filiation>
@@ -403,15 +377,14 @@
                         <filiation type="litRedaction">1</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово за Мелхиседека.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Бѣше Мел'хиседекь наричет'
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Бѣше Мелꙿхиседекь наричетꙿ
                                 се безь родитель, и възлꙗблѥникь божїи.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18" type="translation">
-                        <locus n="18">120r-124v</locus>
+                        <locus n="18">ff. 120r–124v</locus>
                         <title xml:lang="bg">Цикъл разкази за Авраам. Разказ за гостолюбието на Авраам</title>
-                        <author>anonymous</author>
-                        <note>The same work in N 433 NBKM - Sofia, N 149, 60v-65r; N 100, 42v-45v,
+                        <note>The same work in No. 433 NBKM – Sofia, No. 149, 60v–65r; No. 100, 42v–45v,
                             etc.</note>
                         <filiation type="translation">
                             <num>1</num>
@@ -421,16 +394,15 @@
                         <filiation type="litRedaction">1</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово како гости Авраамь
-                                светую троицу.Авраамь имаше въ срьдци своемь гостолюб'ство, не
-                                хотеаше ꙗсти въ дому своем' дон'деже ему гость не прїидеть.</head>
+                                светую троицу.Авраамь имаше въ срьдци своемь гостолюбꙿство, не
+                                хотеаше ꙗсти въ дому своемꙿ донꙿдеже ему гость не прїидеть.</head>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD19" type="translation">
-                        <locus n="19">124v-134v</locus>
+                        <locus n="19">ff. 124v–134v</locus>
                         <title xml:lang="bg">Цикъл разкази за Авраам. Разказ за смъртта на Авраам</title>
-                        <author>anonymous</author>
-                        <note>The copy coincides with the text in MS N 104 NB - Belgrade, 14th c.;
-                            other copies: N 433 NBKM - Sofia, N 149 NB - Wien, N 100 MSPC (Gruig2)
+                        <note>The copy coincides with the text in MS No. 104 NB – Belgrade, 14th c.;
+                            other copies: No. 433 NBKM – Sofia, No. 149 NB – Wien, No. 100 MSPC (Gruig2)
                             etc.</note>
                         <filiation type="source">Greek text ed. by James, M.R....</filiation>
                         <filiation type="translation">
@@ -448,9 +420,8 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD20" type="translation">
-                        <locus n="20">134v-140r</locus>
+                        <locus n="20">ff. 134v–140r</locus>
                         <title xml:lang="bg">Видение на Анастасия Черноризица</title>
-                        <author>anonymous</author>
                         <note>The copy contains the second redaction, that is, a Slavic
                             revision.</note>
                         <filiation type="source">Greek text ed. by Homburg...</filiation>
@@ -463,13 +434,13 @@
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ Анастасїа чрьноризицу
                                 како възведена быст на небеса.</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Аз' же Настасїа чръноризица
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Азꙿ же Настасїа чръноризица
                                 повелѣнїемь божїемь възведе ме аггель на небеса видѣти въса
                                 бываемаа.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD21" type="translation">
-                        <locus n="21">140r-149r</locus>
+                        <locus n="21">ff. 140r–149r</locus>
                         <title xml:lang="bg">Поучение за покаянието и милостинята според казаното от 318 църковни отци</title>
                         <author>318 fathers of church (Pseudo)</author>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -478,14 +449,13 @@
                             <head xmlns="http://www.tei-c.org/ns/1.0">Слово ѡ покаанїи и о милостини
                                 светыхь .т҃и҃ї. ѿць иже въ Никеи.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Присно оубо светаго доуха
-                                въсїа нашь благодать божьствным' писанїемь надѣанїемь божьствных
+                                въсїа нашь благодать божьствнымꙿ писанїемь надѣанїемь божьствных
                                 заповѣди.</incipit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD22">
-                        <locus n="22">149r-151v</locus>
+                        <locus n="22">ff. 149r–151v</locus>
                         <title xml:lang="bg">Цикъл разкази за кръстното дърво от презвитер Йеремия. Разказ как Господ сътвори братство с Пров</title>
-                        <author>anonymous</author>
                         <note>Part of pop Jeremia's work "Story concerning Holy Tree"</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -497,12 +467,11 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD23">
-                        <locus n="23">151v-155r</locus>
+                        <locus n="23">ff. 151v–155r</locus>
                         <title xml:lang="bg">Разказ за кръчмарката Теофана</title>
-                        <author>anonymous</author>
-                        <note>The copy is concordant with the text in N 677 NBKM; This is the Slavic
+                        <note>The copy is concordant with the text in No. 677 NBKM; This is the Slavic
                             revision of the article, adapted to the cycle about evil women. The
-                            earliest copy of the first redaction is in MS N 104, Belgrade, XIV
+                            earliest copy of the first redaction is in MS No. 104, Belgrade, XIV
                             c.</note>
                         <filiation type="translation">
                             <num>1</num>
@@ -518,9 +487,8 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD24" type="translation">
-                        <locus n="24">155r-157v</locus>
+                        <locus n="24">ff. 155r–157v</locus>
                         <title xml:lang="bg">Разказ за милостинята, от Патерика</title>
-                        <author>anonymous</author>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
@@ -531,10 +499,9 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD25" type="translation">
-                        <locus n="25">157v-159v</locus>
+                        <locus n="25">ff. 157v–159v</locus>
                         <title xml:lang="bg">Въпроси и отговори. Сказание от Новия и Стария завет</title>
-                        <author>anonymous</author>
-                        <note>The copy is concordant with the text in the 13th-c. Miscellany of pop
+                        <note>The copy is concordant with the text in the 13th c. Miscellany of pop
                             Dragol.</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -547,9 +514,8 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD26" type="translation">
-                        <locus n="26">159v</locus>
+                        <locus n="26">f. 159v</locus>
                         <title xml:lang="bg">Правило за броеница</title>
-                        <author>anonymous</author>
                         <note>Without end</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
@@ -564,13 +530,7 @@
                 <history>
                     <origin>
                         <origDate notBefore="1601" notAfter="1699">17th c.</origDate>
-                        <origPlace>unknown</origPlace>
-                        <note>
-                            <bibl>
-                                <ref type="bibl" target="bib:Стојановић1982">Стојановић 1982:
-                                    306-309</ref>
-                            </bibl>
-                        </note>
+                        <ref type="bibl" target="bib:Стојановић1982">Стојановић 1982: 306–309</ref>
                     </origin>
                 </history>
                 <additional>

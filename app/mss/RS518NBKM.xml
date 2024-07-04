@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-RS518NBKM">
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-RS518NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Menaion for October, National Library, Sofia, No. 518, 13th-14th c.</title>
+                <title>Menaion for October, National Library, Sofia, No. 518, 13th–14th c.</title>
                 <author xml:id="RS">Radoslava Stankova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -20,18 +20,15 @@
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref
-                            target="http://www.ilit.bas.bg/repertorium/"
-                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    <ref type="bibl" target="bib:Цонев1923">Цонев 1923: 50</ref></p>
+                <bibl>
+                    <ref target="bib:Цонев1923">Цонев 1923: 50</ref></bibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -51,14 +48,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#RS" when="2013-07-08">Conversion to Repertorium 4.0; original text
@@ -78,19 +75,14 @@
                     <settlement>Sofia</settlement>
                     <repository>National Library</repository>
                     <idno type="shelfmark">518</idno>
-                    <altIdentifier>
-                        <idno type="catalogue">518</idno>
-                    </altIdentifier>
+                    <idno type="catalogue">518</idno>
                     <altIdentifier type="former">
                         <idno type="shelfmark">152</idno>
                     </altIdentifier>
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="codex">
-                        <supportDesc material="parchment">
-                            <support>
-                                <material>Parchment</material>
-                            </support>
+                        <supportDesc material="parch">
                             <extent>
                                 <measure unit="folia">85</measure>
                                 <dimensions type="folia" unit="mm">
@@ -110,7 +102,7 @@
                             <condition>Some folia appear to be missing between ff. 2 and 7 in Quire
                                 1, f. 8. in Quire 2, and 5 folia in Quires 6 and 12. There are some
                                 wrongly foliated leaves. The begining and the end of the Office for
-                                St. Ananias and St. Romanos the Melode are on f. 2r-2v. This Office
+                                St. Ananias and St. Romanos the Melode are on f. 2r–2v. This Office
                                 seems to be the initiual of the MSS, because it contains the text
                                 for the 1st of October. The Office for SS. Cyprian and Justina has
                                 to be the next text, which is for the the 2nd of
@@ -126,99 +118,80 @@
                     </decoDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Wooden boards covered with ornamented lether</p>
+                            <summary>Wooden boards covered with ornamented lether</summary>
                         </binding>
                     </bindingDesc>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
                         <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
-                            <locus>1r-85v</locus>
+                            <locus>1r–85v</locus>
                         </locusGrp>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" cert="high">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
-                            type="semiuncial">
-                            <p>Middle semiuncial</p>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Middle semiuncial</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Serbian orthography, without
+                                <langNote key="orthography">Serbian orthography, without
                                     juses, with ligatures; spirituses (as superscripts) and
-                                    fourfulls like a rhombus</p>
-                            </orthography>
+                                    fourfulls like a rhombus</langNote>               
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name>R. Stankova</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents type="translation">
                     <summary>Contains 21 offices for October</summary>
                     <msItemStruct xml:id="ACD1" type="translation" style="non-narrative">
-                        <locus n="1">1r-4v</locus>
+                        <locus n="1">1r–4v</locus>
                         <title xml:lang="bg">Житие на св. Киприян и Юстина</title>
                         <date type="churchCal" when="--10-02">2 October</date>
                         <note>The text mentions the names of venerable Ananias and Romanos the
                             Melode: there are 3 vesper stichera (mode 4), a doxa (mode 2), a
                             dismissal troparion (mode 4), an aposticha sticheron (mode 4), a doxa
                             (mode 3), a staurotheotokion, a dismissals troparion (mode 3) and 3
-                            Kanons: The 1st Kanon on ff. 2r-2v is for Ananias and Romanos the Melode
+                            Kanons: The 1st Kanon on ff. 2r–2v is for Ananias and Romanos the Melode
                             (mode 8) and contains only ode 1 (with a heirmos, 4 troparia and a
                             theotokion), ode 3 (with a heirmos, 3 troparia and a theotokion),
                             because there are 6 folia missing in the 1st quire. Presumably, there
                             should be another 2 Kanons for Ananias (mode 8 and 6), as it's marked in
                             the heading. The Office for SS. Cyprian and Justina is on ff. 1r, 1v and
-                            ff. 3r-4v with 3 vesper stichera (mode 4), a doxa (mode 2) and a
+                            ff. 3r–4v with 3 vesper stichera (mode 4), a doxa (mode 2) and a
                             dismissal troparion (mode 4). The content of the Kanon (mode 4) in this
                             Office: ode 1 (with a heirmos, 2 troparia and a theotokion), odes 3 and
                             4 are missing; odes 5 and 6 have a heirmos, 4 troparia, since two saints
                             are commemorated, and a theotokion, a kondakion (mode 1), and an oikos;
-                            odes 7 and 8 are on on f. 3v, and ode 9 is on ff. 4r-4v; the Office ends
+                            odes 7 and 8 are on on f. 3v, and ode 9 is on ff. 4r–4v; the Office ends
                             with a ligthing troparion and a doxa (mode 8).</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     то<seg rend="sup">г</seg>о<seg rend="sup">ж</seg>де. в҃.
-                                    с҃тыи<seg rend="sup">х</seg>. м<seg rend="sup">ч</seg>ны<seg
-                                    rend="sup">к</seg> кѵприана. и ѹстини.</head>
+                                    с҃тыи<seg rend="sup">х</seg>. м<seg rend="sup">ч</seg>ны<seg rend="sup">к</seg> кѵприана. и ѹстини.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD1.1" type="translation">
                             <title xml:lang="bg">Канон за св. Ананий</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="kanon">
-                                <head xmlns="http://www.tei-c.org/ns/1.0">два канѡ<seg rend="sup"
-                                        >н</seg> ап<seg rend="sup">с</seg>лѹ. имыи краѥгране<seg
-                                        rend="sup">с</seg> сице. Анании сла<seg rend="sup">в</seg>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="kanon">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">два канѡ<seg rend="sup">н</seg> ап<seg rend="sup">с</seg>лѹ. имыи краѥгране<seg rend="sup">с</seg> сице. Анании сла<seg rend="sup">в</seg>
                                     прославит' се</head>
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. и҃. пѣ<seg rend="sup">с</seg>. а҃. ірмо<seg
-                                        rend="sup">с</seg>.</rubric>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. и҃. пѣ<seg rend="sup">с</seg>. а҃. ірмо<seg rend="sup">с</seg>.</rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Водоу
-                                        прошь<seg rend="sup">д</seg> ꙗко по су<seg rend="sup"
-                                        >х</seg></incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Ѿврьзѣ
+                                        прошь<seg rend="sup">д</seg> ꙗко по су<seg rend="sup">х</seg></incipit>
+                              <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Ѿврьзѣ
                                     оуста похвалнаꙗ. уꙗснимь ѥзыкь вь паме<seg rend="sup">т</seg>
                                     все вѣрныи</incipit>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD1.2" type="translation">
                             <title xml:lang="bg">Канон за св. Роман Сладкопевец</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <head xmlns="http://www.tei-c.org/ns/1.0">дроу<seg rend="sup"
-                                        >г</seg>канѡ<seg rend="sup">н</seg> прѣпо<seg rend="sup"
-                                        >д</seg>бномоу гла<seg rend="sup">с</seg> .ѕ҃.</head>
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">пѣ<seg rend="sup"
-                                        >с</seg> .а҃. їрм<seg rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">дроу<seg rend="sup">г</seg>канѡ<seg rend="sup">н</seg> прѣпо<seg rend="sup">д</seg>бномоу гла<seg rend="sup">с</seg> .ѕ҃.</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">пѣ<seg rend="sup">с</seg> .а҃. їрм<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Ꙗко по
                                         соу<seg rend="sup">х</seg> ходивь</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion"
-                                    >Свѣтовидениѥ луче. ѿ н҃бсь ньмь низьпошли</incipit>
+                               <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Свѣтовидениѥ луче. ѿ н҃бсь ньмь низьпошли</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation" style="non-narrative">
-                        <locus n="2">4v-8v</locus>
+                        <locus n="2">4v–8v</locus>
                         <title xml:lang="bg">Служба за св. Дионисий Ареопагит</title>
                         <date type="churchCal" when="--10-03">3 October</date>
                         <note>The text includes: 3 vesper stichera (mode 1), a doxa (mode 2), a
@@ -230,27 +203,20 @@
                             staurotheotokion</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
-                                    того<seg rend="sup">ж</seg> .г҃. дь҃ ст҃го свщ҃нно м<seg
-                                    rend="sup">ч</seg>нка Диѡнисиꙗ Ареѡпагита.</head>
+                                    того<seg rend="sup">ж</seg> .г҃. дь҃ ст҃го свщ҃нно м<seg rend="sup">ч</seg>нка Диѡнисиꙗ Ареѡпагита.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD2.1" type="translation">
                             <title xml:lang="bg">Канон за св. Дионисий Ареопагит</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. и҃. пѣ<seg rend="sup">с</seg> .а҃. ірмѡ<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. и҃. пѣ<seg rend="sup">с</seg> .а҃. ірмѡ<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Водоу
-                                        прошь<seg rend="sup">д</seg> ꙗко по су<seg rend="sup"
-                                        >х</seg></incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion"
-                                    >Павломь всеч<seg rend="sup">с</seg>тнымь наоучень. нб҃ны<seg
-                                        rend="sup">х</seg> Диѡнисиѥ</incipit>
+                                        прошь<seg rend="sup">д</seg> ꙗко по су<seg rend="sup">х</seg></incipit>
+                               <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Павломь всеч<seg rend="sup">с</seg>тнымь наоучень. нб҃ны<seg rend="sup">х</seg> Диѡнисиѥ</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation" style="non-narrative">
-                        <locus n="3">8v-11r</locus>
+                        <locus n="3">8v–11r</locus>
                         <title xml:lang="bg">Служба за св. Йеротей Атински</title>
                         <date type="churchCal" when="--10-04">4 October</date>
                         <note>Includеs: 3 vesper stichera (mode 4), the doxa and the dismissal
@@ -261,26 +227,21 @@
                             staurotheotokion and a doxa (mode 3)</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
-                                    того<seg rend="sup">д</seg>. д҃. ст҃го св҃щномь<seg rend="sup"
-                                    >ч</seg>ыка Ѥротѣꙗ.</head>
+                                    того<seg rend="sup">д</seg>. д҃. ст҃го св҃щномь<seg rend="sup">ч</seg>ыка Ѥротѣꙗ.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD3.1" type="translation">
                             <title xml:lang="bg">Канон за св. Йеротей Атински</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. и҃. пѣ<seg rend="sup">с</seg>. а҃. ірмо<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. и҃. пѣ<seg rend="sup">с</seg>. а҃. ірмо<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Водоу
-                                        прошь<seg rend="sup">д</seg> ꙗко по сѹ<seg rend="sup"
-                                        >х</seg></incipit>
+                                        прошь<seg rend="sup">д</seg> ꙗко по сѹ<seg rend="sup">х</seg></incipit>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Д҃хомь
                                     движими ꙗвьствьно Павловь ѥзыкь</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation" style="non-narrative">
-                        <locus n="4">11r-14r</locus>
+                        <locus n="4">11r–14r</locus>
                         <title xml:lang="bg">Служба за св. Харитина</title>
                         <date type="churchCal" when="--10-05">5 October</date>
                         <note>Includes: 3 vesper stichera (mode 4), a doxa and a staurotheothokion;
@@ -291,29 +252,23 @@
                             sticheron, stichera on the praises and a doxa.</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
-                                    того<seg rend="sup">ж</seg>. е҃. ст҃ыѥ м<seg rend="sup"
-                                >ч</seg>нце Харитины.</head>
+                                    того<seg rend="sup">ж</seg>. е҃. ст҃ыѥ м<seg rend="sup">ч</seg>нце Харитины.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD4.1" type="translation">
                             <title xml:lang="bg">Канон за св. Харитина</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <head xmlns="http://www.tei-c.org/ns/1.0">канѡ<seg rend="sup"
-                                        >н</seg>. имы накрости<seg rend="sup">х</seg> се. Харитоныи
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">канѡ<seg rend="sup">н</seg>. имы накрости<seg rend="sup">х</seg> се. Харитоныи
                                         блг<seg rend="sup">д</seg>ть вьспѣваю любовию.</head>
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. д҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg
-                                        rend="sup">с</seg></rubric>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. д҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Мора
                                     чрьмнаго поучиноу</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Твоими
-                                    ѡ харитоныи дарови. оумь ми ѡблаг<seg rend="sup"
-                                    >д</seg>ти</incipit>
+                              <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Твоими
+                                    ѡ харитоныи дарови. оумь ми ѡблаг<seg rend="sup">д</seg>ти</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="translation" style="non-narrative">
-                        <locus n="5">14r-17v</locus>
+                        <locus n="5">14r–17v</locus>
                         <title xml:lang="bg">Служба за апостол Тома</title>
                         <date type="churchCal" when="--10-06">6 October</date>
                         <note>Includеs: 3 vesper stichera (mode 4), a doxa (mode 6), a
@@ -321,24 +276,19 @@
                             troparion (mode 3); the Kanon (mode 4) has all the odes (with a heirmos,
                             3 troparia and a theotokion), a sjedalen (mode 8) after ode 3, a
                             kontakion (mode 4) and an oikos after ode 6; in the end there are a
-                            lighting sticheron, 3 praises stichera (1st - mode 1, 2nd and 3rd - mode
+                            lighting sticheron, 3 praises stichera (1st – mode 1, 2nd and 3rd – mode
                             4), 2 doxas (mode 6) and a staurotheothokion</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
-                                    то<seg rend="sup">г</seg>. вь. ѕ҃. ст҃го ап<seg rend="sup"
-                                    >с</seg>ла ѳомы.</head>
+                                    то<seg rend="sup">г</seg>. вь. ѕ҃. ст҃го ап<seg rend="sup">с</seg>ла ѳомы.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD5.1" type="translation">
                             <title xml:lang="bg">Канон за апостол Тома</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. д҃. пѣ<seg rend="sup">с</seg> .а҃. ірмо<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. д҃. пѣ<seg rend="sup">с</seg> .а҃. ірмо<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Триста
                                     ти крѣпкы рож<seg rend="sup">д</seg>еи се ѿ д҃вы</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion"
-                                        >Безна<seg rend="sup">ч</seg>лна с҃на б҃жиꙗ. б҃а слова
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Безна<seg rend="sup">ч</seg>лна с҃на б҃жиꙗ. б҃а слова
                                     ꙗвльшаго се на земли</incipit>
                             </sampleText>
                         </msItemStruct>
@@ -358,25 +308,21 @@
                             aposticha and a doxa (mode 1)</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
-                                    того<seg rend="sup">ж</seg>. з҃. ст҃ыю м<seg rend="sup"
-                                >ч</seg>ныкѹ сергиꙗ и вакьха.</head>
+                                    того<seg rend="sup">ж</seg>. з҃. ст҃ыю м<seg rend="sup">ч</seg>ныкѹ сергиꙗ и вакьха.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD6.1" type="translation">
                             <title xml:lang="bg">Канон за св. Сергий и Вакх</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. в҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. в҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Твоꙗ
                                     десныца побѣднаꙗ</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Сергиѥ
+                              <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Сергиѥ
                                     ѹгодныче х҃ва. сь м<seg rend="sup">ч</seg>тлꙗ приѥмь</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD7" type="translation" style="non-narrative">
-                        <locus n="7">22r-25r</locus>
+                        <locus n="7">22r–25r</locus>
                         <title xml:lang="bg">Служба за св. Пелагия</title>
                         <date type="churchCal" when="--10-08">8 October</date>
                         <note>Includes: 3 vesper stichera (mode 8), a doxa (mode 4), a
@@ -392,72 +338,57 @@
                         </sampleText>
                         <msItemStruct xml:id="ACD7.1" type="translation">
                             <title xml:lang="bg">Канон за св. Пелагия</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. д҃. пѣ<seg rend="sup">с</seg>. а҃. ірм<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. д҃. пѣ<seg rend="sup">с</seg>. а҃. ірм<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Мора
                                     чрьм'наго пѹчинѹ</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion"
-                                    >Прѣдложивши ꙗко много питѣнии дн<seg rend="sup"
-                                    >с</seg>ь</incipit>
+                             <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Прѣдложивши ꙗко много питѣнии дн<seg rend="sup">с</seg>ь</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD8" type="translation" style="non-narrative">
-                        <locus n="8">25r-30v</locus>
+                        <locus n="8">25r–30v</locus>
                         <title xml:lang="bg">Служба за апостол Яков Алфеев и св. Андроник</title>
                         <date type="churchCal" when="--10-09">9 October</date>
                         <note>Includes: 3 vesper stichera (mode 4), a doxa (mode 4), a
                             staurotheotokion and another doxa (mode 5), a dismissal troparion (mode
                             3) and 2 separate (in a row) Kanons: the 1st Kanon (mode 8), on ff.
-                            25v-27v, has all the odes (with a heirmos, 3 troparia and a theotokion
+                            25v–27v, has all the odes (with a heirmos, 3 troparia and a theotokion
                             each), a sjedalen (mode 8) after ode 6, there are no kontakion and oikos
                             after ode 6; in the end, there are 3 praises stichera and a doxa with a
-                            staurotheotokion; the 2nd Kanon (mode 6), on ff. 28r-30r, have, too, all
+                            staurotheotokion; the 2nd Kanon (mode 6), on ff. 28r–30r, have, too, all
                             the odes (with a heirmos, 3 troparia and a theotokion), a sjedalen (is't
                             marked the mode), a doxa and a staurotheotokion after ode 3, a kontakion
                             (mode 2) and an oikos after ode 6, as well as a lighting sticheron in
                             the end, missing the praises stichera and the doxa.</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
-                                    то<seg rend="sup">г</seg>. вь. ѳ҃. с҃тго ап<seg rend="sup"
-                                    >с</seg>ла иакова альфеꙗ. и прѣпо<seg rend="sup">д</seg>б'наго
+                                    то<seg rend="sup">г</seg>. вь. ѳ҃. с҃тго ап<seg rend="sup">с</seg>ла иакова альфеꙗ. и прѣпо<seg rend="sup">д</seg>б'наго
                                 ан'дроника</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD8.1" type="translation">
                             <title xml:lang="bg">Канон за св. Андроник</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <head xmlns="http://www.tei-c.org/ns/1.0">канѡ<seg rend="sup"
-                                        >н</seg> гла<seg rend="sup">с</seg>. и҃.</head>
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">пѣ<seg rend="sup"
-                                        >с</seg>. а҃. ірмѡ<seg rend="sup">с</seg></rubric>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos"
-                                    >Въѡрѹжена фараѡна погрѹзы</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion"
-                                    >Проѡчистившѹ ти д҃шѹ. ан'дрониче доб'лими
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">канѡ<seg rend="sup">н</seg> гла<seg rend="sup">с</seg>. и҃.</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg></rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Въѡрѹжена фараѡна погрѹзы</incipit>
+                              <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Проѡчистившѹ ти д҃шѹ. ан'дрониче доб'лими
                                     добродѣтел'ми</incipit>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD8.2" type="translation">
                             <title xml:lang="bg">Канон за апостол Яков Алфеев</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. ѕ҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. ѕ҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Ꙗко по
                                         сѹ<seg rend="sup">х</seg> ходивь</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Рѹкѹ
-                                    ми подаж<seg rend="sup">д</seg> б҃говидче. и ѹчениче х<seg
-                                        rend="sup">с</seg>вь</incipit>
+                               <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Рѹкѹ
+                                    ми подаж<seg rend="sup">д</seg> б҃говидче. и ѹчениче х<seg rend="sup">с</seg>вь</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD9" type="translation" style="non-narrative">
-                        <locus n="9">30v-33v</locus>
+                        <locus n="9">30v–33v</locus>
                         <title xml:lang="bg">Служба за св. Евлампий и Евлампия</title>
                         <date type="churchCal" when="--10-10">10 October</date>
                         <note>Includes: 3 vesper stichera (mode 4), a doxa (mode 4), a
@@ -470,95 +401,76 @@
                             lighting sticheron and a theotokion</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
-                                    то<seg rend="sup">г</seg>ж<seg rend="sup">д</seg>е. і҃. с҃ты<seg
-                                    rend="sup">х</seg> м<seg rend="sup">ч</seg>ныкь елампиꙗ. и
+                                    то<seg rend="sup">г</seg>ж<seg rend="sup">д</seg>е. і҃. с҃ты<seg rend="sup">х</seg> м<seg rend="sup">ч</seg>ныкь елампиꙗ. и
                                 ѥлампие</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD9.1" type="translation">
                             <title xml:lang="bg">Канон за св. Евлампий и Евлампия</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. д҃. пѣ<seg rend="sup">с</seg>. а҃. ірм<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. д҃. пѣ<seg rend="sup">с</seg>. а҃. ірм<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Мора
                                     чрьм'наго пѹчинѹ немокрими стопамы</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion"
-                                    >Любовию х<seg rend="sup">с</seg>товою
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Любовию х<seg rend="sup">с</seg>товою
                                     ра<unclear>..</unclear>влꙗемь. м<seg rend="sup">ч</seg>нче
                                     ѥулампиѥ</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD10" type="translation" style="non-narrative">
-                        <locus n="10">33r-39v</locus>
+                        <locus n="10">33r–39v</locus>
                         <title xml:lang="bg">Служба за апостол Филип и св. Теофан Изповедник</title>
                         <date type="churchCal" when="--10-11">11 October</date>
                         <note>Includes: 3 vesper stichera (mode 4) and another 3 stichera (mode 6)
                             for the venerable, a doxa and a staurotheothokion,a dismissal troparion
                             (mode 8), there are the beginings of 2 mixed Kanons (mode 6), with odes
-                            1-6 in a row (with a heirmos, 3 troparia and a theotokion each) and two
-                            sjedalni (1st - mode 8, 2nd - mode 4), a doxa and a staurotheotokion
+                            1–6 in a row (with a heirmos, 3 troparia and a theotokion each) and two
+                            sjedalni (1st – mode 8, 2nd – mode 4), a doxa and a staurotheotokion
                             after ode 3, two kontakia (mode 4) and an oikos after ode 6; there are
-                            missing folia betwin ff. 37r - 38v and a different Kanon (odes 4-9) is
+                            missing folia betwin ff. 37r – 38v and a different Kanon (odes 4–9) is
                             following (with a heirmos, 2 troparia and a theotokion), a kontakion
                             (mode 8) and an oikos after ode 6; in the end, there are a lighting
                             sticheron, 3 praises stichera (mode 6) and a doxa (mode 6)</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Вь аі҃. с҃тго. ап<seg
-                                    rend="sup">с</seg>ла филипа ѥдино<seg rend="sup">г</seg> ѿ. з҃.
-                                диꙗконь. ипрѣпо<seg rend="sup">д</seg>бьнаго ѳеѡф<seg rend="sup"
-                                    >н</seg> исповѣд'ника ѥпп<seg rend="sup">с</seg>па
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Вь аі҃. с҃тго. ап<seg rend="sup">с</seg>ла филипа ѥдино<seg rend="sup">г</seg> ѿ. з҃.
+                                диꙗконь. ипрѣпо<seg rend="sup">д</seg>бьнаго ѳеѡф<seg rend="sup">н</seg> исповѣд'ника ѥпп<seg rend="sup">с</seg>па
                                 никеискаго</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD10.1" type="translation">
                             <title xml:lang="bg">Канон за апостол Филип</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. ѕ҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. ѕ҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Ꙗко по
                                         сѹ<seg rend="sup">с</seg> ходивь исрль</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion"
-                                        >Прѣ<seg rend="sup">свѣ</seg>тлими сиꙗни х҃вѣми ѡзарив
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Прѣ<seg rend="sup">свѣ</seg>тлими сиꙗни х҃вѣми ѡзарив
                                     се</incipit>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD10.2" type="translation">
                             <title xml:lang="bg">Канон за св. Теофан Изповедник</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <head xmlns="http://www.tei-c.org/ns/1.0">дрѹ<seg rend="sup"
-                                    >г</seg>. канѡ<seg rend="sup">н</seg> прѣпо<seg rend="sup"
-                                        >д</seg>бнѡ<seg rend="sup">м</seg></head>
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. ть<seg rend="sup">ж</seg>. ірм<seg rend="sup"
-                                        >с</seg> ть<seg rend="sup">ж</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">дрѹ<seg rend="sup">г</seg>. канѡ<seg rend="sup">н</seg> прѣпо<seg rend="sup">д</seg>бнѡ<seg rend="sup">м</seg></head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. ть<seg rend="sup">ж</seg>. ірм<seg rend="sup">с</seg> ть<seg rend="sup">ж</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Моѥмѹ
                                     разѹмѹ тоими м҃литвами</incipit>
-                                <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true"
-                                    >хлѣбомь нб҃снымь. ты же</explicit>
+                                <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">хлѣбомь нб҃снымь. ты же</explicit>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD10.3" type="translation">
                             <title xml:lang="bg">Канон за св. Отци на Седмия събор</title>
                             <note>The beginning of the text is missing</note>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true"
-                                    type="troparion">Гл҃ь б҃жии имѹще</incipit>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true" type="troparion">Гл҃ь б҃жии имѹще</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD11" type="translation" style="non-narrative">
-                        <locus n="11">39r-44v</locus>
+                        <locus n="11">39r–44v</locus>
                         <title xml:lang="bg">Служба за св. Пров, Тарах и Андроник и Козма Маюмски</title>
                         <date type="churchCal" when="--10-12">12 October</date>
                         <note>Includes: 3 vesper stichera (mode 4) and another 3 stichera (mode 4)
                             for the venerable, a doxa (mode 4) and a staurotheothokion, another doxa
                             (mode 1) in stichera aposticha and a staurotheotokion, 2 dismissal
-                            troparia (1st - mode 5, 2nd - mode 8); there are 2 mixed Kanons: The 1st
+                            troparia (1st – mode 5, 2nd – mode 8); there are 2 mixed Kanons: The 1st
                             Kanon (mode 6) is for the martyrs and the 2th Kanon (mode 4) is for the
                             venerable, with all the odes in a row (in the 1st Kanon odes 1, 3, 4, 7
                             and 9 have 4 troparia each, apart from the heirmos and the theotokion,
@@ -571,43 +483,30 @@
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     того<seg rend="sup">ж</seg>. ві҃. с҃ты<seg rend="sup">х</seg>
-                                    м<seg rend="sup">ч</seg>ныкь прова тарха андроника и прѣпо<seg
-                                    rend="sup">д</seg>бнаго ѡ҃ца н҃шего козмы. с҃тогорца. и твор'ца
+                                    м<seg rend="sup">ч</seg>ныкь прова тарха андроника и прѣпо<seg rend="sup">д</seg>бнаго ѡ҃ца н҃шего козмы. с҃тогорца. и твор'ца
                                     ѥпп<seg rend="sup">с</seg>па маюма.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD11.1" type="translation">
                             <title xml:lang="bg">Канон за св. Пров, Тарах и Андроник</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. и҃. пѣ<seg rend="sup">с</seg>. а҃. ірм<seg
-                                        rend="sup">с</seg></rubric>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos"
-                                    >Въѡрѹжена фараѡна погрѹзы</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">М<seg
-                                        rend="sup">ч</seg>нычьскыми ѹкрашень блг<seg rend="sup"
-                                        >д</seg>тьми</incipit>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. и҃. пѣ<seg rend="sup">с</seg>. а҃. ірм<seg rend="sup">с</seg></rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Въѡрѹжена фараѡна погрѹзы</incipit>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">М<seg rend="sup">ч</seg>нычьскыми ѹкрашень блг<seg rend="sup">д</seg>тьми</incipit>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD11.2" type="translation">
                             <title xml:lang="bg">Канон за св. Козма Маюмски</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <head xmlns="http://www.tei-c.org/ns/1.0">дрѹ<seg rend="sup"
-                                    >г</seg>. канѡ<seg rend="sup">н</seg> прѣпо<seg rend="sup"
-                                        >д</seg>бнѡмѹ</head>
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. д҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">дрѹ<seg rend="sup">г</seg>. канѡ<seg rend="sup">н</seg> прѣпо<seg rend="sup">д</seg>бнѡмѹ</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. д҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Мора
                                     чрьм'нѹю пѹчинѹ</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion"
-                                    >Ѹдобривь добродѣтелѥ</incipit>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Ѹдобривь добродѣтелѥ</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD12" type="translation" style="non-narrative">
-                        <locus n="12">45r-47v</locus>
+                        <locus n="12">45r–47v</locus>
                         <title xml:lang="bg">Служба за св. Карп и Папил</title>
                         <date type="churchCal" when="--10-13">13 October</date>
                         <note>Includes: 3 vesper stichera (mode 4), a doxa (mode 6) and a
@@ -624,11 +523,8 @@
                         </sampleText>
                         <msItemStruct xml:id="ACD12.1" type="translation">
                             <title xml:lang="bg">Канон за св. Карп и Папил</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. а҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. а҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Твоꙗ
                                     десница побѣдительнаꙗ</incipit>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Карпа
@@ -637,7 +533,7 @@
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD13" type="translation" style="non-narrative">
-                        <locus n="13">47v-51r</locus>
+                        <locus n="13">47v–51r</locus>
                         <title xml:lang="bg">Служба за св. Назарий, Гервасий, Келсий и Протасий</title>
                         <date type="churchCal" when="--10-14">14 October</date>
                         <note>Includes: 6 vesper stichera (mode 4), a doxa (mode 8) and a
@@ -648,19 +544,15 @@
                             after ode 3, a kontakion (mode 3) and an oikos after ode 6; in the end,
                             there are a lighting sticheron and a theotokion</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Вь ді҃. с҃ты<seg rend="sup"
-                                    >х</seg> м<seg rend="sup">ч</seg>нкь назареꙗ. геврасиꙗ.
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Вь ді҃. с҃ты<seg rend="sup">х</seg> м<seg rend="sup">ч</seg>нкь назареꙗ. геврасиꙗ.
                                 протасию. и керсиꙗ</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD13.1" type="translation">
                             <title xml:lang="bg">Канон за св. Назарий, Гервасий, Келсий и Протасий</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. д҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg
-                                        rend="sup">с</seg></rubric>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Ѿврьзѹ
-                                    ѹста моꙗ</incipit>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. д҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg></rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Ѿврьзоу
+                                    оуста моꙗ</incipit>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Вѣр'но
                                         постра<seg rend="sup">д</seg>в'ше и подвыгы
                                     кон'чав'ше</incipit>
@@ -668,7 +560,7 @@
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD14" type="translation" style="non-narrative">
-                        <locus n="14">51r-57r</locus>
+                        <locus n="14">51r–57r</locus>
                         <title xml:lang="bg">Служба за св. Евтимий Нови и Лукиан Презвитер Антиохийски</title>
                         <date type="churchCal" when="--10-15">15 October</date>
                         <note>Includes: 3 vesper stichera (mode 4) and another 3 stichera (mode 4)
@@ -685,47 +577,33 @@
                             doxa (mode 2) in stichera aposticha and staurotheotokion</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
-                                    тогож<seg rend="sup">д</seg>е. еі҃. прѣпо<seg rend="sup"
-                                >д</seg>бнаго ѡ҃ца н҃шего ѥѵѳимиꙗ. новаго. и с҃тго прѣпо<seg
-                                    rend="sup">д</seg>бном<seg rend="sup">ч</seg>нка. лѹкуана
+                                    тогож<seg rend="sup">д</seg>е. еі҃. прѣпо<seg rend="sup">д</seg>бнаго ѡ҃ца н҃шего ѥѵѳимиꙗ. новаго. и с҃тго прѣпо<seg rend="sup">д</seg>бном<seg rend="sup">ч</seg>нка. лоукуана
                                 предвитера. великыѥ анѳуѡхиѥ.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD14.1" type="translation">
                             <title xml:lang="bg">Канон за св. Евтимий Нови</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. в҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. в҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Гредѣте
                                         лю<seg rend="sup">д</seg>иѥ поѥмь пѣ<seg rend="sup">с</seg>
-                                        х<seg rend="sup">с</seg>ѹ б҃ѹ</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Ра<seg
-                                        rend="sup">д</seg>уисе источниче кипещи стрѹ
-                                    сп҃снѹю</incipit>
+                                        х<seg rend="sup">с</seg>оу б҃оу</incipit>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Ра<seg rend="sup">д</seg>уисе источниче кипещи строу
+                                    сп҃сноую</incipit>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD14.2" type="translation">
                             <title xml:lang="bg">Канон за св. Лукиан Презвитер Антиохийски</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <head xmlns="http://www.tei-c.org/ns/1.0">дрѹ<seg rend="sup"
-                                    >г</seg>. канѡ<seg rend="sup">н</seg> м<seg rend="sup"
-                                    >ч</seg>нкѹ</head>
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. д҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">дроу<seg rend="sup">г</seg>. канѡ<seg rend="sup">н</seg> м<seg rend="sup">ч</seg>нкоу</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. д҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Воспою
-                                    ти г҃и б҃е мои ꙗко прове<seg rend="sup">д</seg> ли<seg
-                                        rend="sup">д</seg> своѥ по сѹ<seg rend="sup"
-                                    >х</seg></incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion"
-                                    >Прѣмѹдростию и даромь д҃ховнимь. лѹкиꙗне просиꙗвь</incipit>
+                                    ти г҃и б҃е мои ꙗко прове<seg rend="sup">д</seg> ли<seg rend="sup">д</seg> своѥ по соу<seg rend="sup">х</seg></incipit>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Прѣмоудростию и даромь д҃ховнимь. лоукиꙗне просиꙗвь</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD15" type="translation" style="non-narrative">
-                        <locus n="15">57r-60r</locus>
+                        <locus n="15">57r–60r</locus>
                         <title xml:lang="bg">Служба за св. Лонгин</title>
                         <date type="churchCal" when="--10-16">16 October</date>
                         <note>Includes: 3 vesper stichera (mode 8), a doxa (mode 6),
@@ -738,76 +616,58 @@
                             a theotokion, a doxa in stichera aposticha and a
                             staurotheotokion.</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Вь ѕі҃. с҃тго м<seg rend="sup"
-                                    >ч</seg>ныка логина иже при кр<seg rend="sup">с</seg>тѣ.</head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Вь ѕі҃. с҃тго м<seg rend="sup">ч</seg>ныка логина иже при кр<seg rend="sup">с</seg>тѣ.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD15.1" type="translation">
                             <title xml:lang="bg">Канон за св. Лонгин</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. д҃. пѣ<seg rend="sup">с</seg>. ірм<seg rend="sup"
-                                        >с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. д҃. пѣ<seg rend="sup">с</seg>. ірм<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Мора
-                                    чрьмнаго пѹчинѹ</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Бж<seg
-                                        rend="sup">с</seg>твьными твоими свѣтолити
+                                    чрьмнаго поучиноу</incipit>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Бж<seg rend="sup">с</seg>твьными твоими свѣтолити
                                     просвѣщаѥмь</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD16" type="translation" style="non-narrative">
-                        <locus n="16">60r-65r</locus>
+                        <locus n="16">60r–65r</locus>
                         <title xml:lang="bg">Служба за пророк Осия и св. Андрей Критски</title>
                         <date type="churchCal" when="--10-17">17 October</date>
                         <note>Includes: 3 vesper stichera (mode 1) and another 3 stichera (mode 4)
                             for the venerable, a staurotheothokion, a dismissal troparion (mode 4);
                             there are 2 mixed Kanons, the 1st Kanon (mode 1) and the 2nd Kanon (mode
                             2) for the martyr, with all the odes in a row (with a heirmos, 3
-                            troparia and a theotokion each), there are two sjedalni (1st - mode 8,
-                            2nd for the venerable - mode 4), a doxa and a staurotheotokion after ode
+                            troparia and a theotokion each), there are two sjedalni (1st – mode 8,
+                            2nd for the venerable – mode 4), a doxa and a staurotheotokion after ode
                             3, a kontakion (mode 8) and an oikos after ode 6; in the end, there are
                             a lighting sticheron and a theotokion only.</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Вь зі҃. с҃тго пр<seg
-                                    rend="sup">о</seg>рка ѡсиѥ и прѣпо<seg rend="sup">д</seg>ном<seg
-                                    rend="sup">ч</seg>нка андрѣꙗ иже вь критѣ.</head>
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Вь зі҃. с҃тго пр<seg rend="sup">о</seg>рка ѡсиѥ и прѣпо<seg rend="sup">д</seg>ном<seg rend="sup">ч</seg>нка андрѣꙗ иже вь критѣ.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD16.1" type="translation">
                             <title xml:lang="bg">Канон за пророк Осия</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. а҃. пѣ<seg rend="sup">с</seg>. а҃. ірм<seg
-                                        rend="sup">с</seg></rubric>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos"
-                                    >Помогшомѹ б҃ѹ вь ѥгуп'тѣ мѡисеѡва</incipit>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. а҃. пѣ<seg rend="sup">с</seg>. а҃. ірм<seg rend="sup">с</seg></rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Помогшомоу б҃оу вь ѥгуп'тѣ мѡисеѡва</incipit>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Ꙗко
-                                    б҃гог҃льникь вь истынѹ. ꙗко пр<seg rend="sup">о</seg>ркь
+                                    б҃гог҃льникь вь истыноу. ꙗко пр<seg rend="sup">о</seg>ркь
                                     ѡсиѥ</incipit>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD16.2" type="translation">
                             <title xml:lang="bg">Канон за св. Андрей Критски</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <head xmlns="http://www.tei-c.org/ns/1.0">дрѹ<seg rend="sup"
-                                    >г</seg>. канѡ<seg rend="sup">н</seg> прѣпо<seg rend="sup"
-                                        >д</seg>бн<seg rend="sup">о</seg>м<seg rend="sup"
-                                    >ꙋ</seg></head>
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. в҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">дроу<seg rend="sup">г</seg>. канѡ<seg rend="sup">н</seg> прѣпо<seg rend="sup">д</seg>бн<seg rend="sup">о</seg>м<seg rend="sup">ꙋ</seg></head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. в҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Вь
                                     гльбынѣ потопи дрѣвлѥ фараѡнитьскаꙗ воиньства</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion"
-                                    >Ꙗвльшаго се х<seg rend="sup">с</seg>а на<seg rend="sup">с</seg>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Ꙗвльшаго се х<seg rend="sup">с</seg>а на<seg rend="sup">с</seg>
                                     ради ѿ д҃вы</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD17" type="translation" style="non-narrative">
-                        <locus n="17">65r-69r</locus>
+                        <locus n="17">65r–69r</locus>
                         <title xml:lang="bg">Служба за апостол Лука</title>
                         <date type="churchCal" when="--10-18">18 October</date>
                         <note>Includes: 5 vesper stichera (mode 8), a doxa (mode 6) and a
@@ -822,25 +682,20 @@
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     то<seg rend="sup">г</seg>ж<seg rend="sup">д</seg>е вь иі҃. с҃тго
                                     ап<seg rend="sup">с</seg>ла и ѥу<seg rend="sup">г</seg>листа
-                                    лѹ<seg rend="sup">к</seg>ы.</head>
+                                    лоу<seg rend="sup">к</seg>ы.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD17.1" type="translation">
                             <title xml:lang="bg">Канон за апостол Лука</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. и҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg
-                                        rend="sup">с</seg>.</rubric>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Пѣ<seg
-                                        rend="sup">с</seg> вьдпоѥмь вси людыи чюдномѹ б҃ѹ
-                                    ншемѹ</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion"
-                                    >Колесныца б҃жию и свѣтлаа бы<seg rend="sup">с</seg></incipit>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. и҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg>.</rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Пѣ<seg rend="sup">с</seg> вьдпоѥмь вси людыи чюдномоу б҃оу
+                                    ншемоу</incipit>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Колесныца б҃жию и свѣтлаа бы<seg rend="sup">с</seg></incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD18" type="translation" style="non-narrative">
-                        <locus n="18">69r-73v</locus>
+                        <locus n="18">69r–73v</locus>
                         <title xml:lang="bg">Служба за пророк Йоил и св. Уар</title>
                         <date type="churchCal" when="--10-19">19 October</date>
                         <note>Includes: 3 vesper stichera (mode 8) for the prophet and another 3
@@ -851,25 +706,21 @@
                             from the heirmos and the theotokion, odes 6, 7, 8, and 9 have an
                             heirmos, 2 troparia and a theotokion each; in the 2nd Kanon each ode has
                             a heirmos, 3 troparia and a theotokion, exept for the ode 9, which has 4
-                            troparia), there are two sjedalni (1st - mode 8, 2nd - mode 1), a doxa
+                            troparia), there are two sjedalni (1st – mode 8, 2nd – mode 1), a doxa
                             and a staurotheotokion after ode 3, and no kontakion and oikos after ode
                             6; in the end, the lighting sticheron is only marked</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     то<seg rend="sup">г</seg>ж<seg rend="sup">д</seg>е ѳі҃. с҃тго
-                                    пр<seg rend="sup">о</seg>рка иѡилꙗ. и с҃тго м<seg rend="sup"
-                                    >ч</seg>нка ѹара.</head>
+                                    пр<seg rend="sup">о</seg>рка иѡилꙗ. и с҃тго м<seg rend="sup">ч</seg>нка оуара.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD18.1" type="translation">
                             <title xml:lang="bg">Канон за пророк Йоил</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. в҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. в҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Гредѣте
                                         лю<seg rend="sup">д</seg>ѥ поѥмь пѣ<seg rend="sup">с</seg>
-                                        х<seg rend="sup">с</seg>ѹ б҃ѹ</incipit>
+                                        х<seg rend="sup">с</seg>оу б҃оу</incipit>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Лыкь
                                         на<seg rend="sup">м</seg> пр<seg rend="sup">о</seg>рчьскы
                                     сьвеселит се</incipit>
@@ -877,23 +728,18 @@
                         </msItemStruct>
                         <msItemStruct xml:id="ACD18.2" type="translation">
                             <title xml:lang="bg">Канон за св. Уар</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <head xmlns="http://www.tei-c.org/ns/1.0">дрѹ<seg rend="sup"
-                                    >г</seg>. канѡ<seg rend="sup">н</seg> м<seg rend="sup"
-                                    >ч</seg>нкѹ</head>
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. ѕ҃. пѣ<seg rend="sup">с</seg>. а҃. ірм<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">дроу<seg rend="sup">г</seg>. канѡ<seg rend="sup">н</seg> м<seg rend="sup">ч</seg>нкоу</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. ѕ҃. пѣ<seg rend="sup">с</seg>. а҃. ірм<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Ꙗко по
-                                        сѹ<seg rend="sup">х</seg> ходывь</incipit>
+                                        соу<seg rend="sup">х</seg> ходывь</incipit>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Ꙗви се
                                     на высотѣ х<seg rend="sup">с</seg>вы цр҃кве с҃те</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD19" type="translation" style="non-narrative">
-                        <locus n="19">73v-77r</locus>
+                        <locus n="19">73v–77r</locus>
                         <title xml:lang="bg">Служба за св. Артемий</title>
                         <date type="churchCal" when="--10-20">20 October</date>
                         <note>Includes: 3 vesper stichera (mode 4), a doxa (mode 2) and a
@@ -910,21 +756,17 @@
                         </sampleText>
                         <msItemStruct xml:id="ACD19.1" type="translation">
                             <title xml:lang="bg">Канон за св. Артемий</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. в҃. пѣ<seg rend="sup">с</seg>. а҃. ірм<seg
-                                        rend="sup">с</seg>.</rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. в҃. пѣ<seg rend="sup">с</seg>. а҃. ірм<seg rend="sup">с</seg>.</rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Вь
                                     гльбынѣ потопи дрѣв'лѥ фараѡнитьска воиньства</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion"
-                                    >Подвигь м<seg rend="sup">ч</seg>нче добрыи ꙗко подвиза
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Подвигь м<seg rend="sup">ч</seg>нче добрыи ꙗко подвиза
                                     се</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD20" type="translation" style="non-narrative">
-                        <locus n="19">77r-81r</locus>
+                        <locus n="19">77r–81r</locus>
                         <title xml:lang="bg">Служба за св. Иларион Велики</title>
                         <date type="churchCal" when="--10-21">21 October</date>
                         <note>Includes: 3 vesper stichera (mode 4), a doxa (mode 2) and a
@@ -936,27 +778,21 @@
                             a doxa (mode 2) and a staurtheotokion</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
-                                    то<seg rend="sup">г</seg>. к҃а. прѣпо<seg rend="sup"
-                                    >д</seg>бна<seg rend="sup">г</seg>. ѡ҃ца наше<seg rend="sup"
-                                    >г</seg> илариѡна велика<seg rend="sup">г</seg>.</head>
+                                    то<seg rend="sup">г</seg>. к҃а. прѣпо<seg rend="sup">д</seg>бна<seg rend="sup">г</seg>. ѡ҃ца наше<seg rend="sup">г</seg> илариѡна велика<seg rend="sup">г</seg>.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD20.1" type="translation">
                             <title xml:lang="bg">Канон за св. Иларион Велики</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. в҃. пѣ<seg rend="sup">с</seg>. а҃. ірм<seg
-                                        rend="sup">с</seg>.</rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. в҃. пѣ<seg rend="sup">с</seg>. а҃. ірм<seg rend="sup">с</seg>.</rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Вь
                                     гльбынѣ потопи дрѣвлѥ фараѡнитьска воиньства</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion"
-                                    >Свѣтоносноѥ и свѣтовыд'ноѥ жи<seg rend="sup">т</seg>ѥ твоѥ
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Свѣтоносноѥ и свѣтовыд'ноѥ жи<seg rend="sup">т</seg>ѥ твоѥ
                                     бл҃жене</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD21" type="translation" style="non-narrative">
-                        <locus n="20">81r-84v</locus>
+                        <locus n="20">81r–84v</locus>
                         <title xml:lang="bg">Служба за св. Аверкий и Седемте Ефески Отроци</title>
                         <date type="churchCal" when="--10-22">22 October</date>
                         <note>Includes: 3 vesper stichera (mode 2) and another 3 stichera (mode 4),
@@ -964,49 +800,38 @@
                             for the martyr; there are 2 mixed Kanons; the 1st Kanon (mode 2) and the
                             2nd Kanon (mode 8) have all the odes in a row (the odes in the 1st Kanon
                             have 3 troparia each, apart from the heirmos and the theotokion; the 2nd
-                            Kanon have all the odes - with a heirmos, 2 troparia and a theotokion),
+                            Kanon have all the odes – with a heirmos, 2 troparia and a theotokion),
                             there is no sjedalen after ode 3, but there is a kontakion (mode 4) for
                             the martyr without an oikos; in the end, there are 2 lighting stichera
                             and a theotokion</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     то<seg rend="sup">г</seg>. к҃в. вь с҃ты<seg rend="sup">х</seg>
-                                ѡ҃ца наше<seg rend="sup">г</seg> авер'кыꙗ. и с҃ты<seg rend="sup"
-                                    >х</seg>. з҃. ѿрокь. иже вь ѥфесѣ.</head>
+                                ѡ҃ца наше<seg rend="sup">г</seg> авер'кыꙗ. и с҃ты<seg rend="sup">х</seg>. з҃. ѿрокь. иже вь ѥфесѣ.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD21.1" type="translation">
                             <title xml:lang="bg">Канон за св. Аверкий</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. в҃. пѣ<seg rend="sup">с</seg>. а҃. ірмо<seg
-                                        rend="sup">с</seg></rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. в҃. пѣ<seg rend="sup">с</seg>. а҃. ірмо<seg rend="sup">с</seg></rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Гредѣте
                                         лю<seg rend="sup">д</seg>ѥ поѥмь пѣ<seg rend="sup">с</seg>
-                                        х<seg rend="sup">с</seg>ѹ б҃ѹ</incipit>
+                                        х<seg rend="sup">с</seg>оу б҃оу</incipit>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Зарею
                                     свѣтлою трьсльньчнаго бж<seg rend="sup">с</seg>тва</incipit>
                             </sampleText>
                         </msItemStruct>
                         <msItemStruct xml:id="ACD21.2" type="translation">
-                            <title xml:lang="bg">Канон за св. Седем Ефески Отроци</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <head xmlns="http://www.tei-c.org/ns/1.0">дрѹ<seg rend="sup"
-                                    >г</seg>. канѡ<seg rend="sup">н</seg> стым' ѿро<seg rend="sup"
-                                        >к</seg>м'.</head>
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. и҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg
-                                        rend="sup">с</seg></rubric>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos"
-                                    >Вьѡрѹжена фараѡна погрѹжь</incipit>
-                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion"
-                                    >Седморичнимь числомь почитаѥмыи</incipit>
+                            <title xml:lang="bg">Канон за свв. Седем Ефески отроци</title>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <head xmlns="http://www.tei-c.org/ns/1.0">дроу<seg rend="sup">г</seg>. канѡ<seg rend="sup">н</seg> стым' ѿро<seg rend="sup">к</seg>м'.</head>
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. и҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg></rubric>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Вьѡроужена фараѡна погроужь</incipit>
+                                <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Седморичнимь числомь почитаѥмыи</incipit>
                             </sampleText>
                         </msItemStruct>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD22" type="translation" style="non-narrative">
-                        <locus n="21">84v-85v</locus>
+                        <locus n="21">84v–85v</locus>
                         <title xml:lang="bg">Служба за апостол Яков, брат Господен</title>
                         <date type="churchCal" when="--10-23">23 October</date>
                         <note>Includes: 3 vesper stichera (mode 4), a doxa (mode 6) and a
@@ -1016,19 +841,14 @@
                             and a sjedalen (mode 8)</note>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
-                                    то<seg rend="sup">г</seg>. к҃г. с҃тго ап<seg rend="sup"
-                                >с</seg>ла иꙗкова бра<seg rend="sup">т</seg> г<seg rend="sup"
-                                    >с</seg>нꙗ.</head>
+                                    то<seg rend="sup">г</seg>. к҃г. с҃тго ап<seg rend="sup">с</seg>ла иꙗкова бра<seg rend="sup">т</seg> г<seg rend="sup">с</seg>нꙗ.</head>
                         </sampleText>
                         <msItemStruct xml:id="ACD22.1" type="translation">
                             <title xml:lang="bg">Канон за апостол Яков, брат Господен</title>
-                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0"
-                                xml:lang="cu" type="canon">
-                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup"
-                                        >с</seg>. д҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg
-                                        rend="sup">с</seg>.</rubric>
+                            <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu" type="canon">
+                                <rubric xmlns="http://www.tei-c.org/ns/1.0">гла<seg rend="sup">с</seg>. д҃. пѣ<seg rend="sup">с</seg>. а҃. ірмѡ<seg rend="sup">с</seg>.</rubric>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="heirmos">Мора
-                                    чрьмнаго пѹчинѹ</incipit>
+                                    чрьмнаго поучиноу</incipit>
                                 <incipit xmlns="http://www.tei-c.org/ns/1.0" type="troparion">Даꙗниѥ
                                     бл҃го иꙗкове</incipit>
                                 <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">и
@@ -1038,9 +858,8 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#RS">
-                        <origDate notBefore="1200" notAfter="1300">13th-14th c.</origDate>
-                        <origPlace>Unknown</origPlace>
+                    <origin evidence="conjecture" resp="#RS">
+                        <origDate notBefore="1200" notAfter="1300">13th–14th c.</origDate>
                         <ref type="bibl" target="bib:Цонев1923">Цонев 1923: 50</ref>
                     </origin>
                 </history>

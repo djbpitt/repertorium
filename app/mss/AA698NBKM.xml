@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-AA698NBKM">
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AA698NBKM">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Miscellany from Gabrovo, NBKM 698, year 1824</title>
+                <title>Miscellany from Gabrovo, NBKM 698, year 1824</title>
                 <author xml:id="AA">Adelina Angusheva</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
                 <editor xml:id="AB">Andrej Bojadžiev</editor>
@@ -14,23 +14,15 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>19.08. 1995</date>
+                <date when="1995-08-19">19.08. 1995</date>
                 <idno type="Repertorium">RC-AA698NBKM</idno>
                 <availability status="free">
-                    <p>The intellectual content of this file is copyrighted by the creators under
-                        the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>. In short, you could download and disseminate
-                        information, but you are not allowed to alter, transform, or build upon the
-                        works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref
-                            target="http://www.ilit.bas.bg/repertorium/"
-                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                    <p>The intellectual content of this file is copyrighted by the creators under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <bibl>
-                    <ref target="bib:Цонев1923">Цонев 1923: 323-325</ref>
+                    <ref target="bib:Цонев1923">Цонев 1923: 323–325</ref>
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -54,14 +46,15 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Update license to CC BY 4.0. Small corrections and additions.</change>
+        <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
             <change who="#AB" when="2009-04-17">Removed constructions
@@ -85,9 +78,6 @@
                     <settlement>Sofia</settlement>
                     <repository>National Library</repository>
                     <idno type="shelfmark">698</idno>
-                    <note>
-                        <name type="relatedPerson" full="yes">Petko xadži Manafov</name>
-                    </note>
                     <altIdentifier type="former">
                         <idno type="shelfmark">30</idno>
                     </altIdentifier>
@@ -96,8 +86,7 @@
                     <objectDesc form="codex">
                         <supportDesc material="paper">
                             <support>
-                                <material>Paper</material>
-                                <watermark>none</watermark>
+                                <watermark>None</watermark>
                             </support>
                             <extent>
                                 <measure unit="folia">38</measure>
@@ -106,80 +95,72 @@
                                     <width>185</width>
                                 </dimensions>
                             </extent>
-                            <collation>
-                                <summary>no data</summary>
-                            </collation>
                             <condition>Without beginning and end</condition>
                         </supportDesc>
                         <layoutDesc>
                             <layout columns="1" writtenLines="24"/>
                         </layoutDesc>
                     </objectDesc>
-                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">dark brown</ink>
+                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Dark brown</ink>
                     <decoDesc>
                         <decoNote type="borders">Imitation of old type of borders with floral
                             elements</decoNote>
                     </decoDesc>
+                    <additions>
+                        <list>
+                            <item><locus>front past-down folio</locus> With cursive script: <quote xml:lang="cu">И бисть чꙋ́до на обичнои мсц<seg rend="sup">с</seg>цовь послеть размирството. годь или два год ꙋ Шюмень градь наговориша сѧ турци и здумаха сѧ да истребеть христианити и осеша волѧ ѿ нихнити сꙋдници щото има ꙋ градь христѧни вси со<seg rend="sup">с</seg> злаѧ смерть да погꙋбѧть ихь. И сториха сечь ꙋ м<seg rend="sup">с</seg>ць июнїѧ на 27 день после<seg rend="sup">д</seg> техниѧт корба<seg rend="sup">н</seg> бариѧмь като го сотворѧть тачи тогива да погубѧть христианити. И тогива горкїи христиѧни кому надежда понежи ѿтчааши са живота и ѿ все сер<seg rend="sup">д</seg>ци всити хр<seg rend="sup">с</seg>тиѧни со голѧ<seg rend="sup">м</seg> глас дꙋмаха: г<seg rend="sup">с</seg>ди помилои и ослишинъ бистъ гла<seg rend="sup">с</seg> ихь и абие поча даж<seg rend="sup">д</seg> великь да иди ѿ нощѧ ѿ третиѧго часа до деветѧго и громъ великь <gap quantity="3" unit="char"/> и сосипаха сѧ ꙋ гра<seg rend="sup">д</seg> џамии тꙋрски и вси храмини тꙋрски и падоше стени градскии и пропаде <gap quantity="4" unit="char"/> махала тꙋрскои сос꙽ꙿ седе<seg rend="sup">м</seg> соть полати и вси утопиша са и издавиха са тꙋрци и присташе ѿ дело сие, а христиѧнинь идинь ни са погꙋби ѿ вода.</quote></item>
+                            <item><locus>ff. 1r–21r, bottom margin</locus> A note from the <name role="scribe">Petko Manafov</name>: <quote xml:lang="cu">Начахъ писати сїе житіе ст҃ому мученику О҆́нуфрїю Габровскому ѧ́же рече сѧ пострадавшїй въ Сакѫсъ, приписахъ го въ растоѧнїи мц҃и три имеѧше го преподобно ученному Г. архимандритъ Іосифъ, родомъ габровецъ. Онь принесалъ ѿ Ст҃ую Гору Афонскою и имѣелъ кодь мнѣ весма усердность и благословилъ да ѧ преписати и тако почахъ писати отъ мартъ 8-ми и соверши<seg rend="sup">х</seg> въ юнїи 8-ми зри при конца книга сеѧ; беши при преосвещенїи митрополота Їлариона Терновскїи, которіи весма привосходи прецдибившїи ексархи у Терново сꙿ многими великолепнимъ одеѧнїѧ и церомонїѧмъ архиереиски<seg rend="sup">м</seg>, имеѧши бо власть велико отъ велікою порту тогда бе солта<seg rend="sup">н</seg> Махмтъ които воюва на<seg rend="sup">д</seg> свои сущи по<seg rend="sup">д</seg>дани и изби много христіани по<seg rend="sup">д</seg> своеи власти, ѧ҆́жи имеѧши въ самому ту времѩ 1820 во апрі́ліѧ, въ самі́й светлі́и день пасхи патрі́архъ Георгі́а со весь синкит изꙿвеси пре<seg rend="cu">д</seg> сущи церковни двери</quote></item>
+                            <item><locus>f. 38v</locus> A note from Stefan Kostov: <quote xml:lang="cu">Петко х. Манафовъ <lb/> Ази Стефанъ Костовъ подписахъ дядѫ Петкѫ на книгата Петко х. Ив. Манафовъ</quote></item></list>
+                    </additions>
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe n="1">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1-25</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0">Petko xadži Manafov</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
-                            type="semiuncial">
-                            <p>Late semiuncial</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1r–25r</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Petko xadži Manafov</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Late semiuncial</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">New Bulgarian language with East
-                                Bulgarian dialect peculiarities</p>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">New Bulgarian language with East
+                                    Bulgarian dialect peculiarities</summary>
                         </scribeLang>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name>Adelina Angusheva</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                     <scribe n="2">
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">26-38</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
-                            type="semiuncial">
-                            <p>Late semiuncial</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 26r–38r</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Late semiuncial</scriptNote>
                         </scriptDesc>
-                        <respStmt xmlns="http://www.tei-c.org/ns/1.0">
-                            <name>Adelina Angusheva</name>
-                            <resp>de visu</resp>
-                        </respStmt>
                     </scribe>
                 </scribeDesc>
                 <msContents>
-                    <summary>The manuscript contains 4 texts</summary>
+                    <summary>The manuscript contains 5 texts</summary>
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="litRedaction">Late</filiation>
                     <msItemStruct xml:id="ACD1" type="original">
-                        <locus n="1">1-17</locus>
+                        <locus n="1">ff. 1–17</locus>
                         <title xml:lang="bg">Житие и служба за св. Онуфрий Габровски</title>
                         <note>Without beginning</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2">
-                        <locus n="2">17-25</locus>
+                        <locus n="2">ff. 17r–24r</locus>
                         <title xml:lang="bg">Гръмник</title>
                         <note>The text presents a unique compilation between the Thunderbook
                             predicting by the Zodiac and Thunderbook predicing by the months. There
                             is a Zodiac table at the beginning of the text. It is typical of the
                             type of Thunderbook predicting by the zodiac. The future-telling
                             contains parallels between the signs of the zodiac and different
-                            geographical places - i.e. "twins" corresponds to the prediction about
+                            geographical places – i.e. "twins" corresponds to the prediction about
                             appearance of illnesses in Tŭrnovo</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Починаемъ
                                     <sic>Громомникъ</sic></head>
-                            <rubric xmlns="http://www.tei-c.org/ns/1.0">съ круговъ нощны и с'
-                                    круго<seg rend="sup">м</seg> луны и с' круго<seg rend="sup"
-                                    >м</seg> трусъ земли составыи сѧ ѿ премудростыи
+                            <rubric xmlns="http://www.tei-c.org/ns/1.0">съ круговъ нощны и сꙿ
+                                    круго<seg rend="sup">м</seg> луны и сꙿ круго<seg rend="sup">м</seg> трусъ земли составыи сѧ ѿ премудростыи
                                     <sic>еопетскиѧ</sic></rubric>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">м<seg rend="sup">с</seg>цъ
                                 септембрыи</incipit>
@@ -189,45 +170,53 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">24-26</locus>
+                        <locus n="3">24r–26r</locus>
                         <title xml:lang="bg">Гадателна книга. Изправление на зодиите</title>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">О исправленїе</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Зодиах М<seg rend="sup"
-                                    >с</seg>ца мартъ</incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Зодиах М<seg rend="sup">с</seg>ца мартъ</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">ловъ да ловишъ зло
                                 е</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="translation">
-                        <locus n="4">36-38</locus>
+                        <locus n="4">ff. 36r–38r</locus>
                         <title xml:lang="bg">Видение на апостол Павел</title>
                         <note>The text is copied from <soCalled>srednogorski damaskin</soCalled>.
                             The end is lacking. There is no title of the text.</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Азь Ап<seg rend="sup"
-                                    >с</seg>ь Павелъ нѣкоги възнесенъ бы<seg rend="sup">х</seg> до
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Азь Ап<seg rend="sup">с</seg>ь Павелъ нѣкоги възнесенъ бы<seg rend="sup">х</seg> до
                                 третие н҃бо</incipit>
                         </sampleText>
                     </msItemStruct>
+                    <msItemStruct xml:id="ACD5" type="original">
+                        <locus>f. 38r</locus>
+                        <title xml:lang="bg">Колофон</title>
+                        <re:sampleText xml:lang="cu">
+                            <colophon>
+                                <ab>Изволивщомꙋ бг҃ꙋ начати и совершити слова и вѣлелепие и чест на веки вековь ами<seg rend="sup">н</seg>. <lb/> Конецъ 1824 го<seg rend="sup">д</seg> м<seg rend="sup">с</seg>цъ Їꙋнїѧ 8 число оу҆́ Га́брово.</ab>
+                            </colophon>
+                        </re:sampleText>
+                    </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#AA">
+                    <origin evidence="internal">
                         <origDate notBefore="1824" notAfter="1824">1824</origDate>
                         <origPlace>Gabrovo</origPlace>
                     </origin>
+                <provenance>The MS was part of the collection of gymnasium in Gabrovo and then entered the collection of Naroden Muzei in Sofia.</provenance>
+                    <acquisition>Received from the Naroden Muzei, Sofia which is witnessed by the stamp on the first folio.</acquisition>
                 </history>
                 <additional>
                     <adminInfo>
                         <recordHist>
                             <source>
                                 <p>Directly catalogued from the original manuscript using the
-                                    printed catalogue from <ref target="bib:Цонев1923" type="bibl"
-                                        >Цонев 1923: 323-325</ref></p>
+                                    printed catalogue from <ref target="bib:Цонев1923" type="bibl">Цонев 1923: 323–325</ref></p>
                             </source>
                         </recordHist>
                     </adminInfo>

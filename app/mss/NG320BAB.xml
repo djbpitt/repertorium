@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-NG320BAB">
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-NG320BAB">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Хроника на Георги Амартол, препис, ок. 1365-1375, Библиотека на
+                <title>Хроника на Георги Амартол, препис, ок. 1365–1375, Библиотека на
                     Румънската академия</title>
                 <author xml:id="NG">Nina Gagova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
@@ -15,23 +15,20 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>November 2005</date>
+                <date when="2005-11">November 2005</date>
                 <idno type="Repertorium">RC-NG320BAB</idno>
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref
-                            target="http://www.ilit.bas.bg/repertorium/"
-                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p><ref type="bibl" target="bib:Panaitesku2003">Panaitesku 2003: 83-84</ref>
-                    <ref type="bibl" target="bib:Василев1980">Василев и др. 1980: 41-69</ref></p>
+                <listBibl><bibl><ref target="bib:Panaitesku2003">Panaitesku 2003: 83–84</ref></bibl>
+                    <bibl><ref target="bib:Василев1980">Василев и др. 1980: 41–69</ref></bibl></listBibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -52,18 +49,16 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
-
+            <change who="#AB" when="2023-11-02">Edit elements according to new schema</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
-
             <change who="#AM" when="2011-10-07">Removed old elements</change>
             <change who="#AM" when="2011-10-07">Editorial work, checked MS and added
                 information</change>
@@ -91,7 +86,7 @@
                                         with arrow</motif>
                                     <ref type="bibl" target="bib:Mošin1957">
                                         <num>355</num>
-                                        <date>1365-1375</date>
+                                        <date>1365–1375</date>
                                     </ref>
                                 </watermark>
                             </support>
@@ -104,18 +99,10 @@
                             </extent>
                             <foliation>Old, by folia with ink, and new, by folia with
                                 pencil.</foliation>
-                            <collation>
-                                <summary>no data</summary>
-                            </collation>
-                            <condition>Fair.</condition>
+                            <condition>Fair</condition>
                         </supportDesc>
                         <layoutDesc>
-                            <layout columns="1" writtenLines="19 20">
-                                <dimensions unit="mm" type="column">
-                                    <height/>
-                                    <width/>
-                                </dimensions>
-                            </layout>
+                            <layout columns="1" writtenLines="19 20"/>
                         </layoutDesc>
                     </objectDesc>
                     <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Dark brown</ink>
@@ -125,12 +112,12 @@
                             "vjaz"</decoNote>
                     </decoDesc>
                     <bindingDesc>
-                        <binding>
-                            <p>Old,17th c.</p>
+                        <binding contemporary="false">
+                            <summary>Old, <date>17th c.</date></summary>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
-                        <list type="simple">
+                        <list>
                             <item>
                                 <locus>front cover</locus>
                                 <date>16th c.</date>
@@ -153,53 +140,50 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r-169v</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
-                            type="semiuncial"/>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">1r–169v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial"/>
+                        </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Russian orthogrophy</p>
-                            </orthography>
+                                <langNote key="orthography">Russian orthogrophy</langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Panaitescu2003">Panaitescu 2003:
-                                83-84</ref>
-                        </note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Panaitescu2003">Panaitescu 2003:
+                                83–84</ref>
+                        </bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <note>The begining and the end of the codex is missing; the old bindig (now
                         missing) was wooden panel,covered with ornamented leather (stamped eagles
-                        and other birds in circles) - Jacimirskij, p. 507; the old binding has
+                        and other birds in circles) – Jacimirskij, p. 507; the old binding has
                         contented also a few inscriptions.</note>
                     <filiation type="protograph">Bulgarian</filiation>
                     <filiation type="antigraph">Middle Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1r-218v</locus>
+                        <locus n="1">1r–218v</locus>
                         <title xml:lang="bg">Хроника на Георги Амартол</title>
                         <author>George Hamartolos</author>
                         <note>Without beginning (original name is missing); it contains data of
-                            Bulgarian history: ff. 147r, 169v, 200v, 203r, 206v, 207v, 210v-212r.
-                            The fragments of the chronicle are published by V. M. Istrin. <ref
-                                type="bibl" target="bib:Истрин1930">Истрин1930</ref></note>
+                            Bulgarian history: ff. 147r, 169v, 200v, 203r, 206v, 207v, 210v–212r.
+                            The fragments of the chronicle are published by V. M. Istrin. <ref type="bibl" target="bib:Истрин1930">Истрин1930</ref></note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">едино
                                 каменноу. на украшениѥ и добролѣпиѥ ѥмоу</incipit>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">ѡ поставлѥнлхи цре҃м
-                                Константиномь сна҃ своѥго Константиа на кесарство вь Цри҃градѣ<gap
-                                    hand="NG"/></p>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">
-                                <gap hand="NG"/>Рѡмань црь҃ вь ѡстровѣ идеже бѣ сконча се. и тѣло
-                                ѥго бь Цри҃градь принесено бывше<gap hand="NG"/></p>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">ѡ поставлѥнлхи цре҃м
+                                Константиномь сна҃ своѥго Константиа на кесарство вь Цри҃градѣ<gap/></ab>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">
+                                <gap/>Рѡмань црь҃ вь ѡстровѣ идеже бѣ сконча се. и тѣло
+                                ѥго бь Цри҃градь принесено бывше<gap/></ab>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">и тѣло ѥго вь цри҃градь
                                 принесено бълвше вь своѥмоу положише монастири.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">218v -221r</locus>
+                        <locus n="2">218v–221r</locus>
                         <title xml:lang="bg">Хроника на Симеон Метафраст</title>
                         <author>Symeon Metaphrastes</author>
                         <note>The text is without title and beginning.</note>
@@ -213,27 +197,22 @@
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="translation">
-                        <locus n="3">221r-222v</locus>
+                        <locus n="3">221r–222v</locus>
                         <title xml:lang="bg">Летопис кратък от Адам до днешния ден</title>
-                        <author>anonymous</author>
                         <note>Unidentified</note>
                         <filiation type="protograph">Bulgarian</filiation>
                         <filiation type="antigraph">Middle Bulgarian</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">Сказанїе вкратце соущим ѿ
-                                Адама до дньшна<seg rend="sup">г</seg> врѣме<seg rend="sup"
-                                >н</seg></head>
+                                Адама до дньшна<seg rend="sup">г</seg> врѣме<seg rend="sup">н</seg></head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Адам роди Сиѳа.</incipit>
-                            <p xmlns="http://www.tei-c.org/ns/1.0">иконоборць константинь снь҃ <gap
-                                    hand="NG"/> константина е҃ консттантинь<gap hand="NG"/></p>
+                            <ab xmlns="http://www.tei-c.org/ns/1.0">иконоборць константинь снь҃ <gap/> константина е҃ консттантинь<gap/></ab>
                         </sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu">
-                        <origDate cert="low" evidence="internal" notBefore="1365" notAfter="1375"
-                            >1365-1375</origDate>
-                        <origPlace>unknown. </origPlace>
+                    <origin resp="#NG">
+                        <origDate cert="low" evidence="internal" notBefore="1365" notAfter="1375">1365–1375</origDate>
                     </origin>
                 </history>
             </msDesc>

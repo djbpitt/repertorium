@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-ET47CIAI">
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-ET47CIAI">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -19,17 +19,14 @@
                 <availability status="free">
                     <p>The intellectual content of this file is copyrighted by the creators under
                         the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>. In short, you could download and disseminate
+                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg">Bulgaria</ref>. In short, you could download and disseminate
                         information, but you are not allowed to alter, transform, or build upon the
                         works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref
-                            target="http://www.ilit.bas.bg/repertorium/"
-                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                        must contain somewhere a link back to the URL <ref target="http://www.ilit.bas.bg/repertorium/">http://www.ilit.bas.bg/repertorium/</ref></p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p><ref type="bibl" target="bib:Спространов1900">Спространов 1900: 78–80</ref></p>
+                <bibl><ref target="bib:Спространов1900">Спространов 1900: 78–80</ref></bibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -40,7 +37,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="Repertorium">
-                    <list type="simple">
+                    <list>
                         <item>Miscellany devoted to a single saint</item>
                         <item>Hagiography</item>
                         <item>Convolute</item>
@@ -50,14 +47,14 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-11-01">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -82,45 +79,39 @@
                 </msIdentifier>
                 <physDesc>
                     <objectDesc>
-                        <supportDesc>
-                            <support>
-                                <material>Paper</material>
-                            </support>
+                        <supportDesc material="paper">
                             <extent>
                                 <measure unit="folia">114</measure>
                             </extent>
                             <foliation>New foliation</foliation>
                             <collation>
-                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
-                                    <signatures xmlns="http://www.tei-c.org/ns/1.0"
-                                        >Original</signatures>
-                                </quire>
+                                    <signatures xmlns="http://www.tei-c.org/ns/1.0">Original</signatures>
                             </collation>
                         </supportDesc>
                     </objectDesc>
                     <bindingDesc>
                         <binding>
-                            <p>Consist of wooden panels covered with dark-brown ornamented
-                                leather</p>
+                            <summary>Consist of wooden panels covered with dark-brown ornamented
+                                leather</summary>
                             <condition>The binding is in poor condition.</condition>
                         </binding>
                     </bindingDesc>
                     <additions type="inscriptions">
-                        <list type="simple">
+                        <list>
                             <item>
                                 <locus>f. 47v</locus>
                                 <quote xml:lang="cu">Да се знае тока четеѡ<seg rend="sup">м</seg>
-                                    това слова азь митаръ гецо ѿ сеславски манастиръ и грозданъ ѿ
-                                    бѡхава гѧкъ у тодора коло иѡви (іѧі2) м<seg rend="sup">т</seg>цъ
+                                    това слова азь <persName>митаръ гецо</persName> ѿ <placeName>сеславски манастиръ</placeName> и <persName>грозданъ</persName> ѿ
+                                    <placeName>бѡхава</placeName> гѧкъ у <persName>тодора</persName> коло иѡви (іѧі2) м<seg rend="sup">т</seg>цъ
                                     ѡтовриѧ 2ь дн҃ъ</quote>
                             </item>
                             <item>
                                 <locus>f. 92v</locus>
                                 <quote xml:lang="cu">Писа<seg rend="sup">х</seg> азь
-                                        <sic>граманикь</sic> ѿ село лозен горънио да се зннае тоги
-                                    беше доуховникь ꙗкимь ѿ софиа таме учеше б҃ь да го простить и
+                                        <sic>граманикь</sic> ѿ село <placeName>лозен горънио</placeName> да се зннае тоги
+                                    беше доуховникь <persName>ꙗкимь</persName> ѿ <placeName>софиа</placeName> таме учеше б҃ь да го простить и
                                     вѣчна моу паметь и лека моу прьс҃ть. аминь. и баꙗ сп҃сь ѿ
-                                    новосельци їѡванъ ѿ доппивръхь и стоянь ѿ <sic>чолопечоне</sic>
+                                    <placeName>новосельци</placeName> <persName>їѡванъ</persName> ѿ <placeName>доппивръхь</placeName> и <persName>стоянь</persName> ѿ <placeName><sic>чолопечоне</sic></placeName>
                                     ва҃то #з҃р҃о҃ѳ҃.</quote>
                             </item>
                         </list>
@@ -131,9 +122,8 @@
                     <filiation type="source">Bulgarian</filiation>
                     <filiation type="protograph">Bulgarian</filiation>
                     <msItemStruct xml:id="ACD1" type="original" style="non-narrative">
-                        <locus n="1">1r-59r</locus>
+                        <locus n="1">1r–59r</locus>
                         <title xml:lang="bg">Служба за св. Иван Рилски за 19 октомври</title>
-                        <author>anonymous</author>
                         <date type="churchCal" when="--10-19">19 October</date>
                         <filiation type="source">Other</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -144,14 +134,11 @@
                                 начего иѡанна рылскаго пустынно жителю</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Разума свѣтлости
                                 оукрашаетсе</incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">оум<seg rend="sup"
-                                >л</seg>и его ч<seg rend="sup">с</seg>таа да с<seg rend="sup"
-                                    >п</seg>сетъ дш҃е наше: славословїе велико. и ѿпу<seg rend="sup"
-                                    >с</seg>.</explicit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">оум<seg rend="sup">л</seg>и его ч<seg rend="sup">с</seg>таа да с<seg rend="sup">п</seg>сетъ дш҃е наше: славословїе велико. и ѿпу<seg rend="sup">с</seg>.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="translation">
-                        <locus n="2">59r-102r</locus>
+                        <locus n="2">59r–102r</locus>
                         <title xml:lang="bg">Житие на св. Иван Рилски от Георги Скилица</title>
                         <author>George Skylitzes</author>
                         <note>The Greek original had not been not found yet. There are a plenty of
@@ -161,20 +148,18 @@
                         <filiation type="litRedaction">The text has only one redaction in the Slavic
                             tradition.</filiation>
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
-                            <head xmlns="http://www.tei-c.org/ns/1.0">Житие и жизнь пр<seg
-                                    rend="sup">д</seg>пбнаго ѿца нашего иѡанна , просїав'шаго въ
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Житие и жизнь пр<seg rend="sup">д</seg>пбнаго ѿца нашего иѡанна , просїав'шаго въ
                                 пустынны рылстѣи. и по въсе дн҃їѥ велика сътварающа чюдеса. съписано
                                 геѡргїемъ скилицѡ<seg rend="sup">м</seg>.</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Сщ҃енное начети
                                 повѣданїе</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">слава и чьсть и покланꙗнїе
-                                    <gap hand="ET"/></explicit>
+                                    <gap/></explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD3" type="original">
-                        <locus n="3">102r-130r</locus>
+                        <locus n="3">102r–130r</locus>
                         <title xml:lang="bg">Рилско (народно, манастирско) житие на св. Иван Рилски</title>
-                        <author>anonymous</author>
                         <note>The Life contains folklore legends and stories.</note>
                         <filiation type="source" subtype="other">Bulgarian</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -185,15 +170,12 @@
                                 дн҃ь слово второе ст҃му иѡанну рылскому</head>
                             <incipit xmlns="http://www.tei-c.org/ns/1.0">Бысть чл҃кь д҃ховнь
                                 бл҃говѣрнь и хр<seg rend="sup">с</seg>толюбивь</incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">блг<seg rend="sup"
-                                >д</seg>тїю и чл҃колюбїемь Г҃а нашего їѵх Ха҃. ему же <gap hand="ET"
-                                /> вѣкомь. аминь.</explicit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">блг<seg rend="sup">д</seg>тїю и чл҃колюбїемь Г҃а нашего їѵх Ха҃. ему же <gap/> вѣкомь. аминь.</explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD4" type="original">
-                        <locus n="4">132r-185r</locus>
+                        <locus n="4">132r–185r</locus>
                         <title xml:lang="bg">Служба на св. Йоаким Осоговски (Сарандапорски)</title>
-                        <author>anonymous</author>
                         <date type="churchCal" when="--08-01">1 August</date>
                         <filiation type="source" subtype="other">Bulgarian</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -201,20 +183,16 @@
                         <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
                             <head xmlns="http://www.tei-c.org/ns/1.0">М<seg rend="sup">с</seg>ца
                                     авгус<seg rend="sup">т</seg>а зі҃. еже ѿ ѥдеса прѣнесенїе ст҃го
-                                оубруса и ст҃гом<seg rend="sup">ч</seg>ника диомида, и прп<seg
-                                    rend="sup">д</seg>бнаго ѡц҃а нашего иѡакїма
+                                оубруса и ст҃гом<seg rend="sup">ч</seg>ника диомида, и прп<seg rend="sup">д</seg>бнаго ѡц҃а нашего иѡакїма
                                 сарандапор'скаго</head>
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Испльнивь гн<seg rend="sup"
-                                    >с</seg>ѥ еѵ<seg rend="sup">г</seg>лїе прп<seg rend="sup"
-                                    >д</seg>обне</incipit>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Испльнивь гн<seg rend="sup">с</seg>ѥ еѵ<seg rend="sup">г</seg>лїе прп<seg rend="sup">д</seg>обне</incipit>
                             <explicit xmlns="http://www.tei-c.org/ns/1.0">ꙗко мл҃ищи се ѡ дш҃ахь
                                     нш҃їи<seg rend="sup">х</seg></explicit>
                         </sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD5" type="original">
-                        <locus n="5">185r-228r</locus>
+                        <locus n="5">185r–228r</locus>
                         <title xml:lang="bg">Житие на св. Йоаким Осоговски (Сарандапорски)</title>
-                        <author>anonymous</author>
                         <note place="inline">Without beginning and end</note>
                         <filiation type="source">Bulgarian</filiation>
                         <filiation type="protograph">Bulgarian</filiation>
@@ -228,7 +206,7 @@
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu">
+                    <origin evidence="conjecture">
                         <origPlace>German monastery "St. John of Rila" (Sofia region).</origPlace>
                         <note>
                             <bibl>
@@ -244,7 +222,7 @@
                             <supportDesc material="paper">
                                 <support>
                                     <material>Paper</material>
-                                    <watermark>unclear</watermark>
+                                    <watermark>Unclear</watermark>
                                 </support>
                                 <extent>
                                     <measure unit="folia">130</measure>
@@ -280,30 +258,25 @@
                     </physDesc>
                     <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                         <scribe>
-                            <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1-130</locus>
-                            <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous</name>
-                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
-                                type="semiuncial">
-                                <p>Semiuncial (Sredna gora type)</p>
+                            <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1–130</locus>
+                            <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous</name>
+                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                                <scriptNote script="Cyrs" style="semiuncial">Semiuncial (Sredna gora type)</scriptNote>
                             </scriptDesc>
                             <scribeLang>
-                                <orthography>
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">Two jers orthography</p>
-                                </orthography>
+                                <langNote key="ortjography">Two jers orthography</langNote>
                             </scribeLang>
-                            <note xmlns="http://www.tei-c.org/ns/1.0">
-                                <ref type="bibl" target="bib:Калайджиева1976">Калайджиева 1976: No
-                                    234</ref>
-                            </note>
+                            <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                                <ref target="bib:Калайджиева1976">Калайджиева 1976: No 234</ref>
+                            </bibl>
                         </scribe>
                     </scribeDesc>
                     <history>
-                        <origin evidence="de visu">
-                            <origDate>17th c.</origDate>
+                        <origin evidence="conjecture">
+                            <origDate notBefore="1600" notAfter="1699">17th c.</origDate>
                             <note>
                                 <bibl>
-                                    <ref type="bibl" target="bib:Спространов1900">Спространов 1900:
-                                        80</ref>
+                                    <ref target="bib:Спространов1900">Спространов 1900: 80</ref>
                                 </bibl>
                             </note>
                         </origin>
@@ -315,11 +288,10 @@
                             <supportDesc material="paper">
                                 <support>
                                     <material>Paper</material>
-                                    <watermark>unclear</watermark>
+                                    <watermark>Unclear</watermark>
                                 </support>
                                 <extent>
-                                    <measure unit="folia">97</measure> 132-228 <dimensions unit="mm"
-                                        type="folia" extent="f.132-228">
+                                    <measure unit="folia">97</measure> 132–228 <dimensions unit="mm" type="folia" extent="f.132-228">
                                         <height>200</height>
                                         <width>140</width>
                                     </dimensions>
@@ -339,25 +311,24 @@
                     </physDesc>
                     <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                         <scribe>
-                            <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 132-228</locus>
-                            <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">anonymous
+                            <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 132–228</locus>
+                            <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous
                                 (2)</name>
-                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs"
-                                type="semiuncial"/>
+                            <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                                <scriptNote script="Cyrs" style="semiuncial"/>
+                            </scriptDesc>
                             <scribeLang>
-                                <orthography>
-                                    <p xmlns="http://www.tei-c.org/ns/1.0">One (small) jer
-                                        orthography</p>
-                                </orthography>
+                                <langNote key="orthography">One (small) jer
+                                        orthography
+                                </langNote>
                             </scribeLang>
-                            <note xmlns="http://www.tei-c.org/ns/1.0">
-                                <ref type="bibl" target="bib:Калайджиева1976">Калайджиева 1976: No
-                                    234</ref>
-                            </note>
+                            <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                                <ref target="bib:Калайджиева1976">Калайджиева 1976: No 234</ref>
+                            </bibl>
                         </scribe>
                     </scribeDesc>
                     <history>
-                        <origin evidence="de visu" resp="#ET">
+                        <origin evidence="conjecture" resp="#ET">
                             <origDate notBefore="1401" notAfter="1499">15th c.</origDate>
                             <ref type="bibl" target="bib:Спространов1900">Спространов 1900: 80</ref>
                         </origin>

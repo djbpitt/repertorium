@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="http://repertorium.obdurodon.org/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0"
-    xml:id="RC-DA4d106HAZU">
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DA4d106HAZU">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Apostle IV d 106 Archives of the Croatian Academy of
+                <title>Apostle IV d 106 Archives of the Croatian Academy of
                     Sciences</title>
                 <author xml:id="DA">Desislava Atanasova</author>
                 <editor xml:id="AM">Anisava Miltenova</editor>
@@ -15,27 +15,19 @@
             <publicationStmt>
                 <publisher>Institute of Literature</publisher>
                 <pubPlace>Sofia</pubPlace>
-                <date>2000</date>
-                <idno type="Repertorium">RC-DA4d106HAZU.xml</idno>
+                <date when="2000">2000</date>
+                <idno type="Repertorium">RC-DA4d106HAZU</idno>
                 <availability status="free">
-                    <p>The intellectual content of this file is copyrighted by the creators under
-                        the Creative Commons Attribution-No Derivative Works 3.0 under legislation
-                        in <ref target="http://creativecommons.org/licenses/by-nd/3.0/deed.bg"
-                            >Bulgaria</ref>. In short, you could download and disseminate
-                        information, but you are not allowed to alter, transform, or build upon the
-                        works on this section of the site. All reuse or distribution of this work
-                        must contain somewhere a link back to the URL <ref
-                            target="http://www.ilit.bas.bg/repertorium/"
-                            >http://www.ilit.bas.bg/repertorium/</ref></p>
+                    <p>The intellectual content of this file is copyrighted by the creators under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <bibl>
+                <listBibl><bibl>
                     <ref target="bib:Богдановић1982">Богдановић 1982: 19</ref>
                 </bibl>
                 <bibl>
                     <ref target="bib:Mošin1955">Mošin 1955: 143</ref>
-                </bibl>
+                </bibl></listBibl>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -48,14 +40,15 @@
         </profileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)"
-                    replacementPattern="bib.xml#$1">
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
                     <p>In the context of this project, private URIs with the prefix "bib" point to
                         bibl elements in the project's bib.xml file.</p>
                 </prefixDef>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc>
+            <change who="#AB" when="2023-12-04">Update license to CC BY 4.0. Small corrections and additions.</change>
+            <change who="#AB" when="2023-10-28">Edit elements according to new schema.</change>
             <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
                 element &lt;origDate&gt;</change>
         </revisionDesc>
@@ -64,7 +57,8 @@
         <body>
             <msDesc>
                 <msIdentifier>
-                    <msName xml:lang="en" type="general">apostle</msName>
+                    <msName xml:lang="en" type="general">Acts of Apostles</msName>
+                    <msName xml:lang="en" type="specific">praxapostolos</msName>
                     <country>Croatia</country>
                     <settlement>Zagreb</settlement>
                     <repository>Archives of the Croatian Academy of Sciences</repository>
@@ -72,10 +66,7 @@
                 </msIdentifier>
                 <physDesc>
                     <objectDesc form="fragment">
-                        <supportDesc material="parchment">
-                            <support>
-                                <material>Parchment</material>
-                            </support>
+                        <supportDesc material="parch">
                             <extent>
                                 <measure unit="folia">3</measure>
                                 <dimensions type="folia" unit="mm">
@@ -101,67 +92,58 @@
                 </physDesc>
                 <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
                     <scribe>
-                        <locus xmlns="http://www.tei-c.org/ns/1.0">2v-3r</locus>
-                        <name xmlns="http://www.tei-c.org/ns/1.0" full="yes">Vasa the
-                            Grammarian</name>
-                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0" script="Cyrs" type="uncial">
-                            <p>Elegant East Bulgarian uncial</p>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 2v–3r</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Vasa the Grammarian</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  script="Cyrs" style="uncial">Elegant East Bulgarian uncial</scriptNote>
                         </scriptDesc>
                         <scribeLang>
-                            <orthography>
-                                <p xmlns="http://www.tei-c.org/ns/1.0">Two jers, two nasals; both
-                                    confused</p>
-                            </orthography>
+                            <langNote key="orthography">Two jers, two juses; both
+                                    confused
+                            </langNote>
                         </scribeLang>
-                        <note xmlns="http://www.tei-c.org/ns/1.0">
-                            <ref type="bibl" target="bib:Mošin1955">Mošin 1955: 143</ref>; <ref
-                                type="bibl" target="bib:Богдановић1982">Богдановић 1982:
-                            19</ref></note>
+                        <bibl xmlns="http://www.tei-c.org/ns/1.0">
+                            <ref target="bib:Mošin1955">Mošin 1955: 143</ref>; <ref target="bib:Богдановић1982">Богдановић 1982:
+                            19</ref></bibl>
                     </scribe>
                 </scribeDesc>
                 <msContents>
                     <summary>The manuscript contains 2 texts.</summary>
                     <msItemStruct xml:id="ACD1" type="translation">
-                        <locus n="1">1r1-2v15</locus>
+                        <locus n="1">ff. 1r1–2v15</locus>
                         <title xml:lang="bg">Апостолски четива за събота и неделя на Великия пост</title>
                         <re:sampleText xml:lang="cu">
-                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Моисеу и Ароноу и прочимь
+                            <incipit>Моисеу и Ароноу и прочимь
                                 пророкомь тропар глас д҃</incipit>
-                            <explicit xmlns="http://www.tei-c.org/ns/1.0">еже връховнаго ап<seg
-                                    rend="sup">о</seg>с<seg rend="sup">то</seg>ла Петра аггломь
-                                изведе отъ ѧзы темници иже исповѣдника ап<seg rend="sup"
-                                    >о</seg>с<seg rend="sup">то</seg>ла Павла избави ѿ рѫкоу Нерона
+                            <explicit>еже връховнаго ап<seg rend="sup">о</seg>с<seg rend="sup">то</seg>ла Петра аггломь
+                                изведе отъ ѧзы темници иже исповѣдника ап<seg rend="sup">о</seg>с<seg rend="sup">то</seg>ла Павла избави ѿ рѫкоу Нерона
                                     ц<seg rend="sup">а</seg>рѣ еже възлюбенаго си дроуга
                                 Иѡвана</explicit>
                         </re:sampleText>
                     </msItemStruct>
                     <msItemStruct xml:id="ACD2" type="original">
-                        <locus>2v17-3r9</locus>
+                        <locus>ff. 2v17–3r9</locus>
                         <title xml:lang="bg">Колофон</title>
                         <author xml:lang="bg">Vasa the Grammarian</author>
-                        <colophon>
-                            <p>се трудолюбивое мниха Аркадиа, оуч<seg rend="sup">е</seg>н<seg
-                                    rend="sup">и</seg>ка Висариона митрѡполита прѣѫславскаго, списа
-                                сѧ ѿ дара власти его рѫкоѫ Васѣ граматика. иже съ Б<seg rend="sup"
-                                    >ого</seg>мъ истрѣбихь малѫѫ стъзѫ. а хотѧщиі шествовати еѫ
+                       <re:sampleText xml:lang="cu"> 
+                           <colophon>
+                            <ab>се трудолюбивое мниха Аркадиа, оуч<seg rend="sup">е</seg>н<seg rend="sup">и</seg>ка Висариона митрѡполита прѣѫславскаго, списа
+                                сѧ ѿ дара власти его рѫкоѫ Васѣ граматика. иже съ Б<seg rend="sup">ого</seg>мъ истрѣбихь малѫѫ стъзѫ. а хотѧщиі шествовати еѫ
                                 оумрѣѫть наказани Д<seg rend="sup">оу</seg>хомъ свѧтымъ оублачити
                                 себѣ пространство пѫт<seg rend="sup">и</seg> іѧглы аще не многащи и
                                 се оувѣдѣвь извѣстно водиты по неи и братіѧ. сиже избранаа благаіа
                                 ведеть на пространство, рекѫ же на пажить богосаднѫіѫ, идеже іесть
-                                житиіе послошаіѧщиимъ букви сіѧ ѿ Х<seg rend="sup">рис</seg>тѣ И<seg
-                                    rend="sup">соу</seg>сѣ Г<seg rend="sup">оспод</seg>и нашемъ, еи,
-                                амин В лѣт<seg rend="sup">о</seg> .г҃ѱ҃п҃е҃. при с<seg rend="sup"
-                                    >вѧ</seg>тѣмь и прѣвысоцѣмь ц<seg rend="sup">а</seg>ри
+                                житиіе послошаіѧщиимъ букви сіѧ ѿ Х<seg rend="sup">рис</seg>тѣ И<seg rend="sup">соу</seg>сѣ Г<seg rend="sup">оспод</seg>и нашемъ, еи,
+                                амин В лѣт<seg rend="sup">о</seg> .г҃ѱ҃п҃е҃. при с<seg rend="sup">вѧ</seg>тѣмь и прѣвысоцѣмь ц<seg rend="sup">а</seg>ри
                                 Костандинѣ, и ц<seg rend="sup">а</seg>р<seg rend="sup">и</seg>ци его
                                 Марии, и ѿрасль ею Михаилѣ Порфиророднѣмъ, и патриарсѣ Игнатии
-                                стльпоу правовѣриа. ты ми еси Христе зачало и конець.</p>
-                        </colophon>
+                                стльпоу правовѣриа. ты ми еси Христе зачало и конець.</ab>
+                        </colophon></re:sampleText>
                     </msItemStruct>
                 </msContents>
                 <history>
-                    <origin evidence="de visu" resp="#DA">
-                        <origDate cert="high" datingMethod="colophon" notBefore="1277"
-                            notAfter="1277">1277</origDate>
+                    <origin evidence="internal" resp="#DA">
+                        <origDate cert="high" notBefore="1277" notAfter="1277">1277</origDate>
                         <origPlace>Bulgaria</origPlace>
                         <ref type="bibl" target="bib:Богдановић1982">Богдановић 1982: 19</ref>
                         <ref type="bibl" target="bib:Mošin1955">Mošin 1955: 143</ref>
