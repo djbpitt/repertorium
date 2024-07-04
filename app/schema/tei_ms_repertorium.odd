@@ -21,13 +21,13 @@
             (<email>djbpitt@gmail.com</email>) on behalf of the Repertorium Project (<ptr
             target="http://repertorium.obdurodon.org"/>)</authority>
         <publisher>Repertorium Initiative</publisher>
-        <date when="2023-11-29">29th of Novenber 2023</date>
+        <date when="2024-07-04">4th of July 2024</date>
         <availability status="free">
           <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> Distributed under a
             Creative Commons Attribution-ShareAlike 4.0 Unported License </licence>
           <licence target="http://www.opensource.org/licenses/BSD-2-Clause">
             <p>
-              <hi>Copyright © 2012-2023 TEI Consortium and Repertorium Project</hi></p>
+              <hi>Copyright © 2012-2024 TEI Consortium and Repertorium Project</hi></p>
             <p>All rights reserved.</p>
             <p>Redistribution and use in source and binary forms, with or without modification, are
               permitted provided that the following conditions are met:</p>
@@ -77,8 +77,8 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
-      <change who="#atb" when="2023-11-29">
-        <p>Test RelaxNG schemas for compatibility with the version 4.7.0 of TEI Guidelines.</p>
+      <change when="2024-07-04" who="#atb">Included <gi>head</gi> as the child of <gi>msDesc</gi>, after  <gi>msIdentifier</gi>. </change>
+      <change who="#atb" when="2023-11-29">Test RelaxNG schemas for compatibility with the version 4.7.0 of TEI Guidelines.
       </change>
       <change who="#atb #djb" when="2023-11-03">
         <list>
@@ -897,20 +897,20 @@
 
           <elementSpec ident="msDesc" module="msdescription" mode="change">
             <content>
-                  <sequence>
-                    <elementRef key="msIdentifier"/>
-                    <elementRef key="physDesc" minOccurs="0"/>
-                    <elementRef key="scribeDesc" minOccurs="0"/>
-                    <elementRef key="msContents" minOccurs="0"/>
-                    <elementRef key="history" minOccurs="0"/>
-                    <elementRef key="additional" minOccurs="0"/>
-                    <elementRef key="msPart" minOccurs="0" maxOccurs="unbounded"/>
-                    <elementRef key="msFrag" minOccurs="0" maxOccurs="unbounded"/>
-                  </sequence>
+                    <sequence>
+                      <elementRef key="msIdentifier"/>
+                      <classRef key="model.headLike" minOccurs="0"/>
+                      <elementRef key="physDesc" minOccurs="0"/>
+                      <elementRef key="scribeDesc" minOccurs="0"/>
+                      <elementRef key="msContents" minOccurs="0"/>
+                      <elementRef key="history" minOccurs="0"/>
+                      <elementRef key="additional" minOccurs="0"/>
+                      <elementRef key="msPart" minOccurs="0" maxOccurs="unbounded"/>
+                      <elementRef key="msFrag" minOccurs="0" maxOccurs="unbounded"/>
+                    </sequence>
             </content>
             <remarks>
-              <p>The Repertorium reorders the contents of <gi>msDesc</gi> to conform to the most
-                common patterns in Slavistic manuscript cataloguing.</p>
+              <p>The Repertorium removes the <gi>p</gi> element in favour of structured description</p>
             </remarks>
           </elementSpec>
 
