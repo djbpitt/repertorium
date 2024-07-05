@@ -82,10 +82,11 @@ declare function local:facets-to-xml($name as xs:string, $input as map(*)) {
       let $enTitle as xs:string := re:enMsName($ms)
       let $ruTitle as xs:string := re:ruMsName($ms)
       (: Fragmented mss don’t have a principal country:)
-      let $country as element(tei:country)? := $ms/descendant::tei:msIdentifier/tei:country
-      let $settlement as element(tei:settlement)* := $ms/descendant::tei:msIdentifier/tei:settlement
-      let $repository as element(tei:repository)* := $ms/descendant::tei:msIdentifier/tei:repository
-      let $idno as element(tei:idno)? := $ms/descendant::tei:msIdentifier/tei:idno[@type = "shelfmark"][not(@rend = 'old')]
+      let $mainMetaContainer as element(tei:msDesc) := $ms/descendant::tei:body/tei:msDesc
+      let $country as element(tei:country)? := $mainMetaContainer/tei:msIdentifier/tei:country
+      let $settlement as element(tei:settlement)* := $mainMetaContainer/tei:msIdentifier/tei:settlement
+      let $repository as element(tei:repository)* := $mainMetaContainer/msIdentifier/tei:repository
+      let $idno as element(tei:idno)? := $mainMetaContainer/tei:msIdentifier/tei:idno[@type = "shelfmark"][not(@rend = 'old')]
       let $origDate as element(tei:origDate)* := $ms/descendant::tei:origDate
       let $uri as xs:string := tokenize(base-uri($ms), '/')[last()] ! substring-before(., ".xml")
       let $availability as element(tei:availability)? := $ms/descendant::tei:adminInfo/tei:availability
