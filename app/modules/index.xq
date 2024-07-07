@@ -198,7 +198,7 @@ declare option output:indent "no";
         <m:li><m:a
             url="https://github.com/eXist-db/xst">XST</m:a> command-line interface for eXist-db</m:li>
         <m:li><m:a
-            url="http://www.oxygen.com">&lt;oXygen/&gt;</m:a> XML editor and IDE</m:li>
+            url="http://www.oxygenxml.com">&lt;oXygen/&gt;</m:a> XML editor and IDE</m:li>
         <m:li><m:a
             url="https://code.visualstudio.com/">Visual Studio Code</m:a> programming editor and IDE</m:li>
         <m:li><m:a

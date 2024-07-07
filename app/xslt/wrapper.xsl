@@ -129,9 +129,11 @@
                                 current-dateTime() =>
                                 format-dateTime('[Y0001]-[M01]-[D01] at [H01]:[m01]:[s01] [z,6-6]')
                                 "/>. <a
-                            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img
-                                title="[CC BY-NC-SA 4.0]"
-                                src="resources/images/cc-by-nc-sa-80x15.png"/></a>
+                            href="https://creativecommons.org/licenses/by/4.0/"><img
+                                title="[CC BY 4.0]"
+                                src="resources/images/by.png"
+                                width="80"
+                                height="15"/></a>
                     </p>
                 </footer>
             </body>
