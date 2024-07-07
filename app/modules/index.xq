@@ -37,9 +37,15 @@ declare option output:indent "no";
     <m:section>
       <m:title>Associated projects</m:title>
       <m:ul>
-        <m:li><m:a url="https://slav.uni-sofia.bg/exist/apps/paesnoslovec/">Пѣснословьць</m:a> (hymnographic manuscripts)</m:li>
-        <m:li><m:a url="http://aso.obdurodon.org">Slovo-ASO</m:a> (brief descriptions of 140 South Slavic manuscripts,
-        primarily from St. Catherine, Zograph, and Rila)</m:li>
+        <m:li><m:a
+            url="https://www.slav.uni-sofia.bg/zograf/">Зографска електронна научноизследователска библиотека</m:a></m:li>
+        <m:li><m:a
+            url="https://www.slav.uni-sofia.bg/exist/apps/bgfolia/">Ръкописни книги с български произход Х–ХIV в., съхранявани в чуждестранни книгохранилища</m:a></m:li>
+        <m:li><m:a
+            url="https://slav.uni-sofia.bg/exist/apps/paesnoslovec/">Пѣснословьць</m:a> (hymnographic manuscripts)</m:li>
+        <m:li><m:a
+            url="http://aso.obdurodon.org">Slovo-ASO</m:a> (brief descriptions of 140 South Slavic manuscripts,
+          primarily from St. Catherine, Zograph, and Rila)</m:li>
       </m:ul>
     </m:section>
     <!--
