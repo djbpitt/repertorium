@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AM4_14RM">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="en">Miscellany "Predeli" of Vladislav the Grammarian, 1456, No.
+                    4/14, Rila Monastery and Odessa State Library</title>
+                <author xml:id="AM">Anisava Miltenova</author>
+                <editor xml:id="AB">Andrej Bojadžiev</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Institute of Literature, </publisher>
+                <date when="2008-04-04">04. 04. 2008</date>
+                <pubPlace>Sofia</pubPlace>
+                <idno type="Repertorium">RC-AM4_14RM</idno>
+                <availability status="free">
+                    <p>The intellectual content of this file is copyrighted by the creators under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <listBibl>
+                    <bibl><ref target="bib:Христова1982">Своден каталог 1982: 83, № 195</ref></bibl>
+                    <bibl><ref target="bib:Мочульский1890">Мочульский 1890: 79–81</ref></bibl>
+                    <bibl><ref target="bib:Спространов1902">Спространов 1902: 57–58;</ref></bibl>
+                    <bibl><ref target="bib:Христова1996">Христова 1996: 11–24.</ref></bibl></listBibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <date when="2003-12-01">1.12.2003</date>
+                <settlement>Sofia</settlement>
+            </creation>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="bg">Bulgarian</language>
+                <language ident="ru">Russian</language>
+                <language ident="cu">Old Slavic</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="Repertorium">
+                    <list>
+                        <item>miscellany</item>
+                        <item>interpretations</item>
+                        <item>translation</item>
+                    </list>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                    <p>In the context of this project, private URIs with the prefix "bib" point to
+                        bibl elements in the project's bib.xml file.</p>
+                </prefixDef>
+            </listPrefixDef>
+        </encodingDesc>
+        <revisionDesc>
+            <change who="#AB" when="2023-12-02">Update license to CC BY 4.0. Small corrections and additions.</change>
+            <change who="#AB" when="2023-10-27">Edit elements according to new schema.</change>
+            <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
+                element &lt;origDate&gt;</change>
+            <change who="#AB" when-iso="2010-07-10">Conversion to Repertorium 3.3. Included head
+                element and its content. Small edtorial changes. Rearanged revisionDesc: now the
+                last change come to the first place. </change>
+            <change who="#AM" when-iso="2010-03-13">Conversion to Repertorium 3.2</change>
+            <change who="#AB" when="2009-03-02">Conversion to Repertorium 3.0</change>
+            <change who="#AB" when="2009-04-17">Removed constructions
+                &lt;author&gt;anonumous&lt;/author&gt;</change>
+            <change who="#AB" when="2009-04-17">Added copyright statement</change>
+            <change who="#AB" when="2009-04-13">Added Repertorium Identifier</change>
+            <change who="#AB" when="2009-04-15">Corrections</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <msDesc>
+                <msIdentifier>
+                    <msName type="general" xml:lang="en">miscellany</msName>
+                    <msName type="individual" xml:lang="bg">Сборник "Предели" от 1456 г.</msName>
+                    <msName type="individual" xml:lang="ru">Сборник "Пределы" 1456-го года</msName>
+                    <msName type="individual" xml:lang="en">"Predeli" Miscellany of 1456</msName>
+                </msIdentifier>
+                <physDesc>
+                    <summary>The manuscript is now kept in two different repositories: <ref target="#RM4-14">Rila monastery 4/14</ref> and <ref target="#OSL1-110">Odessa State Library, Grig. 1/110</ref></summary>
+                    <objectDesc form="codex">
+                        <supportDesc material="paper">
+                            <support>
+                                <material>Two types of paper: more thick and thin, with fine structure</material>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Bell</motif>
+                                    <term>equal to </term>
+                                    <ref type="bibl" target="bib:Христова1996">see Христова 1996:
+                                        11, MS Zadar (Knjiznitsa samostava sv. Franje, Episkopal
+                                        Archiv) <num>430</num>
+                                        <date>1446–1448</date></ref>
+                                </watermark>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Three
+                                        hills in circle</motif>
+                                    <term>equal to</term>
+                                    <ref type="bibl" target="bib:Христова1996">see Христова 1996:
+                                        11, MS Zadar (Knjiznitsa samostava sv. Franje, Episkopal
+                                        Archiv) <num>340</num>
+                                        <date>1458</date></ref>
+                                </watermark>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Three
+                                        hills</motif>
+                                    <term>equal to</term>
+                                    <ref type="bibl" target="bib:Христова1996">Христова 1996:
+                                        11, MSS Šibenik (Knjiznitsa samostava sv. Franje, Episkopal
+                                        Archiv) <num>184</num>
+                                        <date>1451</date></ref>
+                                </watermark>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Three
+                                        hills, three types</motif>
+                                    <term>equal to</term>
+                                    <ref type="bibl" target="bib:Христова1996">see Христова 1996:
+                                        11, MSS Šibenik (Knjiznitsa samostava sv. Franje, Episkopal
+                                        Archiv) 
+                                        <num>50</num>
+                                        <date>1452</date></ref>
+                                </watermark>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Three
+                                        hills, three types</motif>
+                                    <term>equal to</term>
+                                    <ref type="bibl" target="bib:Христова1996">see Христова 1996:
+                                        11, MSS Šibenik (Knjiznitsa samostava sv. Franje, Episkopal
+                                        Archiv) 
+                                        <num>32</num>
+                                        <date>1453</date></ref>
+                                </watermark>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Scissors</motif>
+                                    <term>equal to</term>
+                                    <ref type="bibl" target="bib:Harlfinger1974">Harlfinger 1974: 
+                                        <num>37</num>
+                                        <date>1451–1452</date></ref>
+                                </watermark>
+                                <watermark>
+                                    <re:motif facs="https://briquet-online.at/3668">Scissors</re:motif>
+                                    <ref type="bibl" target="bib:Briquet1907">Briquet 1907: 
+                                        <num>3668</num>
+                                        <date>1454–1462</date></ref>
+                                </watermark>
+                                <watermark>
+                                    <re:motif facs="https://briquet-online.at/3670">Scissors</re:motif>
+                                    <ref type="bibl" target="bib:Briquet1907">Briquet 1907: <num>3670</num>
+                                        <date>1458–1477</date></ref>
+                                </watermark>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Letter S</motif>
+                                    <term>equal to</term>
+                                    <ref type="bibl" target="bib:Лихачев1889">Лихачев 1889: 
+                                        <num>3367</num>
+                                        <date>1450–1452</date></ref>
+                                </watermark>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Candlestick</motif>
+                                    <term>unidentified</term>
+                                </watermark>
+                            </support>
+                            <extent>
+                                <measure unit="folia">viii+546+vi</measure>
+                                <dimensions type="folia" unit="mm">
+                                    <height>295</height>
+                                    <width>210</width>
+                                </dimensions>
+                                <dimensions type="written" unit="mm">
+                                    <height>210</height>
+                                    <width>140</width>
+                                </dimensions>
+                            </extent>
+                            <collation>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1-42">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="44">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8
+                                        (-1-2-3-4-5-6-7)</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="44-53">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <signatures>The quires were numerated with Cyrillic letters under
+                                        <emph>titlo</emph> together with a small floral ornament in
+                                    the middle of the lower margin of the first quire
+                                    folio</signatures>
+                            </collation>
+                            <condition>The quire signatures indicates that 20 quires of the MS are
+                                missing; there are missing 1 folio between ff. 6 and 7, 1 folio
+                                between ff. 19 and 20; some folia, probably 6, between ff. 22 and
+                                23; 2 folia between ff. 87 and 88, as well as the very end of the
+                                MS</condition>
+                        </supportDesc>
+                        <layoutDesc>
+                            <layout columns="1" writtenLines="27"/>
+                        </layoutDesc>
+                    </objectDesc>
+                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Black and red for titles
+                        and initials</ink>
+                    <decoDesc>
+                        <summary>Very rich decoration, in Balkan style, with some islamic
+                            elements</summary>
+                        <decoNote type="headpiece">
+                            <locus>RM 4/14, f. 1r:</locus>Big quadratic headpiece with the form of the cross
+                            in the middle in blue, green, yellow, red and white;
+                            <locus>RM 4/14, f. 206r:</locus>small headpiece of interweave ribbons;
+                            <locus>RM 4/14, f. 207r:</locus>big headpiece of interweave circles in red,
+                            yellow, green, blue and white;</decoNote>
+                        <decoNote type="initials">Many initials in  floral geometric style; </decoNote>
+                        <decoNote type="marg">Many pointers in the form of hand in the margins.
+                        </decoNote>
+                    </decoDesc>
+                    <bindingDesc>
+                        <binding>
+                            <summary>Thick wooden boards covered with dark brown leather; stamps with
+                                floral and zoomorphic ornaments</summary>
+                            <condition>Clasps are missing</condition>
+                        </binding>
+                    </bindingDesc>
+                </physDesc>
+                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                    <scribe n="1">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">RM 4/14, ff. 1r–546v + Grig. 1/100. ff. 1r–77v
+                        </locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Vladislav
+                            the Grammarian</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="semiuncial">Middle refined semiuncial</scriptNote>
+                        </scriptDesc>
+                        <scribeLang>
+                            <langNote key="orthography">Resavian school, without juses, with two jers.
+                            </langNote>
+                        </scribeLang>
+                    </scribe>
+                </scribeDesc>
+                <msContents>
+                    <msItemStruct xml:id="ACD1" type="translation">
+                        <locus n="1">RM 4/14, ff. 1r–90v</locus>
+                        <title xml:lang="bg">Шестоднев на Василий Велики</title>
+                        <author>Basil the Great</author>
+                        <note>Nine homilies from the Hexaemeron (usually 11 homilies); the earliest
+                            manuscript with similar Slavonic translation of the text is in the
+                            collection of Hilandar monastery, ov. year 1400 <ref type="bibl" target="bib:Богдановић1978">cf. Богдановић 1978: № 405.</ref>. Many
+                            scholia at the margins written by Vladislav with explanations of the
+                            text, names of the authors cited (i.e. Platto, Aristotelos, etc.) or
+                            with summary of the parts of the text. <ref type="bibl" target="Migne56">Migne, PG 56: 
+                                5–200.</ref></note>
+                        <filiation type="translation">2, <date cert="medium">14th
+                            c.</date></filiation>
+                        <filiation type="protograph" cert="medium">Serbian</filiation>
+                        <filiation type="apograph">The same text is included in the anthology of
+                            Vladislav of 1469 (so called Zagrebski sbornik).</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Иже въ ст҃ы<seg rend="sup">х</seg> о҃ца нашего Василїа Великаго, арх҃п<seg rend="sup">т</seg>кпа кесарїе Каппадокиїскые. въ шестодневникь, бесѣда,
+                                а҃. въ еже сътвори б҃ь н҃бо и землю.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Подобно зачело о мирскомь
+                                съставлѥни хотещому повѣдовати.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">да ра<seg rend="sup">д</seg>оует се веленми истинными блг҃оч<seg rend="sup">с</seg>тивыи. да славит се г҃ь. ему же слава и дрьжава в нѣкы
+                                    вѣко<seg rend="sup">м</seg> ами<seg rend="sup">н</seg>.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD2" type="translation">
+                        <locus n="2">RM 4/14, ff. 91r–157r</locus>
+                        <title xml:lang="bg">За образа на човека от Василий Велики</title>
+                        <author>Basil the Great</author>
+                        <note>The work is a part of text tradition of Hexaemeron both in Byzantine
+                            and in Slavic manuscripts. <ref type="bibl" target="bib:Радошевић1985">Радошевић 1985: 158</ref>
+                            <ref type="bibl" target="bib:Migne44">Migne, PG 44: 42–85.</ref></note>
+                        <filiation type="translation">2, <date cert="medium">14th
+                            c.</date></filiation>
+                        <filiation type="protograph" cert="low">Serbian</filiation>
+                        <filiation type="apograph">The same text is included in the anthology of
+                            Vladislav of 1469 (so called Zagrebski sbornik).</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">О образѣ чл҃ка.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще имѣнии ради почьстемь
+                                    по<seg rend="sup">д</seg>бааше иже по добродѣтели</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">о тѣлесни наше<seg rend="sup">м</seg> оустроенїа малымь.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD3" type="translation">
+                        <locus n="3">RM 4/14, ff. 158r–191v</locus>
+                        <title xml:lang="bg">Книга Йов с тълкувания от Юлиан, Ориген и Йоан Златоуст</title>
+                        <author>Basil the Great</author>
+                        <note>Rare copy of Slavic translation. <ref type="bibl" target="bib:Христова-Шомова2007">Христова-Шомова 2007</ref>
+                            <ref type="bibl" target="bib:Migne44">Migne, PG 44: 42–85.</ref></note>
+                        <filiation type="translation">1</filiation>
+                        <filiation type="protograph" cert="low">Serbian</filiation>
+                        <filiation type="apograph">The same text is included in the anthology of
+                            Vladislav of 1469 (so called Zagrebski sbornik).</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Иулианово сказание. Мнит се
+                                убо ꙗко Моиси написаль ѥ<seg rend="sup">т</seg> сие писание на
+                                поучение Ии҃лѣ ꙗко же ѡ знамениа увѣдѣти.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Чл҃кь бѣ нѣкыи въ странѣ
+                                авсидцѣи</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">ꙗко сырь бываеть ѥ<seg rend="sup">с</seg>ство. еже прочее въобразует се. сїа кнїга
+                                обдрьжить мужьство его и трьпѣнїе.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD4" type="translation">
+                        <locus n="4">RM 4/14, ff. 192r–195v</locus>
+                        <title xml:lang="bg">Тълкувание на псалмите от Анастасий Синайски</title>
+                        <author>Anastasios of Sinai</author>
+                        <note>Interpretation on the 14, 88, 98, etc. Psalms. The Greek text is
+                            published in: <ref type="bibl" target="bib:Canisius1725">Canisius 1725:
+                                470–503</ref></note>
+                        <filiation type="translation">1</filiation>
+                        <filiation type="protograph" cert="low">Serbian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Анастасїево въпрошенїе о
+                                уставѣ и жизни члч҃скые.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">ОУставъ хощемь гла҃ти
+                                члчь҃скые жизни. или ни.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">о кр<seg rend="sup">с</seg>тѣ хв҃ѣ имже мнѣ мирь распет се. и азь
+                                мирови.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD5" type="translation">
+                        <locus n="5">RM 4/14, ff. 195v–200r</locus>
+                        <title xml:lang="bg">Тълкувание на Книга Притчи Соломонови</title>
+                        <author>Hippolytos of Rome</author>
+                        <author>Eustathios of Antioch</author>
+                        <note>Interpretation on the 9th Proverb: "Wisdom has built her house".
+                                <ref type="bibl" target="bib:Migne21">Migne, PG 21: 42</ref>
+                            <ref type="bibl" target="bib:Migne22">Migne 22: 75</ref></note>
+                        <filiation type="translation">1</filiation>
+                        <filiation type="protograph" cert="low">Serbian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Гл҃а Соломонь. о дрѣвесе<seg rend="sup">х</seg>. ѿ кедра ливанова даже до исопа иже в֔
+                                стѣнѣ.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ѥ<seg rend="sup">с</seg>ства и силу билїемь и дрѣвесе<seg rend="sup">м</seg>. паче и
+                                о въсѣ<seg rend="sup">х</seg> животны<seg rend="sup">х</seg>.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">х҃с цр<seg rend="sup">с</seg>вовавь въ езыцѣ<seg rend="sup">х</seg>. проре<seg rend="sup">ч</seg> се пр<seg rend="sup">о</seg>кь его ради и
+                                    ап<seg rend="sup">с</seg>ль слово истины.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD6" type="translation">
+                        <locus n="6">RM 4/14, ff. 200r–203v</locus>
+                        <title xml:lang="bg">Тълкувание за дванадесетте апостоли</title>
+                        <author>Hippolytos of Rome</author>
+                        <note>
+                            <ref type="bibl" target="bib:Migne10">Migne, PG 10: 952–953.</ref></note>
+                        <filiation type="translation">1</filiation>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Иполита сщ҃ном<seg rend="sup">ч</seg>ника. о дванадесети<seg rend="sup">х</seg> ап<seg rend="sup">с</seg>лѣхь. и где къждо ихь проповѣда. и
+                                когда.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Петрь иже врьховныи.
+                                проповѣда еу<seg rend="sup">г</seg>лїе въ Понтѣ и Галатїи. и
+                                Каппадокїи.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">исцѣле въса<seg rend="sup">к</seg> неду<seg rend="sup">г</seg> и въсаку болѣзнь въ лю<seg rend="sup">д</seg>х г҃. лѣта и г҃. м<seg rend="sup">с</seg>це.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD7" type="translation">
+                        <locus n="7">RM 4/14, f. 206r</locus>
+                        <title xml:lang="bg">Съдържание на Евангелието от Йоан</title>
+                        <filiation type="protograph">Bulgarian</filiation>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD8" type="translation">
+                        <locus n="8">RM 4/14, ff. 207r–520v</locus>
+                        <title xml:lang="bg">Тълкувание на Евангелието от Йоан</title>
+                        <author>Theophylaktos of Ochrid</author>
+                        <note>
+                            <ref type="bibl" target="bib:Migne125">Migne PG 125.</ref></note>
+                        <filiation type="translation">1</filiation>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Тлъкование бл҃женаго
+                                Ѳеофилакта арх҃пискпа бльгарскаго. еже ѿ Иоанна ст҃ому
+                                бл҃говѣствованїу. прѣ<seg rend="sup">д</seg>исловие.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Иже д҃ха сила. въ немощи
+                                съвръшает се.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">Единого бж<seg rend="sup">с</seg>тва же и цр<seg rend="sup">с</seg>тва. ему же по<seg rend="sup">д</seg>баеть въсака слава.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD9" type="translation">
+                        <locus n="9">RM 4/14, ff. 521r–532v</locus>
+                        <title xml:lang="bg">Слово за синоптичността на евангелията в Неделя на мироносиците</title>
+                        <author>John of Thessalonike</author>
+                        <filiation type="translation">1</filiation>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Въ не<seg rend="sup">д</seg>
+                                г҃ по па<seg rend="sup">с</seg>҃ мироносиць. иже въ ст҃ыхь о҃ца
+                                нашего иоанна архиеп<seg rend="sup">с</seg>҃па солунскаго. ꙗко ни
+                                едино разньство ни съпротивство въ еуаггелистѣхь.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">ꙗкоже въмѣсти се
+                                сповѣдахомъ хѽлюбивому вашему слоуху.</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">любовїю окрьмлꙗемо и
+                                прѣбываемо присно</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD10" type="translation">
+                        <locus n="10">RM 4/14, ff. 533r–546v – Grig. 1/110, f. 1r</locus>
+                        <title xml:lang="bg">Тълкувание на Евангелието от Матей</title>
+                        <author>John Chrysostom</author>
+                        <note>The first (bigger) part of the text is in the Rila part of the manuscript. The interpretation are in the form of
+                            questions and answers, some of them with names of Basil the Great and
+                            Gregory Theologian.</note>
+                        <filiation type="translation">1</filiation>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ѿ тлькованїа зла<seg rend="sup">т</seg>оустова въ кратцѣ еже ѡ ма<seg rend="sup">т</seg>ѳеа ст҃аго еуг҃лиꙗ. тъ бо ре<seg rend="sup">ч</seg>е
+                                    сп҃се<seg rend="sup">т</seg> люди свое ѡ грѣхи ихъ.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ѿ сего оубѡ прѣславное
+                                сп҃сенїе ꙗвлꙗеть</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">нь ѡ блазѣмь сїе Павль
+                                потрѣбова</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD11" type="translation">
+                        <locus n="11">Grig. 1/110, ff. 1v–15v</locus>
+                        <title xml:lang="bg">Сбирка Предели</title>
+                        <author>John Chrysostom</author>
+                        <note>The translation of this text is the same as in the Zagrebski
+                            Miscellany of 1469 together with Hexaemeron.</note>
+                        <filiation type="translation">1</filiation>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Прѣделы съ б҃мь различны. по
+                                прѣданиу и вѣрѣ ст҃ые съборные и ап҃льскые цр҃кве гл҃мы. събрани ѿ
+                                Климента же и инѣхь прѣпо<seg rend="sup">д</seg>бныхьи блж҃нны<seg rend="sup">х</seg> ѡць.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Вѣдѣти по<seg rend="sup">д</seg>баеть ꙗко убо въсако ꙗково любо исканїе или
+                                въпрошенїе.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD12" type="translation">
+                        <locus n="12">Grig. 1/110, ff. 15v–18v</locus>
+                        <title xml:lang="bg">Антология от мъдри изречения от Максим Изповедник</title>
+                        <author>Maximos the Confessor</author>
+                        <note>Compilation from the "Capita de charitate" ("About Love") <ref type="bibl" target="Migne90">PG, 90: 959.</ref></note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ѿ главизны ст҃го
+                                маѯїма.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Аще въса соущаа ѿ б҃а
+                                соуть. и б҃мь быше ꙗко<seg rend="sup">ж</seg> рече ап<seg rend="sup">с</seg>ль.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD13" type="translation">
+                        <locus n="13">Grig. 1/110, ff. 18v–24v</locus>
+                        <title xml:lang="bg">Антология от мъдри изречения Панарет</title>
+                        <note>Compilation from the florilegia. <ref type="bibl" target="bib:Кузидова2012">Кузидова 2012: 88–98</ref></note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Словеса пользна соломонова. ѿ
+                                книгы гл҃ѥмыѥ Панареть.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">г҃ь нашь і҃с х҃с ть ѥ<seg rend="sup">с</seg> съставна прѣмоудрость невидимаго
+                                оц҃а.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD14" type="translation">
+                        <locus n="14">Grig. 1/110, f. 25r</locus>
+                        <title xml:lang="bg">Поучение за Страшния съд от Василий Велики</title>
+                        <author>Basil the Great</author>
+                        <note>An excerpt.</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ѿ слова ст҃го Василиꙗ</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Егда въсхощеши на кыи
+                                оустрьмлꙗти се грѣхь. помысли оно ужасное и несътрьпимое х҃во
+                                соудище.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD15" type="translation">
+                        <locus n="15">Grig. 1/110, ff. 25v–32v</locus>
+                        <title xml:lang="bg">Повест полезна за латините</title>
+                        <note>Contamination of Vladislav the Grammarian <ref type="bibl" target="bib:Николов2011">Николов 2011: 60–62; 99–107.</ref></note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Повѣсть пользна о латинѣ<seg rend="sup">х</seg>. когда ѿлоучише се ѿ грькь. и ѿ ст҃ыѥ бж҃їе
+                                цр҃кве. и како изобрѣтоше себѣ ереси.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ лѣта бл҃гочьстивы<seg rend="sup">х</seg> цр҃їи Константїна и Ирины мт҃ре
+                                его.</incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD16" type="translation">
+                        <locus n="16">Grig. 1/110, ff. 32v–36r</locus>
+                        <title xml:lang="bg">За латинската ерес</title>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">О латинѣ<seg rend="sup">х</seg> сирѣ<seg rend="sup">ч</seg> фруго<seg rend="sup">х</seg>. ѿку<seg rend="sup">д</seg> низводет се сихь родѡве. и
+                                о ереси ихь.</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD17" type="translation">
+                        <locus n="17">Grig. 1/110, ff. 36r–47r</locus>
+                        <title xml:lang="bg">Послание за латинската ерес на Доминик Венетийски</title>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Пїсанїе Доминика архїепископа
+                                венетїискаго еже посла къ ст҃ому Петру патрїарху прѣвисѡкаго
+                                прѣстола иже въ Антїѡхїискои цр҃кви.</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD18" type="translation">
+                        <locus n="18">Grig. 1/110, ff. 47r–50r</locus>
+                        <title xml:lang="bg">Послание на Михаил Константинополски до Петър Антиохийски за латинската ерес</title>
+                        <filiation type="protograph">Bulgarian</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Пїсанїе Михаила патрїарха
+                                Кѡнстантїна гра<seg rend="sup">д</seg> еже посла къ блж҃нному
+                                патрїарху Антїохїискому кѵр Петру о ересехь латинскыхь.</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD19" type="translation">
+                        <locus n="19">Grig. 1/110, ff. 50v–77r</locus>
+                        <title xml:lang="bg">Антология от извлечения за православната вяра</title>
+                        <note>Texts and interpretations of Nikon, Michael Sinkel, Cyril of
+                            Alexandria, etc.</note>
+                        <filiation type="protograph">Bulgarian</filiation>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD20" type="translation">
+                        <locus n="20">Grig. 1/110, f. 77v</locus>
+                        <title xml:lang="bg">Колофон</title>
+                        <author>Vladislav the Grammarian</author>
+                        <re:sampleText xml:lang="cu"><colophon>
+                            <ab>Исписа се сиа книга у Нагоричину Младо<seg rend="sup">м</seg>. въ дому Николѣ спа<seg rend="sup">н</seg>чевикꙗ. и поче се писати, м<seg rend="sup">т</seg>цаꙗ
+                                ноемвриꙗ. въ ка. днь. на въведение прѣчистые бце въ стаа сты<seg rend="sup">х</seg>. и дописа се тогож<seg rend="sup">д</seg>е
+                                    м<seg rend="sup">т</seg>ца ное<seg rend="sup">м</seg>. в
+                                гредущее лѣто. аі. днь. у пе<seg rend="sup">к</seg>. дне<seg rend="sup">м</seg>. Въ лѣто ҂ѕЦѮЕ <add><date when="1456">1456</date></add>. Владислав диак писа книгу
+                                сию. ѡ новога брьда.</ab>
+                        </colophon></re:sampleText>
+                    </msItemStruct>
+                </msContents>
+                <history>
+                    <origin>
+                        <origDate notBefore="1456" notAfter="1456" evidence="internal">1456</origDate>
+                        <origPlace evidence="internal">Mlado Nagorichino</origPlace>
+                            <ref type="bibl" target="bib:Христова1996">Христова 1996: 11–24.</ref>
+                    </origin>
+                </history>
+                <msFrag>
+                    <msIdentifier xml:id="RM4-14">
+                        <country>Bulgaria</country>
+                    <settlement>Rila Monastery</settlement>
+                    <repository>Rila Monastery Library</repository>
+                    <idno type="shelfmark">4/14</idno>
+                    <altIdentifier>
+                        <idno type="catalogue">124</idno>
+                    </altIdentifier>
+                    <altIdentifier type="former">
+                        <idno type="shelfmark">13</idno>
+                    </altIdentifier></msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <foliation><date>19th-c.</date>
+                                </foliation>
+                                <collation><summary>53 quires</summary></collation>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msFrag>
+                <msFrag>
+                    <msIdentifier xml:id="OSL1-110">
+                        <country>Ukraine</country>
+                        <settlement>Odessa</settlement>
+                        <repository>State Library</repository>
+                        <collection>Grigorovič</collection>
+                        <idno type="shelfmark">1/110</idno>
+                        <altIdentifier>
+                            <idno type="catalogue">15</idno>
+                        </altIdentifier>
+                        <altIdentifier type="former">
+                            <idno type="shelfmark">41</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <foliation>
+                                    <p><date>19th-c.</date>foliation was made by
+                                        <persName>V. Grigorovič</persName></p>
+                                </foliation>
+                                <collation><summary>25 quires</summary></collation>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msFrag>
+            </msDesc>
+        </body>
+    </text>
+</TEI>

@@ -1,63 +1,35 @@
 "use strict";
-window.addEventListener('DOMContentLoaded', (e) => {
-    document.querySelectorAll('fieldset input').forEach(checkbox => {
-        checkbox.addEventListener('click', runSearch, false);
-    })
-    document.getElementById("query-string").addEventListener("keyup", debounceForData, false);
-    document.getElementById("reset").addEventListener("click", reset, false);
-},
-false);
+/*
+ * Manage faceted search interface for Repertorium
+ */
 
-function runSearch() {
+document.addEventListener('DOMContentLoaded', (e) => {
+    /* Attach event listeners to country, settlement, repository drop-downs
+       Resubmit the form on every checkbox change, but text input requires manual "Submit" press*/
+    let dropdowns = document.getElementsByTagName('select');
+    // console.log("in init: dropdowns = " + dropdowns + "(count: " + dropdowns.length + ")");
+    for (var i = 0, length = dropdowns.length; i < length; i++) {
+        dropdowns[i].addEventListener('change', process_dropdown_change, false);
+    }
+    document.getElementById('submit').addEventListener('click', remove_null_params, false);
+    document.getElementById('clear-form').addEventListener('click', clear_form, false);
+});
+/*
+ * Resubmit form on every dropdown change
+ */
+function process_dropdown_change() {
+    console.log("Processing");
+    remove_null_params();
+    console.log("Processed");
     document.getElementById('submit').click();
 }
-
-// Debounce code from https://dev.to/sbrshkappa/what-is-debouncing-a-javascript-implementation-3aoh
-// AJAX code from https://blog.openreplay.com/ajax-battle-xmlhttprequest-vs-the-fetch-api
-const getSuggestions = (e) => {
-    let qt = document.getElementById("query-string").value;
-    // input string
-    if (![ 'ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp'].includes(e.code) && qt.length >= 3) {
-        const xhr = new XMLHttpRequest();
-        let target = document.getElementById("titles");
-        // <datalist>
-        xhr.open("GET", `ajax-article-titles?query-string=${qt}`);
-        xhr.responseType = 'document';
-        xhr.overrideMimeType('text/xml');
-        // state change event
-        xhr.onreadystatechange = () => {
-            // is request complete?
-            if (xhr.readyState !== 4) return;
-            if (xhr.status === 200) {
-                // request successful
-                let options = xhr.responseXML.querySelectorAll("option");
-                target.innerHTML = "";[].forEach.call(options, function (item) {
-                    target.appendChild(item);
-                });
-            } else {
-                // request not successful
-                console.log("HTTP error", xhr.status, xhr.statusText);
-            }
-        };
-        // start request
-        xhr.send();
-    }
+function clear_form() {
+    window.location.href = window.location.pathname;
 }
-
-const debounce = function (fn, d) {
-    let timer;
-    return function () {
-        let context = this, args = arguments;
-        clearTimeout(timer);
-        timer = setTimeout(() => {
-            fn.apply(context, args);
-        },
-        d)
+function remove_null_params() {
+    let form = document.getElementsByTagName("form")[0];
+    let elements = form.elements;
+    for (var i = 0, len = elements.length; i < len; i++) {
+        if (elements[i].value === "") elements[i].disabled = true;
     }
-}
-
-const debounceForData = debounce(getSuggestions, 250);
-
-function reset() {
-    window.location.href = 'search';
 }

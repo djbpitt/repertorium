@@ -1,851 +1,648 @@
-/*
-  style.css
-  Author: David J. Birnbaum
-  Email: djbpitt@pitt.edu
-  Original version: 2007-08-02
-  Last revised: 2022-08-25
-  Partially based on:
-  http://ella.slis.indiana.edu/~jawalsh/share/css/tei2html.css
-  John Walsh, jawalsh@indiana.edu
-  Accessed: 2007-08-02
- */
-/* 
-  * Custom properties (variables)
-  */
+/* ======================================================================= */
+/* Contents:                                                               */
+/*   Fonts                                                                 */
+/*   Global, including custom properties                                   */
+/*   Header                                                                */
+/*   Footers                                                               */
+/*   Body                                                                  */
+/*   Navigation widgets, except date slider                                */
+/*   Search page                                                           */
+/*   sampleText subsections                                                */
+/*   sampleText inline elements                                            */
+/*   Codicology table                                                      */
+/*   Bibliographic section of codicology table                             */
+/*   Codicology subsections (other than contents and bibliography)         */
+/*   Plectogram                                                            */
+/* ======================================================================= */
+
+/* ======================================================================= */
+/* Fonts                                                                   */
+/* ======================================================================= */
+@font-face {
+  font-family: "Bukyvede";
+  src: 
+  url("fonts/BukyVede-Regular.woff2") format("woff2"), 
+url("fonts/BukyVede-Regular.woff") format("woff"), 
+url("fonts/BukyVede-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BukyvedeLightWeb';
+  src: url('fonts/Bukyvede_Light.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Bukyvede_Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ 
+url('fonts/Bukyvede_Light.woff') format('woff'), /* Modern Browsers */ 
+url('fonts/Bukyvede_Light.ttf') format('truetype'), /* Safari, Android, iOS */ 
+url('fonts/Bukyvede_Light.svg#1d6dadb2045bcf2c9fcbd3f4b1735ff4') format('svg'); /* Legacy iOS */
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Old Standard Regular";
+  src: url("fonts/OldStandard-Regular.woff2") format("woff2"), 
+url("fonts/OldStandard-Regular.woff") format("woff"), 
+url("fonts/OldStandard-Regular.otf") format("opentype"), 
+url("fonts/OldStandard-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+/* ======================================================================= */
+/* Global                                                                  */
+/* ======================================================================= */
 :root {
-    --background-color: #f4eee2;
-    --color: black;
-    --logo-color: #A00000;
-    --line-height: 1.4em;
+  --os-font: BukyvedeLightWeb, "Old Standard Regular";
 }
-/* 
- * Header holds h1 title and action icons
- */
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px lightgray solid;
-}
-#flags {
-    display: flex;
-    white-space: nowrap;
-    margin-left: 1em;
-    margin-right: 1em;
-    align-items: center;
-    gap: .35em;
-}
-.flag.highlight {
-    outline: 2px var(--logo-color) solid;
-    outline-offset: 2px;
-}
-
-/*
- * Footer holds credits and copyright information
- * Only <hr> is at top of <footer>
- */
-footer {
-    display: block;
-    font-size: smaller;
-}
-
-footer > p {
-    margin: 0;
-}
-body {
-    display: flex;
-    flex-direction: column;
-    font-family: cambria, "palatino linotype", times, serif;
-    /* georgia is missing the acute accent, so IErenders a box */
-    line-height: var(--line-height);
-    background-color: var(--background-color);
-    color: var(--color);
-    padding-left: 5px;
-    height: 98vh;
-}
-
-main {
-    flex: 1;
-}
-
-/* 
- * Search-specific
- */
-
-#search {
-    margin-top: .5em;
-}
-
-#search > form {
-    display: flex;
-    flex-direction: column;
-}
-
-#search aside {
-    display: flex;
-    flex-direction: column;
-    border-right: 1px lightgray solid;
-    padding-right: 1em;
-}
-
-#text-query-and-submit {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1em;
-}
-
-#query-string {
-    width: 100%;
-}
-
-#checkboxes-and-mss {
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-}
-
-fieldset {
-    margin: .5em 0;
-}
-
-#search ul {
-    margin: 0;
-    list-style-type: none;
-    padding-left: 1em;
-    text-indent: -1.5em;
-}
-
-#mss {
-    display: flex;
-    flex-direction: column;
-}
-
-#mss > ul {
-    margin-top: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: Verdana, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
-    color: #351408;
-    line-height: 1.4em;
-    page-break-after: avoid;
-    position: relative;
-    /* otherwise IE cuts off top of H1 with increased line-height */
-}
-
-pre {
-    font-family: "Andale Mono", "Courier New", monospace;
-    font-size: 95%;
-    line-height: 1.1em;
-    border: 1px dashed #990000;
-    /* background-color : aqua; */
-    background-color: #D3C8B4;
-    color: black;
-    margin: 1em;
-    padding: 1em;
-}
-
-.pre-highlight {
-    font-style: italic;
-    font-weight: bold;
-    color: #D7301F;
-}
-
-pre.bad_code {
-    background-color: #FFC0CB
-}
-
-.pre-colored {
-    /* color non-pre stuff like pre */
-    border: 1px dashed #990000;
-    /* background-color : aqua; */
-    background-color: #D3C8B4;
-    color: black;
-    margin: 1em;
-    padding: 1em;
-}
-
-code {
-    font-family: "Andale Mono", "Courier New", monospace;
-    /*color : #870429;*/
-    color: #D7301F;
-    background-color: rgba(0, 0, 0, 0.1);
-    font-weight: bold;
-}
-
-sub,
-sup {
-    line-height: 0em;
-}
-
-ol li ol {
-    list-style-type: lower-alpha;
-}
-
-/* set main spacing at the h3 element instead of the ul
-    so that it will be present when the list is collapsed
-    but add a bit more at the ul level */
-#toc h2 {
-    margin-bottom: 0;
-    padding-bottom: 0.5em;
-    cursor: pointer;
-    /* indicate clickability */
-}
-
-#toc h3 {
-    font-size: 100%;
-    margin-bottom: 0;
-    padding-bottom: 0.1em;
-    margin-top: 0;
-    padding-top: 0.3em;
-    cursor: pointer;
-    /* indicate clickability */
-}
-
-/* toc lists have no bullets and no top-level indentation 
-    they are also closer to the header above than below */
-#toc ul {
-    margin-left: 0;
-    padding-left: 0;
-    margin-top: 0;
-    padding-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 0.5em;
-}
-
-#toc li > span {
-    list-style-type: none;
-    /* simulate a link */
-    color: blue;
-    cursor: pointer;
-}
-
-#toc li > span:hover {
-    text-decoration: underline;
-}
-
-a {
-    text-decoration: none;
-    /* don't underline links */
-}
-
-a:link:hover,
-a:visited:hover {
-    text-decoration: underline;
-}
-
-li > p {
-    /* paragraphs are okay within list items, but:
-        need to suppress usual vertical spacing to avoid spacing between list items
-        need to tab non-initial paragraphs to make up for lack of vertical spacing */
-    margin: 0;
-    padding: 0;
-}
-
-li > p + p {
-    text-indent: 1.5em;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-table,
-th,
-td {
-    border-color: gray;
-    border-style: solid;
-    border-width: 1px;
-    padding: 5px;
-}
-
-.level2 {
-    /* indentation for nested list */
-    margin-left: 1em;
-}
-
-.level3 {
-    /* indentation for nested list */
-    margin-left: 2em;
-}
-
-.level4 {
-    /* indentation for nested list */
-    margin-left: 3em;
-}
-
-.level5 {
-    /* indentation for nested list */
-    margin-left: 4em;
-}
-
-/* floating divs for pseudo-frames*/
-#header {
-    padding: 0 0 0;
-    /* top, right-left, bottom */
-    overflow: visible;
-    height: 200px;
-    white-space: nowrap;
-}
-
-.frame {
-    /* for toc and entries frames 
-    must specify top and bottom in order for scroll bars to work */
-    position: absolute;
-    top: 200px;
-    bottom: 0;
-    overflow: auto;
-    margin: 0 5px 10px;
-    /* top, right-left, bottom */
-}
-
-#toc {
-    left: 5px;
-    width: 185px;
-    font-size: smaller;
-    line-height: 1.2em;
-}
-
-#entries {
-    left: 190px;
-    padding-left: 10px;
-    border-left-style: solid;
-    border-left-width: 1px;
-}
-
-#entries h2 {
-    margin-top: 14px;
-}
-
-.boilerplate > span {
-    text-indent: -1em;
-    margin-left: 1em;
-    display: block;
-    font-size: smaller;
-    line-height: 1.2em;
-}
-
-.logo {
-    color: var(--logo-color);
-}
-
-dt {
-    font-size: larger;
-    line-height: 1.2em;
-    margin-bottom: .2em;
-    margin-top: .7em;
-}
-
-dt > span:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.arrow {
-    color: teal;
-}
-
-dl.normal > dt {
-    font-size: inherit;
-}
-
-dl.normal > dd {
-    font-size: inherit;
-}
-
-dd > span {
-    display: block;
-    text-indent: -1em;
-    margin-left: 1em;
-}
-
-.offline {
-    opacity: 0.4;
-}
-
-q {
-    quotes: '“' '”' '‘' '’';
-}
-
-.note {
-    font-size: smaller;
-}
-
-ul.two-column {
-    column-count: 3;
-    padding-left: 24px;
-}
-
-@media all and (max-width : 62.5em) {
-    ul.two-column {
-        column-count: 2;
-    }
-}
-
-ul.three-column {
-    column-count: 4;
-    padding-left: 24px;
-}
-
-@media all and (max-width : 70em) {
-    ul.three-column {
-        column-count: 3;
-    }
-}
-
-@media all and (max-width : 50em) {
-    ul.three-column {
-        column-count: 2;
-    }
-}
-
-ul.two-column > li,
-ul.three-column > li {
-    margin-left: 1em;
-}
-
-.folio {
-    max-width: 300px;
-    width: 40%;
-    float: right;
-    margin: 0 0 1em 1em;
-    border: none;
-}
-
-.os {
-    font-family: BukyvedeWeb, KlimentStdRegularWeb, LazovWeb, MenaionWeb;
-    font-weight: normal;
-    font-size: larger;
-}
-
-.gk {
-    font-family: Palatino;
-    font-size: 95%;
-}
-
-/* in folio view, text on left, image on right, scale image */
-body {
-    overflow-x: hidden;
-}
-
-h1 {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-sup {
-    line-height: 0;
-}
-
-/* Components of sampleText: rubric, head, incipit, explicit, p, div */
-span.incipit,
-span.explicit,
-span.head,
-span.rubric,
-span.colophon,
-span.sampleText,
-p.sampleText {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-    text-indent: 0;
-    font-size: 90%;
-    font-family: 'BukyvedeWeb';
-}
-
-.additions {
-    font-size: 80%;
-}
-
-div.archeaography {
-    text-indent: 2em;
-}
-
-span.head:before {
-    content: 'Head: ';
-    font-weight: bold;
-    font-family: serif;
-}
-
-span.incipit:before {
-    content: 'Incipit: ';
-    font-weight: bold;
-    font-family: serif;
-}
-
-span.explicit:before {
-    content: 'Explicit: ';
-    font-weight: bold;
-    font-family: serif;
-}
-
-span.rubric {
-    color: red;
-    font-weight: bold;
-}
-
-span.rubric:before {
-    content: 'Rubric: ';
-    font-weight: bold;
-    font-family: serif;
-}
-
-span.sampleText:before,
-p.sampleText:before {
-    content: 'Sample: ';
-    font-weight: bold;
-    font-family: serif;
-}
-
-span.colophon:before {
-    content: 'Colophon: ';
-    font-weight: bold;
-    font-family: serif;
-}
-
-.boilerplate {
-    margin: 1em 0;
-    position: relative;
-}
-
-.boilerplate > span.text {
-    text-indent: -1em;
-    margin-left: 1em;
-    display: block;
-    font-size: smaller;
-    line-height: 1.2em;
-}
-
-.small {
-    font-size: smaller;
-}
-
-.archeography {
-    display: inline !important;
-}
-
-.sic {
-    color: red;
-}
-
-.sic:after {
-    content: " [sic]";
-    font-family: serif;
-}
-
-span.unclear:before,
-span.supplied:before {
-    content: "[";
-}
-
-span.unclear:after,
-span.supplied:after {
-    content: "]";
-}
-
-span.add {
-    color: green;
-}
-
-a {
-    color: blue;
-}
-
-.label {
-    color: gray;
-}
-
-#msDescTable,
-msDescTable > * {
-    border: 1px lightgray solid;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-
-/* Right-aligned numbering from http://jsfiddle.net/zgMYu/10/ */
-th {
-    text-align: left;
-}
-
 table,
 tr,
 td,
-th {
-    border: 1px solid lightgray;
+th { /* Overwrites style.css regular gray */
+  border: 1px solid lightgray;
+  border-collapse: collapse;
+}
+a {
+  color: blue;
+}
+.hide {
+  display: none;
+}
+.os {
+  font-family: var(--os-font);
+  font-weight: normal;
+}
+.gk {
+  font-family: "Old Standard Regular", Palatino;
+}
+/* ======================================================================= */
+/* Header (contains link to home and site title                            */
+/* ======================================================================= */
+h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* ======================================================================= */
+/* Footers:                                                                */
+/*   Copyright colophon on all pages                                       */
+/*   Ms colophon on titles and codicology pages                            */
+/* ======================================================================= */
+footer {
+  font-size: smaller;
+}
+.label {
+  color: gray;
+}
+/* ======================================================================= */
+/* Body                                                                    */
+/* ======================================================================= */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+main {
+  flex: 1;
+}
+/* ======================================================================= */
+/* Navigation widgets (except inline links to codicology and titles)       */
+/* ======================================================================= */
+#widgets {
+  position: absolute;
+  right: 1em;
+  display: flex;
+  gap: .25em;
+  align-items: center;
+  top: 0;
+}
+.flag img {
+  width: 1em;
+  border: 1px brown solid;
+}
+.view img {
+  width: 2em;
+}
+.nav img {
+  width: 1em;
+}
+.flag {
+  padding-bottom: .2em;
+}
+/* ======================================================================= */
+/* Search page                                                             */
+/* ======================================================================= */
+#contents {
+  display: flex;
+  flex-direction: column;
+}
+#searchWidgets {
+  /* https://stackoverflow.com/questions/58906591/aligning-form-labels-in-a-css-grid */
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .5em;
+  min-width: 450px;
+  width: 100%;
+}
+#searchWidgets > div {
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  gap: .3em;
+}
+#searchControls select,
+#searchControls input {
+  /* Firefox defaults to gray */
+  background-color: white;
+  border: 1px solid black;
+}
+#searchControls *:disabled {
+  /* We disable unpopulated search widgets on submit to avoid cluttering the URL
+   * These settings suppress the flash of default disabled styling */
+  color: initial;
+  opacity: initial;
+  border-color: initial;
+  border: 1px black solid;
+  background-color: white;
+}
+#clear-form {
+  background-color: white;
+  border: 1px solid black;
+}
+#searchControls > form > fieldset button {
+  margin-left: .3em;
+}
+#searchControls > form > fieldset hr {
+  grid-column: 1/2;
+  width: 95%;
+}
+#dropDowns > select {
+  width: 25em;
+}
+label { /* labels form widget */
+  white-space: nowrap;
+}
+#contents {
+  flex: 1;
+}
+#mss > h3,
+#searchControls > h3 {
+  text-align: center;
+}
+#mss ul {
+  text-indent: -1.5em;
+  list-style-type: none;
+}
+#widgets > * {
+  cursor: pointer;
+}
+#widgets > button {
+  /* Plectogram trigger is a Submit button */
+  width: 2em;
+  height: 2em;
+  border: none;
+  padding: 0;
+}
+/* 
+ * Date slider
+
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-inne -spin-button
+ * https://blog.logrocket.com/creating-custom-css-range-slider-javascript-upgrades/
+ * https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ */
+#date-range {
+  /* <fieldset> wrapper for date slider and number display */
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  width: 100%;
+  padding: .5em 0 0 0;
+  border: none;
 }
 
-#msDescContents {
-    counter-reset: l1
+/* 
+ * Number display for date slider 
+ * */
+#number_container {
+  display: block;
+  text-align: center;
+  margin-bottom: .5em;
+  white-space: nowrap;
 }
 
-#msDescContents > div.text {
-    counter-reset: l2
+input[type = "number"] {
+  width: 3.5em; /* All numbers are either three digits or four, beginning with 1 */
+  text-align: right;
+  border: 1px lightgray solid;
+}
+/* Makes up/down arrows always visible (default is visible only on hover) */
+input[type = "number"]::-webkit-inner-spin-button,
+input[type = "number"]::-webkit-outer-spin-button {
+  opacity: 1;
 }
 
-#msDescContents > div.text::before {
-    counter-increment: l1;
-    content: counter(l1) '.';
-    display: inline-block;
-    padding-right: .5em;
-    width: 1.5em;
-    text-align: right;
+/* 
+ * Range slider portion of date slider
+ */
+#range_container {
+  position: relative;
+  margin: .5em .3em 0 0;
+  width: 100%;
 }
 
-#msDescContents > div.text > div.text {
-    counter-reset: l3;
-    padding-left: 2em;
+input[type = "range"] {
+  /* TODO: Find some alternative to "!important" */
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: #C6C6C6;
+  pointer-events: none;
+  border: none !important;
 }
 
-#msDescContents > div.text > div.text::before {
-    counter-increment: l2;
-    content: counter(l1) '.' counter(l2) '.';
-    display: inline-block;
-    padding-right: .5em;
+input[type = "range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: all;
+  width: 1em;
+  height: 1em;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #C6C6C6; /* Supplies border around thumb */
+  cursor: pointer;
+*/}
+
+input[type = "range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  pointer-events: all;
+  width: 1em;
+  height: 1em;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #C6C6C6;
+  cursor: pointer;
 }
 
-#msDescContents > div.text > div.text > div.text {
-    padding-left: 2em;
+input[type = "range"]::-webkit-slider-thumb:hover {
+  background: #f7f7f7;
 }
 
-#msDescContents > div.text > div.text > div.text::before {
-    counter-increment: l3;
-    content: counter(l1) '.' counter(l2) '.' counter(l3) '. ';
-    display: inline-block;
-    padding-right: .5em;
+input[type = "range"]::-webkit-slider-thumb:active {
+  box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+  -webkit-box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
 }
 
-#msDescContents div.text > div.samples {
-    padding-left: 2em;
-    margin-top: 0;
-    margin-bottom: 0;
+#fromSlider {
+  height: 0;
+  z-index: 1;
 }
-
-.samples *.head,
-.samples *.incipit,
-.samples *.explicit,
-.samples *.rubric,
-.samples *.sampleText,
-.samples *.finalRubric,
-.samples *.colophon {
-    font-family: BukyvedeLightWeb;
+/* ======================================================================= */
+/* sampleText subsections .                                                */
+/* <note> is regular font, otherwise all are formatted identically         */
+/* ======================================================================= */
+span.head,
+span.rubric,
+span.incipit,
+span.sample,
+span.explicit,
+span.finalRubric,
+span.colophon,
+span.note {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-indent: 0;
+  font-size: 90%;
 }
-
+span.head,
+span.rubric,
+span.incipit,
+span.sample,
+span.explicit,
+span.finalRubric,
+span.colophon
+{
+  font-family: var(--os-font);
+  /* <note> uses regular font*/
+}
+span.rubric {
+  color: red;
+  font-weight: bold;
+}
+span.head:before {
+  content: 'Head: ';
+  font-weight: bold;
+  font-family: serif;
+  color: gray;
+}
+span.rubric:before {
+  content: 'Rubric: ';
+  font-weight: bold;
+  font-family: serif;
+  color: gray;
+}
+span.incipit:before {
+  content: 'Incipit: ';
+  font-weight: bold;
+  font-family: serif;
+  color: gray;
+}
+span.sample::before {
+  content: 'Sample: ';
+  font-weight: bold;
+  font-family: serif;
+  color: gray;
+}
+span.explicit:before {
+  content: 'Explicit: ';
+  font-weight: bold;
+  font-family: serif;
+  color: gray;
+}
+span.finalRubric:before {
+  content: 'Final rubric: ';
+  font-weight: bold;
+  font-family: serif;
+  color: gray;
+}
+span.colophon:before {
+  content: 'Colophon: ';
+  font-weight: bold;
+  font-family: serif;
+  color: gray;
+}
+span.note:before {
+  content: 'Note: ';
+  font-weight: bold;
+  font-family: serif;
+  color: gray;
+}
+/* ======================================================================= */
+/* sampleText inline elements                                              */
+/* ======================================================================= */
+sup {
+  line-height: 0;
+}
+.sic {
+  color: red;
+}
+.sic:after {
+  content: " [sic]";
+  font-family: serif;
+}
+span.unclear:before,
+span.supplied:before {
+  content: "[";
+}
+span.unclear:after,
+span.supplied:after {
+  content: "]";
+}
+span.gap:before {
+  content: " <";
+}
+span.gap:after {
+  content: "> ";
+}
+span.add {
+  color: green;
+}
+/* ======================================================================= */
+/* Codicology table                                                        */
+/* ======================================================================= */
+/* Right-aligned numbering from http://jsfiddle.net/zgMYu/10/ */
+#codicologyTable th {
+  text-align: left;
+  vertical-align: top;
+}
+#codicologyContents,
+#titlesWrapper {
+  counter-reset: l1
+}
+#codicologyContents > div.text,
+#titlesWrapper > div.text {
+  counter-reset: l2
+}
+#codicologyContents > div.text::before,
+#titlesWrapper > div.text::before {
+  counter-increment: l1;
+  content: counter(l1) '.';
+  display: inline-block;
+  padding-right: .5em;
+  width: 1.5em;
+  text-align: right;
+}
+#codicologyContents > div.text > div.text,
+#titlesWrapper > div.text > div.text {
+  counter-reset: l3;
+  padding-left: 2em;
+}
+#codicologyContents > div.text > div.text::before,
+#titlesWrapper > div.text > div.text::before {
+  counter-increment: l2;
+  content: counter(l1) '.' counter(l2) '.';
+  display: inline-block;
+  padding-right: .5em;
+}
+#codicologyContents > div.text > div.text > div.text,
+#titlesWrapper > div.text > div.text > div.text {
+  padding-left: 2em;
+}
+#codicologyContents > div.text > div.text > div.text::before,
+#titlesWrapper > div.text > div.text > div.text::before {
+  counter-increment: l3;
+  content: counter(l1) '.' counter(l2) '.' counter(l3) '. ';
+  display: inline-block;
+  padding-right: .5em;
+}
+#codicologyContents div.text > div.samples,
+#titlesWrapper div.text > div.samples {
+  padding-left: 2.2em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* ======================================================================= */
+/* Bibliography subsection of codicology contents                          */
+/* ======================================================================= */
+span.bibl:before {
+  /* Distinguish from div.bibl, which is the overlay */
+  content: " (";
+}
+span.bibl:after {
+  /*  Distinguish from div.bibl */
+  content: ") ";
+}
 .lozenge {
-    margin-bottom: -2px;
+  margin-bottom: -2px;
 }
-
 /* in-line SVG in manuscript listings*/
 li .lozenge {
-    height: 13px;
+  height: 13px;
 }
-
-li .lozenge:before,
-li .lozenge:after {
-    content: " "
+.flags .lozenge {
+  margin-bottom: 0;
 }
-
-#flags .lozenge {
-    margin-bottom: 0;
+#titles ul {
+  list-style-type: none;
 }
-
-/* SVG rendering */
-#main_svg > g {
-    fill: yellow;
-    stroke: black;
-    stroke-width: 1px;
-}
-
-#main_svg > g > rect {
-    width: 60px;
-    height: 17px;
-}
-
-#main_svg > g > a > text {
-    font-size: 90%;
-    fill: black;
-    stroke: black;
-}
-
-#main_svg > line {
-    stroke-width: 0.5px;
-}
-
-.additions > ul {
-    margin: 0;
-    padding-left: 2em;
-}
-
-.additions .os {
-    font-family: BukyvedeLightWeb;
-}
-
 /* pop-up bibliography information is in <div class="bibData">
     wavy underline from http://stackoverflow.com/questions/28152175/a-wavy-underline-in-css
 */
 @keyframes animate_opacity {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
-
 @-webkit-keyframes animate_opacity {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
-
 div.bibl {
-    display: inline-block;
-    border-bottom: 1px dotted orange;
-    position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted orange;
+  position: relative;
 }
-
 div.bibl:after {
-    content: '';
-    height: 5px;
-    border-bottom: 1px dotted orange;
-    position: absolute;
-    bottom: -2px;
-    left: -1px;
+  content: '';
+  height: 5px;
+  border-bottom: 1px dotted orange;
+  position: absolute;
+  bottom: -2px;
+  left: -1px;
 }
-
 div.bibData {
-    display: none;
-    position: fixed;
-    width: 500px;
-    right: 10px;
-    top: 0;
-    background: lightgoldenrodyellow;
-    z-index: 10;
-    padding: 5px 5px 5px 1.5em;
-    border: 1px solid firebrick;
+  display: none;
+  position: fixed;
+  width: 500px;
+  right: 10px;
+  top: 0;
+  background: lightgoldenrodyellow;
+  z-index: 10;
+  padding: 5px 5px 5px 1.5em;
+  border: 1px solid firebrick;
 }
-
-div.bibl:hover > div.bibData {
-    display: block;
-    margin-top: 1em;
-    animation-name: animate_opacity;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-name: animate_opacity;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+div.bibl:hover > div.bibData
+{
+  display: block;
+  margin-top: 1em;
+  animation-name: animate_opacity;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-name: animate_opacity;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
-
 div.bibData > * {
-    /* except part of biblScope; see below */
-    display: block;
-    text-indent: -1em;
+  /* except part of biblScope; see below */
+  display: block;
+  text-indent: -1em;
 }
-
 div.bibData > .author:before {
-    content: 'Author: ';
-    font-weight: bolder;
+  content: 'Author: ';
+  font-weight: bolder;
 }
-
 div.bibData > .articleTitle:before {
-    content: 'Article title: ';
-    font-weight: bolder;
+  content: 'Article title: ';
+  font-weight: bolder;
 }
-
 div.bibData > .monographTitle {
-    font-style: italic;
+  font-style: italic;
 }
-
 div.bibData > .monographTitle:before {
-    content: 'Volume title: ';
-    font-weight: bolder;
-    font-style: normal;
+  content: 'Volume title: ';
+  font-weight: bolder;
+  font-style: normal;
 }
-
 div.bibData > .journalTitle {
-    font-style: italic;
+  font-style: italic;
 }
-
 div.bibData > .journalTitle:before {
-    content: 'Journal title: ';
-    font-weight: bolder;
-    font-style: normal;
+  content: 'Journal title: ';
+  font-weight: bolder;
+  font-style: normal;
 }
-
 div.bibData > .seriesTitle:before {
-    content: 'Series title: ';
-    font-weight: bolder;
+  content: 'Series title: ';
+  font-weight: bolder;
 }
-
 div.bibData > .publication:before {
-    content: 'Published: ';
-    font-weight: bolder;
+  content: 'Published: ';
+  font-weight: bolder;
 }
-
 div.bibData > .date:before {
-    content: 'Date: ';
-    font-weight: bolder;
+  content: 'Date: ';
+  font-weight: bolder;
 }
-
 div.bibData > .scope:before {
-    content: 'Scope: ';
-    font-weight: bolder;
+  content: 'Scope: ';
+  font-weight: bolder;
 }
-
 .scope > * {
-    display: inline;
+  display: inline;
 }
-
 .scope > .volume:before {
-    content: 'Volume: ';
-    color: gray;
+  content: 'Volume: ';
+  color: gray;
 }
-
 .scope > .issue:before {
-    content: 'Issue: ';
-    color: gray;
+  content: 'Issue: ';
+  color: gray;
 }
-
 .scope > .pages:before {
-    content: 'Pages: ';
-    color: gray;
+  content: 'Pages: ';
+  color: gray;
 }
-/* 
- * Global
- */
-dfn {
-    /* opera and safari don't style dfn at all;
-       other browsers may use italic instead of true oblique
-       (is this font-specific?) */
-    font-style: oblique;
+/* ======================================================================= */
+/* Codicology subsections (other than contents and bibliography)           */
+/* ======================================================================= */
+.additions {
+  font-size: 80%;
+}
+.additions > ul {
+  margin: 0;
+  padding-left: 2em;
+}
+/* ======================================================================= */
+/* Plectogram                                                              */
+/* ======================================================================= */
+.draggable {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 0.5;
+}
+#plectogram {
+  position: relative;
+}
+#plectogram > g > rect {
+  width: 60px;
+  height: 17px;
+}
+#columns text {
+  font-size: 90%;
+  fill: black;
+  stroke: black;
+}
+#columns > g > a > text,
+#columns > g > a:hover {
+  fill: blue;
+  stroke: blue;
+}
+#plectogram line {
+  stroke: black;
+  stroke-width: 0.5px;
+}
+rect {
+  cursor: pointer;
+}
+#overlay {
+  position:absolute;
+  left: -200px; /* Hide off-screen */
+  background-color: aqua;
+  max-width: 150px;
+  font-size: smaller; 
+  border: 2px solid black;
+  padding: .1em .5em; 
+  margin: 0;
 }
 
-/*
- * Language toggling
- */
-body.bg :lang(ru),
-body.bg :lang(en) {
-    display: none;
-}
-
-body.en :lang(ru),
-body.en :lang(bg) {
-    display: none;
-}
-
-body.ru :lang(en),
-body.ru :lang(bg) {
-    display: none;
-}

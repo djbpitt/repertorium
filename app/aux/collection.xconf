@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://exist-db.org/collection-config/1.0">
+  <index xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:djb="http://www.obdurodon.org">
+    <!-- New full text index based on Lucene -->
+    <lucene>
+      <!-- Temporary copy of library because eXist-db cannot navigate upward in location hint -->
+      <module uri="http://www.ilit.bas.bg/repertorium/ns/3.0" prefix="re" at="re-lib-aux.xqm"/>
+      <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
+      <analyzer id="ws" class="org.apache.lucene.analysis.core.WhitespaceAnalyzer"/>
+      <!--<analyzer id="kw" class="org.apache.lucene.analysis.core.KeywordAnalyzer"/>-->
+      <!-- Keyword analyzer creates entries for all full titles, but retrieves only one-word ones
+           Temporarily construct hex-ref in real time during query instead of in field -->
+      <!--<text qname="bg" analyzer="kw">
+        <field name="hex-ref" expression="count(../preceding-sibling::title) 
+          => re:decimal-to-hex() => re:left-pad(4, '0')"/>
+      </text>-->
+      <text qname="bg"/>
+      <text qname="en"/>
+      <text qname="ru"/>
+      <text qname="tei:biblStruct"/>
+      <text qname="tei:surname"/>
+      <text qname="tei:pubPlace"/>
+      <text qname="tei:term"/>
+    </lucene>
+    <!-- Range indexes -->
+    <range>
+      <create qname="bg" type="xs:string" case="no"/>
+      <create qname="en" type="xs:string" case="no"/>
+      <create qname="ru" type="xs:string" case="no"/>
+      <create qname="tei:msName" type="xs:string"/>
+      <create qname="@xml:id" type="xs:string"/>
+      <create qname="@xml:lang" type="xs:string"/>
+      <create qname="@type" type="xs:string"/>
+      <create qname="tei:ref" type="xs:string"/>
+      <create qname="djb:position" type="xs:string"/>
+      <create qname="djb:value" type="xs:string"/>
+      <create qname="tei:term" type="xs:string"/>
+    </range>
+    <!-- ngram indexes -->
+    <ngram qname="bg"/>
+    <ngram qname="en"/>
+    <ngram qname="ru"/>
+  </index>
+</collection>

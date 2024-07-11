@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-DR43CIAI">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Commentaries on the Psalter by John Chrysostom with supplements,
+                    Church-Historical and Archival Institute, Sofia, No. 43, 1643</title>
+                <author xml:id="DR">Dilyana Radoslavova</author>
+                <editor xml:id="AM">Anisava Miltenova</editor>
+                <editor xml:id="AB">Andrej Bojadžiev</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Institute of Literature</publisher>
+                <pubPlace>Sofia</pubPlace>
+                <date when="2003-04-01">1 April 2003</date>
+                <idno type="Repertorium">RC-DR43CIAI</idno>
+                <availability status="free">
+                    <p>The intellectual content of this file is copyrighted by the creators under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <ref target="bib:Спространов1900">Спространов 1900: 67–71</ref>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="bg">Bulgarian</language>
+                <language ident="cu">Old Slavic</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="Repertorium">
+                    <list>
+                        <item>Commentaries on the Psalter</item>
+                        <item>Psalms</item>
+                        <item>Rites</item>
+                        <item>Prayers</item>
+                    </list>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                    <p>In the context of this project, private URIs with the prefix "bib" point to
+                        bibl elements in the project's bib.xml file.</p>
+                </prefixDef>
+            </listPrefixDef>
+        </encodingDesc>
+        <revisionDesc>
+            <change who="#AB" when="2023-12-05">Update license to CC BY 4.0. Small corrections and additions.</change>
+            <change who="#AB" when="2023-10-29">Edit elements according to new schema.</change>
+            <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
+                element &lt;origDate&gt;</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <msDesc>
+                <msIdentifier>
+                    <msName type="general" xml:lang="en">miscellany</msName>
+                    <msName type="specific" xml:lang="en">commentaries on the Psalter by John Chrysostom</msName>
+                    <country>Bulgaria</country>
+                    <settlement>Sofia</settlement>
+                    <repository>Church-Historical and Archival Institute</repository>
+                    <idno type="shelfmark">43</idno>
+                    <idno type="catalogue">43</idno>
+                    <altIdentifier type="former">
+                        <idno type="shelfmark">67</idno>
+                    </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                    <objectDesc form="codex">
+                        <supportDesc material="paper">
+                            <support>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Three
+                                        crescents</motif>
+                                </watermark>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Crown
+                                        with star and crescent</motif>
+                                    <countermark xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                                        <motif>Trefoil with letter M</motif>
+                                    </countermark>
+                                </watermark>
+                                <watermark>
+                                    <motif xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Crown
+                                        with star and crescent</motif>
+                                    <countermark xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                                        <motif>Trefoil with letter G and M</motif>
+                                    </countermark>
+                                </watermark>
+                            </support>
+                            <extent>
+                                <measure unit="folia">242</measure>
+                                <dimensions type="folia" unit="mm" extent="all">
+                                    <height>148</height>
+                                    <width>100</width>
+                                </dimensions>
+                                <dimensions type="written" unit="mm" extent="ff.1-153">
+                                    <height>113</height>
+                                    <width>70</width>
+                                </dimensions>
+                                <dimensions type="written" unit="mm" extent="ff.154-185">
+                                    <height>103</height>
+                                    <width>70</width>
+                                </dimensions>
+                                <dimensions type="written" unit="mm" extent="ff.186-192">
+                                    <height>110</height>
+                                    <width>66</width>
+                                </dimensions>
+                                <dimensions type="written" unit="mm" extent="ff.193-230">
+                                    <height>106</height>
+                                    <width>67</width>
+                                </dimensions>
+                                <dimensions type="written" unit="mm" extent="ff.231-242">
+                                    <height>106</height>
+                                    <width>66</width>
+                                </dimensions>
+                            </extent>
+                            <foliation>Modern, stamped in the upper right-hand corner and in pencil
+                                in the outer margin of each recto folio</foliation>
+                            <collation>
+                                <summary>The first MS part (ff. 1–153) has 20 quires 8 folia each,
+                                    Quire <foreign xml:lang="cu">а҃</foreign> lacks the first 6
+                                    folia; ff. 154–185 are 4 quires of 8 folia each; ff. 186–192 are
+                                    a single quire (<foreign xml:lang="cu">ка҃</foreign>) of 7
+                                    folia; and ff. 193–230 compose 4 quires of 8 folia each, except
+                                    for the last one wich has 10 folia, Quire <foreign xml:lang="cu">а҃</foreign> lacks the 4th and the 5th folio and Quire
+                                        <foreign xml:lang="cu">г҃</foreign> lacks the first and the
+                                    last folio, ff. 231–242 compose Quire <foreign xml:lang="cu">кв҃</foreign> (8 folia) and probably Quire <foreign xml:lang="cu">кг҃</foreign> of which only the two first
+                                    folia have survived.</summary>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8(-1 -2 -3 -4 -5
+                                        -6)</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="2-20">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1-4">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="21">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">7</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8(-4 -5)</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="2">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="3">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8(-1 -8)</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="4">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">10</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="22">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="23">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8 (-3 -4 -5 -6 -7
+                                        -8)</extent>
+                                </quire>
+                                <signatures>Original: <foreign xml:lang="cu">а҃-к҃, а҃-д҃, ка҃,
+                                            а҃-<supplied>д҃</supplied>,
+                                    кв҃-кг҃</foreign></signatures>
+                            </collation>
+                            <condition>The MS is in very poor condition. Apart from the lack of
+                                folia there are some detached ones; some folia survived in parts
+                                (ff. 204–206, 241–242). The lower outside corners of ff. 186–203 are
+                                torn.</condition>
+                        </supportDesc>
+                        <layoutDesc>
+                            <layout columns="1" writtenLines="19 24"/>
+                            <layout columns="1" writtenLines="20">
+                                <locus>ff. 1–153, 231–242</locus>
+                            </layout>
+                            <layout columns="1" writtenLines="19">
+                                <locus>ff. 154–185</locus>
+                            </layout>
+                            <layout columns="1" writtenLines="21">
+                                <locus>ff. 231–242</locus>
+                            </layout>
+                            <layout columns="1" writtenLines="24">
+                                <locus>ff. 186–192</locus>
+                            </layout>
+                        </layoutDesc>
+                    </objectDesc>
+                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Brown with yellowish
+                        shadow</ink>
+                    <decoDesc>
+                        <summary>Modest</summary>
+                        <decoNote type="headpieces">
+                            <locus>f. 154r:</locus>Thin interlace with floral motifs; 2 lines of
+                            height</decoNote>
+                        <decoNote type="headpieces">
+                            <locus>f. 186r:</locus>The same as that one on f. 154r, but smaller; 2
+                            lines of height</decoNote>
+                        <decoNote type="headpieces">
+                            <locus>f. 195r:</locus>The same as that one on f. 154r</decoNote>
+                        <decoNote type="headpieces">
+                            <locus>f. 197v:</locus>Thin bar drawn of wave-like line and
+                            semi-catenaries in the curves of the line. The bar ends in knots and
+                            floral motifs. There is a cross-like motif above the border. The replica
+                            of this border could be found in the 1627 Ms of Kyriak, with the
+                            presumed protograph of the Commentaries on the Psalter, National
+                            Library, Sofia, No. 1415</decoNote>
+                        <decoNote type="initials">Red thin geometrical initials of new-Byzantine
+                            style, some of them with floral motifs.</decoNote>
+                    </decoDesc>
+                    <bindingDesc>
+                        <binding>
+                            <summary>Probably original: ornamented leather on boards. Traces of two
+                                clasps</summary>
+                        </binding>
+                    </bindingDesc>
+                    <additions type="inscriptions">
+                        <locus>inside back cover</locus>
+                        <quote xml:lang="cu">
+                            <unclear>...</unclear>
+                            <lb/>
+                            <unclear>...</unclear>
+                            <lb/>...<lb/>писа<lb/>еѵтимїе рѹкою своею + </quote>
+                    </additions>
+                </physDesc>
+                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                    <scribe n="1">
+                        <locusGrp xmlns="http://www.tei-c.org/ns/1.0">
+                            <locus>ff. 1r–230v</locus>
+                        </locusGrp>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Evtimie the Monk</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote  script="Cyrs" style="semiuncial">High quality, <height unit="mm">2</height></scriptNote>
+                        </scriptDesc>
+                        <scribeLang>
+                            <langNote key="orthography">Resava orthography
+                            </langNote>
+                        </scribeLang>
+                    </scribe>
+                    <scribe n="2">
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 231r–242v</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">Kyriak</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="mixed"><height unit="mm">2</height> semicursive, semiuncial on f. 242r.</scriptNote>
+                        </scriptDesc>
+                        <scribeLang>
+                            <langNote key="orthography">Resava orthography
+                            </langNote>
+                        </scribeLang>
+                    </scribe>
+                </scribeDesc>
+                <msContents type="translation">
+                    <summary>Contains the Commentaries on Ps. 5, 132, 6, 7, 129, on the Lord's
+                        Paryer, and two homilies on Ps. 50 by John Chrysostom, as well as various
+                        rites and stories and sermons.</summary>
+                    <filiation type="apograph">No. 1415, National Library, Sofia, translated from
+                        Greek and copied by Kyriak in 1627</filiation>
+                    <msItemStruct xml:id="ACD1" type="translation">
+                        <locus n="1">ff. 1r–14r</locus>
+                        <title xml:lang="bg">Тълкувание на 5-ия псалм</title>
+                        <author>John Chrysostom</author>
+                        <note>The beginning of the text is missing</note>
+                        <filiation type="source">Greek text: <ref type="bibl" target="bib:PG55">PG 55: 60–71</ref>, <ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/6457">Pinakes</ref></filiation>
+                        <filiation type="antigraph">No. 1415, National Library, Sofia, translated by
+                            Kyriak in 1627</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">
+                                <unclear>...</unclear>достигне<seg rend="sup">м</seg>, и къ
+                                    нетлѣнно<seg rend="sup">м</seg>ꙋ прѣслави<seg rend="sup">м</seg>
+                                се житїю</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">Еже ѹбо и мы пр<seg rend="sup">с҃</seg>но да твори<seg rend="sup">м</seg>, въ
+                                    напа<seg rend="sup">с҃</seg>тѣхь, въ бѣда<seg rend="sup">х</seg>, въ обстоꙗнїи<seg rend="sup">х</seg>, въ навѣта<seg rend="sup">х</seg>, славеще б҃а и бл<seg rend="sup">с҃</seg>веще
+                                вънꙋ. Емꙋже слава въ вѣкы вѣкѡ<seg rend="sup">м</seg>,
+                                аминь:–</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD2" type="translation">
+                        <locus n="2">ff. 14r–17r</locus>
+                        <title xml:lang="bg">Тълкувание на 132-ия псалм</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="antigraph">No. 1415, National Library, Sofia, translated by
+                            Kyriak in 1627</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ѱало<seg rend="sup">м</seg>,
+                                рл҃в. Се н҃нꙗ что добро, или что красно. нъ еже жити братїи
+                                въкѹпꙗ</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Многы вещи добры ѹбо сѹ<seg rend="sup">т҃</seg>, красное же не имѹ<seg rend="sup">т</seg>.
+                                ꙗкоже иныѥ сладости ѹбо имѹ<seg rend="sup">т҃</seg>, добраго<seg rend="sup">ж</seg> лишише<seg rend="sup">с҃</seg></incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">Сїа ѹбо вѣдꙋще съ
+                                    опаство<seg rend="sup">м</seg> да дрьжим се еѥ, да и
+                                    настоещи<seg rend="sup">х</seg> насладим се б҃лгь и бѹ<seg rend="sup">д</seg>щи<seg rend="sup">х</seg>. ꙗже бꙋди въсѣ<seg rend="sup">м</seg> на<seg rend="sup">м</seg> полꙋчити, блг<seg rend="sup">д</seg>тїю г҃а нашего іѵ҃ х҃а. съ ним же ѡц҃ꙋ слава и
+                                с҃тмꙋ д҃хꙋ, въ вѣкы вѣкѡ<seg rend="sup">м</seg>, аминь:–</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD3" type="translation">
+                        <locus n="3">ff. 14r–17r</locus>
+                        <title xml:lang="bg">Тълкувание на 6-ия псалм</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="source">Greek text: <ref type="bibl" target="bib:PG55">PG 55, 71–80</ref>, <ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/6457">Pinakes</ref></filiation>
+                        <filiation type="antigraph">No. 1415, National Library, Sofia, translated by
+                            Kyriak in 1627</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ѱало<seg rend="sup">м</seg>,
+                                ѕ҃. Г҃и не ꙗростїю твоею обличиши мене, ниже гнѣво<seg rend="sup">м</seg> твоимь покажеши мене</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Егда ѹслышиши ꙗрость и
+                                гнѣвь, ничтоже чл҃чьско да не пщꙋеши</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">да не ѹбо бѹде<seg rend="sup">м</seg> ѹныли малыми грѣхми, нъ съ многою сїа
+                                ѕѣлностїю да ѹтоли<seg rend="sup">м</seg> ѥдаже болшїи<seg rend="sup">х</seg> свободи<seg rend="sup">м</seg> се. блг<seg rend="sup">д</seg>тїю и чл҃колюбїе<seg rend="sup">м</seg> г҃а
+                                нашего іѵ҃ х҃а. Емꙋже слава въ вѣкы, аминь:–</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD4" type="translation">
+                        <locus n="4">ff. 34v–82v</locus>
+                        <title xml:lang="bg">Тълкувание на 7-ия псалм</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="source">Greek text: <ref type="bibl" target="bib:PG55">PG 55, 80–106</ref>, <ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/6457">Pinakes</ref></filiation>
+                        <filiation type="antigraph">No. 1415, National Library, Sofia, translated by
+                            Kyriak in 1627</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ѱало<seg rend="sup">м</seg>,
+                                з҃. ѱало<seg rend="sup">м</seg> дв<seg rend="sup">д</seg>вь, егоже
+                                въспѣть г҃ви о словесе<seg rend="sup">х</seg> хꙋсїевы<seg rend="sup">х</seg>, с҃на еменїина:– Ги҃ б҃е мои на те ѹпова<seg rend="sup">х</seg>, сп<seg rend="sup">с҃</seg>и ме ѿ въсѣ<seg rend="sup">х</seg> гонещих ме, и избави ме:–</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">По<seg rend="sup">д</seg>обаше ѹбо тако извѣстно писанїи и повѣстѣи вѣдѣти разѹ<seg rend="sup">м</seg></incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">Егоже бѹди на<seg rend="sup">м</seg>
+                                <seg rend="sup">в</seg> въсѣ<seg rend="sup">м</seg>
+                                <seg rend="sup">а</seg> въ краи доити, блг<seg rend="sup">д</seg>тїю
+                                и чл҃колюбїе<seg rend="sup">м</seg> г҃а нашего іс҃ х҃а. ѥмꙋже слава
+                                въ вѣкы вѣко<seg rend="sup">м</seg> аминь:–</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD5" type="translation">
+                        <locus n="5">ff. 34v–82v</locus>
+                        <title xml:lang="bg">Тълкувание на 129-ия псалм</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="antigraph">No. 1415, National Library, Sofia, translated by
+                            Kyriak in 1627</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ѱало<seg rend="sup">м</seg>,
+                                рк҃ѳ. из гльбины възва<seg rend="sup">х</seg> к тебѣ г҃и, г҃и ѹслыши
+                                глась мои:–</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Что ѥ<seg rend="sup">с҃</seg> из гльбины; не просто рече, ѿ ѹсть, ниже просто ѿ
+                                ѥзыка, ѹмꙋ скитающꙋ се</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">понѥже неизг҃ланна ѹ нѥго
+                                    мл<seg rend="sup">с҃</seg>ть, и неисчътно чл҃колюбїе. егоже бѹди
+                                    въсѣ<seg rend="sup">м</seg> намъ полꙋчити блг<seg rend="sup">д</seg>тїю и чл҃колюбїе<seg rend="sup">м</seg> г҃а нашего іѵ҃
+                                х҃а, емѹже слава и дръжава въ вѣкы вѣко<seg rend="sup">м</seg>,
+                                аминь:–</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD6" type="translation">
+                        <locus n="6">ff. 89v–91r</locus>
+                        <title xml:lang="bg">Слово върху 50-я псалм на Йоан Златоуст, 1</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="source">Greek text: <ref type="bibl" target="bib:PG55">PG 55: 565–575</ref>, <ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/6456">Pinakes</ref></filiation>
+                        <filiation type="antigraph">No. 1415, National Library, Sofia, translated by
+                            Kyriak in 1627</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Ѱало<seg rend="sup">м</seg>,
+                                н҃. о на<seg rend="sup">д</seg>писанїи, н҃го ѱалꙿма, и о покаанїи .
+                                о ц҃ри дв<seg rend="sup">д</seg>ѣ, и о ѹрїинѣ женѣ</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Живописци подражаю<seg rend="sup">т</seg> хꙋдожьство<seg rend="sup">м</seg> ѥ<seg rend="sup">с҃</seg>ство, и растворивше шары, пишꙋть иконы
+                                    видимы<seg rend="sup">х</seg> тѣлесь</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">сице и ты толико помысли,
+                                елико можеши потрьпѣти, да некако выше мѣры ѿпадеши. и о си<seg rend="sup">х</seg> въсѣ<seg rend="sup">х</seg> блг<seg rend="sup">д</seg>ри<seg rend="sup">м</seg> х҃а, ꙗко томꙋ по<seg rend="sup">д</seg>баеть слава и дрьжава сь ѿц҃е<seg rend="sup">м</seg> и с҃ты<seg rend="sup">м</seg> дхо<seg rend="sup">м</seg>, н҃нꙗ и пр҃но и въ вѣкы вѣкомь, аминь.</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD7" type="translation">
+                        <locus n="7">ff. 91v–110v</locus>
+                        <title xml:lang="bg">Слово върху 50-я псалм на Йоан Златоуст, 2</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="source">Greek text: <ref type="bibl" target="bib:PG55">PG 55: 807–809</ref>, <ref target="https://pinakes.irht.cnrs.fr/notices/oeuvre/id/6456">Pinakes</ref></filiation>
+                        <filiation type="antigraph">No. 1415, National Library, Sofia, translated by
+                            Kyriak in 1627</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Тогож<seg rend="sup">д</seg>е
+                                слово, в҃е. вь останкы петидесетнаго ѱалма. и о покаанїи.</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Ѡстанкы вчерашнее трапезы
+                                ѿдати хощꙋ дн<seg rend="sup">с҃</seg>ь</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">здѣже скончаю мое слово,
+                                доволнѣ ꙗко<seg rend="sup">ж</seg> мню растлькованїе прѣдавь
+                                    исмомы<seg rend="sup">м</seg>, о х<seg rend="sup">с҃</seg>ѣ
+                                    їс<seg rend="sup">с҃</seg>ѣ г<seg rend="sup">с҃</seg>дѣ наше<seg rend="sup">м</seg>. емꙋже слава и дрьжава въ вѣкь вѣкомь
+                                аминь:–</explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD8" type="translation">
+                        <locus n="8">ff. 145v–153v</locus>
+                        <title xml:lang="bg">Тълкувание на Господнята молитва</title>
+                        <author>John Chrysostom</author>
+                        <filiation type="source">Greek text: <ref type="bibl" target="bib:PG55">PG 55, 41–48</ref></filiation>
+                        <filiation type="antigraph">No. 1415, National Library, Sofia, translated by
+                            Kyriak in 1627</filiation>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">тогож<seg rend="sup">д</seg>е
+                                їо҃ зла<seg rend="sup">с</seg>ѹ<seg rend="sup">т</seg>. о еже по
+                                б҃ѕѣ жительствовати. и сказанїе въ мл҃твѹ, еже е<seg rend="sup">с҃</seg>, ѿц҃а нашь</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въсакаго ѹбо
+                                    б҃од҃хновен<seg rend="sup">н҃</seg>аго писанїа чтенїе бываеть
+                                    вънимающи<seg rend="sup">м</seg> бл҃гоч<seg rend="sup">с҃</seg>тїа познанїе</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0">О сихꙿже вьс<seg rend="sup">х</seg>ѣ бл҃годаримь толикыхь ны спо<seg rend="sup">д</seg>бившаго бл҃гихь. ꙗко томꙋ подобаеть слава ч<seg rend="sup">с҃</seg>ь и дрьжава оц҃ѹ и с҃нѹ и с҃томꙋ д҃хꙋ, н҃нꙗ и
+                                    пр<seg rend="sup">с҃</seg>но и вь вѣкы вѣкомь, аминь.</explicit>
+                        </sampleText>
+                        <bibl>
+                            <ref type="bibl" target="bib:Милтенова2002">Милтенова 2002: 325</ref>
+                        </bibl>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD9" type="original" style="non-narrative">
+                        <locus n="9">ff. 154r–184r</locus>
+                        <title xml:lang="bg">Чинопоследование на причестяване</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Послѣдованїе с҃тго
+                                причещенїа</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD10" type="translation">
+                        <locus n="10">ff. 184v–185v</locus>
+                        <title xml:lang="bg">Чинопоследование на причестяване със светена вода</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Чинь о причещенїе с҃тые
+                                воды</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD11" type="translation">
+                        <locus n="11">ff. 186r–192v</locus>
+                        <title xml:lang="bg">Чинопоследование на малък водосвет</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">СЛꙋЖБА ОС҃ЩЕНїЮ ВОДѣ</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD12" type="translation">
+                        <locus n="12">ff. 193r–197v</locus>
+                        <title xml:lang="bg">Канон молебен към Богородица</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">КАНѠНЬ М҃ЛБНЬ ПРѣСТѣ<seg rend="sup">и</seg> б҃ци. гла<seg rend="sup">с҃</seg>, и҃</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD13" type="translation">
+                        <locus n="13">ff. 197v–215r</locus>
+                        <title xml:lang="bg">Акатист за Богородица</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Слѹжба акаѳистꙋ прѣс҃тые
+                                б҃це</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD14" type="translation">
+                        <locus n="14">ff. 215r–230v</locus>
+                        <title xml:lang="bg">Акатист за животворящия Гроб Господен</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">Въ не<seg rend="sup">д</seg>лю
+                                акаѳисть живоносномꙋ гробꙋ и въскре<seg rend="sup">с҃</seg>нїю г҃а
+                                нашего і҃ѵ х҃а</head>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD15" type="translation">
+                        <locus n="15">ff. 231r–240v</locus>
+                        <title xml:lang="bg">Повест и видения на някои православни жени</title>
+                        <note>The end of the text is missing</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <head xmlns="http://www.tei-c.org/ns/1.0">повѣ<seg rend="sup">с҃</seg>,
+                                и видѣнїе некоторыѥ православные жены. ѕѣло сп<seg rend="sup">с҃</seg>ително и пользно</head>
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0">Въ лѣто третїе царства
+                                    сꙋлта<seg rend="sup">н</seg> а<seg rend="sup">х</seg>мета. и
+                                четврътое лѣто патрїаршьства кѵ<seg rend="sup">р҃</seg>, рафаила. ѿ
+                                    съз<seg rend="sup">д</seg>анїа мирꙋ #з҃.р҃.е҃і. індикта д҃.
+                                    м<seg rend="sup">с҃</seg>ца, авгꙋ<seg rend="sup">с҃</seg>. ѕ. вь
+                                ц҃рствющемъ градѣ. бы<seg rend="sup">с҃</seg> страшно чю<seg rend="sup">д</seg></incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">и хощеши
+                                имѣти здравїе и радость въсег<seg rend="sup">д</seg>ашнꙋю и вѣчнꙋю
+                                абїе ꙋбо азь ꙗко ѹслыша<seg rend="sup">х</seg> сїа ѿ аг҃глообразнаго
+                                оного юноше словеса, д҃ша моꙗ възыгра. и к томѹ. мирѣ семъ
+                                    не<unclear>...</unclear></explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD16" type="translation">
+                        <locus n="16">ff. 241r–241v</locus>
+                        <title xml:lang="bg">Разказ, неидентифициран</title>
+                        <note>The beginning and the end of the text are missing</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">
+                                <unclear>...</unclear>дховникь по<unclear>...</unclear>о г҃лааше.
+                                ꙗко ходи<seg rend="sup">х</seg> къ томѹ димитрїю дващи и трищи и
+                                испытахь его съ вьсакымь ѡпасенемь и извѣстих се ꙗко истиннаа сѹть
+                                та ꙗже видѣ и слыша</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">ра<seg rend="sup">ди</seg> злы<seg rend="sup">х</seg> дѣлъ свои<seg rend="sup">х</seg>. занѥ ꙗкоже ѡни добры
+                                <unclear>...</unclear></explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD17" type="translation">
+                        <locus n="17">ff. 242r–242v</locus>
+                        <title xml:lang="bg">Поучение, неидентифицирано</title>
+                        <note>The beginning and the end of the text are missing</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">
+                                <unclear>...</unclear> ѡни <unclear>...</unclear>цы иже
+                                    врѣ<unclear>...</unclear>ми дѣлы и злыми
+                                <unclear>...</unclear>дѵть ты прѣж<seg rend="sup">д</seg>е ꙗко злы
+                                    прѣж<seg rend="sup">д҃</seg>ни пръвы въ геенꙋѡгнънаго мѹченїа,
+                                    пото<seg rend="sup">и</seg>
+                                <unclear>.</unclear>ы иже имъ послѣдоваше въ зла.– Нї понѥже братїе
+                                и ѡци, именова<unclear>.</unclear>м се и г҃лѥм се свѣ<seg rend="sup">т</seg> и солъ</incipit>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">да
+                                съмышлꙗю <unclear>...</unclear> горкые и несътръпимые мѹкы прѣда же
+                                неѹмꙋ, ꙗко да<unclear>...</unclear>се и ѡбращꙋ се злыхъ. дѣанїа
+                                    <unclear>...</unclear> ихже об<unclear>...</unclear> и творꙋ
+                                    ѡм<seg rend="sup">л</seg>аден<unclear>...</unclear>оего. и
+                                    да<unclear>...</unclear></explicit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD18" type="translation">
+                        <locus n="18">f. 153v</locus>
+                        <title xml:lang="bg">Колофон</title>
+                        <author>Evtimie the Monk</author>
+                        <date when="1643">1643</date>
+                        <note>Gives the the year of creation and the copyist's name in a
+                            cryptogram</note>
+                      <re:sampleText xml:lang="cu">  
+                          <colophon> <ab>ниавѯви ѯлеѳꙋь, лѣ<seg rend="sup">т҃</seg> #зрн҃а:– <note resp="#DR" xml:lang="cu">= евѳимие монахь</note></ab>
+                        </colophon></re:sampleText>
+                    </msItemStruct>
+                </msContents>
+                <history>
+                    <origin evidence="internal" resp="#DR">
+                        <origDate notBefore="1643" notAfter="1643">1643</origDate>
+                        <origPlace>Unknown, probably Mount Athos</origPlace>
+                    </origin>
+                </history>
+            </msDesc>
+        </body>
+    </text>
+</TEI>

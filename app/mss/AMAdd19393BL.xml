@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/tei_ms_repertorium.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/tei_ms_repertorium.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_ms_repertorium_supplement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:re="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:id="RC-AMAdd19393BL">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Gospels – Aprakos (fragment), Add. MS 19393, The British Library, 14th
+                    c.</title>
+                <author xml:id="RC">Ralph Cleminson</author>
+                <editor xml:id="AM">Anisava Miltenova</editor>
+                <author xml:id="EM">Elisaveta Mousakova</author>
+                <author xml:id="AB">Andrej Bojadžiev</author>
+                <editor xml:id="DR">Dilyana Radoslavova</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Institute of Literature</publisher>
+                <pubPlace>Sofia</pubPlace>
+                <date when="2005-02">February 2005</date>
+                <idno type="Repertorium">RC-AMAdd19393BL</idno>
+                <availability status="free">
+                    <p>The intellectual content of this file is copyrighted by the creators under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This description is based on <emph>de visu</emph> observations, on MS microform
+                    and on the published catalogue descriptions. <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 74</ref>.</p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation>
+                <date when="2005-02-21">21.02.2005</date>
+                <settlement>London</settlement>
+            </creation>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="bg">Bulgarian</language>
+                <language ident="cu">Old Slavic</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="Repertorium">
+                    <list>
+                        <item>Gospels</item>
+                        <item>Aprakos</item>
+                        <item>Euangelion</item>
+                        <item>Liturgical books</item>
+                        <item>Bible books</item>
+                    </list>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="bib" matchPattern="([A-Za-zА-Яа-я]+)" replacementPattern="bib.xml#$1">
+                    <p>In the context of this project, private URIs with the prefix "bib" point to
+                        bibl elements in the project's bib.xml file.</p>
+                </prefixDef>
+            </listPrefixDef>
+        </encodingDesc>
+        <revisionDesc>
+            <change who="#AB" when="2023-12-03">Update license to CC BY 4.0. Small corrections and additions.</change>
+            <change who="#AB" when="2023-10-28">Edit elements according to new schema.</change>
+            <change who="#AB" when="2016-07-09">Addition of notBefore and notAfter attributes in
+                element &lt;origDate&gt;</change>
+            <change who="#AB" when="2009-04-17">Removed constructions
+                &lt;author&gt;anonymous&lt;/author&gt;</change>
+            <change who="#AB" when="2009-04-17">Added copyright statement</change>
+            <change who="#AB" when="2009-04-15">Corrections</change>
+            <change who="#AB" when="2009-04-13">Added Repertorium Identifier</change>
+            <change who="#AB" when="2009-03-02">Conversion to Repertorium 3.0</change>
+            <change who="#AM" when="2010-09-02">Conversion to Repertorium 4</change>
+            <change who="#DR" when="2010-09-14">Checked against the MS; editorial work;
+                identification of readings; taken notes on ruling and pricking; and on orthography </change>
+            <change who="#DR" when="2011-02-01">editorial work</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <msDesc>
+                <msIdentifier>
+                    <msName xml:lang="en" type="general">lectionary gospel</msName>
+                    <country>United Kingdom</country>
+                    <settlement>London</settlement>
+                    <repository>British Library</repository>
+                    <idno type="shelfmark">Add. MS 19393</idno>
+                    <note>
+                        <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 74.</ref>
+                    </note>
+                    <altIdentifier>
+                    <idno type="catalogue">57</idno>
+                </altIdentifier>
+                </msIdentifier>
+                <physDesc>
+                    <objectDesc form="fragment">
+                        <supportDesc material="parch">
+                            <support>
+                                <material>Fine parchment</material>
+                            </support>
+                            <extent>
+                                <measure unit="folia">vi+8+vi</measure>
+                                <dimensions unit="mm" type="folia">
+                                    <height>350</height>
+                                    <width>260</width>
+                                </dimensions>
+                                <dimensions unit="mm" type="written">
+                                    <height>230</height>
+                                    <width>173</width>
+                                </dimensions>
+                            </extent>
+                            <foliation>(i–vi), 1–8, (9–14); pen-written, in the upper right
+                                margins</foliation>
+                            <collation>
+                                <summary>1 quire</summary>
+                                <quire xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" n="1">
+                                    <extent xmlns="http://www.tei-c.org/ns/1.0">8</extent>
+                                </quire>
+                                <signatures>The gathering number <foreign xml:lang="cu">К҃Д</foreign> is written in the upper and in the lower ends
+                                    of the outer margins of the first and the last folio
+                                    respectively; the number 24 is ink-written in microscopic digits
+                                    in the inner corner of f. 8v.</signatures>
+                                <gregoryRule xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">HF FH
+                                    HF FH HF FH HF FH</gregoryRule>
+                                <ruling xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                                    <formula xmlns="http://www.tei-c.org/ns/1.0" cert="low">System Leroy 11, type P4 20D1</formula>
+                                </ruling>
+                                <pricking xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">For each
+                                    horizontal line close to the outer leaf edge and for the
+                                    vertical lines on both leaf edges.</pricking>
+                            </collation>
+                            <condition>
+                                <p>Fragment. Good condition.</p>
+                                <p>On the upper margin of f. 8v there is a mirror imprint of a Greek
+                                    manuscript text as well as part of a headpiece. The text is
+                                    illegible. According to the letters shapes it could be dated to
+                                    the 12th c.</p>
+                                <p>The leaves are restored.</p>
+                            </condition>
+                        </supportDesc>
+                        <layoutDesc>
+                            <layout columns="1" ruledLines="14" writtenLines="14"/>
+                        </layoutDesc>
+                    </objectDesc>
+                    <ink xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">Black, red for titles and
+                        initials.</ink>
+                    <decoDesc>
+                        <summary>Elaborated, of red outlined initials, decorated
+                            with S-shaped patterns “in negative” – the white of the parchment on red
+                            background.</summary>
+                        <decoNote type="initials">
+                            Large initials: with a regular height of about <dimensions unit="mm">
+                                    <dim>58</dim>
+                                </dimensions>.
+                            <list>
+                                <item>
+                                    <locus>f. 2:</locus>Jointed initial, letter <foreign xml:lang="cu">Р</foreign>, with S-shaped motif in the bow,
+                                        <dimensions unit="mm">
+                                        <dim>60</dim>
+                                    </dimensions> (4 lines) high, within the text column.</item>
+                                <item>
+                                    <locus>f. 3v:</locus>Jointed initial, letter <foreign xml:lang="cu">Р</foreign>, very similar to the previous one,
+                                        <dimensions unit="mm">
+                                        <dim>60</dim>
+                                    </dimensions> (4 lines) high, within the text column.</item>
+                                <item>
+                                    <locus>f. 4:</locus>Jointed initial, letter <foreign xml:lang="cu">В</foreign>, with S-shaped motif in the upper
+                                    bow and S-shaped stem with half palmettes, <dimensions unit="mm">
+                                        <dim>60</dim>
+                                    </dimensions> (4 lines) high, within the text column.</item>
+                                <item>
+                                    <locus>f. 6:</locus>Geometric initial, letter <foreign xml:lang="cu">В</foreign>, with a pair or leaf-buds on the
+                                    stem and a foliate finial, with a dot in the upper bow and
+                                    five-lobe palmette in the lower one, <dimensions unit="mm">
+                                        <dim>53</dim>
+                                    </dimensions> high (within the text column, half of it in the
+                                    lower margin).</item>
+                                <item>
+                                    <locus>f. 7v:</locus>Jointed initial, letter <foreign xml:lang="cu">В</foreign>, very similar to f. 4r, but with a
+                                    more elaborate combination of a half and a whole palmette in the
+                                    lower bow, <dimensions unit="mm">
+                                        <dim>60</dim>
+                                    </dimensions> (4 lines) high, within the text column.</item>
+                            </list>
+                        </decoNote>
+                        <decoNote type="marg">
+                            <p>Marginal linear ornaments of the same vegetal-like form, at the
+                                titles on <locusGrp>
+                                    <locus>ff. 2,</locus>
+                                    <locus>3v,</locus>
+                                    <locus>4,</locus>
+                                    <locus>6,</locus>
+                                    <locus>7v.</locus>
+                                </locusGrp> Ornamented descenders (<foreign xml:lang="cu">з</foreign>-tails) in the lower margins of <locusGrp>
+                                    <locus>ff. 3,</locus>
+                                    <locus>4v,</locus>
+                                    <locus>8,</locus>
+                                    <locus>8v.</locus>
+                                </locusGrp></p>
+                        </decoNote>
+                    </decoDesc>
+                    <bindingDesc>
+                        <p>Recent, marbled paper on card, leather spine and corners, <dimensions unit="mm">
+                                <height>360</height>
+                                <width>290</width>
+                            </dimensions></p>
+                    </bindingDesc>
+                    <additions type="inscriptions">
+                        <locus>f. ii:</locus>
+                        <quote type="note" xml:lang="en">Purchased of <persName full="yes">M.
+                                Simonides</persName>. (through Mr <persName full="yes">W.B.
+                                Barker</persName>) 12 March 1853</quote>
+                    </additions>
+                </physDesc>
+                <scribeDesc xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0">
+                    <scribe>
+                        <locus xmlns="http://www.tei-c.org/ns/1.0">ff. 1–8v.</locus>
+                        <name xmlns="http://www.tei-c.org/ns/1.0" role="scribe">anonymous.</name>
+                        <scriptDesc xmlns="http://www.tei-c.org/ns/1.0">
+                            <scriptNote script="Cyrs" style="uncial">Formal uncial: high, large, and clear; letters <dim unit="mm" type="letters">9 mm</dim> high, <dim unit="mm" type="scriptline">15 mm</dim> between lines.</scriptNote>
+                        </scriptDesc>
+                        <scribeLang>
+                            <summary xmlns="http://www.tei-c.org/ns/1.0">Old Church
+                                Slavonic.</summary>
+                            <langNote key="orthography">One-<emph xmlns="http://www.tei-c.org/ns/1.0">jer</emph>
+                                (<foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cu">ь</foreign>), non-<emph xmlns="http://www.tei-c.org/ns/1.0">jus</emph>
+                                    orthography. There is very clear tendency to separate words.
+                            </langNote>
+                        </scribeLang>
+                    </scribe>
+                </scribeDesc>
+                <msContents>
+                    <summary>Fragment of a full aprakos: lessons for the 14th week after
+                        Pentecost.</summary>
+                    <msItemStruct xml:id="ACD1" type="translation">
+                        <locus n="1">ff. 1r1–2r7</locus>
+                        <title xml:lang="bg">Евангелие от Марко. Мк. 4:12–23</title>
+                        <note>Without beginning.</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <incipit xmlns="http://www.tei-c.org/ns/1.0" defective="true">
+                                <foreign xml:lang="cu">да ког<seg rend="sup">д҇</seg>а ѡбратетꙿ се и
+                                    ѿпѹстетꙿ се имь грѣси.</foreign>
+                            </incipit>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD2">
+                        <locus n="2">ff. 2r8–3v1</locus>
+                        <title xml:lang="bg">Евангелие от Марко. Мк. 4:24–34</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <rubric xmlns="http://www.tei-c.org/ns/1.0">В вто<seg rend="sup">р҇</seg>. д҃і. не<seg rend="sup">д҇</seg>. ѥу<seg rend="sup">г҇</seg>е. ѿ м<seg rend="sup">р҇</seg>⁘</rubric>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD3">
+                        <locus n="3">ff. 3v1–4r9</locus>
+                        <title xml:lang="bg">Евангелие от Марко. Мк. 4:35–41</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <rubric xmlns="http://www.tei-c.org/ns/1.0">В ср<seg rend="sup">д҇</seg>. д҃і. не<seg rend="sup">д҇</seg>. м<seg rend="sup">р҇</seg>⁘</rubric>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD4">
+                        <locus n="4">ff. 4r9–6r12</locus>
+                        <title xml:lang="bg">Евангелие от Марко. Мк. 5:1–20</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <rubric xmlns="http://www.tei-c.org/ns/1.0">В че<seg rend="sup">к҇</seg>. д҃і. не<seg rend="sup">д҇</seg>. ѥу<seg rend="sup">г҇</seg>. ѿ м<seg rend="sup">р҇</seg>⁘</rubric>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD5">
+                        <locus n="5">ff. 6r12–7v9</locus>
+                        <title xml:lang="bg">Евангелие от Марко. Мк. 5:22–6:1</title>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <rubric xmlns="http://www.tei-c.org/ns/1.0">Пе<seg rend="sup">к҇</seg>.
+                                д҃і. ѿ м<seg rend="sup">р҇</seg>⁘</rubric>
+                        </sampleText>
+                    </msItemStruct>
+                    <msItemStruct xml:id="ACD6">
+                        <locus n="6">ff. 7v10–8v14</locus>
+                        <title xml:lang="bg">Евангелие от Матей. Мт. 23:1–12</title>
+                        <note>The end is missing.</note>
+                        <sampleText xmlns="http://www.ilit.bas.bg/repertorium/ns/3.0" xml:lang="cu">
+                            <rubric xmlns="http://www.tei-c.org/ns/1.0">В сѹ<seg rend="sup">б҇</seg>
+                                д҃і. не<seg rend="sup">д҇</seg>. ѥу<seg rend="sup">г҇</seg>е. ѿ
+                                    м<seg rend="sup">ѳ҇</seg>⁘</rubric>
+                            <explicit xmlns="http://www.tei-c.org/ns/1.0" defective="true">
+                                <foreign xml:lang="cu">а иже вьзнесетꙿ се смритꙿ се</foreign>
+                            </explicit>
+                        </sampleText>
+                    </msItemStruct>
+                </msContents>
+                <history>
+                    <origin>
+                        <origDate notBefore="1301" notAfter="1399">14th c.</origDate>
+                        <origPlace>Unknown; Serbian origin.</origPlace>
+                    </origin>
+                    <provenance>Purchased from <persName full="yes">M. [Constantine]
+                            Simonides</persName> through Mr <persName full="yes">W. B.
+                            Barker</persName>.</provenance>
+                    <acquisition>12 March 1853.</acquisition>
+                </history>
+                <additional>
+                    <adminInfo>
+                        <recordHist>
+                            <source>
+                                <p>Directly catalogued from the original manuscript using the
+                                    printed catalogue <ref type="bibl" target="bib:Cleminson1988">Cleminson 1988: 74</ref>.</p>
+                            </source>
+                        </recordHist>
+                    </adminInfo>
+                    <surrogates>
+                        <p>Microform: Central Library of BAS, MF–14,</p>
+                        <p>Digital image of f. 6 (file: C7926–05).</p>
+                    </surrogates>
+                    <listBibl>
+                        <bibl>
+                            <ref type="bibl" target="bib:Джурова1977">Джурова и Дуйчев 1977: no. 7,
+                                f. 7v is reproduced as pl. 25.</ref>
+                        </bibl>
+                        <bibl>
+                            <ref type="bibl" target="bib:Стефановић1984">Стефановић 1984–85:
+                                62–63.</ref>
+                        </bibl>
+                    </listBibl>
+                </additional>
+            </msDesc>
+        </body>
+    </text>
+</TEI>
